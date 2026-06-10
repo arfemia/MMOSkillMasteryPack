@@ -1,0 +1,193 @@
+{
+  "Name": "Meteor_Mastery",
+  "Payload": {
+    "target": "ability:meteor",
+    "icon": "Icon_Meteor",
+    "refundPercent": 50,
+    "nodes": [
+      {
+        "id": "met_t1",
+        "tier": 1,
+        "displayName": "Meteor Strike 1",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 2,
+            "life_essence": 600
+          },
+          "items": [
+            {
+              "id": "Ingredient_Fire_Essence",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "damage",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "id": "met_t2",
+        "tier": 2,
+        "displayName": "Meteor Strike 2",
+        "prerequisites": ["met_t1"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "MAGIC",
+              "level": 40
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 3,
+            "life_essence": 1500
+          },
+          "items": [
+            {
+              "id": "Ingredient_Fire_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "damage",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": "met_t3",
+        "tier": 3,
+        "displayName": "Meteor Strike 3",
+        "prerequisites": ["met_t2"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "MAGIC",
+              "level": 55
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 5,
+            "life_essence": 4000
+          },
+          "items": [
+            {
+              "id": "Ingredient_Fire_Essence",
+              "count": 3
+            },
+            {
+              "id": "Ingredient_Voidheart",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "damage",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "id": "met_t4",
+        "tier": 4,
+        "displayName": "Meteor Strike 4",
+        "prerequisites": ["met_t3"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "MAGIC",
+              "level": 70
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 8,
+            "life_essence": 8000
+          },
+          "items": [
+            {
+              "id": "Ingredient_Fire_Essence",
+              "count": 4
+            },
+            {
+              "id": "Ingredient_Voidheart",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "damage",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "id": "met_eternal",
+        "tier": 9,
+        "displayName": "Eternal Cataclysm",
+        "description": "Each purchase: -1% Meteor cooldown and +0.75% Meteor damage. Cost grows 10% per purchase (capped after 70). Requires MAGIC level 92.",
+        "prerequisites": ["met_t4"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "MAGIC",
+              "level": 92
+            }
+          ]
+        },
+        "maxPurchases": -1,
+        "costScaling": {
+          "mode": "EXPONENTIAL",
+          "multiplier": 1.1,
+          "softCap": 70
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 1,
+            "life_essence": 400
+          },
+          "items": [
+            {
+              "id": "Ingredient_Fire_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.01,
+            "targetAbility": "meteor"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "damage",
+            "value": 0.0075,
+            "targetAbility": "meteor"
+          }
+        ]
+      }
+    ]
+  }
+}

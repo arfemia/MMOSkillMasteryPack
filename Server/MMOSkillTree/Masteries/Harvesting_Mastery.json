@@ -1,0 +1,167 @@
+{
+  "Name": "Harvesting_Mastery",
+  "Payload": {
+    "target": "skill:HARVESTING",
+    "refundPercent": 50,
+    "requirements": {
+      "mode": "AND",
+      "skillLevels": [
+        {
+          "skill": "HARVESTING",
+          "level": 5
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "id": "har_t1",
+        "tier": 1,
+        "displayName": "Harvesting Mastery I",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 2,
+            "life_essence": 500
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.03,
+            "targetSkill": "HARVESTING"
+          }
+        ]
+      },
+      {
+        "id": "har_t2",
+        "tier": 2,
+        "displayName": "Harvesting Mastery II",
+        "prerequisites": [
+          "har_t1"
+        ],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "HARVESTING",
+              "level": 40
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 5,
+            "life_essence": 1200
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.05,
+            "targetSkill": "HARVESTING"
+          }
+        ]
+      },
+      {
+        "id": "har_t3",
+        "tier": 3,
+        "displayName": "Harvesting Mastery III",
+        "prerequisites": [
+          "har_t2"
+        ],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "HARVESTING",
+              "level": 70
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 10,
+            "life_essence": 3500
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 3
+            },
+            {
+              "id": "Ingredient_Crystal_Blue",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.1,
+            "targetSkill": "HARVESTING"
+          }
+        ]
+      },
+      {
+        "id": "har_eternal",
+        "tier": 9,
+        "displayName": "Harvesting Mastery: Eternal",
+        "description": "Each purchase: +0.5% harvesting mastery bonus-drop chance. Cost grows 10% per purchase. Requires HARVESTING level 92.",
+        "prerequisites": [
+          "har_t1",
+          "har_t2",
+          "har_t3"
+        ],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "HARVESTING",
+              "level": 92
+            }
+          ]
+        },
+        "maxPurchases": -1,
+        "costScaling": {
+          "mode": "EXPONENTIAL",
+          "multiplier": 1.1
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 1,
+            "life_essence": 200
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.005,
+            "targetSkill": "HARVESTING"
+          }
+        ]
+      }
+    ]
+  }
+}

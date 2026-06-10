@@ -1,0 +1,19 @@
+{
+  "Name": "Artillery_Mastery",
+  "Payload": {
+    "extends": "combat6_standard",
+    "target": "skill:ARTILLERY",
+    "params": {
+      "prefix": "art",
+      "gateSkill": "ARTILLERY",
+      "trackName": "Artillery Mastery",
+      "trackId": "artillery_mastery",
+      "dmgIngredient": "Ingredient_Fire_Essence",
+      "comboIngredient": "Ingredient_Lightning_Essence",
+      "combatTarget": "",
+      "sacrificeStat": "HEALTH",
+      "capDisplay": "Demolition Expert",
+      "skillLower": "artillery"
+    }
+  }
+}

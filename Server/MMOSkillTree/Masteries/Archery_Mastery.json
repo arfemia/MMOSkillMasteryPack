@@ -1,0 +1,31 @@
+{
+  "Name": "Archery_Mastery",
+  "Payload": {
+    "extends": "combat6_standard",
+    "target": "skill:ARCHERY",
+    "params": {
+      "prefix": "arc",
+      "gateSkill": "ARCHERY",
+      "trackName": "Archery Mastery",
+      "trackId": "archery_mastery",
+      "dmgIngredient": "Ingredient_Lightning_Essence",
+      "comboIngredient": "Ingredient_Lightning_Essence",
+      "combatTarget": "ARCHERY",
+      "sacrificeStat": "STAMINA",
+      "capDisplay": "Eagle Eye",
+      "skillLower": "archery"
+    },
+    "nodeOverrides": {
+      "arc_t1_dmg": {
+        "cost": {
+          "items": [
+            {
+              "id": "Ingredient_Lightning_Essence",
+              "count": 6
+            }
+          ]
+        }
+      }
+    }
+  }
+}

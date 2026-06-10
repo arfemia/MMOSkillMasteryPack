@@ -1,0 +1,19 @@
+{
+  "Name": "Unarmed_Mastery",
+  "Payload": {
+    "extends": "combat6_standard",
+    "target": "skill:UNARMED",
+    "params": {
+      "prefix": "una",
+      "gateSkill": "UNARMED",
+      "trackName": "Unarmed Mastery",
+      "trackId": "unarmed_mastery",
+      "dmgIngredient": "Ingredient_Lightning_Essence",
+      "comboIngredient": "Ingredient_Lightning_Essence",
+      "combatTarget": "UNARMED",
+      "sacrificeStat": "HEALTH",
+      "capDisplay": "Iron Body",
+      "skillLower": "unarmed"
+    }
+  }
+}

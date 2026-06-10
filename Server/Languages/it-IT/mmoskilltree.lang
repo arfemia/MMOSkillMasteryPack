@@ -1,0 +1,66 @@
+# MMOSkillMasteryPack - titoli delle missioni + testo descrittivo, nomi delle valute e altro testo visualizzato.
+# Le chiavi sono nude; l'I18nModule di Hytale antepone il nome del file, quindi ognuna viene caricata
+# come mmoskilltree.<key> e il mod la risolve per convenzione (quest.<id>.title / .flavor,
+# currency.<id>.name, shop.<id>.title / .desc, ...). Aggiungi un <locale>/mmoskilltree.lang con
+# le stesse chiavi per tradurre; le chiavi mancanti ricadono sull'inglese per singola chiave.
+
+# --- Missioni (quest.<id>.title / .flavor, risolte per convenzione; segue lo schema delle taglie) ---
+quest.pack_first_milestone.title = Primo Passo verso la Maestria
+quest.pack_first_milestone.flavor = Raggiungi il livello 15 in una qualsiasi abilita' per guadagnare il tuo primo Punto Maestria. Il cammino della maestria comincia qui.
+quest.pack_essence_collector.title = Collezionista d'Essenza
+quest.pack_essence_collector.flavor = L'Essenza Vitale alimenta la maestria. Portane 100 all'altare e guadagna potere duraturo.
+quest.pack_essence_devotee.title = Devoto dell'Essenza
+quest.pack_essence_devotee.flavor = Per chi ha gia' provato la propria dedizione: porta 500 Essenze Vitali e guadagna una cospicua borsa di maestria.
+quest.pack_path_of_mastery.title = Il Cammino della Maestria
+quest.pack_path_of_mastery.flavor = La vera maestria e' ampia. Raggiungi il livello 25 in cinque abilita' diverse per dimostrare la tua versatilita'.
+quest.pack_mastery_tithe.title = Decima della Maestria
+quest.pack_mastery_tithe.flavor = Versa la tua decima al codice della maestria. Uccidi 10 mob e taglia 10 tronchi, poi riscatta un Punto Maestria. Richiede Livello Totale 500 e l'obiettivo Accumulatore di Maestria. Disponibile di nuovo 6 ore dopo ogni riscatto.
+
+# --- Offerte del Negozio Gettoni spedite da questo pack (titleKey/descriptionKey espliciti -> queste chiavi) ---
+shop.convert_mastery_point.title = Infusione di Maestria (+1 Punto Maestria)
+shop.convert_mastery_point.desc = Converti Gettoni Taglia in un Punto Maestria.
+
+# --- Valute (currency.<id>.name, risolte per convenzione; id = nome del file in minuscolo) ---
+currency.life_essence.name = Essenza Vitale
+currency.mastery_point.name = Punto Maestria
+
+# --- Titoli delle tracce di maestria (mastery.<trackId>.title, risolti per convenzione; trackId = nome del file in minuscolo).
+# I titoli dei nodi restano sul displayName generato dal template ("<Track>: Sharpened" ecc.) come sorgente
+# inglese; traduci un nodo aggiungendo qui mastery.<nodeId>.title (il mod lo risolve per convenzione). ---
+mastery.archery_mastery.title = Maestria Archery
+mastery.artillery_mastery.title = Maestria Artillery
+mastery.axes_mastery.title = Maestria Axes
+mastery.blunt_mastery.title = Maestria Blunt
+mastery.daggers_mastery.title = Maestria Daggers
+mastery.polearms_mastery.title = Maestria Polearms
+mastery.staves_mastery.title = Maestria Staves
+mastery.swords_mastery.title = Maestria Swords
+mastery.unarmed_mastery.title = Maestria Unarmed
+mastery.mining_mastery.title = Maestria Mining
+mastery.woodcutting_mastery.title = Maestria Woodcutting
+mastery.harvesting_mastery.title = Maestria Harvesting
+mastery.fireball_mastery.title = Maestria Palla di Fuoco
+mastery.magic_mastery.title = Maestria Magic
+mastery.acrobatics_mastery.title = Maestria Acrobatics
+mastery.enchanting_mastery.title = Maestria Enchanting
+mastery.fishing_mastery.title = Maestria Fishing
+mastery.shadowstep_mastery.title = Maestria Passo d'Ombra
+mastery.shield_slam_mastery.title = Maestria Colpo di Scudo
+mastery.whirlwind_mastery.title = Maestria Turbine
+mastery.piercing_shot_mastery.title = Maestria Colpo Perforante
+mastery.meteor_mastery.title = Maestria Meteora
+mastery.defense_mastery.title = Maestria Block
+
+# --- Obiettivi (achievement.<id>.title / .desc, risolti per convenzione) ---
+achievement.pack_first_mastery_milestone.title = Apprendista del Cammino
+achievement.pack_first_mastery_milestone.desc = Raggiungi il livello 15 in una qualsiasi abilita' - il primo traguardo del Punto Maestria.
+achievement.pack_mastery_milestone_journeyman.title = Esperto del Cammino
+achievement.pack_mastery_milestone_journeyman.desc = Raggiungi il livello 60 in una qualsiasi abilita' - quattro traguardi del Punto Maestria guadagnati.
+achievement.pack_mastery_hoarder_300.title = Accumulatore di Maestria
+achievement.pack_mastery_hoarder_300.desc = Guadagna 300 Punti Maestria nel corso della tua vita.
+achievement.pack_mastery_devotee.title = Devoto della Maestria
+achievement.pack_mastery_devotee.desc = L'intero viaggio della maestria: un apprendista, un esperto e un accumulatore.
+achievement.pack_essence_hoarder_100.title = Accumulatore d'Essenza I
+achievement.pack_essence_hoarder_100.desc = Raccogli Essenza Vitale 100 volte diverse
+achievement.pack_essence_hoarder_10000.title = Accumulatore d'Essenza II
+achievement.pack_essence_hoarder_10000.desc = Raccogli Essenza Vitale 10.000 volte diverse nel corso della tua vita - un vero vascello per l'energia del mondo.

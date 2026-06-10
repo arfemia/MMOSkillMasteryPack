@@ -1,0 +1,24 @@
+{
+  "Name": "Pack_Mastery_Devotee",
+  "Payload": {
+    "id": "pack_mastery_devotee",
+    "category": "mastery",
+    "requiresFeatures": ["mastery"],
+    "sortOrder": 99,
+    "points": 250,
+    "metaChildren": [
+      "pack_first_mastery_milestone",
+      "pack_mastery_milestone_journeyman",
+      "pack_mastery_hoarder_300",
+      "pack_essence_hoarder_10000"
+    ],
+    "manualClaimRewards": [
+      {
+        "type": "CURRENCY",
+        "currencyId": "mastery_point",
+        "amount": 20,
+        "displayName": "+20 Mastery Points"
+      }
+    ]
+  }
+}

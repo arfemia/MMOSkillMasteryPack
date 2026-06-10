@@ -1,0 +1,23 @@
+{
+  "Name": "Pack_Essence_Hoarder_100",
+  "Payload": {
+    "id": "pack_essence_hoarder_100",
+    "category": "mastery",
+    "subcategory": "essence",
+    "requiresFeatures": ["mastery"],
+    "sortOrder": 30,
+    "points": 25,
+    "triggerType": "PICKUP_ITEM",
+    "target": "Ingredient_Life_Essence",
+    "requiredAmount": 100,
+    "matchMode": "EXACT",
+    "manualClaimRewards": [
+      {
+        "type": "CURRENCY",
+        "currencyId": "mastery_point",
+        "amount": 2,
+        "displayName": "+2 Mastery Points"
+      }
+    ]
+  }
+}

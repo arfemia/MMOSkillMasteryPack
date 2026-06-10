@@ -1,0 +1,22 @@
+{
+  "Name": "Pack_First_Mastery_Milestone",
+  "Payload": {
+    "id": "pack_first_mastery_milestone",
+    "category": "mastery",
+    "requiresFeatures": ["mastery"],
+    "sortOrder": 10,
+    "points": 25,
+    "triggerType": "REACH_LEVEL",
+    "target": "",
+    "requiredAmount": 15,
+    "matchMode": "CONTAINS",
+    "manualClaimRewards": [
+      {
+        "type": "CURRENCY",
+        "currencyId": "mastery_point",
+        "amount": 1,
+        "displayName": "+1 Mastery Point"
+      }
+    ]
+  }
+}

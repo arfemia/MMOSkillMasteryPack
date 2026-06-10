@@ -1,0 +1,19 @@
+{
+  "Name": "Swords_Mastery",
+  "Payload": {
+    "extends": "combat6_standard",
+    "target": "skill:SWORDS",
+    "params": {
+      "prefix": "swo",
+      "gateSkill": "SWORDS",
+      "trackName": "Swords Mastery",
+      "trackId": "swords_mastery",
+      "dmgIngredient": "Ingredient_Lightning_Essence",
+      "comboIngredient": "Ingredient_Lightning_Essence",
+      "combatTarget": "SWORDS",
+      "sacrificeStat": "HEALTH",
+      "capDisplay": "Masterwork Blade",
+      "skillLower": "swords"
+    }
+  }
+}

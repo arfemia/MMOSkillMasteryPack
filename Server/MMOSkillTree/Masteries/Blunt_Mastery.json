@@ -1,0 +1,19 @@
+{
+  "Name": "Blunt_Mastery",
+  "Payload": {
+    "extends": "combat6_standard",
+    "target": "skill:BLUNT",
+    "params": {
+      "prefix": "blu",
+      "gateSkill": "BLUNT",
+      "trackName": "Blunt Mastery",
+      "trackId": "blunt_mastery",
+      "dmgIngredient": "Ingredient_Lightning_Essence",
+      "comboIngredient": "Ingredient_Lightning_Essence",
+      "combatTarget": "BLUNT",
+      "sacrificeStat": "STAMINA",
+      "capDisplay": "Skullbreaker",
+      "skillLower": "blunt"
+    }
+  }
+}

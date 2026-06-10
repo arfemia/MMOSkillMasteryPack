@@ -1,0 +1,36 @@
+{
+  "Name": "Pack_Essence_Devotee",
+  "Payload": {
+    "id": "pack_essence_devotee",
+    "category": "main",
+    "requiresFeatures": ["mastery"],
+    "sortOrder": 41,
+    "sequential": true,
+    "prerequisites": [
+      "pack_essence_collector"
+    ],
+    "tags": [
+      "Mastery",
+      "Gathering",
+      "Advanced"
+    ],
+    "objectives": [
+      {
+        "id": "turn_in_essence",
+        "type": "TURN_IN",
+        "target": "Ingredient_Life_Essence",
+        "amount": 500,
+        "displayText": "Turn in 500 Life Essence",
+        "matchMode": "EXACT"
+      }
+    ],
+    "rewards": [
+      {
+        "type": "CURRENCY",
+        "currencyId": "mastery_point",
+        "amount": 25,
+        "displayName": "+25 Mastery Points"
+      }
+    ]
+  }
+}

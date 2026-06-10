@@ -1,0 +1,66 @@
+# MMOSkillMasteryPack - küldetéscímek + ízelítő, valutanevek és egyéb megjelenített szöveg.
+# A kulcsok csupaszok; a Hytale I18nModule elé fűzi a fájlnevet, így mindegyik így
+# töltődik be: mmoskilltree.<key>, és a mod konvenció szerint oldja fel (quest.<id>.title / .flavor,
+# currency.<id>.name, shop.<id>.title / .desc, ...). Adj hozzá egy <locale>/mmoskilltree.lang fájlt
+# ugyanezekkel a kulcsokkal a fordításhoz; a hiányzó kulcsok kulcsonként visszaesnek angolra.
+
+# --- Küldetések (quest.<id>.title / .flavor, konvenció szerint feloldva; a bounty mintát követi) ---
+quest.pack_first_milestone.title = Első Lépés a Mastery Felé
+quest.pack_first_milestone.flavor = Érd el a 15. szintet bármelyik képességben, hogy megszerezd az első Mastery Pontodat. A mastery útja itt kezdődik.
+quest.pack_essence_collector.title = Esszencia Gyűjtő
+quest.pack_essence_collector.flavor = Az Életesszencia táplálja a masteryt. Hozz 100-at az oltárhoz, és szerezz tartós erőt.
+quest.pack_essence_devotee.title = Esszencia Híve
+quest.pack_essence_devotee.flavor = Azoknak, akik már bizonyították elhivatottságukat: hozz 500 Életesszenciát, és szerezz egy jelentős mastery erszényt.
+quest.pack_path_of_mastery.title = A Mastery Útja
+quest.pack_path_of_mastery.flavor = Az igazi mastery sokrétű. Érd el a 25. szintet öt különböző képességben, hogy bizonyítsd a sokoldalúságodat.
+quest.pack_mastery_tithe.title = Mastery Tized
+quest.pack_mastery_tithe.flavor = Fizesd meg a tizededet a mastery kódexnek. Ölj meg 10 mobot és vágj ki 10 farönköt, majd vedd át a Mastery Pontot. Total Level 500 és a Mastery Hoarder teljesítmény szükséges. Minden átvétel után 6 órával ismét elérhető.
+
+# --- A pack által szállított Token Shop ajánlatok (explicit titleKey/descriptionKey -> ezek a kulcsok) ---
+shop.convert_mastery_point.title = Mastery Infúzió (+1 Mastery Pont)
+shop.convert_mastery_point.desc = Alakítsd a Bounty Tokeneket egy Mastery Ponttá.
+
+# --- Valuták (currency.<id>.name, konvenció szerint feloldva; id = a fájlnév kisbetűsítve) ---
+currency.life_essence.name = Életesszencia
+currency.mastery_point.name = Mastery Pont
+
+# --- Mastery track címek (mastery.<trackId>.title, konvenció szerint feloldva; trackId = a fájlnév kisbetűsítve).
+# A node címek a sablon által generált displayName-en maradnak ("<Track>: Sharpened" stb.) angol
+# forrásként; egy node-ot úgy fordíthatsz le, hogy ide felveszed a mastery.<nodeId>.title kulcsot (a mod konvenció szerint oldja fel). ---
+mastery.archery_mastery.title = Íjászat Mastery
+mastery.artillery_mastery.title = Tüzérség Mastery
+mastery.axes_mastery.title = Fejszék Mastery
+mastery.blunt_mastery.title = Zúzófegyverek Mastery
+mastery.daggers_mastery.title = Tőrök Mastery
+mastery.polearms_mastery.title = Lándzsák Mastery
+mastery.staves_mastery.title = Botok Mastery
+mastery.swords_mastery.title = Kardok Mastery
+mastery.unarmed_mastery.title = Puszta Kéz Mastery
+mastery.mining_mastery.title = Bányászat Mastery
+mastery.woodcutting_mastery.title = Favágás Mastery
+mastery.harvesting_mastery.title = Aratás Mastery
+mastery.fireball_mastery.title = Tűzgolyó Mastery
+mastery.magic_mastery.title = Mágia Mastery
+mastery.acrobatics_mastery.title = Akrobatika Mastery
+mastery.enchanting_mastery.title = Enchantolás Mastery
+mastery.fishing_mastery.title = Horgászat Mastery
+mastery.shadowstep_mastery.title = Árnyéklépés Mastery
+mastery.shield_slam_mastery.title = Pajzscsapás Mastery
+mastery.whirlwind_mastery.title = Forgószél Mastery
+mastery.piercing_shot_mastery.title = Átütő Lövés Mastery
+mastery.meteor_mastery.title = Meteor Mastery
+mastery.defense_mastery.title = Blokkolás Mastery
+
+# --- Teljesítmények (achievement.<id>.title / .desc, konvenció szerint feloldva) ---
+achievement.pack_first_mastery_milestone.title = Az Út Tanonca
+achievement.pack_first_mastery_milestone.desc = Érd el a 15. szintet bármelyik képességben - az első Mastery Pont mérföldkő.
+achievement.pack_mastery_milestone_journeyman.title = Az Út Vándora
+achievement.pack_mastery_milestone_journeyman.desc = Érd el a 60. szintet bármelyik képességben - négy Mastery Pont mérföldkő megszerezve.
+achievement.pack_mastery_hoarder_300.title = Mastery Gyűjtögető
+achievement.pack_mastery_hoarder_300.desc = Szerezz 300 Mastery Pontot az életed során.
+achievement.pack_mastery_devotee.title = A Mastery Híve
+achievement.pack_mastery_devotee.desc = A teljes mastery út: egy tanonc, egy vándor és egy gyűjtögető.
+achievement.pack_essence_hoarder_100.title = Esszencia Gyűjtögető I
+achievement.pack_essence_hoarder_100.desc = Vegyél fel Életesszenciát 100 különböző alkalommal
+achievement.pack_essence_hoarder_10000.title = Esszencia Gyűjtögető II
+achievement.pack_essence_hoarder_10000.desc = Vegyél fel Életesszenciát 10 000 különböző alkalommal az életed során - a világ energiájának valódi tárolóedénye.

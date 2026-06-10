@@ -1,0 +1,188 @@
+{
+  "Name": "Shield_Slam_Mastery",
+  "Payload": {
+    "target": "ability:shield_slam",
+    "icon": "Icon_ShieldSlam",
+    "refundPercent": 50,
+    "requirements": {
+      "mode": "AND",
+      "skillLevels": [
+        {
+          "skill": "DEFENSE",
+          "level": 15
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "id": "ss_t1_dmg",
+        "tier": 1,
+        "displayName": "Bulwark",
+        "choiceGroup": "ss_t1",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 2,
+            "life_essence": 600
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "damage",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "id": "ss_t1_cd",
+        "tier": 1,
+        "displayName": "Tower Stance",
+        "choiceGroup": "ss_t1",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 2,
+            "life_essence": 600
+          },
+          "items": [
+            {
+              "id": "Ingredient_Crystal_Blue",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "cooldownMs",
+            "value": -1500,
+            "targetAbility": "shield_slam"
+          }
+        ]
+      },
+      {
+        "id": "ss_t2_stagger",
+        "tier": 2,
+        "displayName": "Stagger",
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "DEFENSE",
+              "level": 40
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 4,
+            "life_essence": 1500
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "damage",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "id": "ss_t3_mountainshield",
+        "tier": 3,
+        "displayName": "Mountainshield",
+        "prerequisites": ["ss_t2_stagger"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "DEFENSE",
+              "level": 70
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 8,
+            "life_essence": 4000
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 3
+            },
+            {
+              "id": "Ingredient_Voidheart",
+              "count": 2
+            }
+          ],
+          "statSacrifice": {
+            "stat": "HEALTH",
+            "mode": "permanent_max",
+            "amount": 10
+          }
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "damage",
+            "value": 0.15
+          }
+        ]
+      },
+      {
+        "id": "ss_eternal",
+        "tier": 9,
+        "displayName": "Eternal Wall",
+        "description": "Each purchase: +1% Shield Slam damage. Cost grows 10% per purchase. Requires DEFENSE level 92.",
+        "prerequisites": ["ss_t3_mountainshield"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "DEFENSE",
+              "level": 92
+            }
+          ]
+        },
+        "maxPurchases": -1,
+        "costScaling": {
+          "mode": "EXPONENTIAL",
+          "multiplier": 1.1
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 1,
+            "life_essence": 300
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "damage",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  }
+}

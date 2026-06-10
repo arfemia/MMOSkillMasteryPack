@@ -1,0 +1,19 @@
+{
+  "Name": "Staves_Mastery",
+  "Payload": {
+    "extends": "combat6_standard",
+    "target": "skill:STAVES",
+    "params": {
+      "prefix": "sta",
+      "gateSkill": "STAVES",
+      "trackName": "Staves Mastery",
+      "trackId": "staves_mastery",
+      "dmgIngredient": "Ingredient_Fire_Essence",
+      "comboIngredient": "Ingredient_Lightning_Essence",
+      "combatTarget": "STAVES",
+      "sacrificeStat": "MANA",
+      "capDisplay": "Archmage's Focus",
+      "skillLower": "staves"
+    }
+  }
+}

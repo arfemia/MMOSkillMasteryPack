@@ -1,0 +1,32 @@
+{
+  "Name": "Pack_First_Milestone",
+  "Payload": {
+    "id": "pack_first_milestone",
+    "category": "main",
+    "requiresFeatures": ["mastery"],
+    "sortOrder": 10,
+    "autoAccept": true,
+    "tags": [
+      "Mastery",
+      "Beginner"
+    ],
+    "objectives": [
+      {
+        "id": "reach_l15",
+        "type": "REACH_LEVEL",
+        "target": "*",
+        "amount": 15,
+        "displayText": "Reach level 15 in any skill",
+        "matchMode": "CONTAINS"
+      }
+    ],
+    "rewards": [
+      {
+        "type": "CURRENCY",
+        "currencyId": "mastery_point",
+        "amount": 2,
+        "displayName": "+2 Mastery Points"
+      }
+    ]
+  }
+}

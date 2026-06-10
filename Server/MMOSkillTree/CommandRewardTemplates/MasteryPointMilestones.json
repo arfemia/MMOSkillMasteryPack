@@ -1,0 +1,122 @@
+{
+  "Name": "MasteryPointMilestones",
+  "Payload": {
+    "15": [
+      {
+        "command": "/mmocurrency give --player={player} --currency=mastery_point --amount=1",
+        "localizationKey": "reward.currency.mastery_point",
+        "displayName": "Mastery Point",
+        "color": "#c08aff",
+        "requiresCurrency": "mastery_point"
+      }
+    ],
+    "30": [
+      {
+        "command": "/mmocurrency give --player={player} --currency=mastery_point --amount=1",
+        "localizationKey": "reward.currency.mastery_point",
+        "displayName": "Mastery Point",
+        "color": "#c08aff",
+        "requiresCurrency": "mastery_point"
+      }
+    ],
+    "45": [
+      {
+        "command": "/mmocurrency give --player={player} --currency=mastery_point --amount=1",
+        "localizationKey": "reward.currency.mastery_point",
+        "displayName": "Mastery Point",
+        "color": "#c08aff",
+        "requiresCurrency": "mastery_point"
+      }
+    ],
+    "60": [
+      {
+        "command": "/mmocurrency give --player={player} --currency=mastery_point --amount=1",
+        "localizationKey": "reward.currency.mastery_point",
+        "displayName": "Mastery Point",
+        "color": "#c08aff",
+        "requiresCurrency": "mastery_point"
+      }
+    ],
+    "75": [
+      {
+        "command": "/mmocurrency give --player={player} --currency=mastery_point --amount=1",
+        "localizationKey": "reward.currency.mastery_point",
+        "displayName": "Mastery Point",
+        "color": "#c08aff",
+        "requiresCurrency": "mastery_point"
+      }
+    ],
+    "90": [
+      {
+        "command": "/mmocurrency give --player={player} --currency=mastery_point --amount=1",
+        "localizationKey": "reward.currency.mastery_point",
+        "displayName": "Mastery Point",
+        "color": "#c08aff",
+        "requiresCurrency": "mastery_point"
+      }
+    ],
+    "105": [
+      {
+        "command": "/mmocurrency give --player={player} --currency=mastery_point --amount=1",
+        "localizationKey": "reward.currency.mastery_point",
+        "displayName": "Mastery Point",
+        "color": "#c08aff",
+        "requiresCurrency": "mastery_point"
+      }
+    ],
+    "120": [
+      {
+        "command": "/mmocurrency give --player={player} --currency=mastery_point --amount=1",
+        "localizationKey": "reward.currency.mastery_point",
+        "displayName": "Mastery Point",
+        "color": "#c08aff",
+        "requiresCurrency": "mastery_point"
+      }
+    ],
+    "135": [
+      {
+        "command": "/mmocurrency give --player={player} --currency=mastery_point --amount=1",
+        "localizationKey": "reward.currency.mastery_point",
+        "displayName": "Mastery Point",
+        "color": "#c08aff",
+        "requiresCurrency": "mastery_point"
+      }
+    ],
+    "150": [
+      {
+        "command": "/mmocurrency give --player={player} --currency=mastery_point --amount=1",
+        "localizationKey": "reward.currency.mastery_point",
+        "displayName": "Mastery Point",
+        "color": "#c08aff",
+        "requiresCurrency": "mastery_point"
+      }
+    ],
+    "165": [
+      {
+        "command": "/mmocurrency give --player={player} --currency=mastery_point --amount=1",
+        "localizationKey": "reward.currency.mastery_point",
+        "displayName": "Mastery Point",
+        "color": "#c08aff",
+        "requiresCurrency": "mastery_point"
+      }
+    ],
+    "180": [
+      {
+        "command": "/mmocurrency give --player={player} --currency=mastery_point --amount=1",
+        "localizationKey": "reward.currency.mastery_point",
+        "displayName": "Mastery Point",
+        "color": "#c08aff",
+        "requiresCurrency": "mastery_point"
+      }
+    ],
+    "195": [
+      {
+        "command": "/mmocurrency give --player={player} --currency=mastery_point --amount=1",
+        "localizationKey": "reward.currency.mastery_point",
+        "displayName": "Mastery Point",
+        "color": "#c08aff",
+        "requiresCurrency": "mastery_point"
+      }
+    ]
+  }
+}

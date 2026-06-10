@@ -1,0 +1,6 @@
+{
+  "Name": "MMOSkillMasteryPack",
+  "Payload": {
+    "{{ALL_SKILLS}}": { "extends": "mastery_point_milestones" }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "Name": "Magic_Mastery",
+  "Payload": {
+    "extends": "combat6_standard",
+    "target": "skill:MAGIC",
+    "params": {
+      "prefix": "mag",
+      "gateSkill": "MAGIC",
+      "trackName": "Magic Mastery",
+      "trackId": "magic_mastery",
+      "dmgIngredient": "Ingredient_Fire_Essence",
+      "comboIngredient": "Ingredient_Lightning_Essence",
+      "combatTarget": "",
+      "sacrificeStat": "MANA",
+      "capDisplay": "Archwizard",
+      "skillLower": "magic"
+    },
+    "extraNodes": [
+      {
+        "id": "mag_archmagus",
+        "tier": 10,
+        "displayName": "Magic Mastery: Archmagus",
+        "description": "Unique to Magic. The pinnacle of arcane study — permanent +15% spell damage at the cost of 10 max MANA.",
+        "prerequisites": [
+          "mag_t3_cap"
+        ],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "MAGIC",
+              "level": 100
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 30,
+            "life_essence": 8000
+          },
+          "items": [
+            {
+              "id": "Ingredient_Fire_Essence",
+              "count": 5
+            },
+            {
+              "id": "Ingredient_Voidheart",
+              "count": 5
+            }
+          ],
+          "statSacrifice": {
+            "stat": "MANA",
+            "mode": "permanent_max",
+            "amount": 10
+          }
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "damage",
+            "value": 0.15,
+            "targetSkill": "MAGIC"
+          }
+        ]
+      }
+    ]
+  }
+}

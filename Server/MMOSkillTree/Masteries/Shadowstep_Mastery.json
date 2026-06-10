@@ -1,0 +1,215 @@
+{
+  "Name": "Shadowstep_Mastery",
+  "Payload": {
+    "target": "ability:shadowstep",
+    "icon": "Icon_Shadowstep",
+    "refundPercent": 100,
+    "requirements": {
+      "mode": "AND",
+      "skillLevels": [
+        {
+          "skill": "DAGGERS",
+          "level": 18
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "id": "sst_t1_range",
+        "tier": 1,
+        "displayName": "Long Step",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 3,
+            "life_essence": 600
+          },
+          "items": [
+            {
+              "id": "Ingredient_Void_Essence",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "distance",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "sst_t1_cd",
+        "tier": 1,
+        "displayName": "Swift Step",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 3,
+            "life_essence": 600
+          },
+          "items": [
+            {
+              "id": "Ingredient_Void_Essence",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "cooldownMs",
+            "value": -3000,
+            "targetAbility": "shadowstep"
+          }
+        ]
+      },
+      {
+        "id": "sst_t1_cheap",
+        "tier": 1,
+        "displayName": "Frugal Step",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 2,
+            "life_essence": 600
+          },
+          "items": [
+            {
+              "id": "Ingredient_Void_Essence",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "cost",
+            "value": -2
+          }
+        ]
+      },
+      {
+        "id": "sst_t2_phantom",
+        "tier": 2,
+        "displayName": "Phantom Mastery",
+        "prerequisites": ["sst_t1_range", "sst_t1_cd"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "DAGGERS",
+              "level": 40
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 6,
+            "life_essence": 1500
+          },
+          "items": [
+            {
+              "id": "Ingredient_Void_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "cooldownMs",
+            "value": -1000,
+            "targetAbility": "shadowstep"
+          }
+        ]
+      },
+      {
+        "id": "sst_t3_voidwalk",
+        "tier": 3,
+        "displayName": "Voidwalk",
+        "prerequisites": ["sst_t2_phantom"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "DAGGERS",
+              "level": 70
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 12,
+            "life_essence": 4000
+          },
+          "items": [
+            {
+              "id": "Ingredient_Void_Essence",
+              "count": 3
+            },
+            {
+              "id": "Ingredient_Voidheart",
+              "count": 2
+            }
+          ],
+          "statSacrifice": {
+            "stat": "STAMINA",
+            "mode": "permanent_max",
+            "amount": 10
+          }
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.2,
+            "targetAbility": "shadowstep"
+          }
+        ]
+      },
+      {
+        "id": "sst_eternal",
+        "tier": 9,
+        "displayName": "Eternal Shadow",
+        "description": "Each purchase: -1% Shadowstep cooldown. Cost grows 10% per purchase. Requires DAGGERS level 92.",
+        "prerequisites": ["sst_t3_voidwalk"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "DAGGERS",
+              "level": 92
+            }
+          ]
+        },
+        "maxPurchases": -1,
+        "costScaling": {
+          "mode": "EXPONENTIAL",
+          "multiplier": 1.1
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 1,
+            "life_essence": 250
+          },
+          "items": [
+            {
+              "id": "Ingredient_Void_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.01,
+            "targetAbility": "shadowstep"
+          }
+        ]
+      }
+    ]
+  }
+}

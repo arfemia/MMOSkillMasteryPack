@@ -1,0 +1,167 @@
+{
+  "Name": "Woodcutting_Mastery",
+  "Payload": {
+    "target": "skill:WOODCUTTING",
+    "refundPercent": 50,
+    "requirements": {
+      "mode": "AND",
+      "skillLevels": [
+        {
+          "skill": "WOODCUTTING",
+          "level": 5
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "id": "woo_t1",
+        "tier": 1,
+        "displayName": "Woodcutting Mastery I",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 2,
+            "life_essence": 500
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.03,
+            "targetSkill": "WOODCUTTING"
+          }
+        ]
+      },
+      {
+        "id": "woo_t2",
+        "tier": 2,
+        "displayName": "Woodcutting Mastery II",
+        "prerequisites": [
+          "woo_t1"
+        ],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "WOODCUTTING",
+              "level": 40
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 5,
+            "life_essence": 1200
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.05,
+            "targetSkill": "WOODCUTTING"
+          }
+        ]
+      },
+      {
+        "id": "woo_t3",
+        "tier": 3,
+        "displayName": "Woodcutting Mastery III",
+        "prerequisites": [
+          "woo_t2"
+        ],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "WOODCUTTING",
+              "level": 70
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 10,
+            "life_essence": 3500
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 3
+            },
+            {
+              "id": "Ingredient_Crystal_Blue",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.1,
+            "targetSkill": "WOODCUTTING"
+          }
+        ]
+      },
+      {
+        "id": "woo_eternal",
+        "tier": 9,
+        "displayName": "Woodcutting Mastery: Eternal",
+        "description": "Each purchase: +0.5% woodcutting mastery bonus-drop chance. Cost grows 10% per purchase. Requires WOODCUTTING level 92.",
+        "prerequisites": [
+          "woo_t1",
+          "woo_t2",
+          "woo_t3"
+        ],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "WOODCUTTING",
+              "level": 92
+            }
+          ]
+        },
+        "maxPurchases": -1,
+        "costScaling": {
+          "mode": "EXPONENTIAL",
+          "multiplier": 1.1
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 1,
+            "life_essence": 200
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.005,
+            "targetSkill": "WOODCUTTING"
+          }
+        ]
+      }
+    ]
+  }
+}

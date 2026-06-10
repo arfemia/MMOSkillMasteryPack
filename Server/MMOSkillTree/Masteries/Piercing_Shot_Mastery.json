@@ -1,0 +1,199 @@
+{
+  "Name": "Piercing_Shot_Mastery",
+  "Payload": {
+    "target": "ability:piercing_shot",
+    "icon": "Icon_PiercingShot",
+    "refundPercent": 50,
+    "requirements": {
+      "mode": "AND",
+      "skillLevels": [
+        {
+          "skill": "ARCHERY",
+          "level": 15
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "id": "ps_t1_dmg",
+        "tier": 1,
+        "displayName": "Heavy Draw",
+        "choiceGroup": "ps_t1",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 2,
+            "life_essence": 600
+          },
+          "items": [
+            {
+              "id": "Ingredient_Lightning_Essence",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "damage",
+            "value": 10,
+            "combatTarget": "ARCHERY"
+          }
+        ]
+      },
+      {
+        "id": "ps_t1_cd",
+        "tier": 1,
+        "displayName": "Snapshot",
+        "choiceGroup": "ps_t1",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 2,
+            "life_essence": 600
+          },
+          "items": [
+            {
+              "id": "Ingredient_Ice_Essence",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "cooldownMs",
+            "value": -800,
+            "targetAbility": "piercing_shot"
+          }
+        ]
+      },
+      {
+        "id": "ps_t2_pierce",
+        "tier": 2,
+        "displayName": "Deep Pierce",
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "ARCHERY",
+              "level": 40
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 4,
+            "life_essence": 1500
+          },
+          "items": [
+            {
+              "id": "Ingredient_Lightning_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "ADD_PARAM",
+            "key": "pierceCount",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": "ps_t3_hawkshot",
+        "tier": 3,
+        "displayName": "Hawkshot",
+        "prerequisites": ["ps_t2_pierce"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "ARCHERY",
+              "level": 70
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 8,
+            "life_essence": 4000
+          },
+          "items": [
+            {
+              "id": "Ingredient_Lightning_Essence",
+              "count": 3
+            },
+            {
+              "id": "Ingredient_Voidheart",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "damage",
+            "value": 0.15,
+            "combatTarget": "ARCHERY"
+          },
+          {
+            "shape": "CONDITIONAL",
+            "key": "damage",
+            "value": 0,
+            "condition": {
+              "onCritOnly": true
+            },
+            "apply": {
+              "shape": "FLAT",
+              "key": "damage",
+              "value": 25
+            }
+          }
+        ]
+      },
+      {
+        "id": "ps_eternal",
+        "tier": 9,
+        "displayName": "Eternal Arrow",
+        "description": "Each purchase: +1% Piercing Shot damage (swing & cast). Cost grows 10% per purchase. Requires ARCHERY level 92.",
+        "prerequisites": ["ps_t3_hawkshot"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "ARCHERY",
+              "level": 92
+            }
+          ]
+        },
+        "maxPurchases": -1,
+        "costScaling": {
+          "mode": "EXPONENTIAL",
+          "multiplier": 1.1
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 1,
+            "life_essence": 300
+          },
+          "items": [
+            {
+              "id": "Ingredient_Lightning_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "damage",
+            "value": 0.01,
+            "combatTarget": "ARCHERY"
+          }
+        ]
+      }
+    ]
+  }
+}

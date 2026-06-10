@@ -1,0 +1,22 @@
+{
+  "Name": "Convert_Mastery_Point",
+  "Payload": {
+    "id": "shop_convert_mastery_point",
+    "titleKey": "shop.convert_mastery_point.title",
+    "descriptionKey": "shop.convert_mastery_point.desc",
+    "currencyId": "bounty_token",
+    "cost": 500,
+    "category": "conversion",
+    "order": 10,
+    "requirements": { "requiresFeatures": ["mastery"] },
+    "limitPerDay": 3,
+    "rewards": [
+      {
+        "type": "CURRENCY",
+        "currencyId": "mastery_point",
+        "amount": 1,
+        "displayName": "+1 Mastery Point"
+      }
+    ]
+  }
+}

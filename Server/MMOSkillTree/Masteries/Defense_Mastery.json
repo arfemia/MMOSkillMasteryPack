@@ -1,0 +1,75 @@
+{
+  "Name": "Defense_Mastery",
+  "Payload": {
+    "extends": "combat6_standard",
+    "target": "skill:DEFENSE",
+    "params": {
+      "prefix": "def",
+      "gateSkill": "DEFENSE",
+      "trackName": "Defense Mastery",
+      "trackId": "defense_mastery",
+      "dmgIngredient": "Ingredient_Water_Essence",
+      "comboIngredient": "Ingredient_Lightning_Essence",
+      "combatTarget": "ALL",
+      "sacrificeStat": "HEALTH",
+      "capDisplay": "Blood Pact",
+      "skillLower": "defense"
+    },
+    "nodeOverrides": {
+      "def_t1_dmg": {
+        "displayName": "Defense Mastery: Bulwark",
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "iframesDurationMs",
+            "value": 0.25,
+            "targetAbility": "shield_slam"
+          }
+        ]
+      },
+      "def_t1_combo": {
+        "displayName": "Defense Mastery: Charge",
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "distance",
+            "value": 0.25,
+            "targetAbility": "shield_slam"
+          }
+        ]
+      },
+      "def_t2_life": {
+        "displayName": "Defense Mastery: Banner Bearer",
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "radius",
+            "value": 0.30,
+            "targetAbility": "guardians_call"
+          }
+        ]
+      },
+      "def_t3_cap": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "durationMs",
+            "value": 0.40,
+            "targetAbility": "guardians_call"
+          }
+        ]
+      },
+      "def_eternal": {
+        "description": "Each purchase: +0.5% Shield Slam i-frame duration. Cost grows 10% per purchase. Requires DEFENSE level 92.",
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "iframesDurationMs",
+            "value": 0.005,
+            "targetAbility": "shield_slam"
+          }
+        ]
+      }
+    }
+  }
+}

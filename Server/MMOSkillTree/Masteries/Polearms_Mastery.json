@@ -1,0 +1,19 @@
+{
+  "Name": "Polearms_Mastery",
+  "Payload": {
+    "extends": "combat6_standard",
+    "target": "skill:POLEARMS",
+    "params": {
+      "prefix": "pol",
+      "gateSkill": "POLEARMS",
+      "trackName": "Polearms Mastery",
+      "trackId": "polearms_mastery",
+      "dmgIngredient": "Ingredient_Lightning_Essence",
+      "comboIngredient": "Ingredient_Lightning_Essence",
+      "combatTarget": "POLEARMS",
+      "sacrificeStat": "STAMINA",
+      "capDisplay": "Phalanx",
+      "skillLower": "polearms"
+    }
+  }
+}

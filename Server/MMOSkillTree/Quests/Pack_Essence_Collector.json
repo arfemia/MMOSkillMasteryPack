@@ -1,0 +1,44 @@
+{
+  "Name": "Pack_Essence_Collector",
+  "Payload": {
+    "id": "pack_essence_collector",
+    "category": "main",
+    "requiresFeatures": ["mastery"],
+    "sortOrder": 40,
+    "autoAccept": true,
+    "tags": [
+      "Mastery",
+      "Gathering"
+    ],
+    "objectives": [
+      {
+        "id": "turn_in_essence",
+        "type": "TURN_IN",
+        "target": "Ingredient_Life_Essence",
+        "amount": 100,
+        "displayText": "Turn in 100 Life Essence",
+        "matchMode": "EXACT"
+      }
+    ],
+    "rewards": [
+      {
+        "type": "CURRENCY",
+        "currencyId": "mastery_point",
+        "amount": 5,
+        "displayName": "+5 Mastery Points"
+      },
+      {
+        "type": "XP",
+        "skill": "MINING",
+        "amount": 2000,
+        "displayName": "+2,000 Mining XP"
+      },
+      {
+        "type": "XP",
+        "skill": "WOODCUTTING",
+        "amount": 2000,
+        "displayName": "+2,000 Woodcutting XP"
+      }
+    ]
+  }
+}

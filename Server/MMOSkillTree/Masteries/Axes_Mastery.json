@@ -1,0 +1,19 @@
+{
+  "Name": "Axes_Mastery",
+  "Payload": {
+    "extends": "combat6_standard",
+    "target": "skill:AXES",
+    "params": {
+      "prefix": "axe",
+      "gateSkill": "AXES",
+      "trackName": "Axes Mastery",
+      "trackId": "axes_mastery",
+      "dmgIngredient": "Ingredient_Lightning_Essence",
+      "comboIngredient": "Ingredient_Lightning_Essence",
+      "combatTarget": "AXES",
+      "sacrificeStat": "STAMINA",
+      "capDisplay": "Rampage",
+      "skillLower": "axes"
+    }
+  }
+}

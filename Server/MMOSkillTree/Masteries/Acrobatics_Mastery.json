@@ -1,0 +1,143 @@
+{
+  "Name": "Acrobatics_Mastery",
+  "Payload": {
+    "disabled": true,
+    "target": "skill:ACROBATICS",
+    "refundPercent": 50,
+    "requirements": {
+      "mode": "AND",
+      "skillLevels": [
+        {
+          "skill": "ACROBATICS",
+          "level": 5
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "id": "acr_t1",
+        "tier": 1,
+        "displayName": "Acrobatics Mastery I",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 2,
+            "life_essence": 500
+          },
+          "items": [
+            {
+              "id": "Ingredient_Lightning_Essence",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.03,
+            "targetSkill": "ACROBATICS"
+          }
+        ]
+      },
+      {
+        "id": "acr_t2",
+        "tier": 2,
+        "displayName": "Acrobatics Mastery II",
+        "prerequisites": [
+          "acr_t1"
+        ],
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 5,
+            "life_essence": 1200
+          },
+          "items": [
+            {
+              "id": "Ingredient_Lightning_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.05,
+            "targetSkill": "ACROBATICS"
+          }
+        ]
+      },
+      {
+        "id": "acr_t3",
+        "tier": 3,
+        "displayName": "Acrobatics Mastery III",
+        "prerequisites": [
+          "acr_t2"
+        ],
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 10,
+            "life_essence": 3500
+          },
+          "items": [
+            {
+              "id": "Ingredient_Lightning_Essence",
+              "count": 3
+            },
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.1,
+            "targetSkill": "ACROBATICS"
+          }
+        ]
+      },
+      {
+        "id": "acr_eternal",
+        "tier": 9,
+        "displayName": "Acrobatics Mastery: Eternal",
+        "description": "Each purchase: +0.5% acrobatics mastery bonus-drop chance. Cost grows 10% per purchase. Grind without limit.",
+        "prerequisites": [
+          "acr_t1",
+          "acr_t2",
+          "acr_t3"
+        ],
+        "maxPurchases": -1,
+        "costScaling": {
+          "mode": "EXPONENTIAL",
+          "multiplier": 1.1
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "life_essence": 200
+          },
+          "items": [
+            {
+              "id": "Ingredient_Lightning_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.005,
+            "targetSkill": "ACROBATICS"
+          }
+        ]
+      }
+    ]
+  }
+}

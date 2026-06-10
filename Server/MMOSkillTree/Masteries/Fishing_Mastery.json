@@ -1,0 +1,143 @@
+{
+  "Name": "Fishing_Mastery",
+  "Payload": {
+    "disabled": true,
+    "target": "skill:FISHING",
+    "refundPercent": 50,
+    "requirements": {
+      "mode": "AND",
+      "skillLevels": [
+        {
+          "skill": "FISHING",
+          "level": 5
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "id": "fis_t1",
+        "tier": 1,
+        "displayName": "Fishing Mastery I",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 2,
+            "life_essence": 500
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.03,
+            "targetSkill": "FISHING"
+          }
+        ]
+      },
+      {
+        "id": "fis_t2",
+        "tier": 2,
+        "displayName": "Fishing Mastery II",
+        "prerequisites": [
+          "fis_t1"
+        ],
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 5,
+            "life_essence": 1200
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.05,
+            "targetSkill": "FISHING"
+          }
+        ]
+      },
+      {
+        "id": "fis_t3",
+        "tier": 3,
+        "displayName": "Fishing Mastery III",
+        "prerequisites": [
+          "fis_t2"
+        ],
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 10,
+            "life_essence": 3500
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 3
+            },
+            {
+              "id": "Ingredient_Ice_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.1,
+            "targetSkill": "FISHING"
+          }
+        ]
+      },
+      {
+        "id": "fis_eternal",
+        "tier": 9,
+        "displayName": "Fishing Mastery: Eternal",
+        "description": "Each purchase: +0.5% fishing mastery bonus-drop chance. Cost grows 10% per purchase. Grind without limit.",
+        "prerequisites": [
+          "fis_t1",
+          "fis_t2",
+          "fis_t3"
+        ],
+        "maxPurchases": -1,
+        "costScaling": {
+          "mode": "EXPONENTIAL",
+          "multiplier": 1.1
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "life_essence": 200
+          },
+          "items": [
+            {
+              "id": "Ingredient_Water_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.005,
+            "targetSkill": "FISHING"
+          }
+        ]
+      }
+    ]
+  }
+}

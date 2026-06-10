@@ -1,0 +1,66 @@
+# MMOSkillMasteryPack - Quest-Titel + Fließtext, Währungsnamen und sonstiger Anzeigetext.
+# Die Schlüssel stehen ohne Präfix; Hytales I18nModule stellt den Dateinamen voran, sodass jeder
+# als mmoskilltree.<key> geladen und vom Mod per Konvention aufgelöst wird (quest.<id>.title / .flavor,
+# currency.<id>.name, shop.<id>.title / .desc, ...). Füge eine <locale>/mmoskilltree.lang mit
+# denselben Schlüsseln hinzu, um zu übersetzen; fehlende Schlüssel fallen pro Schlüssel auf Englisch zurück.
+
+# --- Quests (quest.<id>.title / .flavor, per Konvention aufgelöst; folgt dem Kopfgeld-Muster) ---
+quest.pack_first_milestone.title = Erster Schritt zur Mastery
+quest.pack_first_milestone.flavor = Erreiche Stufe 15 in einer beliebigen Fähigkeit, um deinen ersten Mastery-Punkt zu verdienen. Der Pfad der Mastery beginnt hier.
+quest.pack_essence_collector.title = Essenz-Sammler
+quest.pack_essence_collector.flavor = Lebensessenz treibt die Mastery an. Bring 100 zum Altar und verdiene dauerhafte Macht.
+quest.pack_essence_devotee.title = Essenz-Anhänger
+quest.pack_essence_devotee.flavor = Für jene, die ihre Hingabe bereits bewiesen haben: bring 500 Lebensessenz und verdiene einen großen Mastery-Beutel.
+quest.pack_path_of_mastery.title = Pfad der Mastery
+quest.pack_path_of_mastery.flavor = Wahre Mastery ist breit gefächert. Erreiche Stufe 25 in fünf verschiedenen Fähigkeiten, um deine Bandbreite zu beweisen.
+quest.pack_mastery_tithe.title = Mastery-Tribut
+quest.pack_mastery_tithe.flavor = Zahle deinen Tribut an den Mastery-Kodex. Erschlage 10 Mobs und schlage 10 Stämme, dann beanspruche einen Mastery-Punkt. Erfordert Gesamtstufe 500 und den Erfolg "Mastery-Hamster". Nach jedem Beanspruchen erst wieder nach 6 Stunden verfügbar.
+
+# --- Token-Shop-Angebote, die dieser Pack ausliefert (explizite titleKey/descriptionKey -> diese Schlüssel) ---
+shop.convert_mastery_point.title = Mastery-Infusion (+1 Mastery-Punkt)
+shop.convert_mastery_point.desc = Wandle Kopfgeld-Token in einen Mastery-Punkt um.
+
+# --- Währungen (currency.<id>.name, per Konvention aufgelöst; id = Dateiname in Kleinbuchstaben) ---
+currency.life_essence.name = Lebensessenz
+currency.mastery_point.name = Mastery-Punkt
+
+# --- Mastery-Track-Titel (mastery.<trackId>.title, per Konvention aufgelöst; trackId = Dateiname in Kleinbuchstaben).
+# Knotentitel bleiben auf dem vorlagengenerierten displayName ("<Track>: Geschärft" usw.) als englische
+# Quelle; übersetze einen Knoten, indem du hier mastery.<nodeId>.title hinzufügst (der Mod löst ihn per Konvention auf). ---
+mastery.archery_mastery.title = Bogenschießen-Mastery
+mastery.artillery_mastery.title = Artillerie-Mastery
+mastery.axes_mastery.title = Äxte-Mastery
+mastery.blunt_mastery.title = Stumpfwaffen-Mastery
+mastery.daggers_mastery.title = Dolche-Mastery
+mastery.polearms_mastery.title = Stangenwaffen-Mastery
+mastery.staves_mastery.title = Stäbe-Mastery
+mastery.swords_mastery.title = Schwerter-Mastery
+mastery.unarmed_mastery.title = Unbewaffnet-Mastery
+mastery.mining_mastery.title = Bergbau-Mastery
+mastery.woodcutting_mastery.title = Holzfällen-Mastery
+mastery.harvesting_mastery.title = Ernte-Mastery
+mastery.fireball_mastery.title = Feuerball-Mastery
+mastery.magic_mastery.title = Magie-Mastery
+mastery.acrobatics_mastery.title = Akrobatik-Mastery
+mastery.enchanting_mastery.title = Verzauberungs-Mastery
+mastery.fishing_mastery.title = Angel-Mastery
+mastery.shadowstep_mastery.title = Schattenschritt-Mastery
+mastery.shield_slam_mastery.title = Schildschlag-Mastery
+mastery.whirlwind_mastery.title = Wirbelwind-Mastery
+mastery.piercing_shot_mastery.title = Durchschuss-Mastery
+mastery.meteor_mastery.title = Meteor-Mastery
+mastery.defense_mastery.title = Blocken-Mastery
+
+# --- Erfolge (achievement.<id>.title / .desc, per Konvention aufgelöst) ---
+achievement.pack_first_mastery_milestone.title = Lehrling des Pfades
+achievement.pack_first_mastery_milestone.desc = Erreiche Stufe 15 in einer beliebigen Fähigkeit - der erste Mastery-Punkt-Meilenstein.
+achievement.pack_mastery_milestone_journeyman.title = Geselle des Pfades
+achievement.pack_mastery_milestone_journeyman.desc = Erreiche Stufe 60 in einer beliebigen Fähigkeit - vier Mastery-Punkt-Meilensteine verdient.
+achievement.pack_mastery_hoarder_300.title = Mastery-Hamster
+achievement.pack_mastery_hoarder_300.desc = Verdiene im Laufe deines Lebens 300 Mastery-Punkte.
+achievement.pack_mastery_devotee.title = Anhänger der Mastery
+achievement.pack_mastery_devotee.desc = Die volle Mastery-Reise: ein Lehrling, ein Geselle und ein Hamster.
+achievement.pack_essence_hoarder_100.title = Essenz-Hamster I
+achievement.pack_essence_hoarder_100.desc = Sammle 100-mal Lebensessenz auf
+achievement.pack_essence_hoarder_10000.title = Essenz-Hamster II
+achievement.pack_essence_hoarder_10000.desc = Sammle im Laufe deines Lebens 10.000-mal Lebensessenz auf - ein wahres Gefäß für die Energie der Welt.

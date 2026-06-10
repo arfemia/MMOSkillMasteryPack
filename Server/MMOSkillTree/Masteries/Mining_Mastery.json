@@ -1,0 +1,167 @@
+{
+  "Name": "Mining_Mastery",
+  "Payload": {
+    "target": "skill:MINING",
+    "refundPercent": 50,
+    "requirements": {
+      "mode": "AND",
+      "skillLevels": [
+        {
+          "skill": "MINING",
+          "level": 5
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "id": "min_t1",
+        "tier": 1,
+        "displayName": "Mining Mastery I",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 2,
+            "life_essence": 500
+          },
+          "items": [
+            {
+              "id": "Ingredient_Crystal_Blue",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.03,
+            "targetSkill": "MINING"
+          }
+        ]
+      },
+      {
+        "id": "min_t2",
+        "tier": 2,
+        "displayName": "Mining Mastery II",
+        "prerequisites": [
+          "min_t1"
+        ],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "MINING",
+              "level": 40
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 5,
+            "life_essence": 1200
+          },
+          "items": [
+            {
+              "id": "Ingredient_Crystal_Blue",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.05,
+            "targetSkill": "MINING"
+          }
+        ]
+      },
+      {
+        "id": "min_t3",
+        "tier": 3,
+        "displayName": "Mining Mastery III",
+        "prerequisites": [
+          "min_t2"
+        ],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "MINING",
+              "level": 70
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 10,
+            "life_essence": 3500
+          },
+          "items": [
+            {
+              "id": "Ingredient_Crystal_Blue",
+              "count": 3
+            },
+            {
+              "id": "Ingredient_Crystal_Purple",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.1,
+            "targetSkill": "MINING"
+          }
+        ]
+      },
+      {
+        "id": "min_eternal",
+        "tier": 9,
+        "displayName": "Mining Mastery: Eternal",
+        "description": "Each purchase: +0.5% mining mastery bonus-drop chance. Cost grows 10% per purchase. Requires MINING level 92.",
+        "prerequisites": [
+          "min_t1",
+          "min_t2",
+          "min_t3"
+        ],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "MINING",
+              "level": 92
+            }
+          ]
+        },
+        "maxPurchases": -1,
+        "costScaling": {
+          "mode": "EXPONENTIAL",
+          "multiplier": 1.1
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 1,
+            "life_essence": 200
+          },
+          "items": [
+            {
+              "id": "Ingredient_Crystal_Blue",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "lootMultiplier",
+            "value": 0.005,
+            "targetSkill": "MINING"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "Name": "Daggers_Mastery",
+  "Payload": {
+    "extends": "combat6_standard",
+    "target": "skill:DAGGERS",
+    "params": {
+      "prefix": "dag",
+      "gateSkill": "DAGGERS",
+      "trackName": "Daggers Mastery",
+      "trackId": "daggers_mastery",
+      "dmgIngredient": "Ingredient_Void_Essence",
+      "comboIngredient": "Ingredient_Lightning_Essence",
+      "combatTarget": "DAGGERS",
+      "sacrificeStat": "STAMINA",
+      "capDisplay": "Assassin's Mark",
+      "skillLower": "daggers"
+    }
+  }
+}

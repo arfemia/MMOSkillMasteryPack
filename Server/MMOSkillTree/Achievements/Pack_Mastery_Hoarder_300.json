@@ -1,0 +1,23 @@
+{
+  "Name": "Pack_Mastery_Hoarder_300",
+  "Payload": {
+    "id": "pack_mastery_hoarder_300",
+    "category": "mastery",
+    "subcategory": "points",
+    "requiresFeatures": ["mastery"],
+    "sortOrder": 40,
+    "points": 50,
+    "triggerType": "EARN_CURRENCY",
+    "target": "mastery_point",
+    "requiredAmount": 300,
+    "matchMode": "EXACT",
+    "manualClaimRewards": [
+      {
+        "type": "CURRENCY",
+        "currencyId": "mastery_point",
+        "amount": 5,
+        "displayName": "+5 Mastery Points"
+      }
+    ]
+  }
+}

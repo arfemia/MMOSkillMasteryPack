@@ -1,0 +1,191 @@
+{
+  "Name": "Whirlwind_Mastery",
+  "Payload": {
+    "target": "ability:whirlwind",
+    "icon": "Icon_Whirlwind",
+    "refundPercent": 50,
+    "requirements": {
+      "mode": "AND",
+      "skillLevels": [
+        {
+          "skill": "AXES",
+          "level": 20
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "id": "ww_t1_dmg",
+        "tier": 1,
+        "displayName": "Sharp Edges",
+        "choiceGroup": "ww_t1",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 2,
+            "life_essence": 600
+          },
+          "items": [
+            {
+              "id": "Ingredient_Lightning_Essence",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "damage",
+            "value": 8,
+            "combatTarget": "AXES"
+          }
+        ]
+      },
+      {
+        "id": "ww_t1_cd",
+        "tier": 1,
+        "displayName": "Spinning Top",
+        "choiceGroup": "ww_t1",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 2,
+            "life_essence": 600
+          },
+          "items": [
+            {
+              "id": "Ingredient_Fire_Essence",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "cooldownMs",
+            "value": -1000,
+            "targetAbility": "whirlwind"
+          }
+        ]
+      },
+      {
+        "id": "ww_t2_radius",
+        "tier": 2,
+        "displayName": "Wide Arc",
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "AXES",
+              "level": 40
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 4,
+            "life_essence": 1500
+          },
+          "items": [
+            {
+              "id": "Ingredient_Lightning_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "radius",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": "ww_t3_tempest",
+        "tier": 3,
+        "displayName": "Tempest",
+        "prerequisites": ["ww_t2_radius"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "AXES",
+              "level": 70
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 8,
+            "life_essence": 4000
+          },
+          "items": [
+            {
+              "id": "Ingredient_Lightning_Essence",
+              "count": 3
+            },
+            {
+              "id": "Ingredient_Voidheart",
+              "count": 2
+            }
+          ],
+          "statSacrifice": {
+            "stat": "STAMINA",
+            "mode": "permanent_max",
+            "amount": 10
+          }
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "damage",
+            "value": 0.15,
+            "combatTarget": "AXES"
+          }
+        ]
+      },
+      {
+        "id": "ww_eternal",
+        "tier": 9,
+        "displayName": "Eternal Storm",
+        "description": "Each purchase: +1% Whirlwind damage (swing & cast). Cost grows 10% per purchase. Requires AXES level 92.",
+        "prerequisites": ["ww_t3_tempest"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "AXES",
+              "level": 92
+            }
+          ]
+        },
+        "maxPurchases": -1,
+        "costScaling": {
+          "mode": "EXPONENTIAL",
+          "multiplier": 1.1
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 1,
+            "life_essence": 300
+          },
+          "items": [
+            {
+              "id": "Ingredient_Lightning_Essence",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "damage",
+            "value": 0.01,
+            "combatTarget": "AXES"
+          }
+        ]
+      }
+    ]
+  }
+}

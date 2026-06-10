@@ -1,0 +1,66 @@
+# MMOSkillMasteryPack - названия квестов + флавор, названия валют и прочий отображаемый текст.
+# Ключи без префикса; I18nModule в Hytale добавляет имя файла, поэтому каждый загружается как
+# mmoskilltree.<key>, а мод разрешает его по соглашению (quest.<id>.title / .flavor,
+# currency.<id>.name, shop.<id>.title / .desc, ...). Добавьте <locale>/mmoskilltree.lang с
+# теми же ключами для перевода; отсутствующие ключи откатываются на английский по каждому ключу.
+
+# --- Квесты (quest.<id>.title / .flavor, разрешаются по соглашению; совпадает с шаблоном контрактов) ---
+quest.pack_first_milestone.title = Первый шаг к мастерству
+quest.pack_first_milestone.flavor = Достигните 15 уровня в любом навыке, чтобы заработать своё первое очко мастерства. Путь мастерства начинается здесь.
+quest.pack_essence_collector.title = Собиратель эссенции
+quest.pack_essence_collector.flavor = Эссенция жизни питает мастерство. Принесите 100 к алтарю и обретите непреходящую силу.
+quest.pack_essence_devotee.title = Приверженец эссенции
+quest.pack_essence_devotee.flavor = Для тех, кто уже доказал свою преданность: принесите 500 эссенции жизни и получите крупный кошель мастерства.
+quest.pack_path_of_mastery.title = Путь мастерства
+quest.pack_path_of_mastery.flavor = Истинное мастерство многогранно. Достигните 25 уровня в пяти разных навыках, чтобы доказать свой кругозор.
+quest.pack_mastery_tithe.title = Десятина мастерства
+quest.pack_mastery_tithe.flavor = Заплатите десятину кодексу мастерства. Убейте 10 мобов и срубите 10 брёвен, затем получите очко мастерства. Требуется общий уровень 500 и достижение «Накопитель мастерства». Снова доступно через 6 часов после каждого получения.
+
+# --- Предложения Магазина токенов, поставляемые этим паком (явные titleKey/descriptionKey -> эти ключи) ---
+shop.convert_mastery_point.title = Вливание мастерства (+1 очко мастерства)
+shop.convert_mastery_point.desc = Обменяйте токены контрактов на очко мастерства.
+
+# --- Валюты (currency.<id>.name, разрешается по соглашению; id = имя файла в нижнем регистре) ---
+currency.life_essence.name = Эссенция жизни
+currency.mastery_point.name = Очко мастерства
+
+# --- Названия треков мастерства (mastery.<trackId>.title, разрешаются по соглашению; trackId = имя файла в нижнем регистре).
+# Названия узлов остаются на сгенерированном шаблоном displayName ("<Track>: Sharpened" и т.п.) как английский
+# исходник; чтобы перевести узел, добавьте сюда mastery.<nodeId>.title (мод разрешает его по соглашению). ---
+mastery.archery_mastery.title = Мастерство стрельбы из лука
+mastery.artillery_mastery.title = Мастерство артиллерии
+mastery.axes_mastery.title = Мастерство топоров
+mastery.blunt_mastery.title = Мастерство дробящего оружия
+mastery.daggers_mastery.title = Мастерство кинжалов
+mastery.polearms_mastery.title = Мастерство древкового оружия
+mastery.staves_mastery.title = Мастерство посохов
+mastery.swords_mastery.title = Мастерство мечей
+mastery.unarmed_mastery.title = Мастерство боя без оружия
+mastery.mining_mastery.title = Мастерство добычи
+mastery.woodcutting_mastery.title = Мастерство лесорубства
+mastery.harvesting_mastery.title = Мастерство сбора урожая
+mastery.fireball_mastery.title = Мастерство огненного шара
+mastery.magic_mastery.title = Мастерство магии
+mastery.acrobatics_mastery.title = Мастерство акробатики
+mastery.enchanting_mastery.title = Мастерство зачарования
+mastery.fishing_mastery.title = Мастерство рыбалки
+mastery.shadowstep_mastery.title = Мастерство теневого шага
+mastery.shield_slam_mastery.title = Мастерство удара щитом
+mastery.whirlwind_mastery.title = Мастерство вихря
+mastery.piercing_shot_mastery.title = Мастерство пробивающего выстрела
+mastery.meteor_mastery.title = Мастерство метеора
+mastery.defense_mastery.title = Мастерство защиты
+
+# --- Достижения (achievement.<id>.title / .desc, разрешаются по соглашению) ---
+achievement.pack_first_mastery_milestone.title = Подмастерье пути
+achievement.pack_first_mastery_milestone.desc = Достигните 15 уровня в любом навыке - первая веха очка мастерства.
+achievement.pack_mastery_milestone_journeyman.title = Странствующий мастер пути
+achievement.pack_mastery_milestone_journeyman.desc = Достигните 60 уровня в любом навыке - заработаны четыре вехи очков мастерства.
+achievement.pack_mastery_hoarder_300.title = Накопитель мастерства
+achievement.pack_mastery_hoarder_300.desc = Заработайте 300 очков мастерства за всё время.
+achievement.pack_mastery_devotee.title = Приверженец мастерства
+achievement.pack_mastery_devotee.desc = Полный путь мастерства: подмастерье, странствующий мастер и накопитель.
+achievement.pack_essence_hoarder_100.title = Накопитель эссенции I
+achievement.pack_essence_hoarder_100.desc = Подберите эссенцию жизни 100 раз
+achievement.pack_essence_hoarder_10000.title = Накопитель эссенции II
+achievement.pack_essence_hoarder_10000.desc = Подберите эссенцию жизни 10 000 раз за всё время - истинный сосуд для энергии мира.

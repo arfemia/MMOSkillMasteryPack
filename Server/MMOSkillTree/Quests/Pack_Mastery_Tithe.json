@@ -1,0 +1,47 @@
+{
+  "Name": "Pack_Mastery_Tithe",
+  "Payload": {
+    "id": "pack_mastery_tithe",
+    "category": "main",
+    "requiresFeatures": ["mastery"],
+    "sortOrder": 42,
+    "autoAccept": true,
+    "repeatable": true,
+    "cooldownSeconds": 21600,
+    "autoClaimRewards": false,
+    "requirements": {
+      "minLevel": 500
+    },
+    "requiredAchievements": ["pack_mastery_hoarder_300"],
+    "tags": [
+      "Mastery",
+      "Daily"
+    ],
+    "objectives": [
+      {
+        "id": "kill_mobs",
+        "type": "KILL_ENTITY",
+        "target": "",
+        "amount": 10,
+        "displayText": "Slay 10 mobs",
+        "matchMode": "CONTAINS"
+      },
+      {
+        "id": "chop_logs",
+        "type": "BREAK_BLOCK",
+        "target": "Wood",
+        "amount": 10,
+        "displayText": "Chop 10 logs",
+        "matchMode": "CONTAINS"
+      }
+    ],
+    "rewards": [
+      {
+        "type": "CURRENCY",
+        "currencyId": "mastery_point",
+        "amount": 1,
+        "displayName": "+1 Mastery Point"
+      }
+    ]
+  }
+}

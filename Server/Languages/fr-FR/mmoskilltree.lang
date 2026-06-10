@@ -1,0 +1,66 @@
+# MMOSkillMasteryPack - titres + ambiance des quêtes, noms des monnaies et autres textes affichés.
+# Les clés sont nues ; l'I18nModule de Hytale ajoute le nom de fichier en préfixe, donc chaque clé
+# se charge comme mmoskilltree.<key> et le mod la résout par convention (quest.<id>.title / .flavor,
+# currency.<id>.name, shop.<id>.title / .desc, ...). Ajoutez un fichier <locale>/mmoskilltree.lang
+# avec les mêmes clés pour traduire ; les clés manquantes retombent sur l'anglais clé par clé.
+
+# --- Quêtes (quest.<id>.title / .flavor, résolues par convention ; même schéma que les primes) ---
+quest.pack_first_milestone.title = Premier pas vers la maîtrise
+quest.pack_first_milestone.flavor = Atteignez le niveau 15 dans n'importe quelle compétence pour gagner votre premier Point de maîtrise. La voie de la maîtrise commence ici.
+quest.pack_essence_collector.title = Collecteur d'essence
+quest.pack_essence_collector.flavor = L'essence de vie alimente la maîtrise. Apportez-en 100 à l'autel et gagnez un pouvoir durable.
+quest.pack_essence_devotee.title = Dévot de l'essence
+quest.pack_essence_devotee.flavor = Pour ceux qui ont déjà prouvé leur dévouement : apportez 500 essences de vie et gagnez une grosse bourse de maîtrise.
+quest.pack_path_of_mastery.title = Voie de la maîtrise
+quest.pack_path_of_mastery.flavor = La vraie maîtrise est vaste. Atteignez le niveau 25 dans cinq compétences différentes pour prouver votre polyvalence.
+quest.pack_mastery_tithe.title = Dîme de la maîtrise
+quest.pack_mastery_tithe.flavor = Payez votre dîme au codex de la maîtrise. Tuez 10 mobs et coupez 10 bûches, puis réclamez un Point de maîtrise. Nécessite le Niveau total 500 et le succès Amasseur de maîtrise. De nouveau disponible 6 heures après chaque réclamation.
+
+# --- Offres de la Boutique de tokens livrées par ce pack (titleKey/descriptionKey explicites -> ces clés) ---
+shop.convert_mastery_point.title = Infusion de maîtrise (+1 Point de maîtrise)
+shop.convert_mastery_point.desc = Convertissez des tokens de prime en Point de maîtrise.
+
+# --- Monnaies (currency.<id>.name, résolu par convention ; id = nom de fichier en minuscules) ---
+currency.life_essence.name = Essence de vie
+currency.mastery_point.name = Point de maîtrise
+
+# --- Titres des voies de maîtrise (mastery.<trackId>.title, résolus par convention ; trackId = nom de fichier en minuscules).
+# Les titres des nœuds restent sur le displayName généré par le modèle ("<Track>: Sharpened", etc.) comme source
+# anglaise ; traduisez un nœud en ajoutant mastery.<nodeId>.title ici (le mod le résout par convention). ---
+mastery.archery_mastery.title = Maîtrise de l'archerie
+mastery.artillery_mastery.title = Maîtrise de l'artillerie
+mastery.axes_mastery.title = Maîtrise des haches
+mastery.blunt_mastery.title = Maîtrise des contondants
+mastery.daggers_mastery.title = Maîtrise des dagues
+mastery.polearms_mastery.title = Maîtrise des lances
+mastery.staves_mastery.title = Maîtrise des bâtons
+mastery.swords_mastery.title = Maîtrise des épées
+mastery.unarmed_mastery.title = Maîtrise des mains nues
+mastery.mining_mastery.title = Maîtrise du minage
+mastery.woodcutting_mastery.title = Maîtrise du bûcheronnage
+mastery.harvesting_mastery.title = Maîtrise de la récolte
+mastery.fireball_mastery.title = Maîtrise de la boule de feu
+mastery.magic_mastery.title = Maîtrise de la magie
+mastery.acrobatics_mastery.title = Maîtrise des acrobaties
+mastery.enchanting_mastery.title = Maîtrise de l'enchantement
+mastery.fishing_mastery.title = Maîtrise de la pêche
+mastery.shadowstep_mastery.title = Maîtrise du pas de l'ombre
+mastery.shield_slam_mastery.title = Maîtrise du coup de bouclier
+mastery.whirlwind_mastery.title = Maîtrise du tourbillon
+mastery.piercing_shot_mastery.title = Maîtrise du tir perforant
+mastery.meteor_mastery.title = Maîtrise du météore
+mastery.defense_mastery.title = Maîtrise du blocage
+
+# --- Succès (achievement.<id>.title / .desc, résolus par convention) ---
+achievement.pack_first_mastery_milestone.title = Apprenti de la voie
+achievement.pack_first_mastery_milestone.desc = Atteignez le niveau 15 dans n'importe quelle compétence, le premier palier de Point de maîtrise.
+achievement.pack_mastery_milestone_journeyman.title = Compagnon de la voie
+achievement.pack_mastery_milestone_journeyman.desc = Atteignez le niveau 60 dans n'importe quelle compétence, quatre paliers de Point de maîtrise gagnés.
+achievement.pack_mastery_hoarder_300.title = Amasseur de maîtrise
+achievement.pack_mastery_hoarder_300.desc = Gagnez 300 Points de maîtrise au cours de votre vie.
+achievement.pack_mastery_devotee.title = Dévot de la maîtrise
+achievement.pack_mastery_devotee.desc = Le parcours complet de la maîtrise : un apprenti, un compagnon et un amasseur.
+achievement.pack_essence_hoarder_100.title = Amasseur d'essence I
+achievement.pack_essence_hoarder_100.desc = Ramassez de l'essence de vie 100 fois différentes
+achievement.pack_essence_hoarder_10000.title = Amasseur d'essence II
+achievement.pack_essence_hoarder_10000.desc = Ramassez de l'essence de vie 10 000 fois différentes au cours de votre vie, un véritable réceptacle de l'énergie du monde.

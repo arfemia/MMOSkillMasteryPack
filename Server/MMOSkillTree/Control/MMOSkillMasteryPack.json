@@ -1,0 +1,13 @@
+{
+  "Name": "MMOSkillMasteryPack",
+  "Masteries": "add",
+  "MasteryTemplates": "add",
+  "Currencies": "add",
+  "CommandRewards": "add",
+  "CommandRewardTemplates": "add",
+  "Quests": "add",
+  "QuestTemplates": "add",
+  "Achievements": "add",
+  "AchievementTemplates": "add",
+  "TokenShop": "add"
+}

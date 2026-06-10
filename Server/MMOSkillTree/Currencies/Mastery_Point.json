@@ -1,0 +1,15 @@
+{
+  "Name": "Mastery_Point",
+  "Payload": {
+    "iconItemId": "Ingredient_Crystal_Purple",
+    "color": "#c08aff",
+    "cap": 0,
+    "lossOnDeathPercent": 0,
+    "decayPerDayPercent": 0,
+    "showOnSidebar": true,
+    "showOnMasteryPage": true,
+    "sources": {
+      "xpConversionPercent": 0
+    }
+  }
+}

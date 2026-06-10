@@ -1,0 +1,249 @@
+{
+  "Name": "Combat6_Standard",
+  "Payload": {
+    "refundPercent": 50,
+    "requirements": {
+      "mode": "AND",
+      "skillLevels": [
+        {
+          "skill": "{{gateSkill}}",
+          "level": 16
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "id": "{{prefix}}_t1_dmg",
+        "tier": 1,
+        "displayName": "{{trackName}}: Sharpened",
+        "choiceGroup": "{{prefix}}_t1",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 3,
+            "life_essence": 600
+          },
+          "items": [
+            {
+              "id": "{{dmgIngredient}}",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "damage",
+            "value": 0.08,
+            "targetSkill": "{{gateSkill}}",
+            "combatTarget": "{{combatTarget}}"
+          }
+        ]
+      },
+      {
+        "id": "{{prefix}}_t1_combo",
+        "tier": 1,
+        "displayName": "{{trackName}}: Combo Master",
+        "choiceGroup": "{{prefix}}_t1",
+
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 3,
+            "life_essence": 600
+          },
+          "items": [
+            {
+              "id": "{{comboIngredient}}",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "comboFinisherBonus",
+            "value": 5,
+            "targetSkill": "{{gateSkill}}",
+            "combatTarget": "{{combatTarget}}"
+          }
+        ]
+      },
+      {
+        "id": "{{prefix}}_t2_life",
+        "tier": 2,
+        "displayName": "{{trackName}}: Vampiric",
+        "choiceGroup": "{{prefix}}_t2",
+        "prerequisites": ["{{prefix}}_t1_dmg"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "{{gateSkill}}",
+              "level": 40
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 6,
+            "life_essence": 1500
+          },
+          "items": [
+            {
+              "id": "{{dmgIngredient}}",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "lifesteal",
+            "value": 3,
+            "targetSkill": "{{gateSkill}}",
+            "combatTarget": "{{combatTarget}}"
+          }
+        ]
+      },
+      {
+        "id": "{{prefix}}_t2_cd",
+        "tier": 2,
+        "displayName": "{{trackName}}: Swift",
+        "choiceGroup": "{{prefix}}_t2",
+        "prerequisites": ["{{prefix}}_t1_combo"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "{{gateSkill}}",
+              "level": 40
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 6,
+            "life_essence": 1500
+          },
+          "items": [
+            {
+              "id": "{{comboIngredient}}",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.15,
+            "targetSkill": "{{gateSkill}}"
+          }
+        ]
+      },
+      {
+        "id": "{{prefix}}_t3_cap",
+        "tier": 3,
+        "displayName": "{{capDisplay}}",
+        "requirements": {
+          "mode": "AND",
+          "skillLevels": [
+            {
+              "skill": "{{gateSkill}}",
+              "level": 70
+            }
+          ],
+          "groups": [
+            {
+              "mode": "OR",
+              "masteryNodes": [
+                {
+                  "trackId": "{{trackId}}",
+                  "nodeId": "{{prefix}}_t2_life"
+                },
+                {
+                  "trackId": "{{trackId}}",
+                  "nodeId": "{{prefix}}_t2_cd"
+                }
+              ]
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 12,
+            "life_essence": 4000
+          },
+          "items": [
+            {
+              "id": "{{dmgIngredient}}",
+              "count": 3
+            },
+            {
+              "id": "Ingredient_Voidheart",
+              "count": 2
+            }
+          ],
+          "statSacrifice": {
+            "stat": "{{sacrificeStat}}",
+            "mode": "permanent_max",
+            "amount": 10
+          }
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "damage",
+            "value": 0.12,
+            "targetSkill": "{{gateSkill}}",
+            "combatTarget": "{{combatTarget}}"
+          }
+        ]
+      },
+      {
+        "id": "{{prefix}}_eternal",
+        "tier": 9,
+        "displayName": "{{trackName}}: Eternal",
+        "description": "Each purchase: +0.5% {{skillLower}} mastery damage. Cost grows 10% per purchase. Requires {{gateSkill}} level 92.",
+        "prerequisites": ["{{prefix}}_t3_cap"],
+        "requirements": {
+          "skillLevels": [
+            {
+              "skill": "{{gateSkill}}",
+              "level": 92
+            }
+          ]
+        },
+        "maxPurchases": -1,
+        "costScaling": {
+          "mode": "EXPONENTIAL",
+          "multiplier": 1.1
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 1,
+            "life_essence": 350
+          },
+          "items": [
+            {
+              "id": "{{dmgIngredient}}",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "damage",
+            "value": 0.005,
+            "targetSkill": "{{gateSkill}}",
+            "combatTarget": "{{combatTarget}}"
+          }
+        ]
+      }
+    ]
+  }
+}

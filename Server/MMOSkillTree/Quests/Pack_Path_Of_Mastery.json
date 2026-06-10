@@ -1,0 +1,59 @@
+{
+  "Name": "Pack_Path_Of_Mastery",
+  "Payload": {
+    "id": "pack_path_of_mastery",
+    "category": "main",
+    "requiresFeatures": ["mastery"],
+    "sortOrder": 50,
+    "autoAccept": true,
+    "tags": [
+      "Mastery",
+      "Generalist"
+    ],
+    "objectives": [
+      {
+        "id": "reach_mining_25",
+        "type": "REACH_LEVEL",
+        "target": "MINING",
+        "amount": 25,
+        "displayText": "Reach Mining level 25"
+      },
+      {
+        "id": "reach_woodcutting_25",
+        "type": "REACH_LEVEL",
+        "target": "WOODCUTTING",
+        "amount": 25,
+        "displayText": "Reach Woodcutting level 25"
+      },
+      {
+        "id": "reach_harvesting_25",
+        "type": "REACH_LEVEL",
+        "target": "HARVESTING",
+        "amount": 25,
+        "displayText": "Reach Harvesting level 25"
+      },
+      {
+        "id": "reach_swords_25",
+        "type": "REACH_LEVEL",
+        "target": "SWORDS",
+        "amount": 25,
+        "displayText": "Reach Swords level 25"
+      },
+      {
+        "id": "reach_archery_25",
+        "type": "REACH_LEVEL",
+        "target": "ARCHERY",
+        "amount": 25,
+        "displayText": "Reach Archery level 25"
+      }
+    ],
+    "rewards": [
+      {
+        "type": "CURRENCY",
+        "currencyId": "mastery_point",
+        "amount": 10,
+        "displayName": "+10 Mastery Points"
+      }
+    ]
+  }
+}
