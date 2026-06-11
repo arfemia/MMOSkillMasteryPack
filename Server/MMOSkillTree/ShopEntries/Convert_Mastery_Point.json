@@ -4,8 +4,7 @@
     "id": "shop_convert_mastery_point",
     "titleKey": "shop.convert_mastery_point.title",
     "descriptionKey": "shop.convert_mastery_point.desc",
-    "currencyId": "bounty_token",
-    "cost": 500,
+    "cost": { "currencies": { "bounty_token": 500 } },
     "category": "conversion",
     "order": 10,
     "requirements": { "requiresFeatures": ["mastery"] },
@@ -14,8 +13,7 @@
       {
         "type": "CURRENCY",
         "currencyId": "mastery_point",
-        "amount": 1,
-        "displayName": "+1 Mastery Point"
+        "amount": 1
       }
     ]
   }
