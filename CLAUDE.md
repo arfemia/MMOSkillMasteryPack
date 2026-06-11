@@ -333,7 +333,7 @@ The pack and the plugin co-evolve:
 
 ## Verification
 
-1. Build the plugin: `./gradlew build` from the parent directory. Produces
+1. Build the plugin: `./gradlew build` from the monorepo root, two levels up (`../../`). Produces
    `build/libs/MMOSkillTree-X.Y.Z.jar`.
 2. Build the pack zip (see Build & deploy above).
 3. Copy both into your Hytale mods folder
