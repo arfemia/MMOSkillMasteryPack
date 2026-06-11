@@ -28,6 +28,10 @@ skill-mastery-pack/
         └── Achievements/*.json                5 hand-authored achievements
 ```
 
+## Release notes (patch-notes paradigm)
+
+Per-version public release notes live in `patch-notes/<version>.md`, same paradigm as the main mod repo: YAML frontmatter (`version`, `title`, `type: patch-note`, `status: held|released`), a one-line summary, then user-facing `- **New/Fixed: ...**` bullets. No em-dashes. `patch-notes/_INDEX.md` lists them newest-first. `CURSEFORGE.md` is the public listing copy; keep its Versions table in sync with each release. (No docs-site publishing for packs yet.)
+
 ## Build & deploy
 
 ```powershell

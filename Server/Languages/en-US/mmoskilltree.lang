@@ -24,9 +24,7 @@ shop.convert_mastery_point.desc = Convert Bounty Tokens into a Mastery Point.
 currency.life_essence.name = Life Essence
 currency.mastery_point.name = Mastery Point
 
-# --- Mastery track titles (mastery.<trackId>.title, resolved by convention; trackId = filename lowercased).
-# Node titles stay on the template-generated displayName ("<Track>: Sharpened" etc.) as the English
-# source; translate a node by adding mastery.<nodeId>.title here (the mod resolves it by convention). ---
+# --- Mastery track titles (mastery.<trackId>.title, resolved by convention; trackId = filename lowercased) ---
 mastery.archery_mastery.title = Archery Mastery
 mastery.artillery_mastery.title = Artillery Mastery
 mastery.axes_mastery.title = Axes Mastery
@@ -50,6 +48,104 @@ mastery.whirlwind_mastery.title = Whirlwind Mastery
 mastery.piercing_shot_mastery.title = Piercing Shot Mastery
 mastery.meteor_mastery.title = Meteor Mastery
 mastery.defense_mastery.title = Defense Mastery
+
+# --- Structural tier names (mastery.node.<tail>.title / .desc). The mod composes a fanned
+#     node's title as "<track title>: <tier name>" via its mastery.node_title.format key, so
+#     ONE key per template tier localizes every track that extends combat6_standard, custom
+#     skills included. A per-node mastery.<nodeId>.title key always wins over composition.
+#     The desc takes {0} = localized track title, {1} = localized target skill name. ---
+mastery.node.t1_dmg.title = Sharpened
+mastery.node.t1_combo.title = Combo Master
+mastery.node.t2_life.title = Vampiric
+mastery.node.t2_cd.title = Swift
+mastery.node.eternal.title = Eternal
+mastery.node.eternal.desc = Each purchase: +0.5% {0} damage. Cost grows 10% per purchase. Requires {1} level 92.
+
+# --- Capstone node titles (the per-track {{capDisplay}} template param) ---
+mastery.arc_t3_cap.title = Eagle Eye
+mastery.art_t3_cap.title = Demolition Expert
+mastery.axe_t3_cap.title = Rampage
+mastery.blu_t3_cap.title = Skullbreaker
+mastery.dag_t3_cap.title = Assassin's Mark
+mastery.def_t3_cap.title = Blood Pact
+mastery.mag_t3_cap.title = Archwizard
+mastery.pol_t3_cap.title = Phalanx
+mastery.sta_t3_cap.title = Archmage's Focus
+mastery.swo_t3_cap.title = Masterwork Blade
+mastery.una_t3_cap.title = Iron Body
+
+# --- Hand-authored node titles (per-node keys; these win over structural composition,
+#     which matters for ids that reuse a template tail like t1_dmg or eternal) ---
+mastery.acr_t1.title = Acrobatics Mastery I
+mastery.acr_t2.title = Acrobatics Mastery II
+mastery.acr_t3.title = Acrobatics Mastery III
+mastery.acr_eternal.title = Acrobatics Mastery: Eternal
+mastery.enc_t1.title = Enchanting Mastery I
+mastery.enc_t2.title = Enchanting Mastery II
+mastery.enc_t3.title = Enchanting Mastery III
+mastery.enc_eternal.title = Enchanting Mastery: Eternal
+mastery.fb_t1_dmg.title = Searing Touch
+mastery.fb_t1_cd.title = Quickcast
+mastery.fb_t2_radius.title = Inferno Radius
+mastery.fb_t2_pierce.title = Burning Pierce
+mastery.fb_t3_inferno.title = Inferno
+mastery.fb_eternal.title = Eternal Flame
+mastery.fis_t1.title = Fishing Mastery I
+mastery.fis_t2.title = Fishing Mastery II
+mastery.fis_t3.title = Fishing Mastery III
+mastery.fis_eternal.title = Fishing Mastery: Eternal
+mastery.har_t1.title = Harvesting Mastery I
+mastery.har_t2.title = Harvesting Mastery II
+mastery.har_t3.title = Harvesting Mastery III
+mastery.har_eternal.title = Harvesting Mastery: Eternal
+mastery.met_t1.title = Meteor Strike 1
+mastery.met_t2.title = Meteor Strike 2
+mastery.met_t3.title = Meteor Strike 3
+mastery.met_t4.title = Meteor Strike 4
+mastery.met_eternal.title = Eternal Cataclysm
+mastery.min_t1.title = Mining Mastery I
+mastery.min_t2.title = Mining Mastery II
+mastery.min_t3.title = Mining Mastery III
+mastery.min_eternal.title = Mining Mastery: Eternal
+mastery.ps_t1_dmg.title = Heavy Draw
+mastery.ps_t1_cd.title = Snapshot
+mastery.ps_t2_pierce.title = Deep Pierce
+mastery.ps_t3_hawkshot.title = Hawkshot
+mastery.ps_eternal.title = Eternal Arrow
+mastery.sst_t1_range.title = Long Step
+mastery.sst_t1_cd.title = Swift Step
+mastery.sst_t1_cheap.title = Frugal Step
+mastery.sst_t2_phantom.title = Phantom Mastery
+mastery.sst_t3_voidwalk.title = Voidwalk
+mastery.sst_eternal.title = Eternal Shadow
+mastery.ss_t1_dmg.title = Bulwark
+mastery.ss_t1_cd.title = Tower Stance
+mastery.ss_t2_stagger.title = Stagger
+mastery.ss_t3_mountainshield.title = Mountainshield
+mastery.ss_eternal.title = Eternal Wall
+mastery.ww_t1_dmg.title = Sharp Edges
+mastery.ww_t1_cd.title = Spinning Top
+mastery.ww_t2_radius.title = Wide Arc
+mastery.ww_t3_tempest.title = Tempest
+mastery.ww_eternal.title = Eternal Storm
+mastery.woo_t1.title = Woodcutting Mastery I
+mastery.woo_t2.title = Woodcutting Mastery II
+mastery.woo_t3.title = Woodcutting Mastery III
+mastery.woo_eternal.title = Woodcutting Mastery: Eternal
+
+# --- Hand-authored eternal node descriptions ---
+mastery.acr_eternal.desc = Each purchase: +0.5% acrobatics mastery bonus-drop chance. Cost grows 10% per purchase. Grind without limit.
+mastery.enc_eternal.desc = Each purchase: +0.5% enchanting mastery bonus-drop chance. Cost grows 10% per purchase. Grind without limit.
+mastery.fb_eternal.desc = Each purchase: +1% Fireball damage. Cost grows 25% per purchase. Requires MAGIC level 92.
+mastery.fis_eternal.desc = Each purchase: +0.5% fishing mastery bonus-drop chance. Cost grows 10% per purchase. Grind without limit.
+mastery.har_eternal.desc = Each purchase: +0.5% harvesting mastery bonus-drop chance. Cost grows 10% per purchase. Requires HARVESTING level 92.
+mastery.met_eternal.desc = Each purchase: -1% Meteor cooldown and +0.75% Meteor damage. Cost grows 10% per purchase (capped after 70). Requires MAGIC level 92.
+mastery.min_eternal.desc = Each purchase: +0.5% mining mastery bonus-drop chance. Cost grows 10% per purchase. Requires MINING level 92.
+mastery.ps_eternal.desc = Each purchase: +1% Piercing Shot damage (swing & cast). Cost grows 10% per purchase. Requires ARCHERY level 92.
+mastery.sst_eternal.desc = Each purchase: -1% Shadowstep cooldown. Cost grows 10% per purchase. Requires DAGGERS level 92.
+mastery.ss_eternal.desc = Each purchase: +1% Shield Slam damage. Cost grows 10% per purchase. Requires DEFENSE level 92.
+mastery.ww_eternal.desc = Each purchase: +1% Whirlwind damage (swing & cast). Cost grows 10% per purchase. Requires AXES level 92.
+mastery.woo_eternal.desc = Each purchase: +0.5% woodcutting mastery bonus-drop chance. Cost grows 10% per purchase. Requires WOODCUTTING level 92.
 
 # --- Achievements (achievement.<id>.title / .desc, resolved by convention) ---
 achievement.pack_first_mastery_milestone.title = Apprentice of the Path
