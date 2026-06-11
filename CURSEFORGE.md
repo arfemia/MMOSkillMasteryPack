@@ -44,9 +44,9 @@ The pack uses the new **CommandReward template system** (plugin 1.1.0+): one reu
 - **Mastery Hoarder** (50 pts, +5 MP) — earn 300 Mastery Points lifetime. Counts cumulatively across milestone rewards, quests, and admin grants; refunds don't subtract.
 - **Devotee of Mastery** (250 pts meta, +20 MP) — unlock the four non-meta achievements above.
 
-### Token Shop offer (plugin 1.2.1+)
+### Token Shop offer (plugin 1.3.0+)
 
-Running the [MMO Skill Bounty Pack](https://www.curseforge.com/hytale/mods/mmo-skill-tree-bounty-board-pack-rich-customizable) too? This pack adds a **Mastery Infusion** offer to its Token Shop: convert Bounty Tokens into a Mastery Point (capped per day). It appears only when both packs are installed on plugin 1.2.1+ (the Token Shop engine); without the Bounty Pack it stays dormant.
+Running the [MMO Skill Bounty Pack](https://www.curseforge.com/hytale/mods/mmo-skill-tree-bounty-board-pack-rich-customizable) too? This pack adds a **Mastery Infusion** offer to its Token Shop: convert Bounty Tokens into a Mastery Point (capped per day). It appears only when both packs are installed on plugin 1.3.0+ (the Token Shop engine); without the Bounty Pack it stays dormant.
 
 ## Installation
 
@@ -81,7 +81,7 @@ The pack uses the standard MMO content-pack format documented in the plugin's `C
 
 | Pack  | Plugin | Notes                                                                                                                                                                                                                                                                                             |
 | ----- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.0.1 | 1.1.0+ (1.2.1+ for the Token Shop offer) | Adds a **Mastery Infusion** Token Shop offer (convert Bounty Tokens into a Mastery Point), active when the Bounty Pack and plugin 1.2.1+ are present. Core mastery content unchanged. |
+| 1.0.1 | 1.1.0+ (1.3.0+ for the Token Shop offer) | Adds a **Mastery Infusion** Token Shop offer (convert Bounty Tokens into a Mastery Point), active when the Bounty Pack and plugin 1.3.0+ are present. Core mastery content unchanged. |
 | 1.0.0 | 1.1.0+ | First standalone release. Migrates `MasteryDefaults` + `CurrencyDefaults` + mastery-point milestones out of the plugin jar. Mastery-point milestone file uses the plugin's CommandReward template + `{{ALL_SKILLS}}` system (plugin 1.1.0+) — 1 template + 1 sentinel entry covers all 20 skills. |
 
 ## Roadmap
