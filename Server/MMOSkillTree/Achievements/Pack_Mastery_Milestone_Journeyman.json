@@ -15,8 +15,7 @@
       {
         "type": "CURRENCY",
         "currencyId": "mastery_point",
-        "amount": 3,
-        "displayName": "+3 Mastery Points"
+        "amount": 3
       }
     ]
   }

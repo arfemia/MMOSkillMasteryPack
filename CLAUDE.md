@@ -105,7 +105,7 @@ All player-facing display text ships in `Server/Languages/en-US/mmoskilltree.lan
 - **Achievements:** `achievement.<id>.title` + `achievement.<id>.desc`.
 - **Token Shop offers:** explicit `"titleKey"`/`"descriptionKey"` in the offer JSON pointing at `.lang` keys.
 
-Translate by shipping `Server/Languages/<bcp47>/mmoskilltree.lang` with the same keys (missing keys fall back to English per key). Reward line-items keep a literal `displayName` (auto-rendered, not localized). No em-dashes in `.lang` values.
+Translate by shipping `Server/Languages/<bcp47>/mmoskilltree.lang` with the same keys (missing keys fall back to English per key). Reward line-items carry NO `displayName`: the mod auto-renders a localized line from the reward itself ("+5 Mastery Points", "Taming XP x2 for 45m", native item names), so a baked-in literal would double-render the amount AND pin the text to English. No em-dashes in `.lang` values.
 
 ## Mastery template extension (plugin 1.1.0+)
 

@@ -24,20 +24,17 @@
       {
         "type": "CURRENCY",
         "currencyId": "mastery_point",
-        "amount": 5,
-        "displayName": "+5 Mastery Points"
+        "amount": 5
       },
       {
         "type": "XP",
         "skill": "MINING",
-        "amount": 2000,
-        "displayName": "+2,000 Mining XP"
+        "amount": 2000
       },
       {
         "type": "XP",
         "skill": "WOODCUTTING",
-        "amount": 2000,
-        "displayName": "+2,000 Woodcutting XP"
+        "amount": 2000
       }
     ]
   }
