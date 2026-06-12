@@ -6,19 +6,19 @@
 
 # --- Küldetések (quest.<id>.title / .flavor, konvenció szerint feloldva; a bounty mintát követi) ---
 quest.pack_first_milestone.title = Első Lépés a Mastery Felé
-quest.pack_first_milestone.flavor = Érd el a 15. szintet bármelyik képességben, hogy megszerezd az első Mastery Pontodat. A mastery útja itt kezdődik.
+quest.pack_first_milestone.flavor = Bizonyíts bármelyik képességben, hogy elérd az első mastery mérföldkövedet. A mastery útja itt kezdődik.
 quest.pack_essence_collector.title = Esszencia Gyűjtő
-quest.pack_essence_collector.flavor = Az Életesszencia táplálja a masteryt. Hozz 100-at az oltárhoz, és szerezz tartós erőt.
+quest.pack_essence_collector.flavor = A világ esszenciája táplálja a masteryt. Vigyél áldozatot az oltárhoz, és szerezz tartós erőt.
 quest.pack_essence_devotee.title = Esszencia Híve
-quest.pack_essence_devotee.flavor = Azoknak, akik már bizonyították elhivatottságukat: hozz 500 Életesszenciát, és szerezz egy jelentős mastery erszényt.
+quest.pack_essence_devotee.flavor = Azoknak, akik már bizonyították elhivatottságukat: nagyobb áldozat egy jelentős mastery erszényért.
 quest.pack_path_of_mastery.title = A Mastery Útja
-quest.pack_path_of_mastery.flavor = Az igazi mastery sokrétű. Érd el a 25. szintet öt különböző képességben, hogy bizonyítsd a sokoldalúságodat.
+quest.pack_path_of_mastery.flavor = Az igazi mastery sokrétű. Juss magasra több különböző képességben, hogy bizonyítsd a sokoldalúságodat.
 quest.pack_mastery_tithe.title = Mastery Tized
-quest.pack_mastery_tithe.flavor = Fizesd meg a tizededet a mastery kódexnek. Ölj meg 10 mobot és vágj ki 10 farönköt, majd vedd át a Mastery Pontot. Total Level 500 és a Mastery Hoarder teljesítmény szükséges. Minden átvétel után 6 órával ismét elérhető.
+quest.pack_mastery_tithe.flavor = Fizesd meg a tizededet a mastery kódexnek: vér és fa, rendszeresen leróva, cserébe mélyebb masteryért.
 
 # --- A pack által szállított Token Shop ajánlatok (explicit titleKey/descriptionKey -> ezek a kulcsok) ---
-shop.convert_mastery_point.title = Mastery Infúzió (+1 Mastery Pont)
-shop.convert_mastery_point.desc = Alakítsd a Bounty Tokeneket egy Mastery Ponttá.
+shop.convert_mastery_point.title = Mastery Infúzió
+shop.convert_mastery_point.desc = Alakítsd a szerzeményeidet mélyebb masteryvé.
 
 # --- Valuták (currency.<id>.name, konvenció szerint feloldva; id = a fájlnév kisbetűsítve) ---
 currency.life_essence.name = Életesszencia
@@ -53,17 +53,17 @@ mastery.defense_mastery.title = Blokkolás Mastery
 
 # --- Teljesítmények (achievement.<id>.title / .desc, konvenció szerint feloldva) ---
 achievement.pack_first_mastery_milestone.title = Az Út Tanonca
-achievement.pack_first_mastery_milestone.desc = Érd el a 15. szintet bármelyik képességben - az első Mastery Pont mérföldkő.
+achievement.pack_first_mastery_milestone.desc = Érd el az első mastery mérföldkövedet.
 achievement.pack_mastery_milestone_journeyman.title = Az Út Vándora
-achievement.pack_mastery_milestone_journeyman.desc = Érd el a 60. szintet bármelyik képességben - négy Mastery Pont mérföldkő megszerezve.
+achievement.pack_mastery_milestone_journeyman.desc = Juss elég magasra bármelyik képességben, hogy útközben több mérföldkövet is begyűjts.
 achievement.pack_mastery_hoarder_300.title = Mastery Gyűjtögető
-achievement.pack_mastery_hoarder_300.desc = Szerezz 300 Mastery Pontot az életed során.
+achievement.pack_mastery_hoarder_300.desc = Halmozz fel életed során egy kincsnyi masteryt.
 achievement.pack_mastery_devotee.title = A Mastery Híve
 achievement.pack_mastery_devotee.desc = A teljes mastery út: egy tanonc, egy vándor és egy gyűjtögető.
 achievement.pack_essence_hoarder_100.title = Esszencia Gyűjtögető I
-achievement.pack_essence_hoarder_100.desc = Vegyél fel Életesszenciát 100 különböző alkalommal
+achievement.pack_essence_hoarder_100.desc = Gyűjtsd be újra és újra az élet esszenciáját.
 achievement.pack_essence_hoarder_10000.title = Esszencia Gyűjtögető II
-achievement.pack_essence_hoarder_10000.desc = Vegyél fel Életesszenciát 10 000 különböző alkalommal az életed során - a világ energiájának valódi tárolóedénye.
+achievement.pack_essence_hoarder_10000.desc = A világ energiájának valódi tárolóedénye: gyűjts esszenciát számolatlanul.
 
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Kiélezett
@@ -71,7 +71,7 @@ mastery.node.t1_combo.title = Kombómester
 mastery.node.t2_life.title = Vérszívó
 mastery.node.t2_cd.title = Fürge
 mastery.node.eternal.title = Örök
-mastery.node.eternal.desc = Minden vásárlás: +0.5% {0} sebzés. A költség vásárlásonként 10%-kal nő. {1} 92. szint szükséges.
+mastery.node.eternal.desc = Minden vásárlás hozzátesz egy szikrányi {0} sebzést, és mindegyik többe kerül az előzőnél. Nincs felső határ.
 mastery.arc_t3_cap.title = Sasszem
 mastery.art_t3_cap.title = Robbantási Szakértő
 mastery.axe_t3_cap.title = Tombolás
@@ -105,10 +105,10 @@ mastery.har_t1.title = Aratás Mastery I
 mastery.har_t2.title = Aratás Mastery II
 mastery.har_t3.title = Aratás Mastery III
 mastery.har_eternal.title = Aratás Mastery: Örök
-mastery.met_t1.title = Meteorcsapás 1
-mastery.met_t2.title = Meteorcsapás 2
-mastery.met_t3.title = Meteorcsapás 3
-mastery.met_t4.title = Meteorcsapás 4
+mastery.met_t1.title = Meteorcsapás I
+mastery.met_t2.title = Meteorcsapás II
+mastery.met_t3.title = Meteorcsapás III
+mastery.met_t4.title = Meteorcsapás IV
 mastery.met_eternal.title = Örök Kataklizma
 mastery.min_t1.title = Bányászat Mastery I
 mastery.min_t2.title = Bányászat Mastery II
@@ -139,15 +139,15 @@ mastery.woo_t1.title = Favágás Mastery I
 mastery.woo_t2.title = Favágás Mastery II
 mastery.woo_t3.title = Favágás Mastery III
 mastery.woo_eternal.title = Favágás Mastery: Örök
-mastery.acr_eternal.desc = Minden vásárlás: +0.5% akrobatika mastery bónuszdrop-esély. A költség vásárlásonként 10%-kal nő. Grindelj korlátok nélkül.
-mastery.enc_eternal.desc = Minden vásárlás: +0.5% enchantolás mastery bónuszdrop-esély. A költség vásárlásonként 10%-kal nő. Grindelj korlátok nélkül.
-mastery.fb_eternal.desc = Minden vásárlás: +1% Tűzgolyó sebzés. A költség vásárlásonként 25%-kal nő. Mágia 92. szint szükséges.
-mastery.fis_eternal.desc = Minden vásárlás: +0.5% horgászat mastery bónuszdrop-esély. A költség vásárlásonként 10%-kal nő. Grindelj korlátok nélkül.
-mastery.har_eternal.desc = Minden vásárlás: +0.5% aratás mastery bónuszdrop-esély. A költség vásárlásonként 10%-kal nő. Aratás 92. szint szükséges.
-mastery.met_eternal.desc = Minden vásárlás: -1% Meteor lehűlés és +0.75% Meteor sebzés. A költség vásárlásonként 10%-kal nő (70 után plafonnal). Mágia 92. szint szükséges.
-mastery.min_eternal.desc = Minden vásárlás: +0.5% bányászat mastery bónuszdrop-esély. A költség vásárlásonként 10%-kal nő. Bányászat 92. szint szükséges.
-mastery.ps_eternal.desc = Minden vásárlás: +1% Átütő Lövés sebzés (ütés és varázslás). A költség vásárlásonként 10%-kal nő. Íjászat 92. szint szükséges.
-mastery.sst_eternal.desc = Minden vásárlás: -1% Árnyéklépés lehűlés. A költség vásárlásonként 10%-kal nő. Tőrök 92. szint szükséges.
-mastery.ss_eternal.desc = Minden vásárlás: +1% Pajzscsapás sebzés. A költség vásárlásonként 10%-kal nő. Blokkolás 92. szint szükséges.
-mastery.ww_eternal.desc = Minden vásárlás: +1% Forgószél sebzés (ütés és varázslás). A költség vásárlásonként 10%-kal nő. Fejszék 92. szint szükséges.
-mastery.woo_eternal.desc = Minden vásárlás: +0.5% favágás mastery bónuszdrop-esély. A költség vásárlásonként 10%-kal nő. Favágás 92. szint szükséges.
+mastery.acr_eternal.desc = Minden vásárlás feljebb tolja az akrobatika mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél. Grindelj korlátok nélkül.
+mastery.enc_eternal.desc = Minden vásárlás feljebb tolja az enchantolás mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél. Grindelj korlátok nélkül.
+mastery.fb_eternal.desc = Minden vásárlás tovább szítja a Tűzgolyó sebzését; mindegyik többe kerül az előzőnél.
+mastery.fis_eternal.desc = Minden vásárlás feljebb tolja a horgászat mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél. Grindelj korlátok nélkül.
+mastery.har_eternal.desc = Minden vásárlás feljebb tolja az aratás mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél. Grindelj korlátok nélkül.
+mastery.met_eternal.desc = Minden vásárlás farag a Meteor lehűléséből és szítja a sebzését; mindegyik többe kerül az előzőnél.
+mastery.min_eternal.desc = Minden vásárlás feljebb tolja a bányászat mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél. Grindelj korlátok nélkül.
+mastery.ps_eternal.desc = Minden vásárlás élesíti az Átütő Lövés sebzését (ütés és varázslás); mindegyik többe kerül az előzőnél.
+mastery.sst_eternal.desc = Minden vásárlás farag az Árnyéklépés lehűléséből; mindegyik többe kerül az előzőnél.
+mastery.ss_eternal.desc = Minden vásárlás keményíti a Pajzscsapás sebzését; mindegyik többe kerül az előzőnél.
+mastery.ww_eternal.desc = Minden vásárlás élesíti a Forgószél sebzését (ütés és varázslás); mindegyik többe kerül az előzőnél.
+mastery.woo_eternal.desc = Minden vásárlás feljebb tolja a favágás mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél. Grindelj korlátok nélkül.

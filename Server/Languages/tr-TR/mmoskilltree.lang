@@ -6,19 +6,19 @@
 
 # --- Görevler (quest.<id>.title / .flavor, kurala göre çözülür; ödül deseniyle eşleşir) ---
 quest.pack_first_milestone.title = Ustalığa İlk Adım
-quest.pack_first_milestone.flavor = İlk Ustalık Puanını kazanmak için herhangi bir yetenekte 15. seviyeye ulaş. Ustalık yolu burada başlar.
+quest.pack_first_milestone.flavor = İlk ustalık dönüm noktana ulaşmak için herhangi bir yetenekte kendini kanıtla. Ustalık yolu burada başlar.
 quest.pack_essence_collector.title = Öz Toplayıcı
-quest.pack_essence_collector.flavor = Yaşam Özü ustalığa güç verir. Sunağa 100 tane getir ve kalıcı güç kazan.
+quest.pack_essence_collector.flavor = Dünyanın özü ustalığa güç verir. Sunağa bir adak getir ve kalıcı güç kazan.
 quest.pack_essence_devotee.title = Öz Müridi
-quest.pack_essence_devotee.flavor = Adanmışlığını çoktan kanıtlamış olanlar için: 500 Yaşam Özü getir ve büyük bir ustalık kesesi kazan.
+quest.pack_essence_devotee.flavor = Adanmışlığını çoktan kanıtlamış olanlar için: büyük bir ustalık kesesi karşılığında daha büyük bir adak.
 quest.pack_path_of_mastery.title = Ustalık Yolu
-quest.pack_path_of_mastery.flavor = Gerçek ustalık geniştir. Kapsamını kanıtlamak için beş farklı yetenekte 25. seviyeye ulaş.
+quest.pack_path_of_mastery.flavor = Gerçek ustalık geniştir. Kapsamını kanıtlamak için birkaç farklı yetenekte yükseklere tırman.
 quest.pack_mastery_tithe.title = Ustalık Ödencesi
-quest.pack_mastery_tithe.flavor = Ustalık kodeksine ödenceni öde. 10 mob alt et ve 10 kütük kes, ardından bir Ustalık Puanı al. Toplam Seviye 500 ve Ustalık Biriktiricisi başarımını gerektirir. Her alımdan 6 saat sonra yeniden kullanılabilir.
+quest.pack_mastery_tithe.flavor = Ustalık kodeksine ödenceni öde: kan ve kereste, düzenli olarak sunulur, karşılığında daha derin bir ustalık.
 
 # --- Bu paketin gönderdiği Jeton Mağazası teklifleri (açık titleKey/descriptionKey -> bu anahtarlar) ---
-shop.convert_mastery_point.title = Ustalık İnfüzyonu (+1 Ustalık Puanı)
-shop.convert_mastery_point.desc = Ödül Jetonlarını bir Ustalık Puanına çevir.
+shop.convert_mastery_point.title = Ustalık İnfüzyonu
+shop.convert_mastery_point.desc = Kazancını daha derin bir ustalığa çevir.
 
 # --- Para birimleri (currency.<id>.name, kurala göre çözülür; id = küçük harfli dosya adı) ---
 currency.life_essence.name = Yaşam Özü
@@ -53,17 +53,17 @@ mastery.defense_mastery.title = Blok Ustalığı
 
 # --- Başarımlar (achievement.<id>.title / .desc, kurala göre çözülür) ---
 achievement.pack_first_mastery_milestone.title = Yolun Çırağı
-achievement.pack_first_mastery_milestone.desc = Herhangi bir yetenekte 15. seviyeye ulaş - ilk Ustalık Puanı dönüm noktası.
+achievement.pack_first_mastery_milestone.desc = İlk ustalık dönüm noktana ulaş.
 achievement.pack_mastery_milestone_journeyman.title = Yolun Kalfası
-achievement.pack_mastery_milestone_journeyman.desc = Herhangi bir yetenekte 60. seviyeye ulaş - dört Ustalık Puanı dönüm noktası kazanıldı.
+achievement.pack_mastery_milestone_journeyman.desc = Yol boyunca birkaç dönüm noktası biriktirecek kadar herhangi bir yetenekte yüksel.
 achievement.pack_mastery_hoarder_300.title = Ustalık Biriktiricisi
-achievement.pack_mastery_hoarder_300.desc = Yaşamın boyunca 300 Ustalık Puanı kazan.
+achievement.pack_mastery_hoarder_300.desc = Yaşamın boyunca bir hazine dolusu ustalık biriktir.
 achievement.pack_mastery_devotee.title = Ustalık Müridi
 achievement.pack_mastery_devotee.desc = Tam ustalık yolculuğu: bir çırak, bir kalfa ve bir biriktirici.
 achievement.pack_essence_hoarder_100.title = Öz Biriktiricisi I
-achievement.pack_essence_hoarder_100.desc = Yaşam Özünü 100 farklı kez topla
+achievement.pack_essence_hoarder_100.desc = Yaşamın özünü tekrar tekrar topla.
 achievement.pack_essence_hoarder_10000.title = Öz Biriktiricisi II
-achievement.pack_essence_hoarder_10000.desc = Yaşamın boyunca Yaşam Özünü 10.000 farklı kez topla - dünyanın enerjisi için gerçek bir kap.
+achievement.pack_essence_hoarder_10000.desc = Dünyanın enerjisi için gerçek bir kap: özü sayıya gelmeyecek kadar topla.
 
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Bilenmiş
@@ -71,7 +71,7 @@ mastery.node.t1_combo.title = Kombo Ustası
 mastery.node.t2_life.title = Vampirik
 mastery.node.t2_cd.title = Çevik
 mastery.node.eternal.title = Ebedi
-mastery.node.eternal.desc = Her satın alım: +0.5% {0} hasarı. Bedel her satın alımda 10% artar. {1} seviye 92 gerektirir.
+mastery.node.eternal.desc = Her satın alım bir tutam {0} hasarı ekler ve her biri bir öncekinden daha pahalıdır. Sınır yoktur.
 mastery.arc_t3_cap.title = Kartal Gözü
 mastery.art_t3_cap.title = Yıkım Uzmanı
 mastery.axe_t3_cap.title = Öfke Nöbeti
@@ -105,10 +105,10 @@ mastery.har_t1.title = Hasat Ustalığı I
 mastery.har_t2.title = Hasat Ustalığı II
 mastery.har_t3.title = Hasat Ustalığı III
 mastery.har_eternal.title = Hasat Ustalığı: Ebedi
-mastery.met_t1.title = Meteor Vuruşu 1
-mastery.met_t2.title = Meteor Vuruşu 2
-mastery.met_t3.title = Meteor Vuruşu 3
-mastery.met_t4.title = Meteor Vuruşu 4
+mastery.met_t1.title = Meteor Vuruşu I
+mastery.met_t2.title = Meteor Vuruşu II
+mastery.met_t3.title = Meteor Vuruşu III
+mastery.met_t4.title = Meteor Vuruşu IV
 mastery.met_eternal.title = Ebedi Kıyamet
 mastery.min_t1.title = Madencilik Ustalığı I
 mastery.min_t2.title = Madencilik Ustalığı II
@@ -139,15 +139,15 @@ mastery.woo_t1.title = Odunculuk Ustalığı I
 mastery.woo_t2.title = Odunculuk Ustalığı II
 mastery.woo_t3.title = Odunculuk Ustalığı III
 mastery.woo_eternal.title = Odunculuk Ustalığı: Ebedi
-mastery.acr_eternal.desc = Her satın alım: +0.5% akrobasi ustalığı bonus drop şansı. Bedel her satın alımda 10% artar. Sınırsızca geliştirmeye devam et.
-mastery.enc_eternal.desc = Her satın alım: +0.5% büyüleme ustalığı bonus drop şansı. Bedel her satın alımda 10% artar. Sınırsızca geliştirmeye devam et.
-mastery.fb_eternal.desc = Her satın alım: +1% Ateş Topu hasarı. Bedel her satın alımda 25% artar. BÜYÜ seviye 92 gerektirir.
-mastery.fis_eternal.desc = Her satın alım: +0.5% balıkçılık ustalığı bonus drop şansı. Bedel her satın alımda 10% artar. Sınırsızca geliştirmeye devam et.
-mastery.har_eternal.desc = Her satın alım: +0.5% hasat ustalığı bonus drop şansı. Bedel her satın alımda 10% artar. HASAT seviye 92 gerektirir.
-mastery.met_eternal.desc = Her satın alım: -1% Meteor bekleme süresi ve +0.75% Meteor hasarı. Bedel her satın alımda 10% artar (70'ten sonra sabitlenir). BÜYÜ seviye 92 gerektirir.
-mastery.min_eternal.desc = Her satın alım: +0.5% madencilik ustalığı bonus drop şansı. Bedel her satın alımda 10% artar. MADENCİLİK seviye 92 gerektirir.
-mastery.ps_eternal.desc = Her satın alım: +1% Delici Atış hasarı (savuruş ve kullanım). Bedel her satın alımda 10% artar. OKÇULUK seviye 92 gerektirir.
-mastery.sst_eternal.desc = Her satın alım: -1% Gölge Adımı bekleme süresi. Bedel her satın alımda 10% artar. HANÇERLER seviye 92 gerektirir.
-mastery.ss_eternal.desc = Her satın alım: +1% Kalkan Çarpması hasarı. Bedel her satın alımda 10% artar. BLOK seviye 92 gerektirir.
-mastery.ww_eternal.desc = Her satın alım: +1% Kasırga hasarı (savuruş ve kullanım). Bedel her satın alımda 10% artar. BALTALAR seviye 92 gerektirir.
-mastery.woo_eternal.desc = Her satın alım: +0.5% odunculuk ustalığı bonus drop şansı. Bedel her satın alımda 10% artar. ODUNCULUK seviye 92 gerektirir.
+mastery.acr_eternal.desc = Her satın alım akrobasi ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır. Sınırsızca geliştirmeye devam et.
+mastery.enc_eternal.desc = Her satın alım büyüleme ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır. Sınırsızca geliştirmeye devam et.
+mastery.fb_eternal.desc = Her satın alım Ateş Topu'nun hasarını biraz daha körükler; her biri bir öncekinden daha pahalıdır.
+mastery.fis_eternal.desc = Her satın alım balıkçılık ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır. Sınırsızca geliştirmeye devam et.
+mastery.har_eternal.desc = Her satın alım hasat ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır. Sınırsızca geliştirmeye devam et.
+mastery.met_eternal.desc = Her satın alım Meteor'un bekleme süresinden kırpar ve hasarını körükler; her biri bir öncekinden daha pahalıdır.
+mastery.min_eternal.desc = Her satın alım madencilik ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır. Sınırsızca geliştirmeye devam et.
+mastery.ps_eternal.desc = Her satın alım Delici Atış'ın hasarını keskinleştirir (savuruş ve kullanım); her biri bir öncekinden daha pahalıdır.
+mastery.sst_eternal.desc = Her satın alım Gölge Adımı'nın bekleme süresinden kırpar; her biri bir öncekinden daha pahalıdır.
+mastery.ss_eternal.desc = Her satın alım Kalkan Çarpması'nın hasarını sertleştirir; her biri bir öncekinden daha pahalıdır.
+mastery.ww_eternal.desc = Her satın alım Kasırga'nın hasarını keskinleştirir (savuruş ve kullanım); her biri bir öncekinden daha pahalıdır.
+mastery.woo_eternal.desc = Her satın alım odunculuk ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır. Sınırsızca geliştirmeye devam et.

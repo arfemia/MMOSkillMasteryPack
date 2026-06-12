@@ -6,19 +6,19 @@
 
 # --- Quests (quest.<id>.title / .flavor, resolved by convention; matches the bounty pattern) ---
 quest.pack_first_milestone.title = First Step Toward Mastery
-quest.pack_first_milestone.flavor = Reach level 15 in any skill to earn your first Mastery Point. The path of mastery begins here.
+quest.pack_first_milestone.flavor = Prove yourself in any skill to reach your first mastery milestone. The path of mastery begins here.
 quest.pack_essence_collector.title = Essence Collector
-quest.pack_essence_collector.flavor = Life Essence powers mastery. Bring 100 to the altar and earn lasting power.
+quest.pack_essence_collector.flavor = The world's essence powers mastery. Bring an offering to the altar and earn lasting power.
 quest.pack_essence_devotee.title = Essence Devotee
-quest.pack_essence_devotee.flavor = For those who have already proven their dedication: bring 500 Life Essence and earn a major mastery purse.
+quest.pack_essence_devotee.flavor = For those who have already proven their dedication: a greater offering for a major mastery purse.
 quest.pack_path_of_mastery.title = Path of Mastery
-quest.pack_path_of_mastery.flavor = True mastery is broad. Reach level 25 in five different skills to prove your range.
+quest.pack_path_of_mastery.flavor = True mastery is broad. Climb high in several different skills to prove your range.
 quest.pack_mastery_tithe.title = Mastery Tithe
-quest.pack_mastery_tithe.flavor = Pay your tithe to the mastery codex. Slay 10 mobs and chop 10 logs, then claim a Mastery Point. Requires Total Level 500 and the Mastery Hoarder achievement. Available again 6 hours after each claim.
+quest.pack_mastery_tithe.flavor = Pay your tithe to the mastery codex: blood and timber, rendered regularly, in exchange for a measure of mastery.
 
 # --- Token Shop offers shipped by this pack (explicit titleKey/descriptionKey -> these keys) ---
-shop.convert_mastery_point.title = Mastery Infusion (+1 Mastery Point)
-shop.convert_mastery_point.desc = Convert Bounty Tokens into a Mastery Point.
+shop.convert_mastery_point.title = Mastery Infusion
+shop.convert_mastery_point.desc = Convert your earnings into deeper mastery.
 
 # --- Currencies (currency.<id>.name, resolved by convention; id = filename lowercased) ---
 currency.life_essence.name = Life Essence
@@ -59,7 +59,7 @@ mastery.node.t1_combo.title = Combo Master
 mastery.node.t2_life.title = Vampiric
 mastery.node.t2_cd.title = Swift
 mastery.node.eternal.title = Eternal
-mastery.node.eternal.desc = Each purchase: +0.5% {0} damage. Cost grows 10% per purchase. Requires {1} level 92.
+mastery.node.eternal.desc = Each purchase adds a sliver of {0} damage, and each costs more than the last. There is no limit.
 
 # --- Capstone node titles (the per-track {{capDisplay}} template param) ---
 mastery.arc_t3_cap.title = Eagle Eye
@@ -98,10 +98,10 @@ mastery.har_t1.title = Harvesting Mastery I
 mastery.har_t2.title = Harvesting Mastery II
 mastery.har_t3.title = Harvesting Mastery III
 mastery.har_eternal.title = Harvesting Mastery: Eternal
-mastery.met_t1.title = Meteor Strike 1
-mastery.met_t2.title = Meteor Strike 2
-mastery.met_t3.title = Meteor Strike 3
-mastery.met_t4.title = Meteor Strike 4
+mastery.met_t1.title = Meteor Strike I
+mastery.met_t2.title = Meteor Strike II
+mastery.met_t3.title = Meteor Strike III
+mastery.met_t4.title = Meteor Strike IV
 mastery.met_eternal.title = Eternal Cataclysm
 mastery.min_t1.title = Mining Mastery I
 mastery.min_t2.title = Mining Mastery II
@@ -134,29 +134,29 @@ mastery.woo_t3.title = Woodcutting Mastery III
 mastery.woo_eternal.title = Woodcutting Mastery: Eternal
 
 # --- Hand-authored eternal node descriptions ---
-mastery.acr_eternal.desc = Each purchase: +0.5% acrobatics mastery bonus-drop chance. Cost grows 10% per purchase. Grind without limit.
-mastery.enc_eternal.desc = Each purchase: +0.5% enchanting mastery bonus-drop chance. Cost grows 10% per purchase. Grind without limit.
-mastery.fb_eternal.desc = Each purchase: +1% Fireball damage. Cost grows 25% per purchase. Requires MAGIC level 92.
-mastery.fis_eternal.desc = Each purchase: +0.5% fishing mastery bonus-drop chance. Cost grows 10% per purchase. Grind without limit.
-mastery.har_eternal.desc = Each purchase: +0.5% harvesting mastery bonus-drop chance. Cost grows 10% per purchase. Requires HARVESTING level 92.
-mastery.met_eternal.desc = Each purchase: -1% Meteor cooldown and +0.75% Meteor damage. Cost grows 10% per purchase (capped after 70). Requires MAGIC level 92.
-mastery.min_eternal.desc = Each purchase: +0.5% mining mastery bonus-drop chance. Cost grows 10% per purchase. Requires MINING level 92.
-mastery.ps_eternal.desc = Each purchase: +1% Piercing Shot damage (swing & cast). Cost grows 10% per purchase. Requires ARCHERY level 92.
-mastery.sst_eternal.desc = Each purchase: -1% Shadowstep cooldown. Cost grows 10% per purchase. Requires DAGGERS level 92.
-mastery.ss_eternal.desc = Each purchase: +1% Shield Slam damage. Cost grows 10% per purchase. Requires DEFENSE level 92.
-mastery.ww_eternal.desc = Each purchase: +1% Whirlwind damage (swing & cast). Cost grows 10% per purchase. Requires AXES level 92.
-mastery.woo_eternal.desc = Each purchase: +0.5% woodcutting mastery bonus-drop chance. Cost grows 10% per purchase. Requires WOODCUTTING level 92.
+mastery.acr_eternal.desc = Each purchase nudges your acrobatics mastery bonus-drop chance higher; each costs more than the last. Grind without limit.
+mastery.enc_eternal.desc = Each purchase nudges your enchanting mastery bonus-drop chance higher; each costs more than the last. Grind without limit.
+mastery.fb_eternal.desc = Each purchase stokes Fireball's damage a little further; each costs more than the last.
+mastery.fis_eternal.desc = Each purchase nudges your fishing mastery bonus-drop chance higher; each costs more than the last. Grind without limit.
+mastery.har_eternal.desc = Each purchase nudges your harvesting mastery bonus-drop chance higher; each costs more than the last. Grind without limit.
+mastery.met_eternal.desc = Each purchase shaves Meteor's cooldown and stokes its damage; each costs more than the last.
+mastery.min_eternal.desc = Each purchase nudges your mining mastery bonus-drop chance higher; each costs more than the last. Grind without limit.
+mastery.ps_eternal.desc = Each purchase sharpens Piercing Shot's damage (swing and cast); each costs more than the last.
+mastery.sst_eternal.desc = Each purchase shaves Shadowstep's cooldown; each costs more than the last.
+mastery.ss_eternal.desc = Each purchase hardens Shield Slam's damage; each costs more than the last.
+mastery.ww_eternal.desc = Each purchase whets Whirlwind's damage (swing and cast); each costs more than the last.
+mastery.woo_eternal.desc = Each purchase nudges your woodcutting mastery bonus-drop chance higher; each costs more than the last. Grind without limit.
 
 # --- Achievements (achievement.<id>.title / .desc, resolved by convention) ---
 achievement.pack_first_mastery_milestone.title = Apprentice of the Path
-achievement.pack_first_mastery_milestone.desc = Reach level 15 in any skill - the first Mastery Point milestone.
+achievement.pack_first_mastery_milestone.desc = Reach your first mastery milestone.
 achievement.pack_mastery_milestone_journeyman.title = Journeyman of the Path
-achievement.pack_mastery_milestone_journeyman.desc = Reach level 60 in any skill - four Mastery Point milestones earned.
+achievement.pack_mastery_milestone_journeyman.desc = Climb high enough in any skill to bank several milestones on the way.
 achievement.pack_mastery_hoarder_300.title = Mastery Hoarder
-achievement.pack_mastery_hoarder_300.desc = Earn 300 Mastery Points across your lifetime.
+achievement.pack_mastery_hoarder_300.desc = Amass a lifetime hoard of mastery.
 achievement.pack_mastery_devotee.title = Devotee of Mastery
 achievement.pack_mastery_devotee.desc = The full mastery journey: an apprentice, a journeyman, and a hoarder.
 achievement.pack_essence_hoarder_100.title = Essence Hoarder I
-achievement.pack_essence_hoarder_100.desc = Pick up Life Essence 100 different times
+achievement.pack_essence_hoarder_100.desc = Gather the essence of life again and again.
 achievement.pack_essence_hoarder_10000.title = Essence Hoarder II
-achievement.pack_essence_hoarder_10000.desc = Pick up Life Essence 10,000 different times over your lifetime - a true vessel for the world's energy.
+achievement.pack_essence_hoarder_10000.desc = A true vessel for the world's energy: gather essence beyond counting.

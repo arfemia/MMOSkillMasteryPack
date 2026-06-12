@@ -6,19 +6,19 @@
 
 # --- Missões (quest.<id>.title / .flavor, resolvidas por convenção; segue o padrão das recompensas) ---
 quest.pack_first_milestone.title = Primeiro Passo Rumo à Maestria
-quest.pack_first_milestone.flavor = Alcance o nível 15 em qualquer habilidade para ganhar seu primeiro Ponto de Maestria. O caminho da maestria começa aqui.
+quest.pack_first_milestone.flavor = Prove seu valor em qualquer habilidade para alcançar seu primeiro marco de maestria. O caminho da maestria começa aqui.
 quest.pack_essence_collector.title = Coletor de Essência
-quest.pack_essence_collector.flavor = A Essência de Vida alimenta a maestria. Traga 100 ao altar e ganhe poder duradouro.
+quest.pack_essence_collector.flavor = A essência do mundo alimenta a maestria. Traga uma oferenda ao altar e ganhe poder duradouro.
 quest.pack_essence_devotee.title = Devoto da Essência
-quest.pack_essence_devotee.flavor = Para aqueles que já provaram sua dedicação: traga 500 Essências de Vida e ganhe uma grande bolsa de maestria.
+quest.pack_essence_devotee.flavor = Para aqueles que já provaram sua dedicação: uma oferenda maior em troca de uma grande bolsa de maestria.
 quest.pack_path_of_mastery.title = Caminho da Maestria
-quest.pack_path_of_mastery.flavor = A verdadeira maestria é ampla. Alcance o nível 25 em cinco habilidades diferentes para provar sua versatilidade.
+quest.pack_path_of_mastery.flavor = A verdadeira maestria é ampla. Suba alto em várias habilidades diferentes para provar sua versatilidade.
 quest.pack_mastery_tithe.title = Dízimo da Maestria
-quest.pack_mastery_tithe.flavor = Pague seu dízimo ao códice da maestria. Abata 10 mobs e corte 10 toras, depois reivindique um Ponto de Maestria. Requer Nível Total 500 e a conquista Acumulador de Maestria. Disponível novamente 6 horas após cada resgate.
+quest.pack_mastery_tithe.flavor = Pague seu dízimo ao códice da maestria: sangue e madeira, entregues com regularidade, em troca de uma maestria mais profunda.
 
 # --- Ofertas da Loja de Fichas enviadas por este pack (titleKey/descriptionKey explícitos -> estas chaves) ---
-shop.convert_mastery_point.title = Infusão de Maestria (+1 Ponto de Maestria)
-shop.convert_mastery_point.desc = Converta Fichas de Recompensa em um Ponto de Maestria.
+shop.convert_mastery_point.title = Infusão de Maestria
+shop.convert_mastery_point.desc = Converta seus ganhos em uma maestria mais profunda.
 
 # --- Moedas (currency.<id>.name, resolvido por convenção; id = nome do arquivo em minúsculas) ---
 currency.life_essence.name = Essência de Vida
@@ -53,17 +53,17 @@ mastery.defense_mastery.title = Maestria em Bloqueio
 
 # --- Conquistas (achievement.<id>.title / .desc, resolvidas por convenção) ---
 achievement.pack_first_mastery_milestone.title = Aprendiz do Caminho
-achievement.pack_first_mastery_milestone.desc = Alcance o nível 15 em qualquer habilidade - o primeiro marco de Ponto de Maestria.
+achievement.pack_first_mastery_milestone.desc = Alcance seu primeiro marco de maestria.
 achievement.pack_mastery_milestone_journeyman.title = Oficial do Caminho
-achievement.pack_mastery_milestone_journeyman.desc = Alcance o nível 60 em qualquer habilidade - quatro marcos de Ponto de Maestria conquistados.
+achievement.pack_mastery_milestone_journeyman.desc = Suba alto o bastante em qualquer habilidade para acumular vários marcos pelo caminho.
 achievement.pack_mastery_hoarder_300.title = Acumulador de Maestria
-achievement.pack_mastery_hoarder_300.desc = Ganhe 300 Pontos de Maestria ao longo da sua vida.
+achievement.pack_mastery_hoarder_300.desc = Acumule um tesouro de maestria ao longo da sua vida.
 achievement.pack_mastery_devotee.title = Devoto da Maestria
 achievement.pack_mastery_devotee.desc = A jornada completa da maestria: um aprendiz, um oficial e um acumulador.
 achievement.pack_essence_hoarder_100.title = Acumulador de Essência I
-achievement.pack_essence_hoarder_100.desc = Colete Essência de Vida 100 vezes diferentes
+achievement.pack_essence_hoarder_100.desc = Colete a essência da vida vez após vez.
 achievement.pack_essence_hoarder_10000.title = Acumulador de Essência II
-achievement.pack_essence_hoarder_10000.desc = Colete Essência de Vida 10.000 vezes diferentes ao longo da sua vida - um verdadeiro receptáculo da energia do mundo.
+achievement.pack_essence_hoarder_10000.desc = Um verdadeiro receptáculo da energia do mundo: colete essência além de qualquer conta.
 
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Afiado
@@ -71,7 +71,7 @@ mastery.node.t1_combo.title = Mestre do Combo
 mastery.node.t2_life.title = Vampírico
 mastery.node.t2_cd.title = Veloz
 mastery.node.eternal.title = Eterna
-mastery.node.eternal.desc = Cada compra: +0,5% de dano de {0}. O custo cresce 10% por compra. Requer {1} nível 92.
+mastery.node.eternal.desc = Cada compra acrescenta um lampejo de dano de {0}, e cada uma custa mais que a anterior. Não há limite.
 mastery.arc_t3_cap.title = Olho de Águia
 mastery.art_t3_cap.title = Especialista em Demolição
 mastery.axe_t3_cap.title = Fúria Desenfreada
@@ -105,10 +105,10 @@ mastery.har_t1.title = Maestria em Colheita I
 mastery.har_t2.title = Maestria em Colheita II
 mastery.har_t3.title = Maestria em Colheita III
 mastery.har_eternal.title = Maestria em Colheita: Eterna
-mastery.met_t1.title = Impacto do Meteoro 1
-mastery.met_t2.title = Impacto do Meteoro 2
-mastery.met_t3.title = Impacto do Meteoro 3
-mastery.met_t4.title = Impacto do Meteoro 4
+mastery.met_t1.title = Impacto do Meteoro I
+mastery.met_t2.title = Impacto do Meteoro II
+mastery.met_t3.title = Impacto do Meteoro III
+mastery.met_t4.title = Impacto do Meteoro IV
 mastery.met_eternal.title = Cataclismo Eterno
 mastery.min_t1.title = Maestria em Mineração I
 mastery.min_t2.title = Maestria em Mineração II
@@ -139,15 +139,15 @@ mastery.woo_t1.title = Maestria em Lenhador I
 mastery.woo_t2.title = Maestria em Lenhador II
 mastery.woo_t3.title = Maestria em Lenhador III
 mastery.woo_eternal.title = Maestria em Lenhador: Eterna
-mastery.acr_eternal.desc = Cada compra: +0,5% de chance de drop bônus da maestria de acrobacia. O custo cresce 10% por compra. Treine sem limite.
-mastery.enc_eternal.desc = Cada compra: +0,5% de chance de drop bônus da maestria de encantamento. O custo cresce 10% por compra. Treine sem limite.
-mastery.fb_eternal.desc = Cada compra: +1% de dano de Bola de Fogo. O custo cresce 25% por compra. Requer Magia nível 92.
-mastery.fis_eternal.desc = Cada compra: +0,5% de chance de drop bônus da maestria de pesca. O custo cresce 10% por compra. Treine sem limite.
-mastery.har_eternal.desc = Cada compra: +0,5% de chance de drop bônus da maestria de colheita. O custo cresce 10% por compra. Requer Colheita nível 92.
-mastery.met_eternal.desc = Cada compra: -1% de recarga do Meteoro e +0,75% de dano do Meteoro. O custo cresce 10% por compra (limitado após 70). Requer Magia nível 92.
-mastery.min_eternal.desc = Cada compra: +0,5% de chance de drop bônus da maestria de mineração. O custo cresce 10% por compra. Requer Mineração nível 92.
-mastery.ps_eternal.desc = Cada compra: +1% de dano de Tiro Perfurante (golpe e lançamento). O custo cresce 10% por compra. Requer Arco e Flecha nível 92.
-mastery.sst_eternal.desc = Cada compra: -1% de recarga de Passo Sombrio. O custo cresce 10% por compra. Requer Adagas nível 92.
-mastery.ss_eternal.desc = Cada compra: +1% de dano de Pancada de Escudo. O custo cresce 10% por compra. Requer Bloqueio nível 92.
-mastery.ww_eternal.desc = Cada compra: +1% de dano de Redemoinho (golpe e lançamento). O custo cresce 10% por compra. Requer Machados nível 92.
-mastery.woo_eternal.desc = Cada compra: +0,5% de chance de drop bônus da maestria de lenhador. O custo cresce 10% por compra. Requer Lenhador nível 92.
+mastery.acr_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de acrobacia; cada uma custa mais que a anterior. Treine sem limite.
+mastery.enc_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de encantamento; cada uma custa mais que a anterior. Treine sem limite.
+mastery.fb_eternal.desc = Cada compra atiça um pouco mais o dano de Bola de Fogo; cada uma custa mais que a anterior.
+mastery.fis_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de pesca; cada uma custa mais que a anterior. Treine sem limite.
+mastery.har_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de colheita; cada uma custa mais que a anterior. Treine sem limite.
+mastery.met_eternal.desc = Cada compra apara a recarga do Meteoro e atiça seu dano; cada uma custa mais que a anterior.
+mastery.min_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de mineração; cada uma custa mais que a anterior. Treine sem limite.
+mastery.ps_eternal.desc = Cada compra afia o dano de Tiro Perfurante (golpe e lançamento); cada uma custa mais que a anterior.
+mastery.sst_eternal.desc = Cada compra apara a recarga de Passo Sombrio; cada uma custa mais que a anterior.
+mastery.ss_eternal.desc = Cada compra endurece o dano de Pancada de Escudo; cada uma custa mais que a anterior.
+mastery.ww_eternal.desc = Cada compra afia o dano de Redemoinho (golpe e lançamento); cada uma custa mais que a anterior.
+mastery.woo_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de lenhador; cada uma custa mais que a anterior. Treine sem limite.

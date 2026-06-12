@@ -6,19 +6,19 @@
 
 # --- Quests (quest.<id>.title / .flavor, per Konvention aufgelöst; folgt dem Kopfgeld-Muster) ---
 quest.pack_first_milestone.title = Erster Schritt zur Mastery
-quest.pack_first_milestone.flavor = Erreiche Stufe 15 in einer beliebigen Fähigkeit, um deinen ersten Mastery-Punkt zu verdienen. Der Pfad der Mastery beginnt hier.
+quest.pack_first_milestone.flavor = Beweise dich in einer beliebigen Fähigkeit, um deinen ersten Mastery-Meilenstein zu erreichen. Der Pfad der Mastery beginnt hier.
 quest.pack_essence_collector.title = Essenz-Sammler
-quest.pack_essence_collector.flavor = Lebensessenz treibt die Mastery an. Bring 100 zum Altar und verdiene dauerhafte Macht.
+quest.pack_essence_collector.flavor = Die Essenz der Welt treibt die Mastery an. Bring dem Altar eine Opfergabe dar und verdiene dauerhafte Macht.
 quest.pack_essence_devotee.title = Essenz-Anhänger
-quest.pack_essence_devotee.flavor = Für jene, die ihre Hingabe bereits bewiesen haben: bring 500 Lebensessenz und verdiene einen großen Mastery-Beutel.
+quest.pack_essence_devotee.flavor = Für jene, die ihre Hingabe bereits bewiesen haben: eine größere Opfergabe für einen großen Mastery-Beutel.
 quest.pack_path_of_mastery.title = Pfad der Mastery
-quest.pack_path_of_mastery.flavor = Wahre Mastery ist breit gefächert. Erreiche Stufe 25 in fünf verschiedenen Fähigkeiten, um deine Bandbreite zu beweisen.
+quest.pack_path_of_mastery.flavor = Wahre Mastery ist breit gefächert. Steige in mehreren verschiedenen Fähigkeiten weit auf, um deine Bandbreite zu beweisen.
 quest.pack_mastery_tithe.title = Mastery-Tribut
-quest.pack_mastery_tithe.flavor = Zahle deinen Tribut an den Mastery-Kodex. Erschlage 10 Mobs und schlage 10 Stämme, dann beanspruche einen Mastery-Punkt. Erfordert Gesamtstufe 500 und den Erfolg "Mastery-Hamster". Nach jedem Beanspruchen erst wieder nach 6 Stunden verfügbar.
+quest.pack_mastery_tithe.flavor = Zahle deinen Tribut an den Mastery-Kodex: Blut und Holz, regelmäßig entrichtet, im Tausch gegen tiefere Mastery.
 
 # --- Token-Shop-Angebote, die dieser Pack ausliefert (explizite titleKey/descriptionKey -> diese Schlüssel) ---
-shop.convert_mastery_point.title = Mastery-Infusion (+1 Mastery-Punkt)
-shop.convert_mastery_point.desc = Wandle Kopfgeld-Token in einen Mastery-Punkt um.
+shop.convert_mastery_point.title = Mastery-Infusion
+shop.convert_mastery_point.desc = Wandle deine Einkünfte in tiefere Mastery um.
 
 # --- Währungen (currency.<id>.name, per Konvention aufgelöst; id = Dateiname in Kleinbuchstaben) ---
 currency.life_essence.name = Lebensessenz
@@ -53,17 +53,17 @@ mastery.defense_mastery.title = Blocken-Mastery
 
 # --- Erfolge (achievement.<id>.title / .desc, per Konvention aufgelöst) ---
 achievement.pack_first_mastery_milestone.title = Lehrling des Pfades
-achievement.pack_first_mastery_milestone.desc = Erreiche Stufe 15 in einer beliebigen Fähigkeit - der erste Mastery-Punkt-Meilenstein.
+achievement.pack_first_mastery_milestone.desc = Erreiche deinen ersten Mastery-Meilenstein.
 achievement.pack_mastery_milestone_journeyman.title = Geselle des Pfades
-achievement.pack_mastery_milestone_journeyman.desc = Erreiche Stufe 60 in einer beliebigen Fähigkeit - vier Mastery-Punkt-Meilensteine verdient.
+achievement.pack_mastery_milestone_journeyman.desc = Steige in einer beliebigen Fähigkeit hoch genug auf, um unterwegs mehrere Meilensteine einzustreichen.
 achievement.pack_mastery_hoarder_300.title = Mastery-Hamster
-achievement.pack_mastery_hoarder_300.desc = Verdiene im Laufe deines Lebens 300 Mastery-Punkte.
+achievement.pack_mastery_hoarder_300.desc = Häufe im Laufe deines Lebens einen Schatz an Mastery an.
 achievement.pack_mastery_devotee.title = Anhänger der Mastery
 achievement.pack_mastery_devotee.desc = Die volle Mastery-Reise: ein Lehrling, ein Geselle und ein Hamster.
 achievement.pack_essence_hoarder_100.title = Essenz-Hamster I
-achievement.pack_essence_hoarder_100.desc = Sammle 100-mal Lebensessenz auf
+achievement.pack_essence_hoarder_100.desc = Sammle die Essenz des Lebens wieder und wieder auf.
 achievement.pack_essence_hoarder_10000.title = Essenz-Hamster II
-achievement.pack_essence_hoarder_10000.desc = Sammle im Laufe deines Lebens 10.000-mal Lebensessenz auf - ein wahres Gefäß für die Energie der Welt.
+achievement.pack_essence_hoarder_10000.desc = Ein wahres Gefäß für die Energie der Welt: sammle Essenz jenseits aller Zählung auf.
 
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Geschärft
@@ -71,7 +71,7 @@ mastery.node.t1_combo.title = Combo-Meister
 mastery.node.t2_life.title = Vampirisch
 mastery.node.t2_cd.title = Flink
 mastery.node.eternal.title = Ewig
-mastery.node.eternal.desc = Pro Kauf: +0.5% {0}-Schaden. Kosten steigen mit jedem Kauf um 10%. Erfordert {1} Stufe 92.
+mastery.node.eternal.desc = Jeder Kauf fügt einen Hauch {0}-Schaden hinzu, und jeder kostet mehr als der letzte. Es gibt kein Limit.
 mastery.arc_t3_cap.title = Adlerauge
 mastery.art_t3_cap.title = Sprengmeister
 mastery.axe_t3_cap.title = Raserei
@@ -105,10 +105,10 @@ mastery.har_t1.title = Ernte-Mastery I
 mastery.har_t2.title = Ernte-Mastery II
 mastery.har_t3.title = Ernte-Mastery III
 mastery.har_eternal.title = Ernte-Mastery: Ewig
-mastery.met_t1.title = Meteorschlag 1
-mastery.met_t2.title = Meteorschlag 2
-mastery.met_t3.title = Meteorschlag 3
-mastery.met_t4.title = Meteorschlag 4
+mastery.met_t1.title = Meteorschlag I
+mastery.met_t2.title = Meteorschlag II
+mastery.met_t3.title = Meteorschlag III
+mastery.met_t4.title = Meteorschlag IV
 mastery.met_eternal.title = Ewiger Kataklysmus
 mastery.min_t1.title = Bergbau-Mastery I
 mastery.min_t2.title = Bergbau-Mastery II
@@ -139,15 +139,15 @@ mastery.woo_t1.title = Holzfällen-Mastery I
 mastery.woo_t2.title = Holzfällen-Mastery II
 mastery.woo_t3.title = Holzfällen-Mastery III
 mastery.woo_eternal.title = Holzfällen-Mastery: Ewig
-mastery.acr_eternal.desc = Pro Kauf: +0.5% Bonus-Drop-Chance der Akrobatik-Mastery. Kosten steigen mit jedem Kauf um 10%. Grinde ohne Limit.
-mastery.enc_eternal.desc = Pro Kauf: +0.5% Bonus-Drop-Chance der Verzauberungs-Mastery. Kosten steigen mit jedem Kauf um 10%. Grinde ohne Limit.
-mastery.fb_eternal.desc = Pro Kauf: +1% Feuerball-Schaden. Kosten steigen mit jedem Kauf um 25%. Erfordert MAGIE Stufe 92.
-mastery.fis_eternal.desc = Pro Kauf: +0.5% Bonus-Drop-Chance der Angel-Mastery. Kosten steigen mit jedem Kauf um 10%. Grinde ohne Limit.
-mastery.har_eternal.desc = Pro Kauf: +0.5% Bonus-Drop-Chance der Ernte-Mastery. Kosten steigen mit jedem Kauf um 10%. Erfordert ERNTE Stufe 92.
-mastery.met_eternal.desc = Pro Kauf: -1% Meteor-Abklingzeit und +0.75% Meteor-Schaden. Kosten steigen mit jedem Kauf um 10% (nach 70 gedeckelt). Erfordert MAGIE Stufe 92.
-mastery.min_eternal.desc = Pro Kauf: +0.5% Bonus-Drop-Chance der Bergbau-Mastery. Kosten steigen mit jedem Kauf um 10%. Erfordert BERGBAU Stufe 92.
-mastery.ps_eternal.desc = Pro Kauf: +1% Durchschuss-Schaden (Hieb & Zauber). Kosten steigen mit jedem Kauf um 10%. Erfordert BOGENSCHIESSEN Stufe 92.
-mastery.sst_eternal.desc = Pro Kauf: -1% Schattenschritt-Abklingzeit. Kosten steigen mit jedem Kauf um 10%. Erfordert DOLCHE Stufe 92.
-mastery.ss_eternal.desc = Pro Kauf: +1% Schildschlag-Schaden. Kosten steigen mit jedem Kauf um 10%. Erfordert BLOCKEN Stufe 92.
-mastery.ww_eternal.desc = Pro Kauf: +1% Wirbelwind-Schaden (Hieb & Zauber). Kosten steigen mit jedem Kauf um 10%. Erfordert ÄXTE Stufe 92.
-mastery.woo_eternal.desc = Pro Kauf: +0.5% Bonus-Drop-Chance der Holzfällen-Mastery. Kosten steigen mit jedem Kauf um 10%. Erfordert HOLZFÄLLEN Stufe 92.
+mastery.acr_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Akrobatik-Mastery ein Stück weiter; jeder kostet mehr als der letzte. Grinde ohne Limit.
+mastery.enc_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Verzauberungs-Mastery ein Stück weiter; jeder kostet mehr als der letzte. Grinde ohne Limit.
+mastery.fb_eternal.desc = Jeder Kauf facht den Feuerball-Schaden weiter an; jeder kostet mehr als der letzte.
+mastery.fis_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Angel-Mastery ein Stück weiter; jeder kostet mehr als der letzte. Grinde ohne Limit.
+mastery.har_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Ernte-Mastery ein Stück weiter; jeder kostet mehr als der letzte. Grinde ohne Limit.
+mastery.met_eternal.desc = Jeder Kauf verkürzt die Abklingzeit des Meteors und facht seinen Schaden an; jeder kostet mehr als der letzte.
+mastery.min_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Bergbau-Mastery ein Stück weiter; jeder kostet mehr als der letzte. Grinde ohne Limit.
+mastery.ps_eternal.desc = Jeder Kauf schärft den Durchschuss-Schaden (Hieb und Zauber); jeder kostet mehr als der letzte.
+mastery.sst_eternal.desc = Jeder Kauf verkürzt die Abklingzeit des Schattenschritts; jeder kostet mehr als der letzte.
+mastery.ss_eternal.desc = Jeder Kauf härtet den Schildschlag-Schaden; jeder kostet mehr als der letzte.
+mastery.ww_eternal.desc = Jeder Kauf wetzt den Wirbelwind-Schaden (Hieb und Zauber); jeder kostet mehr als der letzte.
+mastery.woo_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Holzfällen-Mastery ein Stück weiter; jeder kostet mehr als der letzte. Grinde ohne Limit.
