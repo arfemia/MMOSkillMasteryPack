@@ -1,7 +1,7 @@
 # CLAUDE.md — MMOSkillMasteryPack
 
 This directory is **a standalone Hytale content pack** that ships as its own
-mod on CurseForge alongside the [MMOSkillTree mod](https://www.curseforge.com/hytale/mmoskilltree).
+mod on CurseForge alongside the [MMOSkillTree mod](https://www.curseforge.com/hytale/mods/mmo-skill-tree).
 The mod no longer ships `MasteryDefaults`/`CurrencyDefaults` in its jar; this
 pack is the source of those defaults plus mastery-themed quests + achievements.
 
