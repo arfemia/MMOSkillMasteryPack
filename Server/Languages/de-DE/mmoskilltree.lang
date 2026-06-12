@@ -21,7 +21,6 @@ shop.convert_mastery_point.title = Mastery-Infusion
 shop.convert_mastery_point.desc = Wandle deine Einkünfte in tiefere Mastery um.
 
 # --- Währungen (currency.<id>.name, per Konvention aufgelöst; id = Dateiname in Kleinbuchstaben) ---
-currency.life_essence.name = Lebensessenz
 currency.mastery_point.name = Mastery-Punkt
 
 # --- Mastery-Track-Titel (mastery.<trackId>.title, per Konvention aufgelöst; trackId = Dateiname in Kleinbuchstaben).

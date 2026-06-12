@@ -21,7 +21,6 @@ shop.convert_mastery_point.title = Ustalık İnfüzyonu
 shop.convert_mastery_point.desc = Kazancını daha derin bir ustalığa çevir.
 
 # --- Para birimleri (currency.<id>.name, kurala göre çözülür; id = küçük harfli dosya adı) ---
-currency.life_essence.name = Yaşam Özü
 currency.mastery_point.name = Ustalık Puanı
 
 # --- Ustalık yolu başlıkları (mastery.<trackId>.title, kurala göre çözülür; trackId = küçük harfli dosya adı).

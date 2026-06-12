@@ -21,7 +21,6 @@ shop.convert_mastery_point.title = Infusão de Maestria
 shop.convert_mastery_point.desc = Converta seus ganhos em uma maestria mais profunda.
 
 # --- Moedas (currency.<id>.name, resolvido por convenção; id = nome do arquivo em minúsculas) ---
-currency.life_essence.name = Essência de Vida
 currency.mastery_point.name = Ponto de Maestria
 
 # --- Títulos de trilhas de maestria (mastery.<trackId>.title, resolvidos por convenção; trackId = nome do arquivo em minúsculas).

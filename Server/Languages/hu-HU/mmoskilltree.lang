@@ -21,7 +21,6 @@ shop.convert_mastery_point.title = Mastery Infúzió
 shop.convert_mastery_point.desc = Alakítsd a szerzeményeidet mélyebb masteryvé.
 
 # --- Valuták (currency.<id>.name, konvenció szerint feloldva; id = a fájlnév kisbetűsítve) ---
-currency.life_essence.name = Életesszencia
 currency.mastery_point.name = Mastery Pont
 
 # --- Mastery track címek (mastery.<trackId>.title, konvenció szerint feloldva; trackId = a fájlnév kisbetűsítve).

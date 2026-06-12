@@ -105,7 +105,7 @@ All player-facing display text ships in `Server/Languages/en-US/mmoskilltree.lan
 
 - **Mastery tracks:** `mastery.<trackId>.title` (trackId = filename lowercased). Track JSON no longer carries `displayName`. Nodes keep their template-generated `displayName` ("`<Track>: Sharpened`" etc., already DRY across the combat tracks that share `Combat6_Standard`) as the English source; translate a node by adding `mastery.<nodeId>.title`.
 - **Quests / bounties:** `quest.<id>.title` + `quest.<id>.flavor` (id = inner `Payload.id`).
-- **Currencies:** `currency.<id>.name` (id = filename lowercased).
+- **Currencies:** `currency.<id>.name` (id = filename lowercased) for COUNTER-backed currencies only (`mastery_point`). An ITEM-backed currency (`life_essence`) ships NO name key: with nothing authored, the mod's `CostRenderer.currencyName` derives the display name from the backing item's native, already-translated lang key (`server.items.Ingredient_Life_Essence.name`, "Essence of Life"), exactly like the icon derives from the item - zero hand-maintained translations, and the currency can never disagree with the inventory tooltip.
 - **Achievements:** `achievement.<id>.title` + `achievement.<id>.desc`.
 - **Token Shop offers:** explicit `"titleKey"`/`"descriptionKey"` in the offer JSON pointing at `.lang` keys.
 

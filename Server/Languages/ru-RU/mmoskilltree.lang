@@ -21,7 +21,6 @@ shop.convert_mastery_point.title = Вливание мастерства
 shop.convert_mastery_point.desc = Обменяйте нажитое на более глубокое мастерство.
 
 # --- Валюты (currency.<id>.name, разрешается по соглашению; id = имя файла в нижнем регистре) ---
-currency.life_essence.name = Эссенция жизни
 currency.mastery_point.name = Очко мастерства
 
 # --- Названия треков мастерства (mastery.<trackId>.title, разрешаются по соглашению; trackId = имя файла в нижнем регистре).

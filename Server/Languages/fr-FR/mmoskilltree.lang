@@ -21,7 +21,6 @@ shop.convert_mastery_point.title = Infusion de maîtrise
 shop.convert_mastery_point.desc = Convertissez vos gains en une maîtrise plus profonde.
 
 # --- Monnaies (currency.<id>.name, résolu par convention ; id = nom de fichier en minuscules) ---
-currency.life_essence.name = Essence de vie
 currency.mastery_point.name = Point de maîtrise
 
 # --- Titres des voies de maîtrise (mastery.<trackId>.title, résolus par convention ; trackId = nom de fichier en minuscules).
