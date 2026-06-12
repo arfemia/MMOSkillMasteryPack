@@ -2,6 +2,12 @@
 
 **The mastery and currency content pack for the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).** Drop this `.zip` into your server's `mods/` folder alongside the plugin to unlock the full mastery system - 20 active tracks across combat, ability, and gathering skills, two starter currencies, mastery-point milestone rewards every 15 levels, and themed quests + achievements that exercise the mastery surface.
 
+[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/5NFdZsUxHZ) [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/ziggfreed) [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/wintergreensolutions) [![Documentation](https://img.shields.io/badge/Docs-Read%20More-0ea5e9?style=for-the-badge)](https://mmo-skill-tree-docs.ziggfreed.com)
+
+---
+
+[![Host your own Hytale server with Kinetic Hosting](https://i.imgur.com/UHn3FzW.png)](https://billing.kinetichosting.com/aff.php?aff=1262)
+
 ---
 
 ## What's inside
@@ -96,4 +102,12 @@ The pack uses the standard MMO content-pack format documented in the plugin's `C
 
 ---
 
-## [Plugin homepage](https://www.curseforge.com/hytale/mods/mmo-skill-tree) - [Plugin docs](https://mmo-skill-tree-docs.ziggfreed.com) - [Discord](https://discord.gg/5NFdZsUxHZ)
+## Links & Support
+
+[![MMO Skill Tree](https://img.shields.io/badge/CurseForge-MMO%20Skill%20Tree-F16436?style=for-the-badge&logo=curseforge&logoColor=white)](https://www.curseforge.com/hytale/mods/mmo-skill-tree) [![Get Pro Edition](https://img.shields.io/badge/Get%20Pro%20Edition-F59E0B?style=for-the-badge)](https://mmo-skill-tree-docs.ziggfreed.com/commercial)
+
+**Full docs:** [mmo-skill-tree-docs.ziggfreed.com](https://mmo-skill-tree-docs.ziggfreed.com) | Questions? Join the [Discord](https://discord.gg/5NFdZsUxHZ)
+
+**Support Development:** [Ko-fi](https://ko-fi.com/ziggfreed) | [Buy Me a Coffee](https://buymeacoffee.com/wintergreensolutions)
+
+_MMO Skill Tree is not affiliated with Hypixel Studios or Hytale._
