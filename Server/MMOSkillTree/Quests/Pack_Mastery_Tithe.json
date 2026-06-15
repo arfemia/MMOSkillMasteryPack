@@ -23,7 +23,6 @@
         "type": "KILL_ENTITY",
         "target": "",
         "amount": 10,
-        "displayText": "Slay 10 mobs",
         "matchMode": "CONTAINS"
       },
       {
@@ -31,7 +30,6 @@
         "type": "BREAK_BLOCK",
         "target": "Wood",
         "amount": 10,
-        "displayText": "Chop 10 logs",
         "matchMode": "CONTAINS"
       }
     ],

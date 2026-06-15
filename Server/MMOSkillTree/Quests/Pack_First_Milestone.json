@@ -16,7 +16,7 @@
         "type": "REACH_LEVEL",
         "target": "*",
         "amount": 15,
-        "displayText": "Reach level 15 in any skill",
+        "textKey": "objective.text.reach_level.any",
         "matchMode": "CONTAINS"
       }
     ],

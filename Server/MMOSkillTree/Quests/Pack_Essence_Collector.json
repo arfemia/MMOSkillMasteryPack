@@ -16,7 +16,6 @@
         "type": "TURN_IN",
         "target": "Ingredient_Life_Essence",
         "amount": 100,
-        "displayText": "Turn in 100 Life Essence",
         "matchMode": "EXACT"
       }
     ],
