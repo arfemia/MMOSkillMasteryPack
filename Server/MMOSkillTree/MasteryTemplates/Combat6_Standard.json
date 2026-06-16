@@ -200,7 +200,6 @@
       {
         "id": "{{prefix}}_eternal",
         "tier": 9,
-        "description": "Each purchase: +0.5% {{skillLower}} mastery damage. Cost grows 10% per purchase. Requires {{gateSkill}} level 92.",
         "prerequisites": ["{{prefix}}_t3_cap"],
         "requirements": {
           "skillLevels": [
