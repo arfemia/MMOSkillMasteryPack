@@ -147,7 +147,6 @@
         "id": "ss_eternal",
         "tier": 9,
         "displayName": "Eternal Wall",
-        "description": "Each purchase: +1% Shield Slam damage. Cost grows 10% per purchase. Requires DEFENSE level 92.",
         "prerequisites": ["ss_t3_mountainshield"],
         "requirements": {
           "skillLevels": [

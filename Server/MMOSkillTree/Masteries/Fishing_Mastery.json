@@ -106,7 +106,6 @@
         "id": "fis_eternal",
         "tier": 9,
         "displayName": "Fishing Mastery: Eternal",
-        "description": "Each purchase: +0.5% fishing mastery bonus-drop chance. Cost grows 10% per purchase. Grind without limit.",
         "prerequisites": [
           "fis_t1",
           "fis_t2",

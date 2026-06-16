@@ -106,7 +106,6 @@
         "id": "acr_eternal",
         "tier": 9,
         "displayName": "Acrobatics Mastery: Eternal",
-        "description": "Each purchase: +0.5% acrobatics mastery bonus-drop chance. Cost grows 10% per purchase. Grind without limit.",
         "prerequisites": [
           "acr_t1",
           "acr_t2",

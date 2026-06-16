@@ -20,7 +20,6 @@
         "id": "mag_archmagus",
         "tier": 10,
         "displayName": "Magic Mastery: Archmagus",
-        "description": "Unique to Magic. The pinnacle of arcane study — permanent +15% spell damage at the cost of 10 max MANA.",
         "prerequisites": [
           "mag_t3_cap"
         ],

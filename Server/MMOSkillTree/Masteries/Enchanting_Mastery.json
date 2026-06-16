@@ -106,7 +106,6 @@
         "id": "enc_eternal",
         "tier": 9,
         "displayName": "Enchanting Mastery: Eternal",
-        "description": "Each purchase: +0.5% enchanting mastery bonus-drop chance. Cost grows 10% per purchase. Grind without limit.",
         "prerequisites": [
           "enc_t1",
           "enc_t2",

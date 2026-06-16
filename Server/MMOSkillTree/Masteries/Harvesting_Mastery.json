@@ -121,7 +121,6 @@
         "id": "har_eternal",
         "tier": 9,
         "displayName": "Harvesting Mastery: Eternal",
-        "description": "Each purchase: +0.5% harvesting mastery bonus-drop chance. Cost grows 10% per purchase. Requires HARVESTING level 92.",
         "prerequisites": [
           "har_t1",
           "har_t2",

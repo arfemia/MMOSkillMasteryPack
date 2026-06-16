@@ -144,7 +144,6 @@
         "id": "met_eternal",
         "tier": 9,
         "displayName": "Eternal Cataclysm",
-        "description": "Each purchase: -1% Meteor cooldown and +0.75% Meteor damage. Cost grows 10% per purchase (capped after 70). Requires MAGIC level 92.",
         "prerequisites": ["met_t4"],
         "requirements": {
           "skillLevels": [

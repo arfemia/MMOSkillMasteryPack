@@ -214,7 +214,6 @@
         "id": "fb_eternal",
         "tier": 9,
         "displayName": "Eternal Flame",
-        "description": "Each purchase: +1% Fireball damage. Cost grows 25% per purchase. Requires MAGIC level 92.",
         "prerequisites": ["fb_t3_inferno"],
         "requirements": {
           "skillLevels": [

@@ -173,7 +173,6 @@
         "id": "sst_eternal",
         "tier": 9,
         "displayName": "Eternal Shadow",
-        "description": "Each purchase: -1% Shadowstep cooldown. Cost grows 10% per purchase. Requires DAGGERS level 92.",
         "prerequisites": ["sst_t3_voidwalk"],
         "requirements": {
           "skillLevels": [

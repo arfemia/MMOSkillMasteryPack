@@ -149,7 +149,6 @@
         "id": "ww_eternal",
         "tier": 9,
         "displayName": "Eternal Storm",
-        "description": "Each purchase: +1% Whirlwind damage (swing & cast). Cost grows 10% per purchase. Requires AXES level 92.",
         "prerequisites": ["ww_t3_tempest"],
         "requirements": {
           "skillLevels": [

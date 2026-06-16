@@ -121,7 +121,6 @@
         "id": "min_eternal",
         "tier": 9,
         "displayName": "Mining Mastery: Eternal",
-        "description": "Each purchase: +0.5% mining mastery bonus-drop chance. Cost grows 10% per purchase. Requires MINING level 92.",
         "prerequisites": [
           "min_t1",
           "min_t2",

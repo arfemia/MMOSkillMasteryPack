@@ -121,7 +121,6 @@
         "id": "woo_eternal",
         "tier": 9,
         "displayName": "Woodcutting Mastery: Eternal",
-        "description": "Each purchase: +0.5% woodcutting mastery bonus-drop chance. Cost grows 10% per purchase. Requires WOODCUTTING level 92.",
         "prerequisites": [
           "woo_t1",
           "woo_t2",

@@ -60,7 +60,6 @@
         ]
       },
       "def_eternal": {
-        "description": "Each purchase: +0.5% Shield Slam i-frame duration. Cost grows 10% per purchase. Requires DEFENSE level 92.",
         "modifiers": [
           {
             "shape": "PERCENT",

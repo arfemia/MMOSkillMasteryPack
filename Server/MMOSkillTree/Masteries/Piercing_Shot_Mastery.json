@@ -157,7 +157,6 @@
         "id": "ps_eternal",
         "tier": 9,
         "displayName": "Eternal Arrow",
-        "description": "Each purchase: +1% Piercing Shot damage (swing & cast). Cost grows 10% per purchase. Requires ARCHERY level 92.",
         "prerequisites": ["ps_t3_hawkshot"],
         "requirements": {
           "skillLevels": [
