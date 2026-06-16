@@ -17,7 +17,6 @@
       {
         "id": "fis_t1",
         "tier": 1,
-        "displayName": "Fishing Mastery I",
         "cost": {
           "combine": "all",
           "currencies": {
@@ -43,7 +42,6 @@
       {
         "id": "fis_t2",
         "tier": 2,
-        "displayName": "Fishing Mastery II",
         "prerequisites": [
           "fis_t1"
         ],
@@ -72,7 +70,6 @@
       {
         "id": "fis_t3",
         "tier": 3,
-        "displayName": "Fishing Mastery III",
         "prerequisites": [
           "fis_t2"
         ],
@@ -105,7 +102,6 @@
       {
         "id": "fis_eternal",
         "tier": 9,
-        "displayName": "Fishing Mastery: Eternal",
         "prerequisites": [
           "fis_t1",
           "fis_t2",

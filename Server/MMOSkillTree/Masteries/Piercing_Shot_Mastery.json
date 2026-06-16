@@ -17,7 +17,6 @@
       {
         "id": "ps_t1_dmg",
         "tier": 1,
-        "displayName": "Heavy Draw",
         "choiceGroup": "ps_t1",
         "cost": {
           "combine": "all",
@@ -44,7 +43,6 @@
       {
         "id": "ps_t1_cd",
         "tier": 1,
-        "displayName": "Snapshot",
         "choiceGroup": "ps_t1",
         "cost": {
           "combine": "all",
@@ -71,7 +69,6 @@
       {
         "id": "ps_t2_pierce",
         "tier": 2,
-        "displayName": "Deep Pierce",
         "requirements": {
           "skillLevels": [
             {
@@ -104,7 +101,6 @@
       {
         "id": "ps_t3_hawkshot",
         "tier": 3,
-        "displayName": "Hawkshot",
         "prerequisites": ["ps_t2_pierce"],
         "requirements": {
           "skillLevels": [
@@ -156,7 +152,6 @@
       {
         "id": "ps_eternal",
         "tier": 9,
-        "displayName": "Eternal Arrow",
         "prerequisites": ["ps_t3_hawkshot"],
         "requirements": {
           "skillLevels": [

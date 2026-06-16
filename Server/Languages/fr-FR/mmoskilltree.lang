@@ -49,6 +49,7 @@ mastery.whirlwind_mastery.title = Maîtrise du tourbillon
 mastery.piercing_shot_mastery.title = Maîtrise du tir perforant
 mastery.meteor_mastery.title = Maîtrise du météore
 mastery.defense_mastery.title = Maîtrise du blocage
+mastery.mag_archmagus.title = Maîtrise de la magie: Archimage
 
 # --- Succès (achievement.<id>.title / .desc, résolus par convention) ---
 achievement.pack_first_mastery_milestone.title = Apprenti de la voie

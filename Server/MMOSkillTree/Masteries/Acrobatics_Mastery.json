@@ -17,7 +17,6 @@
       {
         "id": "acr_t1",
         "tier": 1,
-        "displayName": "Acrobatics Mastery I",
         "cost": {
           "combine": "all",
           "currencies": {
@@ -43,7 +42,6 @@
       {
         "id": "acr_t2",
         "tier": 2,
-        "displayName": "Acrobatics Mastery II",
         "prerequisites": [
           "acr_t1"
         ],
@@ -72,7 +70,6 @@
       {
         "id": "acr_t3",
         "tier": 3,
-        "displayName": "Acrobatics Mastery III",
         "prerequisites": [
           "acr_t2"
         ],
@@ -105,7 +102,6 @@
       {
         "id": "acr_eternal",
         "tier": 9,
-        "displayName": "Acrobatics Mastery: Eternal",
         "prerequisites": [
           "acr_t1",
           "acr_t2",

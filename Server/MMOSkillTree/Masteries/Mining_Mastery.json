@@ -16,7 +16,6 @@
       {
         "id": "min_t1",
         "tier": 1,
-        "displayName": "Mining Mastery I",
         "cost": {
           "combine": "all",
           "currencies": {
@@ -42,7 +41,6 @@
       {
         "id": "min_t2",
         "tier": 2,
-        "displayName": "Mining Mastery II",
         "prerequisites": [
           "min_t1"
         ],
@@ -79,7 +77,6 @@
       {
         "id": "min_t3",
         "tier": 3,
-        "displayName": "Mining Mastery III",
         "prerequisites": [
           "min_t2"
         ],
@@ -120,7 +117,6 @@
       {
         "id": "min_eternal",
         "tier": 9,
-        "displayName": "Mining Mastery: Eternal",
         "prerequisites": [
           "min_t1",
           "min_t2",

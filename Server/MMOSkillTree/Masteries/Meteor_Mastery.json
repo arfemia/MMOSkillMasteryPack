@@ -8,7 +8,6 @@
       {
         "id": "met_t1",
         "tier": 1,
-        "displayName": "Meteor Strike 1",
         "cost": {
           "combine": "all",
           "currencies": {
@@ -33,7 +32,6 @@
       {
         "id": "met_t2",
         "tier": 2,
-        "displayName": "Meteor Strike 2",
         "prerequisites": ["met_t1"],
         "requirements": {
           "skillLevels": [
@@ -67,7 +65,6 @@
       {
         "id": "met_t3",
         "tier": 3,
-        "displayName": "Meteor Strike 3",
         "prerequisites": ["met_t2"],
         "requirements": {
           "skillLevels": [
@@ -105,7 +102,6 @@
       {
         "id": "met_t4",
         "tier": 4,
-        "displayName": "Meteor Strike 4",
         "prerequisites": ["met_t3"],
         "requirements": {
           "skillLevels": [
@@ -143,7 +139,6 @@
       {
         "id": "met_eternal",
         "tier": 9,
-        "displayName": "Eternal Cataclysm",
         "prerequisites": ["met_t4"],
         "requirements": {
           "skillLevels": [

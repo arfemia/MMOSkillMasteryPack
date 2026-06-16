@@ -15,7 +15,6 @@
       {
         "id": "{{prefix}}_t1_dmg",
         "tier": 1,
-        "displayName": "{{trackName}}: Sharpened",
         "choiceGroup": "{{prefix}}_t1",
         "cost": {
           "combine": "all",
@@ -43,7 +42,6 @@
       {
         "id": "{{prefix}}_t1_combo",
         "tier": 1,
-        "displayName": "{{trackName}}: Combo Master",
         "choiceGroup": "{{prefix}}_t1",
 
         "cost": {
@@ -72,7 +70,6 @@
       {
         "id": "{{prefix}}_t2_life",
         "tier": 2,
-        "displayName": "{{trackName}}: Vampiric",
         "choiceGroup": "{{prefix}}_t2",
         "prerequisites": ["{{prefix}}_t1_dmg"],
         "requirements": {
@@ -109,7 +106,6 @@
       {
         "id": "{{prefix}}_t2_cd",
         "tier": 2,
-        "displayName": "{{trackName}}: Swift",
         "choiceGroup": "{{prefix}}_t2",
         "prerequisites": ["{{prefix}}_t1_combo"],
         "requirements": {
@@ -145,7 +141,6 @@
       {
         "id": "{{prefix}}_t3_cap",
         "tier": 3,
-        "displayName": "{{capDisplay}}",
         "requirements": {
           "mode": "AND",
           "skillLevels": [
@@ -205,7 +200,6 @@
       {
         "id": "{{prefix}}_eternal",
         "tier": 9,
-        "displayName": "{{trackName}}: Eternal",
         "description": "Each purchase: +0.5% {{skillLower}} mastery damage. Cost grows 10% per purchase. Requires {{gateSkill}} level 92.",
         "prerequisites": ["{{prefix}}_t3_cap"],
         "requirements": {

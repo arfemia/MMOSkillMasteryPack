@@ -17,7 +17,6 @@
       {
         "id": "fb_t1_dmg",
         "tier": 1,
-        "displayName": "Searing Touch",
         "choiceGroup": "fb_t1",
         "cost": {
           "combine": "all",
@@ -43,7 +42,6 @@
       {
         "id": "fb_t1_cd",
         "tier": 1,
-        "displayName": "Quickcast",
         "choiceGroup": "fb_t1",
         "cost": {
           "combine": "all",
@@ -70,7 +68,6 @@
       {
         "id": "fb_t2_radius",
         "tier": 2,
-        "displayName": "Inferno Radius",
         "choiceGroup": "fb_t2",
         "prerequisites": ["fb_t1_dmg"],
         "requirements": {
@@ -105,7 +102,6 @@
       {
         "id": "fb_t2_pierce",
         "tier": 2,
-        "displayName": "Burning Pierce",
         "choiceGroup": "fb_t2",
         "prerequisites": ["fb_t1_cd"],
         "requirements": {
@@ -140,7 +136,6 @@
       {
         "id": "fb_t3_inferno",
         "tier": 3,
-        "displayName": "Inferno",
         "requirements": {
           "mode": "AND",
           "skillLevels": [
@@ -213,7 +208,6 @@
       {
         "id": "fb_eternal",
         "tier": 9,
-        "displayName": "Eternal Flame",
         "prerequisites": ["fb_t3_inferno"],
         "requirements": {
           "skillLevels": [

@@ -17,7 +17,6 @@
       {
         "id": "ww_t1_dmg",
         "tier": 1,
-        "displayName": "Sharp Edges",
         "choiceGroup": "ww_t1",
         "cost": {
           "combine": "all",
@@ -44,7 +43,6 @@
       {
         "id": "ww_t1_cd",
         "tier": 1,
-        "displayName": "Spinning Top",
         "choiceGroup": "ww_t1",
         "cost": {
           "combine": "all",
@@ -71,7 +69,6 @@
       {
         "id": "ww_t2_radius",
         "tier": 2,
-        "displayName": "Wide Arc",
         "requirements": {
           "skillLevels": [
             {
@@ -104,7 +101,6 @@
       {
         "id": "ww_t3_tempest",
         "tier": 3,
-        "displayName": "Tempest",
         "prerequisites": ["ww_t2_radius"],
         "requirements": {
           "skillLevels": [
@@ -148,7 +144,6 @@
       {
         "id": "ww_eternal",
         "tier": 9,
-        "displayName": "Eternal Storm",
         "prerequisites": ["ww_t3_tempest"],
         "requirements": {
           "skillLevels": [

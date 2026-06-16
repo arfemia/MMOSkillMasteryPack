@@ -17,7 +17,6 @@
       {
         "id": "sst_t1_range",
         "tier": 1,
-        "displayName": "Long Step",
         "cost": {
           "combine": "all",
           "currencies": {
@@ -42,7 +41,6 @@
       {
         "id": "sst_t1_cd",
         "tier": 1,
-        "displayName": "Swift Step",
         "cost": {
           "combine": "all",
           "currencies": {
@@ -68,7 +66,6 @@
       {
         "id": "sst_t1_cheap",
         "tier": 1,
-        "displayName": "Frugal Step",
         "cost": {
           "combine": "all",
           "currencies": {
@@ -93,7 +90,6 @@
       {
         "id": "sst_t2_phantom",
         "tier": 2,
-        "displayName": "Phantom Mastery",
         "prerequisites": ["sst_t1_range", "sst_t1_cd"],
         "requirements": {
           "skillLevels": [
@@ -128,7 +124,6 @@
       {
         "id": "sst_t3_voidwalk",
         "tier": 3,
-        "displayName": "Voidwalk",
         "prerequisites": ["sst_t2_phantom"],
         "requirements": {
           "skillLevels": [
@@ -172,7 +167,6 @@
       {
         "id": "sst_eternal",
         "tier": 9,
-        "displayName": "Eternal Shadow",
         "prerequisites": ["sst_t3_voidwalk"],
         "requirements": {
           "skillLevels": [

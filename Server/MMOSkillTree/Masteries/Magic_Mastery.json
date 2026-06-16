@@ -19,7 +19,6 @@
       {
         "id": "mag_archmagus",
         "tier": 10,
-        "displayName": "Magic Mastery: Archmagus",
         "prerequisites": [
           "mag_t3_cap"
         ],

@@ -49,6 +49,7 @@ mastery.whirlwind_mastery.title = Kasırga Ustalığı
 mastery.piercing_shot_mastery.title = Delici Atış Ustalığı
 mastery.meteor_mastery.title = Meteor Ustalığı
 mastery.defense_mastery.title = Blok Ustalığı
+mastery.mag_archmagus.title = Büyü Ustalığı: Başsihirbaz
 
 # --- Başarımlar (achievement.<id>.title / .desc, kurala göre çözülür) ---
 achievement.pack_first_mastery_milestone.title = Yolun Çırağı

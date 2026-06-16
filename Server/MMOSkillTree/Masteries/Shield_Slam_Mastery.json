@@ -17,7 +17,6 @@
       {
         "id": "ss_t1_dmg",
         "tier": 1,
-        "displayName": "Bulwark",
         "choiceGroup": "ss_t1",
         "cost": {
           "combine": "all",
@@ -43,7 +42,6 @@
       {
         "id": "ss_t1_cd",
         "tier": 1,
-        "displayName": "Tower Stance",
         "choiceGroup": "ss_t1",
         "cost": {
           "combine": "all",
@@ -70,7 +68,6 @@
       {
         "id": "ss_t2_stagger",
         "tier": 2,
-        "displayName": "Stagger",
         "requirements": {
           "skillLevels": [
             {
@@ -103,7 +100,6 @@
       {
         "id": "ss_t3_mountainshield",
         "tier": 3,
-        "displayName": "Mountainshield",
         "prerequisites": ["ss_t2_stagger"],
         "requirements": {
           "skillLevels": [
@@ -146,7 +142,6 @@
       {
         "id": "ss_eternal",
         "tier": 9,
-        "displayName": "Eternal Wall",
         "prerequisites": ["ss_t3_mountainshield"],
         "requirements": {
           "skillLevels": [

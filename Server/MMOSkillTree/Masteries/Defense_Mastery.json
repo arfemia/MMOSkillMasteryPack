@@ -17,7 +17,6 @@
     },
     "nodeOverrides": {
       "def_t1_dmg": {
-        "displayName": "Defense Mastery: Bulwark",
         "modifiers": [
           {
             "shape": "PERCENT",
@@ -28,7 +27,6 @@
         ]
       },
       "def_t1_combo": {
-        "displayName": "Defense Mastery: Charge",
         "modifiers": [
           {
             "shape": "PERCENT",
@@ -39,7 +37,6 @@
         ]
       },
       "def_t2_life": {
-        "displayName": "Defense Mastery: Banner Bearer",
         "modifiers": [
           {
             "shape": "PERCENT",
