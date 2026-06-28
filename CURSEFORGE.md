@@ -31,7 +31,7 @@ Each track has **3-5 finite identity nodes** that define its character, plus exa
 
 Adds a manual-claim Mastery Point reward to every 15th level for all 20 built-in skills, generated up to each skill's configured max level. Rewards self-hide when the Mastery Points currency is disabled.
 
-The pack uses the new **CommandReward template system** (plugin 1.1.0+): one reusable `MasteryPointMilestones` template (12 milestone levels) is referenced from a single `{{ALL_SKILLS}}` entry that fans out to every skill. Going from 240 identical reward objects to 1 template + 1 reference. Server owners who want different intervals or amounts can override per skill - explicit skill entries win over the catch-all.
+The pack uses the new **CommandReward template system** (plugin 1.1.0+): one reusable `Mastery_Point_Milestones` template (13 milestone levels) is referenced from a single `{{ALL_SKILLS}}` entry that fans out to every skill. Going from 240 identical reward objects to 1 template + 1 reference. Server owners who want different intervals or amounts can override per skill - explicit skill entries win over the catch-all.
 
 ### Themed quests (5)
 
@@ -61,7 +61,7 @@ Every display string in the pack - track titles, node names and descriptions, qu
 ## Installation
 
 1. Install the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).
-2. Drop `MMOSkillMasteryPack-1.1.0.zip` into the same `mods/` folder.
+2. Drop `MMOSkillMasteryPack-1.1.1.zip` into the same `mods/` folder.
 3. Restart the server.
 
 On startup, look for:
@@ -91,6 +91,7 @@ The pack uses the standard MMO content-pack format documented in the plugin's `C
 
 | Pack  | Plugin | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.1.1 | 1.3.0+ | Restores the Mastery Point level rewards. The `Mastery_Point_Milestones` template was filed under a name the `{{ALL_SKILLS}}` `extends` reference could not match (lowercasing did not bridge the missing underscores), so no skill ever offered its mastery-point milestones since 1.0.0. Renamed the template so all built-in skills again grant a claimable Mastery Point every 15 levels (15 to 195). Currency, mastery tracks, quests, and achievements unchanged; existing `command-rewards.json` overrides unaffected. |
 | 1.1.0 | 1.3.0+ | Full 9-language localization of every display string (track titles, node names + descriptions including the shared tier names, quests, achievements, currency names, shop offer). Fixes the Mastery Infusion offer never actually appearing in the shop (1.0.1 shipped it in the wrong content folder with a stale Control key). Reward lines drop their baked English names; the plugin renders localized amounts instead. Adds a **Mastery Infusion** shop offer (convert Bounty Tokens into a Mastery Point), active when the Bounty Pack and plugin 1.3.0+ are present. Core mastery content unchanged. |
 | 1.0.0 | 1.1.0+ | First standalone release. Migrates `MasteryDefaults` + `CurrencyDefaults` + mastery-point milestones out of the plugin jar. Mastery-point milestone file uses the plugin's CommandReward template + `{{ALL_SKILLS}}` system (plugin 1.1.0+) - 1 template + 1 sentinel entry covers all 20 skills.                                                                                                                                                                                                                                                                                                           |
 

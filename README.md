@@ -18,7 +18,7 @@ hides the Mastery and Currency UI tabs unless it's installed.
   (counter-backed, paced by quest/milestone rewards) and `life_essence`
   (item-backed, wraps the Hytale `Ingredient_Life_Essence` item).
 - **Mastery-point milestone rewards** (`Server/MMOSkillTree/CommandRewards/MMOSkillMasteryPack.json`
-  + `Server/MMOSkillTree/CommandRewardTemplates/MasteryPointMilestones.json`)
+  + `Server/MMOSkillTree/CommandRewardTemplates/Mastery_Point_Milestones.json`)
   — +1 mastery_point every 15 levels for every built-in skill. Authored via the
   new CommandReward template system: one template + a single `{{ALL_SKILLS}}`
   entry fans out to every skill (vs. 2,386 lines of duplicated reward objects).

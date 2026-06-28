@@ -20,7 +20,7 @@ skill-mastery-pack/
         ├── MasteryTemplates/*.json            1 template (Combat6_Standard); see "Mastery template extension" below
         ├── Masteries/*.json                   20 mastery tracks (11 thin extends-files + 9 hand-authored)
         ├── Currencies/*.json                  2 currencies
-        ├── CommandRewardTemplates/*.json      1 template (MasteryPointMilestones); see "CommandReward template extension" below
+        ├── CommandRewardTemplates/*.json      1 template (Mastery_Point_Milestones); see "CommandReward template extension" below
         ├── CommandRewards/MMOSkillMasteryPack.json   one {{ALL_SKILLS}} entry fans the template to every skill
         ├── QuestTemplates/*.json              (optional) reusable quest skeletons; see "Quest + Achievement templates" below
         ├── Quests/*.json                      5 hand-authored quests (incl. Pack_Mastery_Tithe — repeatable 6h claim)
@@ -194,9 +194,15 @@ load before CommandRewards. A template Payload is a level&rarr;rewards map
 (same shape a single skill block carries) optionally with `{{paramName}}`
 substitution tokens:
 
+The template's filename (lowercased) is the id a block `extends`, so the
+underscores in `Mastery_Point_Milestones.json` MUST match the `extends` value
+`mastery_point_milestones` (the resolver lowercases but does NOT insert
+underscores at case boundaries; a `MasteryPointMilestones.json` file would
+resolve to id `masterypointmilestones` and never match).
+
 ```json
 {
-  "Name": "MasteryPointMilestones",
+  "Name": "Mastery_Point_Milestones",
   "Payload": {
     "15": [{ "command": "/mmocurrency give --player={player} --currency=mastery_point --amount=1", ... }],
     "30": [{ "command": "...", ... }],
