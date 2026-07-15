@@ -92,7 +92,7 @@
         },
         "modifiers": [
           {
-            "shape": "ADD_PARAM",
+            "shape": "FLAT",
             "key": "pierceCount",
             "value": 2
           }

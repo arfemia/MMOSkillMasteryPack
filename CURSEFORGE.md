@@ -1,4 +1,4 @@
-# MMO Skill Mastery Pack
+﻿# MMO Skill Mastery Pack
 
 **The mastery and currency content pack for the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).** Drop this `.zip` into your server's `mods/` folder alongside the plugin to unlock the full mastery system - 20 active tracks across combat, ability, and gathering skills, two starter currencies, mastery-point milestone rewards every 15 levels, and themed quests + achievements that exercise the mastery surface.
 
@@ -20,7 +20,7 @@
 
 Three additional tracks (`fishing_mastery`, `enchanting_mastery`, `acrobatics_mastery`) ship in the zip with `"disabled": true` - parked for balance work and will activate in a future pack release without a plugin update.
 
-Each track has **3-5 finite identity nodes** that define its character, plus exactly one infinitely-repeatable **"Eternal" node** (tier 9) for multi-year progression. Identity cost curve: combat + marquee ability tracks use T1 = 600 Life Essence, T2 = 1500, T3 = 4000 (Meteor uniquely has a T4 at 8000); gathering tracks are lighter at T1 = 500, T2 = 1200, T3 = 3500. Eternals start cheap (200-500 LE depending on track) and scale 1.10× per purchase (Fireball uses 1.25× and Meteor soft-caps at 70 buys) - self-limiting curves where each player naturally plateaus.
+Each track has **3-5 finite identity nodes** that define its character, plus exactly one infinitely-repeatable **"Eternal" node** (tier 9) for multi-year progression. Identity cost curve: combat + marquee ability tracks use T1 = 600 Life Essence, T2 = 1500, T3 = 4000 (Meteor uniquely has a T4 at 8000); gathering tracks are lighter at T1 = 500, T2 = 1200, T3 = 3500. Eternals start cheap (200-500 LE depending on track) and scale 1.10Ã— per purchase (Fireball uses 1.25Ã— and Meteor soft-caps at 70 buys) - self-limiting curves where each player naturally plateaus.
 
 ### Currencies (2)
 
@@ -35,11 +35,11 @@ The pack uses the new **CommandReward template system** (plugin 1.1.0+): one reu
 
 ### Themed quests (5)
 
-- **First Step Toward Mastery** - auto-accept on first level-up. Reach level 15 in any skill → 2 Mastery Points.
-- **Essence Collector** - turn in 100 Life Essence → 5 Mastery Points + 2,000 Mining XP + 2,000 Woodcutting XP.
-- **Essence Devotee** (sequential, prereq Essence Collector) - turn in 500 Life Essence → 25 Mastery Points.
-- **Path of Mastery** - reach L25 in Mining, Woodcutting, Harvesting, Swords, Archery → 10 Mastery Points.
-- **Mastery Tithe** (auto-accept, repeatable 6h, endgame) - slay 10 mobs + chop 10 logs → 1 Mastery Point. Gated behind Total Level 500 and the **Mastery Hoarder** achievement, so the trickle stays an endgame faucet rather than an early-game boost.
+- **First Step Toward Mastery** - auto-accept on first level-up. Reach level 15 in any skill â†’ 2 Mastery Points.
+- **Essence Collector** - turn in 100 Life Essence â†’ 5 Mastery Points + 2,000 Mining XP + 2,000 Woodcutting XP.
+- **Essence Devotee** (sequential, prereq Essence Collector) - turn in 500 Life Essence â†’ 25 Mastery Points.
+- **Path of Mastery** - reach L25 in Mining, Woodcutting, Harvesting, Swords, Archery â†’ 10 Mastery Points.
+- **Mastery Tithe** (auto-accept, repeatable 6h, endgame) - slay 10 mobs + chop 10 logs â†’ 1 Mastery Point. Gated behind Total Level 500 and the **Mastery Hoarder** achievement, so the trickle stays an endgame faucet rather than an early-game boost.
 
 ### Themed achievements (6)
 
@@ -61,7 +61,7 @@ Every display string in the pack - track titles, node names and descriptions, qu
 ## Installation
 
 1. Install the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).
-2. Drop `MMOSkillMasteryPack-1.1.1.zip` into the same `mods/` folder.
+2. Drop `MMOSkillMasteryPack-1.1.2.zip` into the same `mods/` folder.
 3. Restart the server.
 
 On startup, look for:
@@ -91,6 +91,7 @@ The pack uses the standard MMO content-pack format documented in the plugin's `C
 
 | Pack  | Plugin | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.1.2 | 1.3.0+ | Fixes the Piercing Shot mastery pierce node granting no extra targets (its modifier only injected a pierce value when the ability had none, and Piercing Shot always had one). The node adds 2 to the base pierce, so Piercing Shot pierces 5 targets with it. On plugin builds from the 1.6.0 cycle onward the node card reads "+2 Piercing Shot Pierce"; everything else unchanged. |
 | 1.1.1 | 1.3.0+ | Restores the Mastery Point level rewards. The `Mastery_Point_Milestones` template was filed under a name the `{{ALL_SKILLS}}` `extends` reference could not match (lowercasing did not bridge the missing underscores), so no skill ever offered its mastery-point milestones since 1.0.0. Renamed the template so all built-in skills again grant a claimable Mastery Point every 15 levels (15 to 195). Currency, mastery tracks, quests, and achievements unchanged; existing `command-rewards.json` overrides unaffected. |
 | 1.1.0 | 1.3.0+ | Full 9-language localization of every display string (track titles, node names + descriptions including the shared tier names, quests, achievements, currency names, shop offer). Fixes the Mastery Infusion offer never actually appearing in the shop (1.0.1 shipped it in the wrong content folder with a stale Control key). Reward lines drop their baked English names; the plugin renders localized amounts instead. Adds a **Mastery Infusion** shop offer (convert Bounty Tokens into a Mastery Point), active when the Bounty Pack and plugin 1.3.0+ are present. Core mastery content unchanged. |
 | 1.0.0 | 1.1.0+ | First standalone release. Migrates `MasteryDefaults` + `CurrencyDefaults` + mastery-point milestones out of the plugin jar. Mastery-point milestone file uses the plugin's CommandReward template + `{{ALL_SKILLS}}` system (plugin 1.1.0+) - 1 template + 1 sentinel entry covers all 20 skills.                                                                                                                                                                                                                                                                                                           |
