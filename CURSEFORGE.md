@@ -1,4 +1,4 @@
-﻿# MMO Skill Mastery Pack
+# MMO Skill Mastery Pack
 
 **The mastery and currency content pack for the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).** Drop this `.zip` into your server's `mods/` folder alongside the plugin to unlock the full mastery system - 20 active tracks across combat, ability, and gathering skills, two starter currencies, mastery-point milestone rewards every 15 levels, and themed quests + achievements that exercise the mastery surface.
 
