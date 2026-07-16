@@ -35,8 +35,7 @@
           {
             "shape": "FLAT",
             "key": "damage",
-            "value": 10,
-            "combatTarget": "ARCHERY"
+            "value": 10
           }
         ]
       },
@@ -131,8 +130,7 @@
           {
             "shape": "PERCENT",
             "key": "damage",
-            "value": 0.15,
-            "combatTarget": "ARCHERY"
+            "value": 0.15
           },
           {
             "shape": "CONDITIONAL",
@@ -183,8 +181,7 @@
           {
             "shape": "PERCENT",
             "key": "damage",
-            "value": 0.01,
-            "combatTarget": "ARCHERY"
+            "value": 0.01
           }
         ]
       }
