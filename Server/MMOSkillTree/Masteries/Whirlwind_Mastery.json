@@ -35,8 +35,7 @@
           {
             "shape": "FLAT",
             "key": "damage",
-            "value": 8,
-            "combatTarget": "AXES"
+            "value": 8
           }
         ]
       },
@@ -136,8 +135,7 @@
           {
             "shape": "PERCENT",
             "key": "damage",
-            "value": 0.15,
-            "combatTarget": "AXES"
+            "value": 0.15
           }
         ]
       },
@@ -175,8 +173,7 @@
           {
             "shape": "PERCENT",
             "key": "damage",
-            "value": 0.01,
-            "combatTarget": "AXES"
+            "value": 0.01
           }
         ]
       }
