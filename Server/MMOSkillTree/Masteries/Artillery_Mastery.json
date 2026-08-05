@@ -10,7 +10,7 @@
       "trackId": "artillery_mastery",
       "dmgIngredient": "Ingredient_Fire_Essence",
       "comboIngredient": "Ingredient_Lightning_Essence",
-      "combatTarget": "",
+      "combatTarget": "ARTILLERY",
       "sacrificeStat": "HEALTH",
       "capDisplay": "Demolition Expert",
       "skillLower": "artillery"

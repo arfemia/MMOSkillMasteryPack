@@ -10,7 +10,7 @@
       "trackId": "magic_mastery",
       "dmgIngredient": "Ingredient_Fire_Essence",
       "comboIngredient": "Ingredient_Lightning_Essence",
-      "combatTarget": "",
+      "combatTarget": "MAGIC",
       "sacrificeStat": "MANA",
       "capDisplay": "Archwizard",
       "skillLower": "magic"

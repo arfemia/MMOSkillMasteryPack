@@ -160,9 +160,11 @@ Resolution semantics (see `MasteryTemplateResolver.java`):
 1. **Deep-clone** the template Payload.
 2. **`{{paramName}}` substitution** — walks every string value recursively;
    replaces `{{key}}` with `params.get(key)`. **Empty param drops the
-   holding key entirely** — lets a track opt out of optional template fields
-   (e.g. Magic/Artillery pass `combatTarget: ""` so the resolved modifiers
-   have no `combatTarget` key).
+   holding key entirely** — lets a track opt out of optional template fields.
+   CAUTION: a combat-skill track must pass its real `combatTarget` (e.g.
+   `"MAGIC"`); Magic/Artillery once passed `""` here, which dropped the key
+   and made every swing-scoped damage/lifesteal node silently inert (fixed
+   in the 1.6.0 cycle).
 3. **Track-level fields overlay the template** — everything in the track
    Payload except `extends`/`params`/`nodeOverrides`/`extraNodes` wins
    (`target`, `displayName`, `icon`, `refundPercent`, track-level
