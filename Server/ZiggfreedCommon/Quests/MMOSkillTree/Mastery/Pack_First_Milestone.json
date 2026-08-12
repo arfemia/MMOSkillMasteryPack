@@ -1,0 +1,45 @@
+{
+  "$Comment": "A gentle nudge toward the mastery menu: reach level 15 in any one skill. Reads the MMO_HighestSkillLevel stat channel, the highest single skill level across the roster, so any skill counts.",
+  "Owner": "mmoskilltree",
+  "Text": {
+    "TitleKey": "quest.pack_first_milestone.title",
+    "FlavorKey": "quest.pack_first_milestone.flavor"
+  },
+  "Listing": {
+    "Category": "main",
+    "SortOrder": 10,
+    "Tags": [
+      "Mastery",
+      "Beginner"
+    ]
+  },
+  "Flow": {
+    "AutoAccept": true
+  },
+  "Requires": {
+    "Factors": [
+      {
+        "Factor": "mmoskilltree:feature",
+        "Param": "mastery",
+        "Min": 1
+      }
+    ]
+  },
+  "Objectives": {
+    "reach_l15": {
+      "Kind": "REACH_LEVEL",
+      "Target": "ANY",
+      "Amount": 15,
+      "TextKey": "objective.text.reach_level.any"
+    }
+  },
+  "Rewards": [
+    {
+      "Kind": "currency",
+      "Params": {
+        "CurrencyId": "mastery_point",
+        "Amount": "2"
+      }
+    }
+  ]
+}

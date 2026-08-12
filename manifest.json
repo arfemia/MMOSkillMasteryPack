@@ -1,7 +1,7 @@
 {
   "Group": "Ziggfreed",
   "Name": "MMOSkillMasteryPack",
-  "Version": "1.1.2",
+  "Version": "1.2.0",
   "Description": "MMO Skill Tree - mastery tracks, currencies, mastery-point milestones, and themed quests/achievements. Required for the mastery and currency features.",
   "Authors": [
     {
@@ -11,8 +11,8 @@
   "Website": "https://mmo-skill-tree-docs.ziggfreed.com/",
   "ServerVersion": ">=0.5.0-pre.0 <0.6.0",
   "IncludesAssetPack": true,
-  "Dependencies": {},
-  "OptionalDependencies": {
-    "Ziggfreed:MMOSkillTree": "^1.1.0"
+  "Dependencies": {
+    "Ziggfreed:MMOSkillTree": "^1.6.0",
+    "Ziggfreed:ZiggfreedCommon": ">=1.4.0"
   }
 }

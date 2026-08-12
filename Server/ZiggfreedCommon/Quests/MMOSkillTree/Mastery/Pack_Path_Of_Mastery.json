@@ -1,0 +1,64 @@
+{
+  "$Comment": "A generalist's quest: reach level 25 in five different skills. Each step reads that skill's own MMO_Level_<SKILL> stat channel, so add or swap a step by pointing it at a different skill's channel.",
+  "Owner": "mmoskilltree",
+  "Text": {
+    "TitleKey": "quest.pack_path_of_mastery.title",
+    "FlavorKey": "quest.pack_path_of_mastery.flavor"
+  },
+  "Listing": {
+    "Category": "main",
+    "SortOrder": 50,
+    "Tags": [
+      "Mastery",
+      "Generalist"
+    ]
+  },
+  "Flow": {
+    "AutoAccept": true
+  },
+  "Requires": {
+    "Factors": [
+      {
+        "Factor": "mmoskilltree:feature",
+        "Param": "mastery",
+        "Min": 1
+      }
+    ]
+  },
+  "Objectives": {
+    "reach_mining_25": {
+      "Kind": "REACH_LEVEL",
+      "Target": "MINING",
+      "Amount": 25
+    },
+    "reach_woodcutting_25": {
+      "Kind": "REACH_LEVEL",
+      "Target": "WOODCUTTING",
+      "Amount": 25
+    },
+    "reach_harvesting_25": {
+      "Kind": "REACH_LEVEL",
+      "Target": "HARVESTING",
+      "Amount": 25
+    },
+    "reach_swords_25": {
+      "Kind": "REACH_LEVEL",
+      "Target": "SWORDS",
+      "Amount": 25
+    },
+    "reach_archery_25": {
+      "Kind": "REACH_LEVEL",
+      "Target": "ARCHERY",
+      "Amount": 25
+    }
+  },
+  "Rewards": [
+    {
+      "Kind": "currency",
+      "Params": {
+        "CurrencyId": "mastery_point",
+        "Amount": "10"
+      }
+    }
+  ]
+}

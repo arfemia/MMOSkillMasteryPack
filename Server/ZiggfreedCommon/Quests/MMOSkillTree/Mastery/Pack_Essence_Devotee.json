@@ -1,0 +1,17 @@
+{
+  "$Comment": "The advanced follow-up to Essence Collector: a much larger essence tithe for a much larger mastery-point purse. Requires Essence Collector finished first.",
+  "Owner": "mmoskilltree",
+  "Text": { "TitleKey": "quest.pack_essence_devotee.title", "FlavorKey": "quest.pack_essence_devotee.flavor" },
+  "Listing": { "Category": "main", "SortOrder": 41, "Tags": ["Mastery", "Gathering", "Advanced"] },
+  "Flow": { "Sequential": true },
+  "Requires": {
+    "Factors": [ { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 } ],
+    "Quests": [ "pack_essence_collector" ]
+  },
+  "Objectives": {
+    "turn_in_essence": { "Kind": "TURN_IN", "Target": "Ingredient_Life_Essence", "Amount": 500, "MatchMode": "EXACT" }
+  },
+  "Rewards": [
+    { "Kind": "currency", "Params": { "CurrencyId": "mastery_point", "Amount": "25" } }
+  ]
+}

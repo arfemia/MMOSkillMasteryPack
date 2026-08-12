@@ -1,0 +1,17 @@
+{
+  "$Comment": "The mastery capstone: earn the apprentice milestone, the journeyman milestone, the point hoard, and the deep essence hoard. No criteria of its own, only meta children.",
+  "Owner": "mmoskilltree",
+  "Text": { "TitleKey": "achievement.pack_mastery_devotee.title", "FlavorKey": "achievement.pack_mastery_devotee.desc" },
+  "Listing": { "Category": "mastery", "SortOrder": 99 },
+  "Scoring": { "Points": 250 },
+  "Requires": { "Factors": [ { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 } ] },
+  "MetaChildren": [
+    "pack_first_mastery_milestone",
+    "pack_mastery_milestone_journeyman",
+    "pack_mastery_hoarder_300",
+    "pack_essence_hoarder_10000"
+  ],
+  "ClaimRewards": [
+    { "Kind": "currency", "Params": { "CurrencyId": "mastery_point", "Amount": "20" } }
+  ]
+}

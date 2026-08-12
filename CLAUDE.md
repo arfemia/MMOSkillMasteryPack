@@ -1,4 +1,4 @@
-# CLAUDE.md — MMOSkillMasteryPack
+# CLAUDE.md - MMOSkillMasteryPack
 
 This directory is **a standalone Hytale content pack** that ships as its own
 mod on CurseForge alongside the [MMOSkillTree mod](https://www.curseforge.com/hytale/mods/mmo-skill-tree).
@@ -15,17 +15,19 @@ skill-mastery-pack/
 ├── README.md                                  end-user installation notes
 ├── MMOSkillMasteryPack.zip                    built artifact (gitignored if you regenerate)
 └── Server/
-    └── MMOSkillTree/
-        ├── Control/MMOSkillMasteryPack.json   replace/add per content type
-        ├── MasteryTemplates/*.json            1 template (Combat6_Standard); see "Mastery template extension" below
-        ├── Masteries/*.json                   20 mastery tracks (11 thin extends-files + 9 hand-authored)
-        ├── Currencies/*.json                  2 currencies
-        ├── CommandRewardTemplates/*.json      1 template (Mastery_Point_Milestones); see "CommandReward template extension" below
-        ├── CommandRewards/MMOSkillMasteryPack.json   one {{ALL_SKILLS}} entry fans the template to every skill
-        ├── QuestTemplates/*.json              (optional) reusable quest skeletons; see "Quest + Achievement templates" below
-        ├── Quests/*.json                      5 hand-authored quests (incl. Pack_Mastery_Tithe — repeatable 6h claim)
-        ├── AchievementTemplates/*.json        (optional) reusable achievement skeletons
-        └── Achievements/*.json                5 hand-authored achievements
+    ├── MMOSkillTree/
+    │   ├── Control/MMOSkillMasteryPack.json   replace/add per content type
+    │   ├── MasteryTemplates/*.json            1 template (Combat6_Standard); see "Mastery template extension" below
+    │   ├── Masteries/*.json                   20 mastery tracks (11 thin extends-files + 9 hand-authored)
+    │   ├── Currencies/*.json                  2 currencies
+    │   ├── CommandRewardTemplates/*.json      1 template (Mastery_Point_Milestones); see "CommandReward template extension" below
+    │   ├── CommandRewards/MMOSkillMasteryPack.json   one {{ALL_SKILLS}} entry fans the template to every skill
+    │   ├── QuestTemplates/*.json              (optional) reusable quest skeletons; see "Quest + Achievement templates" below
+    │   ├── Quests/Pack_Mastery_Tithe.json     the ONE quest still on the old raw-Payload compat adapter (see "Quests + Achievements" below)
+    │   └── AchievementTemplates/*.json        (optional) reusable achievement skeletons
+    └── ZiggfreedCommon/
+        ├── Quests/MMOSkillTree/Mastery/*.json         4 native quests (Pattern A, ziggfreed-common's QuestAsset)
+        └── Achievements/MMOSkillTree/Mastery/*.json   6 native achievements (Pattern A, ziggfreed-common's AchievementAsset)
 ```
 
 ## Release notes (patch-notes paradigm)
@@ -43,8 +45,8 @@ Per-version public release notes live in `patch-notes/<version>.md`, same paradi
 `build.ps1` is self-locating and cross-platform (Windows PowerShell, or `pwsh ./build.ps1` on macOS/Linux). It zips with the lower-level `[IO.Compression.ZipFile]` API using forward-slash entries plus an explicit directory entry per ancestor path; PowerShell's `Compress-Archive` writes backslash separators Hytale's asset loader silently drops, so never use it (see plugin-level memory for full details). To auto-install on build, set `HYTALE_MODS_DIR` once to your Hytale `UserData/Mods` folder (or pass `-ModsDir`); without it the script just builds the zip.
 
 Top-level docs (`CLAUDE.md`, `CURSEFORGE.md`, `README.md`) are explicitly
-excluded — they're for humans browsing the repo, not for Hytale to load.
-The `.unused-for-now/` directory is also excluded (`$ExtraExcludeDirs` in `build.ps1`) — it holds mastery JSONs
+excluded - they're for humans browsing the repo, not for Hytale to load.
+The `.unused-for-now/` directory is also excluded (`$ExtraExcludeDirs` in `build.ps1`) - it holds mastery JSONs
 that have been parked out of `Server/MMOSkillTree/Masteries/` and should
 not ship to players until they're moved back. Keep edits there in sync
 with the live tracks (formatting, displayName conventions, etc.) so an
@@ -63,7 +65,7 @@ toggling on and off during balance work.
 
 **Asset key comes from the filename**, which Hytale requires in PascalCase
 (`Swords_Mastery.json`, not `swords_mastery.json`). The `Name` field inside
-each JSON file is a human-readable echo of the asset key — the codec
+each JSON file is a human-readable echo of the asset key - the codec
 (`AbstractRawJsonAsset.rawCodec`) consumes it via a no-op setter so it
 doesn't trip the "Unused key(s)" warning, and echoes it on encode for
 round-trip via `/mmopacks export`.
@@ -83,13 +85,13 @@ etc.).
 
 ### Per-entry vs per-pack files
 
-- **Mastery / Currency / Quest / Achievement** — per-entry; one file per
+- **Mastery / Currency / Quest / Achievement** - per-entry; one file per
   track/currency/quest/achievement. The asset key (filename) becomes the
   runtime id for masteries and currencies (currencies lowercased; masteries
   lowercased by `MasteryConfig.applyPackLayer`). Quests + achievements get
   their runtime id from the inner Payload's `id` field, so the asset key
   doesn't have to match.
-- **CommandRewards** — one file per pack. The Payload is the full
+- **CommandRewards** - one file per pack. The Payload is the full
   `{ "<SKILL_ID>": { "<level>": [rewards…] } }` map.
 
 ### Inner id casing
@@ -104,7 +106,7 @@ and so cross-references (`metaChildren`, `prerequisites`, `currencyId`,
 All player-facing display text ships in `Server/Languages/en-US/mmoskilltree.lang` (loaded natively via `IncludesAssetPack: true`), keyed by convention. The mod's `LocalizedText` resolver tries an explicit key field, then the by-convention key, then a raw `displayName`/`description` (the deprecated fallback) - so pack JSON should set the key and leave the literal out:
 
 - **Mastery tracks:** `mastery.<trackId>.title` (trackId = filename lowercased). Track JSON no longer carries `displayName`. Nodes keep their template-generated `displayName` ("`<Track>: Sharpened`" etc., already DRY across the combat tracks that share `Combat6_Standard`) as the English source; translate a node by adding `mastery.<nodeId>.title`. **Node DESCRIPTIONS auto-render - do NOT author a node `description`.** The mastery page generates the effect line from the node's `modifiers` (via `MasteryModifierRenderer`, localized through `mastery.mod.*`) and renders the cost separately as chips, so a hand-written `description` (e.g. "Each purchase: +0.5%... Cost grows 10%... Requires DEFENSE level 92") is dead duplication that also bakes un-localizable balance data. Author the modifier + cost + requirements as structured fields; the text follows.
-- **Quests / bounties:** `quest.<id>.title` + `quest.<id>.flavor` (id = inner `Payload.id`).
+- **Quests / bounties:** `quest.<id>.title` + `quest.<id>.flavor`, authored as `Text.TitleKey`/`Text.FlavorKey` on the native quests (id = filename) and as the inner `Payload.id` on `Pack_Mastery_Tithe.json` (the one still on the old schema).
 - **Currencies:** `currency.<id>.name` (id = filename lowercased) for COUNTER-backed currencies only (`mastery_point`). An ITEM-backed currency (`life_essence`) ships NO name key: with nothing authored, the mod's `CostRenderer.currencyName` derives the display name from the backing item's native, already-translated lang key (`server.items.Ingredient_Life_Essence.name`, "Essence of Life"), exactly like the icon derives from the item - zero hand-maintained translations, and the currency can never disagree with the inventory tooltip.
 - **Achievements:** `achievement.<id>.title` + `achievement.<id>.desc`.
 - **Token Shop offers:** explicit `"titleKey"`/`"descriptionKey"` in the offer JSON pointing at `.lang` keys.
@@ -158,23 +160,23 @@ Track payload using a template:
 Resolution semantics (see `MasteryTemplateResolver.java`):
 
 1. **Deep-clone** the template Payload.
-2. **`{{paramName}}` substitution** — walks every string value recursively;
+2. **`{{paramName}}` substitution** - walks every string value recursively;
    replaces `{{key}}` with `params.get(key)`. **Empty param drops the
-   holding key entirely** — lets a track opt out of optional template fields.
+   holding key entirely** - lets a track opt out of optional template fields.
    CAUTION: a combat-skill track must pass its real `combatTarget` (e.g.
    `"MAGIC"`); Magic/Artillery once passed `""` here, which dropped the key
    and made every swing-scoped damage/lifesteal node silently inert (fixed
    in the 1.6.0 cycle).
-3. **Track-level fields overlay the template** — everything in the track
+3. **Track-level fields overlay the template** - everything in the track
    Payload except `extends`/`params`/`nodeOverrides`/`extraNodes` wins
    (`target`, `displayName`, `icon`, `refundPercent`, track-level
    `requirements`).
-4. **`nodeOverrides`** — for each `nodeId → overrideObject`, find the node
+4. **`nodeOverrides`** - for each `nodeId → overrideObject`, find the node
    in the resolved `nodes` array (match by post-substitution `id`) and
    **deep-merge**: object keys merge recursively; primitives + arrays
    replace wholesale. Used for per-track asymmetries (Archery's T1 dmg
    ingredient count = 6 vs the template default of 1).
-5. **`extraNodes`** — append wholly new node objects after the template's
+5. **`extraNodes`** - append wholly new node objects after the template's
    nodes. Track-supplied id must NOT collide with a template id (use
    `nodeOverrides` to modify existing nodes). Used for track-unique
    content (Magic's `mag_archmagus` L100 capstone).
@@ -184,7 +186,7 @@ A missing param surfaces as a literal `{{key}}` in the resolved JSON
 Unknown templates log a warning and the track is dropped from the effective
 set. Template id lookup is case-insensitive.
 
-The 11 thin combat tracks are typically ~20–40 lines each (vs ~210 lines
+The 11 thin combat tracks are typically ~20 - 40 lines each (vs ~210 lines
 pre-template). The pack `Control/MMOSkillMasteryPack.json` adds
 `"MasteryTemplates": "add"` alongside the existing content-type modes.
 
@@ -228,16 +230,16 @@ every known skill that isn't otherwise explicitly listed in the same Payload:
 
 DSL per skill block (resolved by `CommandRewardTemplateResolver`):
 
-1. **`extends: "<template-id>"`** — pull the template Payload (case-insensitive id lookup).
-2. **`params: { ... }`** — feed `{{paramName}}` substitution. Empty resolve drops the holding key.
-3. **`levelOverrides: { "<level>": [rewards] }`** — replace a level's reward
-   array wholesale. The level must exist in the template — unknown levels
+1. **`extends: "<template-id>"`** - pull the template Payload (case-insensitive id lookup).
+2. **`params: { ... }`** - feed `{{paramName}}` substitution. Empty resolve drops the holding key.
+3. **`levelOverrides: { "<level>": [rewards] }`** - replace a level's reward
+   array wholesale. The level must exist in the template - unknown levels
    warn-and-skip (use `extraLevels` for new ones).
-4. **`extraLevels: { "<level>": [rewards] }`** — add new levels. Collision
+4. **`extraLevels: { "<level>": [rewards] }`** - add new levels. Collision
    with a template level warns-and-skips (use `levelOverrides` to modify).
 5. Any non-reserved top-level field overlays the template.
 
-The sentinel only fans out to skill keys — `TOTAL` and `GLOBAL_SKILL`
+The sentinel only fans out to skill keys - `TOTAL` and `GLOBAL_SKILL`
 (the special non-skill keys) are never touched. The mastery pack's
 CommandRewards file collapsed from 2,386 lines (240 identical entries) to
 6 lines once the template + sentinel landed.
@@ -275,7 +277,7 @@ Same resolution pipeline as the other resolvers:
 1. Deep-clone template Payload.
 2. `{{paramName}}` substitution (empty resolve drops the holding key).
 3. Non-reserved track-level keys overlay the template (id, displayName,
-   description, rewards array as a whole, etc. — so the easiest way to
+   description, rewards array as a whole, etc. - so the easiest way to
    replace rewards is to supply a fresh `rewards: [...]`).
 4. `*Overrides` deep-merge into the matching array entry by `id`.
 5. `extra*` append new entries (collision with template id is rejected).
@@ -284,20 +286,79 @@ The pack `Control/MMOSkillMasteryPack.json` adds `"QuestTemplates": "add"`
 and `"AchievementTemplates": "add"` alongside the existing content-type modes.
 
 The mastery pack ships an example template directory ready to populate
-(empty by default — the 5 quests + 5 achievements that ship today are
-hand-authored; templates pay off once a quest/achievement family grows
-beyond ~3 near-identical instances). `Pack_Essence_Hoarder_100.json` /
-`Pack_Essence_Hoarder_1000.json` are the natural first template candidates
-(identical shape, only `requiredAmount` / `points` / `displayName` differ).
+(empty by default). This DSL only applies to `Pack_Mastery_Tithe.json`, the
+one quest still on the old raw-Payload compat adapter - see "Quests +
+Achievements (native Pattern A)" below for where the rest of the pack's
+quest/achievement content actually lives now.
+
+## Quests + Achievements (native Pattern A, 1.6.0+)
+
+Every quest and achievement in this pack EXCEPT `Pack_Mastery_Tithe.json`
+authors directly against ziggfreed-common's own `QuestAsset` /
+`AchievementAsset` codecs (Pattern A: the codec IS the schema, no `Name`/
+`Payload` wrapper, no `extends`/`params` DSL) at:
+
+```
+Server/ZiggfreedCommon/Quests/MMOSkillTree/Mastery/*.json
+Server/ZiggfreedCommon/Achievements/MMOSkillTree/Mastery/*.json
+```
+
+**The FILENAME is the id** (lower-cased at decode; the `MMOSkillTree`/
+`Mastery` folders are pure organization and contribute nothing to the id,
+per ziggfreed-common's `_`-marked-folder convention - only a folder whose
+name STARTS with `_` prefixes the id). Renaming one of these files renames
+its id, and quest/achievement ids are a stability contract (dialogue
+bindings, prerequisites, and a player's saved progress all bind by exact
+id) - never rename one casually. `Pack_Essence_Hoarder_10000.json` is a
+worked example of this: its filename had to change from the pre-1.6.0
+`Pack_Essence_Hoarder_1000.json` to match its STABLE inner id
+(`pack_essence_hoarder_10000`), which the old `Name`/`Payload` shape let
+drift from the filename; the new shape can't have that drift because there
+is no separate id field to hide behind.
+
+No `Control/` entry is needed for these two folders: ziggfreed-common's own
+`FrameworkAssetRegistrar` registers the `Quests`/`Achievements` stores once,
+process-wide, and pack-level overrides are native override-by-id
+(ship a same-named file, or `"Enabled": false` to retire one) rather than a
+`PackControlAsset` mode.
+
+Every file here sets `"Owner": "mmoskilltree"` so the MMO's own pool fold
+can tell this content apart from another mod's. `Requires` gates on the
+`mmoskilltree:feature` factor: `{"Factors": [{"Factor":
+"mmoskilltree:feature", "Param": "mastery", "Min": 1}]}` keeps the content
+out of circulation entirely while the mastery feature is off.
+
+A skill-level objective or criterion is written as `{"Kind": "REACH_LEVEL",
+"Target": "<SKILL>"}` - `TOTAL` for the summed level and `ANY` for the
+highest single skill. It desugars onto the raw `STAT_THRESHOLD` stat-channel
+form on the way into the engine, so the raw form (`"Target":
+"MMO_Level_<SKILL>"` / `MMO_HighestSkillLevel` / `MMO_TotalLevel`) works too
+and is the way to write a step about a number this mod does not own. Both
+render identically; prefer the friendly one, which is what the jar's own
+content uses.
+
+A tiered achievement declares its ladder on the shared
+`Listing.Chains: [{"Id": "<ladder>", "Tier": n}]` leaf, and a description
+key with a `{0}` in it gets its number from `Text.TextArgs.Flavor:
+["@amount"]` rather than from a per-rung translation.
+
+**Why `Pack_Mastery_Tithe.json` did NOT convert**: it gates on
+`requiredAchievements: ["pack_mastery_hoarder_300"]` (a prior achievement
+must already be earned), and the native `GateSpec`/`GateClause` model has no
+built-in leaf and no registered `Custom` kind for "an achievement is already
+earned" - only `Quests` (finished quests) is a built-in completion leaf.
+Everything else about it converts cleanly; the one field that doesn't is
+why the whole file stays on the compat adapter rather than shipping a
+half-converted quest that silently drops its own achievement gate.
 
 ## Editing the pack content
 
-- **Mastery templates** (`Server/MMOSkillTree/MasteryTemplates/*.json`) —
+- **Mastery templates** (`Server/MMOSkillTree/MasteryTemplates/*.json`)  - 
   see "Mastery template extension" above. Edit the template to change the
   shared shape across all tracks that extend it. Track-level overrides
   (`nodeOverrides`/`extraNodes`) win; per-track param values plug into
   `{{tokens}}`.
-- **Mastery tracks** (`Server/MMOSkillTree/Masteries/*.json`) — schema
+- **Mastery tracks** (`Server/MMOSkillTree/Masteries/*.json`) - schema
   documented by example in `mods/mmoskilltree/_reference/defaults-mastery.json`
   on a running server. Track id = filename (lowercased); inner Payload has
   `target` (skill:X or ability:X), `displayName`, optional `requirements`,
@@ -305,28 +366,30 @@ beyond ~3 near-identical instances). `Pack_Essence_Hoarder_100.json` /
   map + optional items + optional statSacrifice), `modifiers` (AbilityModifier
   array). Repeatable Eternal nodes require `maxPurchases: -1` (or >1) +
   `costScaling`. **Tracks may also use `extends`** to pull from a template
-  — see "Mastery template extension".
-- **Currencies** (`Server/MMOSkillTree/Currencies/*.json`) — id = filename
+  - see "Mastery template extension".
+- **Currencies** (`Server/MMOSkillTree/Currencies/*.json`) - id = filename
   lowercased. Two flavors: counter-backed (`hytaleItemId: null` +
   `iconItemId` for display) or item-backed (`hytaleItemId` set to a Hytale
   item like `Ingredient_Life_Essence`).
-- **Quests + Achievements** — same schemas as the plugin's owner files
-  under `mods/mmoskilltree/quests/` and `mods/mmoskilltree/achievements/`.
-  Reward shapes include `CURRENCY` (with `currencyId` + `amount`), `XP`
-  (with `skill` + `amount`), `COMMAND` (with `command` string), `BOOST_TOKEN`.
+- **Quests + Achievements** - see "Quests + Achievements (native Pattern A,
+  1.6.0+)" above for where this pack's content actually lives. Only
+  `Pack_Mastery_Tithe.json` still uses the old raw-Payload schema (same
+  shape as the plugin's owner files under `mods/mmoskilltree/quests/`):
+  reward shapes `CURRENCY` (`currencyId` + `amount`), `XP` (`skill` +
+  `amount`), `COMMAND` (`command` string), `BOOST_TOKEN`.
 
 ### Currency-grant command format
 
 Always emit `/mmocurrency …` commands in the named-arg form the Hytale
 parser expects. The canonical wire format is built by
-`MmoCurrencyCommand.buildGiveCommand(player, currencyId, amount)` —
+`MmoCurrencyCommand.buildGiveCommand(player, currencyId, amount)`  - 
 single source of truth for any template that needs to grant currency.
 
 Correct:
 
     /mmocurrency give --player={player} --currency=mastery_point --amount=1
 
-Wrong (legacy positional — the live command rejects it with
+Wrong (legacy positional - the live command rejects it with
 "Expected: 1, actual: 4" and silently grants nothing):
 
     /mmocurrency give {player} mastery_point 1
@@ -352,7 +415,7 @@ The pack and the plugin co-evolve:
    (`D:\Games\Hytale\UserData\Mods\`).
 4. Start the server. Confirm in the server log
    (`Saves/<world>/logs/<date>_server.log`):
-   - `[AssetPacks] Mastery pack layer applied (23 entries, mode=add) — 20 masteries effective (3 disabled)`
+   - `[AssetPacks] Mastery pack layer applied (23 entries, mode=add) - 20 masteries effective (3 disabled)`
    - Same for Currency, CommandRewards, Quest, Achievement layers.
    - No `Failed to decode asset:` or `Asset validation FAILED` lines.
 5. In-game: open the Mastery menu tab (should be visible only if the pack
