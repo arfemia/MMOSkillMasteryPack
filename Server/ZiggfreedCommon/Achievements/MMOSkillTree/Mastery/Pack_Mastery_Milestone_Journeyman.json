@@ -1,6 +1,5 @@
 {
   "$Comment": "Climb a single skill all the way to level 60. Reads the MMO_HighestSkillLevel stat channel, the same channel the beginner milestone reads at a lower bar.",
-  "Owner": "mmoskilltree",
   "Text": {
     "TitleKey": "achievement.pack_mastery_milestone_journeyman.title",
     "FlavorKey": "achievement.pack_mastery_milestone_journeyman.desc"

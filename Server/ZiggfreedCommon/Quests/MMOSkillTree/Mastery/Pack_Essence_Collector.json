@@ -1,6 +1,5 @@
 {
   "$Comment": "An early mastery-onboarding turn-in: bring 100 Life Essence to bank a first taste of mastery points and skill XP. Override the Amount to retune the ask, or the Rewards array to retune the payout.",
-  "Owner": "mmoskilltree",
   "Text": { "TitleKey": "quest.pack_essence_collector.title", "FlavorKey": "quest.pack_essence_collector.flavor" },
   "Listing": { "Category": "main", "SortOrder": 40, "Tags": ["Mastery", "Gathering"] },
   "Flow": { "AutoAccept": true },

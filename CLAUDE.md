@@ -322,8 +322,9 @@ process-wide, and pack-level overrides are native override-by-id
 (ship a same-named file, or `"Enabled": false` to retire one) rather than a
 `PackControlAsset` mode.
 
-Every file here sets `"Owner": "mmoskilltree"` so the MMO's own pool fold
-can tell this content apart from another mod's. `Requires` gates on the
+A file here carries no attribution leaf: the shared store is the server's,
+and every reader folds all of it, so what keeps this content out of a server
+that cannot use it is its gate rather than a label. `Requires` gates on the
 `mmoskilltree:feature` factor: `{"Factors": [{"Factor":
 "mmoskilltree:feature", "Param": "mastery", "Min": 1}]}` keeps the content
 out of circulation entirely while the mastery feature is off.

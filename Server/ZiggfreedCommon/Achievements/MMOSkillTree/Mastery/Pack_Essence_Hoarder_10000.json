@@ -1,6 +1,5 @@
 {
   "$Comment": "The deep collector's grind: 10,000 Life Essence gathered over a lifetime. A meta capstone (Devotee of Mastery) counts this one among its children.",
-  "Owner": "mmoskilltree",
   "Text": { "TitleKey": "achievement.pack_essence_hoarder_10000.title", "FlavorKey": "achievement.pack_essence_hoarder_10000.desc" },
   "Listing": { "Category": "mastery", "Subcategory": "essence", "SortOrder": 31 },
   "Scoring": { "Points": 150 },

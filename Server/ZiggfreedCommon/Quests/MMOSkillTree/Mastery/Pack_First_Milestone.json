@@ -1,6 +1,5 @@
 {
   "$Comment": "A gentle nudge toward the mastery menu: reach level 15 in any one skill. Reads the MMO_HighestSkillLevel stat channel, the highest single skill level across the roster, so any skill counts.",
-  "Owner": "mmoskilltree",
   "Text": {
     "TitleKey": "quest.pack_first_milestone.title",
     "FlavorKey": "quest.pack_first_milestone.flavor"

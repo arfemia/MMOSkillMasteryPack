@@ -1,6 +1,5 @@
 {
   "$Comment": "The advanced follow-up to Essence Collector: a much larger essence tithe for a much larger mastery-point purse. Requires Essence Collector finished first.",
-  "Owner": "mmoskilltree",
   "Text": { "TitleKey": "quest.pack_essence_devotee.title", "FlavorKey": "quest.pack_essence_devotee.flavor" },
   "Listing": { "Category": "main", "SortOrder": 41, "Tags": ["Mastery", "Gathering", "Advanced"] },
   "Flow": { "Sequential": true },

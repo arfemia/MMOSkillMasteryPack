@@ -1,6 +1,5 @@
 {
   "$Comment": "Earn 300 mastery points over a lifetime (spending them does not undo progress; this counts everything ever earned, not the current balance).",
-  "Owner": "mmoskilltree",
   "Text": { "TitleKey": "achievement.pack_mastery_hoarder_300.title", "FlavorKey": "achievement.pack_mastery_hoarder_300.desc" },
   "Listing": { "Category": "mastery", "Subcategory": "points", "SortOrder": 40 },
   "Scoring": { "Points": 50 },

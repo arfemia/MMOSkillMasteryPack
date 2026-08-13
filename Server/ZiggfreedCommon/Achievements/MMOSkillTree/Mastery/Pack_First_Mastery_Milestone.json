@@ -1,6 +1,5 @@
 {
   "$Comment": "Reach level 15 in any one skill. Reads the MMO_HighestSkillLevel stat channel, so the first skill a player pushes that far is the one that earns it.",
-  "Owner": "mmoskilltree",
   "Text": {
     "TitleKey": "achievement.pack_first_mastery_milestone.title",
     "FlavorKey": "achievement.pack_first_mastery_milestone.desc"
