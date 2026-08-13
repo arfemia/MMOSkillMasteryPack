@@ -31,7 +31,7 @@
   ],
   "ClaimRewards": [
     {
-      "Kind": "currency",
+      "Kind": "Mmo_Currency",
       "Params": {
         "CurrencyId": "mastery_point",
         "Amount": "3"

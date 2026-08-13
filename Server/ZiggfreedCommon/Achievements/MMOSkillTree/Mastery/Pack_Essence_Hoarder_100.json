@@ -9,6 +9,6 @@
     { "Kind": "PICKUP_ITEM", "Target": "Ingredient_Life_Essence", "Amount": 100, "MatchMode": "EXACT" }
   ],
   "ClaimRewards": [
-    { "Kind": "currency", "Params": { "CurrencyId": "mastery_point", "Amount": "2" } }
+    { "Kind": "Mmo_Currency", "Params": { "CurrencyId": "mastery_point", "Amount": "2" } }
   ]
 }
