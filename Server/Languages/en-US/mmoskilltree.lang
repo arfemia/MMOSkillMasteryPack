@@ -23,6 +23,9 @@ shop.convert_mastery_point.desc = Convert your earnings into deeper mastery.
 # --- Currencies (currency.<id>.name, resolved by convention; id = filename lowercased) ---
 currency.mastery_point.name = Mastery Point
 
+# --- Counted reward-chip label (Mmo_Currency's Presentation.NameKey; {0} = Amount) ---
+reward.currency.mastery_point = +{0} Mastery Points
+
 # --- Mastery track titles (mastery.<trackId>.title, resolved by convention; trackId = filename lowercased) ---
 mastery.archery_mastery.title = Archery Mastery
 mastery.artillery_mastery.title = Artillery Mastery

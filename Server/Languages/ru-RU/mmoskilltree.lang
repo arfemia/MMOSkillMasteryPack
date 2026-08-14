@@ -23,6 +23,9 @@ shop.convert_mastery_point.desc = Обменяйте нажитое на бол�
 # --- Валюты (currency.<id>.name, разрешается по соглашению; id = имя файла в нижнем регистре) ---
 currency.mastery_point.name = Очко мастерства
 
+# --- Counted reward-chip label (Mmo_Currency's Presentation.NameKey; {0} = Amount) ---
+reward.currency.mastery_point = +{0} Очков мастерства
+
 # --- Названия треков мастерства (mastery.<trackId>.title, разрешаются по соглашению; trackId = имя файла в нижнем регистре).
 # Названия узлов остаются на сгенерированном шаблоном displayName ("<Track>: Sharpened" и т.п.) как английский
 # исходник; чтобы перевести узел, добавьте сюда mastery.<nodeId>.title (мод разрешает его по соглашению). ---

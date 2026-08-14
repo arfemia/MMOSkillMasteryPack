@@ -23,6 +23,9 @@ shop.convert_mastery_point.desc = Converti i tuoi guadagni in una maestria piu' 
 # --- Valute (currency.<id>.name, risolte per convenzione; id = nome del file in minuscolo) ---
 currency.mastery_point.name = Punto Maestria
 
+# --- Counted reward-chip label (Mmo_Currency's Presentation.NameKey; {0} = Amount) ---
+reward.currency.mastery_point = +{0} Punti Maestria
+
 # --- Titoli delle tracce di maestria (mastery.<trackId>.title, risolti per convenzione; trackId = nome del file in minuscolo).
 # I titoli dei nodi restano sul displayName generato dal template ("<Track>: Sharpened" ecc.) come sorgente
 # inglese; traduci un nodo aggiungendo qui mastery.<nodeId>.title (il mod lo risolve per convenzione). ---

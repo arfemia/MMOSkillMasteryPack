@@ -23,6 +23,9 @@ shop.convert_mastery_point.desc = Kazancını daha derin bir ustalığa çevir.
 # --- Para birimleri (currency.<id>.name, kurala göre çözülür; id = küçük harfli dosya adı) ---
 currency.mastery_point.name = Ustalık Puanı
 
+# --- Counted reward-chip label (Mmo_Currency's Presentation.NameKey; {0} = Amount) ---
+reward.currency.mastery_point = +{0} Ustalık Puanı
+
 # --- Ustalık yolu başlıkları (mastery.<trackId>.title, kurala göre çözülür; trackId = küçük harfli dosya adı).
 # Düğüm başlıkları İngilizce kaynak olarak şablonla üretilen displayName ("<Track>: Sharpened" vb.) üzerinde kalır;
 # bir düğümü çevirmek için buraya mastery.<nodeId>.title ekleyin (mod bunu kurala göre çözer). ---
