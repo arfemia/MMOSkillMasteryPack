@@ -23,7 +23,7 @@ shop.convert_mastery_point.desc = Wandle deine Einkünfte in tiefere Mastery um.
 # --- Währungen (currency.<id>.name, per Konvention aufgelöst; id = Dateiname in Kleinbuchstaben) ---
 currency.mastery_point.name = Mastery-Punkt
 
-# --- Counted reward-chip label (Mmo_Currency's Presentation.NameKey; {0} = Amount) ---
+# --- Counted reward-chip label (the Currency reward kind; {0} = Amount) ---
 reward.currency.mastery_point = +{0} Mastery-Punkte
 
 # --- Mastery-Track-Titel (mastery.<trackId>.title, per Konvention aufgelöst; trackId = Dateiname in Kleinbuchstaben).

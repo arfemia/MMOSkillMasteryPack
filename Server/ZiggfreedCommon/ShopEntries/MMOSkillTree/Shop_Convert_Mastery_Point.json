@@ -1,0 +1,39 @@
+{
+  "$Comment": "Turns bounty tokens into mastery points, so a player sitting on tokens always has something worth buying at the General storefront. The filename IS this offer's id, and each player's daily and lifetime purchase counts are filed under it, so renaming the file resets those counts for everyone; keep the name as it is.",
+  "Text": {
+    "TitleKey": "shop.convert_mastery_point.title",
+    "FlavorKey": "shop.convert_mastery_point.desc"
+  },
+  "Icon": "Ingredient_Crystal_Purple",
+  "Shop": "General",
+  "Listing": {
+    "Category": "conversion",
+    "SortOrder": 10
+  },
+  "Cost": {
+    "Currencies": {
+      "Bounty_Token": 500
+    }
+  },
+  "Limits": {
+    "Daily": 3
+  },
+  "Requires": {
+    "Factors": [
+      {
+        "Factor": "mmoskilltree:feature",
+        "Param": "mastery",
+        "Min": 1
+      }
+    ]
+  },
+  "Rewards": [
+    {
+      "Kind": "Currency",
+      "Params": {
+        "Currency": "mastery_point",
+        "Amount": 1
+      }
+    }
+  ]
+}

@@ -53,10 +53,10 @@
   },
   "Rewards": [
     {
-      "Kind": "Mmo_Currency",
+      "Kind": "Currency",
       "Params": {
-        "CurrencyId": "mastery_point",
-        "Amount": "10"
+        "Currency": "mastery_point",
+        "Amount": 10
       }
     }
   ]

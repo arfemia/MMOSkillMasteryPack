@@ -8,6 +8,6 @@
     { "Kind": "EARN_CURRENCY", "Target": "mastery_point", "Amount": 300, "MatchMode": "EXACT" }
   ],
   "ClaimRewards": [
-    { "Kind": "Mmo_Currency", "Params": { "CurrencyId": "mastery_point", "Amount": "5" } }
+    { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": 5 } }
   ]
 }

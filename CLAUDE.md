@@ -4,6 +4,10 @@ This directory is **a standalone Hytale content pack** that ships as its own
 mod on CurseForge alongside the [MMOSkillTree mod](https://www.curseforge.com/hytale/mods/mmo-skill-tree).
 The mod no longer ships `MasteryDefaults`/`CurrencyDefaults` in its jar; this
 pack is the source of those defaults plus mastery-themed quests + achievements.
+**Commerce content (the mastery-point conversion offer and both wallet
+definitions) speaks ziggfreed-common's `zc-commerce` asset surface, not the
+retired MMO `Currency`/`ShopEntry` types** - see "Commerce content
+(wallets + the token-shop offer)" below.
 
 ## Layout
 
@@ -16,18 +20,20 @@ skill-mastery-pack/
 ├── MMOSkillMasteryPack.zip                    built artifact (gitignored if you regenerate)
 └── Server/
     ├── MMOSkillTree/
-    │   ├── Control/MMOSkillMasteryPack.json   replace/add per content type
+    │   ├── Control/MMOSkillMasteryPack.json   replace/add per content type (no Currencies/ShopEntries entry - those types retired)
     │   ├── MasteryTemplates/*.json            1 template (Combat6_Standard); see "Mastery template extension" below
     │   ├── Masteries/*.json                   20 mastery tracks (11 thin extends-files + 9 hand-authored)
-    │   ├── Currencies/*.json                  2 currencies
     │   ├── CommandRewardTemplates/*.json      1 template (Mastery_Point_Milestones); see "CommandReward template extension" below
     │   ├── CommandRewards/MMOSkillMasteryPack.json   one {{ALL_SKILLS}} entry fans the template to every skill
     │   ├── QuestTemplates/*.json              (optional) reusable quest skeletons; see "Quest + Achievement templates" below
     │   ├── Quests/Pack_Mastery_Tithe.json     the ONE quest still on the old raw-Payload compat adapter (see "Quests + Achievements" below)
     │   └── AchievementTemplates/*.json        (optional) reusable achievement skeletons
     └── ZiggfreedCommon/
-        ├── Quests/MMOSkillTree/Mastery/*.json         4 native quests (Pattern A, ziggfreed-common's QuestAsset)
-        └── Achievements/MMOSkillTree/Mastery/*.json   6 native achievements (Pattern A, ziggfreed-common's AchievementAsset)
+        ├── Quests/MMOSkillTree/Mastery/*.json           4 native quests (Pattern A, ziggfreed-common's QuestAsset)
+        ├── Achievements/MMOSkillTree/Mastery/*.json     6 native achievements (Pattern A, ziggfreed-common's AchievementAsset)
+        ├── Currencies/MMOSkillTree/Mastery_Point.json   the mastery-point wallet (counter-backed)
+        ├── Currencies/MMOSkillTree/Life_Essence.json    the life-essence wallet (item-backed on Ingredient_Life_Essence)
+        └── ShopEntries/MMOSkillTree/Shop_Convert_Mastery_Point.json   the token -> mastery-point conversion offer
 ```
 
 ## Release notes (patch-notes paradigm)
@@ -107,9 +113,9 @@ All player-facing display text ships in `Server/Languages/en-US/mmoskilltree.lan
 
 - **Mastery tracks:** `mastery.<trackId>.title` (trackId = filename lowercased). Track JSON no longer carries `displayName`. Nodes keep their template-generated `displayName` ("`<Track>: Sharpened`" etc., already DRY across the combat tracks that share `Combat6_Standard`) as the English source; translate a node by adding `mastery.<nodeId>.title`. **Node DESCRIPTIONS auto-render - do NOT author a node `description`.** The mastery page generates the effect line from the node's `modifiers` (via `MasteryModifierRenderer`, localized through `mastery.mod.*`) and renders the cost separately as chips, so a hand-written `description` (e.g. "Each purchase: +0.5%... Cost grows 10%... Requires DEFENSE level 92") is dead duplication that also bakes un-localizable balance data. Author the modifier + cost + requirements as structured fields; the text follows.
 - **Quests / bounties:** `quest.<id>.title` + `quest.<id>.flavor`, authored as `Text.TitleKey`/`Text.FlavorKey` on the native quests (id = filename) and as the inner `Payload.id` on `Pack_Mastery_Tithe.json` (the one still on the old schema).
-- **Currencies:** `currency.<id>.name` (id = filename lowercased) for COUNTER-backed currencies only (`mastery_point`). An ITEM-backed currency (`life_essence`) ships NO name key: with nothing authored, the mod's `CostRenderer.currencyName` derives the display name from the backing item's native, already-translated lang key (`server.items.Ingredient_Life_Essence.name`, "Essence of Life"), exactly like the icon derives from the item - zero hand-maintained translations, and the currency can never disagree with the inventory tooltip.
+- **Currencies:** a wallet's `Text.TitleKey` (unauthored falls to `currency.<id>.name` by convention, id = filename lowercased) for COUNTER-backed currencies (`mastery_point`). An ITEM-backed currency (`life_essence`) ships neither: with nothing authored, ziggfreed-common's naming ladder derives the display name from the backing item's native, already-translated lang key (`server.items.Ingredient_Life_Essence.name`, "Essence of Life"), exactly like the icon derives from the item - zero hand-maintained translations, and the currency can never disagree with the inventory tooltip.
 - **Achievements:** `achievement.<id>.title` + `achievement.<id>.desc`.
-- **Token Shop offers:** explicit `"titleKey"`/`"descriptionKey"` in the offer JSON pointing at `.lang` keys.
+- **Shop offers:** `Text.TitleKey`/`Text.FlavorKey` on the offer JSON pointing at `.lang` keys.
 
 Translate by shipping `Server/Languages/<bcp47>/mmoskilltree.lang` with the same keys (missing keys fall back to English per key). Reward line-items carry NO `displayName`: the mod auto-renders a localized line from the reward itself ("+5 Mastery Points", "Taming XP x2 for 45m", native item names), so a baked-in literal would double-render the amount AND pin the text to English. No em-dashes in `.lang` values.
 
@@ -352,6 +358,60 @@ Everything else about it converts cleanly; the one field that doesn't is
 why the whole file stays on the compat adapter rather than shipping a
 half-converted quest that silently drops its own achievement gate.
 
+## Commerce content (wallets + the token-shop offer)
+
+Both wallets and the mastery-point conversion offer speak
+ziggfreed-common's shared `zc-commerce` asset surface, the same schema the
+bounty-contracts pack's boards and storefronts use (Pattern A, native
+`Parent` inheritance, no `Name`/`Payload` wrapper and no `extends`/`params`
+DSL):
+
+```
+Server/ZiggfreedCommon/Currencies/MMOSkillTree/Mastery_Point.json
+Server/ZiggfreedCommon/Currencies/MMOSkillTree/Life_Essence.json
+Server/ZiggfreedCommon/ShopEntries/MMOSkillTree/Shop_Convert_Mastery_Point.json
+```
+
+**This pack defines BOTH wallets itself, on purpose, so it stays fully
+standalone.** `Life_Essence` is shipped identically here and in the
+bounty-contracts pack; ziggfreed-common's keyed fold merges same-id files
+from whichever packs are installed, so running one, the other, or both
+never produces two disagreeing definitions. `Mastery_Point` is unique to
+this pack, since nothing else grants it.
+
+**The conversion offer renders in the General storefront the
+bounty-contracts pack ships** (`Shop: "General"`, `Listing.Category:
+"conversion"`), which makes the bounty-contracts pack a SOFT dependency for
+that one offer: install this pack alone and the offer still exists and
+still pays out, it simply has no storefront to appear on until a General
+shop is present. Nothing else in this pack needs the bounty pack.
+
+**The `Currency` reward kind replaced the retired MMO `Mmo_Currency`
+kind** everywhere a quest, achievement or offer pays out mastery points:
+`{"Kind": "Currency", "Params": {"Currency": "mastery_point", "Amount":
+N}}` (the amount is written as a bare number; quotes also work). It is
+unprefixed because ziggfreed-common owns the wallet engine
+behind it; no `Presentation`/`NameKey` is authored on the reward entry
+itself; the chip a player sees comes from the wallet's own file (an
+authored `Text.TitleKey`, else the item-backed wallet's own name) via a
+three-rung naming ladder, so a currency's display name lives in exactly
+one place no matter how many rewards pay it out.
+
+**`Shop_Convert_Mastery_Point.json` keeps its legacy id on purpose.** The
+pre-1.3.0 offer's true id was `shop_convert_mastery_point` (an inner
+`Payload.id` the old schema let diverge from the `Convert_Mastery_Point`
+filename); a player's daily-purchase count is filed under that id, and
+the new schema derives its id from the FILENAME alone, so the file is
+named to match rather than mirroring the old filename. Do not rename it.
+
+**Currency knobs the old MMO schema had that `CurrencyAsset` has no direct
+leaf for** (`showOnSidebar`, `showOnMasteryPage`, `xpConversionPercent`)
+travel through the wallet's namespaced `Meta.mmoskilltree` block instead of
+being dropped, mirroring the bounty pack's own `Bounty_Token`/`Life_Essence`
+files: `{"Meta": {"mmoskilltree": {"ShowOnSidebar": true, "ShowOnMasteryPage":
+true, "XpConversionPercent": 0}}}`. The commerce engine itself never reads
+this block; whether the mod's own UI still honors it is that side's concern.
+
 ## Editing the pack content
 
 - **Mastery templates** (`Server/MMOSkillTree/MasteryTemplates/*.json`)  - 
@@ -368,16 +428,17 @@ half-converted quest that silently drops its own achievement gate.
   array). Repeatable Eternal nodes require `maxPurchases: -1` (or >1) +
   `costScaling`. **Tracks may also use `extends`** to pull from a template
   - see "Mastery template extension".
-- **Currencies** (`Server/MMOSkillTree/Currencies/*.json`) - id = filename
-  lowercased. Two flavors: counter-backed (`hytaleItemId: null` +
-  `iconItemId` for display) or item-backed (`hytaleItemId` set to a Hytale
-  item like `Ingredient_Life_Essence`).
+- **Wallets + the token-shop offer** - see "Commerce content (wallets + the
+  token-shop offer)" above for where this pack's currency and shop content
+  actually lives now (`Server/ZiggfreedCommon/Currencies/` and
+  `/ShopEntries/`, the shared zc-commerce schema).
 - **Quests + Achievements** - see "Quests + Achievements (native Pattern A,
   1.6.0+)" above for where this pack's content actually lives. Only
   `Pack_Mastery_Tithe.json` still uses the old raw-Payload schema (same
   shape as the plugin's owner files under `mods/mmoskilltree/quests/`):
-  reward shapes `CURRENCY` (`currencyId` + `amount`), `XP` (`skill` +
-  `amount`), `COMMAND` (`command` string), `BOOST_TOKEN`.
+  reward shapes `CURRENCY` (`currency` + `amount`; the older `currencyId`
+  spelling still parses), `XP` (`skill` + `amount`), `COMMAND` (`command`
+  string), `BOOST_TOKEN`.
 
 ### Currency-grant command format
 

@@ -1,0 +1,13 @@
+{
+  "$Comment": "Mastery points: a counter-backed wallet, so a player's balance is a number this server keeps rather than an inventory count. Spent on mastery-tree nodes and earned from milestones, the token-shop conversion offer, and mastery-tagged quests and achievements.",
+  "Icon": "Ingredient_Crystal_Purple",
+  "Color": "#c08aff",
+  "Cap": 0,
+  "Meta": {
+    "mmoskilltree": {
+      "ShowOnSidebar": true,
+      "ShowOnMasteryPage": true,
+      "XpConversionPercent": 0
+    }
+  }
+}

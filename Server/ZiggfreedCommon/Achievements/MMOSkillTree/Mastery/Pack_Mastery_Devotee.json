@@ -11,6 +11,6 @@
     "pack_essence_hoarder_10000"
   ],
   "ClaimRewards": [
-    { "Kind": "Mmo_Currency", "Params": { "CurrencyId": "mastery_point", "Amount": "20" } }
+    { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": 20 } }
   ]
 }

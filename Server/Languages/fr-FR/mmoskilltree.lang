@@ -23,7 +23,7 @@ shop.convert_mastery_point.desc = Convertissez vos gains en une maîtrise plus p
 # --- Monnaies (currency.<id>.name, résolu par convention ; id = nom de fichier en minuscules) ---
 currency.mastery_point.name = Point de maîtrise
 
-# --- Counted reward-chip label (Mmo_Currency's Presentation.NameKey; {0} = Amount) ---
+# --- Counted reward-chip label (the Currency reward kind; {0} = Amount) ---
 reward.currency.mastery_point = +{0} Points de maîtrise
 
 # --- Titres des voies de maîtrise (mastery.<trackId>.title, résolus par convention ; trackId = nom de fichier en minuscules).

@@ -36,7 +36,7 @@
     "rewards": [
       {
         "type": "CURRENCY",
-        "currencyId": "mastery_point",
+        "currency": "mastery_point",
         "amount": 1
       }
     ]

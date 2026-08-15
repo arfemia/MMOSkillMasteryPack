@@ -11,6 +11,6 @@
     "turn_in_essence": { "Kind": "TURN_IN", "Target": "Ingredient_Life_Essence", "Amount": 500, "MatchMode": "EXACT" }
   },
   "Rewards": [
-    { "Kind": "Mmo_Currency", "Params": { "CurrencyId": "mastery_point", "Amount": "25" } }
+    { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": 25 } }
   ]
 }
