@@ -5,11 +5,11 @@
     "icon": "Icon_Whirlwind",
     "refundPercent": 50,
     "requirements": {
-      "mode": "AND",
-      "skillLevels": [
+      "Factors": [
         {
-          "skill": "AXES",
-          "level": 20
+          "Factor": "hytale:stat",
+          "Param": "MMO_Level_AXES",
+          "Min": 20
         }
       ]
     },
@@ -69,10 +69,11 @@
         "id": "ww_t2_radius",
         "tier": 2,
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "AXES",
-              "level": 40
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_AXES",
+              "Min": 40
             }
           ]
         },
@@ -100,12 +101,15 @@
       {
         "id": "ww_t3_tempest",
         "tier": 3,
-        "prerequisites": ["ww_t2_radius"],
+        "prerequisites": [
+          "ww_t2_radius"
+        ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "AXES",
-              "level": 70
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_AXES",
+              "Min": 70
             }
           ]
         },
@@ -142,12 +146,15 @@
       {
         "id": "ww_eternal",
         "tier": 9,
-        "prerequisites": ["ww_t3_tempest"],
+        "prerequisites": [
+          "ww_t3_tempest"
+        ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "AXES",
-              "level": 92
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_AXES",
+              "Min": 92
             }
           ]
         },

@@ -32,12 +32,15 @@
       {
         "id": "met_t2",
         "tier": 2,
-        "prerequisites": ["met_t1"],
+        "prerequisites": [
+          "met_t1"
+        ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "MAGIC",
-              "level": 40
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_MAGIC",
+              "Min": 40
             }
           ]
         },
@@ -65,12 +68,15 @@
       {
         "id": "met_t3",
         "tier": 3,
-        "prerequisites": ["met_t2"],
+        "prerequisites": [
+          "met_t2"
+        ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "MAGIC",
-              "level": 55
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_MAGIC",
+              "Min": 55
             }
           ]
         },
@@ -102,12 +108,15 @@
       {
         "id": "met_t4",
         "tier": 4,
-        "prerequisites": ["met_t3"],
+        "prerequisites": [
+          "met_t3"
+        ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "MAGIC",
-              "level": 70
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_MAGIC",
+              "Min": 70
             }
           ]
         },
@@ -139,12 +148,15 @@
       {
         "id": "met_eternal",
         "tier": 9,
-        "prerequisites": ["met_t4"],
+        "prerequisites": [
+          "met_t4"
+        ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "MAGIC",
-              "level": 92
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_MAGIC",
+              "Min": 92
             }
           ]
         },

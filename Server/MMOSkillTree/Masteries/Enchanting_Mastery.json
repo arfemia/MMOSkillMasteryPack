@@ -5,11 +5,11 @@
     "target": "skill:ENCHANTING",
     "refundPercent": 50,
     "requirements": {
-      "mode": "AND",
-      "skillLevels": [
+      "Factors": [
         {
-          "skill": "ENCHANTING",
-          "level": 5
+          "Factor": "hytale:stat",
+          "Param": "MMO_Level_ENCHANTING",
+          "Min": 5
         }
       ]
     },

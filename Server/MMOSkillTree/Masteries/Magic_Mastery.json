@@ -23,10 +23,11 @@
           "mag_t3_cap"
         ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "MAGIC",
-              "level": 100
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_MAGIC",
+              "Min": 100
             }
           ]
         },

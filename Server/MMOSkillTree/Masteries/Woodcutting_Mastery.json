@@ -4,11 +4,11 @@
     "target": "skill:WOODCUTTING",
     "refundPercent": 50,
     "requirements": {
-      "mode": "AND",
-      "skillLevels": [
+      "Factors": [
         {
-          "skill": "WOODCUTTING",
-          "level": 5
+          "Factor": "hytale:stat",
+          "Param": "MMO_Level_WOODCUTTING",
+          "Min": 5
         }
       ]
     },
@@ -45,10 +45,11 @@
           "woo_t1"
         ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "WOODCUTTING",
-              "level": 40
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_WOODCUTTING",
+              "Min": 40
             }
           ]
         },
@@ -81,10 +82,11 @@
           "woo_t2"
         ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "WOODCUTTING",
-              "level": 70
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_WOODCUTTING",
+              "Min": 70
             }
           ]
         },
@@ -123,10 +125,11 @@
           "woo_t3"
         ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "WOODCUTTING",
-              "level": 92
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_WOODCUTTING",
+              "Min": 92
             }
           ]
         },

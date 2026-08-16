@@ -3,11 +3,11 @@
   "Payload": {
     "refundPercent": 50,
     "requirements": {
-      "mode": "AND",
-      "skillLevels": [
+      "Factors": [
         {
-          "skill": "{{gateSkill}}",
-          "level": 16
+          "Factor": "hytale:stat",
+          "Param": "MMO_Level_{{gateSkill}}",
+          "Min": 16
         }
       ]
     },
@@ -43,7 +43,6 @@
         "id": "{{prefix}}_t1_combo",
         "tier": 1,
         "choiceGroup": "{{prefix}}_t1",
-
         "cost": {
           "combine": "all",
           "currencies": {
@@ -71,12 +70,15 @@
         "id": "{{prefix}}_t2_life",
         "tier": 2,
         "choiceGroup": "{{prefix}}_t2",
-        "prerequisites": ["{{prefix}}_t1_dmg"],
+        "prerequisites": [
+          "{{prefix}}_t1_dmg"
+        ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "{{gateSkill}}",
-              "level": 40
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_{{gateSkill}}",
+              "Min": 40
             }
           ]
         },
@@ -107,12 +109,15 @@
         "id": "{{prefix}}_t2_cd",
         "tier": 2,
         "choiceGroup": "{{prefix}}_t2",
-        "prerequisites": ["{{prefix}}_t1_combo"],
+        "prerequisites": [
+          "{{prefix}}_t1_combo"
+        ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "{{gateSkill}}",
-              "level": 40
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_{{gateSkill}}",
+              "Min": 40
             }
           ]
         },
@@ -142,24 +147,29 @@
         "id": "{{prefix}}_t3_cap",
         "tier": 3,
         "requirements": {
-          "mode": "AND",
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "{{gateSkill}}",
-              "level": 70
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_{{gateSkill}}",
+              "Min": 70
             }
           ],
-          "groups": [
+          "AnyOf": [
             {
-              "mode": "OR",
-              "masteryNodes": [
+              "Factors": [
                 {
-                  "trackId": "{{trackId}}",
-                  "nodeId": "{{prefix}}_t2_life"
-                },
+                  "Factor": "mmoskilltree:mastery_node",
+                  "Param": "{{trackId}}:{{prefix}}_t2_life",
+                  "Min": 1
+                }
+              ]
+            },
+            {
+              "Factors": [
                 {
-                  "trackId": "{{trackId}}",
-                  "nodeId": "{{prefix}}_t2_cd"
+                  "Factor": "mmoskilltree:mastery_node",
+                  "Param": "{{trackId}}:{{prefix}}_t2_cd",
+                  "Min": 1
                 }
               ]
             }
@@ -200,12 +210,15 @@
       {
         "id": "{{prefix}}_eternal",
         "tier": 9,
-        "prerequisites": ["{{prefix}}_t3_cap"],
+        "prerequisites": [
+          "{{prefix}}_t3_cap"
+        ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "{{gateSkill}}",
-              "level": 92
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_{{gateSkill}}",
+              "Min": 92
             }
           ]
         },

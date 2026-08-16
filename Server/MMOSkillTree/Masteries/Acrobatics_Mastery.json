@@ -5,11 +5,11 @@
     "target": "skill:ACROBATICS",
     "refundPercent": 50,
     "requirements": {
-      "mode": "AND",
-      "skillLevels": [
+      "Factors": [
         {
-          "skill": "ACROBATICS",
-          "level": 5
+          "Factor": "hytale:stat",
+          "Param": "MMO_Level_ACROBATICS",
+          "Min": 5
         }
       ]
     },

@@ -5,11 +5,11 @@
     "icon": "Icon_PiercingShot",
     "refundPercent": 50,
     "requirements": {
-      "mode": "AND",
-      "skillLevels": [
+      "Factors": [
         {
-          "skill": "ARCHERY",
-          "level": 15
+          "Factor": "hytale:stat",
+          "Param": "MMO_Level_ARCHERY",
+          "Min": 15
         }
       ]
     },
@@ -69,10 +69,11 @@
         "id": "ps_t2_pierce",
         "tier": 2,
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "ARCHERY",
-              "level": 40
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_ARCHERY",
+              "Min": 40
             }
           ]
         },
@@ -100,12 +101,15 @@
       {
         "id": "ps_t3_hawkshot",
         "tier": 3,
-        "prerequisites": ["ps_t2_pierce"],
+        "prerequisites": [
+          "ps_t2_pierce"
+        ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "ARCHERY",
-              "level": 70
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_ARCHERY",
+              "Min": 70
             }
           ]
         },
@@ -150,12 +154,15 @@
       {
         "id": "ps_eternal",
         "tier": 9,
-        "prerequisites": ["ps_t3_hawkshot"],
+        "prerequisites": [
+          "ps_t3_hawkshot"
+        ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "ARCHERY",
-              "level": 92
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_ARCHERY",
+              "Min": 92
             }
           ]
         },

@@ -5,11 +5,11 @@
     "target": "skill:FISHING",
     "refundPercent": 50,
     "requirements": {
-      "mode": "AND",
-      "skillLevels": [
+      "Factors": [
         {
-          "skill": "FISHING",
-          "level": 5
+          "Factor": "hytale:stat",
+          "Param": "MMO_Level_FISHING",
+          "Min": 5
         }
       ]
     },

@@ -5,11 +5,11 @@
     "icon": "Icon_Fireball",
     "refundPercent": 50,
     "requirements": {
-      "mode": "AND",
-      "skillLevels": [
+      "Factors": [
         {
-          "skill": "MAGIC",
-          "level": 30
+          "Factor": "hytale:stat",
+          "Param": "MMO_Level_MAGIC",
+          "Min": 30
         }
       ]
     },
@@ -69,12 +69,15 @@
         "id": "fb_t2_radius",
         "tier": 2,
         "choiceGroup": "fb_t2",
-        "prerequisites": ["fb_t1_dmg"],
+        "prerequisites": [
+          "fb_t1_dmg"
+        ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "MAGIC",
-              "level": 40
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_MAGIC",
+              "Min": 40
             }
           ]
         },
@@ -103,12 +106,15 @@
         "id": "fb_t2_pierce",
         "tier": 2,
         "choiceGroup": "fb_t2",
-        "prerequisites": ["fb_t1_cd"],
+        "prerequisites": [
+          "fb_t1_cd"
+        ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "MAGIC",
-              "level": 40
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_MAGIC",
+              "Min": 40
             }
           ]
         },
@@ -137,24 +143,29 @@
         "id": "fb_t3_inferno",
         "tier": 3,
         "requirements": {
-          "mode": "AND",
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "MAGIC",
-              "level": 70
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_MAGIC",
+              "Min": 70
             }
           ],
-          "groups": [
+          "AnyOf": [
             {
-              "mode": "OR",
-              "masteryNodes": [
+              "Factors": [
                 {
-                  "trackId": "fireball_mastery",
-                  "nodeId": "fb_t2_radius"
-                },
+                  "Factor": "mmoskilltree:mastery_node",
+                  "Param": "fireball_mastery:fb_t2_radius",
+                  "Min": 1
+                }
+              ]
+            },
+            {
+              "Factors": [
                 {
-                  "trackId": "fireball_mastery",
-                  "nodeId": "fb_t2_pierce"
+                  "Factor": "mmoskilltree:mastery_node",
+                  "Param": "fireball_mastery:fb_t2_pierce",
+                  "Min": 1
                 }
               ]
             }
@@ -204,16 +215,18 @@
           }
         ]
       },
-
       {
         "id": "fb_eternal",
         "tier": 9,
-        "prerequisites": ["fb_t3_inferno"],
+        "prerequisites": [
+          "fb_t3_inferno"
+        ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "MAGIC",
-              "level": 92
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_MAGIC",
+              "Min": 92
             }
           ]
         },

@@ -4,11 +4,11 @@
     "target": "skill:HARVESTING",
     "refundPercent": 50,
     "requirements": {
-      "mode": "AND",
-      "skillLevels": [
+      "Factors": [
         {
-          "skill": "HARVESTING",
-          "level": 5
+          "Factor": "hytale:stat",
+          "Param": "MMO_Level_HARVESTING",
+          "Min": 5
         }
       ]
     },
@@ -45,10 +45,11 @@
           "har_t1"
         ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "HARVESTING",
-              "level": 40
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_HARVESTING",
+              "Min": 40
             }
           ]
         },
@@ -81,10 +82,11 @@
           "har_t2"
         ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "HARVESTING",
-              "level": 70
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_HARVESTING",
+              "Min": 70
             }
           ]
         },
@@ -123,10 +125,11 @@
           "har_t3"
         ],
         "requirements": {
-          "skillLevels": [
+          "Factors": [
             {
-              "skill": "HARVESTING",
-              "level": 92
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_HARVESTING",
+              "Min": 92
             }
           ]
         },
