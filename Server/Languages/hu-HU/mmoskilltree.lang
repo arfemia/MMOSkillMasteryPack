@@ -154,3 +154,31 @@ mastery.sst_eternal.desc = Minden vásárlás farag az Árnyéklépés lehűlés
 mastery.ss_eternal.desc = Minden vásárlás keményíti a Pajzscsapás sebzését; mindegyik többe kerül az előzőnél.
 mastery.ww_eternal.desc = Minden vásárlás élesíti a Forgószél sebzését (ütés és varázslás); mindegyik többe kerül az előzőnél.
 mastery.woo_eternal.desc = Minden vásárlás feljebb tolja a favágás mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél. Grindelj korlátok nélkül.
+
+# --- Sebzésiskola-mastery utak (mastery.<trackId>.title, konvenció szerint) ---
+mastery.fire_school_mastery.title = Tűz Mastery
+mastery.ice_school_mastery.title = Jég Mastery
+mastery.lightning_school_mastery.title = Villám Mastery
+mastery.water_school_mastery.title = Víz Mastery
+mastery.arcane_school_mastery.title = Rejtelem Mastery
+mastery.void_school_mastery.title = Űr Mastery
+mastery.poison_school_mastery.title = Méreg Mastery
+
+# --- Iskolaszintek nevei (mastery.node.<tail>.title; így áll össze: "<út>: <szint>") ---
+mastery.node.t1_pct.title = Ráhangolódás
+mastery.node.t1_flat.title = Megerősítés
+mastery.node.t2_resist.title = Védelem
+mastery.node.f1_focus.title = Összpontosítás
+mastery.node.f2_finesse.title = Finomság
+mastery.node.f3_secret.title = Rejtett Művészet
+mastery.node.t4_cd.title = Felívelő Áramlás
+mastery.node.t4_flat.title = Felívelő Erő
+
+# --- Iskolák csúcspontjai (csomópont-kulcsok; ezek nyernek az összeállítással szemben) ---
+mastery.fire_t3_cap.title = Piroklaszt
+mastery.ice_t3_cap.title = Abszolút Nulla
+mastery.lightning_t3_cap.title = Viharfront
+mastery.water_t3_cap.title = Dagály
+mastery.arcane_t3_cap.title = Rezonancia
+mastery.void_t3_cap.title = Eseményhorizont
+mastery.poison_t3_cap.title = Métely Virága

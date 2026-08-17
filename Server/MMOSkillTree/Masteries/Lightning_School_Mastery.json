@@ -1,0 +1,50 @@
+{
+  "Name": "Lightning_School_Mastery",
+  "$Comment": "Lightning is the storm that follows a fast fighter: the flavor nodes trim the stamina cost of a Tempest, keep the Wind Dancer's charge up longer, and widen the Concussive Reverb shockwave.",
+  "Payload": {
+    "extends": "school8_standard",
+    "params": {
+      "prefix": "lightning",
+      "school": "Lightning",
+      "schoolLower": "lightning",
+      "trackName": "Lightning Mastery",
+      "trackId": "lightning_school_mastery",
+      "dmgIngredient": "Ingredient_Lightning_Essence",
+      "comboIngredient": "Ingredient_Bolt_Stormsilk",
+      "sacrificeStat": "STAMINA",
+      "capDisplay": "Thunderhead",
+      "cdAbility": "tempest",
+      "flavor1Ability": "tempest",
+      "flavor2Ability": "wind_dancer",
+      "flavor3Ability": "blunt_capstone_concussive_reverb"
+    },
+    "nodeOverrides": {
+      "lightning_f1_focus": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cost",
+            "value": -0.1,
+            "targetAbility": "tempest"
+          }
+        ]
+      },
+      "lightning_t4_cd": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "tempest"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "tempest_vault"
+          }
+        ]
+      }
+    }
+  }
+}

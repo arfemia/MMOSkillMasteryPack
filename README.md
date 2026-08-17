@@ -1,29 +1,31 @@
-# MMO Skill Mastery — Standalone Content Pack
+# MMO Skill Mastery - Standalone Content Pack
 
 A Hytale asset pack that ships the **mastery system, currencies, and matching
 content** for the [MMO Skill Tree plugin](https://wintergreen-solutions.com). As
 of plugin version 1.2.0 the mastery + currency systems are no longer bundled
-inside the plugin jar — this pack is the source of that content, and the plugin
+inside the plugin jar - this pack is the source of that content, and the plugin
 hides the Mastery and Currency UI tabs unless it's installed.
 
 ## What's included
 
-- **20 active mastery tracks** (`Server/MMOSkillTree/Masteries/*.json`) — 11
+- **27 active mastery tracks** (`Server/MMOSkillTree/Masteries/*.json`) - 11
   combat-skill tracks, 6 marquee ability tracks, 3 gathering tracks (Mining,
-  Woodcutting, Harvesting). Each track has 3-5 finite identity nodes plus one
-  infinitely-repeatable "Eternal" node. Three additional tracks
+  Woodcutting, Harvesting), and 7 damage-school tracks (Fire, Ice, Lightning,
+  Water, Arcane, Void, Poison) gated on combat level rather than one skill.
+  Each track has 3-5 finite identity nodes plus one
+  infinitely-repeatable "Eternal" node; the school tracks run 8. Three additional tracks
   (`fishing_mastery`, `enchanting_mastery`, `acrobatics_mastery`) ship with
   `"disabled": true` and will activate in a future pack release.
-- **2 currencies** (`Server/MMOSkillTree/Currencies/*.json`) — `mastery_point`
+- **2 currencies** (`Server/MMOSkillTree/Currencies/*.json`) - `mastery_point`
   (counter-backed, paced by quest/milestone rewards) and `life_essence`
   (item-backed, wraps the Hytale `Ingredient_Life_Essence` item).
 - **Mastery-point milestone rewards** (`Server/MMOSkillTree/CommandRewards/MMOSkillMasteryPack.json`
   + `Server/MMOSkillTree/CommandRewardTemplates/Mastery_Point_Milestones.json`)
-  — +1 mastery_point every 15 levels for every built-in skill. Authored via the
+  - +1 mastery_point every 15 levels for every built-in skill. Authored via the
   new CommandReward template system: one template + a single `{{ALL_SKILLS}}`
   entry fans out to every skill (vs. 2,386 lines of duplicated reward objects).
 - **Mastery-themed quests + achievements** (`Server/MMOSkillTree/Quests/`,
-  `Server/MMOSkillTree/Achievements/`) — content that uses the mastery /
+  `Server/MMOSkillTree/Achievements/`) - content that uses the mastery /
   currency surface (e.g. "purchase your first mastery node", "complete a
   mastery track", "accumulate mastery points").
 
@@ -34,11 +36,11 @@ directory as the MMO Skill Tree plugin. Restart the server. Look for these
 log lines:
 
 ```
-[AssetPacks] Mastery pack layer applied (23 entries, mode=add) — 20 masteries effective (3 disabled)
-[AssetPacks] Currency pack layer applied (2 entries, mode=add) — 2 currencies effective
-[AssetPacks] CommandRewards pack layer applied (1 packs, mode=add) — N skill+level entries effective
-[AssetPacks] Quest pack layer applied (5 entries, mode=add) — 5 quests effective
-[AssetPacks] Achievement pack layer applied (6 entries, mode=add) — 6 achievements effective
+[AssetPacks] Mastery pack layer applied (30 entries, mode=add) - 27 masteries effective (3 disabled)
+[AssetPacks] Currency pack layer applied (2 entries, mode=add) - 2 currencies effective
+[AssetPacks] CommandRewards pack layer applied (1 packs, mode=add) - N skill+level entries effective
+[AssetPacks] Quest pack layer applied (5 entries, mode=add) - 5 quests effective
+[AssetPacks] Achievement pack layer applied (6 entries, mode=add) - 6 achievements effective
 ```
 
 ## Build (from source)
@@ -71,7 +73,7 @@ plugin repo). To extend or override what this pack ships:
   `Control/<yourpack>.json` to add tracks alongside these.
 - Use `"Mastery": "replace"` to drop these defaults entirely and ship your own.
 - Server owners can always override anything authored by a pack with files in
-  `mods/mmoskilltree/` — owner-authored content wins over pack content.
+  `mods/mmoskilltree/` - owner-authored content wins over pack content.
 
 ## Sync rule
 

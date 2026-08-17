@@ -1,0 +1,443 @@
+{
+  "Name": "School8_Standard",
+  "$Comment": "The damage-school shape: a percent-vs-flat opening pair, a resistance step, one sacrificial capstone, an Ascendant pair, a repeatable Eternal trickle, and three flavor nodes tucked off the spine that sharpen single abilities of the school. Fill the school param with one of Fire/Ice/Lightning/Water/Arcane/Void/Poison and every damage line in the track lands on that school's own channel, whatever weapon or ability threw the hit. The track targets global, so it reaches every ability in the game and its per-ability lines land wherever the school's abilities happen to live: a fire track can sharpen an Archery shot and a Blunt slam in the same breath. Every gate reads MMO_CombatLevel (your highest COMBAT skill level), so one school track suits a mage and a rogue alike. Point a new track at it with an extends of school8_standard, supply the params below, and override the t4_cd and flavor modifier arrays per track, since the abilities that carry a school differ from school to school.",
+  "Payload": {
+    "$Comment": "Params: prefix (node-id stem), school (the canonical school id, matched case-insensitively), schoolLower, trackName and capDisplay (author-facing labels; the player sees the .lang title), trackId (must equal the track filename lowercased, since the node gates name it), dmgIngredient and comboIngredient (the two themed crafting items the prices ask for), sacrificeStat (HEALTH/STAMINA/MANA drained by the capstone), cdAbility (the flagship the Ascendant tempo node points at before a track overrides the array), and flavor1Ability/flavor2Ability/flavor3Ability (the three abilities the flavor nodes sharpen). PERCENT values are fractions here: 0.05 is +5%, -0.12 is a 12% cut. FLAT damage is raw damage. schoolResist takes PERCENT only, because its channel already counts whole percent points. A per-ability line only bites when that ability declares the paramKey: cooldownMs and cost work on any ability that has a cooldown or a cost, while radius, damageRadius, durationMs and distance are declared inside an ability body, so read the ability before picking one.",
+    "target": "global",
+    "refundPercent": 50,
+    "requirements": {
+      "Factors": [
+        {
+          "Factor": "hytale:stat",
+          "Param": "MMO_CombatLevel",
+          "Min": 16
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "id": "{{prefix}}_t1_pct",
+        "tier": 1,
+        "choiceGroup": "{{prefix}}_t1",
+        "$Comment": "Percent opener: scales with everything else you stack, so it wins out on a geared character. Pick this or the flat sibling, never both.",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 3,
+            "life_essence": 600
+          },
+          "items": [
+            {
+              "id": "{{dmgIngredient}}",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "damage",
+            "school": "{{school}}",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "id": "{{prefix}}_t1_flat",
+        "tier": 1,
+        "choiceGroup": "{{prefix}}_t1",
+        "$Comment": "Flat opener: the same points paid out as raw damage on every hit of the school, which is worth more early and less once percent bonuses pile up.",
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 3,
+            "life_essence": 600
+          },
+          "items": [
+            {
+              "id": "{{comboIngredient}}",
+              "count": 1
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "damage",
+            "school": "{{school}}",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "id": "{{prefix}}_t2_resist",
+        "tier": 2,
+        "$Comment": "The spine's second step, open from either opener: incoming hits of this school land softer. Resistance is written as a PERCENT fraction (0.04 is 4%); that synced contribution is itself clamped to 90 whole percent points, then stacks additively with worn armour and any other resistance effect. The engine floors damage at zero.",
+        "requirements": {
+          "Factors": [
+            {
+              "Factor": "hytale:stat",
+              "Param": "MMO_CombatLevel",
+              "Min": 40
+            }
+          ],
+          "AnyOf": [
+            {
+              "Factors": [
+                {
+                  "Factor": "mmoskilltree:mastery_node",
+                  "Param": "{{trackId}}:{{prefix}}_t1_pct",
+                  "Min": 1
+                }
+              ]
+            },
+            {
+              "Factors": [
+                {
+                  "Factor": "mmoskilltree:mastery_node",
+                  "Param": "{{trackId}}:{{prefix}}_t1_flat",
+                  "Min": 1
+                }
+              ]
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 6,
+            "life_essence": 1500
+          },
+          "items": [
+            {
+              "id": "{{dmgIngredient}}",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "schoolResist",
+            "school": "{{school}}",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "{{prefix}}_f1_focus",
+        "tier": 3,
+        "prerequisites": [
+          "{{prefix}}_t2_resist"
+        ],
+        "$Comment": "First flavor node, branching off the spine beside the capstone: one ability of the school, sharpened. Replace this modifiers array in the track's nodeOverrides with the key that ability declares. A cooldown cut is written as a negative fraction.",
+        "requirements": {
+          "Factors": [
+            {
+              "Factor": "hytale:stat",
+              "Param": "MMO_CombatLevel",
+              "Min": 55
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 8,
+            "life_essence": 2200
+          },
+          "items": [
+            {
+              "id": "{{comboIngredient}}",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.1,
+            "targetAbility": "{{flavor1Ability}}"
+          }
+        ]
+      },
+      {
+        "id": "{{prefix}}_t3_cap",
+        "tier": 3,
+        "prerequisites": [
+          "{{prefix}}_t2_resist"
+        ],
+        "$Comment": "The capstone. Costs a permanent 10 off your max sacrificeStat, returned if you respec the node.",
+        "requirements": {
+          "Factors": [
+            {
+              "Factor": "hytale:stat",
+              "Param": "MMO_CombatLevel",
+              "Min": 70
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 12,
+            "life_essence": 4000
+          },
+          "items": [
+            {
+              "id": "{{dmgIngredient}}",
+              "count": 3
+            },
+            {
+              "id": "Ingredient_Voidheart",
+              "count": 2
+            }
+          ],
+          "statSacrifice": {
+            "stat": "{{sacrificeStat}}",
+            "mode": "permanent_max",
+            "amount": 10
+          }
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "damage",
+            "school": "{{school}}",
+            "value": 0.12
+          }
+        ]
+      },
+      {
+        "id": "{{prefix}}_t4_cd",
+        "tier": 4,
+        "choiceGroup": "{{prefix}}_t4",
+        "prerequisites": [
+          "{{prefix}}_t3_cap"
+        ],
+        "$Comment": "Ascendant, tempo half: one node carrying a cooldown cut per ability of the school. Replace the modifiers array in the track's nodeOverrides with one entry per ability you want shortened; an ability with no cooldown of its own has nothing to cut.",
+        "requirements": {
+          "Factors": [
+            {
+              "Factor": "hytale:stat",
+              "Param": "MMO_CombatLevel",
+              "Min": 80
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 18,
+            "life_essence": 6000
+          },
+          "items": [
+            {
+              "id": "{{comboIngredient}}",
+              "count": 4
+            },
+            {
+              "id": "Ingredient_Voidheart",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "{{cdAbility}}"
+          }
+        ]
+      },
+      {
+        "id": "{{prefix}}_t4_flat",
+        "tier": 4,
+        "choiceGroup": "{{prefix}}_t4",
+        "prerequisites": [
+          "{{prefix}}_t3_cap"
+        ],
+        "$Comment": "Ascendant, damage half: a second slab of flat school damage for players who would rather hit harder than act more often.",
+        "requirements": {
+          "Factors": [
+            {
+              "Factor": "hytale:stat",
+              "Param": "MMO_CombatLevel",
+              "Min": 80
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 18,
+            "life_essence": 6000
+          },
+          "items": [
+            {
+              "id": "{{dmgIngredient}}",
+              "count": 4
+            },
+            {
+              "id": "Ingredient_Voidheart",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "FLAT",
+            "key": "damage",
+            "school": "{{school}}",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "id": "{{prefix}}_f2_finesse",
+        "tier": 4,
+        "prerequisites": [
+          "{{prefix}}_t3_cap"
+        ],
+        "$Comment": "Second flavor node, behind the capstone: a signature effect on one ability of the school made to last longer. Replace this modifiers array in the track's nodeOverrides with the key that ability declares.",
+        "requirements": {
+          "Factors": [
+            {
+              "Factor": "hytale:stat",
+              "Param": "MMO_CombatLevel",
+              "Min": 76
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 14,
+            "life_essence": 4800
+          },
+          "items": [
+            {
+              "id": "{{comboIngredient}}",
+              "count": 3
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "durationMs",
+            "value": 0.2,
+            "targetAbility": "{{flavor2Ability}}"
+          }
+        ]
+      },
+      {
+        "id": "{{prefix}}_f3_secret",
+        "tier": 5,
+        "prerequisites": [
+          "{{prefix}}_f2_finesse"
+        ],
+        "$Comment": "The deepest flavor node, reachable only through the one above it: the school's parting trick on a single ability. Replace this modifiers array in the track's nodeOverrides with the key that ability declares.",
+        "requirements": {
+          "Factors": [
+            {
+              "Factor": "hytale:stat",
+              "Param": "MMO_CombatLevel",
+              "Min": 88
+            }
+          ]
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 22,
+            "life_essence": 8000
+          },
+          "items": [
+            {
+              "id": "{{dmgIngredient}}",
+              "count": 4
+            },
+            {
+              "id": "Ingredient_Voidheart",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "radius",
+            "value": 0.15,
+            "targetAbility": "{{flavor3Ability}}"
+          }
+        ]
+      },
+      {
+        "id": "{{prefix}}_eternal",
+        "tier": 9,
+        "prerequisites": [
+          "{{prefix}}_t3_cap"
+        ],
+        "$Comment": "Repeatable forever: +1% school damage per purchase, each buy 10% dearer than the last. Raise the multiplier to make the ladder bite sooner, lower it for a longer grind.",
+        "requirements": {
+          "Factors": [
+            {
+              "Factor": "hytale:stat",
+              "Param": "MMO_CombatLevel",
+              "Min": 92
+            }
+          ],
+          "AnyOf": [
+            {
+              "Factors": [
+                {
+                  "Factor": "mmoskilltree:mastery_node",
+                  "Param": "{{trackId}}:{{prefix}}_t4_cd",
+                  "Min": 1
+                }
+              ]
+            },
+            {
+              "Factors": [
+                {
+                  "Factor": "mmoskilltree:mastery_node",
+                  "Param": "{{trackId}}:{{prefix}}_t4_flat",
+                  "Min": 1
+                }
+              ]
+            }
+          ]
+        },
+        "maxPurchases": -1,
+        "costScaling": {
+          "mode": "EXPONENTIAL",
+          "multiplier": 1.1
+        },
+        "cost": {
+          "combine": "all",
+          "currencies": {
+            "mastery_point": 1,
+            "life_essence": 350
+          },
+          "items": [
+            {
+              "id": "{{dmgIngredient}}",
+              "count": 2
+            }
+          ]
+        },
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "damage",
+            "school": "{{school}}",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "Name": "Arcane_School_Mastery",
+  "$Comment": "Arcane is the caster's own school: the flavor nodes make a Vortex Pull cheaper to cast, hold the Arcane Resonance aura longer, and shave the mana off a volley of Arcane Missiles.",
+  "Payload": {
+    "extends": "school8_standard",
+    "params": {
+      "prefix": "arcane",
+      "school": "Arcane",
+      "schoolLower": "arcane",
+      "trackName": "Arcane Mastery",
+      "trackId": "arcane_school_mastery",
+      "dmgIngredient": "Ingredient_Crystal_Purple",
+      "comboIngredient": "Ingredient_Motes_Light",
+      "sacrificeStat": "MANA",
+      "capDisplay": "Resonance",
+      "cdAbility": "arcane_missiles",
+      "flavor1Ability": "vortex_pull",
+      "flavor2Ability": "magic_capstone_arcane_resonance",
+      "flavor3Ability": "arcane_missiles"
+    },
+    "nodeOverrides": {
+      "arcane_f1_focus": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cost",
+            "value": -0.1,
+            "targetAbility": "vortex_pull"
+          }
+        ]
+      },
+      "arcane_f3_secret": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cost",
+            "value": -0.2,
+            "targetAbility": "arcane_missiles"
+          }
+        ]
+      },
+      "arcane_t4_cd": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "arcane_missiles"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "arcane_lash"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "vortex_pull"
+          }
+        ]
+      }
+    }
+  }
+}

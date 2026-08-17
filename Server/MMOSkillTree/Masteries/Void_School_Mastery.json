@@ -1,0 +1,90 @@
+{
+  "Name": "Void_School_Mastery",
+  "$Comment": "Void is the assassin's school, and it pays out across the whole dagger and staff roster. The flavor nodes trim the mana cost of a Void Slam, keep the Mark of Death burning longer, and let the Soul Drain reach across a wider gap.",
+  "Payload": {
+    "extends": "school8_standard",
+    "params": {
+      "prefix": "void",
+      "school": "Void",
+      "schoolLower": "void",
+      "trackName": "Void Mastery",
+      "trackId": "void_school_mastery",
+      "dmgIngredient": "Ingredient_Void_Essence",
+      "comboIngredient": "Ingredient_Bolt_Shadoweave",
+      "sacrificeStat": "HEALTH",
+      "capDisplay": "Event Horizon",
+      "cdAbility": "soul_drain",
+      "flavor1Ability": "void_slam",
+      "flavor2Ability": "mark_of_death",
+      "flavor3Ability": "soul_drain"
+    },
+    "nodeOverrides": {
+      "void_f1_focus": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cost",
+            "value": -0.1,
+            "targetAbility": "void_slam"
+          }
+        ]
+      },
+      "void_f3_secret": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "distance",
+            "value": 0.25,
+            "targetAbility": "soul_drain"
+          }
+        ]
+      },
+      "void_t4_cd": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "soul_drain"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "void_slam"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "mark_of_death"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "shadow_pounce"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "smoke_bomb"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "blood_pact"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "vampiric_strike"
+          }
+        ]
+      }
+    }
+  }
+}

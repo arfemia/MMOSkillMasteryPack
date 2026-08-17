@@ -154,3 +154,31 @@ mastery.sst_eternal.desc = Каждая покупка урезает перез
 mastery.ss_eternal.desc = Каждая покупка закаляет урон Удара щитом; каждая стоит дороже предыдущей.
 mastery.ww_eternal.desc = Каждая покупка оттачивает урон Вихря (удар и применение); каждая стоит дороже предыдущей.
 mastery.woo_eternal.desc = Каждая покупка чуть повышает шанс бонусного дропа мастерства лесорубства; каждая стоит дороже предыдущей. Качайте без ограничений.
+
+# --- Ветки мастерства по школам урона (mastery.<trackId>.title, по соглашению) ---
+mastery.fire_school_mastery.title = Мастерство огня
+mastery.ice_school_mastery.title = Мастерство льда
+mastery.lightning_school_mastery.title = Мастерство молний
+mastery.water_school_mastery.title = Мастерство воды
+mastery.arcane_school_mastery.title = Мастерство тайной магии
+mastery.void_school_mastery.title = Мастерство пустоты
+mastery.poison_school_mastery.title = Мастерство яда
+
+# --- Названия ступеней школ (mastery.node.<tail>.title; собирается как "<ветка>: <ступень>") ---
+mastery.node.t1_pct.title = Созвучие
+mastery.node.t1_flat.title = Усиление
+mastery.node.t2_resist.title = Ограждение
+mastery.node.f1_focus.title = Сосредоточение
+mastery.node.f2_finesse.title = Изящество
+mastery.node.f3_secret.title = Тайное искусство
+mastery.node.t4_cd.title = Восходящий поток
+mastery.node.t4_flat.title = Восходящая мощь
+
+# --- Вершинные узлы школ (ключи по узлу; они важнее сборки) ---
+mastery.fire_t3_cap.title = Пирокластика
+mastery.ice_t3_cap.title = Абсолютный ноль
+mastery.lightning_t3_cap.title = Грозовой фронт
+mastery.water_t3_cap.title = Прилив
+mastery.arcane_t3_cap.title = Резонанс
+mastery.void_t3_cap.title = Горизонт событий
+mastery.poison_t3_cap.title = Цвет порчи

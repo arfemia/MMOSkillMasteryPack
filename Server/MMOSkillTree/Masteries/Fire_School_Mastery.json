@@ -1,0 +1,84 @@
+{
+  "Name": "Fire_School_Mastery",
+  "$Comment": "Fire covers every burning hit in the game, from a Fireball to a Pyrocaster proc, whichever skill threw it. Its flavor nodes widen a Fireball's blast, stretch the Flame Stream's burn, and shave the mana cost off calling down a Meteor.",
+  "Payload": {
+    "extends": "school8_standard",
+    "params": {
+      "prefix": "fire",
+      "school": "Fire",
+      "schoolLower": "fire",
+      "trackName": "Fire Mastery",
+      "trackId": "fire_school_mastery",
+      "dmgIngredient": "Ingredient_Fire_Essence",
+      "comboIngredient": "Ingredient_Bolt_Cindercloth",
+      "sacrificeStat": "MANA",
+      "capDisplay": "Pyroclasm",
+      "cdAbility": "fireball",
+      "flavor1Ability": "meteor",
+      "flavor2Ability": "flame_stream",
+      "flavor3Ability": "fireball"
+    },
+    "nodeOverrides": {
+      "fire_f1_focus": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cost",
+            "value": -0.1,
+            "targetAbility": "meteor"
+          }
+        ]
+      },
+      "fire_f3_secret": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "damageRadius",
+            "value": 0.2,
+            "targetAbility": "fireball"
+          }
+        ]
+      },
+      "fire_t4_cd": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "fireball"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "flame_stream"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "meteor"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "molten_slam"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "flame_totem"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "explosive_shot"
+          }
+        ]
+      }
+    }
+  }
+}

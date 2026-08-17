@@ -154,3 +154,31 @@ mastery.sst_eternal.desc = Ogni acquisto lima la ricarica di Passo d'Ombra; ognu
 mastery.ss_eternal.desc = Ogni acquisto indurisce i danni di Colpo di Scudo; ognuno costa piu' del precedente.
 mastery.ww_eternal.desc = Ogni acquisto affila i danni di Turbine (colpo e lancio); ognuno costa piu' del precedente.
 mastery.woo_eternal.desc = Ogni acquisto spinge un po' piu' in alto la probabilita' di drop bonus della tua maestria di taglialegna; ognuno costa piu' del precedente. Accumula senza limiti.
+
+# --- Percorsi di maestria per scuola di danno (mastery.<trackId>.title, per convenzione) ---
+mastery.fire_school_mastery.title = Maestria del Fuoco
+mastery.ice_school_mastery.title = Maestria del Ghiaccio
+mastery.lightning_school_mastery.title = Maestria del Fulmine
+mastery.water_school_mastery.title = Maestria dell'Acqua
+mastery.arcane_school_mastery.title = Maestria Arcana
+mastery.void_school_mastery.title = Maestria del Vuoto
+mastery.poison_school_mastery.title = Maestria del Veleno
+
+# --- Nomi dei livelli di scuola (mastery.node.<tail>.title; composto come "<percorso>: <livello>") ---
+mastery.node.t1_pct.title = Sintonia
+mastery.node.t1_flat.title = Potenziamento
+mastery.node.t2_resist.title = Protezione
+mastery.node.f1_focus.title = Concentrazione
+mastery.node.f2_finesse.title = Finezza
+mastery.node.f3_secret.title = Arte Nascosta
+mastery.node.t4_cd.title = Flusso Ascendente
+mastery.node.t4_flat.title = Potenza Ascendente
+
+# --- Nodi finali di scuola (chiavi per nodo; prevalgono sulla composizione) ---
+mastery.fire_t3_cap.title = Piroclasto
+mastery.ice_t3_cap.title = Zero Assoluto
+mastery.lightning_t3_cap.title = Fronte di Tempesta
+mastery.water_t3_cap.title = Alta Marea
+mastery.arcane_t3_cap.title = Risonanza
+mastery.void_t3_cap.title = Orizzonte degli Eventi
+mastery.poison_t3_cap.title = Fioritura Corrotta

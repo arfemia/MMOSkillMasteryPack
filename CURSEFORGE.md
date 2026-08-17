@@ -1,6 +1,6 @@
 # MMO Skill Mastery Pack
 
-**The mastery and currency content pack for the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).** Drop this `.zip` into your server's `mods/` folder alongside the plugin to unlock the full mastery system - 20 active tracks across combat, ability, and gathering skills, two starter currencies, mastery-point milestone rewards every 15 levels, and themed quests + achievements that exercise the mastery surface.
+**The mastery and currency content pack for the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).** Drop this `.zip` into your server's `mods/` folder alongside the plugin to unlock the full mastery system - 27 active tracks across combat skills, marquee abilities, gathering, and the seven damage schools, two starter currencies, mastery-point milestone rewards every 15 levels, and themed quests + achievements that exercise the mastery surface.
 
 [![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/5NFdZsUxHZ) [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/ziggfreed) [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/wintergreensolutions) [![Documentation](https://img.shields.io/badge/Docs-Read%20More-0ea5e9?style=for-the-badge)](https://mmo-skill-tree-docs.ziggfreed.com)
 
@@ -12,11 +12,14 @@
 
 ## What's inside
 
-### Mastery tracks (20 active)
+### Mastery tracks (27 active)
 
 - **11 combat-skill tracks** - `swords_mastery`, `daggers_mastery`, `polearms_mastery`, `staves_mastery`, `axes_mastery`, `blunt_mastery`, `unarmed_mastery`, `archery_mastery`, `magic_mastery`, `artillery_mastery`, `defense_mastery`. Each opts into swing damage via `combatTarget`.
 - **6 marquee ability tracks** - `fireball_mastery`, `meteor_mastery`, `whirlwind_mastery`, `piercing_shot_mastery`, `shield_slam_mastery`, `shadowstep_mastery`. Narrower buffs, higher per-purchase Eternal rates than skill-scope tracks.
 - **3 gathering tracks** - `mining_mastery`, `woodcutting_mastery`, `harvesting_mastery`. Eternals use the `lootMultiplier` paramKey so they stay valuable past L100.
+- 7 damage-school tracks - Fire, Ice, Lightning, Water, Arcane, Void, Poison. A school node follows the damage, not the weapon: buy Fire and it pays on a fireball, on a meteor, and on a molten hammer swing. Each school also sells resistance to itself, so you can armour up against the element that keeps killing you.
+
+School tracks run eight nodes. Two openers (percent damage or flat damage), then resistance or a utility node tuned to that school's own spells, a capstone that costs a permanent slice of your max Health, Stamina, or Mana, an Ascendant pair (school-wide cooldown cuts, or another slab of flat damage), and the usual Eternal at +1% a purchase. Every gate reads combat level (16, 40, 70, 80, 92) instead of one skill, so a mage and a rogue climb the same ladder.
 
 Three additional tracks (`fishing_mastery`, `enchanting_mastery`, `acrobatics_mastery`) ship in the zip with `"disabled": true` - parked for balance work and will activate in a future pack release without a plugin update.
 
@@ -61,13 +64,13 @@ Every display string in the pack - track titles, node names and descriptions, qu
 ## Installation
 
 1. Install the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).
-2. Drop `MMOSkillMasteryPack-1.2.0.zip` into the same `mods/` folder.
+2. Drop `MMOSkillMasteryPack-1.4.0.zip` into the same `mods/` folder.
 3. Restart the server.
 
 On startup, look for:
 
 ```
-[AssetPacks] Mastery pack layer applied (20 entries, mode=add) - 20 masteries effective
+[AssetPacks] Mastery pack layer applied (30 entries, mode=add) - 27 masteries effective
 [AssetPacks] Currency pack layer applied (2 entries, mode=add)
 [AssetPacks] CommandRewards pack layer applied (1 packs, mode=add) - N skill+level entries effective
 [AssetPacks] Quest pack layer applied (5 entries, mode=add)
@@ -91,6 +94,7 @@ The pack uses the standard MMO content-pack format documented in the plugin's `C
 
 | Pack  | Plugin | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.4.0 | 1.6.0+ | Adds seven damage-school mastery tracks (Fire, Ice, Lightning, Water, Arcane, Void, Poison), eight nodes each, gated on combat level rather than a single skill. Their damage and resistance follow the school, so a Fire node pays out on any fire hit whatever threw it; the tier-2 utility node and the Ascendant cooldown node retune that school's own spells. Every new name ships in all nine languages. Nothing existing changes. |
 | 1.2.0 | 1.6.0+ | Internal rewrite: quests and achievements move onto the shared quest/achievement engine (alongside ZiggfreedCommon 1.4.0+). No player-facing change - the mastery-off gate on the pack's achievements is re-confirmed working across the move. |
 | 1.1.2 (draft) | 1.6.0+ | **DRAFT, pending release as part of the 1.6.0 train.** Fixes the Piercing Shot mastery pierce node granting no extra targets (its modifier only injected a pierce value when the ability had none, and Piercing Shot always had one). The node adds 2 to the base pierce, so Piercing Shot pierces 5 targets with it. On plugin builds from the 1.6.0 cycle onward the node card reads "+2 Piercing Shot Pierce". Also fixes the Piercing Shot damage tier and Eternal nodes double-applying their bonus (folded into the ability's cast-time damage and separately summed again at the combat-damage layer); they now apply once. Everything else unchanged. |
 | 1.1.1 | 1.3.0+ | Restores the Mastery Point level rewards. The `Mastery_Point_Milestones` template was filed under a name the `{{ALL_SKILLS}}` `extends` reference could not match (lowercasing did not bridge the missing underscores), so no skill ever offered its mastery-point milestones since 1.0.0. Renamed the template so all built-in skills again grant a claimable Mastery Point every 15 levels (15 to 195). Currency, mastery tracks, quests, and achievements unchanged; existing `command-rewards.json` overrides unaffected. |

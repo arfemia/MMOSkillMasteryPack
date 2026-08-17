@@ -1,0 +1,62 @@
+{
+  "Name": "Poison_School_Mastery",
+  "$Comment": "Poison rewards patience: the flavor nodes cut the mana cost of a Paralyzing Dart, keep the Poison cloud lingering, and spread the Thorn Patch wider underfoot.",
+  "Payload": {
+    "extends": "school8_standard",
+    "params": {
+      "prefix": "poison",
+      "school": "Poison",
+      "schoolLower": "poison",
+      "trackName": "Poison Mastery",
+      "trackId": "poison_school_mastery",
+      "dmgIngredient": "Ingredient_Sac_Venom",
+      "comboIngredient": "Ingredient_Chitin_Sturdy",
+      "sacrificeStat": "STAMINA",
+      "capDisplay": "Blightbloom",
+      "cdAbility": "thorn_patch",
+      "flavor1Ability": "paralyzing_dart",
+      "flavor2Ability": "poison",
+      "flavor3Ability": "thorn_patch"
+    },
+    "nodeOverrides": {
+      "poison_f1_focus": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cost",
+            "value": -0.1,
+            "targetAbility": "paralyzing_dart"
+          }
+        ]
+      },
+      "poison_t4_cd": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "poison"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "thorn_patch"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "paralyzing_dart"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "forest_warden"
+          }
+        ]
+      }
+    }
+  }
+}

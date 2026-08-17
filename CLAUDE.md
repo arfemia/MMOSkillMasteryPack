@@ -21,8 +21,8 @@ skill-mastery-pack/
 └── Server/
     ├── MMOSkillTree/
     │   ├── Control/MMOSkillMasteryPack.json   replace/add per content type (no Currencies/ShopEntries entry - those types retired)
-    │   ├── MasteryTemplates/*.json            1 template (Combat6_Standard); see "Mastery template extension" below
-    │   ├── Masteries/*.json                   20 mastery tracks (11 thin extends-files + 9 hand-authored)
+    │   ├── MasteryTemplates/*.json            2 templates (Combat6_Standard, School8_Standard); see "Mastery template extension" below
+    │   ├── Masteries/*.json                   27 mastery tracks (18 thin extends-files + 9 hand-authored)
     │   ├── CommandRewardTemplates/*.json      1 template (Mastery_Point_Milestones); see "CommandReward template extension" below
     │   ├── CommandRewards/MMOSkillMasteryPack.json   one {{ALL_SKILLS}} entry fans the template to every skill
     │   ├── QuestTemplates/*.json              (optional) reusable quest skeletons; see "Quest + Achievement templates" below
@@ -129,6 +129,9 @@ captures the shared 6-node combat shape (T1×2 choice, T2×2 choice, T3
 capstone with level-70 gate, T9 eternal with level-92 gate + 1 mastery_point
 floor cost). 11 of the 14 skill-scoped combat tracks use it; the 9 non-combat
 shapes (gathering trio + ability tracks) stay hand-authored.
+`School8_Standard.json` is the second template, an 8-node damage-school shape
+gated on combat level rather than a single skill - see "Damage-school mastery
+tracks" below.
 
 Track payload using a template:
 
@@ -195,6 +198,77 @@ set. Template id lookup is case-insensitive.
 The 11 thin combat tracks are typically ~20 - 40 lines each (vs ~210 lines
 pre-template). The pack `Control/MMOSkillMasteryPack.json` adds
 `"MasteryTemplates": "add"` alongside the existing content-type modes.
+
+## Damage-school mastery tracks (plugin 1.6.0+)
+
+Seven tracks (`{Fire,Ice,Lightning,Water,Arcane,Void,Poison}_School_Mastery.json`)
+extend `School8_Standard` and buy into a DAMAGE SCHOOL rather than a skill or an
+ability. The plugin's `school` modifier scope is orthogonal to every other scope
+and outranks all of them: an authored `"school"` sends the value to that school's
+own stat channel, so it pays out on every hit of that school no matter which
+weapon, skill, or ability produced it. Two param keys accept it and no others:
+
+```json
+{ "shape": "PERCENT", "key": "damage",       "school": "Fire", "value": 0.05 }
+{ "shape": "FLAT",    "key": "damage",       "school": "Fire", "value": 8    }
+{ "shape": "PERCENT", "key": "schoolResist", "school": "Fire", "value": 0.04 }
+```
+
+`PERCENT` values are fractions (0.05 is +5%), `FLAT` is raw damage, and school ids
+are matched case-insensitively. **`schoolResist` is PERCENT only** (its channel
+already counts whole percent points, so a FLAT 4 and a PERCENT 0.04 would be one
+bonus written two ways) and a school may never sit beside `targetAbility` /
+`targetSkill` / `combatTarget`, nor inside a `CONDITIONAL` - each is a load-time
+error naming the fix.
+
+**Every school track carries `"target": "global"`.** A track's target is its own
+placement width, and the three widths are `ability:<id>`, `skill:<ID>` and the bare
+word `global`. A skill-scoped track only ever emits its per-ability modifiers for an
+ability that routes XP to that skill, so a Fire track parked on `skill:MAGIC` would
+silently drop its lines for the Blunt slam and the Archery shot that also burn.
+`global` reaches every ability, which is the whole point of a school: what decides a
+value is the hit's damage school, never which skill threw it. The school spine is
+unaffected either way (a `school`-scoped value rides its own channel), and an
+unscoped `damage` value on a global track lands on the global damage channel.
+
+Shape of a track, every node gated on `MMO_CombatLevel` (16 track / 40 T2 / 55 F1 /
+70 T3 / 76 F2 / 80 T4 / 88 F3 / 92 Eternal) so one track suits a mage and a rogue
+alike:
+
+| Node | What it buys |
+|------|--------------|
+| `<prefix>_t1_pct` / `<prefix>_t1_flat` | choice pair: percent vs flat school damage |
+| `<prefix>_t2_resist` | school resistance, open from either opener |
+| `<prefix>_f1_focus` | flavor: one ability of the school, sharpened (behind T2) |
+| `<prefix>_t3_cap` | capstone, bigger percent + a permanent max-stat sacrifice (behind T2) |
+| `<prefix>_t4_cd` / `<prefix>_t4_flat` | Ascendant choice pair: school-wide cooldown vs more flat damage |
+| `<prefix>_f2_finesse` | flavor: a signature effect made to last (behind the capstone) |
+| `<prefix>_f3_secret` | flavor: the school's parting trick (behind `f2_finesse`, the deepest node) |
+| `<prefix>_eternal` | repeatable +1% school damage, EXPONENTIAL 1.1 |
+
+The spine is school-channel damage and resistance; the three flavor nodes are the
+per-ability half, and they sit off the spine behind a prerequisite rather than in
+the opening tier, so a player finds them by climbing rather than by reading the
+first screen.
+
+The template holds every shared field; each track's `nodeOverrides` replaces the
+`modifiers` array of `t4_cd` and of whichever flavor nodes want a key other than
+the slot default (`f1_focus` cuts a cooldown, `f2_finesse` stretches a duration,
+`f3_secret` widens a radius), because the abilities that carry a school differ per
+school (a `nodeOverrides` array replaces wholesale, objects merge). Point a
+per-ability modifier only at a `paramKey` the ability's own Body declares:
+`durationMs`, `radius`, `damageRadius`, `distance`, `pierceCount` are body params,
+`cooldownMs` and `cost` are ability-level and work on any ability that has one.
+A key an ability never declares is inert rather than an error, so check the ability
+JSON before picking one - `fireball` declares `damageRadius`, not `radius`, and a
+passive capstone with no `Cooldown` block has no `cooldownMs` to cut.
+
+Titles: track titles are `mastery.<trackId>.title`, the shared tier names are
+`mastery.node.<tail>.title` (`t1_pct`, `t1_flat`, `t2_resist`, `f1_focus`,
+`f2_finesse`, `f3_secret`, `t4_cd`, `t4_flat`, composed as "`<track>: <tier>`"),
+and each capstone gets its own per-node `mastery.<prefix>_t3_cap.title` so it can
+carry a school-flavored name. Node descriptions still auto-render from the
+modifiers; do not author one.
 
 ## CommandReward template extension (plugin 1.1.0+)
 
@@ -477,7 +551,7 @@ The pack and the plugin co-evolve:
    (`D:\Games\Hytale\UserData\Mods\`).
 4. Start the server. Confirm in the server log
    (`Saves/<world>/logs/<date>_server.log`):
-   - `[AssetPacks] Mastery pack layer applied (23 entries, mode=add) - 20 masteries effective (3 disabled)`
+   - `[AssetPacks] Mastery pack layer applied (30 entries, mode=add) - 27 masteries effective (3 disabled)`
    - Same for Currency, CommandRewards, Quest, Achievement layers.
    - No `Failed to decode asset:` or `Asset validation FAILED` lines.
 5. In-game: open the Mastery menu tab (should be visible only if the pack

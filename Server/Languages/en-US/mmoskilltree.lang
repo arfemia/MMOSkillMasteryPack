@@ -163,3 +163,31 @@ achievement.pack_essence_hoarder_100.title = Essence Hoarder I
 achievement.pack_essence_hoarder_100.desc = Gather the essence of life again and again.
 achievement.pack_essence_hoarder_10000.title = Essence Hoarder II
 achievement.pack_essence_hoarder_10000.desc = A true vessel for the world's energy: gather essence beyond counting.
+
+# --- Damage-school mastery tracks (mastery.<trackId>.title, resolved by convention) ---
+mastery.fire_school_mastery.title = Fire Mastery
+mastery.ice_school_mastery.title = Ice Mastery
+mastery.lightning_school_mastery.title = Lightning Mastery
+mastery.water_school_mastery.title = Water Mastery
+mastery.arcane_school_mastery.title = Arcane Mastery
+mastery.void_school_mastery.title = Void Mastery
+mastery.poison_school_mastery.title = Poison Mastery
+
+# --- School tier names (mastery.node.<tail>.title; composed as "<track>: <tier>") ---
+mastery.node.t1_pct.title = Attunement
+mastery.node.t1_flat.title = Empowerment
+mastery.node.t2_resist.title = Warding
+mastery.node.f1_focus.title = Focus
+mastery.node.f2_finesse.title = Finesse
+mastery.node.f3_secret.title = Hidden Art
+mastery.node.t4_cd.title = Ascendant Flow
+mastery.node.t4_flat.title = Ascendant Might
+
+# --- School capstone names (per-node keys; these win over tier composition) ---
+mastery.fire_t3_cap.title = Pyroclasm
+mastery.ice_t3_cap.title = Absolute Zero
+mastery.lightning_t3_cap.title = Thunderhead
+mastery.water_t3_cap.title = High Tide
+mastery.arcane_t3_cap.title = Resonance
+mastery.void_t3_cap.title = Event Horizon
+mastery.poison_t3_cap.title = Blightbloom

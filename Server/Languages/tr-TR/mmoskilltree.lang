@@ -154,3 +154,31 @@ mastery.sst_eternal.desc = Her satın alım Gölge Adımı'nın bekleme süresin
 mastery.ss_eternal.desc = Her satın alım Kalkan Çarpması'nın hasarını sertleştirir; her biri bir öncekinden daha pahalıdır.
 mastery.ww_eternal.desc = Her satın alım Kasırga'nın hasarını keskinleştirir (savuruş ve kullanım); her biri bir öncekinden daha pahalıdır.
 mastery.woo_eternal.desc = Her satın alım odunculuk ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır. Sınırsızca geliştirmeye devam et.
+
+# --- Hasar okulu ustalık yolları (mastery.<trackId>.title, kurala göre çözülür) ---
+mastery.fire_school_mastery.title = Ateş Ustalığı
+mastery.ice_school_mastery.title = Buz Ustalığı
+mastery.lightning_school_mastery.title = Yıldırım Ustalığı
+mastery.water_school_mastery.title = Su Ustalığı
+mastery.arcane_school_mastery.title = Gizemli Ustalık
+mastery.void_school_mastery.title = Boşluk Ustalığı
+mastery.poison_school_mastery.title = Zehir Ustalığı
+
+# --- Okul kademe adları (mastery.node.<tail>.title; "<yol>: <kademe>" olarak birleşir) ---
+mastery.node.t1_pct.title = Uyum
+mastery.node.t1_flat.title = Güçlendirme
+mastery.node.t2_resist.title = Koruma
+mastery.node.f1_focus.title = Odak
+mastery.node.f2_finesse.title = Zarafet
+mastery.node.f3_secret.title = Gizli Sanat
+mastery.node.t4_cd.title = Yükselen Akış
+mastery.node.t4_flat.title = Yükselen Kudret
+
+# --- Okul zirve düğümleri (düğüm anahtarları; birleştirmeye üstün gelir) ---
+mastery.fire_t3_cap.title = Piroklastik
+mastery.ice_t3_cap.title = Mutlak Sıfır
+mastery.lightning_t3_cap.title = Fırtına Cephesi
+mastery.water_t3_cap.title = Yüksek Gelgit
+mastery.arcane_t3_cap.title = Rezonans
+mastery.void_t3_cap.title = Olay Ufku
+mastery.poison_t3_cap.title = Zehir Çiçeği

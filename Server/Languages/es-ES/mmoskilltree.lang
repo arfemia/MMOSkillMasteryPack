@@ -154,3 +154,31 @@ mastery.sst_eternal.desc = Cada compra recorta el enfriamiento de Paso Sombrío;
 mastery.ss_eternal.desc = Cada compra endurece el daño de Golpe de Escudo; cada una cuesta más que la anterior.
 mastery.ww_eternal.desc = Cada compra afila el daño de Torbellino (golpe y lanzamiento); cada una cuesta más que la anterior.
 mastery.woo_eternal.desc = Cada compra aumenta un poco más la probabilidad de drops extra de tu maestría de tala; cada una cuesta más que la anterior. Progresa sin límite.
+
+# --- Vías de maestría por escuela de daño (mastery.<trackId>.title, por convención) ---
+mastery.fire_school_mastery.title = Maestría en Fuego
+mastery.ice_school_mastery.title = Maestría en Hielo
+mastery.lightning_school_mastery.title = Maestría en Rayo
+mastery.water_school_mastery.title = Maestría en Agua
+mastery.arcane_school_mastery.title = Maestría en Arcano
+mastery.void_school_mastery.title = Maestría en Vacío
+mastery.poison_school_mastery.title = Maestría en Veneno
+
+# --- Nombres de nivel de escuela (mastery.node.<tail>.title; se compone como "<vía>: <nivel>") ---
+mastery.node.t1_pct.title = Sintonía
+mastery.node.t1_flat.title = Potenciación
+mastery.node.t2_resist.title = Protección
+mastery.node.f1_focus.title = Enfoque
+mastery.node.f2_finesse.title = Destreza
+mastery.node.f3_secret.title = Arte Oculto
+mastery.node.t4_cd.title = Flujo Ascendente
+mastery.node.t4_flat.title = Poder Ascendente
+
+# --- Nodos culminantes de escuela (claves por nodo; ganan a la composición) ---
+mastery.fire_t3_cap.title = Piroclasmo
+mastery.ice_t3_cap.title = Cero Absoluto
+mastery.lightning_t3_cap.title = Frente de Tormenta
+mastery.water_t3_cap.title = Marea Alta
+mastery.arcane_t3_cap.title = Resonancia
+mastery.void_t3_cap.title = Horizonte de Sucesos
+mastery.poison_t3_cap.title = Floración Maligna

@@ -154,3 +154,31 @@ mastery.sst_eternal.desc = Cada compra apara a recarga de Passo Sombrio; cada um
 mastery.ss_eternal.desc = Cada compra endurece o dano de Pancada de Escudo; cada uma custa mais que a anterior.
 mastery.ww_eternal.desc = Cada compra afia o dano de Redemoinho (golpe e lançamento); cada uma custa mais que a anterior.
 mastery.woo_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de lenhador; cada uma custa mais que a anterior. Treine sem limite.
+
+# --- Trilhas de maestria por escola de dano (mastery.<trackId>.title, por convenção) ---
+mastery.fire_school_mastery.title = Maestria em Fogo
+mastery.ice_school_mastery.title = Maestria em Gelo
+mastery.lightning_school_mastery.title = Maestria em Raio
+mastery.water_school_mastery.title = Maestria em Água
+mastery.arcane_school_mastery.title = Maestria em Arcano
+mastery.void_school_mastery.title = Maestria em Vazio
+mastery.poison_school_mastery.title = Maestria em Veneno
+
+# --- Nomes de nível de escola (mastery.node.<tail>.title; composto como "<trilha>: <nível>") ---
+mastery.node.t1_pct.title = Sintonia
+mastery.node.t1_flat.title = Fortalecimento
+mastery.node.t2_resist.title = Proteção
+mastery.node.f1_focus.title = Foco
+mastery.node.f2_finesse.title = Precisão
+mastery.node.f3_secret.title = Arte Oculta
+mastery.node.t4_cd.title = Fluxo Ascendente
+mastery.node.t4_flat.title = Poder Ascendente
+
+# --- Nós culminantes de escola (chaves por nó; vencem a composição) ---
+mastery.fire_t3_cap.title = Piroclasto
+mastery.ice_t3_cap.title = Zero Absoluto
+mastery.lightning_t3_cap.title = Frente de Tempestade
+mastery.water_t3_cap.title = Maré Alta
+mastery.arcane_t3_cap.title = Ressonância
+mastery.void_t3_cap.title = Horizonte de Eventos
+mastery.poison_t3_cap.title = Flor da Praga

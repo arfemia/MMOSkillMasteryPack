@@ -154,3 +154,31 @@ mastery.sst_eternal.desc = Chaque achat rogne la recharge du Pas de l'ombre ; ch
 mastery.ss_eternal.desc = Chaque achat durcit les dégâts du Coup de bouclier ; chacun coûte plus cher que le précédent.
 mastery.ww_eternal.desc = Chaque achat aiguise les dégâts du Tourbillon (coup et lancement) ; chacun coûte plus cher que le précédent.
 mastery.woo_eternal.desc = Chaque achat augmente un peu plus votre chance de drop bonus de maîtrise du bûcheronnage ; chacun coûte plus cher que le précédent. Progressez sans limite.
+
+# --- Voies de maîtrise par école de dégâts (mastery.<trackId>.title, par convention) ---
+mastery.fire_school_mastery.title = Maîtrise du feu
+mastery.ice_school_mastery.title = Maîtrise de la glace
+mastery.lightning_school_mastery.title = Maîtrise de la foudre
+mastery.water_school_mastery.title = Maîtrise de l'eau
+mastery.arcane_school_mastery.title = Maîtrise des arcanes
+mastery.void_school_mastery.title = Maîtrise du néant
+mastery.poison_school_mastery.title = Maîtrise du poison
+
+# --- Noms de palier d'école (mastery.node.<tail>.title ; composé en "<voie> : <palier>") ---
+mastery.node.t1_pct.title = Harmonie
+mastery.node.t1_flat.title = Renforcement
+mastery.node.t2_resist.title = Protection
+mastery.node.f1_focus.title = Concentration
+mastery.node.f2_finesse.title = Finesse
+mastery.node.f3_secret.title = Art caché
+mastery.node.t4_cd.title = Flux ascendant
+mastery.node.t4_flat.title = Puissance ascendante
+
+# --- Nœuds finaux d'école (clés par nœud ; elles priment sur la composition) ---
+mastery.fire_t3_cap.title = Pyroclasme
+mastery.ice_t3_cap.title = Zéro absolu
+mastery.lightning_t3_cap.title = Front d'orage
+mastery.water_t3_cap.title = Marée haute
+mastery.arcane_t3_cap.title = Résonance
+mastery.void_t3_cap.title = Horizon des événements
+mastery.poison_t3_cap.title = Floraison malsaine

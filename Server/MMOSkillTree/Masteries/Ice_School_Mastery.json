@@ -1,0 +1,78 @@
+{
+  "Name": "Ice_School_Mastery",
+  "$Comment": "Ice leans on tempo and reach: the Ascendant cooldown node shortens the whole frost roster, while the flavor nodes make Ice Bolt cheaper to throw, keep the Frost Stream's chill on target longer, and widen the Frost Nova's burst.",
+  "Payload": {
+    "extends": "school8_standard",
+    "params": {
+      "prefix": "ice",
+      "school": "Ice",
+      "schoolLower": "ice",
+      "trackName": "Ice Mastery",
+      "trackId": "ice_school_mastery",
+      "dmgIngredient": "Ingredient_Ice_Essence",
+      "comboIngredient": "Ingredient_Crystal_Blue",
+      "sacrificeStat": "MANA",
+      "capDisplay": "Absolute Zero",
+      "cdAbility": "ice_bolt",
+      "flavor1Ability": "ice_bolt",
+      "flavor2Ability": "frost_stream",
+      "flavor3Ability": "frost_nova"
+    },
+    "nodeOverrides": {
+      "ice_f1_focus": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cost",
+            "value": -0.2,
+            "targetAbility": "ice_bolt"
+          }
+        ]
+      },
+      "ice_f3_secret": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "damageRadius",
+            "value": 0.2,
+            "targetAbility": "frost_nova"
+          }
+        ]
+      },
+      "ice_t4_cd": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "frost_nova"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "ice_bolt"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "frost_stream"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "dragon_arcana"
+          },
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "crippling_slam"
+          }
+        ]
+      }
+    }
+  }
+}

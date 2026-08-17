@@ -154,3 +154,31 @@ mastery.sst_eternal.desc = Jeder Kauf verkürzt die Abklingzeit des Schattenschr
 mastery.ss_eternal.desc = Jeder Kauf härtet den Schildschlag-Schaden; jeder kostet mehr als der letzte.
 mastery.ww_eternal.desc = Jeder Kauf wetzt den Wirbelwind-Schaden (Hieb und Zauber); jeder kostet mehr als der letzte.
 mastery.woo_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Holzfällen-Mastery ein Stück weiter; jeder kostet mehr als der letzte. Grinde ohne Limit.
+
+# --- Schadensschulen-Mastery-Pfade (mastery.<trackId>.title, per Konvention aufgelöst) ---
+mastery.fire_school_mastery.title = Feuer-Mastery
+mastery.ice_school_mastery.title = Eis-Mastery
+mastery.lightning_school_mastery.title = Blitz-Mastery
+mastery.water_school_mastery.title = Wasser-Mastery
+mastery.arcane_school_mastery.title = Arkan-Mastery
+mastery.void_school_mastery.title = Leere-Mastery
+mastery.poison_school_mastery.title = Gift-Mastery
+
+# --- Stufennamen der Schulen (mastery.node.<tail>.title; zusammengesetzt als "<Pfad>: <Stufe>") ---
+mastery.node.t1_pct.title = Einklang
+mastery.node.t1_flat.title = Verstärkung
+mastery.node.t2_resist.title = Abschirmung
+mastery.node.f1_focus.title = Fokus
+mastery.node.f2_finesse.title = Feinschliff
+mastery.node.f3_secret.title = Verborgene Kunst
+mastery.node.t4_cd.title = Aufsteigender Fluss
+mastery.node.t4_flat.title = Aufsteigende Macht
+
+# --- Kronenknoten der Schulen (Knotenschlüssel; sie gewinnen vor der Zusammensetzung) ---
+mastery.fire_t3_cap.title = Pyroklasmus
+mastery.ice_t3_cap.title = Absoluter Nullpunkt
+mastery.lightning_t3_cap.title = Gewitterfront
+mastery.water_t3_cap.title = Flut
+mastery.arcane_t3_cap.title = Resonanz
+mastery.void_t3_cap.title = Ereignishorizont
+mastery.poison_t3_cap.title = Giftblüte

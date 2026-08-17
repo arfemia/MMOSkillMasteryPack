@@ -1,0 +1,54 @@
+{
+  "Name": "Water_School_Mastery",
+  "$Comment": "Water is the narrowest school in the game, so its whole flavor line settles on the Tide Caller: lasts longer, comes back sooner, costs less to call, and reaches further with every wave.",
+  "Payload": {
+    "extends": "school8_standard",
+    "params": {
+      "prefix": "water",
+      "school": "Water",
+      "schoolLower": "water",
+      "trackName": "Water Mastery",
+      "trackId": "water_school_mastery",
+      "dmgIngredient": "Ingredient_Water_Essence",
+      "comboIngredient": "Ingredient_Crystal_Cyan",
+      "sacrificeStat": "STAMINA",
+      "capDisplay": "High Tide",
+      "cdAbility": "tide_caller",
+      "flavor1Ability": "tide_caller",
+      "flavor2Ability": "tide_caller",
+      "flavor3Ability": "tide_caller"
+    },
+    "nodeOverrides": {
+      "water_f1_focus": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "durationMs",
+            "value": 0.1,
+            "targetAbility": "tide_caller"
+          }
+        ]
+      },
+      "water_f2_finesse": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cost",
+            "value": -0.2,
+            "targetAbility": "tide_caller"
+          }
+        ]
+      },
+      "water_t4_cd": {
+        "modifiers": [
+          {
+            "shape": "PERCENT",
+            "key": "cooldownMs",
+            "value": -0.12,
+            "targetAbility": "tide_caller"
+          }
+        ]
+      }
+    }
+  }
+}
