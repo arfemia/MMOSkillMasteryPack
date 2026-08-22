@@ -191,3 +191,9 @@ mastery.water_t3_cap.title = High Tide
 mastery.arcane_t3_cap.title = Resonance
 mastery.void_t3_cap.title = Event Horizon
 mastery.poison_t3_cap.title = Blightbloom
+
+# Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.menu.text = You stand before a keeper of the old disciplines. Every skill has a peak beyond its peak, and mastery is the road there. What do you seek?
+dialogue.mmo_mastery_trainer.menu.opt.quests = What tasks do you have for me?
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Teach me the ways of mastery.
+dialogue.mmo_mastery_trainer.menu.opt.farewell = Farewell.

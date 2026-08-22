@@ -182,3 +182,9 @@ mastery.water_t3_cap.title = Marea Alta
 mastery.arcane_t3_cap.title = Resonancia
 mastery.void_t3_cap.title = Horizonte de Sucesos
 mastery.poison_t3_cap.title = Floración Maligna
+
+# Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.menu.text = Estás ante un guardián de las viejas disciplinas. Cada habilidad tiene una cima más allá de su cima, y la maestría es el camino hacia ella. ¿Qué buscas?
+dialogue.mmo_mastery_trainer.menu.opt.quests = ¿Qué tareas tienes para mí?
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Enséñame los caminos de la maestría.
+dialogue.mmo_mastery_trainer.menu.opt.farewell = Adiós.

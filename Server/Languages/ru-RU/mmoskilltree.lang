@@ -182,3 +182,9 @@ mastery.water_t3_cap.title = Прилив
 mastery.arcane_t3_cap.title = Резонанс
 mastery.void_t3_cap.title = Горизонт событий
 mastery.poison_t3_cap.title = Цвет порчи
+
+# Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.menu.text = Перед тобой хранитель древних дисциплин. У каждого навыка есть вершина за вершиной, и мастерство - путь туда. Что ты ищешь?
+dialogue.mmo_mastery_trainer.menu.opt.quests = Какие задания у тебя есть для меня?
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Научи меня путям мастерства.
+dialogue.mmo_mastery_trainer.menu.opt.farewell = Прощай.

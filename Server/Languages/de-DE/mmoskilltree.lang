@@ -182,3 +182,9 @@ mastery.water_t3_cap.title = Flut
 mastery.arcane_t3_cap.title = Resonanz
 mastery.void_t3_cap.title = Ereignishorizont
 mastery.poison_t3_cap.title = Giftblüte
+
+# Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.menu.text = Du stehst vor einem Hüter der alten Disziplinen. Jede Fertigkeit hat einen Gipfel jenseits ihres Gipfels, und Meisterschaft ist der Weg dorthin. Was suchst du?
+dialogue.mmo_mastery_trainer.menu.opt.quests = Welche Aufgaben hast du für mich?
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Lehre mich die Wege der Meisterschaft.
+dialogue.mmo_mastery_trainer.menu.opt.farewell = Lebewohl.

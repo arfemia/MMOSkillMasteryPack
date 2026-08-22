@@ -1,5 +1,5 @@
 {
-  "$Comment": "A generalist's quest: reach level 25 in five different skills. Each step reads that skill's own MMO_Level_<SKILL> stat channel, so add or swap a step by pointing it at a different skill's channel.",
+  "$Comment": "A generalist's quest: reach level 25 in five different skills. Each step reads that skill's own MMO_Level_<SKILL> stat channel, so add or swap a step by pointing it at a different skill's channel. The Mastery Trainer offers it (accept it on their quest list) and TurnInId 'giver' adds a return-to-the-trainer step, paying out there on the spot.",
   "Text": {
     "TitleKey": "quest.pack_path_of_mastery.title",
     "FlavorKey": "quest.pack_path_of_mastery.flavor"
@@ -13,7 +13,11 @@
     ]
   },
   "Flow": {
-    "AutoAccept": true
+    "AutoClaim": true
+  },
+  "Npc": {
+    "ViewId": "MMO_Mastery_Trainer",
+    "TurnInId": "giver"
   },
   "Requires": {
     "Factors": [

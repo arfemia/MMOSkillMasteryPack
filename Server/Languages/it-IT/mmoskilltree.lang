@@ -182,3 +182,9 @@ mastery.water_t3_cap.title = Alta Marea
 mastery.arcane_t3_cap.title = Risonanza
 mastery.void_t3_cap.title = Orizzonte degli Eventi
 mastery.poison_t3_cap.title = Fioritura Corrotta
+
+# Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.menu.text = Sei davanti a un custode delle antiche discipline. Ogni abilità ha una vetta oltre la sua vetta, e la maestria è la strada per arrivarci. Cosa cerchi?
+dialogue.mmo_mastery_trainer.menu.opt.quests = Che compiti hai per me?
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Insegnami le vie della maestria.
+dialogue.mmo_mastery_trainer.menu.opt.farewell = Addio.

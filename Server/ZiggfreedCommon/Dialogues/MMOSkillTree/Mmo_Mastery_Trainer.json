@@ -1,0 +1,48 @@
+{
+  "$Comment": [
+    "The Mastery Trainer's conversation: a short menu with three choices - see the quests they",
+    "offer (the shared quest list, opened AT the trainer so their own quests can be accepted and",
+    "handed in there), open the mastery menu, or leave.",
+    "",
+    "Start.Quests routes a finished quest ahead of the menu: a player returning with a completed",
+    "mastery quest is greeted with its hand-in beat first, exactly the way the Adventurer's Guide",
+    "handles theirs. The four ids listed are this pack's own mastery quests; add a row here when",
+    "you add a quest that names the trainer as its giver, so its hand-in gets the same treatment.",
+    "",
+    "The Header line mirrors the player's tracked objective at the top of the conversation.",
+    "To reword any line, override the dialogue.mmo_mastery_trainer.* keys in a language file."
+  ],
+  "Name": "Mmo_Mastery_Trainer",
+  "Header": [
+    "ActiveObjective"
+  ],
+  "Start": {
+    "Quests": {
+      "pack_first_milestone": { "Ready": true },
+      "pack_essence_collector": { "Ready": true },
+      "pack_essence_devotee": { "Ready": true },
+      "pack_path_of_mastery": { "Ready": true }
+    },
+    "Fallback": "menu"
+  },
+  "Nodes": {
+    "menu": {
+      "TextKey": "dialogue.mmo_mastery_trainer.menu.text",
+      "Options": [
+        {
+          "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.quests",
+          "Style": "neutral",
+          "Open": "Quests"
+        },
+        {
+          "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.mastery",
+          "Open": "Mmo_Mastery"
+        },
+        {
+          "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.farewell",
+          "Close": true
+        }
+      ]
+    }
+  }
+}

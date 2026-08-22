@@ -182,3 +182,9 @@ mastery.water_t3_cap.title = Dagály
 mastery.arcane_t3_cap.title = Rezonancia
 mastery.void_t3_cap.title = Eseményhorizont
 mastery.poison_t3_cap.title = Métely Virága
+
+# Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.menu.text = A régi tudományok őrzője előtt állsz. Minden képzettségnek van egy csúcsa a csúcsán túl, és a mesterség az oda vezető út. Mit keresel?
+dialogue.mmo_mastery_trainer.menu.opt.quests = Milyen feladataid vannak számomra?
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Taníts meg a mesterség útjaira.
+dialogue.mmo_mastery_trainer.menu.opt.farewell = Ég veled.

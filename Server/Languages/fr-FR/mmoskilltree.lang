@@ -182,3 +182,9 @@ mastery.water_t3_cap.title = Marée haute
 mastery.arcane_t3_cap.title = Résonance
 mastery.void_t3_cap.title = Horizon des événements
 mastery.poison_t3_cap.title = Floraison malsaine
+
+# Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.menu.text = Tu te tiens devant un gardien des anciennes disciplines. Chaque compétence a un sommet au-delà de son sommet, et la maîtrise est le chemin qui y mène. Que cherches-tu ?
+dialogue.mmo_mastery_trainer.menu.opt.quests = Quelles tâches as-tu pour moi ?
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Enseigne-moi les voies de la maîtrise.
+dialogue.mmo_mastery_trainer.menu.opt.farewell = Adieu.

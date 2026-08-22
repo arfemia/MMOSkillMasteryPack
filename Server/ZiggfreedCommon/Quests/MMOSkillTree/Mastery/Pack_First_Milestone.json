@@ -1,5 +1,5 @@
 {
-  "$Comment": "A gentle nudge toward the mastery menu: reach level 15 in any one skill. Reads the MMO_HighestSkillLevel stat channel, the highest single skill level across the roster, so any skill counts.",
+  "$Comment": "A gentle nudge toward the mastery menu: reach level 15 in any one skill. Reads the MMO_HighestSkillLevel stat channel, the highest single skill level across the roster, so any skill counts. The Mastery Trainer offers it (accept it on their quest list) and TurnInId 'giver' adds a return-to-the-trainer step, paying out there on the spot.",
   "Text": {
     "TitleKey": "quest.pack_first_milestone.title",
     "FlavorKey": "quest.pack_first_milestone.flavor"
@@ -13,7 +13,11 @@
     ]
   },
   "Flow": {
-    "AutoAccept": true
+    "AutoClaim": true
+  },
+  "Npc": {
+    "ViewId": "MMO_Mastery_Trainer",
+    "TurnInId": "giver"
   },
   "Requires": {
     "Factors": [

@@ -182,3 +182,9 @@ mastery.water_t3_cap.title = Yüksek Gelgit
 mastery.arcane_t3_cap.title = Rezonans
 mastery.void_t3_cap.title = Olay Ufku
 mastery.poison_t3_cap.title = Zehir Çiçeği
+
+# Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.menu.text = Eski disiplinlerin bir bekçisinin karşısındasın. Her yeteneğin zirvesinin ötesinde bir zirve vardır ve ustalık oraya giden yoldur. Ne arıyorsun?
+dialogue.mmo_mastery_trainer.menu.opt.quests = Benim için ne görevlerin var?
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Bana ustalığın yollarını öğret.
+dialogue.mmo_mastery_trainer.menu.opt.farewell = Elveda.

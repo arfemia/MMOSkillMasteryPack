@@ -182,3 +182,9 @@ mastery.water_t3_cap.title = Maré Alta
 mastery.arcane_t3_cap.title = Ressonância
 mastery.void_t3_cap.title = Horizonte de Eventos
 mastery.poison_t3_cap.title = Flor da Praga
+
+# Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.menu.text = Você está diante de um guardião das antigas disciplinas. Toda habilidade tem um pico além do seu pico, e a maestria é o caminho até lá. O que você procura?
+dialogue.mmo_mastery_trainer.menu.opt.quests = Que tarefas você tem para mim?
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Ensine-me os caminhos da maestria.
+dialogue.mmo_mastery_trainer.menu.opt.farewell = Até logo.

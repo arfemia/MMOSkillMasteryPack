@@ -1,0 +1,56 @@
+{
+  "$Comment": [
+    "The Mastery Trainer, standing in the Forgotten Temple across from the Adventurer's Guide.",
+    "This pack's copy of the trainer's placement: same standing, same look, but pressing F opens",
+    "the Mmo_Mastery_Trainer conversation instead of the bare mastery screen, because with this",
+    "pack installed the trainer has quests to hand out - the conversation offers the quest list,",
+    "the mastery menu, and a farewell. This file wins over the one in the mod jar by pack rank;",
+    "delete it (or set Enabled false in mods/ziggfreedcommon/npc-placements.json) to fall back.",
+    "",
+    "Where targets the temple by its GameplayConfig key rather than by name: that key is the",
+    "engine's own per-world gameplay-config id - 'ForgottenTemple' ships with the base game - and",
+    "it is the same every time the temple is entered, while the world NAME carries a fresh uuid",
+    "each time.",
+    "",
+    "Requires keeps the trainer away until the mastery feature is switched on; Lifecycle keeps",
+    "their chunk loaded, puts them back if something removes them, and raises their health beyond",
+    "anything that can be dealt. This placement authors no Identity.NpcId, so the character IS its",
+    "role: the pack's mastery quests bind to MMO_Mastery_Trainer, and any second placement of that",
+    "role is the same trainer, offering and taking hand-ins for the same quests."
+  ],
+  "Name": "Mmo_Mastery_Trainer_Temple",
+  "Enabled": true,
+  "Where": {
+    "GameplayConfig": [
+      "ForgottenTemple"
+    ]
+  },
+  "Identity": {
+    "Role": "MMO_Mastery_Trainer"
+  },
+  "Anchor": {
+    "WorldSpawn": {
+      "Offset": {
+        "X": -2.5
+      },
+      "Yaw": 180.0
+    }
+  },
+  "Requires": {
+    "Conditions": [
+      {
+        "Factor": "mmoskilltree:feature",
+        "Param": "mastery",
+        "Min": 1.0
+      }
+    ]
+  },
+  "Lifecycle": {
+    "KeepAlive": true,
+    "Respawn": true,
+    "Fortify": true
+  },
+  "Interact": {
+    "Dialogue": "Mmo_Mastery_Trainer"
+  }
+}
