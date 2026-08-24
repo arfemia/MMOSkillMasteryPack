@@ -1,15 +1,34 @@
 {
-  "$Comment": "An early mastery-onboarding turn-in: bring 100 Life Essence to bank a first taste of mastery points and skill XP. The Mastery Trainer offers it (Npc.ViewId; accept it on their quest list) and TurnInId 'giver' means the essence is handed in back at the trainer, paying out on the spot. Override the Amount to retune the ask, or the Rewards array to retune the payout.",
-  "Text": { "TitleKey": "quest.pack_essence_collector.title", "FlavorKey": "quest.pack_essence_collector.flavor" },
-  "Listing": { "Category": "main", "SortOrder": 40, "Tags": ["Mastery", "Gathering"] },
-  "Flow": { "AutoClaim": true },
+  "$Comment": "An early mastery-onboarding turn-in: bring 100 Life Essence to bank a first taste of mastery points and skill XP. The Mastery Trainer offers it (Npc.ViewId; accept it on their quest list) and TurnInId 'giver' means the essence is handed in back at the trainer. AutoClaim is off, so the reward waits in the quest log until the player collects it themselves. Override the Amount to retune the ask, or the Rewards array to retune the payout.",
+  "Text": {
+    "TitleKey": "quest.pack_essence_collector.title",
+    "FlavorKey": "quest.pack_essence_collector.flavor"
+  },
+  "Listing": {
+    "Category": "main",
+    "SortOrder": 40,
+    "Tags": ["Mastery", "Gathering"]
+  },
+  "Flow": { "AutoClaim": false },
   "Npc": { "ViewId": "MMO_Mastery_Trainer", "TurnInId": "giver" },
-  "Requires": { "Factors": [ { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 } ] },
+  "Requires": {
+    "Factors": [
+      { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 }
+    ]
+  },
   "Objectives": {
-    "turn_in_essence": { "Kind": "TURN_IN", "Target": "Ingredient_Life_Essence", "Amount": 100, "MatchMode": "EXACT" }
+    "turn_in_essence": {
+      "Kind": "TURN_IN",
+      "Target": "Ingredient_Life_Essence",
+      "Amount": 100,
+      "MatchMode": "EXACT"
+    }
   },
   "Rewards": [
-    { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": 5 } },
+    {
+      "Kind": "Currency",
+      "Params": { "Currency": "mastery_point", "Amount": 5 }
+    },
     { "Kind": "Mmo_Xp", "Params": { "Skill": "MINING", "Amount": 2000 } },
     { "Kind": "Mmo_Xp", "Params": { "Skill": "WOODCUTTING", "Amount": 2000 } }
   ]
