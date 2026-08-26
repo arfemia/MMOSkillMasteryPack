@@ -1,0 +1,332 @@
+{
+  "$Comment": "Writes the standard six-node combat mastery once per weapon skill: a damage-vs-combo opening pair, a lifesteal-vs-cooldown second fork, a sacrificial capstone, and a repeatable Eternal trickle, every gate reading that skill's own level. Each row of ForEach binds one skill's ingredients and sacrifice stat; every combination becomes an ordinary child of mastery_base, so overriding one member is a Masteries/ file of the same id (an authored file always wins over the generated member). PERCENT values are fractions (0.08 is +8%), FLAT lifesteal and combo damage are raw points.",
+  "Base": "mastery_base",
+  "IdPattern": "{skillLower}_mastery",
+  "ForEach": [
+    {
+      "Values": [
+        {
+          "skill": "ARCHERY",
+          "skillLower": "archery",
+          "prefix": "arc",
+          "dmgIngredient": "Ingredient_Lightning_Essence",
+          "comboIngredient": "Ingredient_Lightning_Essence",
+          "sacrificeStat": "STAMINA",
+          "t1DmgCount": 6
+        },
+        {
+          "skill": "ARTILLERY",
+          "skillLower": "artillery",
+          "prefix": "art",
+          "dmgIngredient": "Ingredient_Fire_Essence",
+          "comboIngredient": "Ingredient_Lightning_Essence",
+          "sacrificeStat": "HEALTH",
+          "t1DmgCount": 1
+        },
+        {
+          "skill": "AXES",
+          "skillLower": "axes",
+          "prefix": "axe",
+          "dmgIngredient": "Ingredient_Lightning_Essence",
+          "comboIngredient": "Ingredient_Lightning_Essence",
+          "sacrificeStat": "STAMINA",
+          "t1DmgCount": 1
+        },
+        {
+          "skill": "BLUNT",
+          "skillLower": "blunt",
+          "prefix": "blu",
+          "dmgIngredient": "Ingredient_Lightning_Essence",
+          "comboIngredient": "Ingredient_Lightning_Essence",
+          "sacrificeStat": "STAMINA",
+          "t1DmgCount": 1
+        },
+        {
+          "skill": "DAGGERS",
+          "skillLower": "daggers",
+          "prefix": "dag",
+          "dmgIngredient": "Ingredient_Void_Essence",
+          "comboIngredient": "Ingredient_Lightning_Essence",
+          "sacrificeStat": "STAMINA",
+          "t1DmgCount": 1
+        },
+        {
+          "skill": "POLEARMS",
+          "skillLower": "polearms",
+          "prefix": "pol",
+          "dmgIngredient": "Ingredient_Lightning_Essence",
+          "comboIngredient": "Ingredient_Lightning_Essence",
+          "sacrificeStat": "STAMINA",
+          "t1DmgCount": 1
+        },
+        {
+          "skill": "STAVES",
+          "skillLower": "staves",
+          "prefix": "sta",
+          "dmgIngredient": "Ingredient_Fire_Essence",
+          "comboIngredient": "Ingredient_Lightning_Essence",
+          "sacrificeStat": "MANA",
+          "t1DmgCount": 1
+        },
+        {
+          "skill": "SWORDS",
+          "skillLower": "swords",
+          "prefix": "swo",
+          "dmgIngredient": "Ingredient_Lightning_Essence",
+          "comboIngredient": "Ingredient_Lightning_Essence",
+          "sacrificeStat": "HEALTH",
+          "t1DmgCount": 1
+        },
+        {
+          "skill": "UNARMED",
+          "skillLower": "unarmed",
+          "prefix": "una",
+          "dmgIngredient": "Ingredient_Lightning_Essence",
+          "comboIngredient": "Ingredient_Lightning_Essence",
+          "sacrificeStat": "HEALTH",
+          "t1DmgCount": 1
+        }
+      ]
+    }
+  ],
+  "Child": {
+    "Target": "skill:{skill}",
+    "Requires": {
+      "Factors": [
+        {
+          "Factor": "hytale:stat",
+          "Param": "MMO_Level_{skill}",
+          "Min": 16
+        }
+      ]
+    },
+    "Nodes": {
+      "{prefix}_t1_dmg": {
+        "Tier": 1,
+        "ChoiceGroup": "{prefix}_t1",
+        "Cost": {
+          "Currencies": {
+            "mastery_point": 3,
+            "life_essence": 600
+          },
+          "Items": [
+            {
+              "Item": "{dmgIngredient}",
+              "Count": "{t1DmgCount}"
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Shape": "PERCENT",
+            "ParamKey": "damage",
+            "Value": 0.08,
+            "TargetSkill": "{skill}",
+            "CombatTarget": "{skill}"
+          }
+        ]
+      },
+      "{prefix}_t1_combo": {
+        "Tier": 1,
+        "ChoiceGroup": "{prefix}_t1",
+        "Cost": {
+          "Currencies": {
+            "mastery_point": 3,
+            "life_essence": 600
+          },
+          "Items": [
+            {
+              "Item": "{comboIngredient}",
+              "Count": 1
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Shape": "FLAT",
+            "ParamKey": "comboFinisherBonus",
+            "Value": 5,
+            "TargetSkill": "{skill}",
+            "CombatTarget": "{skill}"
+          }
+        ]
+      },
+      "{prefix}_t2_life": {
+        "Tier": 2,
+        "ChoiceGroup": "{prefix}_t2",
+        "Prerequisites": [
+          "{prefix}_t1_dmg"
+        ],
+        "Requires": {
+          "Factors": [
+            {
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_{skill}",
+              "Min": 40
+            }
+          ]
+        },
+        "Cost": {
+          "Currencies": {
+            "mastery_point": 6,
+            "life_essence": 1500
+          },
+          "Items": [
+            {
+              "Item": "{dmgIngredient}",
+              "Count": 2
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Shape": "FLAT",
+            "ParamKey": "lifesteal",
+            "Value": 3,
+            "TargetSkill": "{skill}",
+            "CombatTarget": "{skill}"
+          }
+        ]
+      },
+      "{prefix}_t2_cd": {
+        "Tier": 2,
+        "ChoiceGroup": "{prefix}_t2",
+        "Prerequisites": [
+          "{prefix}_t1_combo"
+        ],
+        "Requires": {
+          "Factors": [
+            {
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_{skill}",
+              "Min": 40
+            }
+          ]
+        },
+        "Cost": {
+          "Currencies": {
+            "mastery_point": 6,
+            "life_essence": 1500
+          },
+          "Items": [
+            {
+              "Item": "{comboIngredient}",
+              "Count": 2
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Shape": "PERCENT",
+            "ParamKey": "cooldownMs",
+            "Value": -0.15,
+            "TargetSkill": "{skill}"
+          }
+        ]
+      },
+      "{prefix}_t3_cap": {
+        "Tier": 3,
+        "Requires": {
+          "Factors": [
+            {
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_{skill}",
+              "Min": 70
+            }
+          ],
+          "AnyOf": [
+            {
+              "Factors": [
+                {
+                  "Factor": "mmoskilltree:mastery_node",
+                  "Param": "{skillLower}_mastery:{prefix}_t2_life",
+                  "Min": 1
+                }
+              ]
+            },
+            {
+              "Factors": [
+                {
+                  "Factor": "mmoskilltree:mastery_node",
+                  "Param": "{skillLower}_mastery:{prefix}_t2_cd",
+                  "Min": 1
+                }
+              ]
+            }
+          ]
+        },
+        "Cost": {
+          "Currencies": {
+            "mastery_point": 12,
+            "life_essence": 4000
+          },
+          "Items": [
+            {
+              "Item": "{dmgIngredient}",
+              "Count": 3
+            },
+            {
+              "Item": "Ingredient_Voidheart",
+              "Count": 2
+            }
+          ]
+        },
+        "StatSacrifice": {
+          "Stat": "{sacrificeStat}",
+          "Mode": "permanent_max",
+          "Amount": 10
+        },
+        "Modifiers": [
+          {
+            "Shape": "PERCENT",
+            "ParamKey": "damage",
+            "Value": 0.12,
+            "TargetSkill": "{skill}",
+            "CombatTarget": "{skill}"
+          }
+        ]
+      },
+      "{prefix}_eternal": {
+        "Tier": 9,
+        "Prerequisites": [
+          "{prefix}_t3_cap"
+        ],
+        "Requires": {
+          "Factors": [
+            {
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_{skill}",
+              "Min": 92
+            }
+          ]
+        },
+        "MaxPurchases": -1,
+        "CostScaling": {
+          "Curve": "EXPONENTIAL",
+          "Multiplier": 1.1
+        },
+        "Cost": {
+          "Currencies": {
+            "mastery_point": 1,
+            "life_essence": 350
+          },
+          "Items": [
+            {
+              "Item": "{dmgIngredient}",
+              "Count": 2
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Shape": "PERCENT",
+            "ParamKey": "damage",
+            "Value": 0.005,
+            "TargetSkill": "{skill}",
+            "CombatTarget": "{skill}"
+          }
+        ]
+      }
+    }
+  }
+}

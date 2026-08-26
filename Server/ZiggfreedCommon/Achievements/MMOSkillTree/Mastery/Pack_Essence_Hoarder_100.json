@@ -1,13 +1,43 @@
 {
   "$Comment": "Gather 100 Life Essence over a lifetime (pickups accumulate, spending them does not undo progress). Pairs with Essence Hoarder II for the deeper collector's grind.",
-  "Text": { "TitleKey": "achievement.pack_essence_hoarder_100.title", "FlavorKey": "achievement.pack_essence_hoarder_100.desc" },
-  "Listing": { "Category": "mastery", "Subcategory": "essence", "SortOrder": 30 },
-  "Scoring": { "Points": 25 },
-  "Requires": { "Factors": [ { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 } ] },
-  "Criteria": [
-    { "Kind": "PICKUP_ITEM", "Target": "Ingredient_Life_Essence", "Amount": 100, "MatchMode": "EXACT" }
-  ],
-  "ClaimRewards": [
-    { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": 2 } }
-  ]
+  "Text": {
+    "TitleKey": "achievement.pack_essence_hoarder_100.title",
+    "FlavorKey": "achievement.pack_essence_hoarder_100.desc"
+  },
+  "Listing": {
+    "Category": "mastery",
+    "Subcategory": "essence",
+    "SortOrder": 30
+  },
+  "Scoring": {
+    "Points": 25
+  },
+  "Requires": {
+    "Factors": [
+      {
+        "Factor": "mmoskilltree:feature",
+        "Param": "mastery",
+        "Min": 1
+      }
+    ]
+  },
+  "Criteria": {
+    "pickup-item-ingredient-life-essence": {
+      "Kind": "PICKUP_ITEM",
+      "Target": "Ingredient_Life_Essence",
+      "Amount": 100,
+      "MatchMode": "EXACT"
+    }
+  },
+  "Rewards": {
+    "Claim": [
+      {
+        "Kind": "Currency",
+        "Params": {
+          "Currency": "mastery_point",
+          "Amount": 2
+        }
+      }
+    ]
+  }
 }

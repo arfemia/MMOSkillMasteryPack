@@ -1,0 +1,185 @@
+{
+  "$Comment": "Writes the four-step gathering mastery once per gathering skill: three loot-luck steps and a repeatable Eternal trickle, each gate reading that skill's own level. lootMultiplier is a PERCENT fraction added to the skill's lucky-find chance (0.03 is +3%). Each combination becomes an ordinary child of mastery_base; override one member by authoring a Masteries/ file of the same id.",
+  "Base": "mastery_base",
+  "IdPattern": "{skillLower}_mastery",
+  "ForEach": [
+    {
+      "Values": [
+        {
+          "skill": "HARVESTING",
+          "skillLower": "harvesting",
+          "prefix": "har",
+          "ingredient": "Ingredient_Water_Essence",
+          "t3Extra": "Ingredient_Crystal_Blue"
+        },
+        {
+          "skill": "MINING",
+          "skillLower": "mining",
+          "prefix": "min",
+          "ingredient": "Ingredient_Crystal_Blue",
+          "t3Extra": "Ingredient_Crystal_Purple"
+        },
+        {
+          "skill": "WOODCUTTING",
+          "skillLower": "woodcutting",
+          "prefix": "woo",
+          "ingredient": "Ingredient_Water_Essence",
+          "t3Extra": "Ingredient_Crystal_Blue"
+        }
+      ]
+    }
+  ],
+  "Child": {
+    "Target": "skill:{skill}",
+    "Requires": {
+      "Factors": [
+        {
+          "Factor": "hytale:stat",
+          "Param": "MMO_Level_{skill}",
+          "Min": 5
+        }
+      ]
+    },
+    "Nodes": {
+      "{prefix}_t1": {
+        "Tier": 1,
+        "Cost": {
+          "Currencies": {
+            "mastery_point": 2,
+            "life_essence": 500
+          },
+          "Items": [
+            {
+              "Item": "{ingredient}",
+              "Count": 1
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Shape": "PERCENT",
+            "ParamKey": "lootMultiplier",
+            "Value": 0.03,
+            "TargetSkill": "{skill}"
+          }
+        ]
+      },
+      "{prefix}_t2": {
+        "Tier": 2,
+        "Prerequisites": [
+          "{prefix}_t1"
+        ],
+        "Requires": {
+          "Factors": [
+            {
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_{skill}",
+              "Min": 40
+            }
+          ]
+        },
+        "Cost": {
+          "Currencies": {
+            "mastery_point": 5,
+            "life_essence": 1200
+          },
+          "Items": [
+            {
+              "Item": "{ingredient}",
+              "Count": 2
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Shape": "PERCENT",
+            "ParamKey": "lootMultiplier",
+            "Value": 0.05,
+            "TargetSkill": "{skill}"
+          }
+        ]
+      },
+      "{prefix}_t3": {
+        "Tier": 3,
+        "Prerequisites": [
+          "{prefix}_t2"
+        ],
+        "Requires": {
+          "Factors": [
+            {
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_{skill}",
+              "Min": 70
+            }
+          ]
+        },
+        "Cost": {
+          "Currencies": {
+            "mastery_point": 10,
+            "life_essence": 3500
+          },
+          "Items": [
+            {
+              "Item": "{ingredient}",
+              "Count": 3
+            },
+            {
+              "Item": "{t3Extra}",
+              "Count": 2
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Shape": "PERCENT",
+            "ParamKey": "lootMultiplier",
+            "Value": 0.1,
+            "TargetSkill": "{skill}"
+          }
+        ]
+      },
+      "{prefix}_eternal": {
+        "Tier": 9,
+        "Prerequisites": [
+          "{prefix}_t1",
+          "{prefix}_t2",
+          "{prefix}_t3"
+        ],
+        "Requires": {
+          "Factors": [
+            {
+              "Factor": "hytale:stat",
+              "Param": "MMO_Level_{skill}",
+              "Min": 92
+            }
+          ]
+        },
+        "MaxPurchases": -1,
+        "CostScaling": {
+          "Curve": "EXPONENTIAL",
+          "Multiplier": 1.1
+        },
+        "Cost": {
+          "Currencies": {
+            "mastery_point": 1,
+            "life_essence": 200
+          },
+          "Items": [
+            {
+              "Item": "{ingredient}",
+              "Count": 2
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Shape": "PERCENT",
+            "ParamKey": "lootMultiplier",
+            "Value": 0.005,
+            "TargetSkill": "{skill}"
+          }
+        ]
+      }
+    }
+  }
+}

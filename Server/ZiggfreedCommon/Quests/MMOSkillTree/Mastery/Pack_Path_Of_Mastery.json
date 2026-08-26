@@ -1,5 +1,5 @@
 {
-  "$Comment": "A generalist's quest: reach level 25 in five different skills. Each step reads that skill's own MMO_Level_<SKILL> stat channel, so add or swap a step by pointing it at a different skill's channel. The Mastery Trainer offers it (accept it on their quest list) and TurnInId 'giver' adds a return-to-the-trainer step. AutoClaim is off, so the reward waits in the quest log until the player collects it themselves.",
+  "$Comment": "A generalist's quest: reach level 25 in five different skills. Each step reads that skill's own MMO_Level_<SKILL> stat channel, so add or swap a step by pointing it at a different skill's channel. The Mastery Trainer offers it (accept it on their quest list) and TurnInId 'giver' adds a return-to-the-trainer step. The reward sits in the Claim bucket, so it waits in the quest log until the player collects it themselves.",
   "Text": {
     "TitleKey": "quest.pack_path_of_mastery.title",
     "FlavorKey": "quest.pack_path_of_mastery.flavor"
@@ -11,9 +11,6 @@
       "Mastery",
       "Generalist"
     ]
-  },
-  "Flow": {
-    "AutoClaim": false
   },
   "Npc": {
     "ViewId": "MMO_Mastery_Trainer",
@@ -55,13 +52,15 @@
       "Amount": 25
     }
   },
-  "Rewards": [
-    {
-      "Kind": "Currency",
-      "Params": {
-        "Currency": "mastery_point",
-        "Amount": 10
+  "Rewards": {
+    "Claim": [
+      {
+        "Kind": "Currency",
+        "Params": {
+          "Currency": "mastery_point",
+          "Amount": 10
+        }
       }
-    }
-  ]
+    ]
+  }
 }

@@ -1,0 +1,15 @@
+{
+  "$Comment": "The shared skeleton of the damage-school tracks: global placement (a school is decided by the hit, never by which skill threw it, so the track must reach every ability), the combat-level entry gate, and the inherited refund. Each school file names this as Parent and carries its own ten nodes.",
+  "Parent": "mastery_base",
+  "Abstract": true,
+  "Target": "global",
+  "Requires": {
+    "Factors": [
+      {
+        "Factor": "hytale:stat",
+        "Param": "MMO_CombatLevel",
+        "Min": 16
+      }
+    ]
+  }
+}

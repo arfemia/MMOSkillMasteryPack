@@ -20,9 +20,9 @@ skill-mastery-pack/
 ├── MMOSkillMasteryPack.zip                    built artifact (gitignored if you regenerate)
 └── Server/
     ├── MMOSkillTree/
-    │   ├── Control/MMOSkillMasteryPack.json   replace/add per content type (no Currencies/ShopEntries entry - those types retired)
-    │   ├── MasteryTemplates/*.json            2 templates (Combat6_Standard, School8_Standard); see "Mastery template extension" below
-    │   ├── Masteries/*.json                   27 mastery tracks (18 thin extends-files + 9 hand-authored)
+    │   ├── Control/MMOSkillMasteryPack.json   replace/add per content type (CommandRewards / Quests / Achievements only; Masteries merge natively by id)
+    │   ├── Masteries/*.json                   2 Abstract bases (Mastery_Base, Mastery_School_Base) + 15 hand-authored tracks
+    │   ├── MasteryGenerators/*.json           3 generators writing the other 15 tracks (combat / gathering / utility families)
     │   ├── CommandRewardTemplates/*.json      1 template (Mastery_Point_Milestones); see "CommandReward template extension" below
     │   ├── CommandRewards/MMOSkillMasteryPack.json   one {{ALL_SKILLS}} entry fans the template to every skill
     │   ├── QuestTemplates/*.json              (optional) reusable quest skeletons; see "Quest + Achievement templates" below
@@ -55,48 +55,41 @@ excluded - they're for humans browsing the repo, not for Hytale to load.
 The `.unused-for-now/` directory is also excluded (`$ExtraExcludeDirs` in `build.ps1`) - it holds mastery JSONs
 that have been parked out of `Server/MMOSkillTree/Masteries/` and should
 not ship to players until they're moved back. Keep edits there in sync
-with the live tracks (formatting, displayName conventions, etc.) so an
-unpark is a straight move with no cleanup.
+with the live tracks so an unpark is a straight move with no cleanup.
 
-**Lighter-weight alternative:** add `"disabled": true` at the top of a
-mastery file's `Payload` to park it without moving the file. The track
-JSON still ships in the zip but `MasteryConfig.parseTrack` drops it
-during the pack-layer apply, logging `MasteryConfig: skipping disabled
-mastery track '<id>'`. Honored on base defaults, pack entries, and user
-overrides identically. Use `.unused-for-now/` for tracks you don't want
-shipping at all (keeps the zip leaner); use `disabled` for tracks you're
-toggling on and off during balance work.
+**Lighter-weight alternative: `"Enabled": false`** at the top of a track file
+(or in a generator's `Child`, which is how the whole utility family ships)
+parks it without moving the file. The track still decodes, so a server owner
+can flip it back on from `mods/mmoskilltree/mastery.json` with
+`{"tracks": {"<id>": {"Enabled": true}}}`. Use `.unused-for-now/` for tracks
+you don't want shipping at all (keeps the zip leaner); use `Enabled` for
+tracks you're toggling on and off during balance work.
 
 ## Pack JSON conventions
 
 **Asset key comes from the filename**, which Hytale requires in PascalCase
-(`Swords_Mastery.json`, not `swords_mastery.json`). The `Name` field inside
-each JSON file is a human-readable echo of the asset key - the codec
-(`AbstractRawJsonAsset.rawCodec`) consumes it via a no-op setter so it
-doesn't trip the "Unused key(s)" warning, and echoes it on encode for
-round-trip via `/mmopacks export`.
+(`Fireball_Mastery.json` is the track id `fireball_mastery`). Mastery tracks are
+STRUCTURED files - PascalCase fields at the TOP level, no `Name`/`Payload`
+wrapper:
 
 ```json
-{
-  "Name": "Swords_Mastery",
-  "Payload": { "target": "skill:SWORDS", "displayName": "Swords Mastery", … }
-}
+{ "Parent": "mastery_base",
+  "Target": "skill:SWORDS",
+  "Nodes": { "swo_t1_dmg": { "Tier": 1, "Modifiers": [ ... ] } } }
 ```
 
-`Payload` is a **nested JSON object** (not an escaped string). The codec
-captures it via `Codec.BSON_DOCUMENT`; the merge handler converts to Gson
-`JsonObject` via `bson.toJson(JsonMode.RELAXED)` and feeds it to the
-existing config parser (`MasteryConfig.parseTrack`, `QuestConfig.parseQuest`,
-etc.).
+The two content types still on the older `Name`/`Payload` wrapper in this pack
+are `CommandRewards`/`CommandRewardTemplates` and the one legacy quest
+(`Quests/Pack_Mastery_Tithe.json`); their `Payload` is a nested JSON object the
+plugin's own parser reads.
 
 ### Per-entry vs per-pack files
 
 - **Mastery / Currency / Quest / Achievement** - per-entry; one file per
-  track/currency/quest/achievement. The asset key (filename) becomes the
-  runtime id for masteries and currencies (currencies lowercased; masteries
-  lowercased by `MasteryConfig.applyPackLayer`). Quests + achievements get
-  their runtime id from the inner Payload's `id` field, so the asset key
-  doesn't have to match.
+  track/currency/quest/achievement. The asset key (filename, lowercased)
+  IS the runtime id for masteries and currencies. Legacy-shape quests +
+  achievements get their runtime id from the inner Payload's `id` field, so
+  that asset key doesn't have to match.
 - **CommandRewards** - one file per pack. The Payload is the full
   `{ "<SKILL_ID>": { "<level>": [rewards…] } }` map.
 
@@ -111,7 +104,7 @@ and so cross-references (`metaChildren`, `prerequisites`, `currencyId`,
 
 All player-facing display text ships in `Server/Languages/en-US/mmoskilltree.lang` (loaded natively via `IncludesAssetPack: true`), keyed by convention. The mod's `LocalizedText` resolver tries an explicit key field, then the by-convention key, then a raw `displayName`/`description` (the deprecated fallback) - so pack JSON should set the key and leave the literal out:
 
-- **Mastery tracks:** `mastery.<trackId>.title` (trackId = filename lowercased). Track JSON no longer carries `displayName`. Nodes keep their template-generated `displayName` ("`<Track>: Sharpened`" etc., already DRY across the combat tracks that share `Combat6_Standard`) as the English source; translate a node by adding `mastery.<nodeId>.title`. **Node DESCRIPTIONS auto-render - do NOT author a node `description`.** The mastery page generates the effect line from the node's `modifiers` (via `MasteryModifierRenderer`, localized through `mastery.mod.*`) and renders the cost separately as chips, so a hand-written `description` (e.g. "Each purchase: +0.5%... Cost grows 10%... Requires DEFENSE level 92") is dead duplication that also bakes un-localizable balance data. Author the modifier + cost + requirements as structured fields; the text follows.
+- **Mastery tracks:** `mastery.<trackId>.title` (trackId = filename lowercased) and `mastery.<nodeId>.title` per node, resolved by convention; an explicit `TitleKey` leaf overrides the convention key. **Node DESCRIPTIONS auto-render - do NOT author a node `DescriptionKey` unless a node genuinely needs extra flavor.** The mastery page generates the effect line from the node's `Modifiers` (via `MasteryModifierRenderer`, localized through `mastery.mod.*`) and renders the cost separately as chips, so a hand-written description is dead duplication that also bakes un-localizable balance data. Author the modifier + cost + requirements as structured fields; the text follows.
 - **Quests / bounties:** `quest.<id>.title` + `quest.<id>.flavor`, authored as `Text.TitleKey`/`Text.FlavorKey` on the native quests (id = filename) and as the inner `Payload.id` on `Pack_Mastery_Tithe.json` (the one still on the old schema).
 - **Currencies:** a wallet's `Text.TitleKey` (unauthored falls to `currency.<id>.name` by convention, id = filename lowercased) for COUNTER-backed currencies (`mastery_point`). An ITEM-backed currency (`life_essence`) ships neither: with nothing authored, ziggfreed-common's naming ladder derives the display name from the backing item's native, already-translated lang key (`server.items.Ingredient_Life_Essence.name`, "Essence of Life"), exactly like the icon derives from the item - zero hand-maintained translations, and the currency can never disagree with the inventory tooltip.
 - **Achievements:** `achievement.<id>.title` + `achievement.<id>.desc`.
@@ -119,116 +112,84 @@ All player-facing display text ships in `Server/Languages/en-US/mmoskilltree.lan
 
 Translate by shipping `Server/Languages/<bcp47>/mmoskilltree.lang` with the same keys (missing keys fall back to English per key). Reward line-items carry NO `displayName`: the mod auto-renders a localized line from the reward itself ("+5 Mastery Points", "Taming XP x2 for 45m", native item names), so a baked-in literal would double-render the amount AND pin the text to English. No em-dashes in `.lang` values.
 
-## Mastery template extension (plugin 1.1.0+)
+## Mastery authoring (structured schema, plugin 1.6.0+)
 
-Pack-shipped mastery tracks can extend a reusable skeleton instead of
-authoring every node from scratch. Templates live in
-`Server/MMOSkillTree/MasteryTemplates/*.json` and load before tracks via the
-`MasteryTemplateAsset` store. The canonical template `Combat6_Standard.json`
-captures the shared 6-node combat shape (T1×2 choice, T2×2 choice, T3
-capstone with level-70 gate, T9 eternal with level-92 gate + 1 mastery_point
-floor cost). 11 of the 14 skill-scoped combat tracks use it; the 9 non-combat
-shapes (gathering trio + ability tracks) stay hand-authored.
-`School8_Standard.json` is the second template, an 8-node damage-school shape
-gated on combat level rather than a single skill - see "Damage-school mastery
-tracks" below.
+A track is one structured file at `Server/MMOSkillTree/Masteries/<Id>.json` - PascalCase
+fields at the top level, decoded by the plugin's `MasteryAsset` codec (the codec IS the
+schema; the full field reference is the plugin's `CONTENT_PACKS.md` "Mastery tracks"
+section). Reuse comes in two shapes, both native:
 
-Track payload using a template:
+**1. `Parent` against an `Abstract` base.** `Mastery_Base.json` (refund policy) and
+`Mastery_School_Base.json` (global placement + the combat-level entry gate) are the two
+shipped bases; every track names one with `"Parent": "<id>"` and inherits per LEAF - a
+child retunes one node's one price and keeps everything else, because `Nodes` merges per
+node id and every group inside a node merges per field. `Abstract` itself never inherits,
+so a child of a base is a real track.
+
+**2. A generator for a whole family.** `Server/MMOSkillTree/MasteryGenerators/<Id>.json`
+writes "the same track, once per skill" from one file:
 
 ```json
-{
-  "Name": "Archery_Mastery",
-  "Payload": {
-    "extends": "combat6_standard",
-    "target": "skill:ARCHERY",
-    "displayName": "Archery Mastery",
-    "params": {
-      "prefix": "arc",
-      "gateSkill": "ARCHERY",
-      "trackName": "Archery Mastery",
-      "trackId": "archery_mastery",
-      "dmgIngredient": "Ingredient_Lightning_Essence",
-      "comboIngredient": "Ingredient_Lightning_Essence",
-      "combatTarget": "ARCHERY",
-      "sacrificeStat": "STAMINA",
-      "capDisplay": "Eagle Eye",
-      "skillLower": "archery"
-    },
-    "nodeOverrides": {
-      "arc_t1_dmg": {
-        "cost": { "items": [{ "id": "Ingredient_Lightning_Essence", "count": 6 }] }
-      }
-    },
-    "extraNodes": [
-      { "id": "arc_unique_capstone", "tier": 10, "displayName": "...", "cost": {...}, "modifiers": [...] }
-    ]
-  }
-}
+{ "Base": "mastery_base",
+  "IdPattern": "{skillLower}_mastery",
+  "ForEach": [ { "Values": [
+      { "skill": "SWORDS", "skillLower": "swords", "prefix": "swo",
+        "dmgIngredient": "Ingredient_Lightning_Essence", "sacrificeStat": "HEALTH" } ] } ],
+  "Child": { "Target": "skill:{skill}",
+             "Nodes": { "{prefix}_t1_dmg": { "Modifiers": [
+                 { "Shape": "PERCENT", "ParamKey": "damage", "Value": 0.08,
+                   "TargetSkill": "{skill}", "CombatTarget": "{skill}" } ] } } } }
 ```
 
-Resolution semantics (see `MasteryTemplateResolver.java`):
+Substitution applies to every string value, every object KEY (that is how each member
+gets its own `{prefix}_*` node ids), and `IdPattern`; a value that is exactly one token
+keeps its type, so a count lands as a number. Each combination becomes an ordinary child
+of `Base`, decoded exactly like a hand-written file - and an authored `Masteries/` file
+of the same id always WINS over the generated member, which is how one member of a
+family is made special (Magic and Defense are hand files for exactly that reason:
+Magic adds its L100 capstone node, Defense re-points every modifier at Shield Slam and
+Guardian's Call).
 
-1. **Deep-clone** the template Payload.
-2. **`{{paramName}}` substitution** - walks every string value recursively;
-   replaces `{{key}}` with `params.get(key)`. **Empty param drops the
-   holding key entirely** - lets a track opt out of optional template fields.
-   CAUTION: a combat-skill track must pass its real `combatTarget` (e.g.
-   `"MAGIC"`); Magic/Artillery once passed `""` here, which dropped the key
-   and made every swing-scoped damage/lifesteal node silently inert (fixed
-   in the 1.6.0 cycle).
-3. **Track-level fields overlay the template** - everything in the track
-   Payload except `extends`/`params`/`nodeOverrides`/`extraNodes` wins
-   (`target`, `displayName`, `icon`, `refundPercent`, track-level
-   `requirements`).
-4. **`nodeOverrides`** - for each `nodeId → overrideObject`, find the node
-   in the resolved `nodes` array (match by post-substitution `id`) and
-   **deep-merge**: object keys merge recursively; primitives + arrays
-   replace wholesale. Used for per-track asymmetries (Archery's T1 dmg
-   ingredient count = 6 vs the template default of 1).
-5. **`extraNodes`** - append wholly new node objects after the template's
-   nodes. Track-supplied id must NOT collide with a template id (use
-   `nodeOverrides` to modify existing nodes). Used for track-unique
-   content (Magic's `mag_archmagus` L100 capstone).
+The three shipped generators: `Combat_Skill_Masteries` (the six-node combat shape, once
+per weapon skill; per-row tokens carry each skill's ingredients, sacrifice stat, and
+Archery's dearer opener), `Gathering_Skill_Masteries` (the four-step loot-luck shape,
+level-gated), and `Utility_Skill_Masteries` (the same shape ungated, whole family
+shipped parked with `Enabled: false`).
 
-A missing param surfaces as a literal `{{key}}` in the resolved JSON
-(never silently dropped) so content typos are visible during validation.
-Unknown templates log a warning and the track is dropped from the effective
-set. Template id lookup is case-insensitive.
-
-The 11 thin combat tracks are typically ~20 - 40 lines each (vs ~210 lines
-pre-template). The pack `Control/MMOSkillMasteryPack.json` adds
-`"MasteryTemplates": "add"` alongside the existing content-type modes.
+Node ids are a stability contract: a player's purchases are saved under
+`<trackId>:<nodeId>`, so renaming either orphans everybody who bought the node.
 
 ## Damage-school mastery tracks (plugin 1.6.0+)
 
-Seven tracks (`{Fire,Ice,Lightning,Water,Arcane,Void,Poison}_School_Mastery.json`)
-extend `School8_Standard` and buy into a DAMAGE SCHOOL rather than a skill or an
-ability. The plugin's `school` modifier scope is orthogonal to every other scope
-and outranks all of them: an authored `"school"` sends the value to that school's
+Seven hand-authored tracks (`{Fire,Ice,Lightning,Water,Arcane,Void,Poison}_School_Mastery.json`,
+each `"Parent": "mastery_school_base"`) buy into a DAMAGE SCHOOL rather than a skill or an
+ability. The plugin's `School` modifier scope is orthogonal to every other scope
+and outranks all of them: an authored `"School"` sends the value to that school's
 own stat channel, so it pays out on every hit of that school no matter which
 weapon, skill, or ability produced it. Two param keys accept it and no others:
 
 ```json
-{ "shape": "PERCENT", "key": "damage",       "school": "Fire", "value": 0.05 }
-{ "shape": "FLAT",    "key": "damage",       "school": "Fire", "value": 8    }
-{ "shape": "PERCENT", "key": "schoolResist", "school": "Fire", "value": 0.04 }
+{ "Shape": "PERCENT", "ParamKey": "damage",       "School": "Fire", "Value": 0.05 }
+{ "Shape": "FLAT",    "ParamKey": "damage",       "School": "Fire", "Value": 8    }
+{ "Shape": "PERCENT", "ParamKey": "schoolResist", "School": "Fire", "Value": 0.04 }
 ```
 
 `PERCENT` values are fractions (0.05 is +5%), `FLAT` is raw damage, and school ids
 are matched case-insensitively. **`schoolResist` is PERCENT only** (its channel
 already counts whole percent points, so a FLAT 4 and a PERCENT 0.04 would be one
-bonus written two ways) and a school may never sit beside `targetAbility` /
-`targetSkill` / `combatTarget`, nor inside a `CONDITIONAL` - each is a load-time
+bonus written two ways) and a school may never sit beside `TargetAbility` /
+`TargetSkill` / `CombatTarget`, nor combined with a `Condition` - each is a load-time
 error naming the fix.
 
-**Every school track carries `"target": "global"`.** A track's target is its own
+**The school base carries `"Target": "global"`, so every school track inherits it.**
+A track's target is its own
 placement width, and the three widths are `ability:<id>`, `skill:<ID>` and the bare
 word `global`. A skill-scoped track only ever emits its per-ability modifiers for an
 ability that routes XP to that skill, so a Fire track parked on `skill:MAGIC` would
 silently drop its lines for the Blunt slam and the Archery shot that also burn.
 `global` reaches every ability, which is the whole point of a school: what decides a
 value is the hit's damage school, never which skill threw it. The school spine is
-unaffected either way (a `school`-scoped value rides its own channel), and an
+unaffected either way (a `School`-scoped value rides its own channel), and an
 unscoped `damage` value on a global track lands on the global damage channel.
 
 Shape of a track, every node gated on `MMO_CombatLevel` (16 track / 40 T2 / 55 F1 /
@@ -251,17 +212,18 @@ per-ability half, and they sit off the spine behind a prerequisite rather than i
 the opening tier, so a player finds them by climbing rather than by reading the
 first screen.
 
-The template holds every shared field; each track's `nodeOverrides` replaces the
-`modifiers` array of `t4_cd` and of whichever flavor nodes want a key other than
-the slot default (`f1_focus` cuts a cooldown, `f2_finesse` stretches a duration,
-`f3_secret` widens a radius), because the abilities that carry a school differ per
-school (a `nodeOverrides` array replaces wholesale, objects merge). Point a
-per-ability modifier only at a `paramKey` the ability's own Body declares:
+Each school file carries all ten nodes in full: the spine slots are the same shape
+per school, while the `t4_cd` sweep and the three flavor nodes point at that
+school's own abilities (`f1_focus` cuts a cooldown or a cost, `f2_finesse`
+stretches a duration, `f3_secret` widens a radius or a reach). Point a
+per-ability modifier only at a `Key` the ability's own Body declares:
 `durationMs`, `radius`, `damageRadius`, `distance`, `pierceCount` are body params,
 `cooldownMs` and `cost` are ability-level and work on any ability that has one.
-A key an ability never declares is inert rather than an error, so check the ability
-JSON before picking one - `fireball` declares `damageRadius`, not `radius`, and a
-passive capstone with no `Cooldown` block has no `cooldownMs` to cut.
+A key an ability never declares is inert rather than an error (the `mastery` audit
+domain under `/mmoconfig validate` warns on one outside the canonical vocabulary),
+so check the ability JSON before picking one - `fireball` declares `damageRadius`,
+not `radius`, and a passive capstone with no `Cooldown` block has no `cooldownMs`
+to cut.
 
 Titles: track titles are `mastery.<trackId>.title`, the shared tier names are
 `mastery.node.<tail>.title` (`t1_pct`, `t1_flat`, `t2_resist`, `f1_focus`,
@@ -488,20 +450,19 @@ this block; whether the mod's own UI still honors it is that side's concern.
 
 ## Editing the pack content
 
-- **Mastery templates** (`Server/MMOSkillTree/MasteryTemplates/*.json`)  - 
-  see "Mastery template extension" above. Edit the template to change the
-  shared shape across all tracks that extend it. Track-level overrides
-  (`nodeOverrides`/`extraNodes`) win; per-track param values plug into
-  `{{tokens}}`.
-- **Mastery tracks** (`Server/MMOSkillTree/Masteries/*.json`) - schema
-  documented by example in `mods/mmoskilltree/_reference/defaults-mastery.json`
-  on a running server. Track id = filename (lowercased); inner Payload has
-  `target` (skill:X or ability:X), `displayName`, optional `requirements`,
-  `nodes` array. Each node has `id`, `tier`, `displayName`, `cost` (currency
-  map + optional items + optional statSacrifice), `modifiers` (AbilityModifier
-  array). Repeatable Eternal nodes require `maxPurchases: -1` (or >1) +
-  `costScaling`. **Tracks may also use `extends`** to pull from a template
-  - see "Mastery template extension".
+- **Mastery generators** (`Server/MMOSkillTree/MasteryGenerators/*.json`) -
+  see "Mastery authoring" above. Edit a generator's `Child` to change the
+  shared shape across its whole family; edit a `ForEach` row to retune one
+  member's tokens; author a `Masteries/` file of a member's id to take that
+  member out of the family entirely (an authored file always wins).
+- **Mastery tracks** (`Server/MMOSkillTree/Masteries/*.json`) - one structured
+  file per track, PascalCase, track id = filename (lowercased). `Target`
+  (skill:X, ability:X, or global), optional `Requires`, and a `Nodes` map
+  keyed by node id: each node carries `Tier`, `Cost` (`Currencies` +
+  `Items` + `Combine`), optional `StatSacrifice`, `Modifiers`, and for
+  repeatable Eternals `MaxPurchases: -1` + `CostScaling`. Full field
+  reference: the plugin's `CONTENT_PACKS.md` "Mastery tracks" section.
+  Reuse via `"Parent"` against one of the two `Abstract` bases.
 - **Wallets + the token-shop offer** - see "Commerce content (wallets + the
   token-shop offer)" above for where this pack's currency and shop content
   actually lives now (`Server/ZiggfreedCommon/Currencies/` and
@@ -534,13 +495,13 @@ Wrong (legacy positional - the live command rejects it with
 
 The pack and the plugin co-evolve:
 
-- If you change a mastery node's modifier shape or add a new `RewardType`,
-  bump both the plugin's `MasteryConfig.SCHEMA_VERSION` (if structural) and
-  re-emit the affected mastery JSON here.
-- If the plugin adds a new content type (e.g. SkillTree pack support), add
-  a new asset class extending `AbstractRawJsonAsset`, register in
-  `AssetStoreRegistrar`, add to `PackControlAsset`, and you can immediately
-  ship content of that type from this folder.
+- If the plugin changes the mastery track schema (a `MasteryAsset` codec
+  change), bump `MasteryConfig.SCHEMA_VERSION` there and re-emit the
+  affected mastery JSON here.
+- If the plugin adds a new content type, add a structured Pattern A asset
+  class, register it in `AssetStoreRegistrar`, and you can immediately ship
+  content of that type from this folder (no `PackControlAsset` key - the
+  store merges by id natively).
 
 ## Verification
 
@@ -551,7 +512,10 @@ The pack and the plugin co-evolve:
    (`D:\Games\Hytale\UserData\Mods\`).
 4. Start the server. Confirm in the server log
    (`Saves/<world>/logs/<date>_server.log`):
-   - `[AssetPacks] Mastery pack layer applied (30 entries, mode=add) - 27 masteries effective (3 disabled)`
+   - `[AssetPacks] Mastery asset layer applied (17 entries) - 15 masteries effective`
+     then `[AssetPacks] Mastery generator layer applied (3 generators) - 27 masteries effective`
+     (17 files = 2 bases + 15 tracks; the generators write the other 15, and the two
+     bases plus the parked utility trio never count as effective).
    - Same for Currency, CommandRewards, Quest, Achievement layers.
    - No `Failed to decode asset:` or `Asset validation FAILED` lines.
 5. In-game: open the Mastery menu tab (should be visible only if the pack

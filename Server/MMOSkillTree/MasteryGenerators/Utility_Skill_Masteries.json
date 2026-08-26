@@ -1,0 +1,158 @@
+{
+  "$Comment": "Writes the four-step utility mastery once per utility skill, in the same loot-luck shape as the gathering family but with no level gates past the entry one. The whole family ships PARKED (Enabled false in the Child): switch one on by overriding its track id in mods/mmoskilltree/mastery.json with {\"Enabled\": true}, or author a Masteries/ file of the same id.",
+  "Base": "mastery_base",
+  "IdPattern": "{skillLower}_mastery",
+  "ForEach": [
+    {
+      "Values": [
+        {
+          "skill": "ACROBATICS",
+          "skillLower": "acrobatics",
+          "prefix": "acr",
+          "ingredient": "Ingredient_Lightning_Essence",
+          "t3Extra": "Ingredient_Water_Essence"
+        },
+        {
+          "skill": "ENCHANTING",
+          "skillLower": "enchanting",
+          "prefix": "enc",
+          "ingredient": "Ingredient_Fire_Essence",
+          "t3Extra": "Ingredient_Crystal_Purple"
+        },
+        {
+          "skill": "FISHING",
+          "skillLower": "fishing",
+          "prefix": "fis",
+          "ingredient": "Ingredient_Water_Essence",
+          "t3Extra": "Ingredient_Ice_Essence"
+        }
+      ]
+    }
+  ],
+  "Child": {
+    "Enabled": false,
+    "Target": "skill:{skill}",
+    "Requires": {
+      "Factors": [
+        {
+          "Factor": "hytale:stat",
+          "Param": "MMO_Level_{skill}",
+          "Min": 5
+        }
+      ]
+    },
+    "Nodes": {
+      "{prefix}_t1": {
+        "Tier": 1,
+        "Cost": {
+          "Currencies": {
+            "mastery_point": 2,
+            "life_essence": 500
+          },
+          "Items": [
+            {
+              "Item": "{ingredient}",
+              "Count": 1
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Shape": "PERCENT",
+            "ParamKey": "lootMultiplier",
+            "Value": 0.03,
+            "TargetSkill": "{skill}"
+          }
+        ]
+      },
+      "{prefix}_t2": {
+        "Tier": 2,
+        "Prerequisites": [
+          "{prefix}_t1"
+        ],
+        "Cost": {
+          "Currencies": {
+            "mastery_point": 5,
+            "life_essence": 1200
+          },
+          "Items": [
+            {
+              "Item": "{ingredient}",
+              "Count": 2
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Shape": "PERCENT",
+            "ParamKey": "lootMultiplier",
+            "Value": 0.05,
+            "TargetSkill": "{skill}"
+          }
+        ]
+      },
+      "{prefix}_t3": {
+        "Tier": 3,
+        "Prerequisites": [
+          "{prefix}_t2"
+        ],
+        "Cost": {
+          "Currencies": {
+            "mastery_point": 10,
+            "life_essence": 3500
+          },
+          "Items": [
+            {
+              "Item": "{ingredient}",
+              "Count": 3
+            },
+            {
+              "Item": "{t3Extra}",
+              "Count": 2
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Shape": "PERCENT",
+            "ParamKey": "lootMultiplier",
+            "Value": 0.1,
+            "TargetSkill": "{skill}"
+          }
+        ]
+      },
+      "{prefix}_eternal": {
+        "Tier": 9,
+        "Prerequisites": [
+          "{prefix}_t1",
+          "{prefix}_t2",
+          "{prefix}_t3"
+        ],
+        "MaxPurchases": -1,
+        "CostScaling": {
+          "Curve": "EXPONENTIAL",
+          "Multiplier": 1.1
+        },
+        "Cost": {
+          "Currencies": {
+            "life_essence": 200
+          },
+          "Items": [
+            {
+              "Item": "{ingredient}",
+              "Count": 2
+            }
+          ]
+        },
+        "Modifiers": [
+          {
+            "Shape": "PERCENT",
+            "ParamKey": "lootMultiplier",
+            "Value": 0.005,
+            "TargetSkill": "{skill}"
+          }
+        ]
+      }
+    }
+  }
+}

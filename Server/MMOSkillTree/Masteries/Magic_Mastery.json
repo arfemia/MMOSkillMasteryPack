@@ -1,67 +1,285 @@
 {
-  "Name": "Magic_Mastery",
-  "Payload": {
-    "extends": "combat6_standard",
-    "target": "skill:MAGIC",
-    "params": {
-      "prefix": "mag",
-      "gateSkill": "MAGIC",
-      "trackName": "Magic Mastery",
-      "trackId": "magic_mastery",
-      "dmgIngredient": "Ingredient_Fire_Essence",
-      "comboIngredient": "Ingredient_Lightning_Essence",
-      "combatTarget": "MAGIC",
-      "sacrificeStat": "MANA",
-      "capDisplay": "Archwizard",
-      "skillLower": "magic"
-    },
-    "extraNodes": [
+  "Parent": "mastery_base",
+  "Target": "skill:MAGIC",
+  "Requires": {
+    "Factors": [
       {
-        "id": "mag_archmagus",
-        "tier": 10,
-        "prerequisites": [
-          "mag_t3_cap"
-        ],
-        "requirements": {
-          "Factors": [
-            {
-              "Factor": "hytale:stat",
-              "Param": "MMO_Level_MAGIC",
-              "Min": 100
-            }
-          ]
-        },
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 30,
-            "life_essence": 8000
-          },
-          "items": [
-            {
-              "id": "Ingredient_Fire_Essence",
-              "count": 5
-            },
-            {
-              "id": "Ingredient_Voidheart",
-              "count": 5
-            }
-          ],
-          "statSacrifice": {
-            "stat": "MANA",
-            "mode": "permanent_max",
-            "amount": 10
-          }
-        },
-        "modifiers": [
-          {
-            "shape": "PERCENT",
-            "key": "damage",
-            "value": 0.15,
-            "targetSkill": "MAGIC"
-          }
-        ]
+        "Factor": "hytale:stat",
+        "Param": "MMO_Level_MAGIC",
+        "Min": 16
       }
     ]
+  },
+  "Nodes": {
+    "mag_t1_dmg": {
+      "Tier": 1,
+      "ChoiceGroup": "mag_t1",
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 3,
+          "life_essence": 600
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 1
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "damage",
+          "Value": 0.08,
+          "TargetSkill": "MAGIC",
+          "CombatTarget": "MAGIC"
+        }
+      ]
+    },
+    "mag_t1_combo": {
+      "Tier": 1,
+      "ChoiceGroup": "mag_t1",
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 3,
+          "life_essence": 600
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Lightning_Essence",
+            "Count": 1
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "comboFinisherBonus",
+          "Value": 5,
+          "TargetSkill": "MAGIC",
+          "CombatTarget": "MAGIC"
+        }
+      ]
+    },
+    "mag_t2_life": {
+      "Tier": 2,
+      "ChoiceGroup": "mag_t2",
+      "Prerequisites": [
+        "mag_t1_dmg"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_MAGIC",
+            "Min": 40
+          }
+        ]
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 6,
+          "life_essence": 1500
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "lifesteal",
+          "Value": 3,
+          "TargetSkill": "MAGIC",
+          "CombatTarget": "MAGIC"
+        }
+      ]
+    },
+    "mag_t2_cd": {
+      "Tier": 2,
+      "ChoiceGroup": "mag_t2",
+      "Prerequisites": [
+        "mag_t1_combo"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_MAGIC",
+            "Min": 40
+          }
+        ]
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 6,
+          "life_essence": 1500
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Lightning_Essence",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "cooldownMs",
+          "Value": -0.15,
+          "TargetSkill": "MAGIC"
+        }
+      ]
+    },
+    "mag_t3_cap": {
+      "Tier": 3,
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_MAGIC",
+            "Min": 70
+          }
+        ],
+        "AnyOf": [
+          {
+            "Factors": [
+              {
+                "Factor": "mmoskilltree:mastery_node",
+                "Param": "magic_mastery:mag_t2_life",
+                "Min": 1
+              }
+            ]
+          },
+          {
+            "Factors": [
+              {
+                "Factor": "mmoskilltree:mastery_node",
+                "Param": "magic_mastery:mag_t2_cd",
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 12,
+          "life_essence": 4000
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 3
+          },
+          {
+            "Item": "Ingredient_Voidheart",
+            "Count": 2
+          }
+        ]
+      },
+      "StatSacrifice": {
+        "Stat": "MANA",
+        "Mode": "permanent_max",
+        "Amount": 10
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "damage",
+          "Value": 0.12,
+          "TargetSkill": "MAGIC",
+          "CombatTarget": "MAGIC"
+        }
+      ]
+    },
+    "mag_eternal": {
+      "Tier": 9,
+      "Prerequisites": [
+        "mag_t3_cap"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_MAGIC",
+            "Min": 92
+          }
+        ]
+      },
+      "MaxPurchases": -1,
+      "CostScaling": {
+        "Curve": "EXPONENTIAL",
+        "Multiplier": 1.1
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 1,
+          "life_essence": 350
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "damage",
+          "Value": 0.005,
+          "TargetSkill": "MAGIC",
+          "CombatTarget": "MAGIC"
+        }
+      ]
+    },
+    "mag_archmagus": {
+      "Tier": 10,
+      "Prerequisites": [
+        "mag_t3_cap"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_MAGIC",
+            "Min": 100
+          }
+        ]
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 30,
+          "life_essence": 8000
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 5
+          },
+          {
+            "Item": "Ingredient_Voidheart",
+            "Count": 5
+          }
+        ]
+      },
+      "StatSacrifice": {
+        "Stat": "MANA",
+        "Mode": "permanent_max",
+        "Amount": 10
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "damage",
+          "Value": 0.15,
+          "TargetSkill": "MAGIC"
+        }
+      ]
+    }
   }
 }

@@ -1,199 +1,186 @@
 {
-  "Name": "Meteor_Mastery",
-  "Payload": {
-    "target": "ability:meteor",
-    "icon": "Icon_Meteor",
-    "refundPercent": 50,
-    "nodes": [
-      {
-        "id": "met_t1",
-        "tier": 1,
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 2,
-            "life_essence": 600
-          },
-          "items": [
-            {
-              "id": "Ingredient_Fire_Essence",
-              "count": 1
-            }
-          ]
+  "Parent": "mastery_base",
+  "Target": "ability:meteor",
+  "Icon": "Icon_Meteor",
+  "Nodes": {
+    "met_t1": {
+      "Tier": 1,
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 2,
+          "life_essence": 600
         },
-        "modifiers": [
+        "Items": [
           {
-            "shape": "FLAT",
-            "key": "damage",
-            "value": 10
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 1
           }
         ]
       },
-      {
-        "id": "met_t2",
-        "tier": 2,
-        "prerequisites": [
-          "met_t1"
-        ],
-        "requirements": {
-          "Factors": [
-            {
-              "Factor": "hytale:stat",
-              "Param": "MMO_Level_MAGIC",
-              "Min": 40
-            }
-          ]
-        },
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 3,
-            "life_essence": 1500
-          },
-          "items": [
-            {
-              "id": "Ingredient_Fire_Essence",
-              "count": 2
-            }
-          ]
-        },
-        "modifiers": [
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "damage",
+          "Value": 10
+        }
+      ]
+    },
+    "met_t2": {
+      "Tier": 2,
+      "Prerequisites": [
+        "met_t1"
+      ],
+      "Requires": {
+        "Factors": [
           {
-            "shape": "FLAT",
-            "key": "damage",
-            "value": 20
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_MAGIC",
+            "Min": 40
           }
         ]
       },
-      {
-        "id": "met_t3",
-        "tier": 3,
-        "prerequisites": [
-          "met_t2"
-        ],
-        "requirements": {
-          "Factors": [
-            {
-              "Factor": "hytale:stat",
-              "Param": "MMO_Level_MAGIC",
-              "Min": 55
-            }
-          ]
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 3,
+          "life_essence": 1500
         },
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 5,
-            "life_essence": 4000
-          },
-          "items": [
-            {
-              "id": "Ingredient_Fire_Essence",
-              "count": 3
-            },
-            {
-              "id": "Ingredient_Voidheart",
-              "count": 1
-            }
-          ]
-        },
-        "modifiers": [
+        "Items": [
           {
-            "shape": "FLAT",
-            "key": "damage",
-            "value": 30
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 2
           }
         ]
       },
-      {
-        "id": "met_t4",
-        "tier": 4,
-        "prerequisites": [
-          "met_t3"
-        ],
-        "requirements": {
-          "Factors": [
-            {
-              "Factor": "hytale:stat",
-              "Param": "MMO_Level_MAGIC",
-              "Min": 70
-            }
-          ]
-        },
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 8,
-            "life_essence": 8000
-          },
-          "items": [
-            {
-              "id": "Ingredient_Fire_Essence",
-              "count": 4
-            },
-            {
-              "id": "Ingredient_Voidheart",
-              "count": 2
-            }
-          ]
-        },
-        "modifiers": [
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "damage",
+          "Value": 20
+        }
+      ]
+    },
+    "met_t3": {
+      "Tier": 3,
+      "Prerequisites": [
+        "met_t2"
+      ],
+      "Requires": {
+        "Factors": [
           {
-            "shape": "FLAT",
-            "key": "damage",
-            "value": 40
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_MAGIC",
+            "Min": 55
           }
         ]
       },
-      {
-        "id": "met_eternal",
-        "tier": 9,
-        "prerequisites": [
-          "met_t4"
-        ],
-        "requirements": {
-          "Factors": [
-            {
-              "Factor": "hytale:stat",
-              "Param": "MMO_Level_MAGIC",
-              "Min": 92
-            }
-          ]
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 5,
+          "life_essence": 4000
         },
-        "maxPurchases": -1,
-        "costScaling": {
-          "mode": "EXPONENTIAL",
-          "multiplier": 1.1,
-          "softCap": 70
-        },
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 1,
-            "life_essence": 400
-          },
-          "items": [
-            {
-              "id": "Ingredient_Fire_Essence",
-              "count": 2
-            }
-          ]
-        },
-        "modifiers": [
+        "Items": [
           {
-            "shape": "PERCENT",
-            "key": "cooldownMs",
-            "value": -0.01,
-            "targetAbility": "meteor"
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 3
           },
           {
-            "shape": "PERCENT",
-            "key": "damage",
-            "value": 0.0075,
-            "targetAbility": "meteor"
+            "Item": "Ingredient_Voidheart",
+            "Count": 1
           }
         ]
-      }
-    ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "damage",
+          "Value": 30
+        }
+      ]
+    },
+    "met_t4": {
+      "Tier": 4,
+      "Prerequisites": [
+        "met_t3"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_MAGIC",
+            "Min": 70
+          }
+        ]
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 8,
+          "life_essence": 8000
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 4
+          },
+          {
+            "Item": "Ingredient_Voidheart",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "damage",
+          "Value": 40
+        }
+      ]
+    },
+    "met_eternal": {
+      "Tier": 9,
+      "Prerequisites": [
+        "met_t4"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_MAGIC",
+            "Min": 92
+          }
+        ]
+      },
+      "MaxPurchases": -1,
+      "CostScaling": {
+        "Curve": "EXPONENTIAL",
+        "Multiplier": 1.1,
+        "SoftCap": 70
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 1,
+          "life_essence": 400
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "cooldownMs",
+          "Value": -0.01,
+          "TargetAbility": "meteor"
+        },
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "damage",
+          "Value": 0.0075,
+          "TargetAbility": "meteor"
+        }
+      ]
+    }
   }
 }

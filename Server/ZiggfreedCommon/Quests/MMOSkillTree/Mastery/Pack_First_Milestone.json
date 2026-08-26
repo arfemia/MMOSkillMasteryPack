@@ -1,5 +1,5 @@
 {
-  "$Comment": "A gentle nudge toward the mastery menu: reach level 15 in any one skill. Reads the MMO_HighestSkillLevel stat channel, the highest single skill level across the roster, so any skill counts. The Mastery Trainer offers it (accept it on their quest list) and TurnInId 'giver' adds a return-to-the-trainer step. AutoClaim is off, so the reward waits in the quest log until the player collects it themselves.",
+  "$Comment": "A gentle nudge toward the mastery menu: reach level 15 in any one skill. Reads the MMO_HighestSkillLevel stat channel, the highest single skill level across the roster, so any skill counts. The Mastery Trainer offers it (accept it on their quest list) and TurnInId 'giver' adds a return-to-the-trainer step. The reward sits in the Claim bucket, so it waits in the quest log until the player collects it themselves.",
   "Text": {
     "TitleKey": "quest.pack_first_milestone.title",
     "FlavorKey": "quest.pack_first_milestone.flavor"
@@ -11,9 +11,6 @@
       "Mastery",
       "Beginner"
     ]
-  },
-  "Flow": {
-    "AutoClaim": false
   },
   "Npc": {
     "ViewId": "MMO_Mastery_Trainer",
@@ -36,13 +33,15 @@
       "TextKey": "objective.text.reach_level.any"
     }
   },
-  "Rewards": [
-    {
-      "Kind": "Currency",
-      "Params": {
-        "Currency": "mastery_point",
-        "Amount": 2
+  "Rewards": {
+    "Claim": [
+      {
+        "Kind": "Currency",
+        "Params": {
+          "Currency": "mastery_point",
+          "Amount": 2
+        }
       }
-    }
-  ]
+    ]
+  }
 }

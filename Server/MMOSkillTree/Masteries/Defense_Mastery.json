@@ -1,71 +1,236 @@
 {
-  "Name": "Defense_Mastery",
-  "Payload": {
-    "extends": "combat6_standard",
-    "target": "skill:DEFENSE",
-    "params": {
-      "prefix": "def",
-      "gateSkill": "DEFENSE",
-      "trackName": "Defense Mastery",
-      "trackId": "defense_mastery",
-      "dmgIngredient": "Ingredient_Water_Essence",
-      "comboIngredient": "Ingredient_Lightning_Essence",
-      "combatTarget": "ALL",
-      "sacrificeStat": "HEALTH",
-      "capDisplay": "Blood Pact",
-      "skillLower": "defense"
-    },
-    "nodeOverrides": {
-      "def_t1_dmg": {
-        "modifiers": [
-          {
-            "shape": "PERCENT",
-            "key": "iframesDurationMs",
-            "value": 0.25,
-            "targetAbility": "shield_slam"
-          }
-        ]
-      },
-      "def_t1_combo": {
-        "modifiers": [
-          {
-            "shape": "PERCENT",
-            "key": "distance",
-            "value": 0.25,
-            "targetAbility": "shield_slam"
-          }
-        ]
-      },
-      "def_t2_life": {
-        "modifiers": [
-          {
-            "shape": "PERCENT",
-            "key": "radius",
-            "value": 0.3,
-            "targetAbility": "guardians_call"
-          }
-        ]
-      },
-      "def_t3_cap": {
-        "modifiers": [
-          {
-            "shape": "PERCENT",
-            "key": "durationMs",
-            "value": 0.4,
-            "targetAbility": "guardians_call"
-          }
-        ]
-      },
-      "def_eternal": {
-        "modifiers": [
-          {
-            "shape": "PERCENT",
-            "key": "iframesDurationMs",
-            "value": 0.005,
-            "targetAbility": "shield_slam"
-          }
-        ]
+  "Parent": "mastery_base",
+  "Target": "skill:DEFENSE",
+  "Requires": {
+    "Factors": [
+      {
+        "Factor": "hytale:stat",
+        "Param": "MMO_Level_DEFENSE",
+        "Min": 16
       }
+    ]
+  },
+  "Nodes": {
+    "def_t1_dmg": {
+      "Tier": 1,
+      "ChoiceGroup": "def_t1",
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 3,
+          "life_essence": 600
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Water_Essence",
+            "Count": 1
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "iframesDurationMs",
+          "Value": 0.25,
+          "TargetAbility": "shield_slam"
+        }
+      ]
+    },
+    "def_t1_combo": {
+      "Tier": 1,
+      "ChoiceGroup": "def_t1",
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 3,
+          "life_essence": 600
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Lightning_Essence",
+            "Count": 1
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "distance",
+          "Value": 0.25,
+          "TargetAbility": "shield_slam"
+        }
+      ]
+    },
+    "def_t2_life": {
+      "Tier": 2,
+      "ChoiceGroup": "def_t2",
+      "Prerequisites": [
+        "def_t1_dmg"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_DEFENSE",
+            "Min": 40
+          }
+        ]
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 6,
+          "life_essence": 1500
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Water_Essence",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "radius",
+          "Value": 0.3,
+          "TargetAbility": "guardians_call"
+        }
+      ]
+    },
+    "def_t2_cd": {
+      "Tier": 2,
+      "ChoiceGroup": "def_t2",
+      "Prerequisites": [
+        "def_t1_combo"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_DEFENSE",
+            "Min": 40
+          }
+        ]
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 6,
+          "life_essence": 1500
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Lightning_Essence",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "cooldownMs",
+          "Value": -0.15,
+          "TargetSkill": "DEFENSE"
+        }
+      ]
+    },
+    "def_t3_cap": {
+      "Tier": 3,
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_DEFENSE",
+            "Min": 70
+          }
+        ],
+        "AnyOf": [
+          {
+            "Factors": [
+              {
+                "Factor": "mmoskilltree:mastery_node",
+                "Param": "defense_mastery:def_t2_life",
+                "Min": 1
+              }
+            ]
+          },
+          {
+            "Factors": [
+              {
+                "Factor": "mmoskilltree:mastery_node",
+                "Param": "defense_mastery:def_t2_cd",
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 12,
+          "life_essence": 4000
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Water_Essence",
+            "Count": 3
+          },
+          {
+            "Item": "Ingredient_Voidheart",
+            "Count": 2
+          }
+        ]
+      },
+      "StatSacrifice": {
+        "Stat": "HEALTH",
+        "Mode": "permanent_max",
+        "Amount": 10
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "durationMs",
+          "Value": 0.4,
+          "TargetAbility": "guardians_call"
+        }
+      ]
+    },
+    "def_eternal": {
+      "Tier": 9,
+      "Prerequisites": [
+        "def_t3_cap"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_DEFENSE",
+            "Min": 92
+          }
+        ]
+      },
+      "MaxPurchases": -1,
+      "CostScaling": {
+        "Curve": "EXPONENTIAL",
+        "Multiplier": 1.1
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 1,
+          "life_essence": 350
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Water_Essence",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "iframesDurationMs",
+          "Value": 0.005,
+          "TargetAbility": "shield_slam"
+        }
+      ]
     }
   }
 }

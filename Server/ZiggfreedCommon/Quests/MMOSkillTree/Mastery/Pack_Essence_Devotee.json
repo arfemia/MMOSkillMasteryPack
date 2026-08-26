@@ -1,17 +1,54 @@
 {
-  "$Comment": "The advanced follow-up to Essence Collector: a much larger essence tithe for a much larger mastery-point purse. Requires Essence Collector finished first. The Mastery Trainer offers it and TurnInId 'giver' means the essence is handed in back at the trainer. AutoClaim is off, so the reward waits in the quest log until the player collects it themselves.",
-  "Text": { "TitleKey": "quest.pack_essence_devotee.title", "FlavorKey": "quest.pack_essence_devotee.flavor" },
-  "Listing": { "Category": "main", "SortOrder": 41, "Tags": ["Mastery", "Gathering", "Advanced"] },
-  "Flow": { "Sequential": true, "AutoClaim": false },
-  "Npc": { "ViewId": "MMO_Mastery_Trainer", "TurnInId": "giver" },
+  "$Comment": "The advanced follow-up to Essence Collector: a much larger essence tithe for a much larger mastery-point purse. Requires Essence Collector finished first. The Mastery Trainer offers it and TurnInId 'giver' means the essence is handed in back at the trainer. The reward sits in the Claim bucket, so it waits in the quest log until the player collects it themselves.",
+  "Text": {
+    "TitleKey": "quest.pack_essence_devotee.title",
+    "FlavorKey": "quest.pack_essence_devotee.flavor"
+  },
+  "Listing": {
+    "Category": "main",
+    "SortOrder": 41,
+    "Tags": [
+      "Mastery",
+      "Gathering",
+      "Advanced"
+    ]
+  },
+  "Flow": {
+    "Sequential": true
+  },
+  "Npc": {
+    "ViewId": "MMO_Mastery_Trainer",
+    "TurnInId": "giver"
+  },
   "Requires": {
-    "Factors": [ { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 } ],
-    "Quests": [ "pack_essence_collector" ]
+    "Factors": [
+      {
+        "Factor": "mmoskilltree:feature",
+        "Param": "mastery",
+        "Min": 1
+      }
+    ],
+    "Quests": [
+      "pack_essence_collector"
+    ]
   },
   "Objectives": {
-    "turn_in_essence": { "Kind": "TURN_IN", "Target": "Ingredient_Life_Essence", "Amount": 500, "MatchMode": "EXACT" }
+    "turn_in_essence": {
+      "Kind": "TURN_IN",
+      "Target": "Ingredient_Life_Essence",
+      "Amount": 500,
+      "MatchMode": "EXACT"
+    }
   },
-  "Rewards": [
-    { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": 25 } }
-  ]
+  "Rewards": {
+    "Claim": [
+      {
+        "Kind": "Currency",
+        "Params": {
+          "Currency": "mastery_point",
+          "Amount": 25
+        }
+      }
+    ]
+  }
 }

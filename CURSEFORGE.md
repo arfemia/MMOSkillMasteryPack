@@ -19,9 +19,9 @@
 - **3 gathering tracks** - `mining_mastery`, `woodcutting_mastery`, `harvesting_mastery`. Eternals use the `lootMultiplier` paramKey so they stay valuable past L100.
 - 7 damage-school tracks - Fire, Ice, Lightning, Water, Arcane, Void, Poison. A school node follows the damage, not the weapon: buy Fire and it pays on a fireball, on a meteor, and on a molten hammer swing. Each school also sells resistance to itself, so you can armour up against the element that keeps killing you.
 
-School tracks run eight nodes. Two openers (percent damage or flat damage), then resistance or a utility node tuned to that school's own spells, a capstone that costs a permanent slice of your max Health, Stamina, or Mana, an Ascendant pair (school-wide cooldown cuts, or another slab of flat damage), and the usual Eternal at +1% a purchase. Every gate reads combat level (16, 40, 70, 80, 92) instead of one skill, so a mage and a rogue climb the same ladder.
+School tracks run ten nodes. Two openers (percent damage or flat damage), a resistance step, three flavor nodes tuned to that school's own spells, a capstone that costs a permanent slice of your max Health, Stamina, or Mana, an Ascendant pair (school-wide cooldown cuts, or another slab of flat damage), and the usual Eternal at +1% a purchase. Every gate reads combat level (16 to 92) instead of one skill, so a mage and a rogue climb the same ladder.
 
-Three additional tracks (`fishing_mastery`, `enchanting_mastery`, `acrobatics_mastery`) ship in the zip with `"disabled": true` - parked for balance work and will activate in a future pack release without a plugin update.
+Three additional tracks (`fishing_mastery`, `enchanting_mastery`, `acrobatics_mastery`) ship in the zip with `"Enabled": false` - parked for balance work and will activate in a future pack release without a plugin update (a server owner can switch one on early from `mastery.json`).
 
 Each track has **3-5 finite identity nodes** that define its character, plus exactly one infinitely-repeatable **"Eternal" node** (tier 9) for multi-year progression. Identity cost curve: combat + marquee ability tracks use T1 = 600 Life Essence, T2 = 1500, T3 = 4000 (Meteor uniquely has a T4 at 8000); gathering tracks are lighter at T1 = 500, T2 = 1200, T3 = 3500. Eternals start cheap (200-500 LE depending on track) and scale 1.10x per purchase (Fireball uses 1.25x and Meteor soft-caps at 70 buys) - self-limiting curves where each player naturally plateaus.
 
@@ -64,14 +64,14 @@ Every display string in the pack - track titles, node names and descriptions, qu
 ## Installation
 
 1. Install the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).
-2. Drop `MMOSkillMasteryPack-1.4.0.zip` into the same `mods/` folder.
+2. Drop `MMOSkillMasteryPack-2.0.0.zip` into the same `mods/` folder.
 3. Restart the server.
 
 On startup, look for:
 
 ```
-[AssetPacks] Mastery pack layer applied (30 entries, mode=add) - 27 masteries effective
-[AssetPacks] Currency pack layer applied (2 entries, mode=add)
+[AssetPacks] Mastery asset layer applied (17 entries) - 15 masteries effective
+[AssetPacks] Mastery generator layer applied (3 generators) - 27 masteries effective
 [AssetPacks] CommandRewards pack layer applied (1 packs, mode=add) - N skill+level entries effective
 [AssetPacks] Quest pack layer applied (5 entries, mode=add)
 [AssetPacks] Achievement pack layer applied (6 entries, mode=add)
@@ -88,13 +88,14 @@ The MMO Skill Tree plugin still runs - XP, skill tree, skill rewards, quests, an
 
 ## For pack authors - building your own
 
-The pack uses the standard MMO content-pack format documented in the plugin's `CONTENT_PACKS.md` (alongside the plugin source). To extend or replace what this pack ships, create your own pack with the matching content types - by default new packs **add** alongside this one; use `Control/<yourpack>.json` to declare `replace` mode per type for total-conversion packs.
+The pack uses the standard MMO content-pack format documented in the plugin's `CONTENT_PACKS.md` (alongside the plugin source). To extend or replace what this pack ships, create your own pack with the matching content types - new packs **add** alongside this one, a same-id mastery file in a later-loaded pack replaces this pack's track, and your tracks can name this pack's `mastery_base` / `mastery_school_base` as their own `Parent` or fan out a whole family with one `MasteryGenerators/` file.
 
 ## Versions
 
 | Pack  | Plugin | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.4.0 | 1.6.0+ | Adds seven damage-school mastery tracks (Fire, Ice, Lightning, Water, Arcane, Void, Poison), eight nodes each, gated on combat level rather than a single skill. Their damage and resistance follow the school, so a Fire node pays out on any fire hit whatever threw it; the tier-2 utility node and the Ascendant cooldown node retune that school's own spells. Every new name ships in all nine languages. Nothing existing changes. |
+| 2.0.0 (draft) | 1.6.0+ | **DRAFT, pending release as part of the 1.6.0 train.** Rewrites every mastery file onto the plugin's structured mastery schema: PascalCase fields, one file per track, shared `Abstract` bases reused through native `Parent`, and the three per-skill families written by `MasteryGenerators/` files. Track content, prices, gates and node ids are unchanged, so players' purchased nodes carry across untouched; the one behavioural nudge is the Fireball pierce node's card now reading as the pierce total it sets. A pre-2.0.0 copy of this pack still loads its OLD-format files as far as the plugin's compat warnings, but its tracks stay empty on plugin 1.6.0+ - update both together. |
+| 1.4.0 | 1.6.0+ | Adds seven damage-school mastery tracks (Fire, Ice, Lightning, Water, Arcane, Void, Poison), ten nodes each, gated on combat level rather than a single skill. Their damage and resistance follow the school, so a Fire node pays out on any fire hit whatever threw it; the tier-2 utility node and the Ascendant cooldown node retune that school's own spells. Every new name ships in all nine languages. Nothing existing changes. |
 | 1.2.0 | 1.6.0+ | Internal rewrite: quests and achievements move onto the shared quest/achievement engine (alongside ZiggfreedCommon 1.4.0+). No player-facing change - the mastery-off gate on the pack's achievements is re-confirmed working across the move. |
 | 1.1.2 (draft) | 1.6.0+ | **DRAFT, pending release as part of the 1.6.0 train.** Fixes the Piercing Shot mastery pierce node granting no extra targets (its modifier only injected a pierce value when the ability had none, and Piercing Shot always had one). The node adds 2 to the base pierce, so Piercing Shot pierces 5 targets with it. On plugin builds from the 1.6.0 cycle onward the node card reads "+2 Piercing Shot Pierce". Also fixes the Piercing Shot damage tier and Eternal nodes double-applying their bonus (folded into the ability's cast-time damage and separately summed again at the combat-damage layer); they now apply once. Everything else unchanged. |
 | 1.1.1 | 1.3.0+ | Restores the Mastery Point level rewards. The `Mastery_Point_Milestones` template was filed under a name the `{{ALL_SKILLS}}` `extends` reference could not match (lowercasing did not bridge the missing underscores), so no skill ever offered its mastery-point milestones since 1.0.0. Renamed the template so all built-in skills again grant a claimable Mastery Point every 15 levels (15 to 195). Currency, mastery tracks, quests, and achievements unchanged; existing `command-rewards.json` overrides unaffected. |

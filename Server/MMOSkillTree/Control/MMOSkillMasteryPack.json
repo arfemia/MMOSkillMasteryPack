@@ -1,7 +1,5 @@
 {
   "Name": "MMOSkillMasteryPack",
-  "Masteries": "add",
-  "MasteryTemplates": "add",
   "CommandRewards": "add",
   "CommandRewardTemplates": "add",
   "Quests": "add",

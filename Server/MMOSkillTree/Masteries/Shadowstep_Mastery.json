@@ -1,218 +1,204 @@
 {
-  "Name": "Shadowstep_Mastery",
-  "Payload": {
-    "target": "ability:shadowstep",
-    "icon": "Icon_Shadowstep",
-    "refundPercent": 100,
-    "requirements": {
-      "Factors": [
+  "Parent": "mastery_base",
+  "Target": "ability:shadowstep",
+  "Icon": "Icon_Shadowstep",
+  "RefundPercent": 100,
+  "Requires": {
+    "Factors": [
+      {
+        "Factor": "hytale:stat",
+        "Param": "MMO_Level_DAGGERS",
+        "Min": 18
+      }
+    ]
+  },
+  "Nodes": {
+    "sst_t1_range": {
+      "Tier": 1,
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 3,
+          "life_essence": 600
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Void_Essence",
+            "Count": 1
+          }
+        ]
+      },
+      "Modifiers": [
         {
-          "Factor": "hytale:stat",
-          "Param": "MMO_Level_DAGGERS",
-          "Min": 18
+          "Shape": "FLAT",
+          "ParamKey": "distance",
+          "Value": 4
         }
       ]
     },
-    "nodes": [
-      {
-        "id": "sst_t1_range",
-        "tier": 1,
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 3,
-            "life_essence": 600
-          },
-          "items": [
-            {
-              "id": "Ingredient_Void_Essence",
-              "count": 1
-            }
-          ]
+    "sst_t1_cd": {
+      "Tier": 1,
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 3,
+          "life_essence": 600
         },
-        "modifiers": [
+        "Items": [
           {
-            "shape": "FLAT",
-            "key": "distance",
-            "value": 4
+            "Item": "Ingredient_Void_Essence",
+            "Count": 1
           }
         ]
       },
-      {
-        "id": "sst_t1_cd",
-        "tier": 1,
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 3,
-            "life_essence": 600
-          },
-          "items": [
-            {
-              "id": "Ingredient_Void_Essence",
-              "count": 1
-            }
-          ]
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "cooldownMs",
+          "Value": -3000,
+          "TargetAbility": "shadowstep"
+        }
+      ]
+    },
+    "sst_t1_cheap": {
+      "Tier": 1,
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 2,
+          "life_essence": 600
         },
-        "modifiers": [
+        "Items": [
           {
-            "shape": "FLAT",
-            "key": "cooldownMs",
-            "value": -3000,
-            "targetAbility": "shadowstep"
+            "Item": "Ingredient_Void_Essence",
+            "Count": 1
           }
         ]
       },
-      {
-        "id": "sst_t1_cheap",
-        "tier": 1,
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 2,
-            "life_essence": 600
-          },
-          "items": [
-            {
-              "id": "Ingredient_Void_Essence",
-              "count": 1
-            }
-          ]
-        },
-        "modifiers": [
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "cost",
+          "Value": -2
+        }
+      ]
+    },
+    "sst_t2_phantom": {
+      "Tier": 2,
+      "Prerequisites": [
+        "sst_t1_range",
+        "sst_t1_cd"
+      ],
+      "Requires": {
+        "Factors": [
           {
-            "shape": "FLAT",
-            "key": "cost",
-            "value": -2
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_DAGGERS",
+            "Min": 40
           }
         ]
       },
-      {
-        "id": "sst_t2_phantom",
-        "tier": 2,
-        "prerequisites": [
-          "sst_t1_range",
-          "sst_t1_cd"
-        ],
-        "requirements": {
-          "Factors": [
-            {
-              "Factor": "hytale:stat",
-              "Param": "MMO_Level_DAGGERS",
-              "Min": 40
-            }
-          ]
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 6,
+          "life_essence": 1500
         },
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 6,
-            "life_essence": 1500
-          },
-          "items": [
-            {
-              "id": "Ingredient_Void_Essence",
-              "count": 2
-            }
-          ]
-        },
-        "modifiers": [
+        "Items": [
           {
-            "shape": "FLAT",
-            "key": "cooldownMs",
-            "value": -1000,
-            "targetAbility": "shadowstep"
+            "Item": "Ingredient_Void_Essence",
+            "Count": 2
           }
         ]
       },
-      {
-        "id": "sst_t3_voidwalk",
-        "tier": 3,
-        "prerequisites": [
-          "sst_t2_phantom"
-        ],
-        "requirements": {
-          "Factors": [
-            {
-              "Factor": "hytale:stat",
-              "Param": "MMO_Level_DAGGERS",
-              "Min": 70
-            }
-          ]
-        },
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 12,
-            "life_essence": 4000
-          },
-          "items": [
-            {
-              "id": "Ingredient_Void_Essence",
-              "count": 3
-            },
-            {
-              "id": "Ingredient_Voidheart",
-              "count": 2
-            }
-          ],
-          "statSacrifice": {
-            "stat": "STAMINA",
-            "mode": "permanent_max",
-            "amount": 10
-          }
-        },
-        "modifiers": [
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "cooldownMs",
+          "Value": -1000,
+          "TargetAbility": "shadowstep"
+        }
+      ]
+    },
+    "sst_t3_voidwalk": {
+      "Tier": 3,
+      "Prerequisites": [
+        "sst_t2_phantom"
+      ],
+      "Requires": {
+        "Factors": [
           {
-            "shape": "PERCENT",
-            "key": "cooldownMs",
-            "value": -0.2,
-            "targetAbility": "shadowstep"
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_DAGGERS",
+            "Min": 70
           }
         ]
       },
-      {
-        "id": "sst_eternal",
-        "tier": 9,
-        "prerequisites": [
-          "sst_t3_voidwalk"
-        ],
-        "requirements": {
-          "Factors": [
-            {
-              "Factor": "hytale:stat",
-              "Param": "MMO_Level_DAGGERS",
-              "Min": 92
-            }
-          ]
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 12,
+          "life_essence": 4000
         },
-        "maxPurchases": -1,
-        "costScaling": {
-          "mode": "EXPONENTIAL",
-          "multiplier": 1.1
-        },
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 1,
-            "life_essence": 250
-          },
-          "items": [
-            {
-              "id": "Ingredient_Void_Essence",
-              "count": 2
-            }
-          ]
-        },
-        "modifiers": [
+        "Items": [
           {
-            "shape": "PERCENT",
-            "key": "cooldownMs",
-            "value": -0.01,
-            "targetAbility": "shadowstep"
+            "Item": "Ingredient_Void_Essence",
+            "Count": 3
+          },
+          {
+            "Item": "Ingredient_Voidheart",
+            "Count": 2
           }
         ]
-      }
-    ]
+      },
+      "StatSacrifice": {
+        "Stat": "STAMINA",
+        "Mode": "permanent_max",
+        "Amount": 10
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "cooldownMs",
+          "Value": -0.2,
+          "TargetAbility": "shadowstep"
+        }
+      ]
+    },
+    "sst_eternal": {
+      "Tier": 9,
+      "Prerequisites": [
+        "sst_t3_voidwalk"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_DAGGERS",
+            "Min": 92
+          }
+        ]
+      },
+      "MaxPurchases": -1,
+      "CostScaling": {
+        "Curve": "EXPONENTIAL",
+        "Multiplier": 1.1
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 1,
+          "life_essence": 250
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Void_Essence",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "cooldownMs",
+          "Value": -0.01,
+          "TargetAbility": "shadowstep"
+        }
+      ]
+    }
   }
 }

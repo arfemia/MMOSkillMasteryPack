@@ -1,189 +1,176 @@
 {
-  "Name": "Shield_Slam_Mastery",
-  "Payload": {
-    "target": "ability:shield_slam",
-    "icon": "Icon_ShieldSlam",
-    "refundPercent": 50,
-    "requirements": {
-      "Factors": [
+  "Parent": "mastery_base",
+  "Target": "ability:shield_slam",
+  "Icon": "Icon_ShieldSlam",
+  "Requires": {
+    "Factors": [
+      {
+        "Factor": "hytale:stat",
+        "Param": "MMO_Level_DEFENSE",
+        "Min": 15
+      }
+    ]
+  },
+  "Nodes": {
+    "ss_t1_dmg": {
+      "Tier": 1,
+      "ChoiceGroup": "ss_t1",
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 2,
+          "life_essence": 600
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Water_Essence",
+            "Count": 1
+          }
+        ]
+      },
+      "Modifiers": [
         {
-          "Factor": "hytale:stat",
-          "Param": "MMO_Level_DEFENSE",
-          "Min": 15
+          "Shape": "FLAT",
+          "ParamKey": "damage",
+          "Value": 10
         }
       ]
     },
-    "nodes": [
-      {
-        "id": "ss_t1_dmg",
-        "tier": 1,
-        "choiceGroup": "ss_t1",
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 2,
-            "life_essence": 600
-          },
-          "items": [
-            {
-              "id": "Ingredient_Water_Essence",
-              "count": 1
-            }
-          ]
+    "ss_t1_cd": {
+      "Tier": 1,
+      "ChoiceGroup": "ss_t1",
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 2,
+          "life_essence": 600
         },
-        "modifiers": [
+        "Items": [
           {
-            "shape": "FLAT",
-            "key": "damage",
-            "value": 10
+            "Item": "Ingredient_Crystal_Blue",
+            "Count": 1
           }
         ]
       },
-      {
-        "id": "ss_t1_cd",
-        "tier": 1,
-        "choiceGroup": "ss_t1",
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 2,
-            "life_essence": 600
-          },
-          "items": [
-            {
-              "id": "Ingredient_Crystal_Blue",
-              "count": 1
-            }
-          ]
-        },
-        "modifiers": [
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "cooldownMs",
+          "Value": -1500,
+          "TargetAbility": "shield_slam"
+        }
+      ]
+    },
+    "ss_t2_stagger": {
+      "Tier": 2,
+      "Requires": {
+        "Factors": [
           {
-            "shape": "FLAT",
-            "key": "cooldownMs",
-            "value": -1500,
-            "targetAbility": "shield_slam"
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_DEFENSE",
+            "Min": 40
           }
         ]
       },
-      {
-        "id": "ss_t2_stagger",
-        "tier": 2,
-        "requirements": {
-          "Factors": [
-            {
-              "Factor": "hytale:stat",
-              "Param": "MMO_Level_DEFENSE",
-              "Min": 40
-            }
-          ]
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 4,
+          "life_essence": 1500
         },
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 4,
-            "life_essence": 1500
-          },
-          "items": [
-            {
-              "id": "Ingredient_Water_Essence",
-              "count": 2
-            }
-          ]
-        },
-        "modifiers": [
+        "Items": [
           {
-            "shape": "FLAT",
-            "key": "damage",
-            "value": 20
+            "Item": "Ingredient_Water_Essence",
+            "Count": 2
           }
         ]
       },
-      {
-        "id": "ss_t3_mountainshield",
-        "tier": 3,
-        "prerequisites": [
-          "ss_t2_stagger"
-        ],
-        "requirements": {
-          "Factors": [
-            {
-              "Factor": "hytale:stat",
-              "Param": "MMO_Level_DEFENSE",
-              "Min": 70
-            }
-          ]
-        },
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 8,
-            "life_essence": 4000
-          },
-          "items": [
-            {
-              "id": "Ingredient_Water_Essence",
-              "count": 3
-            },
-            {
-              "id": "Ingredient_Voidheart",
-              "count": 2
-            }
-          ],
-          "statSacrifice": {
-            "stat": "HEALTH",
-            "mode": "permanent_max",
-            "amount": 10
-          }
-        },
-        "modifiers": [
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "damage",
+          "Value": 20
+        }
+      ]
+    },
+    "ss_t3_mountainshield": {
+      "Tier": 3,
+      "Prerequisites": [
+        "ss_t2_stagger"
+      ],
+      "Requires": {
+        "Factors": [
           {
-            "shape": "PERCENT",
-            "key": "damage",
-            "value": 0.15
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_DEFENSE",
+            "Min": 70
           }
         ]
       },
-      {
-        "id": "ss_eternal",
-        "tier": 9,
-        "prerequisites": [
-          "ss_t3_mountainshield"
-        ],
-        "requirements": {
-          "Factors": [
-            {
-              "Factor": "hytale:stat",
-              "Param": "MMO_Level_DEFENSE",
-              "Min": 92
-            }
-          ]
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 8,
+          "life_essence": 4000
         },
-        "maxPurchases": -1,
-        "costScaling": {
-          "mode": "EXPONENTIAL",
-          "multiplier": 1.1
-        },
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 1,
-            "life_essence": 300
-          },
-          "items": [
-            {
-              "id": "Ingredient_Water_Essence",
-              "count": 2
-            }
-          ]
-        },
-        "modifiers": [
+        "Items": [
           {
-            "shape": "PERCENT",
-            "key": "damage",
-            "value": 0.01
+            "Item": "Ingredient_Water_Essence",
+            "Count": 3
+          },
+          {
+            "Item": "Ingredient_Voidheart",
+            "Count": 2
           }
         ]
-      }
-    ]
+      },
+      "StatSacrifice": {
+        "Stat": "HEALTH",
+        "Mode": "permanent_max",
+        "Amount": 10
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "damage",
+          "Value": 0.15
+        }
+      ]
+    },
+    "ss_eternal": {
+      "Tier": 9,
+      "Prerequisites": [
+        "ss_t3_mountainshield"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_DEFENSE",
+            "Min": 92
+          }
+        ]
+      },
+      "MaxPurchases": -1,
+      "CostScaling": {
+        "Curve": "EXPONENTIAL",
+        "Multiplier": 1.1
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 1,
+          "life_essence": 300
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Water_Essence",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "damage",
+          "Value": 0.01
+        }
+      ]
+    }
   }
 }

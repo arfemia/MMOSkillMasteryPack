@@ -8,14 +8,17 @@ hides the Mastery and Currency UI tabs unless it's installed.
 
 ## What's included
 
-- **27 active mastery tracks** (`Server/MMOSkillTree/Masteries/*.json`) - 11
-  combat-skill tracks, 6 marquee ability tracks, 3 gathering tracks (Mining,
-  Woodcutting, Harvesting), and 7 damage-school tracks (Fire, Ice, Lightning,
-  Water, Arcane, Void, Poison) gated on combat level rather than one skill.
-  Each track has 3-5 finite identity nodes plus one
-  infinitely-repeatable "Eternal" node; the school tracks run 8. Three additional tracks
+- **27 active mastery tracks** (`Server/MMOSkillTree/Masteries/*.json` +
+  `Server/MMOSkillTree/MasteryGenerators/*.json`) - 11 combat-skill tracks,
+  6 marquee ability tracks, 3 gathering tracks (Mining, Woodcutting,
+  Harvesting), and 7 damage-school tracks (Fire, Ice, Lightning, Water,
+  Arcane, Void, Poison) gated on combat level rather than one skill. Each
+  track has 3-5 finite identity nodes plus one infinitely-repeatable
+  "Eternal" node; the school tracks run 10. The per-skill families are
+  written by three generator files; the schools, the marquee abilities,
+  Magic and Defense are hand-authored files. Three utility tracks
   (`fishing_mastery`, `enchanting_mastery`, `acrobatics_mastery`) ship with
-  `"disabled": true` and will activate in a future pack release.
+  `"Enabled": false` and will activate in a future pack release.
 - **2 currencies** (`Server/MMOSkillTree/Currencies/*.json`) - `mastery_point`
   (counter-backed, paced by quest/milestone rewards) and `life_essence`
   (item-backed, wraps the Hytale `Ingredient_Life_Essence` item).
@@ -36,8 +39,8 @@ directory as the MMO Skill Tree plugin. Restart the server. Look for these
 log lines:
 
 ```
-[AssetPacks] Mastery pack layer applied (30 entries, mode=add) - 27 masteries effective (3 disabled)
-[AssetPacks] Currency pack layer applied (2 entries, mode=add) - 2 currencies effective
+[AssetPacks] Mastery asset layer applied (17 entries) - 15 masteries effective
+[AssetPacks] Mastery generator layer applied (3 generators) - 27 masteries effective
 [AssetPacks] CommandRewards pack layer applied (1 packs, mode=add) - N skill+level entries effective
 [AssetPacks] Quest pack layer applied (5 entries, mode=add) - 5 quests effective
 [AssetPacks] Achievement pack layer applied (6 entries, mode=add) - 6 achievements effective
@@ -69,11 +72,16 @@ all work normally. The differences:
 The pack uses the standard MMO content-pack format (see CONTENT_PACKS.md in the
 plugin repo). To extend or override what this pack ships:
 
-- Create your own pack with `"Mastery": "add"` (default) in
-  `Control/<yourpack>.json` to add tracks alongside these.
-- Use `"Mastery": "replace"` to drop these defaults entirely and ship your own.
-- Server owners can always override anything authored by a pack with files in
-  `mods/mmoskilltree/` - owner-authored content wins over pack content.
+- Ship your own `Server/MMOSkillTree/Masteries/<Id>.json` files to add tracks
+  alongside these; a file with the SAME id as one of this pack's tracks
+  replaces it (last pack loaded wins), and `"Enabled": false` on that id
+  switches it off.
+- Reuse this pack's `mastery_base` / `mastery_school_base` as your own
+  `"Parent"`, or write a whole family with one
+  `Server/MMOSkillTree/MasteryGenerators/<Id>.json` file.
+- Server owners can always override anything authored by a pack with
+  per-track entries in `mods/mmoskilltree/mastery.json` - owner-authored
+  content wins over pack content, leaf by leaf.
 
 ## Sync rule
 

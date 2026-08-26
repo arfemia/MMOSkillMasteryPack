@@ -1,66 +1,421 @@
 {
-  "Name": "Arcane_School_Mastery",
   "$Comment": "Arcane is the caster's own school: the flavor nodes make a Vortex Pull cheaper to cast, hold the Arcane Resonance aura longer, and shave the mana off a volley of Arcane Missiles.",
-  "Payload": {
-    "extends": "school8_standard",
-    "params": {
-      "prefix": "arcane",
-      "school": "Arcane",
-      "schoolLower": "arcane",
-      "trackName": "Arcane Mastery",
-      "trackId": "arcane_school_mastery",
-      "dmgIngredient": "Ingredient_Crystal_Purple",
-      "comboIngredient": "Ingredient_Motes_Light",
-      "sacrificeStat": "MANA",
-      "capDisplay": "Resonance",
-      "cdAbility": "arcane_missiles",
-      "flavor1Ability": "vortex_pull",
-      "flavor2Ability": "magic_capstone_arcane_resonance",
-      "flavor3Ability": "arcane_missiles"
+  "Parent": "mastery_school_base",
+  "Nodes": {
+    "arcane_t1_pct": {
+      "$Comment": "Percent opener: scales with everything else you stack, so it wins out on a geared character. Pick this or the flat sibling, never both.",
+      "Tier": 1,
+      "ChoiceGroup": "arcane_t1",
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 3,
+          "life_essence": 600
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Crystal_Purple",
+            "Count": 1
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "damage",
+          "Value": 0.05,
+          "School": "Arcane"
+        }
+      ]
     },
-    "nodeOverrides": {
-      "arcane_f1_focus": {
-        "modifiers": [
+    "arcane_t1_flat": {
+      "$Comment": "Flat opener: the same points paid out as raw damage on every hit of the school, which is worth more early and less once percent bonuses pile up.",
+      "Tier": 1,
+      "ChoiceGroup": "arcane_t1",
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 3,
+          "life_essence": 600
+        },
+        "Items": [
           {
-            "shape": "PERCENT",
-            "key": "cost",
-            "value": -0.1,
-            "targetAbility": "vortex_pull"
+            "Item": "Ingredient_Motes_Light",
+            "Count": 1
           }
         ]
       },
-      "arcane_f3_secret": {
-        "modifiers": [
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "damage",
+          "Value": 5,
+          "School": "Arcane"
+        }
+      ]
+    },
+    "arcane_t2_resist": {
+      "$Comment": "The spine's second step, open from either opener: incoming hits of this school land softer. Resistance is written as a PERCENT fraction (0.04 is 4%); that synced contribution is itself clamped to 90 whole percent points, then stacks additively with worn armour and any other resistance effect. The engine floors damage at zero.",
+      "Tier": 2,
+      "Requires": {
+        "Factors": [
           {
-            "shape": "PERCENT",
-            "key": "cost",
-            "value": -0.2,
-            "targetAbility": "arcane_missiles"
+            "Factor": "hytale:stat",
+            "Param": "MMO_CombatLevel",
+            "Min": 40
+          }
+        ],
+        "AnyOf": [
+          {
+            "Factors": [
+              {
+                "Factor": "mmoskilltree:mastery_node",
+                "Param": "arcane_school_mastery:arcane_t1_pct",
+                "Min": 1
+              }
+            ]
+          },
+          {
+            "Factors": [
+              {
+                "Factor": "mmoskilltree:mastery_node",
+                "Param": "arcane_school_mastery:arcane_t1_flat",
+                "Min": 1
+              }
+            ]
           }
         ]
       },
-      "arcane_t4_cd": {
-        "modifiers": [
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 6,
+          "life_essence": 1500
+        },
+        "Items": [
           {
-            "shape": "PERCENT",
-            "key": "cooldownMs",
-            "value": -0.12,
-            "targetAbility": "arcane_missiles"
-          },
-          {
-            "shape": "PERCENT",
-            "key": "cooldownMs",
-            "value": -0.12,
-            "targetAbility": "arcane_lash"
-          },
-          {
-            "shape": "PERCENT",
-            "key": "cooldownMs",
-            "value": -0.12,
-            "targetAbility": "vortex_pull"
+            "Item": "Ingredient_Crystal_Purple",
+            "Count": 2
           }
         ]
-      }
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "schoolResist",
+          "Value": 0.04,
+          "School": "Arcane"
+        }
+      ]
+    },
+    "arcane_f1_focus": {
+      "$Comment": "First flavor node, branching off the spine beside the capstone: one ability of the school, sharpened. A cooldown or cost cut is written as a negative fraction, and a per-ability line only bites when that ability declares the paramKey, so read the ability before picking one.",
+      "Tier": 3,
+      "Prerequisites": [
+        "arcane_t2_resist"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_CombatLevel",
+            "Min": 55
+          }
+        ]
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 8,
+          "life_essence": 2200
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Motes_Light",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "cost",
+          "Value": -0.1,
+          "TargetAbility": "vortex_pull"
+        }
+      ]
+    },
+    "arcane_t3_cap": {
+      "$Comment": "The capstone. Costs a permanent 10 off a max stat, returned if you respec the node.",
+      "Tier": 3,
+      "Prerequisites": [
+        "arcane_t2_resist"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_CombatLevel",
+            "Min": 70
+          }
+        ]
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 12,
+          "life_essence": 4000
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Crystal_Purple",
+            "Count": 3
+          },
+          {
+            "Item": "Ingredient_Voidheart",
+            "Count": 2
+          }
+        ]
+      },
+      "StatSacrifice": {
+        "Stat": "MANA",
+        "Mode": "permanent_max",
+        "Amount": 10
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "damage",
+          "Value": 0.12,
+          "School": "Arcane"
+        }
+      ]
+    },
+    "arcane_t4_cd": {
+      "$Comment": "Ascendant, tempo half: one cooldown cut per ability of the school. An ability with no cooldown of its own has nothing to cut.",
+      "Tier": 4,
+      "ChoiceGroup": "arcane_t4",
+      "Prerequisites": [
+        "arcane_t3_cap"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_CombatLevel",
+            "Min": 80
+          }
+        ]
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 18,
+          "life_essence": 6000
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Motes_Light",
+            "Count": 4
+          },
+          {
+            "Item": "Ingredient_Voidheart",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "cooldownMs",
+          "Value": -0.12,
+          "TargetAbility": "arcane_missiles"
+        },
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "cooldownMs",
+          "Value": -0.12,
+          "TargetAbility": "arcane_lash"
+        },
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "cooldownMs",
+          "Value": -0.12,
+          "TargetAbility": "vortex_pull"
+        }
+      ]
+    },
+    "arcane_t4_flat": {
+      "$Comment": "Ascendant, damage half: a second slab of flat school damage for players who would rather hit harder than act more often.",
+      "Tier": 4,
+      "ChoiceGroup": "arcane_t4",
+      "Prerequisites": [
+        "arcane_t3_cap"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_CombatLevel",
+            "Min": 80
+          }
+        ]
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 18,
+          "life_essence": 6000
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Crystal_Purple",
+            "Count": 4
+          },
+          {
+            "Item": "Ingredient_Voidheart",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "damage",
+          "Value": 12,
+          "School": "Arcane"
+        }
+      ]
+    },
+    "arcane_f2_finesse": {
+      "$Comment": "Second flavor node, behind the capstone: a signature effect on one ability of the school made to last, or made cheaper to keep up.",
+      "Tier": 4,
+      "Prerequisites": [
+        "arcane_t3_cap"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_CombatLevel",
+            "Min": 76
+          }
+        ]
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 14,
+          "life_essence": 4800
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Motes_Light",
+            "Count": 3
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "durationMs",
+          "Value": 0.2,
+          "TargetAbility": "magic_capstone_arcane_resonance"
+        }
+      ]
+    },
+    "arcane_f3_secret": {
+      "$Comment": "The deepest flavor node, reachable only through the one above it: the school's parting trick on a single ability.",
+      "Tier": 5,
+      "Prerequisites": [
+        "arcane_f2_finesse"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_CombatLevel",
+            "Min": 88
+          }
+        ]
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 22,
+          "life_essence": 8000
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Crystal_Purple",
+            "Count": 4
+          },
+          {
+            "Item": "Ingredient_Voidheart",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "cost",
+          "Value": -0.2,
+          "TargetAbility": "arcane_missiles"
+        }
+      ]
+    },
+    "arcane_eternal": {
+      "$Comment": "Repeatable forever: +1% school damage per purchase, each buy 10% dearer than the last. Raise the multiplier to make the ladder bite sooner, lower it for a longer grind.",
+      "Tier": 9,
+      "Prerequisites": [
+        "arcane_t3_cap"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_CombatLevel",
+            "Min": 92
+          }
+        ],
+        "AnyOf": [
+          {
+            "Factors": [
+              {
+                "Factor": "mmoskilltree:mastery_node",
+                "Param": "arcane_school_mastery:arcane_t4_cd",
+                "Min": 1
+              }
+            ]
+          },
+          {
+            "Factors": [
+              {
+                "Factor": "mmoskilltree:mastery_node",
+                "Param": "arcane_school_mastery:arcane_t4_flat",
+                "Min": 1
+              }
+            ]
+          }
+        ]
+      },
+      "MaxPurchases": -1,
+      "CostScaling": {
+        "Curve": "EXPONENTIAL",
+        "Multiplier": 1.1
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 1,
+          "life_essence": 350
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Crystal_Purple",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "damage",
+          "Value": 0.01,
+          "School": "Arcane"
+        }
+      ]
     }
   }
 }

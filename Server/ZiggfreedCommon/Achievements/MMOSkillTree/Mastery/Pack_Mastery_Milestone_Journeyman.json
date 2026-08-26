@@ -21,20 +21,22 @@
       }
     ]
   },
-  "Criteria": [
-    {
+  "Criteria": {
+    "reach-level-any": {
       "Kind": "REACH_LEVEL",
       "Target": "ANY",
       "Amount": 60
     }
-  ],
-  "ClaimRewards": [
-    {
-      "Kind": "Currency",
-      "Params": {
-        "Currency": "mastery_point",
-        "Amount": 3
+  },
+  "Rewards": {
+    "Claim": [
+      {
+        "Kind": "Currency",
+        "Params": {
+          "Currency": "mastery_point",
+          "Amount": 3
+        }
       }
-    }
-  ]
+    ]
+  }
 }

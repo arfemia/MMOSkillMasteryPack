@@ -1,261 +1,243 @@
 {
-  "Name": "Fireball_Mastery",
-  "Payload": {
-    "target": "ability:fireball",
-    "icon": "Icon_Fireball",
-    "refundPercent": 50,
-    "requirements": {
-      "Factors": [
+  "Parent": "mastery_base",
+  "Target": "ability:fireball",
+  "Icon": "Icon_Fireball",
+  "Requires": {
+    "Factors": [
+      {
+        "Factor": "hytale:stat",
+        "Param": "MMO_Level_MAGIC",
+        "Min": 30
+      }
+    ]
+  },
+  "Nodes": {
+    "fb_t1_dmg": {
+      "Tier": 1,
+      "ChoiceGroup": "fb_t1",
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 2,
+          "life_essence": 600
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 1
+          }
+        ]
+      },
+      "Modifiers": [
         {
-          "Factor": "hytale:stat",
-          "Param": "MMO_Level_MAGIC",
-          "Min": 30
+          "Shape": "FLAT",
+          "ParamKey": "damage",
+          "Value": 10
         }
       ]
     },
-    "nodes": [
-      {
-        "id": "fb_t1_dmg",
-        "tier": 1,
-        "choiceGroup": "fb_t1",
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 2,
-            "life_essence": 600
-          },
-          "items": [
-            {
-              "id": "Ingredient_Fire_Essence",
-              "count": 1
-            }
-          ]
+    "fb_t1_cd": {
+      "Tier": 1,
+      "ChoiceGroup": "fb_t1",
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 2,
+          "life_essence": 600
         },
-        "modifiers": [
+        "Items": [
           {
-            "shape": "FLAT",
-            "key": "damage",
-            "value": 10
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 1
           }
         ]
       },
-      {
-        "id": "fb_t1_cd",
-        "tier": 1,
-        "choiceGroup": "fb_t1",
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 2,
-            "life_essence": 600
-          },
-          "items": [
-            {
-              "id": "Ingredient_Fire_Essence",
-              "count": 1
-            }
-          ]
-        },
-        "modifiers": [
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "cooldownMs",
+          "Value": -500,
+          "TargetAbility": "fireball"
+        }
+      ]
+    },
+    "fb_t2_radius": {
+      "Tier": 2,
+      "ChoiceGroup": "fb_t2",
+      "Prerequisites": [
+        "fb_t1_dmg"
+      ],
+      "Requires": {
+        "Factors": [
           {
-            "shape": "FLAT",
-            "key": "cooldownMs",
-            "value": -500,
-            "targetAbility": "fireball"
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_MAGIC",
+            "Min": 40
           }
         ]
       },
-      {
-        "id": "fb_t2_radius",
-        "tier": 2,
-        "choiceGroup": "fb_t2",
-        "prerequisites": [
-          "fb_t1_dmg"
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 4,
+          "life_essence": 1500
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "damageRadius",
+          "Value": 1
+        }
+      ]
+    },
+    "fb_t2_pierce": {
+      "Tier": 2,
+      "ChoiceGroup": "fb_t2",
+      "Prerequisites": [
+        "fb_t1_cd"
+      ],
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_MAGIC",
+            "Min": 40
+          }
+        ]
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 4,
+          "life_essence": 1500
+        },
+        "Items": [
+          {
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 2
+          }
+        ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "FLAT",
+          "ParamKey": "pierceCount",
+          "Value": 1
+        }
+      ]
+    },
+    "fb_t3_inferno": {
+      "Tier": 3,
+      "Requires": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_MAGIC",
+            "Min": 70
+          }
         ],
-        "requirements": {
-          "Factors": [
-            {
-              "Factor": "hytale:stat",
-              "Param": "MMO_Level_MAGIC",
-              "Min": 40
-            }
-          ]
-        },
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 4,
-            "life_essence": 1500
-          },
-          "items": [
-            {
-              "id": "Ingredient_Fire_Essence",
-              "count": 2
-            }
-          ]
-        },
-        "modifiers": [
+        "AnyOf": [
           {
-            "shape": "FLAT",
-            "key": "damageRadius",
-            "value": 1
+            "Factors": [
+              {
+                "Factor": "mmoskilltree:mastery_node",
+                "Param": "fireball_mastery:fb_t2_radius",
+                "Min": 1
+              }
+            ]
+          },
+          {
+            "Factors": [
+              {
+                "Factor": "mmoskilltree:mastery_node",
+                "Param": "fireball_mastery:fb_t2_pierce",
+                "Min": 1
+              }
+            ]
           }
         ]
       },
-      {
-        "id": "fb_t2_pierce",
-        "tier": 2,
-        "choiceGroup": "fb_t2",
-        "prerequisites": [
-          "fb_t1_cd"
-        ],
-        "requirements": {
-          "Factors": [
-            {
-              "Factor": "hytale:stat",
-              "Param": "MMO_Level_MAGIC",
-              "Min": 40
-            }
-          ]
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 8,
+          "life_essence": 4000
         },
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 4,
-            "life_essence": 1500
-          },
-          "items": [
-            {
-              "id": "Ingredient_Fire_Essence",
-              "count": 2
-            }
-          ]
-        },
-        "modifiers": [
+        "Items": [
           {
-            "shape": "ADD_PARAM",
-            "key": "pierceCount",
-            "value": 2
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 10
+          },
+          {
+            "Item": "Ingredient_Voidheart",
+            "Count": 2
           }
         ]
       },
-      {
-        "id": "fb_t3_inferno",
-        "tier": 3,
-        "requirements": {
-          "Factors": [
-            {
-              "Factor": "hytale:stat",
-              "Param": "MMO_Level_MAGIC",
-              "Min": 70
-            }
-          ],
-          "AnyOf": [
-            {
-              "Factors": [
-                {
-                  "Factor": "mmoskilltree:mastery_node",
-                  "Param": "fireball_mastery:fb_t2_radius",
-                  "Min": 1
-                }
-              ]
-            },
-            {
-              "Factors": [
-                {
-                  "Factor": "mmoskilltree:mastery_node",
-                  "Param": "fireball_mastery:fb_t2_pierce",
-                  "Min": 1
-                }
-              ]
-            }
-          ]
+      "StatSacrifice": {
+        "Stat": "HEALTH",
+        "Mode": "permanent_max",
+        "Amount": 10
+      },
+      "Modifiers": [
+        {
+          "Shape": "SET",
+          "ParamKey": "cooldownMs",
+          "Value": 1000,
+          "TargetAbility": "fireball"
         },
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 8,
-            "life_essence": 4000
-          },
-          "items": [
-            {
-              "id": "Ingredient_Fire_Essence",
-              "count": 10
-            },
-            {
-              "id": "Ingredient_Voidheart",
-              "count": 2
+        {
+          "Shape": "FLAT",
+          "ParamKey": "damage",
+          "Value": 30,
+          "Condition": {
+            "TargetHp": {
+              "Max": 0.3
             }
-          ],
-          "statSacrifice": {
-            "stat": "HEALTH",
-            "mode": "permanent_max",
-            "amount": 10
           }
-        },
-        "modifiers": [
+        }
+      ]
+    },
+    "fb_eternal": {
+      "Tier": 9,
+      "Prerequisites": [
+        "fb_t3_inferno"
+      ],
+      "Requires": {
+        "Factors": [
           {
-            "shape": "OVERRIDE",
-            "key": "cooldownMs",
-            "value": 1000,
-            "targetAbility": "fireball"
-          },
-          {
-            "shape": "CONDITIONAL",
-            "key": "damage",
-            "value": 0,
-            "condition": {
-              "targetHpMax": 0.3
-            },
-            "apply": {
-              "shape": "FLAT",
-              "key": "damage",
-              "value": 30
-            }
+            "Factor": "hytale:stat",
+            "Param": "MMO_Level_MAGIC",
+            "Min": 92
           }
         ]
       },
-      {
-        "id": "fb_eternal",
-        "tier": 9,
-        "prerequisites": [
-          "fb_t3_inferno"
-        ],
-        "requirements": {
-          "Factors": [
-            {
-              "Factor": "hytale:stat",
-              "Param": "MMO_Level_MAGIC",
-              "Min": 92
-            }
-          ]
+      "MaxPurchases": -1,
+      "CostScaling": {
+        "Curve": "EXPONENTIAL",
+        "Multiplier": 1.25
+      },
+      "Cost": {
+        "Currencies": {
+          "mastery_point": 1,
+          "life_essence": 500
         },
-        "maxPurchases": -1,
-        "costScaling": {
-          "mode": "EXPONENTIAL",
-          "multiplier": 1.25
-        },
-        "cost": {
-          "combine": "all",
-          "currencies": {
-            "mastery_point": 1,
-            "life_essence": 500
-          },
-          "items": [
-            {
-              "id": "Ingredient_Fire_Essence",
-              "count": 4
-            }
-          ]
-        },
-        "modifiers": [
+        "Items": [
           {
-            "shape": "PERCENT",
-            "key": "damage",
-            "value": 0.01
+            "Item": "Ingredient_Fire_Essence",
+            "Count": 4
           }
         ]
-      }
-    ]
+      },
+      "Modifiers": [
+        {
+          "Shape": "PERCENT",
+          "ParamKey": "damage",
+          "Value": 0.01
+        }
+      ]
+    }
   }
 }
