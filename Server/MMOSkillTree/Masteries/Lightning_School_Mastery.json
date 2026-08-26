@@ -1,6 +1,6 @@
 {
   "$Comment": "Lightning is the storm that follows a fast fighter: the flavor nodes trim the stamina cost of a Tempest, keep the Wind Dancer's charge up longer, and widen the Concussive Reverb shockwave.",
-  "Parent": "mastery_school_base",
+  "Parent": "Mastery_School_Base",
   "Nodes": {
     "lightning_t1_pct": {
       "$Comment": "Percent opener: scales with everything else you stack, so it wins out on a geared character. Pick this or the flat sibling, never both.",

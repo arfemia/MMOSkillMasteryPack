@@ -1,6 +1,6 @@
 {
   "$Comment": "Ice leans on tempo and reach: the Ascendant cooldown node shortens the whole frost roster, while the flavor nodes make Ice Bolt cheaper to throw, keep the Frost Stream's chill on target longer, and widen the Frost Nova's burst.",
-  "Parent": "mastery_school_base",
+  "Parent": "Mastery_School_Base",
   "Nodes": {
     "ice_t1_pct": {
       "$Comment": "Percent opener: scales with everything else you stack, so it wins out on a geared character. Pick this or the flat sibling, never both.",

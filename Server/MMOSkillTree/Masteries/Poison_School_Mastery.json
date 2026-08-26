@@ -1,6 +1,6 @@
 {
   "$Comment": "Poison rewards patience: the flavor nodes cut the mana cost of a Paralyzing Dart, keep the Poison cloud lingering, and spread the Thorn Patch wider underfoot.",
-  "Parent": "mastery_school_base",
+  "Parent": "Mastery_School_Base",
   "Nodes": {
     "poison_t1_pct": {
       "$Comment": "Percent opener: scales with everything else you stack, so it wins out on a geared character. Pick this or the flat sibling, never both.",

@@ -17,22 +17,25 @@ skill-mastery-pack/
 ├── CLAUDE.md                                  this file
 ├── CURSEFORGE.md                              CurseForge listing copy
 ├── README.md                                  end-user installation notes
-├── MMOSkillMasteryPack.zip                    built artifact (gitignored if you regenerate)
+└── MMOSkillMasteryPack-<version>.zip          built artifact (gitignored; build.ps1 takes the version from manifest.json)
 └── Server/
+    ├── Languages/<bcp47>/mmoskilltree.lang    display text, all nine locales
     ├── MMOSkillTree/
-    │   ├── Control/MMOSkillMasteryPack.json   replace/add per content type (CommandRewards / Quests / Achievements only; Masteries merge natively by id)
+    │   ├── Control/MMOSkillMasteryPack.json   replace/add per content type (six keys, all "add": CommandRewards, Quests, Achievements and their three *Templates stores; Masteries and MasteryGenerators merge natively by id, no key)
     │   ├── Masteries/*.json                   2 Abstract bases (Mastery_Base, Mastery_School_Base) + 15 hand-authored tracks
     │   ├── MasteryGenerators/*.json           3 generators writing the other 15 tracks (combat / gathering / utility families)
     │   ├── CommandRewardTemplates/*.json      1 template (Mastery_Point_Milestones); see "CommandReward template extension" below
     │   ├── CommandRewards/MMOSkillMasteryPack.json   one {{ALL_SKILLS}} entry fans the template to every skill
-    │   ├── QuestTemplates/*.json              (optional) reusable quest skeletons; see "Quest + Achievement templates" below
+    │   ├── QuestTemplates/*.json              (none shipped; Control already declares the key)
     │   ├── Quests/Pack_Mastery_Tithe.json     the ONE quest still on the old raw-Payload compat adapter (see "Quests + Achievements" below)
-    │   └── AchievementTemplates/*.json        (optional) reusable achievement skeletons
+    │   └── AchievementTemplates/*.json        (none shipped; Control already declares the key)
     └── ZiggfreedCommon/
         ├── Quests/MMOSkillTree/Mastery/*.json           4 native quests (Pattern A, ziggfreed-common's QuestAsset)
         ├── Achievements/MMOSkillTree/Mastery/*.json     6 native achievements (Pattern A, ziggfreed-common's AchievementAsset)
         ├── Currencies/MMOSkillTree/Mastery_Point.json   the mastery-point wallet (counter-backed)
         ├── Currencies/MMOSkillTree/Life_Essence.json    the life-essence wallet (item-backed on Ingredient_Life_Essence)
+        ├── Dialogues/MMOSkillTree/Mmo_Mastery_Trainer.json   the trainer's conversation; its Start.Quests lists this pack's four quests by id
+        ├── NpcPlacements/Mmo_Mastery_Trainer_Temple.json     places the trainer in the Forgotten Temple; wins over the jar's placement by pack rank
         └── ShopEntries/MMOSkillTree/Shop_Convert_Mastery_Point.json   the token -> mastery-point conversion offer
 ```
 
@@ -146,9 +149,10 @@ gets its own `{prefix}_*` node ids), and `IdPattern`; a value that is exactly on
 keeps its type, so a count lands as a number. Each combination becomes an ordinary child
 of `Base`, decoded exactly like a hand-written file - and an authored `Masteries/` file
 of the same id always WINS over the generated member, which is how one member of a
-family is made special (Magic and Defense are hand files for exactly that reason:
-Magic adds its L100 capstone node, Defense re-points every modifier at Shield Slam and
-Guardian's Call).
+family is retuned without leaving it. A member that diverges too far is simpler as a
+hand file the generator never writes: Magic and Defense are omitted from the combat
+generator's `ForEach` and authored whole (Magic carries an extra L100 capstone node,
+Defense points its nodes at Shield Slam and Guardian's Call).
 
 The three shipped generators: `Combat_Skill_Masteries` (the six-node combat shape, once
 per weapon skill; per-row tokens carry each skill's ingredients, sacrifice stat, and
@@ -327,11 +331,11 @@ Same resolution pipeline as the other resolvers:
 The pack `Control/MMOSkillMasteryPack.json` adds `"QuestTemplates": "add"`
 and `"AchievementTemplates": "add"` alongside the existing content-type modes.
 
-The mastery pack ships an example template directory ready to populate
-(empty by default). This DSL only applies to `Pack_Mastery_Tithe.json`, the
-one quest still on the old raw-Payload compat adapter - see "Quests +
-Achievements (native Pattern A)" below for where the rest of the pack's
-quest/achievement content actually lives now.
+The pack ships no `QuestTemplates/` or `AchievementTemplates/` folder today (its
+`Control/` file already declares both keys, so creating one is enough). This DSL only
+applies to `Pack_Mastery_Tithe.json`, the one quest still on the old raw-Payload compat
+adapter - see "Quests + Achievements (native Pattern A)" below for where the rest of the
+pack's quest/achievement content actually lives now.
 
 ## Quests + Achievements (native Pattern A, 1.6.0+)
 
@@ -344,6 +348,20 @@ authors directly against ziggfreed-common's own `QuestAsset` /
 Server/ZiggfreedCommon/Quests/MMOSkillTree/Mastery/*.json
 Server/ZiggfreedCommon/Achievements/MMOSkillTree/Mastery/*.json
 ```
+
+Three shapes every file here uses:
+
+- **`Objectives` / `Criteria` are id-keyed maps**, not arrays: `"Objectives": {"reach_l15":
+  {"Kind": "REACH_LEVEL", "Target": "ANY", "Amount": 15}}`. The key is what a player's
+  progress is filed under, so renaming one restarts that step and the key is as much a
+  stability contract as the file's own id.
+- **`Rewards` is an envelope**, `{"Claim": [...]}` or `{"Auto": [...]}`. `Claim` is what
+  every file here ships: the player collects at the trainer rather than being paid the
+  instant the last step ticks over.
+- **`Npc: {"ViewId": "Mmo_Mastery_Trainer", "TurnInId": "giver"}`** is what puts a quest in
+  the trainer's list and takes its hand-in there. Add the quest id to the trainer
+  dialogue's `Start.Quests` too, so a player returning with it finished is greeted with the
+  hand-in ahead of the menu (see "The Mastery Trainer" below).
 
 **The FILENAME is the id** (lower-cased at decode; the `MMOSkillTree`/
 `Mastery` folders are pure organization and contribute nothing to the id,
@@ -385,14 +403,40 @@ A tiered achievement declares its ladder on the shared
 key with a `{0}` in it gets its number from `Text.TextArgs.Flavor:
 ["@amount"]` rather than from a per-rung translation.
 
-**Why `Pack_Mastery_Tithe.json` did NOT convert**: it gates on
-`requiredAchievements: ["pack_mastery_hoarder_300"]` (a prior achievement
-must already be earned), and the native `GateSpec`/`GateClause` model has no
-built-in leaf and no registered `Custom` kind for "an achievement is already
-earned" - only `Quests` (finished quests) is a built-in completion leaf.
-Everything else about it converts cleanly; the one field that doesn't is
-why the whole file stays on the compat adapter rather than shipping a
-half-converted quest that silently drops its own achievement gate.
+**Why `Pack_Mastery_Tithe.json` is still on the compat adapter**: nothing in
+its shape blocks a conversion. Its `requiredAchievements:
+["pack_mastery_hoarder_300"]` gate has a native spelling - the shared
+`ziggfreedcommon:achievement_earned` factor: `{"Factors": [{"Factor":
+"ziggfreedcommon:achievement_earned", "Param": "pack_mastery_hoarder_300",
+"Min": 1}]}` beside the `mmoskilltree:feature` factor the other files
+already carry. Its `repeatable`/`cooldownSeconds` become the `Repeat`
+block's `Cooldown`, `autoAccept` becomes `Flow.AutoAccept`, and the
+`minLevel` requirement becomes an ordinary factor bound on the total-level
+channel. Converting it is a straight rewrite into
+`Server/ZiggfreedCommon/Quests/MMOSkillTree/Mastery/`, and the file stays
+here only until somebody does it.
+
+## The Mastery Trainer (NPC placement + dialogue)
+
+This pack ships its own copy of the trainer's placement
+(`Server/ZiggfreedCommon/NpcPlacements/Mmo_Mastery_Trainer_Temple.json`, role
+`Mmo_Mastery_Trainer`, `Where.GameplayConfig: ["ForgottenTemple"]`, gated on the
+`mmoskilltree:feature` / `mastery` factor). Same name as the jar's file, so it wins by
+pack rank, and its `Interact` names a `Dialogue` where the jar's names `Open:
+"Mmo_Mastery"` - with the pack installed, pressing F opens
+`Server/ZiggfreedCommon/Dialogues/MMOSkillTree/Mmo_Mastery_Trainer.json` instead of the
+bare mastery screen, because the trainer now has quests to hand out.
+
+That dialogue's `Start.Quests` names this pack's four mastery quests by id, so a player
+returning with one finished is greeted with its hand-in beat ahead of the menu. Add a row
+there when you add a quest that names the trainer as its giver, or its hand-in never gets
+that first-beat treatment. Its lines are keyed `dialogue.mmo_mastery_trainer.*` in the
+pack's `.lang` files.
+
+Delete the PLACEMENT file (or set `"Enabled": false` for it in
+`mods/ziggfreedcommon/npc-placements.json`) to fall back to the jar's placement and the
+bare mastery screen; deleting only the dialogue leaves the placement pointing at a
+conversation that is not there.
 
 ## Commerce content (wallets + the token-shop offer)
 

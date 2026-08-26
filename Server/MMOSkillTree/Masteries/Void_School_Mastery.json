@@ -1,6 +1,6 @@
 {
   "$Comment": "Void is the assassin's school, and it pays out across the whole dagger and staff roster. The flavor nodes trim the mana cost of a Void Slam, keep the Mark of Death burning longer, and let the Soul Drain reach across a wider gap.",
-  "Parent": "mastery_school_base",
+  "Parent": "Mastery_School_Base",
   "Nodes": {
     "void_t1_pct": {
       "$Comment": "Percent opener: scales with everything else you stack, so it wins out on a geared character. Pick this or the flat sibling, never both.",

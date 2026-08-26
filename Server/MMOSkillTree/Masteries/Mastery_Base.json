@@ -1,5 +1,5 @@
 {
-  "$Comment": "The shared root every mastery track inherits from: half of a node's paid cost comes back on respec unless a track or node says otherwise. Point a new track at it with \"Parent\": \"mastery_base\", or override this file by id to retune the refund for every track at once.",
+  "$Comment": "The shared root every mastery track inherits from: half of a node's paid cost comes back on respec unless a track or node says otherwise. Point a new track at it with \"Parent\": \"Mastery_Base\", or override this file by id to retune the refund for every track at once.",
   "Abstract": true,
   "RefundPercent": 50
 }

@@ -15,7 +15,7 @@
     "Requires keeps the trainer away until the mastery feature is switched on; Lifecycle keeps",
     "their chunk loaded, puts them back if something removes them, and raises their health beyond",
     "anything that can be dealt. This placement authors no Identity.NpcId, so the character IS its",
-    "role: the pack's mastery quests bind to MMO_Mastery_Trainer, and any second placement of that",
+    "role: the pack's mastery quests bind to Mmo_Mastery_Trainer, and any second placement of that",
     "role is the same trainer, offering and taking hand-ins for the same quests."
   ],
   "Name": "Mmo_Mastery_Trainer_Temple",
@@ -26,7 +26,7 @@
     ]
   },
   "Identity": {
-    "Role": "MMO_Mastery_Trainer"
+    "Role": "Mmo_Mastery_Trainer"
   },
   "Anchor": {
     "WorldSpawn": {
@@ -37,7 +37,7 @@
     }
   },
   "Requires": {
-    "Conditions": [
+    "Factors": [
       {
         "Factor": "mmoskilltree:feature",
         "Param": "mastery",

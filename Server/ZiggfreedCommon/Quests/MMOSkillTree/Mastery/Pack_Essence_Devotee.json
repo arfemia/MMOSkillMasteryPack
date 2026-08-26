@@ -17,7 +17,7 @@
     "Sequential": true
   },
   "Npc": {
-    "ViewId": "MMO_Mastery_Trainer",
+    "ViewId": "Mmo_Mastery_Trainer",
     "TurnInId": "giver"
   },
   "Requires": {

@@ -1,5 +1,5 @@
 {
-  "Parent": "mastery_base",
+  "Parent": "Mastery_Base",
   "Target": "skill:MAGIC",
   "Requires": {
     "Factors": [
