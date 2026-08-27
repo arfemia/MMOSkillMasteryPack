@@ -16,7 +16,11 @@
     "several at once. Retune the odds there; nothing in this file needs to change to make the daily",
     "more or less generous. The mastery-point roll is the one that matters for balance.",
     "",
-    "The tribute is essence and a little linen, both on Order 1 so they can be brought in any order,",
+    "The kill step names no target at all, which is what makes it mean ANY creature: an empty target",
+    "matches everything, so a player pays this part of the tribute with whatever the day put in front",
+    "of them rather than hunting one species. Name a target to narrow it.",
+    "",
+    "The tribute is essence, a little linen and ten kills, all on Order 1 so they can be paid in any order,",
     "and it asks for less than the temple guide's does: a player running both dailies pays nine",
     "essence between them rather than the same toll twice. Linen scrap rather than something woven",
     "keeps it inside what an ordinary afternoon turns up."
@@ -54,7 +58,7 @@
     "pay_essence": {
       "Kind": "TURN_IN",
       "Target": "Ingredient_Life_Essence",
-      "Amount": 4,
+      "Amount": 75,
       "MatchMode": "EXACT",
       "Order": 1
     },
@@ -63,6 +67,12 @@
       "Target": "Ingredient_Fabric_Scrap_Linen",
       "Amount": 3,
       "MatchMode": "EXACT",
+      "Order": 1
+    },
+    "thin_the_wilds": {
+      "Kind": "KILL_ENTITY",
+      "Target": "",
+      "Amount": 10,
       "Order": 1
     }
   },

@@ -9,19 +9,102 @@
     "Chance is the probability that roll fires at all, 0 to 1; a roll with no Chance always fires.",
     "Count and CountMax together are a range, rolled per grant.",
     "",
+    "THE ESSENCE ROLL IS A LADDER, which is what makes the daily grow with the player instead of",
+    "paying a beginner and a veteran the same handful. Its Factors are summed into one score and the",
+    "Floors are read against that score; floors are NOT cumulative, so the highest one reached wins",
+    "and only its Grants fire. Two things feed the score, weighted equally: combat level, so the",
+    "tribute pays better as the player gets stronger, and luck, so investing in luck pays here as",
+    "well as in the ground.",
+    "",
+    "UNITS, the one trap worth knowing. Both channels are read as WHOLE NUMBERS: MMO_Luck stores",
+    "whole percent points, so a heavily invested player reads near 100 rather than near 1, and",
+    "MMO_CombatLevel is a level, not a fraction. The floors below are therefore written on a scale",
+    "of roughly 0 to 200. Never compose MMO_Luck together with the mmoskilltree:station_luck",
+    "aggregate: that one returns a fraction and counts the same investment twice.",
+    "",
     "The mastery point on the second roll is the one number to think about before retuning: a point",
     "every other day is a real second income beside the milestones, and raising that Chance changes",
     "how fast a player fills a track far more than any of the others.",
     "",
-    "All four odds are opening balance. Retune them here and the daily changes with no other edit."
+    "The rare roll carries a Cue, the opaque celebration id a roll may author beside its Grants. It",
+    "fires only when the grants beside it genuinely paid out, and its id names the FeedbackMoment",
+    "that answers it (Rare_Find ships with the MMO jar as a toast and a chime). Reuse \"Rare_Find\"",
+    "on your own rare roll for the same celebration, or author a new Cue value plus a",
+    "Server/ZiggfreedCommon/FeedbackMoments file of that name for one of your own.",
+    "",
+    "All the odds and floors here are opening balance. Retune them and the daily changes with no",
+    "other edit."
   ],
   "Name": "Mmo_Mastery_Offering",
   "Rolls": [
     {
-      "$Comment": "Always pays: the trainer never sends a student away empty-handed, so the daily is worth doing on its worst day.",
-      "Grants": {
-        "Items": [
-          { "Item": "Ingredient_Life_Essence", "Count": 4, "CountMax": 7 }
+      "$Comment": "Always pays, and pays more the further along the player is: the trainer never sends a student away empty-handed, and a veteran's offering is answered in kind. Floor 0 is what somebody who has only just met the trainer receives.",
+      "Ladder": {
+        "Factors": [
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_CombatLevel",
+            "Weight": 1.0
+          },
+          {
+            "Factor": "hytale:stat",
+            "Param": "MMO_Luck",
+            "Weight": 1.0
+          }
+        ],
+        "Floors": [
+          {
+            "$Comment": "The starting tier, reachable by anybody, since a score of 0 always passes.",
+            "Min": 0,
+            "Grants": {
+              "Items": [
+                {
+                  "Item": "Ingredient_Life_Essence",
+                  "Count": 10,
+                  "CountMax": 50
+                }
+              ]
+            }
+          },
+          {
+            "$Comment": "A player who has fought a little or claimed a few luck rewards.",
+            "Min": 30,
+            "Grants": {
+              "Items": [
+                {
+                  "Item": "Ingredient_Life_Essence",
+                  "Count": 30,
+                  "CountMax": 100
+                }
+              ]
+            }
+          },
+          {
+            "$Comment": "A committed player: a solid combat level with real luck investment behind it.",
+            "Min": 75,
+            "Grants": {
+              "Items": [
+                {
+                  "Item": "Ingredient_Life_Essence_Concentrated",
+                  "Count": 1,
+                  "CountMax": 4
+                }
+              ]
+            }
+          },
+          {
+            "$Comment": "The top of the ladder, needing both halves near their ceiling rather than one alone.",
+            "Min": 140,
+            "Grants": {
+              "Items": [
+                {
+                  "Item": "Ingredient_Life_Essence_Concentrated",
+                  "Count": 3,
+                  "CountMax": 8
+                }
+              ]
+            }
+          }
         ]
       }
     },
@@ -30,7 +113,13 @@
       "Chance": 0.4,
       "Grants": {
         "Rewards": [
-          { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": "1" } }
+          {
+            "Kind": "Currency",
+            "Params": {
+              "Currency": "mastery_point",
+              "Amount": "1"
+            }
+          }
         ]
       }
     },
@@ -41,19 +130,27 @@
         "Rewards": [
           {
             "Kind": "Mmo_Boost_Token",
-            "Params": { "Skill": "ALL", "Multiplier": "1.5", "DurationMinutes": "30" }
+            "Params": {
+              "Skill": "ALL",
+              "Multiplier": "1.5",
+              "DurationMinutes": "30"
+            }
           }
         ]
       }
     },
     {
-      "$Comment": "The rare pull, and the reason to keep coming back: an adept's own bo staff. Roughly one day in thirty-three.",
+      "$Comment": "The rare pull, and the reason to keep coming back: an adept's own bo staff. Roughly one day in thirty-three. The Cue plays the Rare_Find celebration the moment the staff actually lands.",
       "Chance": 0.03,
       "Grants": {
         "Items": [
-          { "Item": "Mmo_Adepts_Staff", "Count": 1 }
+          {
+            "Item": "Mmo_Adepts_Staff",
+            "Count": 1
+          }
         ]
-      }
+      },
+      "Cue": "Rare_Find"
     }
   ]
 }
