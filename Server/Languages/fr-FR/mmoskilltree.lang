@@ -7,6 +7,8 @@
 # --- Quêtes (quest.<id>.title / .flavor, résolues par convention ; même schéma que les primes) ---
 quest.meet_the_mastery_trainer.title = Un mot avec l'entraîneur
 quest.meet_the_mastery_trainer.flavor = Il y a un autre gardien dans le temple, qui s'occupe de maîtrise et non de cartes. Traverse le palier et écoute ce qu'il a à dire.
+quest.mastery_tribute.title = Le dû de l'entraîneur
+quest.mastery_tribute.flavor = Apporte-moi de l'essence et je te donnerai quelque chose qui vaut le déplacement. Quoi exactement, je ne saurais le dire. C'est un peu tout l'intérêt de l'exercice.
 quest.pack_first_milestone.title = Premier pas vers la maîtrise
 quest.pack_first_milestone.flavor = Faites vos preuves dans n'importe quelle compétence pour atteindre votre premier palier de maîtrise. La voie de la maîtrise commence ici.
 quest.pack_essence_collector.title = Collecteur d'essence

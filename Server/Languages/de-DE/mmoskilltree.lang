@@ -7,6 +7,8 @@
 # --- Quests (quest.<id>.title / .flavor, per Konvention aufgelöst; folgt dem Kopfgeld-Muster) ---
 quest.meet_the_mastery_trainer.title = Ein Wort mit dem Trainer
 quest.meet_the_mastery_trainer.flavor = Unten im Tempel wacht noch jemand, der sich mit Meisterschaft befasst statt mit Karten. Geh hinüber und hör, was er zu sagen hat.
+quest.mastery_tribute.title = Der Zins des Trainers
+quest.mastery_tribute.flavor = Bring mir Essenz, und ich gebe dir etwas, das den Weg wert ist. Was genau, kann ich dir nicht sagen. Das ist gewissermaßen der Sinn der Übung.
 quest.pack_first_milestone.title = Erster Schritt zur Mastery
 quest.pack_first_milestone.flavor = Beweise dich in einer beliebigen Fähigkeit, um deinen ersten Mastery-Meilenstein zu erreichen. Der Pfad der Mastery beginnt hier.
 quest.pack_essence_collector.title = Essenz-Sammler

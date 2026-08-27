@@ -7,6 +7,8 @@
 # --- Quests (quest.<id>.title / .flavor, resolved by convention; matches the bounty pattern) ---
 quest.meet_the_mastery_trainer.title = A Word with the Trainer
 quest.meet_the_mastery_trainer.flavor = There is another keeper down in the temple, one who deals in mastery rather than maps. Cross the landing and hear what they have to say.
+quest.mastery_tribute.title = The Trainer's Due
+quest.mastery_tribute.flavor = Bring me essence and I will give you something worth the walk. What exactly, I could not tell you. That is rather the point of the exercise.
 quest.pack_first_milestone.title = First Step Toward Mastery
 quest.pack_first_milestone.flavor = Prove yourself in any skill to reach your first mastery milestone. The path of mastery begins here.
 quest.pack_essence_collector.title = Essence Collector

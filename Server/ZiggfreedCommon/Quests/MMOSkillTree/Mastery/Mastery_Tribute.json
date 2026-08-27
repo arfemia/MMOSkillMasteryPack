@@ -1,0 +1,74 @@
+{
+  "$Comment": [
+    "The trainer's daily: pay a tribute of life essence and take what the deep disciplines give back.",
+    "",
+    "Repeat.Reset with Period Daily is a CALENDAR daily, not a rolling wait: the allowance refreshes",
+    "at the day boundary on server time, so a player who finishes late in the evening can go again",
+    "the next morning rather than waiting a fixed number of hours from whenever they last claimed.",
+    "Author AtMinutes on the Reset block to move the boundary off midnight.",
+    "",
+    "It opens once the trainer has been met, and it is offered at the trainer only. The feature gate",
+    "keeps it out of the log entirely on a server with mastery switched off, where the trainer never",
+    "appears at all.",
+    "",
+    "The whole payout is ONE Lootable reward, which is what makes the table worth reading rather than",
+    "the quest: Lootables/Mmo_Mastery_Offering.json holds four independent rolls, so a good day pays",
+    "several at once. Retune the odds there; nothing in this file needs to change to make the daily",
+    "more or less generous. The mastery-point roll is the one that matters for balance.",
+    "",
+    "The tribute is essence and a little linen, both on Order 1 so they can be brought in any order,",
+    "and it asks for less than the temple guide's does: a player running both dailies pays nine",
+    "essence between them rather than the same toll twice. Linen scrap rather than something woven",
+    "keeps it inside what an ordinary afternoon turns up."
+  ],
+  "Text": {
+    "TitleKey": "quest.mastery_tribute.title",
+    "FlavorKey": "quest.mastery_tribute.flavor"
+  },
+  "Listing": {
+    "Category": "misc",
+    "SortOrder": 201,
+    "Tags": ["Mastery", "Repeatable"],
+    "Hidden": true,
+    "RequirePrerequisites": true
+  },
+  "Flow": {
+    "AutoAccept": false,
+    "AutoTrack": true
+  },
+  "Repeat": {
+    "Reset": { "Period": "Daily" },
+    "CooldownFrom": "Complete"
+  },
+  "Npc": {
+    "ViewId": "Mmo_Mastery_Trainer",
+    "TurnInId": "giver"
+  },
+  "Requires": {
+    "Quests": ["meet_the_mastery_trainer"],
+    "Factors": [
+      { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 }
+    ]
+  },
+  "Objectives": {
+    "pay_essence": {
+      "Kind": "TURN_IN",
+      "Target": "Ingredient_Life_Essence",
+      "Amount": 4,
+      "MatchMode": "EXACT",
+      "Order": 1
+    },
+    "pay_linen": {
+      "Kind": "TURN_IN",
+      "Target": "Ingredient_Fabric_Scrap_Linen",
+      "Amount": 3,
+      "MatchMode": "EXACT",
+      "Order": 1
+    }
+  },
+  "Rewards": {
+    "Claim": [
+      { "Kind": "Lootable", "Params": { "Lootable": "Mmo_Mastery_Offering" } }
+    ]
+  }
+}

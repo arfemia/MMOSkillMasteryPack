@@ -7,6 +7,8 @@
 # --- Görevler (quest.<id>.title / .flavor, kurala göre çözülür; ödül deseniyle eşleşir) ---
 quest.meet_the_mastery_trainer.title = Eğitmenle bir iki söz
 quest.meet_the_mastery_trainer.flavor = Tapınakta bir başka bekçi daha var; haritalarla değil, ustalıkla ilgilenen biri. Sahanlığı geç ve söyleyeceklerini dinle.
+quest.mastery_tribute.title = Eğitmenin hakkı
+quest.mastery_tribute.flavor = Bana öz getir, ben de sana yolu değecek bir şey vereyim. Tam olarak ne, onu söyleyemem. Alıştırmanın anlamı da biraz bu.
 quest.pack_first_milestone.title = Ustalığa İlk Adım
 quest.pack_first_milestone.flavor = İlk ustalık dönüm noktana ulaşmak için herhangi bir yetenekte kendini kanıtla. Ustalık yolu burada başlar.
 quest.pack_essence_collector.title = Öz Toplayıcı

@@ -39,6 +39,7 @@
       }
     ],
     "Quests": {
+      "mastery_tribute": { "Ready": "ready_generic" },
       "pack_first_milestone": { "Ready": "ready_generic" },
       "pack_essence_collector": { "Ready": "ready_generic" },
       "pack_essence_devotee": { "Ready": "ready_generic" },

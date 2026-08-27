@@ -7,6 +7,8 @@
 # --- Missões (quest.<id>.title / .flavor, resolvidas por convenção; segue o padrão das recompensas) ---
 quest.meet_the_mastery_trainer.title = Uma palavra com o treinador
 quest.meet_the_mastery_trainer.flavor = Há outro guardião no templo, um que lida com maestria e não com mapas. Atravesse o patamar e ouça o que ele tem a dizer.
+quest.mastery_tribute.title = O que se deve ao treinador
+quest.mastery_tribute.flavor = Traga essência e eu te dou algo que valha a caminhada. O quê exatamente, eu não saberia dizer. É mais ou menos esse o sentido do exercício.
 quest.pack_first_milestone.title = Primeiro Passo Rumo à Maestria
 quest.pack_first_milestone.flavor = Prove seu valor em qualquer habilidade para alcançar seu primeiro marco de maestria. O caminho da maestria começa aqui.
 quest.pack_essence_collector.title = Coletor de Essência

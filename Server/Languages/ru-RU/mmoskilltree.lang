@@ -7,6 +7,8 @@
 # --- Квесты (quest.<id>.title / .flavor, разрешаются по соглашению; совпадает с шаблоном контрактов) ---
 quest.meet_the_mastery_trainer.title = Разговор с учителем
 quest.meet_the_mastery_trainer.flavor = В храме есть ещё один хранитель, и занимается он мастерством, а не картами. Перейди площадку и выслушай его.
+quest.mastery_tribute.title = Долг учителя
+quest.mastery_tribute.flavor = Принеси мне эссенцию, и я дам тебе то, ради чего стоило идти. Что именно, сказать не берусь. В этом, пожалуй, и весь смысл упражнения.
 quest.pack_first_milestone.title = Первый шаг к мастерству
 quest.pack_first_milestone.flavor = Проявите себя в любом навыке, чтобы достичь своей первой вехи мастерства. Путь мастерства начинается здесь.
 quest.pack_essence_collector.title = Собиратель эссенции

@@ -1,0 +1,59 @@
+{
+  "$Comment": [
+    "What the Mastery Trainer gives back for a day's tribute.",
+    "",
+    "ROLLS EVALUATE INDEPENDENTLY. Every roll whose Chance passes pays out on the same claim, so a",
+    "lucky day hands over several at once. The first roll always pays, and each one after it is a",
+    "bonus on top.",
+    "",
+    "Chance is the probability that roll fires at all, 0 to 1; a roll with no Chance always fires.",
+    "Count and CountMax together are a range, rolled per grant.",
+    "",
+    "The mastery point on the second roll is the one number to think about before retuning: a point",
+    "every other day is a real second income beside the milestones, and raising that Chance changes",
+    "how fast a player fills a track far more than any of the others.",
+    "",
+    "All four odds are opening balance. Retune them here and the daily changes with no other edit."
+  ],
+  "Name": "Mmo_Mastery_Offering",
+  "Rolls": [
+    {
+      "$Comment": "Always pays: the trainer never sends a student away empty-handed, so the daily is worth doing on its worst day.",
+      "Grants": {
+        "Items": [
+          { "Item": "Ingredient_Life_Essence", "Count": 4, "CountMax": 7 }
+        ]
+      }
+    },
+    {
+      "$Comment": "The point itself, roughly two days in five. This is the roll that decides how much the daily is worth; treat any change here as a balance change to the whole mastery system.",
+      "Chance": 0.4,
+      "Grants": {
+        "Rewards": [
+          { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": "1" } }
+        ]
+      }
+    },
+    {
+      "$Comment": "The uncommon bonus: a short burst of faster learning across every skill. Roughly one day in ten.",
+      "Chance": 0.1,
+      "Grants": {
+        "Rewards": [
+          {
+            "Kind": "Mmo_Boost_Token",
+            "Params": { "Skill": "ALL", "Multiplier": "1.5", "DurationMinutes": "30" }
+          }
+        ]
+      }
+    },
+    {
+      "$Comment": "The rare pull, and the reason to keep coming back: an adept's own bo staff. Roughly one day in thirty-three.",
+      "Chance": 0.03,
+      "Grants": {
+        "Items": [
+          { "Item": "Mmo_Adepts_Staff", "Count": 1 }
+        ]
+      }
+    }
+  ]
+}

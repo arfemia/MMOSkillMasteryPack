@@ -1,0 +1,9 @@
+# MMOSkillMasteryPack - item display names and descriptions.
+# Hytale's I18nModule prepends the filename, so each key loads as items.<key>
+# (e.g. items.Mmo_Adepts_Staff.name). The item JSONs reference these via their
+# TranslationProperties. Add a <locale>/items.lang with the same keys to translate.
+# A description value may carry rich-text markup; a per-instance tooltip override
+# cannot, so keep any markup here rather than in stamped stack metadata.
+
+Mmo_Adepts_Staff.name = Adept's Staff
+Mmo_Adepts_Staff.description = <i>A bo of plain wood, worn smooth by an adept who practised with it every day for forty years.</i>

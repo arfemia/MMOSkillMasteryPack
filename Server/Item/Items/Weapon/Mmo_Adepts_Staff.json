@@ -1,0 +1,16 @@
+{
+  "$Comment": "The rarest thing the trainer's daily tribute turns up: the bo staff an adept of the deep disciplines carried, the same one the trainer still holds. Parent brings in everything Weapon_Staff_Bo_Wood has (its swings, model, icon and durability) and only the four lines below differ, which is the cheapest way to ship a flavoured copy of a base-game item. Recipe is deliberately NOT inherited by Parent, so it cannot be crafted and only the tribute table pays it out. Utility.StatModifiers is where a HELD weapon's stats belong: the engine reads a Utility block only off an accessory-slot item, so these are applied for a held weapon by the equip bridge instead. Compatible stays true so the staff behaves as the base one does everywhere else. To change how often it appears, edit the Chance on its Roll in Lootables/Mmo_Mastery_Offering.json rather than anything here.",
+  "Parent": "Weapon_Staff_Bo_Wood",
+  "TranslationProperties": {
+    "Name": "items.Mmo_Adepts_Staff.name",
+    "Description": "items.Mmo_Adepts_Staff.description"
+  },
+  "Quality": "Epic",
+  "Utility": {
+    "Compatible": true,
+    "StatModifiers": {
+      "Health": [{ "Amount": 1, "CalculationType": "Additive" }],
+      "Stamina": [{ "Amount": 2, "CalculationType": "Additive" }]
+    }
+  }
+}

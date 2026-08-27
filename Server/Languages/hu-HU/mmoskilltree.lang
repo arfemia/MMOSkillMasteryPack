@@ -7,6 +7,8 @@
 # --- Küldetések (quest.<id>.title / .flavor, konvenció szerint feloldva; a bounty mintát követi) ---
 quest.meet_the_mastery_trainer.title = Néhány szó az edzővel
 quest.meet_the_mastery_trainer.flavor = Van egy másik őrző a templomban, aki a mesterséggel foglalkozik, nem a térképekkel. Menj át hozzá, és hallgasd meg, mit mond.
+quest.mastery_tribute.title = Az edző járandósága
+quest.mastery_tribute.flavor = Hozz nekem eszenciát, és adok valamit, ami megéri az utat. Hogy pontosan mit, azt nem tudom megmondani. Nagyjából ez a gyakorlat lényege.
 quest.pack_first_milestone.title = Első Lépés a Mastery Felé
 quest.pack_first_milestone.flavor = Bizonyíts bármelyik képességben, hogy elérd az első mastery mérföldkövedet. A mastery útja itt kezdődik.
 quest.pack_essence_collector.title = Esszencia Gyűjtő
