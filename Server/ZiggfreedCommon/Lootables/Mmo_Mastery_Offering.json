@@ -110,7 +110,7 @@
     },
     {
       "$Comment": "The point itself, roughly two days in five. This is the roll that decides how much the daily is worth; treat any change here as a balance change to the whole mastery system.",
-      "Chance": 0.4,
+      "Chance": { "Base": 0.4 },
       "Grants": {
         "Rewards": [
           {
@@ -125,7 +125,7 @@
     },
     {
       "$Comment": "The uncommon bonus: a short burst of faster learning across every skill. Roughly one day in ten.",
-      "Chance": 0.1,
+      "Chance": { "Base": 0.1 },
       "Grants": {
         "Rewards": [
           {
@@ -141,7 +141,7 @@
     },
     {
       "$Comment": "The rare pull, and the reason to keep coming back: an adept's own bo staff. Roughly one day in thirty-three. The Cue plays the Rare_Find celebration the moment the staff actually lands.",
-      "Chance": 0.03,
+      "Chance": { "Base": 0.03 },
       "Grants": {
         "Items": [
           {
