@@ -1,11 +1,14 @@
 {
   "$Comment": [
     "The Mastery Trainer, standing in the Forgotten Temple across from the Adventurer's Guide.",
-    "This pack's copy of the trainer's placement: same standing, same look, but pressing F opens",
-    "the Mmo_Mastery_Trainer conversation instead of the bare mastery screen, because with this",
-    "pack installed the trainer has quests to hand out - the conversation offers the quest list,",
-    "the mastery menu, and a farewell. This file wins over the one in the mod jar by pack rank;",
-    "delete it (or set Enabled false in mods/ziggfreedcommon/npc-placements.json) to fall back.",
+    "The trainer is this pack's character end to end: their look, their role, this placement, and",
+    "the conversation pressing F opens all ship here, so a server without the pack has no trainer",
+    "to stand up. Interact names a conversation rather than a screen, because the trainer has",
+    "quests to hand out and a word to say before the mastery menu; a screen name there would open",
+    "the menu with no conversation at all. Author Open or Dialogue, never both.",
+    "",
+    "To take the trainer out without editing this file, set Enabled false in",
+    "mods/ziggfreedcommon/npc-placements.json.",
     "",
     "Where targets the temple by its GameplayConfig key rather than by name: that key is the",
     "engine's own per-world gameplay-config id - 'ForgottenTemple' ships with the base game - and",
@@ -16,7 +19,12 @@
     "their chunk loaded, puts them back if something removes them, and raises their health beyond",
     "anything that can be dealt. This placement authors no Identity.NpcId, so the character IS its",
     "role: the pack's mastery quests bind to Mmo_Mastery_Trainer, and any second placement of that",
-    "role is the same trainer, offering and taking hand-ins for the same quests."
+    "role is the same trainer, offering and taking hand-ins for the same quests.",
+    "",
+    "The trainer stands beside the temple's own Rootling Merchant spawn marker rather than at the",
+    "raw portal-landing point, so moving with the temple's actual layout instead of an offset that",
+    "can land inside a wall. To move them, edit Anchor.Structure.Offset, keeping it small enough to",
+    "stay out of the walls."
   ],
   "Name": "Mmo_Mastery_Trainer_Temple",
   "Enabled": true,
@@ -29,9 +37,10 @@
     "Role": "Mmo_Mastery_Trainer"
   },
   "Anchor": {
-    "WorldSpawn": {
+    "Structure": {
+      "MarkerIds": ["Temple_Kweebec_Merchant_Static"],
       "Offset": {
-        "X": -2.5
+        "X": 3
       },
       "Yaw": 180.0
     }

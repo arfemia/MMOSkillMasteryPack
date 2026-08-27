@@ -1,0 +1,4 @@
+# MMOSkillMasteryPack - Mastery Trainer display name + F-interact hint.
+
+Mmo_Mastery_Trainer.name = Mesteredző
+Mmo_Mastery_Trainer.hint = Nyomj [{key}]-t az edzéshez

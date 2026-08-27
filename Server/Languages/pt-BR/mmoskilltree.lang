@@ -5,6 +5,8 @@
 # as mesmas chaves para traduzir; chaves ausentes recorrem ao inglês por chave.
 
 # --- Missões (quest.<id>.title / .flavor, resolvidas por convenção; segue o padrão das recompensas) ---
+quest.meet_the_mastery_trainer.title = Uma palavra com o treinador
+quest.meet_the_mastery_trainer.flavor = Há outro guardião no templo, um que lida com maestria e não com mapas. Atravesse o patamar e ouça o que ele tem a dizer.
 quest.pack_first_milestone.title = Primeiro Passo Rumo à Maestria
 quest.pack_first_milestone.flavor = Prove seu valor em qualquer habilidade para alcançar seu primeiro marco de maestria. O caminho da maestria começa aqui.
 quest.pack_essence_collector.title = Coletor de Essência
@@ -184,7 +186,10 @@ mastery.void_t3_cap.title = Horizonte de Eventos
 mastery.poison_t3_cap.title = Flor da Praga
 
 # Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.ready_generic.text = Você retorna com propósito em seus passos. Qualquer que seja a tarefa que o tenha chamado, parece que o trabalho está feito. Vamos ver o que você tem a nos mostrar.
 dialogue.mmo_mastery_trainer.menu.text = Você está diante de um guardião das antigas disciplinas. Toda habilidade tem um pico além do seu pico, e a maestria é o caminho até lá. O que você procura?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Que tarefas você tem para mim?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Ensine-me os caminhos da maestria.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Até logo.
+dialogue.mmo_mastery_trainer.first_words.text = <b>Então o guia te mandou aqui embaixo, afinal.</b>\nEu guardo aqui as disciplinas antigas, longe do barulho lá de cima. Cada habilidade que você carrega tem um pico além do seu pico, e <color is="#c8a2ff">a maestria é o caminho até ele</color>.
+dialogue.mmo_mastery_trainer.first_words.opt.hail = O guia falou de você.

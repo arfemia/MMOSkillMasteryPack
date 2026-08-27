@@ -1,0 +1,10 @@
+# MMOSkillMasteryPack - Mastery Trainer display name + F-interact hint.
+# Hytale's I18nModule prepends the filename, so each key loads as npcs.<key>
+# (e.g. npcs.Mmo_Mastery_Trainer.name). The trainer's role JSON references these
+# via its NameTranslationKey / SetInteractable Hint. Add a <locale>/npcs.lang with
+# the same keys to translate; missing keys fall back to the raw key text.
+# The hint says train rather than talk because that is what the trainer is for;
+# it is baked into the role body, since the engine reads a Hint literally.
+
+Mmo_Mastery_Trainer.name = Mastery Trainer
+Mmo_Mastery_Trainer.hint = Press [{key}] to train

@@ -1,0 +1,81 @@
+{
+  "$Comment": [
+    "The introduction to mastery: the Adventurer's Guide has been met in the Forgotten Temple, and",
+    "the trainer is standing a few paces away across the same landing. The quest exists to make the",
+    "player look up and notice them.",
+    "",
+    "It is taken automatically the moment the temple meeting is finished, so it lands on the tracker",
+    "while the player is still standing down there, pointing at somebody in the same room.",
+    "",
+    "The step names the trainer's role id. That placement authors no Identity.NpcId, so the character",
+    "IS the role, and any other standing of Mmo_Mastery_Trainer credits the step just as well. There",
+    "is no TurnInId, so the quest finishes on the conversation itself rather than on a walk back; the",
+    "reward sits in the Claim bucket and waits in the quest log until the player collects it, which",
+    "they can do from the trainer's own quest list.",
+    "",
+    "A talk step is credited by a MarkTalked beat inside the conversation, never by pressing F, so",
+    "the trainer's dialogue carries one on the line the player picks. Re-point the step and that beat",
+    "has to move with it.",
+    "",
+    "One mastery point is deliberate: it is enough to spend on the screen the quest just introduced,",
+    "so the first visit is not a locked door. Edit Rewards to re-tune it.",
+    "",
+    "Requires.Quests names a quest the mod jar ships, which is what chains this pack onto the end of",
+    "the starter run; without the jar's temple quest finished the trainer simply has nothing to say.",
+    "The feature factor keeps the quest out of the log on a server with mastery switched off, where",
+    "the trainer never appears at all."
+  ],
+  "Text": {
+    "TitleKey": "quest.meet_the_mastery_trainer.title",
+    "FlavorKey": "quest.meet_the_mastery_trainer.flavor"
+  },
+  "Listing": {
+    "Category": "main",
+    "SortOrder": 9,
+    "Tags": [
+      "Tutorial",
+      "Mastery"
+    ],
+    "Hidden": true,
+    "RequirePrerequisites": true
+  },
+  "Flow": {
+    "AutoAccept": true,
+    "AutoTrack": true
+  },
+  "Npc": {
+    "ViewId": "Mmo_Mastery_Trainer"
+  },
+  "Requires": {
+    "Quests": [
+      "meet_at_the_temple"
+    ],
+    "Factors": [
+      {
+        "Factor": "mmoskilltree:feature",
+        "Param": "mastery",
+        "Min": 1
+      }
+    ]
+  },
+  "Objectives": {
+    "meet_trainer": {
+      "Kind": "TALK_TO_NPC",
+      "Target": "Mmo_Mastery_Trainer",
+      "Amount": 1,
+      "MatchMode": "EXACT",
+      "Order": 1
+    }
+  },
+  "Rewards": {
+    "Claim": [
+      {
+        "Kind": "Currency",
+        "Params": {
+          "Currency": "mastery_point",
+          "Amount": 1
+        }
+      }
+    ]
+  }
+}

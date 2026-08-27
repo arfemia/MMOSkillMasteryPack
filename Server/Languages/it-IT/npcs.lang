@@ -1,0 +1,4 @@
+# MMOSkillMasteryPack - Mastery Trainer display name + F-interact hint.
+
+Mmo_Mastery_Trainer.name = Allenatore di Maestria
+Mmo_Mastery_Trainer.hint = Premi [{key}] per allenarti

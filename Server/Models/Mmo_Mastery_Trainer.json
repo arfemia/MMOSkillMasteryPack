@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Mastery Trainer's look: the vanilla Kweebec_Sapling model wearing its dark-brown skin and standing a little taller than an ordinary sapling, so the two NPCs in the temple read as different characters at a glance. Parent brings in everything Kweebec_Sapling defines (mesh, hit box, eye height, animations, cosmetic attachments) and only the three lines below differ from it. Texture picks another skin out of the same folder the vanilla Kweebec_Sapling_Brown / _Green / _Red variants draw from, so pointing it at Green.png re-skins the trainer with no other change. MinScale and MaxScale are equal deliberately: the engine draws a size between the two at spawn and then remembers it per NPC, so a range would give every trainer on the server a different height. Keep them equal for a constant size. Scale carries the hit box, the eye height and anything held along with the mesh, so a value much above 1.2 needs headroom to stand and walk in.",
+  "Parent": "Kweebec_Sapling",
+  "Texture": "NPC/Intelligent/Kweebec_Sapling/Models/Model_Textures/Brown_Dark.png",
+  "MinScale": 1.15,
+  "MaxScale": 1.15
+}

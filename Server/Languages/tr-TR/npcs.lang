@@ -1,0 +1,4 @@
+# MMOSkillMasteryPack - Mastery Trainer display name + F-interact hint.
+
+Mmo_Mastery_Trainer.name = Ustalık Eğitmeni
+Mmo_Mastery_Trainer.hint = Eğitim almak için [{key}] tuşuna bas

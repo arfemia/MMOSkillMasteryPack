@@ -5,6 +5,8 @@
 # ugyanezekkel a kulcsokkal a fordításhoz; a hiányzó kulcsok kulcsonként visszaesnek angolra.
 
 # --- Küldetések (quest.<id>.title / .flavor, konvenció szerint feloldva; a bounty mintát követi) ---
+quest.meet_the_mastery_trainer.title = Néhány szó az edzővel
+quest.meet_the_mastery_trainer.flavor = Van egy másik őrző a templomban, aki a mesterséggel foglalkozik, nem a térképekkel. Menj át hozzá, és hallgasd meg, mit mond.
 quest.pack_first_milestone.title = Első Lépés a Mastery Felé
 quest.pack_first_milestone.flavor = Bizonyíts bármelyik képességben, hogy elérd az első mastery mérföldkövedet. A mastery útja itt kezdődik.
 quest.pack_essence_collector.title = Esszencia Gyűjtő
@@ -184,7 +186,10 @@ mastery.void_t3_cap.title = Eseményhorizont
 mastery.poison_t3_cap.title = Métely Virága
 
 # Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.ready_generic.text = Szándékkal térted vissza. Bármilyen feladat hívott is el, a munka teljesítettnek hangzik. Lássuk meg, mit szerzettél érte.
 dialogue.mmo_mastery_trainer.menu.text = A régi tudományok őrzője előtt állsz. Minden képzettségnek van egy csúcsa a csúcsán túl, és a mesterség az oda vezető út. Mit keresel?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Milyen feladataid vannak számomra?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Taníts meg a mesterség útjaira.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Ég veled.
+dialogue.mmo_mastery_trainer.first_words.text = <b>Szóval a kalauz mégis leküldött hozzám.</b>\nItt őrzöm a régi tudományokat, távol a fenti zajtól. Minden képességednek van egy csúcsa a csúcsán túl, és <color is="#c8a2ff">a mesterség az odavezető út</color>.
+dialogue.mmo_mastery_trainer.first_words.opt.hail = A kalauz beszélt rólad.

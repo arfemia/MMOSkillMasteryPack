@@ -5,6 +5,8 @@
 # теми же ключами для перевода; отсутствующие ключи откатываются на английский по каждому ключу.
 
 # --- Квесты (quest.<id>.title / .flavor, разрешаются по соглашению; совпадает с шаблоном контрактов) ---
+quest.meet_the_mastery_trainer.title = Разговор с учителем
+quest.meet_the_mastery_trainer.flavor = В храме есть ещё один хранитель, и занимается он мастерством, а не картами. Перейди площадку и выслушай его.
 quest.pack_first_milestone.title = Первый шаг к мастерству
 quest.pack_first_milestone.flavor = Проявите себя в любом навыке, чтобы достичь своей первой вехи мастерства. Путь мастерства начинается здесь.
 quest.pack_essence_collector.title = Собиратель эссенции
@@ -184,7 +186,10 @@ mastery.void_t3_cap.title = Горизонт событий
 mastery.poison_t3_cap.title = Цвет порчи
 
 # Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.ready_generic.text = Ты вернулся с целью в каждом шаге. Какое бы дело ни отвлекало тебя, похоже, работа выполнена. Давай посмотрим, что ты обрёл.
 dialogue.mmo_mastery_trainer.menu.text = Перед тобой хранитель древних дисциплин. У каждого навыка есть вершина за вершиной, и мастерство - путь туда. Что ты ищешь?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Какие задания у тебя есть для меня?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Научи меня путям мастерства.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Прощай.
+dialogue.mmo_mastery_trainer.first_words.text = <b>Значит, проводник всё же отправил тебя сюда.</b>\nЯ храню здесь древние дисциплины, вдали от шума наверху. У каждого твоего навыка есть вершина за вершиной, и <color is="#c8a2ff">мастерство ведёт к ней</color>.
+dialogue.mmo_mastery_trainer.first_words.opt.hail = Проводник говорил о тебе.

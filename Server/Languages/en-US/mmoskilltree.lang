@@ -5,6 +5,8 @@
 # the same keys to translate; missing keys fall back to English per key.
 
 # --- Quests (quest.<id>.title / .flavor, resolved by convention; matches the bounty pattern) ---
+quest.meet_the_mastery_trainer.title = A Word with the Trainer
+quest.meet_the_mastery_trainer.flavor = There is another keeper down in the temple, one who deals in mastery rather than maps. Cross the landing and hear what they have to say.
 quest.pack_first_milestone.title = First Step Toward Mastery
 quest.pack_first_milestone.flavor = Prove yourself in any skill to reach your first mastery milestone. The path of mastery begins here.
 quest.pack_essence_collector.title = Essence Collector
@@ -193,7 +195,10 @@ mastery.void_t3_cap.title = Event Horizon
 mastery.poison_t3_cap.title = Blightbloom
 
 # Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.ready_generic.text = You return with purpose in your step. Whatever task called you away, it sounds like the work is done. Let us see what you have to show for it.
 dialogue.mmo_mastery_trainer.menu.text = You stand before a keeper of the old disciplines. Every skill has a peak beyond its peak, and mastery is the road there. What do you seek?
 dialogue.mmo_mastery_trainer.menu.opt.quests = What tasks do you have for me?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Teach me the ways of mastery.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Farewell.
+dialogue.mmo_mastery_trainer.first_words.text = <b>So the guide sent you down after all.</b>\nI keep the old disciplines here, far from the noise above. Every skill you carry has a peak beyond its peak, and <color is="#c8a2ff">mastery is the road there</color>.
+dialogue.mmo_mastery_trainer.first_words.opt.hail = The guide spoke of you.

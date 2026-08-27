@@ -1,0 +1,4 @@
+# MMOSkillMasteryPack - Mastery Trainer display name + F-interact hint.
+
+Mmo_Mastery_Trainer.name = Treinador de Maestria
+Mmo_Mastery_Trainer.hint = Pressione [{key}] para treinar

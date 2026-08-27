@@ -29,13 +29,16 @@ skill-mastery-pack/
     │   ├── QuestTemplates/*.json              (none shipped; Control already declares the key)
     │   ├── Quests/Pack_Mastery_Tithe.json     the ONE quest still on the old raw-Payload compat adapter (see "Quests + Achievements" below)
     │   └── AchievementTemplates/*.json        (none shipped; Control already declares the key)
+    ├── Models/Mmo_Mastery_Trainer.json      the trainer's look (a Parent clone of Kweebec_Sapling, re-skinned and scaled)
+    ├── NPC/Roles/Passive/Mmo_Mastery_Trainer.json   the trainer's role body (FULL body, not a variant: its press-F Hint is read literally)
+    ├── Languages/<bcp47>/npcs.lang          the trainer's nameplate + press-F hint keys, all 9 locales
     └── ZiggfreedCommon/
-        ├── Quests/MMOSkillTree/Mastery/*.json           4 native quests (Pattern A, ziggfreed-common's QuestAsset)
+        ├── Quests/MMOSkillTree/Mastery/*.json           5 native quests (Pattern A, ziggfreed-common's QuestAsset)
         ├── Achievements/MMOSkillTree/Mastery/*.json     6 native achievements (Pattern A, ziggfreed-common's AchievementAsset)
         ├── Currencies/MMOSkillTree/Mastery_Point.json   the mastery-point wallet (counter-backed)
         ├── Currencies/MMOSkillTree/Life_Essence.json    the life-essence wallet (item-backed on Ingredient_Life_Essence)
-        ├── Dialogues/MMOSkillTree/Mmo_Mastery_Trainer.json   the trainer's conversation; its Start.Quests lists this pack's four quests by id
-        ├── NpcPlacements/Mmo_Mastery_Trainer_Temple.json     places the trainer in the Forgotten Temple; wins over the jar's placement by pack rank
+        ├── Dialogues/MMOSkillTree/Mmo_Mastery_Trainer.json   the trainer's conversation; Start.First is the introduction beat, Start.Quests lists this pack's quests by id
+        ├── NpcPlacements/Mmo_Mastery_Trainer_Temple.json     places the trainer in the Forgotten Temple
         └── ShopEntries/MMOSkillTree/Shop_Convert_Mastery_Point.json   the token -> mastery-point conversion offer
 ```
 
@@ -418,20 +421,32 @@ here only until somebody does it.
 
 ## The Mastery Trainer (NPC placement + dialogue)
 
-This pack ships its own copy of the trainer's placement
+**This pack owns the trainer end to end.** The mod jar ships nothing about that character:
+their look (`Server/Models/Mmo_Mastery_Trainer.json`), their role body
+(`Server/NPC/Roles/Passive/Mmo_Mastery_Trainer.json`), their nameplate and press-F hint
+(`Server/Languages/<bcp47>/npcs.lang`), their placement
 (`Server/ZiggfreedCommon/NpcPlacements/Mmo_Mastery_Trainer_Temple.json`, role
 `Mmo_Mastery_Trainer`, `Where.GameplayConfig: ["ForgottenTemple"]`, gated on the
-`mmoskilltree:feature` / `mastery` factor). Same name as the jar's file, so it wins by
-pack rank, and its `Interact` names a `Dialogue` where the jar's names `Open:
-"Mmo_Mastery"` - with the pack installed, pressing F opens
-`Server/ZiggfreedCommon/Dialogues/MMOSkillTree/Mmo_Mastery_Trainer.json` instead of the
-bare mastery screen, because the trainer now has quests to hand out.
+`mmoskilltree:feature` / `mastery` factor) and their conversation all live here, so a
+server without this pack has no trainer at all. The role is a FULL body rather than a
+`Variant` of the jar's `Template_Mmo_Hub` because the engine reads a `SetInteractable`
+`Hint` literally and the trainer's prompt says train rather than talk.
 
-That dialogue's `Start.Quests` names this pack's four mastery quests by id, so a player
-returning with one finished is greeted with its hand-in beat ahead of the menu. Add a row
-there when you add a quest that names the trainer as its giver, or its hand-in never gets
-that first-beat treatment. Its lines are keyed `dialogue.mmo_mastery_trainer.*` in the
-pack's `.lang` files.
+The placement's `Interact` names a `Dialogue`, never an `Open`: pressing F opens
+`Server/ZiggfreedCommon/Dialogues/MMOSkillTree/Mmo_Mastery_Trainer.json`, which routes on
+to the mastery screen from its own menu. Author one or the other, never both.
+
+`Start.First` is the introduction: while `meet_the_mastery_trainer` is active the trainer
+greets the player with a line written for a first meeting, and the option under it carries
+the `MarkTalked` beat that CREDITS the talk step. Pressing F credits nothing on its own,
+so a talk objective aimed at this character always needs that beat; move the beat if you
+re-point the step. Once the quest is finished the line retires itself.
+
+`Start.Quests` names this pack's mastery quests by id, so a player returning with one
+finished is greeted with its hand-in beat ahead of the menu. Add a row there when you add
+a quest that names the trainer as its giver, or its hand-in never gets that first-beat
+treatment. Its lines are keyed `dialogue.mmo_mastery_trainer.*` in the pack's `.lang`
+files.
 
 Delete the PLACEMENT file (or set `"Enabled": false` for it in
 `mods/ziggfreedcommon/npc-placements.json`) to fall back to the jar's placement and the

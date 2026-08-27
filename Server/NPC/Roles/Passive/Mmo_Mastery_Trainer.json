@@ -1,0 +1,136 @@
+{
+  "$Comment": "The Mastery Trainer NPC, whole. Point a placement's Identity.Role at \"Mmo_Mastery_Trainer\" to stand one somewhere. This is a full role body rather than a thin variant of Template_Mmo_Hub because the press-F prompt differs: the engine reads a SetInteractable Hint literally, so no variant can change one, and the trainer's prompt says train rather than talk. Everything else here is the same stationary greeter arrangement the hub template describes, so a behaviour change meant for both has to be made in both files. Appearance names the Model asset holding the look (dark-brown Kweebec, slightly taller); re-skin or resize by editing that model, not this file. HotbarItems is what they hold, first entry in hand. Press F runs ZigPlacementInteract, which reads the placement this NPC was spawned from and does whatever that placement authored, so the screen it opens lives on the placement and never here. Stationary and invulnerable: every state only ever issues BodyMotion Nothing, which is how the builtin Kweebec_Merchant stays put.",
+  "Type": "Generic",
+  "StartState": "Idle",
+  "DefaultNPCAttitude": "Ignore",
+  "DefaultPlayerAttitude": "Neutral",
+  "Appearance": "Mmo_Mastery_Trainer",
+  "NameTranslationKey": "npcs.Mmo_Mastery_Trainer.name",
+  "HotbarItems": [ "Weapon_Staff_Bo_Wood" ],
+  "HotbarSize": 3,
+  "OffHandItems": [ ],
+  "OffHandSlots": 2,
+  "DefaultOffHandSlot": -1,
+  "Armor": [ ],
+  "MaxHealth": 100,
+  "IsMemory": false,
+  "DisableDamageGroups": [ "Self" ],
+  "CombatConfig": {
+    "EntityEffect": "Immunity_Environmental"
+  },
+  "BusyStates": [ "$Interaction" ],
+  "Invulnerable": true,
+  "KnockbackScale": 0.0,
+  "MotionControllerList": [
+    {
+      "Type": "Walk",
+      "MaxWalkSpeed": 5,
+      "Gravity": 10,
+      "RunThreshold": 0.3,
+      "MaxFallSpeed": 15,
+      "MaxRotationSpeed": 360,
+      "Acceleration": 10
+    }
+  ],
+  "Instructions": [
+    {
+      "Instructions": [
+        {
+          "$Comment": "Idle - no player nearby; stand still.",
+          "Sensor": { "Type": "State", "State": "Idle" },
+          "Instructions": [
+            {
+              "$Comment": "Wave at an approaching player, then watch.",
+              "ActionsBlocking": true,
+              "Sensor": { "Type": "Player", "Range": 8 },
+              "Actions": [
+                { "Type": "PlayAnimation", "Slot": "Status", "Animation": "Wave" },
+                { "Type": "State", "State": "Watching" }
+              ]
+            },
+            { "Sensor": { "Type": "Any" }, "BodyMotion": { "Type": "Nothing" } }
+          ]
+        },
+        {
+          "$Comment": "Watching - player nearby; track with head, return to Idle when they leave.",
+          "Sensor": { "Type": "State", "State": "Watching" },
+          "Instructions": [
+            {
+              "Continue": true,
+              "Sensor": { "Type": "Player", "Range": 12 },
+              "HeadMotion": { "Type": "Watch" }
+            },
+            {
+              "Continue": true,
+              "Sensor": { "Type": "Any" },
+              "Actions": [
+                { "Type": "Timeout", "Delay": [ 2, 2 ], "Action": { "Type": "PlayAnimation", "Slot": "Status" } }
+              ]
+            },
+            {
+              "Sensor": { "Type": "Not", "Sensor": { "Type": "Player", "Range": 12 } },
+              "Actions": [
+                { "Type": "PlayAnimation", "Slot": "Status" },
+                { "Type": "State", "State": "Idle" }
+              ]
+            },
+            { "Sensor": { "Type": "Any" }, "BodyMotion": { "Type": "Nothing" } }
+          ]
+        },
+        {
+          "$Comment": "Interaction - the page is open; look at the player, then return to Watching.",
+          "Sensor": { "Type": "State", "State": "$Interaction" },
+          "Instructions": [
+            {
+              "Continue": true,
+              "Sensor": { "Type": "Target", "Range": 10 },
+              "HeadMotion": { "Type": "Watch" }
+            },
+            {
+              "Sensor": { "Type": "Any" },
+              "Actions": [
+                {
+                  "Type": "Timeout",
+                  "Delay": [ 1, 1 ],
+                  "Action": {
+                    "Type": "Sequence",
+                    "Actions": [
+                      { "Type": "ReleaseTarget" },
+                      { "Type": "State", "State": "Watching" }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "InteractionInstruction": {
+    "Instructions": [
+      {
+        "Sensor": { "Type": "Not", "Sensor": { "Type": "CanInteract", "ViewSector": 180 } },
+        "Actions": [ { "Type": "SetInteractable", "Interactable": false } ]
+      },
+      {
+        "Continue": true,
+        "Sensor": { "Type": "Any" },
+        "Actions": [ { "Type": "SetInteractable", "Interactable": true, "Hint": "npcs.Mmo_Mastery_Trainer.hint" } ]
+      },
+      {
+        "Sensor": { "Type": "HasInteracted" },
+        "Instructions": [
+          {
+            "Sensor": { "Type": "Not", "Sensor": { "Type": "State", "State": "$Interaction" } },
+            "Actions": [
+              { "Type": "LockOnInteractionTarget" },
+              { "Type": "ZigPlacementInteract" },
+              { "Type": "State", "State": "$Interaction" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

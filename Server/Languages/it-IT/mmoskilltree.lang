@@ -5,6 +5,8 @@
 # le stesse chiavi per tradurre; le chiavi mancanti ricadono sull'inglese per singola chiave.
 
 # --- Missioni (quest.<id>.title / .flavor, risolte per convenzione; segue lo schema delle taglie) ---
+quest.meet_the_mastery_trainer.title = Due parole con l'allenatore
+quest.meet_the_mastery_trainer.flavor = C'è un altro custode nel tempio, uno che si occupa di maestria e non di mappe. Attraversa il pianerottolo e ascolta cos'ha da dire.
 quest.pack_first_milestone.title = Primo Passo verso la Maestria
 quest.pack_first_milestone.flavor = Mettiti alla prova in una qualsiasi abilita' per raggiungere il tuo primo traguardo di maestria. Il cammino della maestria comincia qui.
 quest.pack_essence_collector.title = Collezionista d'Essenza
@@ -184,7 +186,10 @@ mastery.void_t3_cap.title = Orizzonte degli Eventi
 mastery.poison_t3_cap.title = Fioritura Corrotta
 
 # Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.ready_generic.text = Ritorni con proposito nel passo. Qualunque fosse il compito che t'ha allontanato, sembra ormai concluso. Mostrami dunque il frutto del tuo operato.
 dialogue.mmo_mastery_trainer.menu.text = Sei davanti a un custode delle antiche discipline. Ogni abilità ha una vetta oltre la sua vetta, e la maestria è la strada per arrivarci. Cosa cerchi?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Che compiti hai per me?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Insegnami le vie della maestria.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Addio.
+dialogue.mmo_mastery_trainer.first_words.text = <b>Quindi la guida ti ha mandato quaggiù dopotutto.</b>\nQui custodisco le antiche discipline, lontano dal rumore di sopra. Ogni abilità che porti ha una vetta oltre la sua vetta, e <color is="#c8a2ff">la maestria è la strada che vi conduce</color>.
+dialogue.mmo_mastery_trainer.first_words.opt.hail = La guida ha parlato di te.

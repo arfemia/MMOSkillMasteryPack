@@ -5,6 +5,8 @@
 # avec les mêmes clés pour traduire ; les clés manquantes retombent sur l'anglais clé par clé.
 
 # --- Quêtes (quest.<id>.title / .flavor, résolues par convention ; même schéma que les primes) ---
+quest.meet_the_mastery_trainer.title = Un mot avec l'entraîneur
+quest.meet_the_mastery_trainer.flavor = Il y a un autre gardien dans le temple, qui s'occupe de maîtrise et non de cartes. Traverse le palier et écoute ce qu'il a à dire.
 quest.pack_first_milestone.title = Premier pas vers la maîtrise
 quest.pack_first_milestone.flavor = Faites vos preuves dans n'importe quelle compétence pour atteindre votre premier palier de maîtrise. La voie de la maîtrise commence ici.
 quest.pack_essence_collector.title = Collecteur d'essence
@@ -184,7 +186,10 @@ mastery.void_t3_cap.title = Horizon des événements
 mastery.poison_t3_cap.title = Floraison malsaine
 
 # Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.ready_generic.text = Te voilà de retour, la détermination dans chaque pas. Quelle que soit la tâche qui t'a éloigné, elle paraît accomplie. Voyons ce que tu rapportes.
 dialogue.mmo_mastery_trainer.menu.text = Tu te tiens devant un gardien des anciennes disciplines. Chaque compétence a un sommet au-delà de son sommet, et la maîtrise est le chemin qui y mène. Que cherches-tu ?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Quelles tâches as-tu pour moi ?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Enseigne-moi les voies de la maîtrise.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Adieu.
+dialogue.mmo_mastery_trainer.first_words.text = <b>Le guide t'a donc bien envoyé ici.</b>\nJe garde ici les anciennes disciplines, loin du bruit d'en haut. Chaque compétence que tu portes a un sommet au-delà de son sommet, et <color is="#c8a2ff">la maîtrise est le chemin qui y mène</color>.
+dialogue.mmo_mastery_trainer.first_words.opt.hail = Le guide a parlé de toi.

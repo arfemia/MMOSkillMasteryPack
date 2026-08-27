@@ -5,6 +5,8 @@
 # <locale>/mmoskilltree.lang ekleyin; eksik anahtarlar anahtar bazında İngilizceye geri döner.
 
 # --- Görevler (quest.<id>.title / .flavor, kurala göre çözülür; ödül deseniyle eşleşir) ---
+quest.meet_the_mastery_trainer.title = Eğitmenle bir iki söz
+quest.meet_the_mastery_trainer.flavor = Tapınakta bir başka bekçi daha var; haritalarla değil, ustalıkla ilgilenen biri. Sahanlığı geç ve söyleyeceklerini dinle.
 quest.pack_first_milestone.title = Ustalığa İlk Adım
 quest.pack_first_milestone.flavor = İlk ustalık dönüm noktana ulaşmak için herhangi bir yetenekte kendini kanıtla. Ustalık yolu burada başlar.
 quest.pack_essence_collector.title = Öz Toplayıcı
@@ -184,7 +186,10 @@ mastery.void_t3_cap.title = Olay Ufku
 mastery.poison_t3_cap.title = Zehir Çiçeği
 
 # Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.ready_generic.text = Adımında bir kararlılık ile dönersin. Seni uzağa çağıran ne olursa olsun, işin tamamlandığı anlaşılıyor. Gelin, ne başarıp getirmişsiniz görelim.
 dialogue.mmo_mastery_trainer.menu.text = Eski disiplinlerin bir bekçisinin karşısındasın. Her yeteneğin zirvesinin ötesinde bir zirve vardır ve ustalık oraya giden yoldur. Ne arıyorsun?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Benim için ne görevlerin var?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Bana ustalığın yollarını öğret.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Elveda.
+dialogue.mmo_mastery_trainer.first_words.text = <b>Demek rehber seni buraya kadar yolladı.</b>\nEski disiplinleri burada, yukarının gürültüsünden uzakta korurum. Taşıdığın her yeteneğin zirvesinin ötesinde bir zirve daha vardır ve <color is="#c8a2ff">ustalık oraya giden yoldur</color>.
+dialogue.mmo_mastery_trainer.first_words.opt.hail = Rehber senden bahsetti.

@@ -5,6 +5,8 @@
 # las mismas claves para traducir; las claves que falten recurren al inglés clave por clave.
 
 # --- Misiones (quest.<id>.title / .flavor, resueltas por convención; sigue el patrón de los contratos) ---
+quest.meet_the_mastery_trainer.title = Unas palabras con el entrenador
+quest.meet_the_mastery_trainer.flavor = Hay otro guardián en el templo, uno que trata con la maestría y no con los mapas. Cruza el rellano y escucha lo que tiene que decir.
 quest.pack_first_milestone.title = Primer Paso Hacia la Maestría
 quest.pack_first_milestone.flavor = Demuestra tu valía en cualquier habilidad para alcanzar tu primer hito de maestría. La senda de la maestría empieza aquí.
 quest.pack_essence_collector.title = Coleccionista de Esencia
@@ -184,7 +186,10 @@ mastery.void_t3_cap.title = Horizonte de Sucesos
 mastery.poison_t3_cap.title = Floración Maligna
 
 # Mastery Trainer conversation
+dialogue.mmo_mastery_trainer.ready_generic.text = Regresas con propósito en tu paso. Sea cual sea la labor que te llamó, el trabajo parece estar hecho. Déjame ver qué traes para mostrar.
 dialogue.mmo_mastery_trainer.menu.text = Estás ante un guardián de las viejas disciplinas. Cada habilidad tiene una cima más allá de su cima, y la maestría es el camino hacia ella. ¿Qué buscas?
 dialogue.mmo_mastery_trainer.menu.opt.quests = ¿Qué tareas tienes para mí?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Enséñame los caminos de la maestría.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Adiós.
+dialogue.mmo_mastery_trainer.first_words.text = <b>Así que el guía te envió aquí abajo después de todo.</b>\nAquí custodio las viejas disciplinas, lejos del ruido de arriba. Cada habilidad que llevas tiene una cima más allá de su cima, y <color is="#c8a2ff">la maestría es el camino hasta ella</color>.
+dialogue.mmo_mastery_trainer.first_words.opt.hail = El guía habló de ti.

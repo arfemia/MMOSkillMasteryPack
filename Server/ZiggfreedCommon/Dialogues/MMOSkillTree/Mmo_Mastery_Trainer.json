@@ -4,10 +4,19 @@
     "offer (the shared quest list, opened AT the trainer so their own quests can be accepted and",
     "handed in there), open the mastery menu, or leave.",
     "",
+    "Start.First holds the introduction, the one beat that outranks anything about quests: while the",
+    "player is carrying the quest that sent them here, pressing F opens a line written for a first",
+    "meeting instead of the standing menu. Its option carries the MarkTalked beat, which is what",
+    "credits a talk step - pressing F alone credits nothing - and then drops into the same menu",
+    "everybody else gets. Once the quest is done the line retires itself and the menu leads again.",
+    "",
     "Start.Quests routes a finished quest ahead of the menu: a player returning with a completed",
-    "mastery quest is greeted with its hand-in beat first, exactly the way the Adventurer's Guide",
-    "handles theirs. The four ids listed are this pack's own mastery quests; add a row here when",
-    "you add a quest that names the trainer as its giver, so its hand-in gets the same treatment.",
+    "mastery quest is greeted with its own line first, via the shared ready_generic screen, exactly",
+    "the way the Adventurer's Guide handles theirs. A quest row points at a screen rather than a bare",
+    "true so pressing F always shows a line before routing anywhere; ready_generic is the one every",
+    "quest here shares, since none of them need a dedicated line of their own. The four ids listed",
+    "are this pack's own mastery quests; add a row here when you add a quest that names the trainer",
+    "as its giver, so its hand-in gets the same treatment.",
     "",
     "The Header line mirrors the player's tracked objective at the top of the conversation.",
     "To reword any line, override the dialogue.mmo_mastery_trainer.* keys in a language file."
@@ -17,17 +26,59 @@
     "ActiveObjective"
   ],
   "Start": {
+    "First": [
+      {
+        "Node": "first_words",
+        "When": [
+          {
+            "Type": "QuestState",
+            "Quest": "meet_the_mastery_trainer",
+            "State": "ACTIVE"
+          }
+        ]
+      }
+    ],
     "Quests": {
-      "pack_first_milestone": { "Ready": true },
-      "pack_essence_collector": { "Ready": true },
-      "pack_essence_devotee": { "Ready": true },
-      "pack_path_of_mastery": { "Ready": true }
+      "pack_first_milestone": { "Ready": "ready_generic" },
+      "pack_essence_collector": { "Ready": "ready_generic" },
+      "pack_essence_devotee": { "Ready": "ready_generic" },
+      "pack_path_of_mastery": { "Ready": "ready_generic" }
     },
     "Fallback": "menu"
   },
   "Nodes": {
+    "first_words": {
+      "TextKey": "dialogue.mmo_mastery_trainer.first_words.text",
+      "Options": [
+        {
+          "LabelKey": "dialogue.mmo_mastery_trainer.first_words.opt.hail",
+          "Actions": [
+            { "Type": "MarkTalked", "Target": "@self" },
+            { "Type": "Goto", "Node": "menu" }
+          ]
+        }
+      ]
+    },
     "menu": {
       "TextKey": "dialogue.mmo_mastery_trainer.menu.text",
+      "Options": [
+        {
+          "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.quests",
+          "Style": "neutral",
+          "Open": "Quests"
+        },
+        {
+          "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.mastery",
+          "Open": "Mmo_Mastery"
+        },
+        {
+          "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.farewell",
+          "Close": true
+        }
+      ]
+    },
+    "ready_generic": {
+      "TextKey": "dialogue.mmo_mastery_trainer.ready_generic.text",
       "Options": [
         {
           "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.quests",
