@@ -6,7 +6,7 @@
     "lucky day hands over several at once. The first roll always pays, and each one after it is a",
     "bonus on top.",
     "",
-    "Chance is the probability that roll fires at all, 0 to 1; a roll with no Chance always fires.",
+    "Chance is a percentage, 0 to 100: the chance that roll fires at all; a roll with no Chance always fires.",
     "Count and CountMax together are a range, rolled per grant.",
     "",
     "THE ESSENCE ROLL IS A LADDER, which is what makes the daily grow with the player instead of",
@@ -110,7 +110,7 @@
     },
     {
       "$Comment": "The point itself, roughly two days in five. This is the roll that decides how much the daily is worth; treat any change here as a balance change to the whole mastery system.",
-      "Chance": { "Base": 0.4 },
+      "Chance": { "Base": 40.0 },
       "Grants": {
         "Rewards": [
           {
@@ -125,7 +125,8 @@
     },
     {
       "$Comment": "The uncommon bonus: a short burst of faster learning across every skill. Roughly one day in ten.",
-      "Chance": { "Base": 0.1 },
+      "Chance": { "Base": 10.0 },
+      "Cue": "Rare_Find",
       "Grants": {
         "Rewards": [
           {
@@ -141,7 +142,7 @@
     },
     {
       "$Comment": "The rare pull, and the reason to keep coming back: an adept's own bo staff. Roughly one day in thirty-three. The Cue plays the Rare_Find celebration the moment the staff actually lands.",
-      "Chance": { "Base": 0.03 },
+      "Chance": { "Base": 3.0 },
       "Grants": {
         "Items": [
           {
