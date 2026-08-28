@@ -1,17 +1,18 @@
 {
   "$Comment": [
-    "The introduction to mastery: the Adventurer's Guide has been met in the Forgotten Temple, and",
-    "the trainer is standing a few paces away across the same landing. The quest exists to make the",
-    "player look up and notice them.",
+    "The introduction to mastery: the Adventurer's Guide, standing in the Forgotten Temple, points",
+    "the player at the trainer a few paces away across the same landing. The quest exists to make",
+    "the player look up and notice them.",
     "",
-    "It is taken automatically the moment the temple meeting is finished, so it lands on the tracker",
-    "while the player is still standing down there, pointing at somebody in the same room.",
+    "Npc.ViewId names the guide's temple id, so the guide is who OFFERS it: it appears on their",
+    "quest list down in the temple, right after the meeting that brought the player there. The step",
+    "names the trainer's role id instead, so the errand is taken from one character and discharged",
+    "at another. That placement authors no Identity.NpcId, so the character IS the role, and any",
+    "other standing of Mmo_Mastery_Trainer credits the step just as well.",
     "",
-    "The step names the trainer's role id. That placement authors no Identity.NpcId, so the character",
-    "IS the role, and any other standing of Mmo_Mastery_Trainer credits the step just as well. There",
-    "is no TurnInId, so the quest finishes on the conversation itself rather than on a walk back; the",
-    "reward sits in the Claim bucket and waits in the quest log until the player collects it, which",
-    "they can do from the trainer's own quest list.",
+    "There is no TurnInId, so the quest finishes on the trainer's conversation rather than on a walk",
+    "back to the guide; the reward sits in the Claim bucket and waits in the quest log until the",
+    "player collects it, which they can do from the trainer's own quest list.",
     "",
     "A talk step is credited by a MarkTalked beat inside the conversation, never by pressing F, so",
     "the trainer's dialogue carries one on the line the player picks. Re-point the step and that beat",
@@ -21,9 +22,12 @@
     "so the first visit is not a locked door. Edit Rewards to re-tune it.",
     "",
     "Requires.Quests names a quest the mod jar ships, which is what chains this pack onto the end of",
-    "the starter run; without the jar's temple quest finished the trainer simply has nothing to say.",
+    "the starter run; without the jar's temple quest finished the guide simply has nothing to offer.",
     "The feature factor keeps the quest out of the log on a server with mastery switched off, where",
-    "the trainer never appears at all."
+    "the trainer never appears at all.",
+    "",
+    "Listing.Hidden keeps it off open listings until it is taken; a giver always lists its own",
+    "quests, so the guide still offers it in the temple."
   ],
   "Text": {
     "TitleKey": "quest.meet_the_mastery_trainer.title",
@@ -40,11 +44,11 @@
     "RequirePrerequisites": true
   },
   "Flow": {
-    "AutoAccept": true,
+    "AutoAccept": false,
     "AutoTrack": true
   },
   "Npc": {
-    "ViewId": "Mmo_Mastery_Trainer"
+    "ViewId": "Mmo_Hub_Temple"
   },
   "Requires": {
     "Quests": [

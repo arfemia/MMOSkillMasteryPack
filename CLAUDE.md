@@ -438,9 +438,14 @@ to the mastery screen from its own menu. Author one or the other, never both.
 
 `Start.First` is the introduction: while `meet_the_mastery_trainer` is active the trainer
 greets the player with a line written for a first meeting, and the option under it carries
-the `MarkTalked` beat that CREDITS the talk step. Pressing F credits nothing on its own,
-so a talk objective aimed at this character always needs that beat; move the beat if you
-re-point the step. Once the quest is finished the line retires itself.
+the `MarkTalked` beat that CREDITS the talk step. That quest is the one exception to the
+rule below - the Adventurer's Guide in the temple is its giver, so the player is SENT here
+rather than arriving to find it waiting, and it finishes on this conversation with no walk
+back.
+
+Pressing F credits nothing on its own, so a talk objective aimed at this character always
+needs that beat; move the beat if you re-point the step. Once the quest is finished the
+line retires itself.
 
 `Start.Quests` names this pack's mastery quests by id, so a player returning with one
 finished is greeted with its hand-in beat ahead of the menu. Add a row there when you add
