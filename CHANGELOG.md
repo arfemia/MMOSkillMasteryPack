@@ -1,6 +1,6 @@
 # Changelog - MMO Skill Mastery Pack
 
-## [2.0.0] - UNRELEASED (HELD)
+## [2.0.0] - 2026-08-31
 
 - **Every mastery file rewritten onto the plugin's structured mastery schema.** Two `Abstract` bases (`Mastery_Base`, `Mastery_School_Base`) reused through native `Parent`, fifteen hand-authored tracks, and the three per-skill families (combat, gathering, utility) each written once as a `MasteryGenerators/` file the plugin stamps out per skill. The old template files are gone.
 - **Track content is unchanged in play.** Every node id, price, gate and bonus carries across, so purchased nodes, respec state and stat sacrifices are untouched.
