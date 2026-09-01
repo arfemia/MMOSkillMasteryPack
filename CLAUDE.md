@@ -32,13 +32,16 @@ skill-mastery-pack/
     ├── Models/Mmo_Mastery_Trainer.json      the trainer's look (a Parent clone of Kweebec_Sapling, re-skinned and scaled)
     ├── NPC/Roles/Passive/Mmo_Mastery_Trainer.json   the trainer's role body (FULL body, not a variant: its press-F Hint is read literally)
     ├── Languages/<bcp47>/npcs.lang          the trainer's nameplate + press-F hint keys, all 9 locales
+    ├── Item/Items/Weapon/Mmo_Adepts_Staff.json      the tribute's rarest pull (a Parent clone of Weapon_Staff_Bo_Wood, Epic, not craftable)
+    ├── Languages/<bcp47>/items.lang         the staff's name + description keys, all 9 locales
     └── ZiggfreedCommon/
-        ├── Quests/MMOSkillTree/Mastery/*.json           5 native quests (Pattern A, ziggfreed-common's QuestAsset)
+        ├── Quests/MMOSkillTree/Mastery/*.json           6 native quests (Pattern A, ziggfreed-common's QuestAsset)
         ├── Achievements/MMOSkillTree/Mastery/*.json     6 native achievements (Pattern A, ziggfreed-common's AchievementAsset)
         ├── Currencies/MMOSkillTree/Mastery_Point.json   the mastery-point wallet (counter-backed)
         ├── Currencies/MMOSkillTree/Life_Essence.json    the life-essence wallet (item-backed on Ingredient_Life_Essence)
         ├── Dialogues/MMOSkillTree/Mmo_Mastery_Trainer.json   the trainer's conversation; Start.First is the introduction beat, Start.Quests lists this pack's quests by id
         ├── NpcPlacements/Mmo_Mastery_Trainer_Temple.json     places the trainer in the Forgotten Temple
+        ├── Lootables/Mmo_Mastery_Offering.json               what the daily tribute pays out (a level+luck ladder plus three bonus rolls)
         └── ShopEntries/MMOSkillTree/Shop_Convert_Mastery_Point.json   the token -> mastery-point conversion offer
 ```
 
@@ -79,7 +82,7 @@ STRUCTURED files - PascalCase fields at the TOP level, no `Name`/`Payload`
 wrapper:
 
 ```json
-{ "Parent": "mastery_base",
+{ "Parent": "Mastery_Base",
   "Target": "skill:SWORDS",
   "Nodes": { "swo_t1_dmg": { "Tier": 1, "Modifiers": [ ... ] } } }
 ```
@@ -127,10 +130,17 @@ section). Reuse comes in two shapes, both native:
 
 **1. `Parent` against an `Abstract` base.** `Mastery_Base.json` (refund policy) and
 `Mastery_School_Base.json` (global placement + the combat-level entry gate) are the two
-shipped bases; every track names one with `"Parent": "<id>"` and inherits per LEAF - a
-child retunes one node's one price and keeps everything else, because `Nodes` merges per
-node id and every group inside a node merges per field. `Abstract` itself never inherits,
-so a child of a base is a real track.
+shipped bases; every track names one with `"Parent": "<Exact_Filename>"` and inherits per
+LEAF - a child retunes one node's one price and keeps everything else, because `Nodes`
+merges per node id and every group inside a node merges per field. `Abstract` itself never
+inherits, so a child of a base is a real track.
+
+**Casing: `Parent` and a generator's `Base` spell the same target differently.** A `Parent`
+is the target file's name minus `.json`, exactly as written (`"Mastery_Base"`), because the
+engine resolves the chain against the raw asset key before the mod ever folds it. A
+generator's `Base` is looked up after that fold, against ids the mod has lower-cased, so it
+is written `"mastery_base"` - and a `Base` that misses reports an `UNKNOWN_BASE` finding
+naming the member it skipped.
 
 **2. A generator for a whole family.** `Server/MMOSkillTree/MasteryGenerators/<Id>.json`
 writes "the same track, once per skill" from one file:
@@ -169,7 +179,7 @@ Node ids are a stability contract: a player's purchases are saved under
 ## Damage-school mastery tracks (plugin 1.6.0+)
 
 Seven hand-authored tracks (`{Fire,Ice,Lightning,Water,Arcane,Void,Poison}_School_Mastery.json`,
-each `"Parent": "mastery_school_base"`) buy into a DAMAGE SCHOOL rather than a skill or an
+each `"Parent": "Mastery_School_Base"`) buy into a DAMAGE SCHOOL rather than a skill or an
 ability. The plugin's `School` modifier scope is orthogonal to every other scope
 and outranks all of them: an authored `"School"` sends the value to that school's
 own stat channel, so it pays out on every hit of that school no matter which
@@ -457,6 +467,22 @@ Delete the PLACEMENT file (or set `"Enabled": false` for it in
 `mods/ziggfreedcommon/npc-placements.json`) to fall back to the jar's placement and the
 bare mastery screen; deleting only the dialogue leaves the placement pointing at a
 conversation that is not there.
+
+## The daily tribute (quest + lootable + the staff)
+
+`Mastery_Tribute.json` is the trainer's repeatable daily; what it pays comes from
+`Server/ZiggfreedCommon/Lootables/Mmo_Mastery_Offering.json`, not from the quest file. Every roll
+there evaluates independently, so a lucky claim hands over several at once. The first roll is a
+`Ladder`: combat level and luck are summed into one score and the highest `Floors` entry reached
+wins, which is what makes the daily grow with the player. Both channels are read as WHOLE NUMBERS
+(MMO_Luck stores whole percent points), so the floors sit on a scale of roughly 0 to 200; never
+compose MMO_Luck with the `mmoskilltree:station_luck` aggregate, which returns a fraction and counts
+the same investment twice. The other three rolls are a 40% mastery point, a 10% boost token and a
+3% `Mmo_Adepts_Staff`; the last two carry `"Cue": "Rare_Find"`, the FeedbackMoment the MMO jar ships
+as a toast and a chime. `Mmo_Adepts_Staff` is a `Parent` clone of `Weapon_Staff_Bo_Wood` that does
+not inherit a Recipe, so the tribute table is the only way to get one; its stats live in
+`Utility.StatModifiers` and its display text in `Server/Languages/<bcp47>/items.lang`. To change how
+often the staff appears, edit its Roll's `Chance` in the lootable rather than the item.
 
 ## Commerce content (wallets + the token-shop offer)
 
