@@ -1,6 +1,6 @@
 # MMO Skill Mastery Pack
 
-**The mastery and currency content pack for the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).** Drop this `.zip` into your server's `mods/` folder alongside the plugin to unlock the full mastery system - 27 active tracks across combat skills, marquee abilities, gathering, and the seven damage schools, two starter currencies, mastery-point milestone rewards every 15 levels, and themed quests + achievements that exercise the mastery surface.
+**The mastery and currency content pack for the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).** Drop this `.zip` into your server's `mods/` folder alongside the plugin and the full mastery system switches on: 27 active tracks across combat skills, marquee abilities, gathering, and the seven damage schools, plus two starter currencies, a claimable Mastery Point every 15 levels, and themed quests and achievements to earn them with.
 
 [![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/5NFdZsUxHZ) [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/ziggfreed) [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/wintergreensolutions) [![Documentation](https://img.shields.io/badge/Docs-Read%20More-0ea5e9?style=for-the-badge)](https://mmo-skill-tree-docs.ziggfreed.com)
 
@@ -14,14 +14,14 @@
 
 ### Mastery tracks (27 active)
 
-- **11 combat-skill tracks** - `swords_mastery`, `daggers_mastery`, `polearms_mastery`, `staves_mastery`, `axes_mastery`, `blunt_mastery`, `unarmed_mastery`, `archery_mastery`, `magic_mastery`, `artillery_mastery`, `defense_mastery`. Each opts into swing damage via `combatTarget`.
-- **6 marquee ability tracks** - `fireball_mastery`, `meteor_mastery`, `whirlwind_mastery`, `piercing_shot_mastery`, `shield_slam_mastery`, `shadowstep_mastery`. Narrower buffs, higher per-purchase Eternal rates than skill-scope tracks.
-- **3 gathering tracks** - `mining_mastery`, `woodcutting_mastery`, `harvesting_mastery`. Eternals use the `lootMultiplier` paramKey so they stay valuable past L100.
+- **11 combat-skill tracks** - Swords, Daggers, Polearms, Staves, Axes, Blunt, Unarmed, Archery, Magic, Artillery, and Defense. Each buffs the skill's ordinary swings as well as its abilities.
+- **6 marquee ability tracks** - Fireball, Meteor, Whirlwind, Piercing Shot, Shield Slam, and Shadowstep. Narrower buffs, with Eternals that grow faster per purchase.
+- **3 gathering tracks** - Mining, Woodcutting, and Harvesting. Their Eternals boost gathering loot, so they stay valuable past level 100.
 - 7 damage-school tracks - Fire, Ice, Lightning, Water, Arcane, Void, Poison. A school node follows the damage, not the weapon: buy Fire and it pays on a fireball, on a meteor, and on a molten hammer swing. Each school also sells resistance to itself, so you can armour up against the element that keeps killing you.
 
 School tracks run ten nodes. Two openers (percent damage or flat damage), a resistance step, three flavor nodes tuned to that school's own spells, a capstone that costs a permanent slice of your max Health, Stamina, or Mana, an Ascendant pair (school-wide cooldown cuts, or another slab of flat damage), and the usual Eternal at +1% a purchase. Every gate reads combat level (16 to 92) instead of one skill, so a mage and a rogue climb the same ladder.
 
-Three additional tracks (`fishing_mastery`, `enchanting_mastery`, `acrobatics_mastery`) ship in the zip with `"Enabled": false` - parked for balance work and will activate in a future pack release without a plugin update (a server owner can switch one on early from `mastery.json`).
+Three more tracks (Fishing, Enchanting, Acrobatics) ship in the zip switched off, parked for balance work until a later release; a server owner can turn one on early from `mastery.json`.
 
 Each track has **3-5 finite identity nodes** that define its character, plus exactly one infinitely-repeatable **"Eternal" node** (tier 9) for multi-year progression. Identity cost curve: combat + marquee ability tracks use T1 = 600 Life Essence, T2 = 1500, T3 = 4000 (Meteor uniquely has a T4 at 8000); gathering tracks are lighter at T1 = 500, T2 = 1200, T3 = 3500. Eternals start cheap (200-500 LE depending on track) and scale 1.10x per purchase (Fireball uses 1.25x and Meteor soft-caps at 70 buys) - self-limiting curves where each player naturally plateaus.
 
@@ -34,15 +34,15 @@ Each track has **3-5 finite identity nodes** that define its character, plus exa
 
 Adds a manual-claim Mastery Point reward to every 15th level for all 20 built-in skills, generated up to each skill's configured max level. Rewards self-hide when the Mastery Points currency is disabled.
 
-The pack uses the new **CommandReward template system** (plugin 1.1.0+): one reusable `Mastery_Point_Milestones` template (13 milestone levels) is referenced from a single `{{ALL_SKILLS}}` entry that fans out to every skill. Going from 240 identical reward objects to 1 template + 1 reference. Server owners who want different intervals or amounts can override per skill - explicit skill entries win over the catch-all.
+One reusable milestone template fans out to every skill, so a server owner who wants different intervals or amounts for one skill overrides just that skill in `command-rewards.json` - explicit skill entries win over the catch-all.
 
 ### Themed quests (5)
 
-- **First Step Toward Mastery** - auto-accept on first level-up. Reach level 15 in any skill â†’ 2 Mastery Points.
-- **Essence Collector** - turn in 100 Life Essence â†’ 5 Mastery Points + 2,000 Mining XP + 2,000 Woodcutting XP.
-- **Essence Devotee** (sequential, prereq Essence Collector) - turn in 500 Life Essence â†’ 25 Mastery Points.
-- **Path of Mastery** - reach L25 in Mining, Woodcutting, Harvesting, Swords, Archery â†’ 10 Mastery Points.
-- **Mastery Tithe** (auto-accept, repeatable 6h, endgame) - slay 10 mobs + chop 10 logs â†’ 1 Mastery Point. Gated behind Total Level 500 and the **Mastery Hoarder** achievement, so the trickle stays an endgame faucet rather than an early-game boost.
+- **First Step Toward Mastery** - auto-accepts on your first level-up. Reach level 15 in any skill for 2 Mastery Points.
+- **Essence Collector** - turn in 100 Life Essence for 5 Mastery Points plus 2,000 Mining and 2,000 Woodcutting XP.
+- **Essence Devotee** (follows Essence Collector) - turn in 500 Life Essence for 25 Mastery Points.
+- **Path of Mastery** - reach level 25 in Mining, Woodcutting, Harvesting, Swords, and Archery for 10 Mastery Points.
+- **Mastery Tithe** (repeatable every 6 hours) - slay 10 mobs and chop 10 logs for 1 Mastery Point. Gated behind Total Level 500 and the **Mastery Hoarder** achievement, so the trickle stays an endgame faucet.
 
 ### Themed achievements (6)
 
@@ -79,7 +79,7 @@ On startup, look for:
 
 ## Without this pack
 
-The MMO Skill Tree plugin still runs - XP, skill tree, skill rewards, quests, and achievements all work normally. The Mastery and Currency menu tabs hide themselves on an empty track/currency set (`MasteryConfig.isAvailable()` / `CurrencyConfig.isAvailable()` gate on emptiness), so the absence is graceful, not broken.
+The MMO Skill Tree plugin still runs - XP, skill tree, skill rewards, quests, and achievements all work normally. With no tracks or currencies loaded, the Mastery and Currency menu tabs hide themselves, so nothing looks broken.
 
 ## For server owners - customizing
 
