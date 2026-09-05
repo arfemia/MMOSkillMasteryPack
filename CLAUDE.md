@@ -170,8 +170,8 @@ Defense points its nodes at Shield Slam and Guardian's Call).
 The three shipped generators: `Combat_Skill_Masteries` (the six-node combat shape, once
 per weapon skill; per-row tokens carry each skill's ingredients, sacrifice stat, and
 Archery's dearer opener), `Gathering_Skill_Masteries` (the four-step loot-luck shape,
-level-gated), and `Utility_Skill_Masteries` (the same shape ungated, whole family
-shipped parked with `Enabled: false`).
+level-gated), and `Utility_Skill_Masteries` (the same shape with no level gates past
+the entry one, whole family shipped parked with `Enabled: false`).
 
 Node ids are a stability contract: a player's purchases are saved under
 `<trackId>:<nodeId>`, so renaming either orphans everybody who bought the node.
@@ -606,7 +606,10 @@ The pack and the plugin co-evolve:
      then `[AssetPacks] Mastery generator layer applied (3 generators) - 27 masteries effective`
      (17 files = 2 bases + 15 tracks; the generators write the other 15, and the two
      bases plus the parked utility trio never count as effective).
-   - Same for Currency, CommandRewards, Quest, Achievement layers.
+   - Same for the CommandRewards, Quest and Achievement layers. There is no Currency
+     line: the wallets are shared-economy assets under
+     `Server/ZiggfreedCommon/Currencies/`, so a `Server/MMOSkillTree/Currencies/`
+     line in the log means a file was left behind in the retired folder.
    - No `Failed to decode asset:` or `Asset validation FAILED` lines.
 5. In-game: open the Mastery menu tab (should be visible only if the pack
    loaded), buy a node, confirm currency deducted. Level a skill past 15,
