@@ -32,7 +32,7 @@
   "Listing": {
     "Category": "misc",
     "SortOrder": 201,
-    "Tags": ["Mastery", "Repeatable"],
+    "Tags": ["Mastery"],
     "Hidden": true,
     "RequirePrerequisites": true
   },
