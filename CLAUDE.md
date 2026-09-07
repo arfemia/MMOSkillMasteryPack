@@ -451,7 +451,9 @@ greets the player with a line written for a first meeting, and the option under 
 the `MarkTalked` beat that CREDITS the talk step. That quest is the one exception to the
 rule below - the Adventurer's Guide in the temple is its giver, so the player is SENT here
 rather than arriving to find it waiting, and it finishes on this conversation with no walk
-back.
+back. Its `TurnInAt` names the trainer, so the mastery point is collected here too, from the
+trainer's own quest list; leave that out and a finished quest with a reward still waiting may
+be collected anywhere, which also lists it on every other character in the game.
 
 Pressing F credits nothing on its own, so a talk objective aimed at this character always
 needs that beat; move the beat if you re-point the step. Once the quest is finished the

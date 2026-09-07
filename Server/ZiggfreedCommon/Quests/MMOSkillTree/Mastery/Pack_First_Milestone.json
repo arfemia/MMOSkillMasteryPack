@@ -1,5 +1,5 @@
 {
-  "$Comment": "A gentle nudge toward the mastery menu: reach level 15 in any one skill. Reads the MMO_HighestSkillLevel stat channel, the highest single skill level across the roster, so any skill counts. The Mastery Trainer offers it (accept it on their quest list) and TurnInId 'giver' adds a return-to-the-trainer step. The reward sits in the Claim bucket, so it waits in the quest log until the player collects it themselves.",
+  "$Comment": "A gentle nudge toward the mastery menu: reach level 15 in any one skill. Reads the MMO_HighestSkillLevel stat channel, the highest single skill level across the roster, so any skill counts. The Mastery Trainer offers it (accept it on their quest list) and TurnInId 'giver' adds a return-to-the-trainer step, one order behind the climb, so Order 1 on the climb is what puts the walk back after it. Flow.HideLockedSteps then keeps that walk off the step list until the level is reached. The reward sits in the Claim bucket, so it waits in the quest log until the player collects it themselves.",
   "Text": {
     "TitleKey": "quest.pack_first_milestone.title",
     "FlavorKey": "quest.pack_first_milestone.flavor"
@@ -11,6 +11,9 @@
       "Mastery",
       "Beginner"
     ]
+  },
+  "Flow": {
+    "HideLockedSteps": true
   },
   "Npc": {
     "ViewId": "Mmo_Mastery_Trainer",
@@ -30,7 +33,8 @@
       "Kind": "REACH_LEVEL",
       "Target": "ANY",
       "Amount": 15,
-      "TextKey": "objective.text.reach_level.any"
+      "TextKey": "objective.text.reach_level.any",
+      "Order": 1
     }
   },
   "Rewards": {

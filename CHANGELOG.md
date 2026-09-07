@@ -1,5 +1,10 @@
 # Changelog - MMO Skill Mastery Pack
 
+## [2.0.1] - unreleased
+
+- **A Word with the Trainer is collected at the trainer, and is listed on nobody else's quest screen.** The quest named no collection site, and a quest that names none may be collected anywhere, so once it was finished it sat under "Ready to collect" at every character on the server, Sawyer Marn included. It names the trainer (`TurnInAt`), which is where its own comment always said the mastery point is collected from.
+- **First Step Toward Mastery and Path of Mastery stop asking you to report back before there is anything to report.** Both end in a return to the trainer that the quest asset adds from `Npc.TurnInId`, and it was sitting on the step list beside the climbing from the moment the quest was taken. Their own steps carry `Order 1`, which is what puts the return trip behind them, and `Flow.HideLockedSteps` keeps it off the list until the climbing is done. The step list of a quest you have not taken still shows everything it asks of you, the return trip included.
+
 ## [2.0.0] - 2026-08-31
 
 - **Every mastery file rewritten onto the plugin's structured mastery schema.** Two `Abstract` bases (`Mastery_Base`, `Mastery_School_Base`) reused through native `Parent`, fifteen hand-authored tracks, and the three per-skill families (combat, gathering, utility) each written once as a `MasteryGenerators/` file the plugin stamps out per skill. The old template files are gone.
