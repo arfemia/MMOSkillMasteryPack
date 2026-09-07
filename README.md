@@ -27,8 +27,8 @@ hides the Mastery and Currency UI tabs unless it's installed.
   - +1 mastery_point every 15 levels for every built-in skill. Authored via the
   new CommandReward template system: one template + a single `{{ALL_SKILLS}}`
   entry fans out to every skill (vs. 2,386 lines of duplicated reward objects).
-- **Mastery-themed quests + achievements** (`Server/MMOSkillTree/Quests/`,
-  `Server/MMOSkillTree/Achievements/`) - content that uses the mastery /
+- **Mastery-themed quests + achievements** (`Server/ZiggfreedCommon/Quests/MMOSkillTree/Mastery/`,
+  `Server/ZiggfreedCommon/Achievements/MMOSkillTree/Mastery/`) - content that uses the mastery /
   currency surface (e.g. "purchase your first mastery node", "complete a
   mastery track", "accumulate mastery points").
 

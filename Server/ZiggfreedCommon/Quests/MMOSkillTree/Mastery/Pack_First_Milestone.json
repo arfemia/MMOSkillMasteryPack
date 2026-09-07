@@ -5,6 +5,7 @@
     "FlavorKey": "quest.pack_first_milestone.flavor"
   },
   "Listing": {
+    "Icon": "Deco_Book_Pile_Small",
     "Category": "main",
     "SortOrder": 10,
     "Tags": [

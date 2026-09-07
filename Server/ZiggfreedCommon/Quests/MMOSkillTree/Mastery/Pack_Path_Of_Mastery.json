@@ -5,6 +5,7 @@
     "FlavorKey": "quest.pack_path_of_mastery.flavor"
   },
   "Listing": {
+    "Icon": "Deco_Book_Pile_Large",
     "Category": "main",
     "SortOrder": 50,
     "Tags": [

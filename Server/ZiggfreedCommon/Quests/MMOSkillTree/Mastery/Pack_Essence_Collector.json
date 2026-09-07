@@ -5,6 +5,7 @@
     "FlavorKey": "quest.pack_essence_collector.flavor"
   },
   "Listing": {
+    "Icon": "Ingredient_Life_Essence",
     "Category": "main",
     "SortOrder": 40,
     "Tags": [

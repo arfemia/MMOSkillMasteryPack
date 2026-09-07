@@ -36,6 +36,7 @@
     "FlavorKey": "quest.meet_the_mastery_trainer.flavor"
   },
   "Listing": {
+    "Icon": "Ingredient_Crystal_Purple",
     "Category": "main",
     "SortOrder": 9,
     "Tags": [

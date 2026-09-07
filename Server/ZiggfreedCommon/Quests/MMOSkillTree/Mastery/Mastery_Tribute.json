@@ -30,6 +30,7 @@
     "FlavorKey": "quest.mastery_tribute.flavor"
   },
   "Listing": {
+    "Icon": "Ingredient_Life_Essence",
     "Category": "misc",
     "SortOrder": 201,
     "Tags": ["Mastery"],

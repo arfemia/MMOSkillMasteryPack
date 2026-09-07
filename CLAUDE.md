@@ -27,7 +27,6 @@ skill-mastery-pack/
     │   ├── CommandRewardTemplates/*.json      1 template (Mastery_Point_Milestones); see "CommandReward template extension" below
     │   ├── CommandRewards/MMOSkillMasteryPack.json   one {{ALL_SKILLS}} entry fans the template to every skill
     │   ├── QuestTemplates/*.json              (none shipped; Control already declares the key)
-    │   ├── Quests/Pack_Mastery_Tithe.json     the ONE quest still on the old raw-Payload compat adapter (see "Quests + Achievements" below)
     │   └── AchievementTemplates/*.json        (none shipped; Control already declares the key)
     ├── Models/Mmo_Mastery_Trainer.json      the trainer's look (a Parent clone of Kweebec_Sapling, re-skinned and scaled)
     ├── NPC/Roles/Passive/Mmo_Mastery_Trainer.json   the trainer's role body (FULL body, not a variant: its press-F Hint is read literally)
@@ -87,10 +86,9 @@ wrapper:
   "Nodes": { "swo_t1_dmg": { "Tier": 1, "Modifiers": [ ... ] } } }
 ```
 
-The two content types still on the older `Name`/`Payload` wrapper in this pack
-are `CommandRewards`/`CommandRewardTemplates` and the one legacy quest
-(`Quests/Pack_Mastery_Tithe.json`); their `Payload` is a nested JSON object the
-plugin's own parser reads.
+The one content type still on the older `Name`/`Payload` wrapper in this pack is
+`CommandRewards`/`CommandRewardTemplates`; its `Payload` is a nested JSON object
+the plugin's own parser reads.
 
 ### Per-entry vs per-pack files
 
@@ -114,7 +112,7 @@ and so cross-references (`metaChildren`, `prerequisites`, `currencyId`,
 All player-facing display text ships in `Server/Languages/en-US/mmoskilltree.lang` (loaded natively via `IncludesAssetPack: true`), keyed by convention. The mod's `LocalizedText` resolver tries an explicit key field, then the by-convention key, then a raw `displayName`/`description` (the deprecated fallback) - so pack JSON should set the key and leave the literal out:
 
 - **Mastery tracks:** `mastery.<trackId>.title` (trackId = filename lowercased) and `mastery.<nodeId>.title` per node, resolved by convention; an explicit `TitleKey` leaf overrides the convention key. **Node DESCRIPTIONS auto-render - do NOT author a node `DescriptionKey` unless a node genuinely needs extra flavor.** The mastery page generates the effect line from the node's `Modifiers` (via `MasteryModifierRenderer`, localized through `mastery.mod.*`) and renders the cost separately as chips, so a hand-written description is dead duplication that also bakes un-localizable balance data. Author the modifier + cost + requirements as structured fields; the text follows.
-- **Quests / bounties:** `quest.<id>.title` + `quest.<id>.flavor`, authored as `Text.TitleKey`/`Text.FlavorKey` on the native quests (id = filename) and as the inner `Payload.id` on `Pack_Mastery_Tithe.json` (the one still on the old schema).
+- **Quests / bounties:** `quest.<id>.title` + `quest.<id>.flavor`, authored as `Text.TitleKey`/`Text.FlavorKey` (id = filename).
 - **Currencies:** a wallet's `Text.TitleKey` (unauthored falls to `currency.<id>.name` by convention, id = filename lowercased) for COUNTER-backed currencies (`mastery_point`). An ITEM-backed currency (`life_essence`) ships neither: with nothing authored, ziggfreed-common's naming ladder derives the display name from the backing item's native, already-translated lang key (`server.items.Ingredient_Life_Essence.name`, "Essence of Life"), exactly like the icon derives from the item - zero hand-maintained translations, and the currency can never disagree with the inventory tooltip.
 - **Achievements:** `achievement.<id>.title` + `achievement.<id>.desc`.
 - **Shop offers:** `Text.TitleKey`/`Text.FlavorKey` on the offer JSON pointing at `.lang` keys.
@@ -345,15 +343,14 @@ The pack `Control/MMOSkillMasteryPack.json` adds `"QuestTemplates": "add"`
 and `"AchievementTemplates": "add"` alongside the existing content-type modes.
 
 The pack ships no `QuestTemplates/` or `AchievementTemplates/` folder today (its
-`Control/` file already declares both keys, so creating one is enough). This DSL only
-applies to `Pack_Mastery_Tithe.json`, the one quest still on the old raw-Payload compat
-adapter - see "Quests + Achievements (native Pattern A)" below for where the rest of the
-pack's quest/achievement content actually lives now.
+`Control/` file already declares both keys, so creating one is enough), and no quest or
+achievement of its own reads the DSL - see "Quests + Achievements (native Pattern A)"
+below for where that content lives.
 
 ## Quests + Achievements (native Pattern A, 1.6.0+)
 
-Every quest and achievement in this pack EXCEPT `Pack_Mastery_Tithe.json`
-authors directly against ziggfreed-common's own `QuestAsset` /
+Every quest and achievement in this pack authors directly against
+ziggfreed-common's own `QuestAsset` /
 `AchievementAsset` codecs (Pattern A: the codec IS the schema, no `Name`/
 `Payload` wrapper, no `extends`/`params` DSL) at:
 
@@ -415,19 +412,6 @@ A tiered achievement declares its ladder on the shared
 `Listing.Chains: [{"Id": "<ladder>", "Tier": n}]` leaf, and a description
 key with a `{0}` in it gets its number from `Text.TextArgs.Flavor:
 ["@amount"]` rather than from a per-rung translation.
-
-**Why `Pack_Mastery_Tithe.json` is still on the compat adapter**: nothing in
-its shape blocks a conversion. Its `requiredAchievements:
-["pack_mastery_hoarder_300"]` gate has a native spelling - the shared
-`ziggfreedcommon:achievement_earned` factor: `{"Factors": [{"Factor":
-"ziggfreedcommon:achievement_earned", "Param": "pack_mastery_hoarder_300",
-"Min": 1}]}` beside the `mmoskilltree:feature` factor the other files
-already carry. Its `repeatable`/`cooldownSeconds` become the `Repeat`
-block's `Cooldown`, `autoAccept` becomes `Flow.AutoAccept`, and the
-`minLevel` requirement becomes an ordinary factor bound on the total-level
-channel. Converting it is a straight rewrite into
-`Server/ZiggfreedCommon/Quests/MMOSkillTree/Mastery/`, and the file stays
-here only until somebody does it.
 
 ## The Mastery Trainer (NPC placement + dialogue)
 
@@ -560,12 +544,10 @@ this block; whether the mod's own UI still honors it is that side's concern.
   actually lives now (`Server/ZiggfreedCommon/Currencies/` and
   `/ShopEntries/`, the shared zc-commerce schema).
 - **Quests + Achievements** - see "Quests + Achievements (native Pattern A,
-  1.6.0+)" above for where this pack's content actually lives. Only
-  `Pack_Mastery_Tithe.json` still uses the old raw-Payload schema (same
-  shape as the plugin's owner files under `mods/mmoskilltree/quests/`):
-  reward shapes `CURRENCY` (`currency` + `amount`; the older `currencyId`
-  spelling still parses), `XP` (`skill` + `amount`), `COMMAND` (`command`
-  string), `BOOST_TOKEN`.
+  1.6.0+)" above for where this pack's content lives. Every quest and
+  achievement here is on that shared schema, so a reward is a `Kind` + `Params`
+  pair: a wallet payout reads `{"Kind": "Currency", "Params": {"Currency":
+  "mastery_point", "Amount": 1}}`.
 
 ### Currency-grant command format
 

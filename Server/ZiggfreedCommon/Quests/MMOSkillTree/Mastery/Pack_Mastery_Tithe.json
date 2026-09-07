@@ -1,0 +1,71 @@
+{
+  "$Comment": [
+    "The long-haul tithe: once a player is deep enough into the codex, blood and timber buy a",
+    "mastery point every six hours, forever.",
+    "",
+    "It is the only repeating source of mastery points that asks for no essence at all, which is",
+    "what makes it worth holding on a character who has run the essence quests dry. Repeat.Cooldown",
+    "is a ROLLING six hours measured from the claim, not a calendar reset, so it comes round four",
+    "times in a day for somebody playing through and once for somebody who logs on each evening.",
+    "Widen or narrow it by editing the Hours.",
+    "",
+    "AutoAccept puts it in the log the moment a player qualifies, so nobody has to know it exists.",
+    "The Requires block is what holds it back until then: 500 total levels across every skill, and",
+    "the 300-point hoarder achievement, on top of mastery being switched on at all. Those two are",
+    "deliberately steep, since a point every six hours compounds; drop either one to open it",
+    "earlier.",
+    "",
+    "Neither step names a target, which is what makes them mean ANY creature and ANY wood: the",
+    "tithe is paid with whatever the evening put in front of the player rather than by hunting one",
+    "species or one tree. Name a Target on either to narrow it.",
+    "",
+    "The reward is one mastery point, paid on collection rather than the instant the last log",
+    "falls, so the player chooses when to bank it."
+  ],
+  "Name": "Pack_Mastery_Tithe",
+  "Text": {
+    "TitleKey": "quest.pack_mastery_tithe.title",
+    "FlavorKey": "quest.pack_mastery_tithe.flavor"
+  },
+  "Listing": {
+    "Icon": "Ingredient_Crystal_Purple",
+    "Category": "main",
+    "SortOrder": 42,
+    "Tags": ["Mastery"]
+  },
+  "Flow": {
+    "AutoAccept": true,
+    "AutoTrack": true
+  },
+  "Repeat": {
+    "Cooldown": { "Hours": 6 },
+    "CooldownFrom": "Complete"
+  },
+  "Requires": {
+    "Factors": [
+      { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 },
+      { "Factor": "hytale:stat", "Param": "MMO_TotalLevel", "Min": 500 },
+      { "Factor": "ziggfreedcommon:achievement_earned", "Param": "pack_mastery_hoarder_300", "Min": 1 }
+    ]
+  },
+  "Objectives": {
+    "kill_mobs": {
+      "Kind": "KILL_ENTITY",
+      "Target": "",
+      "Amount": 10,
+      "Order": 1
+    },
+    "chop_logs": {
+      "Kind": "BREAK_BLOCK",
+      "Target": "Wood",
+      "Amount": 10,
+      "MatchMode": "CONTAINS",
+      "Order": 1
+    }
+  },
+  "Rewards": {
+    "Claim": [
+      { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": 1 } }
+    ]
+  }
+}

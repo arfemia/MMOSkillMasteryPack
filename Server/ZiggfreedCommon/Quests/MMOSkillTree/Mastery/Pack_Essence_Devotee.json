@@ -5,6 +5,7 @@
     "FlavorKey": "quest.pack_essence_devotee.flavor"
   },
   "Listing": {
+    "Icon": "Ingredient_Life_Essence_Concentrated",
     "Category": "main",
     "SortOrder": 41,
     "Tags": [
