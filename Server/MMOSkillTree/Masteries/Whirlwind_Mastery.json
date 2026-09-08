@@ -1,7 +1,6 @@
 {
   "Parent": "Mastery_Base",
   "Target": "ability:whirlwind",
-  "Icon": "Icon_Whirlwind",
   "Requires": {
     "Factors": [
       {

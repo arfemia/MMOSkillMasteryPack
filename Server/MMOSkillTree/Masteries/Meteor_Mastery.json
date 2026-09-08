@@ -1,7 +1,6 @@
 {
   "Parent": "Mastery_Base",
   "Target": "ability:meteor",
-  "Icon": "Icon_Meteor",
   "Nodes": {
     "met_t1": {
       "Tier": 1,

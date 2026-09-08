@@ -1,7 +1,6 @@
 {
   "Parent": "Mastery_Base",
   "Target": "ability:piercing_shot",
-  "Icon": "Icon_PiercingShot",
   "Requires": {
     "Factors": [
       {

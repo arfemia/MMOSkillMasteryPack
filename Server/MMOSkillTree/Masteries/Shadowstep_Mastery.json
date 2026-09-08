@@ -1,7 +1,6 @@
 {
   "Parent": "Mastery_Base",
   "Target": "ability:shadowstep",
-  "Icon": "Icon_Shadowstep",
   "RefundPercent": 100,
   "Requires": {
     "Factors": [

@@ -1,7 +1,6 @@
 {
   "Parent": "Mastery_Base",
   "Target": "ability:shield_slam",
-  "Icon": "Icon_ShieldSlam",
   "Requires": {
     "Factors": [
       {

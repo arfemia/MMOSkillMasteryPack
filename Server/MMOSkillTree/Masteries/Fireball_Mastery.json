@@ -1,7 +1,6 @@
 {
   "Parent": "Mastery_Base",
   "Target": "ability:fireball",
-  "Icon": "Icon_Fireball",
   "Requires": {
     "Factors": [
       {
