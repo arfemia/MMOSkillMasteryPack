@@ -1,6 +1,6 @@
 # Changelog - MMO Skill Mastery Pack
 
-## [2.0.1] - unreleased
+## [2.0.1] - 2026-09-12
 
 - **Each damage school track carries its own picture.** Fire, Ice, Lightning, Void and Water are drawn with the matching essence; Arcane takes the mastery crystal and Poison a venom sac, neither school having an essence of its own in the game. All seven drew the same iron bar before, because a track that targets every ability has nothing to take a picture from. The six ability tracks drop an `Icon` line that named a UI texture rather than an item and was never drawn; each still shows its ability's own picture. Needs MMO Skill Tree 1.6.1, which draws a track's authored icon.
 - **All seven quests name a `Listing.Icon`**, so each is drawn with a picture beside it wherever it is listed and on the notice when it finishes: the mastery crystal for meeting the trainer and for the tithe, life essence for the three essence quests, a book pile for the two level climbs. Needs MMO Skill Tree 1.6.1, which carries a quest's picture onto a finished-quest notice.
