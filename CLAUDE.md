@@ -345,7 +345,11 @@ and `"AchievementTemplates": "add"` alongside the existing content-type modes.
 The pack ships no `QuestTemplates/` or `AchievementTemplates/` folder today (its
 `Control/` file already declares both keys, so creating one is enough), and no quest or
 achievement of its own reads the DSL - see "Quests + Achievements (native Pattern A)"
-below for where that content lives.
+below for where that content lives. The Quest row applies to the OLDER
+`Server/MMOSkillTree/Quests` shape only: the MMO resolves it through its legacy converter
+at load and hands the result to ziggfreed-common's quest store, and a shared-shape quest
+reuses through native `Parent` and fans out through a `QuestGenerators/` file, never this
+DSL.
 
 ## Quests + Achievements (native Pattern A, 1.6.0+)
 
