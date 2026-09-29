@@ -1,5 +1,5 @@
 {
-  "$Comment": "Writes the four-step utility mastery once per utility skill, in the same loot-luck shape as the gathering family but with no level gates past the entry one. The whole family ships PARKED (Enabled false in the Child): switch one on by overriding its track id in mods/mmoskilltree/mastery.json with {\"Enabled\": true}, or author a Masteries/ file of the same id.",
+  "$Comment": "Writes the four-step utility mastery once per utility skill, in the same loot-luck shape as the gathering family but with no level gates past the entry one. Each row carries its own enabled switch: Enchanting is on, priced in Void essence with one Voidheart at the third step; Acrobatics and Fishing ship PARKED (enabled false), and a parked one is switched on by overriding its track id in mods/mmoskilltree/mastery.json with {\"Enabled\": true}. A per-row t3ExtraCount sets how many of the t3Extra item the third step asks for.",
   "Base": "mastery_base",
   "IdPattern": "{skillLower}_mastery",
   "ForEach": [
@@ -10,27 +10,33 @@
           "skillLower": "acrobatics",
           "prefix": "acr",
           "ingredient": "Ingredient_Lightning_Essence",
-          "t3Extra": "Ingredient_Water_Essence"
+          "t3Extra": "Ingredient_Water_Essence",
+          "t3ExtraCount": 2,
+          "enabled": false
         },
         {
           "skill": "ENCHANTING",
           "skillLower": "enchanting",
           "prefix": "enc",
-          "ingredient": "Ingredient_Fire_Essence",
-          "t3Extra": "Ingredient_Crystal_Purple"
+          "ingredient": "Ingredient_Void_Essence",
+          "t3Extra": "Ingredient_Voidheart",
+          "t3ExtraCount": 1,
+          "enabled": true
         },
         {
           "skill": "FISHING",
           "skillLower": "fishing",
           "prefix": "fis",
           "ingredient": "Ingredient_Water_Essence",
-          "t3Extra": "Ingredient_Ice_Essence"
+          "t3Extra": "Ingredient_Ice_Essence",
+          "t3ExtraCount": 2,
+          "enabled": false
         }
       ]
     }
   ],
   "Child": {
-    "Enabled": false,
+    "Enabled": "{enabled}",
     "Target": "skill:{skill}",
     "Requires": {
       "Factors": [
@@ -108,7 +114,7 @@
             },
             {
               "Item": "{t3Extra}",
-              "Count": 2
+              "Count": "{t3ExtraCount}"
             }
           ]
         },

@@ -8,17 +8,19 @@ hides the Mastery and Currency UI tabs unless it's installed.
 
 ## What's included
 
-- **27 active mastery tracks** (`Server/MMOSkillTree/Masteries/*.json` +
+- **28 active mastery tracks** (`Server/MMOSkillTree/Masteries/*.json` +
   `Server/MMOSkillTree/MasteryGenerators/*.json`) - 11 combat-skill tracks,
   6 marquee ability tracks, 3 gathering tracks (Mining, Woodcutting,
-  Harvesting), and 7 damage-school tracks (Fire, Ice, Lightning, Water,
+  Harvesting), the Enchanting utility track, and 7 damage-school tracks (Fire, Ice, Lightning, Water,
   Arcane, Void, Poison) gated on combat level rather than one skill. Each
   track has 3-5 finite identity nodes plus one infinitely-repeatable
   "Eternal" node; the school tracks run 10. The per-skill families are
   written by three generator files; the schools, the marquee abilities,
-  Magic and Defense are hand-authored files. Three utility tracks
-  (`fishing_mastery`, `enchanting_mastery`, `acrobatics_mastery`) ship with
-  `"Enabled": false` and will activate in a future pack release.
+  Magic and Defense are hand-authored files. The utility family (Enchanting,
+  Acrobatics, Fishing) is written by one generator with a per-row on/off
+  switch: `enchanting_mastery` is on; `acrobatics_mastery` and
+  `fishing_mastery` ship with `"Enabled": false` and will activate in a
+  future pack release.
 - **2 currencies** (`Server/MMOSkillTree/Currencies/*.json`) - `mastery_point`
   (counter-backed, paced by quest/milestone rewards) and `life_essence`
   (item-backed, wraps the Hytale `Ingredient_Life_Essence` item).
@@ -40,7 +42,7 @@ log lines:
 
 ```
 [AssetPacks] Mastery asset layer applied (17 entries) - 15 masteries effective
-[AssetPacks] Mastery generator layer applied (3 generators) - 27 masteries effective
+[AssetPacks] Mastery generator layer applied (3 generators) - 28 masteries effective
 [AssetPacks] CommandRewards pack layer applied (1 packs, mode=add) - N skill+level entries effective
 [AssetPacks] Quest pack layer applied (5 entries, mode=add) - 5 quests effective
 [AssetPacks] Achievement pack layer applied (6 entries, mode=add) - 6 achievements effective

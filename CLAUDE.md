@@ -66,7 +66,7 @@ not ship to players until they're moved back. Keep edits there in sync
 with the live tracks so an unpark is a straight move with no cleanup.
 
 **Lighter-weight alternative: `"Enabled": false`** at the top of a track file
-(or in a generator's `Child`, which is how the whole utility family ships)
+(or in a generator's `Child`, per row through an `{enabled}` token, which is how Acrobatics and Fishing ship)
 parks it without moving the file. The track still decodes, so a server owner
 can flip it back on from `mods/mmoskilltree/mastery.json` with
 `{"tracks": {"<id>": {"Enabled": true}}}`. Use `.unused-for-now/` for tracks
@@ -169,7 +169,11 @@ The three shipped generators: `Combat_Skill_Masteries` (the six-node combat shap
 per weapon skill; per-row tokens carry each skill's ingredients, sacrifice stat, and
 Archery's dearer opener), `Gathering_Skill_Masteries` (the four-step loot-luck shape,
 level-gated), and `Utility_Skill_Masteries` (the same shape with no level gates past
-the entry one, whole family shipped parked with `Enabled: false`).
+the entry one; each row carries its own `{enabled}` switch, so Enchanting ships on, priced in
+Void essence with one Voidheart at the third step through the per-row `{ingredient}`,
+`{t3Extra}` and `{t3ExtraCount}` tokens, and Acrobatics and Fishing ship parked with `enabled: false`).
+A value that is exactly one token keeps its bound JSON type, which is what lets `"Enabled": "{enabled}"`
+land as a boolean and `"Count": "{t3ExtraCount}"` as a number (`MasteryGeneratorTypedTokenTest` pins it).
 
 Node ids are a stability contract: a player's purchases are saved under
 `<trackId>:<nodeId>`, so renaming either orphans everybody who bought the node.
@@ -591,9 +595,9 @@ The pack and the plugin co-evolve:
 4. Start the server. Confirm in the server log
    (`Saves/<world>/logs/<date>_server.log`):
    - `[AssetPacks] Mastery asset layer applied (17 entries) - 15 masteries effective`
-     then `[AssetPacks] Mastery generator layer applied (3 generators) - 27 masteries effective`
+     then `[AssetPacks] Mastery generator layer applied (3 generators) - 28 masteries effective`
      (17 files = 2 bases + 15 tracks; the generators write the other 15, and the two
-     bases plus the parked utility trio never count as effective).
+     bases plus the parked Acrobatics and Fishing tracks never count as effective).
    - Same for the CommandRewards, Quest and Achievement layers. There is no Currency
      line: the wallets are shared-economy assets under
      `Server/ZiggfreedCommon/Currencies/`, so a `Server/MMOSkillTree/Currencies/`
