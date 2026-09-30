@@ -11,3 +11,5 @@ Mastery tracks, the Mastery Trainer and the mastery currency. The family-wide ru
 - This pack owns the Mastery Trainer end to end (the jar ships none); add every quest the trainer gives to the trainer dialogue's `Start.Quests`.
 - CommandRewards commands use named args (`/mmocurrency give --player={player} --currency=mastery_point --amount=N`); the positional form is rejected.
 - A CommandReward template id is its lower-cased filename with no underscores inserted, so `Mastery_Point_Milestones.json` is `extends "mastery_point_milestones"`.
+- Acrobatics and Fishing ship parked; Enchanting ships on (Void essence, one Voidheart at the third step). The Utility generator switches each row through a per-row `{enabled}` token, not a whole-generator `Enabled: false`.
+- A generator value that is exactly one token keeps its bound JSON type (`"Enabled": "{enabled}"` lands as a boolean, `"Count": "{t3ExtraCount}"` as a number).
