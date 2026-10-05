@@ -12,16 +12,17 @@
 
 ## What's inside
 
-### Mastery tracks (27 active)
+### Mastery tracks (28 active)
 
 - **11 combat-skill tracks** - Swords, Daggers, Polearms, Staves, Axes, Blunt, Unarmed, Archery, Magic, Artillery, and Defense. Each buffs the skill's ordinary swings as well as its abilities.
 - **6 marquee ability tracks** - Fireball, Meteor, Whirlwind, Piercing Shot, Shield Slam, and Shadowstep. Narrower buffs, with Eternals that grow faster per purchase.
 - **3 gathering tracks** - Mining, Woodcutting, and Harvesting. Their Eternals boost gathering loot, so they stay valuable past level 100.
+- The Enchanting track, new in 2.1.0: Enchanting loot luck, priced in Void essence. It opens at Enchanting level 5.
 - 7 damage-school tracks - Fire, Ice, Lightning, Water, Arcane, Void, Poison. A school node follows the damage, not the weapon: buy Fire and it pays on a fireball, on a meteor, and on a molten hammer swing. Each school also sells resistance to itself, so you can armour up against the element that keeps killing you.
 
 School tracks run ten nodes. Two openers (percent damage or flat damage), a resistance step, three flavor nodes tuned to that school's own spells, a capstone that costs a permanent slice of your max Health, Stamina, or Mana, an Ascendant pair (school-wide cooldown cuts, or another slab of flat damage), and the usual Eternal at +1% a purchase. Every gate reads combat level (16 to 92) instead of one skill, so a mage and a rogue climb the same ladder.
 
-Three more tracks (Fishing, Enchanting, Acrobatics) ship in the zip switched off, parked for balance work until a later release; a server owner can turn one on early from `mastery.json`.
+Two more tracks (Fishing, Acrobatics) ship in the zip switched off, parked for balance work until a later release; a server owner can turn one on early from `mastery.json`.
 
 Each track has **3-5 finite identity nodes** that define its character, plus exactly one infinitely-repeatable **"Eternal" node** (tier 9) for multi-year progression. Identity cost curve: combat + marquee ability tracks use T1 = 600 Life Essence, T2 = 1500, T3 = 4000 (Meteor uniquely has a T4 at 8000); gathering tracks are lighter at T1 = 500, T2 = 1200, T3 = 3500. Eternals start cheap (200-500 LE depending on track) and scale 1.10x per purchase (Fireball uses 1.25x and Meteor soft-caps at 70 buys) - self-limiting curves where each player naturally plateaus.
 
@@ -64,7 +65,7 @@ Every display string in the pack - track titles, node names and descriptions, qu
 ## Installation
 
 1. Install the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).
-2. Drop `MMOSkillMasteryPack-2.0.1.zip` into the same `mods/` folder.
+2. Drop `MMOSkillMasteryPack-2.1.0.zip` into the same `mods/` folder.
 3. Restart the server.
 
 On startup, look for:
