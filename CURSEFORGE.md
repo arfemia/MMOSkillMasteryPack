@@ -2,7 +2,7 @@
 
 **The mastery and currency content pack for the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).** Drop this `.zip` into your server's `mods/` folder alongside the plugin and the full mastery system switches on: 27 active tracks across combat skills, marquee abilities, gathering, and the seven damage schools, plus two starter currencies, a claimable Mastery Point every 15 levels, and themed quests and achievements to earn them with.
 
-[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/5NFdZsUxHZ) [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/ziggfreed) [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/wintergreensolutions) [![Documentation](https://img.shields.io/badge/Docs-Read%20More-0ea5e9?style=for-the-badge)](https://mmo-skill-tree-docs.ziggfreed.com)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/5NFdZsUxHZ) [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/ziggfreed) [![Documentation](https://img.shields.io/badge/Docs-Read%20More-0ea5e9?style=for-the-badge)](https://mmo-skill-tree-docs.ziggfreed.com)
 
 ---
 
@@ -116,6 +116,6 @@ The pack uses the standard MMO content-pack format documented in the plugin's `C
 
 **Full docs:** [mmo-skill-tree-docs.ziggfreed.com](https://mmo-skill-tree-docs.ziggfreed.com) | Questions? Join the [Discord](https://discord.gg/5NFdZsUxHZ)
 
-**Support Development:** [Ko-fi](https://ko-fi.com/ziggfreed) | [Buy Me a Coffee](https://buymeacoffee.com/wintergreensolutions)
+**Support Development:** [Ko-fi](https://ko-fi.com/ziggfreed)
 
 _MMO Skill Tree is not affiliated with Hypixel Studios or Hytale._
