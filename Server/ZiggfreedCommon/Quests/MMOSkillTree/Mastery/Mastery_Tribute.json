@@ -20,9 +20,9 @@
     "matches everything, so a player pays this part of the tribute with whatever the day put in front",
     "of them rather than hunting one species. Name a target to narrow it.",
     "",
-    "The tribute is essence, a little linen and ten kills, all on Order 1 so they can be paid in any order,",
-    "and it asks for less than the temple guide's does: a player running both dailies pays nine",
-    "essence between them rather than the same toll twice. Linen scrap rather than something woven",
+    "The tribute is essence, a little linen and ten kills, all on Order 1 so they can be paid in any order.",
+    "It asks for more essence than the temple guide's daily does, since Mastery Points are the richer pay;",
+    "a player running both dailies pays both tolls. Linen scrap rather than something woven",
     "keeps it inside what an ordinary afternoon turns up."
   ],
   "Text": {
@@ -59,7 +59,7 @@
     "pay_essence": {
       "Kind": "TURN_IN",
       "Target": "Ingredient_Life_Essence",
-      "Amount": 75,
+      "Amount": 115,
       "MatchMode": "EXACT",
       "Order": 1
     },

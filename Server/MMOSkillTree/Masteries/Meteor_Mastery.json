@@ -7,7 +7,7 @@
       "Cost": {
         "Currencies": {
           "mastery_point": 2,
-          "life_essence": 600
+          "life_essence": 900
         },
         "Items": [
           {
@@ -41,7 +41,7 @@
       "Cost": {
         "Currencies": {
           "mastery_point": 3,
-          "life_essence": 1500
+          "life_essence": 2250
         },
         "Items": [
           {
@@ -75,7 +75,7 @@
       "Cost": {
         "Currencies": {
           "mastery_point": 5,
-          "life_essence": 4000
+          "life_essence": 6000
         },
         "Items": [
           {
@@ -113,7 +113,7 @@
       "Cost": {
         "Currencies": {
           "mastery_point": 8,
-          "life_essence": 8000
+          "life_essence": 12000
         },
         "Items": [
           {
@@ -157,7 +157,7 @@
       "Cost": {
         "Currencies": {
           "mastery_point": 1,
-          "life_essence": 400
+          "life_essence": 600
         },
         "Items": [
           {

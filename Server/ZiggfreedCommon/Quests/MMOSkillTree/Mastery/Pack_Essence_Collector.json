@@ -1,5 +1,5 @@
 {
-  "$Comment": "An early mastery-onboarding turn-in: bring 100 Life Essence to bank a first taste of mastery points and skill XP. The Mastery Trainer offers it (Npc.ViewId; accept it on their quest list) and TurnInId 'giver' means the essence is handed in back at the trainer. The reward sits in the Claim bucket, so it waits in the quest log until the player collects it themselves. Override the Amount to retune the ask, or the Rewards Claim list to retune the payout.",
+  "$Comment": "An early mastery-onboarding turn-in: bring the Essence of Life it asks for to bank a first taste of mastery points and skill XP. The Mastery Trainer offers it (Npc.ViewId; accept it on their quest list) and TurnInId 'giver' means the essence is handed in back at the trainer. The reward sits in the Claim bucket, so it waits in the quest log until the player collects it themselves. Override the Amount to retune the ask, or the Rewards Claim list to retune the payout.",
   "Text": {
     "TitleKey": "quest.pack_essence_collector.title",
     "FlavorKey": "quest.pack_essence_collector.flavor"
@@ -30,7 +30,7 @@
     "turn_in_essence": {
       "Kind": "TURN_IN",
       "Target": "Ingredient_Life_Essence",
-      "Amount": 100,
+      "Amount": 150,
       "MatchMode": "EXACT"
     }
   },

@@ -17,7 +17,7 @@
       "Cost": {
         "Currencies": {
           "mastery_point": 3,
-          "life_essence": 600
+          "life_essence": 900
         },
         "Items": [
           {
@@ -42,7 +42,7 @@
       "Cost": {
         "Currencies": {
           "mastery_point": 3,
-          "life_essence": 600
+          "life_essence": 900
         },
         "Items": [
           {
@@ -79,7 +79,7 @@
       "Cost": {
         "Currencies": {
           "mastery_point": 6,
-          "life_essence": 1500
+          "life_essence": 2250
         },
         "Items": [
           {
@@ -116,7 +116,7 @@
       "Cost": {
         "Currencies": {
           "mastery_point": 6,
-          "life_essence": 1500
+          "life_essence": 2250
         },
         "Items": [
           {
@@ -168,7 +168,7 @@
       "Cost": {
         "Currencies": {
           "mastery_point": 12,
-          "life_essence": 4000
+          "life_essence": 6000
         },
         "Items": [
           {
@@ -218,7 +218,7 @@
       "Cost": {
         "Currencies": {
           "mastery_point": 1,
-          "life_essence": 350
+          "life_essence": 525
         },
         "Items": [
           {
@@ -254,7 +254,7 @@
       "Cost": {
         "Currencies": {
           "mastery_point": 30,
-          "life_essence": 8000
+          "life_essence": 12000
         },
         "Items": [
           {

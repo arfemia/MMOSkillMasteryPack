@@ -24,7 +24,7 @@ School tracks run ten nodes. Two openers (percent damage or flat damage), a resi
 
 Two more tracks (Fishing, Acrobatics) ship in the zip switched off, parked for balance work until a later release; a server owner can turn one on early from `mastery.json`.
 
-Each track has **3-5 finite identity nodes** that define its character, plus exactly one infinitely-repeatable **"Eternal" node** (tier 9) for multi-year progression. Identity cost curve: combat + marquee ability tracks use T1 = 600 Life Essence, T2 = 1500, T3 = 4000 (Meteor uniquely has a T4 at 8000); gathering tracks are lighter at T1 = 500, T2 = 1200, T3 = 3500. Eternals start cheap (200-500 LE depending on track) and scale 1.10x per purchase (Fireball uses 1.25x and Meteor soft-caps at 70 buys) - self-limiting curves where each player naturally plateaus.
+Each track has **3-5 finite identity nodes** that define its character, plus exactly one infinitely-repeatable **"Eternal" node** (tier 9) for multi-year progression. Identity cost curve: combat + marquee ability tracks use T1 = 900 Life Essence, T2 = 2250, T3 = 6000 (Meteor uniquely has a T4 at 12000); gathering tracks are lighter at T1 = 750, T2 = 1800, T3 = 5250. Eternals start cheap (300-750 LE depending on track) and scale 1.10x per purchase (Fireball uses 1.25x and Meteor soft-caps at 70 buys) - self-limiting curves where each player naturally plateaus.
 
 ### Currencies (2)
 
@@ -40,8 +40,8 @@ One reusable milestone template fans out to every skill, so a server owner who w
 ### Themed quests (5)
 
 - **The First Milestone** - auto-accepts on your first level-up. Reach level 15 in any skill for 2 Mastery Points.
-- **Essence Collector** - turn in 100 Essence of Life for 5 Mastery Points plus 2,000 Mining and 2,000 Woodcutting XP.
-- **Essence Devotee** (follows Essence Collector) - turn in 500 Essence of Life for 25 Mastery Points.
+- **Essence Collector** - turn in 150 Essence of Life for 5 Mastery Points plus 2,000 Mining and 2,000 Woodcutting XP.
+- **Essence Devotee** (follows Essence Collector) - turn in 750 Essence of Life for 25 Mastery Points.
 - **Many Trades** - reach level 25 in Mining, Woodcutting, Harvesting, Swords, and Archery for 10 Mastery Points.
 - **Mastery Tithe** (repeatable every 6 hours) - slay 10 mobs and chop 10 logs for 1 Mastery Point. Gated behind Total Level 500 and the **Mastery Hoarder** achievement, so the trickle stays an endgame faucet.
 

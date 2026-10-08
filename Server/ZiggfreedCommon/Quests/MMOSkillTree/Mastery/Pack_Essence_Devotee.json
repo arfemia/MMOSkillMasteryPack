@@ -37,7 +37,7 @@
     "turn_in_essence": {
       "Kind": "TURN_IN",
       "Target": "Ingredient_Life_Essence",
-      "Amount": 500,
+      "Amount": 750,
       "MatchMode": "EXACT"
     }
   },
