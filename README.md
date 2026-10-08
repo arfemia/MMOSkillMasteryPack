@@ -44,8 +44,7 @@ log lines:
 [AssetPacks] Mastery asset layer applied (17 entries) - 15 masteries effective
 [AssetPacks] Mastery generator layer applied (3 generators) - 28 masteries effective
 [AssetPacks] CommandRewards pack layer applied (1 packs, mode=add) - N skill+level entries effective
-[AssetPacks] Quest pack layer applied (5 entries, mode=add) - 5 quests effective
-[AssetPacks] Achievement pack layer applied (6 entries, mode=add) - 6 achievements effective
+[AssetPacks] Shared-schema achievement layer applied (N achievements) - N achievements effective
 ```
 
 ## Build (from source)
