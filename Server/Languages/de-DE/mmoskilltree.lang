@@ -6,19 +6,19 @@
 
 # --- Quests (quest.<id>.title / .flavor, per Konvention aufgelöst; folgt dem Kopfgeld-Muster) ---
 quest.meet_the_mastery_trainer.title = Ein Wort mit dem Trainer
-quest.meet_the_mastery_trainer.flavor = Unten im Tempel wacht noch jemand, der sich mit Meisterschaft befasst statt mit Karten. Geh hinüber und hör, was er zu sagen hat.
+quest.meet_the_mastery_trainer.flavor = Hier unten solltest du noch jemanden kennenlernen. Drüben gibt's Unterricht in Mastery. Geh über den Absatz und sag Hallo.
 quest.mastery_tribute.title = Der Zins des Trainers
 quest.mastery_tribute.flavor = Bring mir Essenz, und ich gebe dir etwas, das den Weg wert ist. Was genau, kann ich dir nicht sagen. Das ist gewissermaßen der Sinn der Übung.
-quest.pack_first_milestone.title = Erster Schritt zur Mastery
-quest.pack_first_milestone.flavor = Beweise dich in einer beliebigen Fähigkeit, um deinen ersten Mastery-Meilenstein zu erreichen. Der Pfad der Mastery beginnt hier.
+quest.pack_first_milestone.title = Der erste Meilenstein
+quest.pack_first_milestone.flavor = Bring eine deiner Fähigkeiten bis zu ihrem ersten Meilenstein, dann komm zu mir zurück. Dort beginnt mein Unterricht.
 quest.pack_essence_collector.title = Essenz-Sammler
-quest.pack_essence_collector.flavor = Die Essenz der Welt treibt die Mastery an. Bring dem Altar eine Opfergabe dar und verdiene dauerhafte Macht.
+quest.pack_essence_collector.flavor = Bring mir Lebensessenz. Ich mache daraus Mastery, Stück für Stück.
 quest.pack_essence_devotee.title = Essenz-Anhänger
-quest.pack_essence_devotee.flavor = Für jene, die ihre Hingabe bereits bewiesen haben: eine größere Opfergabe für einen großen Mastery-Beutel.
-quest.pack_path_of_mastery.title = Pfad der Mastery
-quest.pack_path_of_mastery.flavor = Wahre Mastery ist breit gefächert. Steige in mehreren verschiedenen Fähigkeiten weit auf, um deine Bandbreite zu beweisen.
+quest.pack_essence_devotee.flavor = Du hast mir schon einmal Essenz gebracht. Diesmal bring mir einen ganzen Sack voll.
+quest.pack_path_of_mastery.title = Allerlei Handwerk
+quest.pack_path_of_mastery.flavor = Eine gute Fähigkeit reicht für das, was ich lehre, nicht aus. Bring mehrere davon weit nach oben, dann komm zu mir zurück.
 quest.pack_mastery_tithe.title = Mastery-Tribut
-quest.pack_mastery_tithe.flavor = Zahle deinen Tribut an den Mastery-Kodex: Blut und Holz, regelmäßig entrichtet, im Tausch gegen tiefere Mastery.
+quest.pack_mastery_tithe.flavor = Der Mastery-Kodex verlangt einen Tribut aus Blut und Holz. Streck ein paar Kreaturen nieder und schlag ein paar Stämme.
 
 # --- Token-Shop-Angebote, die dieser Pack ausliefert (explizite titleKey/descriptionKey -> diese Schlüssel) ---
 shop.convert_mastery_point.title = Mastery-Infusion
@@ -188,10 +188,10 @@ mastery.void_t3_cap.title = Ereignishorizont
 mastery.poison_t3_cap.title = Giftblüte
 
 # Mastery Trainer conversation
-dialogue.mmo_mastery_trainer.ready_generic.text = Du kehrst voller Entschlossenheit zurück. Welche Aufgabe dich auch fortgerufen haben mag - es scheint, als wäre die Arbeit getan. Lass mich sehen, was du erreicht hast.
-dialogue.mmo_mastery_trainer.menu.text = Du stehst vor einem Hüter der alten Disziplinen. Jede Fertigkeit hat einen Gipfel jenseits ihres Gipfels, und Meisterschaft ist der Weg dorthin. Was suchst du?
+dialogue.mmo_mastery_trainer.ready_generic.text = Zurück, und du trägst etwas bei dir. Leg es ab, und lass es uns ansehen.
+dialogue.mmo_mastery_trainer.menu.text = Die Disziplinen sind hier, wenn du sie willst. Was brauchst du?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Welche Aufgaben hast du für mich?
-dialogue.mmo_mastery_trainer.menu.opt.mastery = Lehre mich die Wege der Meisterschaft.
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Zeig mir meine Mastery.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Lebewohl.
-dialogue.mmo_mastery_trainer.first_words.text = <b>Der Guide hat dich also doch heruntergeschickt.</b>\nIch hüte hier die alten Disziplinen, fern vom Lärm dort oben. Jede Fertigkeit, die du trägst, hat einen Gipfel über ihrem Gipfel, und <color is="#c8a2ff">Meisterschaft ist der Weg dorthin</color>.
+dialogue.mmo_mastery_trainer.first_words.text = Der Guide hat dich also doch heruntergeschickt.\nIch hüte hier die alten Disziplinen, fern vom Lärm dort oben. Eine Fähigkeit hört nicht dort auf, wo ihre Stufen enden, und sie weiterzuführen ist das, was ich lehre. Ich nenne es <color is="#ffd97a">Mastery</color>.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = Der Guide hat von dir gesprochen.

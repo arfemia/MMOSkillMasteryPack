@@ -6,19 +6,19 @@
 
 # --- Görevler (quest.<id>.title / .flavor, kurala göre çözülür; ödül deseniyle eşleşir) ---
 quest.meet_the_mastery_trainer.title = Eğitmenle bir iki söz
-quest.meet_the_mastery_trainer.flavor = Tapınakta bir başka bekçi daha var; haritalarla değil, ustalıkla ilgilenen biri. Sahanlığı geç ve söyleyeceklerini dinle.
+quest.meet_the_mastery_trainer.flavor = Aşağıda tanışman gereken biri daha var. Ustalık öğretiyor. Sahanlığı geç ve bir merhaba de.
 quest.mastery_tribute.title = Eğitmenin hakkı
 quest.mastery_tribute.flavor = Bana öz getir, ben de sana yolu değecek bir şey vereyim. Tam olarak ne, onu söyleyemem. Alıştırmanın anlamı da biraz bu.
-quest.pack_first_milestone.title = Ustalığa İlk Adım
-quest.pack_first_milestone.flavor = İlk ustalık dönüm noktana ulaşmak için herhangi bir yetenekte kendini kanıtla. Ustalık yolu burada başlar.
+quest.pack_first_milestone.title = İlk Dönüm Noktası
+quest.pack_first_milestone.flavor = Yeteneklerinden herhangi birini ilk dönüm noktasına çıkar, sonra bana dön. Öğretmem orada başlar.
 quest.pack_essence_collector.title = Öz Toplayıcı
-quest.pack_essence_collector.flavor = Dünyanın özü ustalığa güç verir. Sunağa bir adak getir ve kalıcı güç kazan.
+quest.pack_essence_collector.flavor = Bana yaşam özü getir. Onu azar azar ustalığa çeviririm.
 quest.pack_essence_devotee.title = Öz Müridi
-quest.pack_essence_devotee.flavor = Adanmışlığını çoktan kanıtlamış olanlar için: büyük bir ustalık kesesi karşılığında daha büyük bir adak.
-quest.pack_path_of_mastery.title = Ustalık Yolu
-quest.pack_path_of_mastery.flavor = Gerçek ustalık geniştir. Kapsamını kanıtlamak için birkaç farklı yetenekte yükseklere tırman.
+quest.pack_essence_devotee.flavor = Bana daha önce de öz getirdin. Bu sefer bir çuval dolusu getir.
+quest.pack_path_of_mastery.title = Birçok Zanaat
+quest.pack_path_of_mastery.flavor = Öğrettiğim şey için tek bir iyi yetenek yetmez. Birkaçını epey yükselt, sonra bana dön.
 quest.pack_mastery_tithe.title = Ustalık Ödencesi
-quest.pack_mastery_tithe.flavor = Ustalık kodeksine ödenceni öde: kan ve kereste, düzenli olarak sunulur, karşılığında daha derin bir ustalık.
+quest.pack_mastery_tithe.flavor = Ustalık kodeksi kan ve keresteden ödence alır. Birkaç yaratık indir ve birkaç kütük kes.
 
 # --- Bu paketin gönderdiği Jeton Mağazası teklifleri (açık titleKey/descriptionKey -> bu anahtarlar) ---
 shop.convert_mastery_point.title = Ustalık İnfüzyonu
@@ -188,10 +188,10 @@ mastery.void_t3_cap.title = Olay Ufku
 mastery.poison_t3_cap.title = Zehir Çiçeği
 
 # Mastery Trainer conversation
-dialogue.mmo_mastery_trainer.ready_generic.text = Adımında bir kararlılık ile dönersin. Seni uzağa çağıran ne olursa olsun, işin tamamlandığı anlaşılıyor. Gelin, ne başarıp getirmişsiniz görelim.
-dialogue.mmo_mastery_trainer.menu.text = Eski disiplinlerin bir bekçisinin karşısındasın. Her yeteneğin zirvesinin ötesinde bir zirve vardır ve ustalık oraya giden yoldur. Ne arıyorsun?
+dialogue.mmo_mastery_trainer.ready_generic.text = Döndün ve bir şey taşıyorsun. Bırak onu, görelim.
+dialogue.mmo_mastery_trainer.menu.text = Disiplinler, istediğin zaman burada. Neye ihtiyacın var?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Benim için ne görevlerin var?
-dialogue.mmo_mastery_trainer.menu.opt.mastery = Bana ustalığın yollarını öğret.
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Bana ustalığımı göster.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Elveda.
-dialogue.mmo_mastery_trainer.first_words.text = <b>Demek rehber seni buraya kadar yolladı.</b>\nEski disiplinleri burada, yukarının gürültüsünden uzakta korurum. Taşıdığın her yeteneğin zirvesinin ötesinde bir zirve daha vardır ve <color is="#c8a2ff">ustalık oraya giden yoldur</color>.
+dialogue.mmo_mastery_trainer.first_words.text = Demek rehber seni yine de aşağı yolladı.\nEski disiplinleri burada, yukarının gürültüsünden uzakta korurum. Bir yetenek, seviyelerinin bittiği yerde durmaz; onu daha ileri taşımayı ben öğretirim. Ben buna <color is="#ffd97a">Ustalık</color> derim.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = Rehber senden bahsetti.

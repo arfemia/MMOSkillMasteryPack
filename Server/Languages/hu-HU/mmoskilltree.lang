@@ -6,19 +6,19 @@
 
 # --- Küldetések (quest.<id>.title / .flavor, konvenció szerint feloldva; a bounty mintát követi) ---
 quest.meet_the_mastery_trainer.title = Néhány szó az edzővel
-quest.meet_the_mastery_trainer.flavor = Van egy másik őrző a templomban, aki a mesterséggel foglalkozik, nem a térképekkel. Menj át hozzá, és hallgasd meg, mit mond.
+quest.meet_the_mastery_trainer.flavor = Van itt lent még valaki, akivel találkoznod kéne. Ő tanítja a masteryt. Menj át a pihenőn, és köszönj neki.
 quest.mastery_tribute.title = Az edző járandósága
 quest.mastery_tribute.flavor = Hozz nekem eszenciát, és adok valamit, ami megéri az utat. Hogy pontosan mit, azt nem tudom megmondani. Nagyjából ez a gyakorlat lényege.
-quest.pack_first_milestone.title = Első Lépés a Mastery Felé
-quest.pack_first_milestone.flavor = Bizonyíts bármelyik képességben, hogy elérd az első mastery mérföldkövedet. A mastery útja itt kezdődik.
+quest.pack_first_milestone.title = Az Első Mérföldkő
+quest.pack_first_milestone.flavor = Vidd fel bármelyik képességedet az első mérföldkövéig, aztán gyere vissza hozzám. Ott kezdődik a tanításom.
 quest.pack_essence_collector.title = Esszencia Gyűjtő
-quest.pack_essence_collector.flavor = A világ esszenciája táplálja a masteryt. Vigyél áldozatot az oltárhoz, és szerezz tartós erőt.
+quest.pack_essence_collector.flavor = Hozz nekem életesszenciát. Apránként masteryvé alakítom.
 quest.pack_essence_devotee.title = Esszencia Híve
-quest.pack_essence_devotee.flavor = Azoknak, akik már bizonyították elhivatottságukat: nagyobb áldozat egy jelentős mastery erszényért.
-quest.pack_path_of_mastery.title = A Mastery Útja
-quest.pack_path_of_mastery.flavor = Az igazi mastery sokrétű. Juss magasra több különböző képességben, hogy bizonyítsd a sokoldalúságodat.
+quest.pack_essence_devotee.flavor = Hoztál már nekem esszenciát. Most hozz egy zsákkal.
+quest.pack_path_of_mastery.title = Sok Szakma
+quest.pack_path_of_mastery.flavor = Egyetlen jó képesség nem elég ahhoz, amit tanítok. Vigyél fel többet is jó magasra, aztán gyere vissza hozzám.
 quest.pack_mastery_tithe.title = Mastery Tized
-quest.pack_mastery_tithe.flavor = Fizesd meg a tizededet a mastery kódexnek: vér és fa, rendszeresen leróva, cserébe mélyebb masteryért.
+quest.pack_mastery_tithe.flavor = A mastery kódex vérből és fából szedi a tizedet. Teríts le néhány teremtményt, és vágj ki néhány rönköt.
 
 # --- A pack által szállított Token Shop ajánlatok (explicit titleKey/descriptionKey -> ezek a kulcsok) ---
 shop.convert_mastery_point.title = Mastery Infúzió
@@ -188,10 +188,10 @@ mastery.void_t3_cap.title = Eseményhorizont
 mastery.poison_t3_cap.title = Métely Virága
 
 # Mastery Trainer conversation
-dialogue.mmo_mastery_trainer.ready_generic.text = Szándékkal térted vissza. Bármilyen feladat hívott is el, a munka teljesítettnek hangzik. Lássuk meg, mit szerzettél érte.
-dialogue.mmo_mastery_trainer.menu.text = A régi tudományok őrzője előtt állsz. Minden képzettségnek van egy csúcsa a csúcsán túl, és a mesterség az oda vezető út. Mit keresel?
+dialogue.mmo_mastery_trainer.ready_generic.text = Visszajöttél, és hozol valamit. Tedd le, és lássuk.
+dialogue.mmo_mastery_trainer.menu.text = A régi tudományok itt vannak, amikor csak kellenek. Mire van szükséged?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Milyen feladataid vannak számomra?
-dialogue.mmo_mastery_trainer.menu.opt.mastery = Taníts meg a mesterség útjaira.
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Mutasd, hol tartok a mesterségben.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Ég veled.
-dialogue.mmo_mastery_trainer.first_words.text = <b>Szóval a kalauz mégis leküldött hozzám.</b>\nItt őrzöm a régi tudományokat, távol a fenti zajtól. Minden képességednek van egy csúcsa a csúcsán túl, és <color is="#c8a2ff">a mesterség az odavezető út</color>.
+dialogue.mmo_mastery_trainer.first_words.text = Szóval a kalauz mégis leküldött hozzám.\nItt őrzöm a régi tudományokat, távol a fenti zajtól. Egy képesség nem ott ér véget, ahol a szintjei, és én azt tanítom, hogyan vidd tovább. <color is="#ffd97a">Mesterségnek</color> hívom.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = A kalauz beszélt rólad.

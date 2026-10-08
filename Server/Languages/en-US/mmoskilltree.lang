@@ -6,19 +6,19 @@
 
 # --- Quests (quest.<id>.title / .flavor, resolved by convention; matches the bounty pattern) ---
 quest.meet_the_mastery_trainer.title = A Word with the Trainer
-quest.meet_the_mastery_trainer.flavor = There is another keeper down in the temple, one who deals in mastery rather than maps. Cross the landing and hear what they have to say.
+quest.meet_the_mastery_trainer.flavor = There's somebody else down here you should meet. They teach mastery. Cross the landing and say hello.
 quest.mastery_tribute.title = The Trainer's Due
 quest.mastery_tribute.flavor = Bring me essence and I will give you something worth the walk. What exactly, I could not tell you. That is rather the point of the exercise.
-quest.pack_first_milestone.title = First Step Toward Mastery
-quest.pack_first_milestone.flavor = Prove yourself in any skill to reach your first mastery milestone. The path of mastery begins here.
+quest.pack_first_milestone.title = The First Milestone
+quest.pack_first_milestone.flavor = Bring any one of your skills up to its first milestone, then come back to me. That is where my teaching starts.
 quest.pack_essence_collector.title = Essence Collector
-quest.pack_essence_collector.flavor = The world's essence powers mastery. Bring an offering to the altar and earn lasting power.
+quest.pack_essence_collector.flavor = Bring me life essence. I turn it into mastery, a little at a time.
 quest.pack_essence_devotee.title = Essence Devotee
-quest.pack_essence_devotee.flavor = For those who have already proven their dedication: a greater offering for a major mastery purse.
-quest.pack_path_of_mastery.title = Path of Mastery
-quest.pack_path_of_mastery.flavor = True mastery is broad. Climb high in several different skills to prove your range.
+quest.pack_essence_devotee.flavor = You have brought me essence before. This time, bring me a sackful.
+quest.pack_path_of_mastery.title = Many Trades
+quest.pack_path_of_mastery.flavor = One good skill is not enough for what I teach. Raise several of them a long way, then come back to me.
 quest.pack_mastery_tithe.title = Mastery Tithe
-quest.pack_mastery_tithe.flavor = Pay your tithe to the mastery codex: blood and timber, rendered regularly, in exchange for a measure of mastery.
+quest.pack_mastery_tithe.flavor = The mastery codex takes a tithe of blood and timber. Put down a few creatures and chop a few logs.
 
 # --- Token Shop offers shipped by this pack (explicit titleKey/descriptionKey -> these keys) ---
 shop.convert_mastery_point.title = Mastery Infusion
@@ -197,10 +197,10 @@ mastery.void_t3_cap.title = Event Horizon
 mastery.poison_t3_cap.title = Blightbloom
 
 # Mastery Trainer conversation
-dialogue.mmo_mastery_trainer.ready_generic.text = You return with purpose in your step. Whatever task called you away, it sounds like the work is done. Let us see what you have to show for it.
-dialogue.mmo_mastery_trainer.menu.text = You stand before a keeper of the old disciplines. Every skill has a peak beyond its peak, and mastery is the road there. What do you seek?
+dialogue.mmo_mastery_trainer.ready_generic.text = Back, and carrying something. Set it down and let us see it.
+dialogue.mmo_mastery_trainer.menu.text = The disciplines are here when you want them. What do you need?
 dialogue.mmo_mastery_trainer.menu.opt.quests = What tasks do you have for me?
-dialogue.mmo_mastery_trainer.menu.opt.mastery = Teach me the ways of mastery.
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Show me my mastery.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Farewell.
-dialogue.mmo_mastery_trainer.first_words.text = <b>So the guide sent you down after all.</b>\nI keep the old disciplines here, far from the noise above. Every skill you carry has a peak beyond its peak, and <color is="#c8a2ff">mastery is the road there</color>.
+dialogue.mmo_mastery_trainer.first_words.text = So the guide sent you down after all.\nI keep the old disciplines here, far from the noise above. A skill does not stop where its levels do, and taking it further is what I teach. I call it <color is="#ffd97a">Mastery</color>.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = The guide spoke of you.

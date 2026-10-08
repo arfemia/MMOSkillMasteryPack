@@ -39,10 +39,10 @@ One reusable milestone template fans out to every skill, so a server owner who w
 
 ### Themed quests (5)
 
-- **First Step Toward Mastery** - auto-accepts on your first level-up. Reach level 15 in any skill for 2 Mastery Points.
+- **The First Milestone** - auto-accepts on your first level-up. Reach level 15 in any skill for 2 Mastery Points.
 - **Essence Collector** - turn in 100 Life Essence for 5 Mastery Points plus 2,000 Mining and 2,000 Woodcutting XP.
 - **Essence Devotee** (follows Essence Collector) - turn in 500 Life Essence for 25 Mastery Points.
-- **Path of Mastery** - reach level 25 in Mining, Woodcutting, Harvesting, Swords, and Archery for 10 Mastery Points.
+- **Many Trades** - reach level 25 in Mining, Woodcutting, Harvesting, Swords, and Archery for 10 Mastery Points.
 - **Mastery Tithe** (repeatable every 6 hours) - slay 10 mobs and chop 10 logs for 1 Mastery Point. Gated behind Total Level 500 and the **Mastery Hoarder** achievement, so the trickle stays an endgame faucet.
 
 ### Themed achievements (6)

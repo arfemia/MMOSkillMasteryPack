@@ -6,19 +6,19 @@
 
 # --- Quêtes (quest.<id>.title / .flavor, résolues par convention ; même schéma que les primes) ---
 quest.meet_the_mastery_trainer.title = Un mot avec l'entraîneur
-quest.meet_the_mastery_trainer.flavor = Il y a un autre gardien dans le temple, qui s'occupe de maîtrise et non de cartes. Traverse le palier et écoute ce qu'il a à dire.
+quest.meet_the_mastery_trainer.flavor = Il y a quelqu'un d'autre à rencontrer ici, en bas. Quelqu'un qui enseigne la maîtrise. Traverse le palier et va dire bonjour.
 quest.mastery_tribute.title = Le dû de l'entraîneur
 quest.mastery_tribute.flavor = Apporte-moi de l'essence et je te donnerai quelque chose qui vaut le déplacement. Quoi exactement, je ne saurais le dire. C'est un peu tout l'intérêt de l'exercice.
-quest.pack_first_milestone.title = Premier pas vers la maîtrise
-quest.pack_first_milestone.flavor = Faites vos preuves dans n'importe quelle compétence pour atteindre votre premier palier de maîtrise. La voie de la maîtrise commence ici.
+quest.pack_first_milestone.title = Le premier palier
+quest.pack_first_milestone.flavor = Amène l'une de tes compétences jusqu'à son premier palier, puis reviens me voir. C'est là que commence mon enseignement.
 quest.pack_essence_collector.title = Collecteur d'essence
-quest.pack_essence_collector.flavor = L'essence du monde alimente la maîtrise. Apportez une offrande à l'autel et gagnez un pouvoir durable.
+quest.pack_essence_collector.flavor = Apporte-moi de l'essence de vie. J'en fais de la maîtrise, peu à peu.
 quest.pack_essence_devotee.title = Dévot de l'essence
-quest.pack_essence_devotee.flavor = Pour ceux qui ont déjà prouvé leur dévouement : une offrande plus grande contre une grosse bourse de maîtrise.
-quest.pack_path_of_mastery.title = Voie de la maîtrise
-quest.pack_path_of_mastery.flavor = La vraie maîtrise est vaste. Montez haut dans plusieurs compétences différentes pour prouver votre polyvalence.
+quest.pack_essence_devotee.flavor = Tu m'as déjà apporté de l'essence. Cette fois, apporte-m'en un plein sac.
+quest.pack_path_of_mastery.title = Plusieurs métiers
+quest.pack_path_of_mastery.flavor = Une seule bonne compétence ne suffit pas pour ce que j'enseigne. Fais-en progresser plusieurs très haut, puis reviens me voir.
 quest.pack_mastery_tithe.title = Dîme de la maîtrise
-quest.pack_mastery_tithe.flavor = Payez votre dîme au codex de la maîtrise : du sang et du bois, versés régulièrement, en échange d'une maîtrise plus profonde.
+quest.pack_mastery_tithe.flavor = Le codex de la maîtrise prélève une dîme de sang et de bois. Abats quelques créatures et coupe quelques bûches.
 
 # --- Offres de la Boutique de tokens livrées par ce pack (titleKey/descriptionKey explicites -> ces clés) ---
 shop.convert_mastery_point.title = Infusion de maîtrise
@@ -188,10 +188,10 @@ mastery.void_t3_cap.title = Horizon des événements
 mastery.poison_t3_cap.title = Floraison malsaine
 
 # Mastery Trainer conversation
-dialogue.mmo_mastery_trainer.ready_generic.text = Te voilà de retour, la détermination dans chaque pas. Quelle que soit la tâche qui t'a éloigné, elle paraît accomplie. Voyons ce que tu rapportes.
-dialogue.mmo_mastery_trainer.menu.text = Tu te tiens devant un gardien des anciennes disciplines. Chaque compétence a un sommet au-delà de son sommet, et la maîtrise est le chemin qui y mène. Que cherches-tu ?
+dialogue.mmo_mastery_trainer.ready_generic.text = De retour, et avec quelque chose dans les mains. Pose-le, et voyons cela.
+dialogue.mmo_mastery_trainer.menu.text = Les disciplines sont là quand tu les veux. De quoi as-tu besoin ?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Quelles tâches as-tu pour moi ?
-dialogue.mmo_mastery_trainer.menu.opt.mastery = Enseigne-moi les voies de la maîtrise.
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Montre-moi ma maîtrise.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Adieu.
-dialogue.mmo_mastery_trainer.first_words.text = <b>Le guide t'a donc bien envoyé ici.</b>\nJe garde ici les anciennes disciplines, loin du bruit d'en haut. Chaque compétence que tu portes a un sommet au-delà de son sommet, et <color is="#c8a2ff">la maîtrise est le chemin qui y mène</color>.
+dialogue.mmo_mastery_trainer.first_words.text = Ainsi, le guide t'a fait descendre, après tout.\nJe garde ici les anciennes disciplines, loin du bruit d'en haut. Une compétence ne s'arrête pas là où s'arrêtent ses niveaux, et la mener plus loin, c'est ce que j'enseigne. J'appelle cela la <color is="#ffd97a">Maîtrise</color>.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = Le guide a parlé de toi.

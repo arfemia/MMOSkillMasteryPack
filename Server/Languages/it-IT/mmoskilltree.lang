@@ -6,19 +6,19 @@
 
 # --- Missioni (quest.<id>.title / .flavor, risolte per convenzione; segue lo schema delle taglie) ---
 quest.meet_the_mastery_trainer.title = Due parole con l'allenatore
-quest.meet_the_mastery_trainer.flavor = C'è un altro custode nel tempio, uno che si occupa di maestria e non di mappe. Attraversa il pianerottolo e ascolta cos'ha da dire.
+quest.meet_the_mastery_trainer.flavor = Quaggiù c'è qualcun altro che dovresti conoscere. Insegna la maestria. Attraversa il pianerottolo e va' a salutare.
 quest.mastery_tribute.title = Il dovuto dell'allenatore
 quest.mastery_tribute.flavor = Portami essenza e ti darò qualcosa che vale il cammino. Cosa di preciso, non saprei dirti. È più o meno il senso dell'esercizio.
-quest.pack_first_milestone.title = Primo Passo verso la Maestria
-quest.pack_first_milestone.flavor = Mettiti alla prova in una qualsiasi abilita' per raggiungere il tuo primo traguardo di maestria. Il cammino della maestria comincia qui.
+quest.pack_first_milestone.title = Il Primo Traguardo
+quest.pack_first_milestone.flavor = Porta una qualsiasi delle tue abilità al suo primo traguardo, poi torna da me. È da lì che comincia il mio insegnamento.
 quest.pack_essence_collector.title = Collezionista d'Essenza
-quest.pack_essence_collector.flavor = L'essenza del mondo alimenta la maestria. Porta un'offerta all'altare e guadagna potere duraturo.
+quest.pack_essence_collector.flavor = Portami essenza vitale. La trasformo in maestria, un poco alla volta.
 quest.pack_essence_devotee.title = Devoto dell'Essenza
-quest.pack_essence_devotee.flavor = Per chi ha gia' provato la propria dedizione: un'offerta piu' grande in cambio di una cospicua borsa di maestria.
-quest.pack_path_of_mastery.title = Il Cammino della Maestria
-quest.pack_path_of_mastery.flavor = La vera maestria e' ampia. Sali in alto in diverse abilita' per dimostrare la tua versatilita'.
+quest.pack_essence_devotee.flavor = Mi hai già portato dell'essenza. Questa volta portamene un sacco pieno.
+quest.pack_path_of_mastery.title = Molti Mestieri
+quest.pack_path_of_mastery.flavor = Una sola buona abilità non basta per ciò che insegno. Portane diverse molto in alto, poi torna da me.
 quest.pack_mastery_tithe.title = Decima della Maestria
-quest.pack_mastery_tithe.flavor = Versa la tua decima al codice della maestria: sangue e legname, resi con regolarita', in cambio di una maestria piu' profonda.
+quest.pack_mastery_tithe.flavor = Il codice della maestria esige una decima di sangue e legname. Abbatti qualche creatura e taglia qualche tronco.
 
 # --- Offerte del Negozio Gettoni spedite da questo pack (titleKey/descriptionKey espliciti -> queste chiavi) ---
 shop.convert_mastery_point.title = Infusione di Maestria
@@ -188,10 +188,10 @@ mastery.void_t3_cap.title = Orizzonte degli Eventi
 mastery.poison_t3_cap.title = Fioritura Corrotta
 
 # Mastery Trainer conversation
-dialogue.mmo_mastery_trainer.ready_generic.text = Ritorni con proposito nel passo. Qualunque fosse il compito che t'ha allontanato, sembra ormai concluso. Mostrami dunque il frutto del tuo operato.
-dialogue.mmo_mastery_trainer.menu.text = Sei davanti a un custode delle antiche discipline. Ogni abilità ha una vetta oltre la sua vetta, e la maestria è la strada per arrivarci. Cosa cerchi?
+dialogue.mmo_mastery_trainer.ready_generic.text = Di ritorno, e con qualcosa in mano. Posalo e diamo un'occhiata.
+dialogue.mmo_mastery_trainer.menu.text = Le discipline sono qui quando le vuoi. Di cosa hai bisogno?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Che compiti hai per me?
-dialogue.mmo_mastery_trainer.menu.opt.mastery = Insegnami le vie della maestria.
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Mostrami la mia maestria.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Addio.
-dialogue.mmo_mastery_trainer.first_words.text = <b>Quindi la guida ti ha mandato quaggiù dopotutto.</b>\nQui custodisco le antiche discipline, lontano dal rumore di sopra. Ogni abilità che porti ha una vetta oltre la sua vetta, e <color is="#c8a2ff">la maestria è la strada che vi conduce</color>.
+dialogue.mmo_mastery_trainer.first_words.text = Quindi la guida ti ha mandato quaggiù, dopotutto.\nQui custodisco le antiche discipline, lontano dal rumore di sopra. Un'abilità non si ferma dove si fermano i suoi livelli, e portarla oltre è ciò che insegno. Io la chiamo <color is="#ffd97a">Maestria</color>.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = La guida ha parlato di te.
