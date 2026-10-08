@@ -8,11 +8,11 @@
 quest.meet_the_mastery_trainer.title = A Word with the Trainer
 quest.meet_the_mastery_trainer.flavor = There's somebody else down here you should meet. They teach mastery. Cross the landing and say hello.
 quest.mastery_tribute.title = The Trainer's Due
-quest.mastery_tribute.flavor = Bring me essence and I will give you something worth the walk. What exactly, I could not tell you. That is rather the point of the exercise.
+quest.mastery_tribute.flavor = Bring me essence and a few linen scraps, and put down some beasts on the way. I will give you something worth the walk. What, I could not tell you.
 quest.pack_first_milestone.title = The First Milestone
 quest.pack_first_milestone.flavor = Bring any one of your skills up to its first milestone, then come back to me. That is where my teaching starts.
 quest.pack_essence_collector.title = Essence Collector
-quest.pack_essence_collector.flavor = Bring me life essence. I turn it into mastery, a little at a time.
+quest.pack_essence_collector.flavor = Bring me Essence of Life. I turn it into mastery, a little at a time.
 quest.pack_essence_devotee.title = Essence Devotee
 quest.pack_essence_devotee.flavor = You have brought me essence before. This time, bring me a sackful.
 quest.pack_path_of_mastery.title = Many Trades
@@ -53,7 +53,7 @@ mastery.shield_slam_mastery.title = Shield Slam Mastery
 mastery.whirlwind_mastery.title = Whirlwind Mastery
 mastery.piercing_shot_mastery.title = Piercing Shot Mastery
 mastery.meteor_mastery.title = Meteor Mastery
-mastery.defense_mastery.title = Defense Mastery
+mastery.defense_mastery.title = Block Mastery
 
 # --- Structural tier names (mastery.node.<tail>.title / .desc). The mod composes a fanned
 #     node's title as "<track title>: <tier name>" via its mastery.node_title.format key, so
@@ -141,32 +141,32 @@ mastery.woo_t3.title = Woodcutting Mastery III
 mastery.woo_eternal.title = Woodcutting Mastery: Eternal
 
 # --- Hand-authored eternal node descriptions ---
-mastery.acr_eternal.desc = Each purchase nudges your acrobatics mastery bonus-drop chance higher; each costs more than the last. Grind without limit.
-mastery.enc_eternal.desc = Each purchase nudges your enchanting mastery bonus-drop chance higher; each costs more than the last. Grind without limit.
+mastery.acr_eternal.desc = Each purchase nudges your acrobatics mastery bonus-drop chance higher; each costs more than the last.
+mastery.enc_eternal.desc = Each purchase nudges your enchanting mastery bonus-drop chance higher; each costs more than the last.
 mastery.fb_eternal.desc = Each purchase stokes Fireball's damage a little further; each costs more than the last.
-mastery.fis_eternal.desc = Each purchase nudges your fishing mastery bonus-drop chance higher; each costs more than the last. Grind without limit.
-mastery.har_eternal.desc = Each purchase nudges your harvesting mastery bonus-drop chance higher; each costs more than the last. Grind without limit.
+mastery.fis_eternal.desc = Each purchase nudges your fishing mastery bonus-drop chance higher; each costs more than the last.
+mastery.har_eternal.desc = Each purchase nudges your harvesting mastery bonus-drop chance higher; each costs more than the last.
 mastery.met_eternal.desc = Each purchase shaves Meteor's cooldown and stokes its damage; each costs more than the last.
-mastery.min_eternal.desc = Each purchase nudges your mining mastery bonus-drop chance higher; each costs more than the last. Grind without limit.
+mastery.min_eternal.desc = Each purchase nudges your mining mastery bonus-drop chance higher; each costs more than the last.
 mastery.ps_eternal.desc = Each purchase sharpens Piercing Shot's damage (swing and cast); each costs more than the last.
 mastery.sst_eternal.desc = Each purchase shaves Shadowstep's cooldown; each costs more than the last.
 mastery.ss_eternal.desc = Each purchase hardens Shield Slam's damage; each costs more than the last.
 mastery.ww_eternal.desc = Each purchase whets Whirlwind's damage (swing and cast); each costs more than the last.
-mastery.woo_eternal.desc = Each purchase nudges your woodcutting mastery bonus-drop chance higher; each costs more than the last. Grind without limit.
+mastery.woo_eternal.desc = Each purchase nudges your woodcutting mastery bonus-drop chance higher; each costs more than the last.
 
 # --- Achievements (achievement.<id>.title / .desc, resolved by convention) ---
-achievement.pack_first_mastery_milestone.title = Apprentice of the Path
-achievement.pack_first_mastery_milestone.desc = Reach your first mastery milestone.
-achievement.pack_mastery_milestone_journeyman.title = Journeyman of the Path
-achievement.pack_mastery_milestone_journeyman.desc = Climb high enough in any skill to bank several milestones on the way.
+achievement.pack_first_mastery_milestone.title = Mastery Apprentice
+achievement.pack_first_mastery_milestone.desc = Reach level {0} in any skill.
+achievement.pack_mastery_milestone_journeyman.title = Mastery Journeyman
+achievement.pack_mastery_milestone_journeyman.desc = Reach level {0} in any skill.
 achievement.pack_mastery_hoarder_300.title = Mastery Hoarder
-achievement.pack_mastery_hoarder_300.desc = Amass a lifetime hoard of mastery.
+achievement.pack_mastery_hoarder_300.desc = Earn {0} points toward mastery.
 achievement.pack_mastery_devotee.title = Devotee of Mastery
-achievement.pack_mastery_devotee.desc = The full mastery journey: an apprentice, a journeyman, and a hoarder.
+achievement.pack_mastery_devotee.desc = Earn every other mastery achievement.
 achievement.pack_essence_hoarder_100.title = Essence Hoarder I
-achievement.pack_essence_hoarder_100.desc = Gather the essence of life again and again.
+achievement.pack_essence_hoarder_100.desc = Pick up {0} Essence of Life.
 achievement.pack_essence_hoarder_10000.title = Essence Hoarder II
-achievement.pack_essence_hoarder_10000.desc = A true vessel for the world's energy: gather essence beyond counting.
+achievement.pack_essence_hoarder_10000.desc = Pick up {0} Essence of Life.
 
 # --- Damage-school mastery tracks (mastery.<trackId>.title, resolved by convention) ---
 mastery.fire_school_mastery.title = Fire Mastery
@@ -202,5 +202,5 @@ dialogue.mmo_mastery_trainer.menu.text = The disciplines are here when you want 
 dialogue.mmo_mastery_trainer.menu.opt.quests = What tasks do you have for me?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Show me my mastery.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Farewell.
-dialogue.mmo_mastery_trainer.first_words.text = So the guide sent you down after all.\nI keep the old disciplines here, far from the noise above. A skill does not stop where its levels do, and taking it further is what I teach. I call it <color is="#ffd97a">Mastery</color>.
+dialogue.mmo_mastery_trainer.first_words.text = So the guide sent you down after all.\nA skill does not stop where its levels do. What comes after is what I teach. I call it mastery.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = The guide spoke of you.

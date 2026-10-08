@@ -2,7 +2,12 @@
   "$Comment": "Earn 300 mastery points over a lifetime (spending them does not undo progress; this counts everything ever earned, not the current balance).",
   "Text": {
     "TitleKey": "achievement.pack_mastery_hoarder_300.title",
-    "FlavorKey": "achievement.pack_mastery_hoarder_300.desc"
+    "FlavorKey": "achievement.pack_mastery_hoarder_300.desc",
+    "TextArgs": {
+      "Flavor": [
+        "@amount"
+      ]
+    }
   },
   "Listing": {
     "Category": "mastery",

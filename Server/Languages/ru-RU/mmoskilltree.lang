@@ -8,11 +8,11 @@
 quest.meet_the_mastery_trainer.title = Разговор с учителем
 quest.meet_the_mastery_trainer.flavor = Здесь, внизу, есть ещё кое-кто, с кем тебе стоит познакомиться: учит мастерству. Перейди площадку и поздоровайся.
 quest.mastery_tribute.title = Долг учителя
-quest.mastery_tribute.flavor = Принеси мне эссенцию, и я дам тебе то, ради чего стоило идти. Что именно, сказать не берусь. В этом, пожалуй, и весь смысл упражнения.
+quest.mastery_tribute.flavor = Принеси мне эссенцию и немного льняных лоскутов, а по пути уложи нескольких тварей. Я дам тебе то, ради чего стоило идти. Что именно, сказать не берусь.
 quest.pack_first_milestone.title = Первая веха
 quest.pack_first_milestone.flavor = Доведи любой из своих навыков до первой вехи, потом возвращайся ко мне. С этого начинается то, чему я учу.
 quest.pack_essence_collector.title = Собиратель эссенции
-quest.pack_essence_collector.flavor = Принеси мне эссенцию жизни. Я превращаю её в мастерство, понемногу.
+quest.pack_essence_collector.flavor = Принеси мне Эссенцию жизни. Я превращаю её в мастерство, понемногу.
 quest.pack_essence_devotee.title = Приверженец эссенции
 quest.pack_essence_devotee.flavor = Ты здесь с эссенцией не впервые. На этот раз принеси целый мешок.
 quest.pack_path_of_mastery.title = Много ремёсел
@@ -55,21 +55,21 @@ mastery.shield_slam_mastery.title = Мастерство удара щитом
 mastery.whirlwind_mastery.title = Мастерство вихря
 mastery.piercing_shot_mastery.title = Мастерство пробивающего выстрела
 mastery.meteor_mastery.title = Мастерство метеора
-mastery.defense_mastery.title = Мастерство защиты
+mastery.defense_mastery.title = Мастерство блока
 
 # --- Достижения (achievement.<id>.title / .desc, разрешаются по соглашению) ---
-achievement.pack_first_mastery_milestone.title = Подмастерье пути
-achievement.pack_first_mastery_milestone.desc = Достигните своей первой вехи мастерства.
-achievement.pack_mastery_milestone_journeyman.title = Странствующий мастер пути
-achievement.pack_mastery_milestone_journeyman.desc = Поднимитесь достаточно высоко в любом навыке, чтобы по пути собрать несколько вех.
+achievement.pack_first_mastery_milestone.title = Ученик мастерства
+achievement.pack_first_mastery_milestone.desc = Достигните уровня {0} в любом навыке.
+achievement.pack_mastery_milestone_journeyman.title = Подмастерье мастерства
+achievement.pack_mastery_milestone_journeyman.desc = Достигните уровня {0} в любом навыке.
 achievement.pack_mastery_hoarder_300.title = Накопитель мастерства
-achievement.pack_mastery_hoarder_300.desc = Накопите за всё время целую сокровищницу мастерства.
+achievement.pack_mastery_hoarder_300.desc = Заработайте очки на пути к мастерству: {0}.
 achievement.pack_mastery_devotee.title = Приверженец мастерства
-achievement.pack_mastery_devotee.desc = Полный путь мастерства: подмастерье, странствующий мастер и накопитель.
+achievement.pack_mastery_devotee.desc = Получите все остальные достижения мастерства.
 achievement.pack_essence_hoarder_100.title = Накопитель эссенции I
-achievement.pack_essence_hoarder_100.desc = Собирайте эссенцию самой жизни снова и снова.
+achievement.pack_essence_hoarder_100.desc = Подберите {0} ед. эссенции жизни.
 achievement.pack_essence_hoarder_10000.title = Накопитель эссенции II
-achievement.pack_essence_hoarder_10000.desc = Истинный сосуд для энергии мира: собирайте эссенцию без счёта.
+achievement.pack_essence_hoarder_10000.desc = Подберите {0} ед. эссенции жизни.
 
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Острота
@@ -146,18 +146,18 @@ mastery.woo_t1.title = Мастерство лесорубства I
 mastery.woo_t2.title = Мастерство лесорубства II
 mastery.woo_t3.title = Мастерство лесорубства III
 mastery.woo_eternal.title = Мастерство лесорубства: Вечность
-mastery.acr_eternal.desc = Каждая покупка чуть повышает шанс бонусного дропа мастерства акробатики; каждая стоит дороже предыдущей. Качайте без ограничений.
-mastery.enc_eternal.desc = Каждая покупка чуть повышает шанс бонусного дропа мастерства зачарования; каждая стоит дороже предыдущей. Качайте без ограничений.
+mastery.acr_eternal.desc = Каждая покупка чуть повышает шанс бонусного дропа мастерства акробатики; каждая стоит дороже предыдущей.
+mastery.enc_eternal.desc = Каждая покупка чуть повышает шанс бонусного дропа мастерства зачарования; каждая стоит дороже предыдущей.
 mastery.fb_eternal.desc = Каждая покупка ещё немного раздувает урон Огненного шара; каждая стоит дороже предыдущей.
-mastery.fis_eternal.desc = Каждая покупка чуть повышает шанс бонусного дропа мастерства рыбалки; каждая стоит дороже предыдущей. Качайте без ограничений.
-mastery.har_eternal.desc = Каждая покупка чуть повышает шанс бонусного дропа мастерства сбора урожая; каждая стоит дороже предыдущей. Качайте без ограничений.
+mastery.fis_eternal.desc = Каждая покупка чуть повышает шанс бонусного дропа мастерства рыбалки; каждая стоит дороже предыдущей.
+mastery.har_eternal.desc = Каждая покупка чуть повышает шанс бонусного дропа мастерства сбора урожая; каждая стоит дороже предыдущей.
 mastery.met_eternal.desc = Каждая покупка урезает перезарядку Метеора и раздувает его урон; каждая стоит дороже предыдущей.
-mastery.min_eternal.desc = Каждая покупка чуть повышает шанс бонусного дропа мастерства добычи; каждая стоит дороже предыдущей. Качайте без ограничений.
+mastery.min_eternal.desc = Каждая покупка чуть повышает шанс бонусного дропа мастерства добычи; каждая стоит дороже предыдущей.
 mastery.ps_eternal.desc = Каждая покупка оттачивает урон Пробивающего выстрела (удар и применение); каждая стоит дороже предыдущей.
 mastery.sst_eternal.desc = Каждая покупка урезает перезарядку Теневого шага; каждая стоит дороже предыдущей.
 mastery.ss_eternal.desc = Каждая покупка закаляет урон Удара щитом; каждая стоит дороже предыдущей.
 mastery.ww_eternal.desc = Каждая покупка оттачивает урон Вихря (удар и применение); каждая стоит дороже предыдущей.
-mastery.woo_eternal.desc = Каждая покупка чуть повышает шанс бонусного дропа мастерства лесорубства; каждая стоит дороже предыдущей. Качайте без ограничений.
+mastery.woo_eternal.desc = Каждая покупка чуть повышает шанс бонусного дропа мастерства лесорубства; каждая стоит дороже предыдущей.
 
 # --- Ветки мастерства по школам урона (mastery.<trackId>.title, по соглашению) ---
 mastery.fire_school_mastery.title = Мастерство огня
@@ -193,5 +193,5 @@ dialogue.mmo_mastery_trainer.menu.text = Дисциплины здесь, ког
 dialogue.mmo_mastery_trainer.menu.opt.quests = Какие задания у тебя есть для меня?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Покажи моё мастерство.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Прощай.
-dialogue.mmo_mastery_trainer.first_words.text = Значит, проводник всё же отправил тебя сюда.\nЯ храню здесь древние дисциплины, вдали от шума наверху. Навык не заканчивается там, где заканчиваются его уровни, и вести его дальше - вот чему я учу. Я зову это <color is="#ffd97a">Мастерством</color>.
+dialogue.mmo_mastery_trainer.first_words.text = Значит, проводник всё же отправил тебя сюда.\nНавык не заканчивается там, где заканчиваются его уровни. Тому, что идёт после, я и учу. Я зову это мастерством.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = Проводник говорил о тебе.

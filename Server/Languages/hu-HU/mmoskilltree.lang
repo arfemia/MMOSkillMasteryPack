@@ -8,11 +8,11 @@
 quest.meet_the_mastery_trainer.title = Néhány szó az edzővel
 quest.meet_the_mastery_trainer.flavor = Van itt lent még valaki, akivel találkoznod kéne. Ő tanítja a masteryt. Menj át a pihenőn, és köszönj neki.
 quest.mastery_tribute.title = Az edző járandósága
-quest.mastery_tribute.flavor = Hozz nekem eszenciát, és adok valamit, ami megéri az utat. Hogy pontosan mit, azt nem tudom megmondani. Nagyjából ez a gyakorlat lényege.
+quest.mastery_tribute.flavor = Hozz nekem esszenciát és néhány vászonfoszlányt, és útközben teríts le pár vadat. Adok érte valamit, ami megéri az utat. Hogy mit, azt nem tudom megmondani.
 quest.pack_first_milestone.title = Az Első Mérföldkő
 quest.pack_first_milestone.flavor = Vidd fel bármelyik képességedet az első mérföldkövéig, aztán gyere vissza hozzám. Ott kezdődik a tanításom.
 quest.pack_essence_collector.title = Esszencia Gyűjtő
-quest.pack_essence_collector.flavor = Hozz nekem életesszenciát. Apránként masteryvé alakítom.
+quest.pack_essence_collector.flavor = Hozz nekem Életesszenciát. Apránként masteryvé alakítom.
 quest.pack_essence_devotee.title = Esszencia Híve
 quest.pack_essence_devotee.flavor = Hoztál már nekem esszenciát. Most hozz egy zsákkal.
 quest.pack_path_of_mastery.title = Sok Szakma
@@ -58,18 +58,18 @@ mastery.meteor_mastery.title = Meteor Mastery
 mastery.defense_mastery.title = Blokkolás Mastery
 
 # --- Teljesítmények (achievement.<id>.title / .desc, konvenció szerint feloldva) ---
-achievement.pack_first_mastery_milestone.title = Az Út Tanonca
-achievement.pack_first_mastery_milestone.desc = Érd el az első mastery mérföldkövedet.
-achievement.pack_mastery_milestone_journeyman.title = Az Út Vándora
-achievement.pack_mastery_milestone_journeyman.desc = Juss elég magasra bármelyik képességben, hogy útközben több mérföldkövet is begyűjts.
+achievement.pack_first_mastery_milestone.title = Mastery Tanonc
+achievement.pack_first_mastery_milestone.desc = Érj el {0}. szintet bármelyik képességben.
+achievement.pack_mastery_milestone_journeyman.title = Mastery Vándor
+achievement.pack_mastery_milestone_journeyman.desc = Érj el {0}. szintet bármelyik képességben.
 achievement.pack_mastery_hoarder_300.title = Mastery Gyűjtögető
-achievement.pack_mastery_hoarder_300.desc = Halmozz fel életed során egy kincsnyi masteryt.
+achievement.pack_mastery_hoarder_300.desc = Szerezz {0} pontot a masteryhez.
 achievement.pack_mastery_devotee.title = A Mastery Híve
-achievement.pack_mastery_devotee.desc = A teljes mastery út: egy tanonc, egy vándor és egy gyűjtögető.
+achievement.pack_mastery_devotee.desc = Szerezd meg az összes többi mastery teljesítményt.
 achievement.pack_essence_hoarder_100.title = Esszencia Gyűjtögető I
-achievement.pack_essence_hoarder_100.desc = Gyűjtsd be újra és újra az élet esszenciáját.
+achievement.pack_essence_hoarder_100.desc = Szedj fel {0} Életesszenciát.
 achievement.pack_essence_hoarder_10000.title = Esszencia Gyűjtögető II
-achievement.pack_essence_hoarder_10000.desc = A világ energiájának valódi tárolóedénye: gyűjts esszenciát számolatlanul.
+achievement.pack_essence_hoarder_10000.desc = Szedj fel {0} Életesszenciát.
 
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Kiélezett
@@ -146,18 +146,18 @@ mastery.woo_t1.title = Favágás Mastery I
 mastery.woo_t2.title = Favágás Mastery II
 mastery.woo_t3.title = Favágás Mastery III
 mastery.woo_eternal.title = Favágás Mastery: Örök
-mastery.acr_eternal.desc = Minden vásárlás feljebb tolja az akrobatika mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél. Grindelj korlátok nélkül.
-mastery.enc_eternal.desc = Minden vásárlás feljebb tolja az enchantolás mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél. Grindelj korlátok nélkül.
+mastery.acr_eternal.desc = Minden vásárlás feljebb tolja az akrobatika mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél.
+mastery.enc_eternal.desc = Minden vásárlás feljebb tolja az enchantolás mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél.
 mastery.fb_eternal.desc = Minden vásárlás tovább szítja a Tűzgolyó sebzését; mindegyik többe kerül az előzőnél.
-mastery.fis_eternal.desc = Minden vásárlás feljebb tolja a horgászat mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél. Grindelj korlátok nélkül.
-mastery.har_eternal.desc = Minden vásárlás feljebb tolja az aratás mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél. Grindelj korlátok nélkül.
+mastery.fis_eternal.desc = Minden vásárlás feljebb tolja a horgászat mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél.
+mastery.har_eternal.desc = Minden vásárlás feljebb tolja az aratás mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél.
 mastery.met_eternal.desc = Minden vásárlás farag a Meteor lehűléséből és szítja a sebzését; mindegyik többe kerül az előzőnél.
-mastery.min_eternal.desc = Minden vásárlás feljebb tolja a bányászat mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél. Grindelj korlátok nélkül.
+mastery.min_eternal.desc = Minden vásárlás feljebb tolja a bányászat mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél.
 mastery.ps_eternal.desc = Minden vásárlás élesíti az Átütő Lövés sebzését (ütés és varázslás); mindegyik többe kerül az előzőnél.
 mastery.sst_eternal.desc = Minden vásárlás farag az Árnyéklépés lehűléséből; mindegyik többe kerül az előzőnél.
 mastery.ss_eternal.desc = Minden vásárlás keményíti a Pajzscsapás sebzését; mindegyik többe kerül az előzőnél.
 mastery.ww_eternal.desc = Minden vásárlás élesíti a Forgószél sebzését (ütés és varázslás); mindegyik többe kerül az előzőnél.
-mastery.woo_eternal.desc = Minden vásárlás feljebb tolja a favágás mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél. Grindelj korlátok nélkül.
+mastery.woo_eternal.desc = Minden vásárlás feljebb tolja a favágás mastery bónuszdrop-esélyedet; mindegyik többe kerül az előzőnél.
 
 # --- Sebzésiskola-mastery utak (mastery.<trackId>.title, konvenció szerint) ---
 mastery.fire_school_mastery.title = Tűz Mastery
@@ -193,5 +193,5 @@ dialogue.mmo_mastery_trainer.menu.text = A régi tudományok itt vannak, amikor 
 dialogue.mmo_mastery_trainer.menu.opt.quests = Milyen feladataid vannak számomra?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Mutasd, hol tartok a mesterségben.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Ég veled.
-dialogue.mmo_mastery_trainer.first_words.text = Szóval a kalauz mégis leküldött hozzám.\nItt őrzöm a régi tudományokat, távol a fenti zajtól. Egy képesség nem ott ér véget, ahol a szintjei, és én azt tanítom, hogyan vidd tovább. <color is="#ffd97a">Mesterségnek</color> hívom.
+dialogue.mmo_mastery_trainer.first_words.text = Szóval a kalauz mégis leküldött hozzám.\nEgy képesség nem ott ér véget, ahol a szintjei. Én azt tanítom, ami utána jön. Mesterségnek hívom.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = A kalauz beszélt rólad.

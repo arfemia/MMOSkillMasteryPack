@@ -8,11 +8,11 @@
 quest.meet_the_mastery_trainer.title = Uma palavra com o treinador
 quest.meet_the_mastery_trainer.flavor = Tem mais alguém aqui embaixo que você deveria conhecer. Ensina maestria. Atravesse o patamar e dê um oi.
 quest.mastery_tribute.title = O que se deve ao treinador
-quest.mastery_tribute.flavor = Traga essência e eu te dou algo que valha a caminhada. O quê exatamente, eu não saberia dizer. É mais ou menos esse o sentido do exercício.
+quest.mastery_tribute.flavor = Traga essência e alguns retalhos de linho, e abata algumas feras no caminho. Eu te dou algo que valha a caminhada. O quê, eu não saberia dizer.
 quest.pack_first_milestone.title = O Primeiro Marco
 quest.pack_first_milestone.flavor = Leve qualquer uma das suas habilidades até o primeiro marco e depois volte a mim. É aí que começa o meu ensino.
 quest.pack_essence_collector.title = Coletor de Essência
-quest.pack_essence_collector.flavor = Traga-me essência da vida. Eu a transformo em maestria, aos poucos.
+quest.pack_essence_collector.flavor = Traga-me Essência da Vida. Eu a transformo em maestria, aos poucos.
 quest.pack_essence_devotee.title = Devoto da Essência
 quest.pack_essence_devotee.flavor = Você já me trouxe essência antes. Desta vez, traga-me um saco cheio.
 quest.pack_path_of_mastery.title = Muitos Ofícios
@@ -58,18 +58,18 @@ mastery.meteor_mastery.title = Maestria em Meteoro
 mastery.defense_mastery.title = Maestria em Bloqueio
 
 # --- Conquistas (achievement.<id>.title / .desc, resolvidas por convenção) ---
-achievement.pack_first_mastery_milestone.title = Aprendiz do Caminho
-achievement.pack_first_mastery_milestone.desc = Alcance seu primeiro marco de maestria.
-achievement.pack_mastery_milestone_journeyman.title = Oficial do Caminho
-achievement.pack_mastery_milestone_journeyman.desc = Suba alto o bastante em qualquer habilidade para acumular vários marcos pelo caminho.
+achievement.pack_first_mastery_milestone.title = Aprendiz de Maestria
+achievement.pack_first_mastery_milestone.desc = Alcance o nível {0} em qualquer habilidade.
+achievement.pack_mastery_milestone_journeyman.title = Oficial de Maestria
+achievement.pack_mastery_milestone_journeyman.desc = Alcance o nível {0} em qualquer habilidade.
 achievement.pack_mastery_hoarder_300.title = Acumulador de Maestria
-achievement.pack_mastery_hoarder_300.desc = Acumule um tesouro de maestria ao longo da sua vida.
+achievement.pack_mastery_hoarder_300.desc = Ganhe {0} pontos de maestria.
 achievement.pack_mastery_devotee.title = Devoto da Maestria
-achievement.pack_mastery_devotee.desc = A jornada completa da maestria: um aprendiz, um oficial e um acumulador.
+achievement.pack_mastery_devotee.desc = Obtenha todas as outras conquistas de maestria.
 achievement.pack_essence_hoarder_100.title = Acumulador de Essência I
-achievement.pack_essence_hoarder_100.desc = Colete a essência da vida vez após vez.
+achievement.pack_essence_hoarder_100.desc = Pegue {0} unidades de Essência da Vida.
 achievement.pack_essence_hoarder_10000.title = Acumulador de Essência II
-achievement.pack_essence_hoarder_10000.desc = Um verdadeiro receptáculo da energia do mundo: colete essência além de qualquer conta.
+achievement.pack_essence_hoarder_10000.desc = Pegue {0} unidades de Essência da Vida.
 
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Afiado
@@ -146,18 +146,18 @@ mastery.woo_t1.title = Maestria em Lenhador I
 mastery.woo_t2.title = Maestria em Lenhador II
 mastery.woo_t3.title = Maestria em Lenhador III
 mastery.woo_eternal.title = Maestria em Lenhador: Eterna
-mastery.acr_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de acrobacia; cada uma custa mais que a anterior. Treine sem limite.
-mastery.enc_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de encantamento; cada uma custa mais que a anterior. Treine sem limite.
+mastery.acr_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de acrobacia; cada uma custa mais que a anterior.
+mastery.enc_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de encantamento; cada uma custa mais que a anterior.
 mastery.fb_eternal.desc = Cada compra atiça um pouco mais o dano de Bola de Fogo; cada uma custa mais que a anterior.
-mastery.fis_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de pesca; cada uma custa mais que a anterior. Treine sem limite.
-mastery.har_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de colheita; cada uma custa mais que a anterior. Treine sem limite.
+mastery.fis_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de pesca; cada uma custa mais que a anterior.
+mastery.har_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de colheita; cada uma custa mais que a anterior.
 mastery.met_eternal.desc = Cada compra apara a recarga do Meteoro e atiça seu dano; cada uma custa mais que a anterior.
-mastery.min_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de mineração; cada uma custa mais que a anterior. Treine sem limite.
+mastery.min_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de mineração; cada uma custa mais que a anterior.
 mastery.ps_eternal.desc = Cada compra afia o dano de Tiro Perfurante (golpe e lançamento); cada uma custa mais que a anterior.
 mastery.sst_eternal.desc = Cada compra apara a recarga de Passo Sombrio; cada uma custa mais que a anterior.
 mastery.ss_eternal.desc = Cada compra endurece o dano de Pancada de Escudo; cada uma custa mais que a anterior.
 mastery.ww_eternal.desc = Cada compra afia o dano de Redemoinho (golpe e lançamento); cada uma custa mais que a anterior.
-mastery.woo_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de lenhador; cada uma custa mais que a anterior. Treine sem limite.
+mastery.woo_eternal.desc = Cada compra eleva um pouco mais a chance de drop bônus da sua maestria de lenhador; cada uma custa mais que a anterior.
 
 # --- Trilhas de maestria por escola de dano (mastery.<trackId>.title, por convenção) ---
 mastery.fire_school_mastery.title = Maestria em Fogo
@@ -193,5 +193,5 @@ dialogue.mmo_mastery_trainer.menu.text = As disciplinas estão aqui quando você
 dialogue.mmo_mastery_trainer.menu.opt.quests = Que tarefas você tem para mim?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Mostre-me a minha maestria.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Até logo.
-dialogue.mmo_mastery_trainer.first_words.text = Então o guia te mandou aqui embaixo, afinal.\nEu guardo aqui as disciplinas antigas, longe do barulho lá de cima. Uma habilidade não para onde os níveis dela acabam, e levá-la além é o que eu ensino. Eu chamo isso de <color is="#ffd97a">Maestria</color>.
+dialogue.mmo_mastery_trainer.first_words.text = Então o guia te mandou aqui embaixo, afinal.\nUma habilidade não para onde os níveis dela acabam. O que vem depois é o que eu ensino. Eu chamo isso de maestria.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = O guia falou de você.

@@ -8,11 +8,11 @@
 quest.meet_the_mastery_trainer.title = Eğitmenle bir iki söz
 quest.meet_the_mastery_trainer.flavor = Aşağıda tanışman gereken biri daha var. Ustalık öğretiyor. Sahanlığı geç ve bir merhaba de.
 quest.mastery_tribute.title = Eğitmenin hakkı
-quest.mastery_tribute.flavor = Bana öz getir, ben de sana yolu değecek bir şey vereyim. Tam olarak ne, onu söyleyemem. Alıştırmanın anlamı da biraz bu.
+quest.mastery_tribute.flavor = Bana öz ve birkaç keten parçası getir, yolda da birkaç yaratık indir. Sana yürüdüğüne değecek bir şey vereceğim. Ne olduğunu söyleyemem.
 quest.pack_first_milestone.title = İlk Dönüm Noktası
 quest.pack_first_milestone.flavor = Yeteneklerinden herhangi birini ilk dönüm noktasına çıkar, sonra bana dön. Öğretmem orada başlar.
 quest.pack_essence_collector.title = Öz Toplayıcı
-quest.pack_essence_collector.flavor = Bana yaşam özü getir. Onu azar azar ustalığa çeviririm.
+quest.pack_essence_collector.flavor = Bana Yaşam Özü getir. Onu azar azar ustalığa çeviririm.
 quest.pack_essence_devotee.title = Öz Müridi
 quest.pack_essence_devotee.flavor = Bana daha önce de öz getirdin. Bu sefer bir çuval dolusu getir.
 quest.pack_path_of_mastery.title = Birçok Zanaat
@@ -59,18 +59,18 @@ mastery.defense_mastery.title = Blok Ustalığı
 mastery.mag_archmagus.title = Büyü Ustalığı: Başsihirbaz
 
 # --- Başarımlar (achievement.<id>.title / .desc, kurala göre çözülür) ---
-achievement.pack_first_mastery_milestone.title = Yolun Çırağı
-achievement.pack_first_mastery_milestone.desc = İlk ustalık dönüm noktana ulaş.
-achievement.pack_mastery_milestone_journeyman.title = Yolun Kalfası
-achievement.pack_mastery_milestone_journeyman.desc = Yol boyunca birkaç dönüm noktası biriktirecek kadar herhangi bir yetenekte yüksel.
+achievement.pack_first_mastery_milestone.title = Ustalık Çırağı
+achievement.pack_first_mastery_milestone.desc = Herhangi bir yetenekte {0}. seviyeye ulaş.
+achievement.pack_mastery_milestone_journeyman.title = Ustalık Kalfası
+achievement.pack_mastery_milestone_journeyman.desc = Herhangi bir yetenekte {0}. seviyeye ulaş.
 achievement.pack_mastery_hoarder_300.title = Ustalık Biriktiricisi
-achievement.pack_mastery_hoarder_300.desc = Yaşamın boyunca bir hazine dolusu ustalık biriktir.
+achievement.pack_mastery_hoarder_300.desc = Ustalık için {0} puan kazan.
 achievement.pack_mastery_devotee.title = Ustalık Müridi
-achievement.pack_mastery_devotee.desc = Tam ustalık yolculuğu: bir çırak, bir kalfa ve bir biriktirici.
+achievement.pack_mastery_devotee.desc = Diğer tüm ustalık başarımlarını kazan.
 achievement.pack_essence_hoarder_100.title = Öz Biriktiricisi I
-achievement.pack_essence_hoarder_100.desc = Yaşamın özünü tekrar tekrar topla.
+achievement.pack_essence_hoarder_100.desc = {0} Yaşam Özü topla.
 achievement.pack_essence_hoarder_10000.title = Öz Biriktiricisi II
-achievement.pack_essence_hoarder_10000.desc = Dünyanın enerjisi için gerçek bir kap: özü sayıya gelmeyecek kadar topla.
+achievement.pack_essence_hoarder_10000.desc = {0} Yaşam Özü topla.
 
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Bilenmiş
@@ -146,18 +146,18 @@ mastery.woo_t1.title = Odunculuk Ustalığı I
 mastery.woo_t2.title = Odunculuk Ustalığı II
 mastery.woo_t3.title = Odunculuk Ustalığı III
 mastery.woo_eternal.title = Odunculuk Ustalığı: Ebedi
-mastery.acr_eternal.desc = Her satın alım akrobasi ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır. Sınırsızca geliştirmeye devam et.
-mastery.enc_eternal.desc = Her satın alım büyüleme ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır. Sınırsızca geliştirmeye devam et.
+mastery.acr_eternal.desc = Her satın alım akrobasi ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır.
+mastery.enc_eternal.desc = Her satın alım büyüleme ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır.
 mastery.fb_eternal.desc = Her satın alım Ateş Topu'nun hasarını biraz daha körükler; her biri bir öncekinden daha pahalıdır.
-mastery.fis_eternal.desc = Her satın alım balıkçılık ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır. Sınırsızca geliştirmeye devam et.
-mastery.har_eternal.desc = Her satın alım hasat ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır. Sınırsızca geliştirmeye devam et.
+mastery.fis_eternal.desc = Her satın alım balıkçılık ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır.
+mastery.har_eternal.desc = Her satın alım hasat ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır.
 mastery.met_eternal.desc = Her satın alım Meteor'un bekleme süresinden kırpar ve hasarını körükler; her biri bir öncekinden daha pahalıdır.
-mastery.min_eternal.desc = Her satın alım madencilik ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır. Sınırsızca geliştirmeye devam et.
+mastery.min_eternal.desc = Her satın alım madencilik ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır.
 mastery.ps_eternal.desc = Her satın alım Delici Atış'ın hasarını keskinleştirir (savuruş ve kullanım); her biri bir öncekinden daha pahalıdır.
 mastery.sst_eternal.desc = Her satın alım Gölge Adımı'nın bekleme süresinden kırpar; her biri bir öncekinden daha pahalıdır.
 mastery.ss_eternal.desc = Her satın alım Kalkan Çarpması'nın hasarını sertleştirir; her biri bir öncekinden daha pahalıdır.
 mastery.ww_eternal.desc = Her satın alım Kasırga'nın hasarını keskinleştirir (savuruş ve kullanım); her biri bir öncekinden daha pahalıdır.
-mastery.woo_eternal.desc = Her satın alım odunculuk ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır. Sınırsızca geliştirmeye devam et.
+mastery.woo_eternal.desc = Her satın alım odunculuk ustalığı bonus drop şansını biraz daha yükseltir; her biri bir öncekinden daha pahalıdır.
 
 # --- Hasar okulu ustalık yolları (mastery.<trackId>.title, kurala göre çözülür) ---
 mastery.fire_school_mastery.title = Ateş Ustalığı
@@ -193,5 +193,5 @@ dialogue.mmo_mastery_trainer.menu.text = Disiplinler, istediğin zaman burada. N
 dialogue.mmo_mastery_trainer.menu.opt.quests = Benim için ne görevlerin var?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Bana ustalığımı göster.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Elveda.
-dialogue.mmo_mastery_trainer.first_words.text = Demek rehber seni yine de aşağı yolladı.\nEski disiplinleri burada, yukarının gürültüsünden uzakta korurum. Bir yetenek, seviyelerinin bittiği yerde durmaz; onu daha ileri taşımayı ben öğretirim. Ben buna <color is="#ffd97a">Ustalık</color> derim.
+dialogue.mmo_mastery_trainer.first_words.text = Demek rehber seni yine de aşağı yolladı.\nBir yetenek, seviyelerinin bittiği yerde durmaz. Sonrasında geleni ben öğretirim. Ben buna ustalık derim.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = Rehber senden bahsetti.

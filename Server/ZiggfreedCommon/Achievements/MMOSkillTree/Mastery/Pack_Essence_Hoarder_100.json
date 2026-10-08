@@ -2,7 +2,12 @@
   "$Comment": "Gather 100 Life Essence over a lifetime (pickups accumulate, spending them does not undo progress). Pairs with Essence Hoarder II for the deeper collector's grind.",
   "Text": {
     "TitleKey": "achievement.pack_essence_hoarder_100.title",
-    "FlavorKey": "achievement.pack_essence_hoarder_100.desc"
+    "FlavorKey": "achievement.pack_essence_hoarder_100.desc",
+    "TextArgs": {
+      "Flavor": [
+        "@amount"
+      ]
+    }
   },
   "Listing": {
     "Category": "mastery",

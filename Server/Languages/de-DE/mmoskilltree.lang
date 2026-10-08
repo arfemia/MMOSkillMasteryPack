@@ -8,7 +8,7 @@
 quest.meet_the_mastery_trainer.title = Ein Wort mit dem Trainer
 quest.meet_the_mastery_trainer.flavor = Hier unten solltest du noch jemanden kennenlernen. Drüben gibt's Unterricht in Mastery. Geh über den Absatz und sag Hallo.
 quest.mastery_tribute.title = Der Zins des Trainers
-quest.mastery_tribute.flavor = Bring mir Essenz, und ich gebe dir etwas, das den Weg wert ist. Was genau, kann ich dir nicht sagen. Das ist gewissermaßen der Sinn der Übung.
+quest.mastery_tribute.flavor = Bring mir Essenz und ein paar Leinenfetzen, und streck unterwegs einige Bestien nieder. Ich gebe dir etwas, das den Weg wert ist. Was, kann ich dir nicht sagen.
 quest.pack_first_milestone.title = Der erste Meilenstein
 quest.pack_first_milestone.flavor = Bring eine deiner Fähigkeiten bis zu ihrem ersten Meilenstein, dann komm zu mir zurück. Dort beginnt mein Unterricht.
 quest.pack_essence_collector.title = Essenz-Sammler
@@ -58,18 +58,18 @@ mastery.meteor_mastery.title = Meteor-Mastery
 mastery.defense_mastery.title = Blocken-Mastery
 
 # --- Erfolge (achievement.<id>.title / .desc, per Konvention aufgelöst) ---
-achievement.pack_first_mastery_milestone.title = Lehrling des Pfades
-achievement.pack_first_mastery_milestone.desc = Erreiche deinen ersten Mastery-Meilenstein.
-achievement.pack_mastery_milestone_journeyman.title = Geselle des Pfades
-achievement.pack_mastery_milestone_journeyman.desc = Steige in einer beliebigen Fähigkeit hoch genug auf, um unterwegs mehrere Meilensteine einzustreichen.
+achievement.pack_first_mastery_milestone.title = Mastery-Lehrling
+achievement.pack_first_mastery_milestone.desc = Erreiche Stufe {0} in einer beliebigen Fähigkeit.
+achievement.pack_mastery_milestone_journeyman.title = Mastery-Geselle
+achievement.pack_mastery_milestone_journeyman.desc = Erreiche Stufe {0} in einer beliebigen Fähigkeit.
 achievement.pack_mastery_hoarder_300.title = Mastery-Hamster
-achievement.pack_mastery_hoarder_300.desc = Häufe im Laufe deines Lebens einen Schatz an Mastery an.
+achievement.pack_mastery_hoarder_300.desc = Verdiene {0} Punkte für deine Mastery.
 achievement.pack_mastery_devotee.title = Anhänger der Mastery
-achievement.pack_mastery_devotee.desc = Die volle Mastery-Reise: ein Lehrling, ein Geselle und ein Hamster.
+achievement.pack_mastery_devotee.desc = Erringe alle anderen Mastery-Erfolge.
 achievement.pack_essence_hoarder_100.title = Essenz-Hamster I
-achievement.pack_essence_hoarder_100.desc = Sammle die Essenz des Lebens wieder und wieder auf.
+achievement.pack_essence_hoarder_100.desc = Sammle {0} Lebensessenz auf.
 achievement.pack_essence_hoarder_10000.title = Essenz-Hamster II
-achievement.pack_essence_hoarder_10000.desc = Ein wahres Gefäß für die Energie der Welt: sammle Essenz jenseits aller Zählung auf.
+achievement.pack_essence_hoarder_10000.desc = Sammle {0} Lebensessenz auf.
 
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Geschärft
@@ -146,18 +146,18 @@ mastery.woo_t1.title = Holzfällen-Mastery I
 mastery.woo_t2.title = Holzfällen-Mastery II
 mastery.woo_t3.title = Holzfällen-Mastery III
 mastery.woo_eternal.title = Holzfällen-Mastery: Ewig
-mastery.acr_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Akrobatik-Mastery ein Stück weiter; jeder kostet mehr als der letzte. Grinde ohne Limit.
-mastery.enc_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Verzauberungs-Mastery ein Stück weiter; jeder kostet mehr als der letzte. Grinde ohne Limit.
+mastery.acr_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Akrobatik-Mastery ein Stück weiter; jeder kostet mehr als der letzte.
+mastery.enc_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Verzauberungs-Mastery ein Stück weiter; jeder kostet mehr als der letzte.
 mastery.fb_eternal.desc = Jeder Kauf facht den Feuerball-Schaden weiter an; jeder kostet mehr als der letzte.
-mastery.fis_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Angel-Mastery ein Stück weiter; jeder kostet mehr als der letzte. Grinde ohne Limit.
-mastery.har_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Ernte-Mastery ein Stück weiter; jeder kostet mehr als der letzte. Grinde ohne Limit.
+mastery.fis_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Angel-Mastery ein Stück weiter; jeder kostet mehr als der letzte.
+mastery.har_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Ernte-Mastery ein Stück weiter; jeder kostet mehr als der letzte.
 mastery.met_eternal.desc = Jeder Kauf verkürzt die Abklingzeit des Meteors und facht seinen Schaden an; jeder kostet mehr als der letzte.
-mastery.min_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Bergbau-Mastery ein Stück weiter; jeder kostet mehr als der letzte. Grinde ohne Limit.
+mastery.min_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Bergbau-Mastery ein Stück weiter; jeder kostet mehr als der letzte.
 mastery.ps_eternal.desc = Jeder Kauf schärft den Durchschuss-Schaden (Hieb und Zauber); jeder kostet mehr als der letzte.
 mastery.sst_eternal.desc = Jeder Kauf verkürzt die Abklingzeit des Schattenschritts; jeder kostet mehr als der letzte.
 mastery.ss_eternal.desc = Jeder Kauf härtet den Schildschlag-Schaden; jeder kostet mehr als der letzte.
 mastery.ww_eternal.desc = Jeder Kauf wetzt den Wirbelwind-Schaden (Hieb und Zauber); jeder kostet mehr als der letzte.
-mastery.woo_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Holzfällen-Mastery ein Stück weiter; jeder kostet mehr als der letzte. Grinde ohne Limit.
+mastery.woo_eternal.desc = Jeder Kauf erhöht die Bonus-Drop-Chance deiner Holzfällen-Mastery ein Stück weiter; jeder kostet mehr als der letzte.
 
 # --- Schadensschulen-Mastery-Pfade (mastery.<trackId>.title, per Konvention aufgelöst) ---
 mastery.fire_school_mastery.title = Feuer-Mastery
@@ -193,5 +193,5 @@ dialogue.mmo_mastery_trainer.menu.text = Die Disziplinen sind hier, wenn du sie 
 dialogue.mmo_mastery_trainer.menu.opt.quests = Welche Aufgaben hast du für mich?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Zeig mir meine Mastery.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Lebewohl.
-dialogue.mmo_mastery_trainer.first_words.text = Der Guide hat dich also doch heruntergeschickt.\nIch hüte hier die alten Disziplinen, fern vom Lärm dort oben. Eine Fähigkeit hört nicht dort auf, wo ihre Stufen enden, und sie weiterzuführen ist das, was ich lehre. Ich nenne es <color is="#ffd97a">Mastery</color>.
+dialogue.mmo_mastery_trainer.first_words.text = Der Guide hat dich also doch heruntergeschickt.\nEine Fähigkeit hört nicht dort auf, wo ihre Stufen enden. Was danach kommt, lehre ich. Ich nenne es Mastery.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = Der Guide hat von dir gesprochen.
