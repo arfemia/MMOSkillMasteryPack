@@ -26,6 +26,7 @@ shop.convert_mastery_point.desc = Convertissez vos gains en une maîtrise plus p
 
 # --- Monnaies (currency.<id>.name, résolu par convention ; id = nom de fichier en minuscules) ---
 currency.mastery_point.name = Point de maîtrise
+currency.mastery_point.amount = {0, number} {0, plural, one {Point de maîtrise} other {Points de maîtrise}}
 
 # --- Counted reward-chip label (the Currency reward kind; {0} = Amount) ---
 reward.currency.mastery_point = +{0} Points de maîtrise

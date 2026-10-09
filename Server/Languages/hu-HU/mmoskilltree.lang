@@ -26,6 +26,7 @@ shop.convert_mastery_point.desc = Alakítsd a szerzeményeidet mélyebb masteryv
 
 # --- Valuták (currency.<id>.name, konvenció szerint feloldva; id = a fájlnév kisbetűsítve) ---
 currency.mastery_point.name = Mastery Pont
+currency.mastery_point.amount = {0, number} {0, plural, one {Mastery Pont} other {Mastery Pont}}
 
 # --- Counted reward-chip label (the Currency reward kind; {0} = Amount) ---
 reward.currency.mastery_point = +{0} Mastery Pont

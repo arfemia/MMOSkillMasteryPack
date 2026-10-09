@@ -26,6 +26,7 @@ shop.convert_mastery_point.desc = Kazancını daha derin bir ustalığa çevir.
 
 # --- Para birimleri (currency.<id>.name, kurala göre çözülür; id = küçük harfli dosya adı) ---
 currency.mastery_point.name = Ustalık Puanı
+currency.mastery_point.amount = {0, number} {0, plural, one {Ustalık Puanı} other {Ustalık Puanı}}
 
 # --- Counted reward-chip label (the Currency reward kind; {0} = Amount) ---
 reward.currency.mastery_point = +{0} Ustalık Puanı

@@ -26,6 +26,7 @@ shop.convert_mastery_point.desc = Convert your earnings into deeper mastery.
 
 # --- Currencies (currency.<id>.name, resolved by convention; id = filename lowercased) ---
 currency.mastery_point.name = Mastery Point
+currency.mastery_point.amount = {0, number} {0, plural, one {Mastery Point} other {Mastery Points}}
 
 # --- Counted reward-chip label (the Currency reward kind; {0} = Amount) ---
 reward.currency.mastery_point = +{0} Mastery Points
