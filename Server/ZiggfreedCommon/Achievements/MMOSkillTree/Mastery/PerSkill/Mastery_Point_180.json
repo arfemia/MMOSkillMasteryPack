@@ -1,0 +1,27 @@
+{
+  "$Comment": "The level 180 rung of the mastery point ladder. Mastery_Point_Base holds everything else; this file is stamped out per skill as {skill}_mastery_180, and Abstract keeps the file itself out of the book.",
+  "Name": "Mastery_Point_180",
+  "Parent": "Mastery_Point_Base",
+  "Abstract": true,
+  "Listing": {
+    "SortOrder": 111,
+    "Chains": [
+      {
+        "Id": "{skill}_mastery_points",
+        "Tier": 12
+      }
+    ]
+  },
+  "Criteria": {
+    "reach-level-skill": {
+      "Amount": 180
+    }
+  },
+  "Meta": {
+    "mmoskilltree": {
+      "PerSkill": {
+        "IdPattern": "{skill}_mastery_180"
+      }
+    }
+  }
+}

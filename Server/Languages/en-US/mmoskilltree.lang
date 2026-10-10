@@ -169,6 +169,10 @@ achievement.pack_essence_hoarder_100.desc = Pick up {0} Essence of Life.
 achievement.pack_essence_hoarder_10000.title = Essence Hoarder II
 achievement.pack_essence_hoarder_10000.desc = Pick up {0} Essence of Life.
 
+# --- The per-skill mastery point ladder ({0} = the skill's name, {1} = the rung's level) ---
+achievement.mastery_points.title = {0} Level {1}
+achievement.mastery_points.desc = Reach {0} level {1}.
+
 # --- Damage-school mastery tracks (mastery.<trackId>.title, resolved by convention) ---
 mastery.fire_school_mastery.title = Fire Mastery
 mastery.ice_school_mastery.title = Ice Mastery

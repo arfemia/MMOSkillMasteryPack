@@ -28,14 +28,14 @@ Each track has **3-5 finite identity nodes** that define its character, plus exa
 
 ### Currencies (2)
 
-- **Mastery Point** (`mastery_point`) - counter-backed (a pure number on the player, can't be dropped, traded, or lost). The pacing currency for finite identity progression - earned every 15 levels from any skill, claimable from that skill's rewards.
+- **Mastery Point** (`mastery_point`) - counter-backed (a pure number on the player, can't be dropped, traded, or lost). The pacing currency for finite identity progression - earned every 15 levels of any skill and collected from your achievement book.
 - **Essence of Life** (`life_essence`) - item-backed (wraps Hytale's native `Ingredient_Life_Essence`). Stackable, tradeable, drops on death. The bulk currency for Eternal node grinds.
 
-### Mastery-point command rewards
+### A Mastery Point every 15 levels
 
-Adds a manual-claim Mastery Point reward to every 15th level for all 20 built-in skills, generated up to each skill's configured max level. Rewards self-hide when the Mastery Points currency is disabled.
+Every skill pays a Mastery Point at level 15, 30, 45 and on up to 195. Each one waits in the Mastery section of your achievement book until you collect it, with each skill's levels listed together. Skills a pack adds get the same ladder.
 
-One reusable milestone template fans out to every skill, so a server owner who wants different intervals or amounts for one skill overrides just that skill in `command-rewards.json` - explicit skill entries win over the catch-all.
+Already past some of those levels when the pack goes in? Their points are waiting for you the next time you log in. If the server turns mastery off, the whole ladder hides.
 
 ### Themed quests (7)
 
@@ -75,7 +75,6 @@ On startup, look for:
 ```
 [AssetPacks] Mastery asset layer applied (17 entries) - 15 masteries effective
 [AssetPacks] Mastery generator layer applied (3 generators) - 28 masteries effective
-[AssetPacks] CommandRewards pack layer applied (1 packs, mode=add) - N skill+level entries effective
 [AssetPacks] Shared-schema achievement layer applied (N achievements) - N achievements effective
 ```
 
@@ -86,7 +85,7 @@ The MMO Skill Tree plugin still runs - XP, skill tree, skill rewards, quests, an
 ## For server owners - customizing
 
 - The mastery tracks, currencies, quests, and achievements ship as the pack's `add`-mode contribution for those types, but the **server owner's own files in `mods/mmoskilltree/`** always win. Edit `mods/mmoskilltree/mastery.json` to retune nodes; the pack's defaults fall through where you don't override.
-- The mastery-point milestone rewards are in this pack's `Server/MMOSkillTree/CommandRewards/MMOSkillMasteryPack.json`. To retune intervals or amounts, override entries in your own `command-rewards.json` - your overrides win.
+- The Mastery Point ladder is the pack's `Mastery_Point_*` achievement files. To change what a level pays, ship a file of the same name in your own pack.
 
 ## For pack authors - building your own
 

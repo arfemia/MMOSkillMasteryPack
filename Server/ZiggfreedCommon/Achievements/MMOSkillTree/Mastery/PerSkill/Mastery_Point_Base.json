@@ -1,0 +1,72 @@
+{
+  "$Comment": [
+    "The shared body of the mastery point ladder: one Mastery Point every 15 levels of every skill,",
+    "from 15 to 195, waiting in the achievement book until the player collects it.",
+    "",
+    "Each Mastery_Point_<level> file beside this one takes everything here through Parent and sets",
+    "only its own level (Criteria Amount), its rung on the {skill}_mastery_points ladder, its place",
+    "in the list and the id pattern its copies get. Each of those files is stamped out once for every",
+    "skill the server runs, the built-in ones and any a content pack adds, with {skill} standing for",
+    "the skill's id, so Mastery_Point_30 becomes mining_mastery_30, woodcutting_mastery_30, and so on.",
+    "",
+    "Abstract is set because this file is only a body to inherit from: it has no level of its own,",
+    "so it is never listed or earned. Abstract does not carry down through Parent, which is why",
+    "every rung sets it again on itself.",
+    "",
+    "A player already past a rung's level is offered it the next time they log in or open the book.",
+    "Requires hides the whole ladder when the server switches the mastery feature off.",
+    "",
+    "To change what a rung pays, override this file (or one rung) by filename in a later pack and",
+    "edit Rewards. Keep the stamped ids: a player's progress is filed under them."
+  ],
+  "Name": "Mastery_Point_Base",
+  "Abstract": true,
+  "Text": {
+    "TitleKey": "achievement.mastery_points.title",
+    "FlavorKey": "achievement.mastery_points.desc",
+    "TextArgs": {
+      "Title": [
+        "@skill",
+        "@amount"
+      ],
+      "Flavor": [
+        "@skill",
+        "@amount"
+      ]
+    }
+  },
+  "Listing": {
+    "Category": "mastery",
+    "SortOrder": 100
+  },
+  "Scoring": {
+    "Points": 10
+  },
+  "Requires": {
+    "Factors": [
+      {
+        "Factor": "mmoskilltree:feature",
+        "Param": "mastery",
+        "Min": 1
+      }
+    ]
+  },
+  "Criteria": {
+    "reach-level-skill": {
+      "Kind": "REACH_LEVEL",
+      "Target": "{skill}",
+      "MatchMode": "EXACT"
+    }
+  },
+  "Rewards": {
+    "Claim": [
+      {
+        "Kind": "Currency",
+        "Params": {
+          "Currency": "mastery_point",
+          "Amount": 1
+        }
+      }
+    ]
+  }
+}

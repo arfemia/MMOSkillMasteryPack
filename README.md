@@ -24,11 +24,12 @@ hides the Mastery and Currency UI tabs unless it's installed.
 - **2 currencies** (`Server/MMOSkillTree/Currencies/*.json`) - `mastery_point`
   (counter-backed, paced by quest/milestone rewards) and `life_essence`
   (item-backed, wraps the Hytale `Ingredient_Life_Essence` item).
-- **Mastery-point milestone rewards** (`Server/MMOSkillTree/CommandRewards/MMOSkillMasteryPack.json`
-  + `Server/MMOSkillTree/CommandRewardTemplates/Mastery_Point_Milestones.json`)
-  - +1 mastery_point every 15 levels for every built-in skill. Authored via the
-  new CommandReward template system: one template + a single `{{ALL_SKILLS}}`
-  entry fans out to every skill (vs. 2,386 lines of duplicated reward objects).
+- **The Mastery Point ladder** (`Server/ZiggfreedCommon/Achievements/MMOSkillTree/Mastery/PerSkill/`)
+  - one Mastery Point at every 15th level of every skill, 15 to 195, which the
+  player collects from the Mastery section of the achievement book. `Mastery_Point_Base`
+  holds the shared body and each `Mastery_Point_<level>` file sets its own level; the
+  plugin stamps each one out for every skill the server runs, custom skills included,
+  as `<skill>_mastery_<level>`.
 - **Mastery-themed quests + achievements** (`Server/ZiggfreedCommon/Quests/MMOSkillTree/Mastery/`,
   `Server/ZiggfreedCommon/Achievements/MMOSkillTree/Mastery/`) - content that uses the mastery /
   currency surface (e.g. "purchase your first mastery node", "complete a
@@ -43,7 +44,6 @@ log lines:
 ```
 [AssetPacks] Mastery asset layer applied (17 entries) - 15 masteries effective
 [AssetPacks] Mastery generator layer applied (3 generators) - 28 masteries effective
-[AssetPacks] CommandRewards pack layer applied (1 packs, mode=add) - N skill+level entries effective
 [AssetPacks] Shared-schema achievement layer applied (N achievements) - N achievements effective
 ```
 
@@ -64,7 +64,7 @@ all work normally. The differences:
 - The **Mastery** menu tab and Mastery page are hidden
   (`MasteryConfig.isAvailable()` returns false on an empty track set).
 - The **Currency** sidebar / page is hidden (`CurrencyConfig.isAvailable()`).
-- No `mastery_point` rewards fire on level-up.
+- No Mastery Points wait in the achievement book for skill levels.
 - The `/mmocurrency` and `/mmomastery` admin commands report "no currencies /
   no tracks configured".
 
