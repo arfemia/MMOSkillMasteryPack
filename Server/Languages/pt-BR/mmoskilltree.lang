@@ -72,6 +72,9 @@ achievement.pack_essence_hoarder_100.desc = Pegue {0} unidades de Essência da V
 achievement.pack_essence_hoarder_10000.title = Acumulador de Essência II
 achievement.pack_essence_hoarder_10000.desc = Pegue {0} unidades de Essência da Vida.
 
+achievement.mastery_points.title = {0} Nível {1}
+achievement.mastery_points.desc = Alcance o nível {1} em {0}.
+
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Afiado
 mastery.node.t1_combo.title = Mestre do Combo

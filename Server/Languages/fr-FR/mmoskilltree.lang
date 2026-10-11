@@ -72,6 +72,8 @@ achievement.pack_essence_hoarder_100.title = Amasseur d'essence I
 achievement.pack_essence_hoarder_100.desc = Ramassez {0} essence de vie.
 achievement.pack_essence_hoarder_10000.title = Amasseur d'essence II
 achievement.pack_essence_hoarder_10000.desc = Ramassez {0} essence de vie.
+achievement.mastery_points.title = {0} niveau {1}
+achievement.mastery_points.desc = Atteignez le niveau {1} en {0}.
 
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Affûté

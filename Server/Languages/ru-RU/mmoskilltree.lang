@@ -72,6 +72,10 @@ achievement.pack_essence_hoarder_100.desc = Подберите {0} ед. эсс�
 achievement.pack_essence_hoarder_10000.title = Накопитель эссенции II
 achievement.pack_essence_hoarder_10000.desc = Подберите {0} ед. эссенции жизни.
 
+# --- The per-skill mastery point ladder ({0} = the skill's name, {1} = the rung's level) ---
+achievement.mastery_points.title = {0}: уровень {1}
+achievement.mastery_points.desc = Достигните уровня {1} в навыке «{0}».
+
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Острота
 mastery.node.t1_combo.title = Мастер комбо

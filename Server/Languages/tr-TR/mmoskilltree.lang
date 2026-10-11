@@ -73,6 +73,10 @@ achievement.pack_essence_hoarder_100.desc = {0} Yaşam Özü topla.
 achievement.pack_essence_hoarder_10000.title = Öz Biriktiricisi II
 achievement.pack_essence_hoarder_10000.desc = {0} Yaşam Özü topla.
 
+# --- The per-skill mastery point ladder ({0} = the skill's name, {1} = the rung's level) ---
+achievement.mastery_points.title = {0} Seviye {1}
+achievement.mastery_points.desc = {0} için {1}. seviyeye ulaş.
+
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Bilenmiş
 mastery.node.t1_combo.title = Kombo Ustası
