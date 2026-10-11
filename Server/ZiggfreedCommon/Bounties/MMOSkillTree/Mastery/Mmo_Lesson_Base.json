@@ -1,0 +1,30 @@
+{
+  "$Comment": [
+    "The skeleton every lesson on the Mastery Trainer's board (Mmo_Mastery_Lessons) inherits through",
+    "Parent. It is never posted.",
+    "",
+    "Requires keeps every lesson off a server with mastery switched off: the plain mmoskilltree:feature",
+    "condition at the top, with Min 1, hides the lesson rather than locking it. A lesson that writes its",
+    "own Requires replaces this one whole, so it would have to carry the feature condition too.",
+    "",
+    "Rewards.Claim is what a Gathering, Fighting or Crafting lesson pays: a handful of Essence of Life",
+    "(Lootables/Mmo_Mastery_Lesson_Pay.json) and standing with the trainer (the Reputation reward;",
+    "Amount is how much). The pay waits at the board until the player collects it there. A Hard or",
+    "Master's lesson writes its own Claim list, which replaces this one whole, with more standing and,",
+    "for a Master's lesson, a mastery point.",
+    "",
+    "A lesson names its board and band in Boards, its work in Objectives (always out in the world:",
+    "nothing in the Forgotten Temple can be broken or fought) and its words in Text."
+  ],
+  "Abstract": true,
+  "Listing": { "Category": "bounty", "Tags": [ "Mastery" ] },
+  "Requires": {
+    "Factors": [ { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 } ]
+  },
+  "Rewards": {
+    "Claim": [
+      { "Kind": "Lootable", "Params": { "Lootable": "Mmo_Mastery_Lesson_Pay" } },
+      { "Kind": "Reputation", "Params": { "Reputation": "Mmo_Mastery_Trainer", "Amount": 250 } }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$Comment": "A Crafting lesson on the trainer's board, posted in the slot that opens at Student (Friendly): earn Crafting experience while carrying it. GAIN_XP counts only experience earned after the lesson is taken, and Amount is an experience total, not a number of items. Pay and the mastery gate come from Mmo_Lesson_Base.",
+  "Parent": "Mmo_Lesson_Base",
+  "Text": {
+    "TitleKey": "quest.mmo_lesson_workshop.title",
+    "FlavorKey": "quest.mmo_lesson_workshop.flavor"
+  },
+  "Listing": { "Icon": "Ingredient_Bar_Iron" },
+  "Boards": [ { "Board": "Mmo_Mastery_Lessons", "Difficulty": "Mastery_Crafting", "Weight": 1 } ],
+  "Objectives": {
+    "crafting_xp": { "Kind": "GAIN_XP", "Target": "CRAFTING", "MatchMode": "EXACT", "Amount": 2000 }
+  }
+}

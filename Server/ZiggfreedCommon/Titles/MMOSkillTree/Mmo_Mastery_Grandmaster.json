@@ -1,0 +1,8 @@
+{
+  "$Comment": "Grandmaster: the title the achievement mastery_trainer_tier_3 pays once a player reaches Grandmaster with the Mastery Trainer. It shows beside a player's name in menus and leaderboards once they pick it. Its name, its flavor and where it sits around the name are the keys title.mmo_mastery_grandmaster.name, .flavor and .display (whose {0} is the name). Order sorts it in the title picker; Enabled false hides it everywhere without taking it from anybody who earned it.",
+  "Order": 320,
+  "Text": {
+    "TitleKey": "title.mmo_mastery_grandmaster.name",
+    "FlavorKey": "title.mmo_mastery_grandmaster.flavor"
+  }
+}

@@ -49,6 +49,13 @@
           "Currency": "mastery_point",
           "Amount": 25
         }
+      },
+      {
+        "Kind": "Reputation",
+        "Params": {
+          "Reputation": "Mmo_Mastery_Trainer",
+          "Amount": 1500
+        }
       }
     ]
   }

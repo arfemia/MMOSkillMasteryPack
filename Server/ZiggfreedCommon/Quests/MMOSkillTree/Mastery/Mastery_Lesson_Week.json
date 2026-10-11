@@ -1,0 +1,65 @@
+{
+  "$Comment": [
+    "A Week of Lessons: the Mastery Trainer's weekly, finish five lessons from the trainer's board",
+    "(Mmo_Mastery_Lessons) and collect a week's bonus standing.",
+    "",
+    "Repeat.Reset with Period Weekly is a CALENDAR week: the allowance turns over at Monday midnight UTC",
+    "(author Weekday or AtMinutes on the Reset block to move it), so five lessons on any days of the week",
+    "count, and a missed day or two still leaves room to finish.",
+    "",
+    "It opens once A Word with the Trainer or What You Already Paid is collected (the AnyOf in Requires,",
+    "the same two quests that open the board) and accepts itself then and after every reset (AutoAccept),",
+    "pinned to the tracker (AutoTrack), so the player sees what the lessons build toward without asking.",
+    "Listing.RequirePrerequisites keeps it out of the Objective Book until one of the two is collected;",
+    "a player whose log was full when it tried to arm finds it there to",
+    "take by hand. The feature gate keeps it out of the log on a server with mastery switched off.",
+    "",
+    "The step is COMPLETE_BOUNTY on the board's id, which the plugin fires each time a contract from that",
+    "board is collected; with no Qualifier, any band counts. TextKey words it as the trainer's lessons.",
+    "TurnInAt names the trainer, so the standing waits in the Claim bucket until the player collects it",
+    "from the trainer's quest list."
+  ],
+  "Text": {
+    "TitleKey": "quest.mastery_lesson_week.title",
+    "FlavorKey": "quest.mastery_lesson_week.flavor"
+  },
+  "Listing": {
+    "Icon": "Deco_Scroll",
+    "Category": "misc",
+    "SortOrder": 202,
+    "Tags": ["Mastery"],
+    "RequirePrerequisites": true
+  },
+  "Flow": {
+    "AutoAccept": true,
+    "AutoTrack": true
+  },
+  "Repeat": {
+    "Reset": { "Period": "Weekly" },
+    "CooldownFrom": "Complete"
+  },
+  "TurnInAt": "Mmo_Mastery_Trainer",
+  "Requires": {
+    "Factors": [
+      { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 }
+    ],
+    "AnyOf": [
+      { "Factors": [ { "Factor": "ziggfreedcommon:quest_completed", "Param": "meet_the_mastery_trainer", "Min": 1 } ] },
+      { "Factors": [ { "Factor": "ziggfreedcommon:quest_completed", "Param": "mastery_tithe_credit", "Min": 1 } ] }
+    ]
+  },
+  "Objectives": {
+    "finish_lessons": {
+      "Kind": "COMPLETE_BOUNTY",
+      "Target": "Mmo_Mastery_Lessons",
+      "MatchMode": "EXACT",
+      "Amount": 5,
+      "TextKey": "objective.text.mastery_lesson.week"
+    }
+  },
+  "Rewards": {
+    "Claim": [
+      { "Kind": "Reputation", "Params": { "Reputation": "Mmo_Mastery_Trainer", "Amount": 1000 } }
+    ]
+  }
+}

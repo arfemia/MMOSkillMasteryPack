@@ -1,0 +1,30 @@
+{
+  "$Comment": "Master: reach Exalted with the Mastery Trainer. The fourth rung of the mastery_trainer_ranks ladder; Mastery_Trainer_Friendly.json explains how the seven rungs credit and pay. Its mastery points wait in the book until collected.",
+  "Text": {
+    "TitleKey": "achievement.mastery_trainer_exalted.title",
+    "FlavorKey": "achievement.mastery_trainer_exalted.desc"
+  },
+  "Listing": {
+    "Category": "mastery",
+    "SortOrder": 63,
+    "Icon": "Ingredient_Crystal_Purple",
+    "Chains": [ { "Id": "mastery_trainer_ranks", "Tier": 4 } ]
+  },
+  "Scoring": { "Points": 25 },
+  "Requires": {
+    "Factors": [ { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 } ]
+  },
+  "Criteria": {
+    "reach-rank": {
+      "Kind": "REPUTATION_RANK",
+      "Target": "Exalted",
+      "MatchMode": "EXACT",
+      "Qualifier": "Mmo_Mastery_Trainer",
+      "Amount": 1,
+      "TextKey": "objective.mastery_trainer.exalted"
+    }
+  },
+  "Rewards": {
+    "Claim": [ { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": 15 } } ]
+  }
+}

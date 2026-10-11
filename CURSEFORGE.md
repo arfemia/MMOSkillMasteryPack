@@ -1,6 +1,6 @@
 # MMO Skill Mastery Pack
 
-**The mastery and currency content pack for the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).** Drop this `.zip` into your server's `mods/` folder alongside the plugin and the full mastery system switches on: 28 active tracks across combat skills, marquee abilities, gathering, Enchanting and the seven damage schools, plus two starter currencies, a claimable Mastery Point every 15 levels, and themed quests and achievements to earn them with.
+**The mastery and currency content pack for the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).** Drop this `.zip` into your server's `mods/` folder alongside the plugin and the full mastery system switches on: 28 active tracks across combat skills, marquee abilities, gathering, Enchanting and the seven damage schools, plus two starter currencies, a claimable Mastery Point every 15 levels, the Mastery Trainer's daily lessons, and themed quests and achievements to earn them with.
 
 [![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/5NFdZsUxHZ) [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/ziggfreed) [![Documentation](https://img.shields.io/badge/Docs-Read%20More-0ea5e9?style=for-the-badge)](https://mmo-skill-tree-docs.ziggfreed.com)
 
@@ -37,7 +37,24 @@ Every skill pays a Mastery Point at level 15, 30, 45 and on up to 195. Each one 
 
 Already past some of those levels when the pack goes in? Their points are waiting for you the next time you log in. If the server turns mastery off, the whole ladder hides.
 
-### Themed quests (7)
+### The Mastery Trainer's lessons
+
+Once you've met the Mastery Trainer in the Forgotten Temple (or collected What You Already Paid), ask "Do you have lessons for me?" and the lessons board opens. New lessons go up every day, and all of them are done out in the world: fell logs, mine ore, catch fish, put down creatures, use your abilities, craft at a bench. Bring each one back to the board to collect a handful of Essence of Life and standing with the trainer.
+
+Standing climbs from Newcomer to Grandmaster, and each rank from Student up pays Mastery Points:
+
+- Student (1,000 standing): 3 points, and a Crafting lesson opens on the board.
+- Trusted Student (3,000): 5 points.
+- Adept (9,000): 10 points and a Hard lesson.
+- Master (21,000): 15 points and a Master's lesson, which pays a Mastery Point every day you do it.
+- Master II (30,000) pays 15 points and Master III (40,000) pays 20.
+- Grandmaster (50,000): 25 points, the Grandmaster title and a second Master's lesson.
+
+A rank's points wait in the Mastery section of your achievement book until you collect them. Ask "How am I doing?" to see your rank and what the next one opens. Doing every lesson each day, you reach Master in a little over two weeks and Grandmaster in about a month.
+
+Paid the old Mastery Tithe? It's retired, and What You Already Paid shows up in your log: see the trainer and you start at Trusted Student.
+
+### Themed quests (8)
 
 - **A Word with the Trainer** - once you reach the Forgotten Temple, the Adventurer's Guide sends you across the landing to meet the Mastery Trainer, for 1 Mastery Point.
 - **The First Milestone** - from the trainer: reach level 15 in any skill for 2 Mastery Points.
@@ -45,7 +62,10 @@ Already past some of those levels when the pack goes in? Their points are waitin
 - **Essence Devotee** (follows Essence Collector) - turn in 750 Essence of Life for 25 Mastery Points.
 - **Many Trades** - reach level 25 in Mining, Woodcutting, Harvesting, Swords, and Archery for 10 Mastery Points.
 - **The Trainer's Due** (daily, after A Word with the Trainer) - hand in 115 Essence of Life and 3 Linen Scraps and kill 10 creatures, for an essence roll that grows with your combat level and luck, a Mastery Point about two days in five, now and then an all-skill XP boost, and rarely the Adept's Staff.
-- **Mastery Tithe** (repeatable every 6 hours) - slay 10 mobs and chop 10 logs for 1 Mastery Point. Gated behind Total Level 500 and the **Mastery Hoarder** achievement, so the trickle stays an endgame faucet.
+- **A Week of Lessons** (weekly, after A Word with the Trainer or What You Already Paid): finish any 5 of the trainer's lessons in a week for 1,000 standing.
+- **What You Already Paid** (only if you paid the old Mastery Tithe): see the trainer for 3,000 standing.
+
+These quests raise your standing with the trainer too: 250 for A Word with the Trainer, The First Milestone and each day's Trainer's Due, 500 for Essence Collector, 1,000 for Many Trades and 1,500 for Essence Devotee.
 
 ### Themed achievements (6)
 
@@ -67,7 +87,7 @@ Every display string in the pack - track titles, node names and descriptions, qu
 ## Installation
 
 1. Install the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).
-2. Drop `MMOSkillMasteryPack-2.1.1.zip` into the same `mods/` folder.
+2. Drop `MMOSkillMasteryPack-2.2.0.zip` into the same `mods/` folder.
 3. Restart the server.
 
 On startup, look for:
@@ -86,6 +106,7 @@ The MMO Skill Tree plugin still runs - XP, skill tree, skill rewards, quests, an
 
 - The mastery tracks, currencies, quests, and achievements ship as the pack's `add`-mode contribution for those types, but the **server owner's own files in `mods/mmoskilltree/`** always win. Edit `mods/mmoskilltree/mastery.json` to retune nodes; the pack's defaults fall through where you don't override.
 - The Mastery Point ladder is the pack's `Mastery_Point_*` achievement files. To change what a level pays, ship a file of the same name in your own pack.
+- The trainer's lessons and ranks work the same way. Each rank's pay is an achievement file and each lesson a board contract: ship a file of the same name to retune one, or a new contract that names the trainer's board to add a lesson.
 
 ## For pack authors - building your own
 
@@ -95,6 +116,7 @@ The pack uses the standard MMO content-pack format documented in the plugin's `C
 
 | Pack  | Plugin | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2.2.0 (unreleased, held) | 1.7.1+ | Added the Mastery Trainer's lessons: a daily board in the Forgotten Temple and a standing with the trainer that climbs from Newcomer to Grandmaster. Every rank from Student up pays Mastery Points in the achievement book, Master and Grandmaster each open a lesson that pays a Mastery Point a day, and Grandmaster also pays a title. Added A Week of Lessons, a weekly for any five lessons. The trainer's other quests now raise your standing too. The Mastery Tithe is retired: if you are partway through one you can still finish it, and if you ever paid it, What You Already Paid starts you at Trusted Student. Same plugin and CommonLib floors as 2.1.1. |
 | 2.1.1 (unreleased, held) | 1.7.1+ | Moves the pack onto Hytale Update 7: it needs an Update 7 server and Ziggfreed's CommonLib 2.3.0 or newer, and won't load on Update 6. Mastery Points move to the achievement book: every skill still pays one at level 15, 30, 45 and on up to 195, and each waits in the Mastery section of the book until you collect it, worth 10 achievement points. Skills a pack adds get the same ladder. Levels you already passed offer their points the next time you log in, including any you collected from a skill's rewards page before. If you set your own Mastery Point rewards in `command-rewards.json`, take them out. |
 | 2.1.0 | 1.6.1+ | Switches on the Enchanting mastery track: four steps of Enchanting loot luck, paid in Essence of the Void (with a single Voidheart at the third step) on top of the usual mastery points and Essence of Life. Fishing and Acrobatics stay switched off. Every mastery step asks for half again as much Essence of Life (a step at 600 now reads 900), and the essence quests follow: Essence Collector asks for 150, Essence Devotee for 750 and The Trainer's Due for 115. Mastery points and the other essences are unchanged, and a step you already bought stays bought. The Mastery Trainer's lines and the mastery achievements read plainer. First Step Toward Mastery and Path of Mastery become The First Milestone and Many Trades, and Apprentice of the Path and Journeyman of the Path become Mastery Apprentice and Mastery Journeyman. The Trainer's Due names everything it asks for: the essence, the Linen Scraps and the kills. The Defense track is renamed Block Mastery, the skill's name in game. Same plugin and CommonLib floors as 2.0.1. |
 | 2.0.1 | 1.6.1+ | A picture for every damage-school track (the matching essence for Fire, Ice, Lightning, Void and Water, the mastery crystal for Arcane, a venom sac for Poison; all seven drew the same iron bar before) and for every quest, drawn wherever it is listed and on the notice when it finishes. **A Word with the Trainer** is collected at the trainer and listed on nobody else's screen, the two level climbs keep their report-back step off the list until the climbing is done, the repeating quests are badged off their own timing rather than hand-labelled (so the Mastery Tithe reads as the six-hour repeat it is, not a daily), and the Mastery Trainer shrugs off environmental damage as she was always meant to, with the boot warning about it gone. Requires MMO Skill Tree 1.6.1 or newer and Ziggfreed's CommonLib 2.1.0 or newer; update the three together. Track content, prices, gates and node ids are unchanged, so purchased nodes carry across untouched. |

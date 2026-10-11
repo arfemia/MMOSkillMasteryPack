@@ -1,0 +1,19 @@
+{
+  "$Comment": "A Hard lesson on the trainer's board, posted in the slot that opens at Adept (Revered): earn experience in any skill while carrying it. The step names no skill, so every skill counts; name a skill id to narrow it. GAIN_XP counts only experience earned after the lesson is taken. It writes its own Rewards.Claim, the base's list with more standing, because a child's list replaces the base's whole. The mastery gate comes from Mmo_Lesson_Base.",
+  "Parent": "Mmo_Lesson_Base",
+  "Text": {
+    "TitleKey": "quest.mmo_lesson_hard_study.title",
+    "FlavorKey": "quest.mmo_lesson_hard_study.flavor"
+  },
+  "Listing": { "Icon": "Deco_Book_Pile_Small" },
+  "Boards": [ { "Board": "Mmo_Mastery_Lessons", "Difficulty": "Mastery_Hard", "Weight": 1 } ],
+  "Objectives": {
+    "earn_xp": { "Kind": "GAIN_XP", "Amount": 12000 }
+  },
+  "Rewards": {
+    "Claim": [
+      { "Kind": "Lootable", "Params": { "Lootable": "Mmo_Mastery_Lesson_Pay" } },
+      { "Kind": "Reputation", "Params": { "Reputation": "Mmo_Mastery_Trainer", "Amount": 500 } }
+    ]
+  }
+}

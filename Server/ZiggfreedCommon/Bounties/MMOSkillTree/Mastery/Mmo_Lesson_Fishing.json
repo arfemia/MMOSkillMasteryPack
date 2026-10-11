@@ -1,0 +1,13 @@
+{
+  "$Comment": "A Gathering lesson on the trainer's board: catch fish. The step names no target, so any catch counts. Pay and the mastery gate come from Mmo_Lesson_Base.",
+  "Parent": "Mmo_Lesson_Base",
+  "Text": {
+    "TitleKey": "quest.mmo_lesson_fishing.title",
+    "FlavorKey": "quest.mmo_lesson_fishing.flavor"
+  },
+  "Listing": { "Icon": "Fish_Bluegill_Item" },
+  "Boards": [ { "Board": "Mmo_Mastery_Lessons", "Difficulty": "Mastery_Gathering", "Weight": 1 } ],
+  "Objectives": {
+    "catch_fish": { "Kind": "CATCH_FISH", "Amount": 8 }
+  }
+}

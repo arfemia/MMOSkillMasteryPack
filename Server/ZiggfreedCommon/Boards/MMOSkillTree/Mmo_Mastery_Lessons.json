@@ -1,0 +1,59 @@
+{
+  "$Comment": [
+    "The Mastery Trainer's board of lessons, drawn once a day at midnight UTC, one contract per slot. A slot",
+    "posts only contracts whose Boards entry names its Difficulty band: Mastery_Gathering (logs, ore, fish),",
+    "Mastery_Fighting (creatures, abilities), Mastery_Crafting (the benches), Mastery_Hard and",
+    "Mastery_Master. The lessons sit in Bounties/MMOSkillTree/Mastery/ on Mmo_Lesson_Base.",
+    "",
+    "Standing with the trainer opens more of the board. The Gathering and Fighting slots are open to",
+    "everyone; the others carry Requires on a rank (ziggfreedcommon:reputation_rank, Param",
+    "Mmo_Mastery_Trainer/<rank>, Min 1): the Crafting slot at Friendly (Student), the Hard slot at Revered",
+    "(Adept), a Master's slot at Exalted (Master) and a second Master's slot at Mastery_Trainer_Tier_3",
+    "(Grandmaster). Everyone sees them posted, and a player below the rank sees them locked, with the",
+    "reason. Each of those slots is Optional, so a band left empty shows no gap. The Master's band holds",
+    "three lessons, so its two slots post two different ones.",
+    "",
+    "Requires: the mastery feature at the top decides whether the board exists at all, and finishing A",
+    "Word with the Trainer or What You Already Paid (AnyOf, quest_completed meet_the_mastery_trainer or",
+    "mastery_tithe_credit) is what lets a player take anything off it, so a player who paid the Mastery",
+    "Tithe is never left at the trainer with nothing to do. Where keeps it in the Forgotten Temple: anywhere else it is left out of every list and opens",
+    "closed. The trainer's conversation opens it. Grades names each band for the badge on its rows:",
+    "TitleKey is its words, Color the badge's colour. Currencies shows the two wallets a lesson pays into.",
+    "Every lesson's pay waits here until the player collects it (Rewards.Claim).",
+    "",
+    "To add a lesson, ship a contract that names Mmo_Mastery_Lessons and one of these bands in its Boards."
+  ],
+  "Text": {
+    "TitleKey": "board.mmo_mastery_lessons.title",
+    "FlavorKey": "board.mmo_mastery_lessons.desc"
+  },
+  "Icon": "Deco_Scroll",
+  "Order": 50,
+  "Rotation": { "Period": "Daily" },
+  "Slots": [
+    { "Difficulty": "Mastery_Gathering" },
+    { "Difficulty": "Mastery_Fighting" },
+    { "Difficulty": "Mastery_Crafting", "Optional": true, "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:reputation_rank", "Param": "Mmo_Mastery_Trainer/Friendly", "Min": 1 } ] } },
+    { "Difficulty": "Mastery_Hard", "Optional": true, "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:reputation_rank", "Param": "Mmo_Mastery_Trainer/Revered", "Min": 1 } ] } },
+    { "Difficulty": "Mastery_Master", "Optional": true, "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:reputation_rank", "Param": "Mmo_Mastery_Trainer/Exalted", "Min": 1 } ] } },
+    { "Difficulty": "Mastery_Master", "Optional": true, "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:reputation_rank", "Param": "Mmo_Mastery_Trainer/Mastery_Trainer_Tier_3", "Min": 1 } ] } }
+  ],
+  "Grades": {
+    "Mastery_Gathering": { "TitleKey": "board.mmo_mastery_lessons.grade.gathering", "Color": "#9ccc65" },
+    "Mastery_Fighting": { "TitleKey": "board.mmo_mastery_lessons.grade.fighting", "Color": "#e57373" },
+    "Mastery_Crafting": { "TitleKey": "board.mmo_mastery_lessons.grade.crafting", "Color": "#ffb74d" },
+    "Mastery_Hard": { "TitleKey": "board.mmo_mastery_lessons.grade.hard", "Color": "#64b5f6" },
+    "Mastery_Master": { "TitleKey": "board.mmo_mastery_lessons.grade.master", "Color": "#c08aff" }
+  },
+  "Currencies": [ "Mastery_Point", "Life_Essence" ],
+  "Requires": {
+    "Factors": [
+      { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 }
+    ],
+    "AnyOf": [
+      { "Factors": [ { "Factor": "ziggfreedcommon:quest_completed", "Param": "meet_the_mastery_trainer", "Min": 1 } ] },
+      { "Factors": [ { "Factor": "ziggfreedcommon:quest_completed", "Param": "mastery_tithe_credit", "Min": 1 } ] }
+    ]
+  },
+  "Where": { "GameplayConfig": [ "ForgottenTemple" ] }
+}

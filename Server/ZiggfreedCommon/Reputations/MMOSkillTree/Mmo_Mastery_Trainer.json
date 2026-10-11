@@ -1,0 +1,46 @@
+{
+  "$Comment": [
+    "The Mastery Trainer: the name, picture and ranks of the game's reputation group of the same id",
+    "(NPC/Reputation/Groups/Mmo_Mastery_Trainer.json), which keeps each player's standing.",
+    "",
+    "It climbs the seven shared ranks like any reputation, then keeps going. Ranks names each shared rank",
+    "for the trainer alone (Newcomer up to Master), and each entry with a From is a rank of its own that",
+    "starts at that much earned standing: Master II, Master III and Grandmaster. Every From sits above",
+    "Exalted's floor, so the shared ranks keep theirs. A lock on any of these ranks reads the name written",
+    "here with the reputation's name. The rank ids are saved progress: rename one and every player loses it.",
+    "",
+    "Each rank from Friendly up pays mastery points through an achievement of its own in",
+    "Achievements/MMOSkillTree/Mastery/Trainer/, collected in the book, and Friendly, Revered, Exalted and",
+    "Mastery_Trainer_Tier_3 each open a slot on the trainer's board, Mmo_Mastery_Lessons.",
+    "",
+    "Standing comes only from the Reputation rewards on the trainer's lessons and quests, so each card says",
+    "how much. There is no Kills group, no Gear group and no Cap, so standing keeps climbing past the top",
+    "rank, and no Beyond, since the Master's lessons are what keep paying at the top. Earn lists those",
+    "ways, one lang key a line, for the How to earn block on the Reputation page. Order 1 puts the trainer",
+    "near the top of the Reputation page."
+  ],
+  "Text": {
+    "TitleKey": "reputation.mmo_mastery_trainer.name",
+    "FlavorKey": "reputation.mmo_mastery_trainer.flavor"
+  },
+  "Icon": "Ingredient_Crystal_Purple",
+  "Order": 1,
+  "Ranks": {
+    "Neutral": { "Name": "reputation.mmo_mastery_trainer.rank.neutral" },
+    "Friendly": { "Name": "reputation.mmo_mastery_trainer.rank.friendly" },
+    "Honored": { "Name": "reputation.mmo_mastery_trainer.rank.honored" },
+    "Revered": { "Name": "reputation.mmo_mastery_trainer.rank.revered" },
+    "Exalted": { "Name": "reputation.mmo_mastery_trainer.rank.exalted" },
+    "Mastery_Trainer_Tier_1": { "Name": "reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_1", "From": 30000 },
+    "Mastery_Trainer_Tier_2": { "Name": "reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_2", "From": 40000 },
+    "Mastery_Trainer_Tier_3": { "Name": "reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_3", "From": 50000 }
+  },
+  "Earn": {
+    "Lines": [
+      "reputation.mmo_mastery_trainer.earn.lessons",
+      "reputation.mmo_mastery_trainer.earn.due",
+      "reputation.mmo_mastery_trainer.earn.tasks",
+      "reputation.mmo_mastery_trainer.earn.week"
+    ]
+  }
+}

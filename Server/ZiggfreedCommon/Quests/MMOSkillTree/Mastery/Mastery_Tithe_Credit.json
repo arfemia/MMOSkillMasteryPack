@@ -1,0 +1,59 @@
+{
+  "$Comment": [
+    "What You Already Paid: a head start with the Mastery Trainer for every player who ever paid the",
+    "Mastery Tithe (Pack_Mastery_Tithe.json), which the trainer's lessons have replaced.",
+    "",
+    "Requires opens it to anyone with the mastery feature on who has collected the tithe at least once:",
+    "ziggfreedcommon:quest_completions counts collections from the player's own record, so it answers",
+    "even though nobody is handed the tithe itself. AutoAccept puts it in the log the moment that",
+    "holds, at login included, and AutoTrack pins it, so a past payer finds it waiting without being told.",
+    "Listing.RequirePrerequisites keeps it out of everyone else's Objective Book; a past payer whose log",
+    "was full when it tried to arm still finds it there to take by hand.",
+    "",
+    "Its one step is a talk at the trainer, credited by the MarkTalked beat on the tithe_credit line of",
+    "the trainer's conversation (Dialogues/MMOSkillTree/Mmo_Mastery_Trainer.json): pressing F alone",
+    "credits nothing, so re-point the step and that beat has to move with it. TurnInAt names the",
+    "trainer, so the reward waits in the Claim bucket until the player collects it from the trainer's",
+    "own quest list, which that line opens.",
+    "",
+    "It pays 3000 standing with the trainer (the Reputation reward): Honored, the rank called Trusted",
+    "Student, so the achievements for Student and Trusted Student wait in the book at once. Edit the",
+    "Amount to start past payers somewhere else on the ladder."
+  ],
+  "Text": {
+    "TitleKey": "quest.mastery_tithe_credit.title",
+    "FlavorKey": "quest.mastery_tithe_credit.flavor"
+  },
+  "Listing": {
+    "Icon": "Ingredient_Crystal_Purple",
+    "Category": "main",
+    "SortOrder": 43,
+    "Tags": ["Mastery"],
+    "RequirePrerequisites": true
+  },
+  "Flow": {
+    "AutoAccept": true,
+    "AutoTrack": true
+  },
+  "TurnInAt": "Mmo_Mastery_Trainer",
+  "Requires": {
+    "Factors": [
+      { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 },
+      { "Factor": "ziggfreedcommon:quest_completions", "Param": "pack_mastery_tithe", "Min": 1 }
+    ]
+  },
+  "Objectives": {
+    "see_the_trainer": {
+      "Kind": "TALK_TO_NPC",
+      "Target": "Mmo_Mastery_Trainer",
+      "Amount": 1,
+      "MatchMode": "EXACT",
+      "Order": 1
+    }
+  },
+  "Rewards": {
+    "Claim": [
+      { "Kind": "Reputation", "Params": { "Reputation": "Mmo_Mastery_Trainer", "Amount": 3000 } }
+    ]
+  }
+}

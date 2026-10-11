@@ -1,0 +1,13 @@
+{
+  "$Comment": "A Crafting lesson on the trainer's board, posted in the slot that opens at Student (Friendly): craft items at any bench. The step names no item, so anything crafted counts. Pay and the mastery gate come from Mmo_Lesson_Base.",
+  "Parent": "Mmo_Lesson_Base",
+  "Text": {
+    "TitleKey": "quest.mmo_lesson_crafting.title",
+    "FlavorKey": "quest.mmo_lesson_crafting.flavor"
+  },
+  "Listing": { "Icon": "Wood_Redwood_Planks" },
+  "Boards": [ { "Board": "Mmo_Mastery_Lessons", "Difficulty": "Mastery_Crafting", "Weight": 1 } ],
+  "Objectives": {
+    "craft_items": { "Kind": "CRAFT_ITEM", "Amount": 15 }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "$Comment": "The Mastery Trainer: the game's reputation group that keeps each player's standing with the trainer. NPCGroups is an empty list, so no character's attitude follows it. Keep the key even while it is empty: a reputation group with no NPCGroups key at all breaks every NPC that spawns, and so does one naming an NPC group the game has not loaded. InitialReputationValue is where every player starts. ZiggfreedCommon/Reputations/MMOSkillTree/Mmo_Mastery_Trainer.json gives it its name, its picture, its rank names and its ranks past Exalted. The id is saved progress: renaming this file starts every player over.",
+  "NPCGroups": [],
+  "InitialReputationValue": 0
+}

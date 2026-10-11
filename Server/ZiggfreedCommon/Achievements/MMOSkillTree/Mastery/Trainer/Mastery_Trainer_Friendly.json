@@ -1,0 +1,43 @@
+{
+  "$Comment": [
+    "Student: reach Friendly with the Mastery Trainer (the reputation Mmo_Mastery_Trainer), the first of",
+    "seven achievements in this folder that pay mastery points as a player rises with the trainer.",
+    "",
+    "REPUTATION_RANK credits every rank a player's standing has reached, each time it changes and when",
+    "they log in, so a player who jumps several ranks at once finds each rank's achievement waiting.",
+    "Target is the rank id and Qualifier the reputation id; the criterion's TextKey words the step with",
+    "the rank's name. The pay sits in Rewards.Claim, so it waits in the Mastery section of the achievement",
+    "book until the player collects it. Listing.Chains lists the seven together as one ladder,",
+    "mastery_trainer_ranks, in rank order.",
+    "",
+    "To change what a rank pays, ship a file of the same name in a later pack and edit Rewards. Keep the",
+    "ids: a player's progress is filed under them."
+  ],
+  "Text": {
+    "TitleKey": "achievement.mastery_trainer_friendly.title",
+    "FlavorKey": "achievement.mastery_trainer_friendly.desc"
+  },
+  "Listing": {
+    "Category": "mastery",
+    "SortOrder": 60,
+    "Icon": "Ingredient_Crystal_Purple",
+    "Chains": [ { "Id": "mastery_trainer_ranks", "Tier": 1 } ]
+  },
+  "Scoring": { "Points": 10 },
+  "Requires": {
+    "Factors": [ { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 } ]
+  },
+  "Criteria": {
+    "reach-rank": {
+      "Kind": "REPUTATION_RANK",
+      "Target": "Friendly",
+      "MatchMode": "EXACT",
+      "Qualifier": "Mmo_Mastery_Trainer",
+      "Amount": 1,
+      "TextKey": "objective.mastery_trainer.friendly"
+    }
+  },
+  "Rewards": {
+    "Claim": [ { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": 3 } } ]
+  }
+}

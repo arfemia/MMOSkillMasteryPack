@@ -1,0 +1,20 @@
+{
+  "$Comment": "A Master's lesson on the trainer's board, posted in the slot that opens at Master (Exalted) and the second that opens at Grandmaster (Mastery_Trainer_Tier_3): the Gathering lesson's ore, about six times over. It writes its own Rewards.Claim, the base's list with more standing and one mastery point (the Currency reward on the pack's mastery_point wallet), because a child's list replaces the base's whole. This point is what keeps paying past the top rank; retune it here. The mastery gate comes from Mmo_Lesson_Base.",
+  "Parent": "Mmo_Lesson_Base",
+  "Text": {
+    "TitleKey": "quest.mmo_lesson_master_ore.title",
+    "FlavorKey": "quest.mmo_lesson_master_ore.flavor"
+  },
+  "Listing": { "Icon": "Ore_Adamantite" },
+  "Boards": [ { "Board": "Mmo_Mastery_Lessons", "Difficulty": "Mastery_Master", "Weight": 1 } ],
+  "Objectives": {
+    "mine_ore": { "Kind": "BREAK_BLOCK", "Target": "Ore_", "MatchMode": "PREFIX", "Amount": 240, "TextKey": "objective.text.mastery_lesson.mine_ore" }
+  },
+  "Rewards": {
+    "Claim": [
+      { "Kind": "Lootable", "Params": { "Lootable": "Mmo_Mastery_Lesson_Pay" } },
+      { "Kind": "Reputation", "Params": { "Reputation": "Mmo_Mastery_Trainer", "Amount": 500 } },
+      { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": 1 } }
+    ]
+  }
+}

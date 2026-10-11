@@ -1,22 +1,30 @@
 {
   "$Comment": [
-    "The Mastery Trainer's conversation: a short menu with three choices - see the quests they",
-    "offer (the shared quest list, opened AT the trainer so their own quests can be accepted and",
-    "handed in there), open the mastery menu, or leave.",
+    "The Mastery Trainer's conversation. The trainer never contracts: I will, does not, let us.",
     "",
-    "Start.First holds the introduction, the one beat that outranks anything about quests: while the",
-    "player is carrying the quest that sent them here, pressing F opens a line written for a first",
-    "meeting instead of the standing menu. Its option carries the MarkTalked beat, which is what",
-    "credits a talk step - pressing F alone credits nothing - and then drops into the same menu",
-    "everybody else gets. Once the quest is done the line retires itself and the menu leads again.",
+    "HOW A SCREEN IS PICKED. Start is walked in a fixed order: First (top to bottom), then a quest that",
+    "is READY to hand in, then one the trainer can OFFER, then one that is ACTIVE, then Fallback.",
     "",
-    "Start.Quests routes a finished quest ahead of the menu: a player returning with a completed",
-    "mastery quest is greeted with its own line first, via the shared ready_generic screen, exactly",
-    "the way the Adventurer's Guide handles theirs. A quest row points at a screen rather than a bare",
-    "true so pressing F always shows a line before routing anywhere; ready_generic is the one every",
-    "quest here shares, since none of them need a dedicated line of their own. The four ids listed",
-    "are this pack's own mastery quests; add a row here when you add a quest that names the trainer",
-    "as its giver, so its hand-in gets the same treatment.",
+    "First holds three beats. The introduction comes first: while the player is carrying the quest that",
+    "sent them here (meet_the_mastery_trainer), pressing F opens a line written for a first meeting. Its",
+    "option carries the MarkTalked beat, which is what credits a talk step (pressing F alone credits",
+    "nothing), then drops into the menu. Then the tithe line, for a player carrying What You Already Paid",
+    "(mastery_tithe_credit): its option carries MarkTalked too, which finishes that quest, and opens the",
+    "trainer's quest list on it so the player collects the standing there. Then the lessons line, once a",
+    "day (Once with Period Daily, turning over at midnight UTC, OnceId lessons_fresh) for a player who has",
+    "collected the meeting or What You Already Paid, skipped while they have something to hand in. It pays nothing: talking earns",
+    "no standing with the trainer.",
+    "",
+    "Quests routes a finished quest ahead of the menu: a player returning with a completed mastery quest",
+    "is greeted by ready_generic, the one hand-in line every quest here shares, whose menu opens the quest",
+    "list. A quest row points at a screen rather than a bare true so pressing F always shows a line first.",
+    "Add a row here when you add a quest that is collected at the trainer.",
+    "",
+    "THE MENU. Every steady screen pulls in the trainer_menu group: the quest list, the lessons board",
+    "(shown once the meeting or What You Already Paid is collected, the same two quests that open the",
+    "board; the board itself, Mmo_Mastery_Lessons, opens only in the",
+    "Forgotten Temple), How am I doing? (the trainer's Reputation page, shown once the player has any",
+    "standing with the trainer), the mastery menu, and farewell.",
     "",
     "The Header line mirrors the player's tracked objective at the top of the conversation.",
     "To reword any line, override the dialogue.mmo_mastery_trainer.* keys in a language file."
@@ -36,10 +44,40 @@
             "State": "ACTIVE"
           }
         ]
+      },
+      {
+        "Node": "tithe_credit",
+        "When": [
+          {
+            "Type": "QuestState",
+            "Quest": "mastery_tithe_credit",
+            "State": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "Node": "lessons_fresh",
+        "When": [
+          {
+            "Type": "AnyOf",
+            "Any": [
+              { "Type": "QuestState", "Quest": "meet_the_mastery_trainer", "State": "COMPLETED" },
+              { "Type": "QuestState", "Quest": "mastery_tithe_credit", "State": "COMPLETED" }
+            ]
+          },
+          {
+            "Type": "Not",
+            "Of": [ { "Type": "HasReadyToTurnIn" } ]
+          }
+        ],
+        "Once": { "Period": "Daily" },
+        "OnceId": "lessons_fresh"
       }
     ],
     "Quests": {
+      "mastery_tithe_credit": { "Ready": "ready_generic" },
       "mastery_tribute": { "Ready": "ready_generic" },
+      "mastery_lesson_week": { "Ready": "ready_generic" },
       "pack_first_milestone": { "Ready": "ready_generic" },
       "pack_essence_collector": { "Ready": "ready_generic" },
       "pack_essence_devotee": { "Ready": "ready_generic" },
@@ -60,41 +98,69 @@
         }
       ]
     },
-    "menu": {
-      "TextKey": "dialogue.mmo_mastery_trainer.menu.text",
+    "tithe_credit": {
+      "TextKey": "dialogue.mmo_mastery_trainer.tithe_credit.text",
       "Options": [
         {
-          "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.quests",
-          "Style": "neutral",
-          "Open": "Quests"
-        },
-        {
-          "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.mastery",
-          "Open": "Mmo_Mastery"
-        },
-        {
-          "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.farewell",
-          "Close": true
+          "LabelKey": "dialogue.mmo_mastery_trainer.tithe_credit.opt.collect",
+          "Style": "turnin",
+          "Actions": [
+            { "Type": "MarkTalked", "Target": "@self" }
+          ],
+          "Open": { "Type": "Quests", "Highlight": "mastery_tithe_credit" }
         }
       ]
     },
+    "lessons_fresh": {
+      "TextKey": "dialogue.mmo_mastery_trainer.lessons_fresh.text",
+      "IncludeOptions": [ "trainer_menu" ]
+    },
+    "menu": {
+      "TextKey": "dialogue.mmo_mastery_trainer.menu.text",
+      "IncludeOptions": [ "trainer_menu" ]
+    },
     "ready_generic": {
       "TextKey": "dialogue.mmo_mastery_trainer.ready_generic.text",
-      "Options": [
-        {
-          "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.quests",
-          "Style": "neutral",
-          "Open": "Quests"
-        },
-        {
-          "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.mastery",
-          "Open": "Mmo_Mastery"
-        },
-        {
-          "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.farewell",
-          "Close": true
-        }
-      ]
+      "IncludeOptions": [ "trainer_menu" ]
     }
+  },
+  "Fragments": {
+    "trainer_menu": [
+      {
+        "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.quests",
+        "Style": "neutral",
+        "Open": "Quests"
+      },
+      {
+        "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.lessons",
+        "Style": "neutral",
+        "Conditions": [
+          {
+            "Type": "AnyOf",
+            "Any": [
+              { "Type": "QuestState", "Quest": "meet_the_mastery_trainer", "State": "COMPLETED" },
+              { "Type": "QuestState", "Quest": "mastery_tithe_credit", "State": "COMPLETED" }
+            ]
+          }
+        ],
+        "Open": { "Type": "Board", "Board": "Mmo_Mastery_Lessons" }
+      },
+      {
+        "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.standing",
+        "Style": "neutral",
+        "Conditions": [
+          { "Type": "Factor", "Factor": "ziggfreedcommon:reputation", "Param": "Mmo_Mastery_Trainer", "Min": 1 }
+        ],
+        "Open": { "Type": "Reputation", "Reputation": "Mmo_Mastery_Trainer" }
+      },
+      {
+        "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.mastery",
+        "Open": "Mmo_Mastery"
+      },
+      {
+        "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.farewell",
+        "Close": true
+      }
+    ]
   }
 }

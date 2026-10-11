@@ -11,10 +11,10 @@
     "keeps it out of the log entirely on a server with mastery switched off, where the trainer never",
     "appears at all.",
     "",
-    "The whole payout is ONE Lootable reward, which is what makes the table worth reading rather than",
-    "the quest: Lootables/Mmo_Mastery_Offering.json holds four independent rolls, so a good day pays",
-    "several at once. Retune the odds there; nothing in this file needs to change to make the daily",
-    "more or less generous. The mastery-point roll is the one that matters for balance.",
+    "The payout is ONE Lootable reward plus standing with the trainer (the Reputation row), so the table",
+    "is what is worth reading: Lootables/Mmo_Mastery_Offering.json holds four independent rolls, so a",
+    "good day pays several at once. Retune the odds there; nothing in this file needs to change to make",
+    "the daily more or less generous. The mastery-point roll is the one that matters for balance.",
     "",
     "The kill step names no target at all, which is what makes it mean ANY creature: an empty target",
     "matches everything, so a player pays this part of the tribute with whatever the day put in front",
@@ -79,7 +79,8 @@
   },
   "Rewards": {
     "Claim": [
-      { "Kind": "Lootable", "Params": { "Lootable": "Mmo_Mastery_Offering" } }
+      { "Kind": "Lootable", "Params": { "Lootable": "Mmo_Mastery_Offering" } },
+      { "Kind": "Reputation", "Params": { "Reputation": "Mmo_Mastery_Trainer", "Amount": 250 } }
     ]
   }
 }

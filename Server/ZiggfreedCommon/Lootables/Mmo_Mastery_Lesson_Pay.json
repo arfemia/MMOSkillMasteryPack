@@ -1,0 +1,22 @@
+{
+  "$Comment": [
+    "What every lesson on the Mastery Trainer's board pays in essence: a handful of Essence of Life,",
+    "rolled between Count and CountMax on each collect. Expected marks it as the wage the player is owed",
+    "for the lesson, so a surface that tells the two apart shows it as ordinary pay, never a lucky find.",
+    "",
+    "Standing with the trainer and the Master's lessons' mastery point ride each lesson's own Rewards,",
+    "so the lesson card shows them. Retune the essence here and every lesson follows; a pack adds a roll",
+    "of its own with a file that names this table in ContributesTo."
+  ],
+  "Name": "Mmo_Mastery_Lesson_Pay",
+  "Rolls": [
+    {
+      "Expected": true,
+      "Grants": {
+        "Items": [
+          { "Item": "Ingredient_Life_Essence", "Count": 10, "CountMax": 40 }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$Comment": "A Hard lesson on the trainer's board, posted in the slot that opens at Adept (Revered): the Gathering lesson's logs, about three times over. It writes its own Rewards.Claim, the base's list with more standing, because a child's list replaces the base's whole. The mastery gate comes from Mmo_Lesson_Base.",
+  "Parent": "Mmo_Lesson_Base",
+  "Text": {
+    "TitleKey": "quest.mmo_lesson_hard_timber.title",
+    "FlavorKey": "quest.mmo_lesson_hard_timber.flavor"
+  },
+  "Listing": { "Icon": "Tool_Hatchet_Iron" },
+  "Boards": [ { "Board": "Mmo_Mastery_Lessons", "Difficulty": "Mastery_Hard", "Weight": 1 } ],
+  "Objectives": {
+    "fell_logs": { "Kind": "BREAK_BLOCK", "Target": "Wood", "MatchMode": "CONTAINS", "Amount": 120, "TextKey": "objective.text.mastery_lesson.chop_logs" }
+  },
+  "Rewards": {
+    "Claim": [
+      { "Kind": "Lootable", "Params": { "Lootable": "Mmo_Mastery_Lesson_Pay" } },
+      { "Kind": "Reputation", "Params": { "Reputation": "Mmo_Mastery_Trainer", "Amount": 500 } }
+    ]
+  }
+}

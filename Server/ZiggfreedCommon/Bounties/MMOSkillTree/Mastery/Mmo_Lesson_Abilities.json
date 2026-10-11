@@ -1,0 +1,13 @@
+{
+  "$Comment": "A Fighting lesson on the trainer's board: use abilities. The step names no ability, so every cast counts; name an ability id to narrow it. Pay and the mastery gate come from Mmo_Lesson_Base.",
+  "Parent": "Mmo_Lesson_Base",
+  "Text": {
+    "TitleKey": "quest.mmo_lesson_abilities.title",
+    "FlavorKey": "quest.mmo_lesson_abilities.flavor"
+  },
+  "Listing": { "Icon": "Weapon_Spellbook_Grimoire_Purple" },
+  "Boards": [ { "Board": "Mmo_Mastery_Lessons", "Difficulty": "Mastery_Fighting", "Weight": 1 } ],
+  "Objectives": {
+    "use_abilities": { "Kind": "ABILITY_CAST", "Amount": 25 }
+  }
+}

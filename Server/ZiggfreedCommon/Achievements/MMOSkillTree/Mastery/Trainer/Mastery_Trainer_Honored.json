@@ -1,0 +1,30 @@
+{
+  "$Comment": "Trusted Student: reach Honored with the Mastery Trainer. The second rung of the mastery_trainer_ranks ladder; Mastery_Trainer_Friendly.json explains how the seven rungs credit and pay. Its mastery points wait in the book until collected.",
+  "Text": {
+    "TitleKey": "achievement.mastery_trainer_honored.title",
+    "FlavorKey": "achievement.mastery_trainer_honored.desc"
+  },
+  "Listing": {
+    "Category": "mastery",
+    "SortOrder": 61,
+    "Icon": "Ingredient_Crystal_Purple",
+    "Chains": [ { "Id": "mastery_trainer_ranks", "Tier": 2 } ]
+  },
+  "Scoring": { "Points": 10 },
+  "Requires": {
+    "Factors": [ { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 } ]
+  },
+  "Criteria": {
+    "reach-rank": {
+      "Kind": "REPUTATION_RANK",
+      "Target": "Honored",
+      "MatchMode": "EXACT",
+      "Qualifier": "Mmo_Mastery_Trainer",
+      "Amount": 1,
+      "TextKey": "objective.mastery_trainer.honored"
+    }
+  },
+  "Rewards": {
+    "Claim": [ { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": 5 } } ]
+  }
+}

@@ -19,6 +19,68 @@ quest.pack_path_of_mastery.title = Many Trades
 quest.pack_path_of_mastery.flavor = One good skill is not enough for what I teach. Raise several of them a long way, then come back to me.
 quest.pack_mastery_tithe.title = Mastery Tithe
 quest.pack_mastery_tithe.flavor = The mastery codex takes a tithe of blood and timber. Put down a few creatures and chop a few logs.
+quest.mastery_tithe_credit.title = What You Already Paid
+quest.mastery_tithe_credit.flavor = I kept count of every tithe you sent me. Come and find me in the Forgotten Temple, and we will settle what all of it is worth now.
+quest.mastery_lesson_week.title = A Week of Lessons
+quest.mastery_lesson_week.flavor = Do my lessons through the week and come back to me once you have a handful done. A missed day or two will not cost you the week.
+
+# --- The Mastery Trainer's lessons (board contracts; quest.<id>.title / .flavor) ---
+quest.mmo_lesson_timber.title = Felling Practice
+quest.mmo_lesson_timber.flavor = A steady swing is the first thing I teach. Go out and fell trees until your arms know the work without asking.
+quest.mmo_lesson_ore.title = Seam Work
+quest.mmo_lesson_ore.flavor = Find a seam of ore and work it until the rock gives nothing more. A miner who stops at the easy stone learns nothing from it.
+quest.mmo_lesson_fishing.title = Rod and Line
+quest.mmo_lesson_fishing.flavor = Take a rod to the water and wait. Patience is a discipline too, and most people who come down here have none of it.
+quest.mmo_lesson_hunt.title = Hunting Drill
+quest.mmo_lesson_hunt.flavor = Go out past the temple steps and put down whatever comes at you. Any creature will do, as long as you come back on your own feet.
+quest.mmo_lesson_abilities.title = Ability Drills
+quest.mmo_lesson_abilities.flavor = Your abilities are skills like any other, and skills rust. Use them out in the world until they come without thinking.
+quest.mmo_lesson_crafting.title = Bench Practice
+quest.mmo_lesson_crafting.flavor = Make things. Anything at all, at any bench you like. Hands that only swing and dig forget how to build.
+quest.mmo_lesson_workshop.title = Workshop Hours
+quest.mmo_lesson_workshop.flavor = Put in a long stretch at the benches. Crafting is a skill like the rest, and I want to see it grow before you come back.
+quest.mmo_lesson_hard_timber.title = Heavy Felling
+quest.mmo_lesson_hard_timber.flavor = You know how to swing an axe by now. Clear a whole stand of trees this time, and keep going when your shoulders start to complain.
+quest.mmo_lesson_hard_hunt.title = The Long Hunt
+quest.mmo_lesson_hard_hunt.flavor = A longer hunt this time. Stay out until the creatures stop coming, then stay a while longer.
+quest.mmo_lesson_hard_study.title = Hard Study
+quest.mmo_lesson_hard_study.flavor = Train whatever skill you like, but train it hard. I will know from the look of you whether you did.
+quest.mmo_lesson_master_ore.title = Deep Seams
+quest.mmo_lesson_master_ore.flavor = Go down to the deepest seams you can reach and work them dry. A master does not leave good ore in the rock.
+quest.mmo_lesson_master_hunt.title = Master's Hunt
+quest.mmo_lesson_master_hunt.flavor = Hunt the way a master hunts, from first light until the light is gone. Whatever is out there, put it down and keep moving.
+quest.mmo_lesson_master_study.title = Master's Study
+quest.mmo_lesson_master_study.flavor = Pick any skill and push it further than you think it goes. A master's lesson should leave you tired, and a little proud.
+
+# --- Lesson step lines (a step's own TextKey; {0} = the amount) ---
+objective.text.mastery_lesson.chop_logs = Chop {0} logs
+objective.text.mastery_lesson.mine_ore = Mine {0} ore
+objective.text.mastery_lesson.week = Finish {0} of the Mastery Trainer's lessons
+
+# --- The lessons board (board.<id>.title / .desc, and its bands' badges) ---
+board.mmo_mastery_lessons.title = The Trainer's Lessons
+board.mmo_mastery_lessons.desc = Fresh lessons every morning, each one done out in the world. Collect what a lesson pays here at the board. The further you rise with me, the more lessons I post for you.
+board.mmo_mastery_lessons.grade.gathering = Gathering
+board.mmo_mastery_lessons.grade.fighting = Fighting
+board.mmo_mastery_lessons.grade.crafting = Crafting
+board.mmo_mastery_lessons.grade.hard = Hard
+board.mmo_mastery_lessons.grade.master = Master's
+
+# --- The Mastery Trainer's reputation (name, description, rank names, How to earn lines) ---
+reputation.mmo_mastery_trainer.name = The Mastery Trainer
+reputation.mmo_mastery_trainer.flavor = The trainer in the Forgotten Temple keeps count of every lesson you finish. Each rank you reach pays out in the Mastery section of your achievement book.
+reputation.mmo_mastery_trainer.rank.neutral = Newcomer
+reputation.mmo_mastery_trainer.rank.friendly = Student
+reputation.mmo_mastery_trainer.rank.honored = Trusted Student
+reputation.mmo_mastery_trainer.rank.revered = Adept
+reputation.mmo_mastery_trainer.rank.exalted = Master
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_1 = Master II
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_2 = Master III
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_3 = Grandmaster
+reputation.mmo_mastery_trainer.earn.lessons = Do the lessons on the Mastery Trainer's board in the Forgotten Temple.
+reputation.mmo_mastery_trainer.earn.due = Pay the trainer's daily due.
+reputation.mmo_mastery_trainer.earn.tasks = Finish the trainer's other tasks.
+reputation.mmo_mastery_trainer.earn.week = A week of lessons pays extra.
 
 # --- Token Shop offers shipped by this pack (explicit titleKey/descriptionKey -> these keys) ---
 shop.convert_mastery_point.title = Mastery Infusion
@@ -169,6 +231,34 @@ achievement.pack_essence_hoarder_100.desc = Pick up {0} Essence of Life.
 achievement.pack_essence_hoarder_10000.title = Essence Hoarder II
 achievement.pack_essence_hoarder_10000.desc = Pick up {0} Essence of Life.
 
+# --- The Mastery Trainer's rank ladder (achievement.<id>.title / .desc, each criterion's step line) ---
+achievement.mastery_trainer_friendly.title = Student
+achievement.mastery_trainer_friendly.desc = Reach Student with the Mastery Trainer.
+achievement.mastery_trainer_honored.title = Trusted Student
+achievement.mastery_trainer_honored.desc = Reach Trusted Student with the Mastery Trainer.
+achievement.mastery_trainer_revered.title = Adept
+achievement.mastery_trainer_revered.desc = Reach Adept with the Mastery Trainer.
+achievement.mastery_trainer_exalted.title = Master
+achievement.mastery_trainer_exalted.desc = Reach Master with the Mastery Trainer.
+achievement.mastery_trainer_tier_1.title = Master II
+achievement.mastery_trainer_tier_1.desc = Reach Master II with the Mastery Trainer.
+achievement.mastery_trainer_tier_2.title = Master III
+achievement.mastery_trainer_tier_2.desc = Reach Master III with the Mastery Trainer.
+achievement.mastery_trainer_tier_3.title = Grandmaster
+achievement.mastery_trainer_tier_3.desc = Reach Grandmaster with the Mastery Trainer.
+objective.mastery_trainer.friendly = Reach Student with the Mastery Trainer
+objective.mastery_trainer.honored = Reach Trusted Student with the Mastery Trainer
+objective.mastery_trainer.revered = Reach Adept with the Mastery Trainer
+objective.mastery_trainer.exalted = Reach Master with the Mastery Trainer
+objective.mastery_trainer.tier_1 = Reach Master II with the Mastery Trainer
+objective.mastery_trainer.tier_2 = Reach Master III with the Mastery Trainer
+objective.mastery_trainer.tier_3 = Reach Grandmaster with the Mastery Trainer
+
+# --- The Grandmaster title (title.<id>.name / .flavor / .display, {0} = the player's name) ---
+title.mmo_mastery_grandmaster.name = Grandmaster
+title.mmo_mastery_grandmaster.flavor = Reached Grandmaster with the Mastery Trainer.
+title.mmo_mastery_grandmaster.display = {0}, Grandmaster
+
 # --- The per-skill mastery point ladder ({0} = the skill's name, {1} = the rung's level) ---
 achievement.mastery_points.title = {0} Level {1}
 achievement.mastery_points.desc = Reach {0} level {1}.
@@ -205,7 +295,12 @@ mastery.poison_t3_cap.title = Blightbloom
 dialogue.mmo_mastery_trainer.ready_generic.text = Back, and carrying something. Set it down and let us see it.
 dialogue.mmo_mastery_trainer.menu.text = The disciplines are here when you want them. What do you need?
 dialogue.mmo_mastery_trainer.menu.opt.quests = What tasks do you have for me?
+dialogue.mmo_mastery_trainer.menu.opt.lessons = Do you have lessons for me?
+dialogue.mmo_mastery_trainer.menu.opt.standing = How am I doing?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Show me my mastery.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Farewell.
+dialogue.mmo_mastery_trainer.lessons_fresh.text = My board has fresh lessons on it today. Every one of them is done out in the world.\nFinish one and come back here to collect what it pays.
+dialogue.mmo_mastery_trainer.tithe_credit.text = You sent me a tithe for a long while, and I kept count.\nI teach lessons now, and I pay as you rise. What you already gave counts.
+dialogue.mmo_mastery_trainer.tithe_credit.opt.collect = What does it count for?
 dialogue.mmo_mastery_trainer.first_words.text = So the guide sent you down after all.\nA skill does not stop where its levels do. What comes after is what I teach. I call it mastery.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = The guide spoke of you.

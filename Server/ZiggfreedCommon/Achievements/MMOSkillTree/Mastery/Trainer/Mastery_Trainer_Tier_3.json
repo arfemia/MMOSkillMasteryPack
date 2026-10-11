@@ -1,0 +1,39 @@
+{
+  "$Comment": [
+    "Grandmaster: reach Mastery_Trainer_Tier_3, the highest of the Mastery Trainer's own ranks above",
+    "Exalted. The last rung of the mastery_trainer_ranks ladder; Mastery_Trainer_Friendly.json explains how",
+    "the seven rungs credit and pay.",
+    "",
+    "Its mastery points sit in Rewards.Claim and wait in the book until collected. It also pays the title",
+    "Mmo_Mastery_Grandmaster (Titles/MMOSkillTree/) through the Title reward kind in Rewards.Auto, on",
+    "unlock: a title is the one thing an achievement pays without waiting to be collected."
+  ],
+  "Text": {
+    "TitleKey": "achievement.mastery_trainer_tier_3.title",
+    "FlavorKey": "achievement.mastery_trainer_tier_3.desc"
+  },
+  "Listing": {
+    "Category": "mastery",
+    "SortOrder": 66,
+    "Icon": "Ingredient_Crystal_Purple",
+    "Chains": [ { "Id": "mastery_trainer_ranks", "Tier": 7 } ]
+  },
+  "Scoring": { "Points": 50 },
+  "Requires": {
+    "Factors": [ { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 } ]
+  },
+  "Criteria": {
+    "reach-rank": {
+      "Kind": "REPUTATION_RANK",
+      "Target": "Mastery_Trainer_Tier_3",
+      "MatchMode": "EXACT",
+      "Qualifier": "Mmo_Mastery_Trainer",
+      "Amount": 1,
+      "TextKey": "objective.mastery_trainer.tier_3"
+    }
+  },
+  "Rewards": {
+    "Auto": [ { "Kind": "Title", "Params": { "Title": "Mmo_Mastery_Grandmaster" } } ],
+    "Claim": [ { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": 25 } } ]
+  }
+}

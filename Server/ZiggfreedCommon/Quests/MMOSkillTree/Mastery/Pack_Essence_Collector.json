@@ -56,6 +56,13 @@
           "Skill": "WOODCUTTING",
           "Amount": 2000
         }
+      },
+      {
+        "Kind": "Reputation",
+        "Params": {
+          "Reputation": "Mmo_Mastery_Trainer",
+          "Amount": 500
+        }
       }
     ]
   }

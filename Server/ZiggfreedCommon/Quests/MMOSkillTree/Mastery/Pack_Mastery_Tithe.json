@@ -1,26 +1,23 @@
 {
   "$Comment": [
-    "The long-haul tithe: once a player is deep enough into the codex, blood and timber buy a",
-    "mastery point every six hours, forever.",
+    "Retired: this quest is never handed to anyone. The Mastery Trainer's lessons pay mastery points in",
+    "its place: the daily board Mmo_Mastery_Lessons raises standing with the trainer (the reputation",
+    "Mmo_Mastery_Trainer), each rank pays its points through an achievement in the book, and the",
+    "Master's lessons pay a point a day at the top. A fixed tithe coming round every six hours would",
+    "undercut that ladder, which is why it stays off.",
     "",
-    "It is the only repeating source of mastery points that asks for no essence at all, which is",
-    "what makes it worth holding on a character who has run the essence quests dry. Repeat.Cooldown",
-    "is a ROLLING six hours measured from the claim, not a calendar reset, so it comes round four",
-    "times in a day for somebody playing through and once for somebody who logs on each evening.",
-    "Widen or narrow it by editing the Hours.",
+    "AutoAccept false is what stops it arming for anyone, and Listing.Hidden keeps it off open lists.",
+    "Repeat.MaxCompletions 1 makes it done for good once a player has collected it, so somebody who paid",
+    "it before never finds it offered again in their Objective Book, where a quest they once started",
+    "would otherwise come back each time its six hours ran out.",
     "",
-    "AutoAccept puts it in the log the moment a player qualifies, so nobody has to know it exists.",
-    "The Requires block is what holds it back until then: 500 total levels across every skill, and",
-    "the 300-point hoarder achievement, on top of mastery being switched on at all. Those two are",
-    "deliberately steep, since a point every six hours compounds; drop either one to open it",
-    "earlier.",
+    "The steps and the reward are left whole, so a player who is carrying it can still finish it and",
+    "collect its point, and its completion record keeps answering: What You Already Paid",
+    "(Mastery_Tithe_Credit.json) reads that record through ziggfreedcommon:quest_completions to give",
+    "everyone who ever paid it a head start with the trainer. The Requires block (500 total levels and",
+    "the 300-point hoarder achievement) gates nothing, since the quest never arms.",
     "",
-    "Neither step names a target, which is what makes them mean ANY creature and ANY wood: the",
-    "tithe is paid with whatever the evening put in front of the player rather than by hunting one",
-    "species or one tree. Name a Target on either to narrow it.",
-    "",
-    "The reward is one mastery point, paid on collection rather than the instant the last log",
-    "falls, so the player chooses when to bank it."
+    "Keep the file and its id: a player's progress on it is filed under pack_mastery_tithe."
   ],
   "Name": "Pack_Mastery_Tithe",
   "Text": {
@@ -31,15 +28,17 @@
     "Icon": "Ingredient_Crystal_Purple",
     "Category": "main",
     "SortOrder": 42,
-    "Tags": ["Mastery"]
+    "Tags": ["Mastery"],
+    "Hidden": true
   },
   "Flow": {
-    "AutoAccept": true,
+    "AutoAccept": false,
     "AutoTrack": true
   },
   "Repeat": {
     "Cooldown": { "Hours": 6 },
-    "CooldownFrom": "Complete"
+    "CooldownFrom": "Complete",
+    "MaxCompletions": 1
   },
   "Requires": {
     "Factors": [

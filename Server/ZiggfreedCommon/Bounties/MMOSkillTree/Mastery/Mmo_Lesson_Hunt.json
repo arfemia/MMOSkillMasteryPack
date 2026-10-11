@@ -1,0 +1,13 @@
+{
+  "$Comment": "A Fighting lesson on the trainer's board: put down creatures out in the world. The step names no target, so any creature counts; name one to narrow it. Nothing in the Forgotten Temple can be fought, so the work always happens outside it. Pay and the mastery gate come from Mmo_Lesson_Base.",
+  "Parent": "Mmo_Lesson_Base",
+  "Text": {
+    "TitleKey": "quest.mmo_lesson_hunt.title",
+    "FlavorKey": "quest.mmo_lesson_hunt.flavor"
+  },
+  "Listing": { "Icon": "Weapon_Sword_Crude" },
+  "Boards": [ { "Board": "Mmo_Mastery_Lessons", "Difficulty": "Mastery_Fighting", "Weight": 1 } ],
+  "Objectives": {
+    "put_down_creatures": { "Kind": "KILL_ENTITY", "Amount": 25 }
+  }
+}
