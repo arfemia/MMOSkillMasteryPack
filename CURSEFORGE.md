@@ -50,7 +50,7 @@ Standing climbs from Newcomer to Grandmaster, and each rank from Student up pays
 - Master II (30,000) pays 15 points and Master III (40,000) pays 20.
 - Grandmaster (50,000): 25 points, the Grandmaster title and a second Master's lesson.
 
-A rank's points wait in the Mastery section of your achievement book until you collect them. Ask "How am I doing?" to see your rank and what the next one opens. Doing every lesson each day, you reach Master in a little over two weeks and Grandmaster in about a month.
+A rank's points wait in the Mastery section of your achievement book until you collect them. Ask "How am I doing?" to see your rank and what the next one opens. Doing every lesson and The Trainer's Due each day, you reach Master in a little over two weeks and Grandmaster in about a month.
 
 Paid the old Mastery Tithe? It's retired, and What You Already Paid shows up in your log: see the trainer and you start at Trusted Student.
 
