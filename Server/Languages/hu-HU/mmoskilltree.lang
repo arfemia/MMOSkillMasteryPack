@@ -19,6 +19,68 @@ quest.pack_path_of_mastery.title = Sok Szakma
 quest.pack_path_of_mastery.flavor = Egyetlen jó képesség nem elég ahhoz, amit tanítok. Vigyél fel többet is jó magasra, aztán gyere vissza hozzám.
 quest.pack_mastery_tithe.title = Mastery Tized
 quest.pack_mastery_tithe.flavor = A mastery kódex vérből és fából szedi a tizedet. Teríts le néhány teremtményt, és vágj ki néhány rönköt.
+quest.mastery_tithe_credit.title = Amit Már Kifizettél
+quest.mastery_tithe_credit.flavor = Számon tartottam minden tizedet, amit küldtél. Keress meg a Feledett Templomban, és elszámolunk azzal, hogy mindez most mennyit ér.
+quest.mastery_lesson_week.title = Egy Hét Lecke
+quest.mastery_lesson_week.flavor = Végezd a leckéimet a héten, és gyere vissza hozzám, ha van egy maroknyi kész. Egy-két kihagyott nap nem viszi el a hetedet.
+
+# --- Az edző leckéi (tábla-szerződések; quest.<id>.title / .flavor) ---
+quest.mmo_lesson_timber.title = Fakitermelési Gyakorlat
+quest.mmo_lesson_timber.flavor = Az egyenletes suhintás az első, amit tanítok. Menj ki, és döntsd a fákat, amíg a karod kérdezés nélkül is tudja a dolgát.
+quest.mmo_lesson_ore.title = Ércfejtés
+quest.mmo_lesson_ore.flavor = Keress egy ércsávot, és fejtsd, amíg a szikla nem ad többet. Aki megáll a könnyű kőnél, semmit sem tanul belőle.
+quest.mmo_lesson_fishing.title = Bot és Zsinór
+quest.mmo_lesson_fishing.flavor = Vidd a botot a vízhez, és várj. A türelem is fegyelem, és a legtöbben, akik lejönnek ide, egy szemernyi sincs belőle.
+quest.mmo_lesson_hunt.title = Vadászgyakorlat
+quest.mmo_lesson_hunt.flavor = Menj ki a templom lépcsőin túlra, és teríts le mindent, ami rád tör. Bármelyik teremtmény megteszi, ha a saját lábadon térsz vissza.
+quest.mmo_lesson_abilities.title = Képességgyakorlat
+quest.mmo_lesson_abilities.flavor = A képességeid is olyan készségek, mint a többi, és a készségek berozsdásodnak. Használd őket odakint, amíg gondolkodás nélkül mennek.
+quest.mmo_lesson_crafting.title = Műhelygyakorlat
+quest.mmo_lesson_crafting.flavor = Készíts dolgokat. Bármit, bármelyik munkapadnál. A kéz, amely csak suhint és ás, elfelejti, hogyan kell építeni.
+quest.mmo_lesson_workshop.title = Műhelyórák
+quest.mmo_lesson_workshop.flavor = Tölts hosszú időt a munkapadoknál. A barkácsolás is olyan készség, mint a többi, és látni akarom, hogy nő, mielőtt visszajössz.
+quest.mmo_lesson_hard_timber.title = Nehéz Fadöntés
+quest.mmo_lesson_hard_timber.flavor = Mostanra tudod, hogyan kell fejszét lendíteni. Most vágj ki egy egész facsoportot, és ne állj meg, amikor a vállad panaszkodni kezd.
+quest.mmo_lesson_hard_hunt.title = A Hosszú Vadászat
+quest.mmo_lesson_hard_hunt.flavor = Ezúttal hosszabb vadászat jön. Maradj kint, amíg a teremtmények el nem fogynak, aztán maradj még egy kicsit.
+quest.mmo_lesson_hard_study.title = Kemény Tanulás
+quest.mmo_lesson_hard_study.flavor = Képezz bármilyen készséget, de keményen. Rajtad meglátom, megtetted-e.
+quest.mmo_lesson_master_ore.title = Mély Ércsávok
+quest.mmo_lesson_master_ore.flavor = Menj le a legmélyebb ércsávokig, amelyeket elérsz, és fejtsd ki őket. A mester nem hagy jó ércet a sziklában.
+quest.mmo_lesson_master_hunt.title = A Mester Vadászata
+quest.mmo_lesson_master_hunt.flavor = Vadássz úgy, ahogy a mester vadászik, az első fénytől az utolsóig. Bármi van odakint, teríts le, és menj tovább.
+quest.mmo_lesson_master_study.title = A Mester Tanulása
+quest.mmo_lesson_master_study.flavor = Válassz egy készséget, és told tovább, mint gondolnád, hogy bírja. A mester leckéje után fáradtnak kell lenned, és egy kicsit büszkének.
+
+# --- A leckék lépéssorai (a lépés saját TextKey-e; {0} = a mennyiség) ---
+objective.text.mastery_lesson.chop_logs = Vágj ki {0} rönköt
+objective.text.mastery_lesson.mine_ore = Bányássz {0} ércet
+objective.text.mastery_lesson.week = Végezz el {0} leckét a Mastery Edző leckéiből
+
+# --- A leckék táblája (board.<id>.title / .desc, és a sávok jelvényei) ---
+board.mmo_mastery_lessons.title = Az Edző Leckéi
+board.mmo_mastery_lessons.desc = Minden reggel friss leckék, mindegyiket odakint, a világban kell elvégezni. A jutalmat itt, a táblánál veheted át. Minél feljebb jutsz nálam, annál több leckét teszek ki neked.
+board.mmo_mastery_lessons.grade.gathering = Gyűjtés
+board.mmo_mastery_lessons.grade.fighting = Harc
+board.mmo_mastery_lessons.grade.crafting = Barkácsolás
+board.mmo_mastery_lessons.grade.hard = Nehéz
+board.mmo_mastery_lessons.grade.master = Mester
+
+# --- A Mastery Edző hírneve (név, leírás, rangnevek, Hogyan szerezhető sorok) ---
+reputation.mmo_mastery_trainer.name = A Mastery Edző
+reputation.mmo_mastery_trainer.flavor = A Feledett Templom edzője számon tartja minden leckédet, amit elvégzel. Minden elért rang jutalma a teljesítménykönyved Mastery részében fizetődik ki.
+reputation.mmo_mastery_trainer.rank.neutral = Újonc
+reputation.mmo_mastery_trainer.rank.friendly = Tanítvány
+reputation.mmo_mastery_trainer.rank.honored = Megbízható Tanítvány
+reputation.mmo_mastery_trainer.rank.revered = Adeptus
+reputation.mmo_mastery_trainer.rank.exalted = Mester
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_1 = Mester II
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_2 = Mester III
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_3 = Nagymester
+reputation.mmo_mastery_trainer.earn.lessons = Végezd el a Mastery Edző tábláján lévő leckéket a Feledett Templomban.
+reputation.mmo_mastery_trainer.earn.due = Fizesd ki az edző napi járandóságát.
+reputation.mmo_mastery_trainer.earn.tasks = Teljesítsd az edző többi feladatát.
+reputation.mmo_mastery_trainer.earn.week = Egy hét lecke többet fizet.
 
 # --- A pack által szállított Token Shop ajánlatok (explicit titleKey/descriptionKey -> ezek a kulcsok) ---
 shop.convert_mastery_point.title = Mastery Infúzió
@@ -71,6 +133,34 @@ achievement.pack_essence_hoarder_100.title = Esszencia Gyűjtögető I
 achievement.pack_essence_hoarder_100.desc = Szedj fel {0} Életesszenciát.
 achievement.pack_essence_hoarder_10000.title = Esszencia Gyűjtögető II
 achievement.pack_essence_hoarder_10000.desc = Szedj fel {0} Életesszenciát.
+
+# --- Az edző rangsora (achievement.<id>.title / .desc, minden feltétel lépéssora) ---
+achievement.mastery_trainer_friendly.title = Tanítvány
+achievement.mastery_trainer_friendly.desc = Érd el a Tanítvány rangot a Mastery Edzőnél.
+achievement.mastery_trainer_honored.title = Megbízható Tanítvány
+achievement.mastery_trainer_honored.desc = Érd el a Megbízható Tanítvány rangot a Mastery Edzőnél.
+achievement.mastery_trainer_revered.title = Adeptus
+achievement.mastery_trainer_revered.desc = Érd el az Adeptus rangot a Mastery Edzőnél.
+achievement.mastery_trainer_exalted.title = Mester
+achievement.mastery_trainer_exalted.desc = Érd el a Mester rangot a Mastery Edzőnél.
+achievement.mastery_trainer_tier_1.title = Mester II
+achievement.mastery_trainer_tier_1.desc = Érd el a Mester II rangot a Mastery Edzőnél.
+achievement.mastery_trainer_tier_2.title = Mester III
+achievement.mastery_trainer_tier_2.desc = Érd el a Mester III rangot a Mastery Edzőnél.
+achievement.mastery_trainer_tier_3.title = Nagymester
+achievement.mastery_trainer_tier_3.desc = Érd el a Nagymester rangot a Mastery Edzőnél.
+objective.mastery_trainer.friendly = Érd el a Tanítvány rangot a Mastery Edzőnél
+objective.mastery_trainer.honored = Érd el a Megbízható Tanítvány rangot a Mastery Edzőnél
+objective.mastery_trainer.revered = Érd el az Adeptus rangot a Mastery Edzőnél
+objective.mastery_trainer.exalted = Érd el a Mester rangot a Mastery Edzőnél
+objective.mastery_trainer.tier_1 = Érd el a Mester II rangot a Mastery Edzőnél
+objective.mastery_trainer.tier_2 = Érd el a Mester III rangot a Mastery Edzőnél
+objective.mastery_trainer.tier_3 = Érd el a Nagymester rangot a Mastery Edzőnél
+
+# --- A Nagymester cím (title.<id>.name / .flavor / .display, {0} = a játékos neve) ---
+title.mmo_mastery_grandmaster.name = Nagymester
+title.mmo_mastery_grandmaster.flavor = Nagymester rangot ért el a Mastery Edzőnél.
+title.mmo_mastery_grandmaster.display = {0}, Nagymester
 
 # --- Képességenkénti mastery pont létra ({0} = a képesség neve, {1} = a fokozat szintje) ---
 achievement.mastery_points.title = {0} {1}. szint
@@ -196,7 +286,12 @@ mastery.poison_t3_cap.title = Métely Virága
 dialogue.mmo_mastery_trainer.ready_generic.text = Visszajöttél, és hozol valamit. Tedd le, és lássuk.
 dialogue.mmo_mastery_trainer.menu.text = A régi tudományok itt vannak, amikor csak kellenek. Mire van szükséged?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Milyen feladataid vannak számomra?
+dialogue.mmo_mastery_trainer.menu.opt.lessons = Van számomra leckéd?
+dialogue.mmo_mastery_trainer.menu.opt.standing = Hogy állok?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Mutasd, hol tartok a mesterségben.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Ég veled.
+dialogue.mmo_mastery_trainer.lessons_fresh.text = A táblámon ma friss leckék vannak. Mindegyiket odakint, a világban kell elvégezni.\nVégezz el egyet, és gyere vissza értem, hogy átvedd a jutalmát.
+dialogue.mmo_mastery_trainer.tithe_credit.text = Hosszú ideig küldtél nekem tizedet, és számon tartottam.\nMost leckéket tanítok, és annyit fizetek, amennyit felemelkedsz. Amit eddig adtál, az is számít.
+dialogue.mmo_mastery_trainer.tithe_credit.opt.collect = Mennyit számít?
 dialogue.mmo_mastery_trainer.first_words.text = Szóval a kalauz mégis leküldött hozzám.\nEgy képesség nem ott ér véget, ahol a szintjei. Én azt tanítom, ami utána jön. Mesterségnek hívom.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = A kalauz beszélt rólad.

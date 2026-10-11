@@ -19,6 +19,68 @@ quest.pack_path_of_mastery.title = Muchos Oficios
 quest.pack_path_of_mastery.flavor = Una sola habilidad buena no basta para lo que enseño. Sube varias hasta bien arriba y luego vuelve conmigo.
 quest.pack_mastery_tithe.title = Diezmo de Maestría
 quest.pack_mastery_tithe.flavor = El códice de maestría cobra un diezmo de sangre y madera. Abate a unas cuantas criaturas y corta unos cuantos troncos.
+quest.mastery_tithe_credit.title = Lo Que Ya Pagaste
+quest.mastery_tithe_credit.flavor = Llevé la cuenta de cada diezmo que me enviaste. Búscame en el Templo Olvidado y saldaremos lo que vale todo eso ahora.
+quest.mastery_lesson_week.title = Una Semana de Lecciones
+quest.mastery_lesson_week.flavor = Haz mis lecciones durante la semana y vuelve conmigo cuando tengas unas cuantas hechas. Faltar un día o dos no te costará la semana.
+
+# --- Las lecciones del Entrenador de Maestría (contratos del tablón; quest.<id>.title / .flavor) ---
+quest.mmo_lesson_timber.title = Práctica de Tala
+quest.mmo_lesson_timber.flavor = Un golpe firme es lo primero que enseño. Sal y tala árboles hasta que tus brazos conozcan el oficio sin preguntar.
+quest.mmo_lesson_ore.title = Trabajo de Veta
+quest.mmo_lesson_ore.flavor = Busca una veta de mineral y trabájala hasta que la roca no dé más. Un minero que se queda en la piedra fácil no aprende nada de ella.
+quest.mmo_lesson_fishing.title = Caña y Sedal
+quest.mmo_lesson_fishing.flavor = Lleva una caña al agua y espera. La paciencia también es una disciplina, y casi nadie de los que bajan aquí la tiene.
+quest.mmo_lesson_hunt.title = Ejercicio de Caza
+quest.mmo_lesson_hunt.flavor = Sal más allá de los escalones del templo y abate lo que se te eche encima. Vale cualquier criatura, mientras vuelvas por tu propio pie.
+quest.mmo_lesson_abilities.title = Ejercicios de Habilidad
+quest.mmo_lesson_abilities.flavor = Tus habilidades son destrezas como cualquier otra, y las destrezas se oxidan. Úsalas por el mundo hasta que salgan sin pensar.
+quest.mmo_lesson_crafting.title = Práctica de Banco
+quest.mmo_lesson_crafting.flavor = Fabrica cosas. Lo que sea, en el banco que quieras. Las manos que solo golpean y cavan olvidan cómo construir.
+quest.mmo_lesson_workshop.title = Horas de Taller
+quest.mmo_lesson_workshop.flavor = Dedica un buen rato a los bancos de trabajo. La fabricación es una destreza como las demás, y quiero verla crecer antes de que vuelvas.
+quest.mmo_lesson_hard_timber.title = Tala Pesada
+quest.mmo_lesson_hard_timber.flavor = Ya sabes blandir un hacha. Esta vez despeja una arboleda entera, y sigue cuando los hombros empiecen a quejarse.
+quest.mmo_lesson_hard_hunt.title = La Caza Larga
+quest.mmo_lesson_hard_hunt.flavor = Una caza más larga esta vez. Quédate fuera hasta que las criaturas dejen de venir, y luego un rato más.
+quest.mmo_lesson_hard_study.title = Estudio Duro
+quest.mmo_lesson_hard_study.flavor = Entrena la habilidad que quieras, pero entrénala a fondo. Sabré por tu aspecto si lo hiciste.
+quest.mmo_lesson_master_ore.title = Vetas Profundas
+quest.mmo_lesson_master_ore.flavor = Baja a las vetas más profundas que alcances y agótalas. Un maestro no deja buen mineral en la roca.
+quest.mmo_lesson_master_hunt.title = Caza de Maestro
+quest.mmo_lesson_master_hunt.flavor = Caza como caza un maestro, desde el primer rayo de luz hasta que se acabe. Sea lo que sea lo que ande ahí fuera, abátelo y sigue moviéndote.
+quest.mmo_lesson_master_study.title = Estudio de Maestro
+quest.mmo_lesson_master_study.flavor = Elige cualquier habilidad y llévala más lejos de lo que crees que llega. Una lección de maestro debería dejarte cansado, y un poco orgulloso.
+
+# --- Líneas de paso de las lecciones (el TextKey de cada paso; {0} = la cantidad) ---
+objective.text.mastery_lesson.chop_logs = Tala {0} troncos
+objective.text.mastery_lesson.mine_ore = Extrae {0} minerales
+objective.text.mastery_lesson.week = Termina {0} de las lecciones del Entrenador de Maestría
+
+# --- El tablón de lecciones (board.<id>.title / .desc, y las insignias de sus bandas) ---
+board.mmo_mastery_lessons.title = Las Lecciones del Entrenador
+board.mmo_mastery_lessons.desc = Lecciones nuevas cada mañana, todas hechas por el mundo. Cobra aquí, en el tablón, lo que paga una lección. Cuanto más subas conmigo, más lecciones te publico.
+board.mmo_mastery_lessons.grade.gathering = Recolección
+board.mmo_mastery_lessons.grade.fighting = Combate
+board.mmo_mastery_lessons.grade.crafting = Fabricación
+board.mmo_mastery_lessons.grade.hard = Difícil
+board.mmo_mastery_lessons.grade.master = De Maestro
+
+# --- La reputación del Entrenador de Maestría (nombre, descripción, rangos, líneas de Cómo ganarla) ---
+reputation.mmo_mastery_trainer.name = El Entrenador de Maestría
+reputation.mmo_mastery_trainer.flavor = El entrenador del Templo Olvidado lleva la cuenta de cada lección que terminas. Cada rango que alcanzas paga en la sección de Maestría de tu libro de logros.
+reputation.mmo_mastery_trainer.rank.neutral = Recién Llegado
+reputation.mmo_mastery_trainer.rank.friendly = Alumno
+reputation.mmo_mastery_trainer.rank.honored = Alumno de Confianza
+reputation.mmo_mastery_trainer.rank.revered = Adepto
+reputation.mmo_mastery_trainer.rank.exalted = Maestro
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_1 = Maestro II
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_2 = Maestro III
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_3 = Gran Maestro
+reputation.mmo_mastery_trainer.earn.lessons = Haz las lecciones del tablón del Entrenador de Maestría en el Templo Olvidado.
+reputation.mmo_mastery_trainer.earn.due = Paga el tributo diario del entrenador.
+reputation.mmo_mastery_trainer.earn.tasks = Termina las demás tareas del entrenador.
+reputation.mmo_mastery_trainer.earn.week = Una semana de lecciones paga extra.
 
 # --- Ofertas de la Tienda de Tokens incluidas en este pack (titleKey/descriptionKey explícitos -> estas claves) ---
 shop.convert_mastery_point.title = Infusión de Maestría
@@ -72,6 +134,34 @@ achievement.pack_essence_hoarder_100.title = Acaparador de Esencia I
 achievement.pack_essence_hoarder_100.desc = Recoge {0} de Esencia de Vida.
 achievement.pack_essence_hoarder_10000.title = Acaparador de Esencia II
 achievement.pack_essence_hoarder_10000.desc = Recoge {0} de Esencia de Vida.
+
+# --- La escalera de rangos del Entrenador de Maestría (achievement.<id>.title / .desc, y la línea de paso de cada criterio) ---
+achievement.mastery_trainer_friendly.title = Alumno
+achievement.mastery_trainer_friendly.desc = Llega a Alumno con el Entrenador de Maestría.
+achievement.mastery_trainer_honored.title = Alumno de Confianza
+achievement.mastery_trainer_honored.desc = Llega a Alumno de Confianza con el Entrenador de Maestría.
+achievement.mastery_trainer_revered.title = Adepto
+achievement.mastery_trainer_revered.desc = Llega a Adepto con el Entrenador de Maestría.
+achievement.mastery_trainer_exalted.title = Maestro
+achievement.mastery_trainer_exalted.desc = Llega a Maestro con el Entrenador de Maestría.
+achievement.mastery_trainer_tier_1.title = Maestro II
+achievement.mastery_trainer_tier_1.desc = Llega a Maestro II con el Entrenador de Maestría.
+achievement.mastery_trainer_tier_2.title = Maestro III
+achievement.mastery_trainer_tier_2.desc = Llega a Maestro III con el Entrenador de Maestría.
+achievement.mastery_trainer_tier_3.title = Gran Maestro
+achievement.mastery_trainer_tier_3.desc = Llega a Gran Maestro con el Entrenador de Maestría.
+objective.mastery_trainer.friendly = Llega a Alumno con el Entrenador de Maestría
+objective.mastery_trainer.honored = Llega a Alumno de Confianza con el Entrenador de Maestría
+objective.mastery_trainer.revered = Llega a Adepto con el Entrenador de Maestría
+objective.mastery_trainer.exalted = Llega a Maestro con el Entrenador de Maestría
+objective.mastery_trainer.tier_1 = Llega a Maestro II con el Entrenador de Maestría
+objective.mastery_trainer.tier_2 = Llega a Maestro III con el Entrenador de Maestría
+objective.mastery_trainer.tier_3 = Llega a Gran Maestro con el Entrenador de Maestría
+
+# --- El título de Gran Maestro (title.<id>.name / .flavor / .display, {0} = el nombre del jugador) ---
+title.mmo_mastery_grandmaster.name = Gran Maestro
+title.mmo_mastery_grandmaster.flavor = Llegó a Gran Maestro con el Entrenador de Maestría.
+title.mmo_mastery_grandmaster.display = {0}, Gran Maestro
 
 # --- The per-skill mastery point ladder ({0} = the skill's name, {1} = the rung's level) ---
 achievement.mastery_points.title = {0} Nivel {1}
@@ -196,7 +286,12 @@ mastery.poison_t3_cap.title = Floración Maligna
 dialogue.mmo_mastery_trainer.ready_generic.text = De vuelta, y con algo en las manos. Déjalo aquí y veámoslo.
 dialogue.mmo_mastery_trainer.menu.text = Las disciplinas están aquí cuando las quieras. ¿Qué necesitas?
 dialogue.mmo_mastery_trainer.menu.opt.quests = ¿Qué tareas tienes para mí?
+dialogue.mmo_mastery_trainer.menu.opt.lessons = ¿Tienes lecciones para mí?
+dialogue.mmo_mastery_trainer.menu.opt.standing = ¿Cómo voy?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Muéstrame mi maestría.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Adiós.
+dialogue.mmo_mastery_trainer.lessons_fresh.text = Hoy mi tablón tiene lecciones nuevas. Todas se hacen por el mundo.\nTermina una y vuelve aquí a cobrar lo que paga.
+dialogue.mmo_mastery_trainer.tithe_credit.text = Me enviaste un diezmo durante mucho tiempo, y llevé la cuenta.\nAhora enseño lecciones, y pago según subes. Lo que ya diste cuenta.
+dialogue.mmo_mastery_trainer.tithe_credit.opt.collect = ¿Cuánto vale?
 dialogue.mmo_mastery_trainer.first_words.text = Así que el guía te envió aquí abajo después de todo.\nUna habilidad no se detiene donde se acaban sus niveles. Lo que viene después es lo que enseño. Lo llamo maestría.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = El guía habló de ti.

@@ -19,6 +19,68 @@ quest.pack_path_of_mastery.title = Birçok Zanaat
 quest.pack_path_of_mastery.flavor = Öğrettiğim şey için tek bir iyi yetenek yetmez. Birkaçını epey yükselt, sonra bana dön.
 quest.pack_mastery_tithe.title = Ustalık Ödencesi
 quest.pack_mastery_tithe.flavor = Ustalık kodeksi kan ve keresteden ödence alır. Birkaç yaratık indir ve birkaç kütük kes.
+quest.mastery_tithe_credit.title = Zaten Ödediklerin
+quest.mastery_tithe_credit.flavor = Bana gönderdiğin her ödenceyi saydım. Unutulmuş Tapınak'ta beni bul, hepsinin şimdi ne ettiğini birlikte görelim.
+quest.mastery_lesson_week.title = Bir Haftalık Dersler
+quest.mastery_lesson_week.flavor = Hafta boyunca derslerimi yap ve bir avuç ders bitirince bana dön. Bir iki gün aksatman haftanı götürmez.
+
+# --- Ustalık Eğitmeninin dersleri (pano görevleri; quest.<id>.title / .flavor) ---
+quest.mmo_lesson_timber.title = Kesim Çalışması
+quest.mmo_lesson_timber.flavor = Öğrettiğim ilk şey düzenli bir vuruştur. Dışarı çık ve kollarının işi sormadan bildiği zamana dek ağaç kes.
+quest.mmo_lesson_ore.title = Damar İşi
+quest.mmo_lesson_ore.flavor = Bir cevher damarı bul ve kaya artık hiçbir şey vermeyene dek işle. Kolay taşta duran madenci ondan bir şey öğrenmez.
+quest.mmo_lesson_fishing.title = Olta ve Misina
+quest.mmo_lesson_fishing.flavor = Bir oltayla suya git ve bekle. Sabır da bir disiplindir; buraya inenlerin çoğunda hiç yoktur.
+quest.mmo_lesson_hunt.title = Av Talimi
+quest.mmo_lesson_hunt.flavor = Tapınak basamaklarının ötesine çık ve üzerine gelen her şeyi indir. Hangi yaratık olduğu fark etmez, yeter ki kendi ayaklarınla geri dön.
+quest.mmo_lesson_abilities.title = Yetenek Talimleri
+quest.mmo_lesson_abilities.flavor = Yeteneklerin de diğerleri gibi birer beceri ve beceri paslanır. Düşünmeden gelene dek onları dışarıda, dünyada kullan.
+quest.mmo_lesson_crafting.title = Tezgâh Çalışması
+quest.mmo_lesson_crafting.flavor = Bir şeyler yap. Herhangi bir şey, istediğin tezgâhta. Sadece savuran ve kazan eller nasıl inşa edileceğini unutur.
+quest.mmo_lesson_workshop.title = Atölye Saatleri
+quest.mmo_lesson_workshop.flavor = Tezgâhların başında uzun bir süre geçir. Üretim de diğerleri gibi bir yetenek ve bana dönmeden önce gelişmesini görmek istiyorum.
+quest.mmo_lesson_hard_timber.title = Ağır Kesim
+quest.mmo_lesson_hard_timber.flavor = Artık balta sallamayı biliyorsun. Bu sefer koca bir koruyu temizle ve omuzların sızlamaya başlayınca da sürdür.
+quest.mmo_lesson_hard_hunt.title = Uzun Av
+quest.mmo_lesson_hard_hunt.flavor = Bu sefer daha uzun bir av. Yaratıklar gelmeyi bırakana dek dışarıda kal, sonra biraz daha kal.
+quest.mmo_lesson_hard_study.title = Zorlu Çalışma
+quest.mmo_lesson_hard_study.flavor = Hangi yeteneği istersen çalıştır, ama sert çalıştır. Yapıp yapmadığını halinden anlarım.
+quest.mmo_lesson_master_ore.title = Derin Damarlar
+quest.mmo_lesson_master_ore.flavor = Ulaşabildiğin en derin damarlara in ve onları kurutana dek işle. Usta, kayada iyi cevher bırakmaz.
+quest.mmo_lesson_master_hunt.title = Ustanın Avı
+quest.mmo_lesson_master_hunt.flavor = Bir ustanın avladığı gibi avlan, ilk ışıktan ışık gidene dek. Dışarıda ne varsa indir ve yürümeye devam et.
+quest.mmo_lesson_master_study.title = Ustanın Çalışması
+quest.mmo_lesson_master_study.flavor = Bir yetenek seç ve onu olabileceğini düşündüğünden de öteye it. Ustanın dersi seni yorgun ve biraz da gururlu bırakmalı.
+
+# --- Ders adımı satırları (bir adımın kendi TextKey'i; {0} = miktar) ---
+objective.text.mastery_lesson.chop_logs = {0} kütük kes
+objective.text.mastery_lesson.mine_ore = {0} cevher kaz
+objective.text.mastery_lesson.week = Ustalık Eğitmeni'nin derslerinden {0} tanesini bitir
+
+# --- Ders panosu (board.<id>.title / .desc ve kademe rozetleri) ---
+board.mmo_mastery_lessons.title = Eğitmenin Dersleri
+board.mmo_mastery_lessons.desc = Her sabah yeni dersler, hepsi dışarıda, dünyada yapılır. Bir dersin ödediğini burada, panodan al. Benimle ne kadar yükselirsen sana o kadar çok ders asarım.
+board.mmo_mastery_lessons.grade.gathering = Toplama
+board.mmo_mastery_lessons.grade.fighting = Dövüş
+board.mmo_mastery_lessons.grade.crafting = Üretim
+board.mmo_mastery_lessons.grade.hard = Zor
+board.mmo_mastery_lessons.grade.master = Usta
+
+# --- Ustalık Eğitmeninin itibarı (ad, açıklama, rütbe adları, nasıl kazanılır satırları) ---
+reputation.mmo_mastery_trainer.name = Ustalık Eğitmeni
+reputation.mmo_mastery_trainer.flavor = Unutulmuş Tapınak'taki eğitmen bitirdiğin her dersin hesabını tutar. Ulaştığın her rütbe başarım defterinin Ustalık bölümünde ödenir.
+reputation.mmo_mastery_trainer.rank.neutral = Yeni Gelen
+reputation.mmo_mastery_trainer.rank.friendly = Öğrenci
+reputation.mmo_mastery_trainer.rank.honored = Güvenilir Öğrenci
+reputation.mmo_mastery_trainer.rank.revered = Ehil
+reputation.mmo_mastery_trainer.rank.exalted = Usta
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_1 = Usta II
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_2 = Usta III
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_3 = Ulu Usta
+reputation.mmo_mastery_trainer.earn.lessons = Unutulmuş Tapınak'taki Ustalık Eğitmeni'nin panosundaki dersleri yap.
+reputation.mmo_mastery_trainer.earn.due = Eğitmenin günlük hakkını öde.
+reputation.mmo_mastery_trainer.earn.tasks = Eğitmenin diğer görevlerini bitir.
+reputation.mmo_mastery_trainer.earn.week = Bir haftalık ders fazladan öder.
 
 # --- Bu paketin gönderdiği Jeton Mağazası teklifleri (açık titleKey/descriptionKey -> bu anahtarlar) ---
 shop.convert_mastery_point.title = Ustalık İnfüzyonu
@@ -72,6 +134,34 @@ achievement.pack_essence_hoarder_100.title = Öz Biriktiricisi I
 achievement.pack_essence_hoarder_100.desc = {0} Yaşam Özü topla.
 achievement.pack_essence_hoarder_10000.title = Öz Biriktiricisi II
 achievement.pack_essence_hoarder_10000.desc = {0} Yaşam Özü topla.
+
+# --- Ustalık Eğitmeninin rütbe merdiveni (achievement.<id>.title / .desc, her ölçütün adım satırı) ---
+achievement.mastery_trainer_friendly.title = Öğrenci
+achievement.mastery_trainer_friendly.desc = Ustalık Eğitmeni nezdinde Öğrenci ol.
+achievement.mastery_trainer_honored.title = Güvenilir Öğrenci
+achievement.mastery_trainer_honored.desc = Ustalık Eğitmeni nezdinde Güvenilir Öğrenci ol.
+achievement.mastery_trainer_revered.title = Ehil
+achievement.mastery_trainer_revered.desc = Ustalık Eğitmeni nezdinde Ehil ol.
+achievement.mastery_trainer_exalted.title = Usta
+achievement.mastery_trainer_exalted.desc = Ustalık Eğitmeni nezdinde Usta ol.
+achievement.mastery_trainer_tier_1.title = Usta II
+achievement.mastery_trainer_tier_1.desc = Ustalık Eğitmeni nezdinde Usta II ol.
+achievement.mastery_trainer_tier_2.title = Usta III
+achievement.mastery_trainer_tier_2.desc = Ustalık Eğitmeni nezdinde Usta III ol.
+achievement.mastery_trainer_tier_3.title = Ulu Usta
+achievement.mastery_trainer_tier_3.desc = Ustalık Eğitmeni nezdinde Ulu Usta ol.
+objective.mastery_trainer.friendly = Ustalık Eğitmeni nezdinde Öğrenci ol
+objective.mastery_trainer.honored = Ustalık Eğitmeni nezdinde Güvenilir Öğrenci ol
+objective.mastery_trainer.revered = Ustalık Eğitmeni nezdinde Ehil ol
+objective.mastery_trainer.exalted = Ustalık Eğitmeni nezdinde Usta ol
+objective.mastery_trainer.tier_1 = Ustalık Eğitmeni nezdinde Usta II ol
+objective.mastery_trainer.tier_2 = Ustalık Eğitmeni nezdinde Usta III ol
+objective.mastery_trainer.tier_3 = Ustalık Eğitmeni nezdinde Ulu Usta ol
+
+# --- Ulu Usta unvanı (title.<id>.name / .flavor / .display, {0} = oyuncunun adı) ---
+title.mmo_mastery_grandmaster.name = Ulu Usta
+title.mmo_mastery_grandmaster.flavor = Ustalık Eğitmeni nezdinde Ulu Usta oldu.
+title.mmo_mastery_grandmaster.display = {0}, Ulu Usta
 
 # --- The per-skill mastery point ladder ({0} = the skill's name, {1} = the rung's level) ---
 achievement.mastery_points.title = {0} Seviye {1}
@@ -196,7 +286,12 @@ mastery.poison_t3_cap.title = Zehir Çiçeği
 dialogue.mmo_mastery_trainer.ready_generic.text = Döndün ve bir şey taşıyorsun. Bırak onu, görelim.
 dialogue.mmo_mastery_trainer.menu.text = Disiplinler, istediğin zaman burada. Neye ihtiyacın var?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Benim için ne görevlerin var?
+dialogue.mmo_mastery_trainer.menu.opt.lessons = Bana dersin var mı?
+dialogue.mmo_mastery_trainer.menu.opt.standing = Nasıl gidiyorum?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Bana ustalığımı göster.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Elveda.
+dialogue.mmo_mastery_trainer.lessons_fresh.text = Panoda bugün yeni dersler var. Hepsi dışarıda, dünyada yapılır.\nBirini bitir ve ödediğini almak için buraya dön.
+dialogue.mmo_mastery_trainer.tithe_credit.text = Uzun süre bana ödence gönderdin ve ben hesabını tuttum.\nArtık ders veriyorum ve sen yükseldikçe ödüyorum. Daha önce verdiklerin sayılır.
+dialogue.mmo_mastery_trainer.tithe_credit.opt.collect = Neye sayılıyor?
 dialogue.mmo_mastery_trainer.first_words.text = Demek rehber seni yine de aşağı yolladı.\nBir yetenek, seviyelerinin bittiği yerde durmaz. Sonrasında geleni ben öğretirim. Ben buna ustalık derim.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = Rehber senden bahsetti.

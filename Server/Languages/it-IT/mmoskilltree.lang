@@ -19,6 +19,68 @@ quest.pack_path_of_mastery.title = Molti Mestieri
 quest.pack_path_of_mastery.flavor = Una sola buona abilità non basta per ciò che insegno. Portane diverse molto in alto, poi torna da me.
 quest.pack_mastery_tithe.title = Decima della Maestria
 quest.pack_mastery_tithe.flavor = Il codice della maestria esige una decima di sangue e legname. Abbatti qualche creatura e taglia qualche tronco.
+quest.mastery_tithe_credit.title = Ciò che hai già pagato
+quest.mastery_tithe_credit.flavor = Ho tenuto il conto di ogni decima che mi hai mandato. Vieni a trovarmi nel Tempio Dimenticato, e stabiliremo quanto vale tutto questo adesso.
+quest.mastery_lesson_week.title = Una settimana di lezioni
+quest.mastery_lesson_week.flavor = Fai le mie lezioni durante la settimana e torna da me quando ne avrai fatte una manciata. Un giorno o due saltati non ti costeranno la settimana.
+
+# --- Le lezioni dell'Allenatore di Maestria (contratti della bacheca; quest.<id>.title / .flavor) ---
+quest.mmo_lesson_timber.title = Pratica di abbattimento
+quest.mmo_lesson_timber.flavor = Un colpo sicuro è la prima cosa che insegno. Esci e abbatti alberi finché le tue braccia conoscono il lavoro senza chiedere.
+quest.mmo_lesson_ore.title = Lavoro di filone
+quest.mmo_lesson_ore.flavor = Trova un filone di minerale e lavoralo finché la roccia non dà più nulla. Un minatore che si ferma alla pietra facile non impara niente.
+quest.mmo_lesson_fishing.title = Canna e lenza
+quest.mmo_lesson_fishing.flavor = Porta una canna all'acqua e aspetta. Anche la pazienza è una disciplina, e la maggior parte di chi scende quaggiù non ne ha affatto.
+quest.mmo_lesson_hunt.title = Esercizio di caccia
+quest.mmo_lesson_hunt.flavor = Esci oltre i gradini del tempio e abbatti tutto ciò che ti viene incontro. Qualsiasi creatura va bene, purché torni sulle tue gambe.
+quest.mmo_lesson_abilities.title = Esercizi di abilità
+quest.mmo_lesson_abilities.flavor = Le tue abilità sono competenze come le altre, e le competenze si arrugginiscono. Usale là fuori finché non vengono senza pensarci.
+quest.mmo_lesson_crafting.title = Pratica al banco
+quest.mmo_lesson_crafting.flavor = Fabbrica cose. Qualsiasi cosa, a un banco qualsiasi. Mani che sanno solo colpire e scavare dimenticano come si costruisce.
+quest.mmo_lesson_workshop.title = Ore di bottega
+quest.mmo_lesson_workshop.flavor = Passa una lunga tirata ai banchi. Il mestiere è un'abilità come le altre, e voglio vederla crescere prima che tu torni.
+quest.mmo_lesson_hard_timber.title = Abbattimento pesante
+quest.mmo_lesson_hard_timber.flavor = Ormai sai maneggiare un'ascia. Stavolta ripulisci un'intera macchia di alberi, e vai avanti quando le spalle cominciano a lamentarsi.
+quest.mmo_lesson_hard_hunt.title = La lunga caccia
+quest.mmo_lesson_hard_hunt.flavor = Stavolta una caccia più lunga. Resta fuori finché le creature smettono di arrivare, poi resta ancora un po'.
+quest.mmo_lesson_hard_study.title = Studio duro
+quest.mmo_lesson_hard_study.flavor = Allena l'abilità che vuoi, ma allenala sul serio. Lo capirò da come ti presenti.
+quest.mmo_lesson_master_ore.title = Filoni profondi
+quest.mmo_lesson_master_ore.flavor = Scendi ai filoni più profondi che riesci a raggiungere e lavorali fino all'ultimo. Un maestro non lascia buon minerale nella roccia.
+quest.mmo_lesson_master_hunt.title = La caccia del maestro
+quest.mmo_lesson_master_hunt.flavor = Caccia come caccia un maestro, dalla prima luce finché la luce non svanisce. Qualunque cosa ci sia là fuori, abbattila e continua a muoverti.
+quest.mmo_lesson_master_study.title = Lo studio del maestro
+quest.mmo_lesson_master_study.flavor = Scegli un'abilità e spingila oltre quanto credi che vada. La lezione di un maestro dovrebbe lasciarti stanco, e un po' fiero.
+
+# --- Righe dei passi delle lezioni (il TextKey di ogni passo; {0} = la quantità) ---
+objective.text.mastery_lesson.chop_logs = Taglia {0} tronchi
+objective.text.mastery_lesson.mine_ore = Estrai {0} minerali
+objective.text.mastery_lesson.week = Finisci {0} lezioni dell'Allenatore di Maestria
+
+# --- La bacheca delle lezioni (board.<id>.title / .desc, e i distintivi delle sue fasce) ---
+board.mmo_mastery_lessons.title = Le lezioni dell'Allenatore
+board.mmo_mastery_lessons.desc = Lezioni nuove ogni mattina, ognuna da svolgere là fuori, nel mondo. Riscuoti qui alla bacheca quello che una lezione paga. Più sali con me, più lezioni espongo per te.
+board.mmo_mastery_lessons.grade.gathering = Raccolta
+board.mmo_mastery_lessons.grade.fighting = Combattimento
+board.mmo_mastery_lessons.grade.crafting = Fabbricazione
+board.mmo_mastery_lessons.grade.hard = Difficile
+board.mmo_mastery_lessons.grade.master = Da maestro
+
+# --- La reputazione dell'Allenatore di Maestria (nome, descrizione, nomi dei ranghi, righe Come guadagnarla) ---
+reputation.mmo_mastery_trainer.name = L'Allenatore di Maestria
+reputation.mmo_mastery_trainer.flavor = L'allenatore nel Tempio Dimenticato tiene il conto di ogni lezione che finisci. Ogni rango che raggiungi paga nella sezione Maestria del tuo libro degli obiettivi.
+reputation.mmo_mastery_trainer.rank.neutral = Novizio
+reputation.mmo_mastery_trainer.rank.friendly = Allievo
+reputation.mmo_mastery_trainer.rank.honored = Allievo Fidato
+reputation.mmo_mastery_trainer.rank.revered = Adepto
+reputation.mmo_mastery_trainer.rank.exalted = Maestro
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_1 = Maestro II
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_2 = Maestro III
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_3 = Gran Maestro
+reputation.mmo_mastery_trainer.earn.lessons = Svolgi le lezioni sulla bacheca dell'Allenatore di Maestria nel Tempio Dimenticato.
+reputation.mmo_mastery_trainer.earn.due = Paga il dovuto quotidiano dell'allenatore.
+reputation.mmo_mastery_trainer.earn.tasks = Finisci gli altri compiti dell'allenatore.
+reputation.mmo_mastery_trainer.earn.week = Una settimana di lezioni paga di più.
 
 # --- Offerte del Negozio Gettoni spedite da questo pack (titleKey/descriptionKey espliciti -> queste chiavi) ---
 shop.convert_mastery_point.title = Infusione di Maestria
@@ -71,6 +133,34 @@ achievement.pack_essence_hoarder_100.title = Accumulatore d'Essenza I
 achievement.pack_essence_hoarder_100.desc = Raccogli {0} unità di Essenza Vitale.
 achievement.pack_essence_hoarder_10000.title = Accumulatore d'Essenza II
 achievement.pack_essence_hoarder_10000.desc = Raccogli {0} unità di Essenza Vitale.
+
+# --- La scala dei ranghi dell'Allenatore di Maestria (achievement.<id>.title / .desc, la riga di ogni criterio) ---
+achievement.mastery_trainer_friendly.title = Allievo
+achievement.mastery_trainer_friendly.desc = Raggiungi il rango di Allievo con l'Allenatore di Maestria.
+achievement.mastery_trainer_honored.title = Allievo Fidato
+achievement.mastery_trainer_honored.desc = Raggiungi il rango di Allievo Fidato con l'Allenatore di Maestria.
+achievement.mastery_trainer_revered.title = Adepto
+achievement.mastery_trainer_revered.desc = Raggiungi il rango di Adepto con l'Allenatore di Maestria.
+achievement.mastery_trainer_exalted.title = Maestro
+achievement.mastery_trainer_exalted.desc = Raggiungi il rango di Maestro con l'Allenatore di Maestria.
+achievement.mastery_trainer_tier_1.title = Maestro II
+achievement.mastery_trainer_tier_1.desc = Raggiungi il rango di Maestro II con l'Allenatore di Maestria.
+achievement.mastery_trainer_tier_2.title = Maestro III
+achievement.mastery_trainer_tier_2.desc = Raggiungi il rango di Maestro III con l'Allenatore di Maestria.
+achievement.mastery_trainer_tier_3.title = Gran Maestro
+achievement.mastery_trainer_tier_3.desc = Raggiungi il rango di Gran Maestro con l'Allenatore di Maestria.
+objective.mastery_trainer.friendly = Raggiungi il rango di Allievo con l'Allenatore di Maestria
+objective.mastery_trainer.honored = Raggiungi il rango di Allievo Fidato con l'Allenatore di Maestria
+objective.mastery_trainer.revered = Raggiungi il rango di Adepto con l'Allenatore di Maestria
+objective.mastery_trainer.exalted = Raggiungi il rango di Maestro con l'Allenatore di Maestria
+objective.mastery_trainer.tier_1 = Raggiungi il rango di Maestro II con l'Allenatore di Maestria
+objective.mastery_trainer.tier_2 = Raggiungi il rango di Maestro III con l'Allenatore di Maestria
+objective.mastery_trainer.tier_3 = Raggiungi il rango di Gran Maestro con l'Allenatore di Maestria
+
+# --- Il titolo di Gran Maestro (title.<id>.name / .flavor / .display, {0} = il nome del giocatore) ---
+title.mmo_mastery_grandmaster.name = Gran Maestro
+title.mmo_mastery_grandmaster.flavor = Hai raggiunto il rango di Gran Maestro con l'Allenatore di Maestria.
+title.mmo_mastery_grandmaster.display = {0}, Gran Maestro
 
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Affilato
@@ -196,7 +286,12 @@ mastery.poison_t3_cap.title = Fioritura Corrotta
 dialogue.mmo_mastery_trainer.ready_generic.text = Di ritorno, e con qualcosa in mano. Posalo e diamo un'occhiata.
 dialogue.mmo_mastery_trainer.menu.text = Le discipline sono qui quando le vuoi. Di cosa hai bisogno?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Che compiti hai per me?
+dialogue.mmo_mastery_trainer.menu.opt.lessons = Hai delle lezioni per me?
+dialogue.mmo_mastery_trainer.menu.opt.standing = Come me la cavo?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Mostrami la mia maestria.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Addio.
+dialogue.mmo_mastery_trainer.lessons_fresh.text = Oggi la mia bacheca ha lezioni nuove. Ognuna si svolge là fuori, nel mondo.\nFinisci una e torna qui a riscuotere quello che paga.
+dialogue.mmo_mastery_trainer.tithe_credit.text = Per un bel pezzo mi hai mandato una decima, e io ho tenuto il conto.\nOra insegno lezioni, e pago man mano che sali. Quello che hai già dato conta.
+dialogue.mmo_mastery_trainer.tithe_credit.opt.collect = Quanto vale?
 dialogue.mmo_mastery_trainer.first_words.text = Quindi la guida ti ha mandato quaggiù, dopotutto.\nUn'abilità non si ferma dove si fermano i suoi livelli. Ciò che viene dopo è ciò che insegno. Io la chiamo maestria.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = La guida ha parlato di te.

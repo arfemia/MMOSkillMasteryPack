@@ -19,6 +19,68 @@ quest.pack_path_of_mastery.title = Allerlei Handwerk
 quest.pack_path_of_mastery.flavor = Eine gute Fähigkeit reicht für das, was ich lehre, nicht aus. Bring mehrere davon weit nach oben, dann komm zu mir zurück.
 quest.pack_mastery_tithe.title = Mastery-Tribut
 quest.pack_mastery_tithe.flavor = Der Mastery-Kodex verlangt einen Tribut aus Blut und Holz. Streck ein paar Kreaturen nieder und schlag ein paar Stämme.
+quest.mastery_tithe_credit.title = Was du schon bezahlt hast
+quest.mastery_tithe_credit.flavor = Ich habe jeden Tribut gezählt, den du mir geschickt hast. Such mich im Vergessenen Tempel auf, dann klären wir, was das alles jetzt wert ist.
+quest.mastery_lesson_week.title = Eine Woche Unterricht
+quest.mastery_lesson_week.flavor = Mach meinen Unterricht die Woche über und komm zu mir zurück, sobald du eine Handvoll geschafft hast. Ein oder zwei verpasste Tage kosten dich die Woche nicht.
+
+# --- Die Lektionen des Mastery-Trainers (Brett-Aufträge; quest.<id>.title / .flavor) ---
+quest.mmo_lesson_timber.title = Fäll-Übung
+quest.mmo_lesson_timber.flavor = Ein ruhiger Schwung ist das Erste, was ich lehre. Geh raus und fäll Bäume, bis deine Arme die Arbeit kennen, ohne zu fragen.
+quest.mmo_lesson_ore.title = Flözarbeit
+quest.mmo_lesson_ore.flavor = Such dir ein Erzflöz und bearbeite es, bis der Fels nichts mehr hergibt. Ein Bergmann, der beim leichten Stein aufhört, lernt daraus nichts.
+quest.mmo_lesson_fishing.title = Rute und Schnur
+quest.mmo_lesson_fishing.flavor = Nimm eine Angel mit ans Wasser und warte. Geduld ist auch eine Disziplin, und die meisten, die hier herunterkommen, haben keine.
+quest.mmo_lesson_hunt.title = Jagdübung
+quest.mmo_lesson_hunt.flavor = Geh hinaus, an den Tempelstufen vorbei, und streck nieder, was dir entgegenkommt. Jede Kreatur genügt, solange du auf eigenen Füßen zurückkommst.
+quest.mmo_lesson_abilities.title = Fähigkeitsübungen
+quest.mmo_lesson_abilities.flavor = Deine Fähigkeiten sind Fertigkeiten wie jede andere, und Fertigkeiten rosten. Setz sie draußen ein, bis sie dir ohne Nachdenken gelingen.
+quest.mmo_lesson_crafting.title = Werkbankübung
+quest.mmo_lesson_crafting.flavor = Stell etwas her. Irgendetwas, an jeder Werkbank, die du magst. Hände, die nur schwingen und graben, verlernen das Bauen.
+quest.mmo_lesson_workshop.title = Werkstattstunden
+quest.mmo_lesson_workshop.flavor = Verbring eine lange Zeit an den Werkbänken. Handwerk ist eine Fertigkeit wie die übrigen, und ich will sehen, wie sie wächst, bevor du zurückkommst.
+quest.mmo_lesson_hard_timber.title = Schweres Fällen
+quest.mmo_lesson_hard_timber.flavor = Du weißt inzwischen, wie man eine Axt schwingt. Räum diesmal ein ganzes Waldstück leer und mach weiter, wenn deine Schultern anfangen zu klagen.
+quest.mmo_lesson_hard_hunt.title = Die lange Jagd
+quest.mmo_lesson_hard_hunt.flavor = Diesmal eine längere Jagd. Bleib draußen, bis keine Kreaturen mehr kommen, und dann noch eine Weile.
+quest.mmo_lesson_hard_study.title = Harte Schule
+quest.mmo_lesson_hard_study.flavor = Trainier, welche Fähigkeit du willst, aber trainier sie hart. Ich sehe es dir an, ob du es getan hast.
+quest.mmo_lesson_master_ore.title = Tiefe Flöze
+quest.mmo_lesson_master_ore.flavor = Steig zu den tiefsten Flözen hinab, die du erreichst, und bau sie leer. Ein Meister lässt kein gutes Erz im Fels zurück.
+quest.mmo_lesson_master_hunt.title = Jagd des Meisters
+quest.mmo_lesson_master_hunt.flavor = Jag, wie ein Meister jagt, vom ersten Licht bis das Licht vergeht. Was auch da draußen ist, streck es nieder und geh weiter.
+quest.mmo_lesson_master_study.title = Studium des Meisters
+quest.mmo_lesson_master_study.flavor = Such dir eine Fähigkeit aus und treib sie weiter, als du für möglich hältst. Die Lektion eines Meisters sollte dich müde zurücklassen, und ein wenig stolz.
+
+# --- Schrittzeilen der Lektionen ({0} = die Menge) ---
+objective.text.mastery_lesson.chop_logs = Fälle {0} Stämme
+objective.text.mastery_lesson.mine_ore = Baue {0} Erz ab
+objective.text.mastery_lesson.week = Schließe {0} Lektionen des Mastery-Trainers ab
+
+# --- Das Lektionsbrett (board.<id>.title / .desc und die Abzeichen seiner Stufen) ---
+board.mmo_mastery_lessons.title = Die Lektionen des Trainers
+board.mmo_mastery_lessons.desc = Jeden Morgen frische Lektionen, jede draußen in der Welt zu erledigen. Hol dir hier am Brett ab, was eine Lektion einbringt. Je weiter du mit mir aufsteigst, desto mehr Lektionen hänge ich für dich aus.
+board.mmo_mastery_lessons.grade.gathering = Sammeln
+board.mmo_mastery_lessons.grade.fighting = Kämpfen
+board.mmo_mastery_lessons.grade.crafting = Handwerk
+board.mmo_mastery_lessons.grade.hard = Schwer
+board.mmo_mastery_lessons.grade.master = Meister
+
+# --- Der Ruf beim Mastery-Trainer (Name, Beschreibung, Rangnamen, Wie du ihn verdienst) ---
+reputation.mmo_mastery_trainer.name = Der Mastery-Trainer
+reputation.mmo_mastery_trainer.flavor = Der Trainer im Vergessenen Tempel zählt jede Lektion mit, die du abschließt. Jeder Rang, den du erreichst, zahlt im Bereich Mastery deines Erfolgsbuchs aus.
+reputation.mmo_mastery_trainer.rank.neutral = Neuling
+reputation.mmo_mastery_trainer.rank.friendly = Schüler
+reputation.mmo_mastery_trainer.rank.honored = Vertrauter Schüler
+reputation.mmo_mastery_trainer.rank.revered = Adept
+reputation.mmo_mastery_trainer.rank.exalted = Meister
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_1 = Meister II
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_2 = Meister III
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_3 = Großmeister
+reputation.mmo_mastery_trainer.earn.lessons = Erledige die Lektionen am Brett des Mastery-Trainers im Vergessenen Tempel.
+reputation.mmo_mastery_trainer.earn.due = Zahl den täglichen Zins an den Trainer.
+reputation.mmo_mastery_trainer.earn.tasks = Schließe die übrigen Aufgaben des Trainers ab.
+reputation.mmo_mastery_trainer.earn.week = Eine Woche Unterricht zahlt extra.
 
 # --- Token-Shop-Angebote, die dieser Pack ausliefert (explizite titleKey/descriptionKey -> diese Schlüssel) ---
 shop.convert_mastery_point.title = Mastery-Infusion
@@ -192,11 +254,44 @@ mastery.arcane_t3_cap.title = Resonanz
 mastery.void_t3_cap.title = Ereignishorizont
 mastery.poison_t3_cap.title = Giftblüte
 
+# --- Die Rangleiter des Mastery-Trainers (achievement.<id>.title / .desc, die Schrittzeile je Kriterium) ---
+achievement.mastery_trainer_friendly.title = Schüler
+achievement.mastery_trainer_friendly.desc = Erreiche beim Mastery-Trainer den Rang Schüler.
+achievement.mastery_trainer_honored.title = Vertrauter Schüler
+achievement.mastery_trainer_honored.desc = Erreiche beim Mastery-Trainer den Rang Vertrauter Schüler.
+achievement.mastery_trainer_revered.title = Adept
+achievement.mastery_trainer_revered.desc = Erreiche beim Mastery-Trainer den Rang Adept.
+achievement.mastery_trainer_exalted.title = Meister
+achievement.mastery_trainer_exalted.desc = Erreiche beim Mastery-Trainer den Rang Meister.
+achievement.mastery_trainer_tier_1.title = Meister II
+achievement.mastery_trainer_tier_1.desc = Erreiche beim Mastery-Trainer den Rang Meister II.
+achievement.mastery_trainer_tier_2.title = Meister III
+achievement.mastery_trainer_tier_2.desc = Erreiche beim Mastery-Trainer den Rang Meister III.
+achievement.mastery_trainer_tier_3.title = Großmeister
+achievement.mastery_trainer_tier_3.desc = Erreiche beim Mastery-Trainer den Rang Großmeister.
+objective.mastery_trainer.friendly = Erreiche beim Mastery-Trainer den Rang Schüler
+objective.mastery_trainer.honored = Erreiche beim Mastery-Trainer den Rang Vertrauter Schüler
+objective.mastery_trainer.revered = Erreiche beim Mastery-Trainer den Rang Adept
+objective.mastery_trainer.exalted = Erreiche beim Mastery-Trainer den Rang Meister
+objective.mastery_trainer.tier_1 = Erreiche beim Mastery-Trainer den Rang Meister II
+objective.mastery_trainer.tier_2 = Erreiche beim Mastery-Trainer den Rang Meister III
+objective.mastery_trainer.tier_3 = Erreiche beim Mastery-Trainer den Rang Großmeister
+
+# --- Der Titel Großmeister (title.<id>.name / .flavor / .display, {0} = der Name des Spielers) ---
+title.mmo_mastery_grandmaster.name = Großmeister
+title.mmo_mastery_grandmaster.flavor = Beim Mastery-Trainer den Rang Großmeister erreicht.
+title.mmo_mastery_grandmaster.display = {0}, Großmeister
+
 # Mastery Trainer conversation
 dialogue.mmo_mastery_trainer.ready_generic.text = Zurück, und du trägst etwas bei dir. Leg es ab, und lass es uns ansehen.
 dialogue.mmo_mastery_trainer.menu.text = Die Disziplinen sind hier, wenn du sie willst. Was brauchst du?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Welche Aufgaben hast du für mich?
+dialogue.mmo_mastery_trainer.menu.opt.lessons = Hast du Lektionen für mich?
+dialogue.mmo_mastery_trainer.menu.opt.standing = Wie stehe ich da?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Zeig mir meine Mastery.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Lebewohl.
+dialogue.mmo_mastery_trainer.lessons_fresh.text = Mein Brett hat heute frische Lektionen. Jede davon wird draußen in der Welt erledigt.\nSchließ eine ab und komm hierher zurück, um abzuholen, was sie einbringt.
+dialogue.mmo_mastery_trainer.tithe_credit.text = Du hast mir lange einen Tribut geschickt, und ich habe mitgezählt.\nIch lehre jetzt Lektionen, und ich zahle, wie du aufsteigst. Was du schon gegeben hast, zählt.
+dialogue.mmo_mastery_trainer.tithe_credit.opt.collect = Wofür zählt es?
 dialogue.mmo_mastery_trainer.first_words.text = Der Guide hat dich also doch heruntergeschickt.\nEine Fähigkeit hört nicht dort auf, wo ihre Stufen enden. Was danach kommt, lehre ich. Ich nenne es Mastery.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = Der Guide hat von dir gesprochen.

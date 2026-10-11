@@ -19,6 +19,68 @@ quest.pack_path_of_mastery.title = Много ремёсел
 quest.pack_path_of_mastery.flavor = Одного хорошего навыка мало для того, чему я учу. Подними несколько навыков как следует высоко, потом возвращайся ко мне.
 quest.pack_mastery_tithe.title = Десятина мастерства
 quest.pack_mastery_tithe.flavor = Кодекс мастерства берёт десятину кровью и древесиной. Уложи несколько тварей и наруби пару брёвен.
+quest.mastery_tithe_credit.title = Что уже уплачено
+quest.mastery_tithe_credit.flavor = Я считал каждую десятину, что ты мне присылал. Найди меня в Забытом Храме, и мы решим, чего всё это теперь стоит.
+quest.mastery_lesson_week.title = Неделя уроков
+quest.mastery_lesson_week.flavor = Делай мои уроки всю неделю и возвращайся ко мне, когда сделаешь несколько. Пропущенный день-другой не отнимет у тебя неделю.
+
+# --- Уроки учителя мастерства (задания доски; quest.<id>.title / .flavor) ---
+quest.mmo_lesson_timber.title = Практика рубки
+quest.mmo_lesson_timber.flavor = Верный замах - первое, чему я учу. Иди и руби деревья, пока руки не научатся работе без подсказок.
+quest.mmo_lesson_ore.title = Работа в жиле
+quest.mmo_lesson_ore.flavor = Найди рудную жилу и выбирай её, пока порода не перестанет что-либо давать. Шахтёр, который останавливается на лёгком камне, ничему у него не учится.
+quest.mmo_lesson_fishing.title = Удочка и леска
+quest.mmo_lesson_fishing.flavor = Возьми удочку, сядь у воды и жди. Терпение - тоже дисциплина, а у большинства приходящих сюда его нет совсем.
+quest.mmo_lesson_hunt.title = Охотничья муштра
+quest.mmo_lesson_hunt.flavor = Выйди за ступени храма и уложи всё, что бросится на тебя. Сгодится любая тварь, лишь бы вернуться обратно на своих ногах.
+quest.mmo_lesson_abilities.title = Упражнения со способностями
+quest.mmo_lesson_abilities.flavor = Твои способности - те же навыки, а навыки ржавеют. Применяй их в мире, пока они не начнут получаться сами.
+quest.mmo_lesson_crafting.title = Практика у верстака
+quest.mmo_lesson_crafting.flavor = Делай вещи. Любые, за любым верстаком. Руки, которые только рубят и копают, забывают, как строить.
+quest.mmo_lesson_workshop.title = Часы в мастерской
+quest.mmo_lesson_workshop.flavor = Проведи долгое время у верстаков. Ремесло - такой же навык, как остальные, и я хочу видеть, как он растёт, прежде чем ты вернёшься.
+quest.mmo_lesson_hard_timber.title = Тяжёлая рубка
+quest.mmo_lesson_hard_timber.flavor = Топором ты уже владеешь. На этот раз вырубай целую рощу и не останавливайся, когда плечи начнут ныть.
+quest.mmo_lesson_hard_hunt.title = Долгая охота
+quest.mmo_lesson_hard_hunt.flavor = Сегодня охота подольше. Оставайся там, пока твари не перестанут идти, и побудь ещё немного.
+quest.mmo_lesson_hard_study.title = Тяжёлая учёба
+quest.mmo_lesson_hard_study.flavor = Тренируй любой навык, но тренируй всерьёз. По твоему виду я пойму, так ли это.
+quest.mmo_lesson_master_ore.title = Глубокие жилы
+quest.mmo_lesson_master_ore.flavor = Спустись к самым глубоким жилам, до каких доберёшься, и выработай их досуха. Мастер не оставляет хорошую руду в породе.
+quest.mmo_lesson_master_hunt.title = Охота мастера
+quest.mmo_lesson_master_hunt.flavor = Охоться, как охотится мастер: с первого света и до последнего. Что бы ни встретилось, уложи это и иди дальше.
+quest.mmo_lesson_master_study.title = Учёба мастера
+quest.mmo_lesson_master_study.flavor = Выбери любой навык и дотяни его дальше, чем, по-твоему, возможно. Урок мастера должен оставлять усталость и немного гордости.
+
+# --- Строки шагов уроков (собственный TextKey шага; {0} = количество) ---
+objective.text.mastery_lesson.chop_logs = Нарубите брёвен: {0}
+objective.text.mastery_lesson.mine_ore = Добудьте руды: {0}
+objective.text.mastery_lesson.week = Выполните уроки Учителя мастерства: {0}
+
+# --- Доска уроков (board.<id>.title / .desc и значки её полос) ---
+board.mmo_mastery_lessons.title = Уроки учителя
+board.mmo_mastery_lessons.desc = Свежие уроки каждое утро, и каждый выполняется в мире. Награду за урок забирай здесь, у доски. Чем выше ты поднимаешься у меня, тем больше уроков я для тебя вешаю.
+board.mmo_mastery_lessons.grade.gathering = Добыча
+board.mmo_mastery_lessons.grade.fighting = Бой
+board.mmo_mastery_lessons.grade.crafting = Ремесло
+board.mmo_mastery_lessons.grade.hard = Трудные
+board.mmo_mastery_lessons.grade.master = Мастерские
+
+# --- Репутация учителя мастерства (название, описание, названия рангов, строки «Как заработать») ---
+reputation.mmo_mastery_trainer.name = Учитель мастерства
+reputation.mmo_mastery_trainer.flavor = Учитель в Забытом Храме ведёт счёт каждому вашему уроку. Каждый достигнутый ранг выплачивается в разделе «Мастерство» вашей книги достижений.
+reputation.mmo_mastery_trainer.rank.neutral = Новичок
+reputation.mmo_mastery_trainer.rank.friendly = Ученик
+reputation.mmo_mastery_trainer.rank.honored = Доверенный ученик
+reputation.mmo_mastery_trainer.rank.revered = Адепт
+reputation.mmo_mastery_trainer.rank.exalted = Мастер
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_1 = Мастер II
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_2 = Мастер III
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_3 = Гроссмейстер
+reputation.mmo_mastery_trainer.earn.lessons = Выполняйте уроки с доски Учителя мастерства в Забытом Храме.
+reputation.mmo_mastery_trainer.earn.due = Платите учителю ежедневный долг.
+reputation.mmo_mastery_trainer.earn.tasks = Выполняйте остальные задания учителя.
+reputation.mmo_mastery_trainer.earn.week = Неделя уроков приносит больше.
 
 # --- Предложения Магазина токенов, поставляемые этим паком (явные titleKey/descriptionKey -> эти ключи) ---
 shop.convert_mastery_point.title = Вливание мастерства
@@ -71,6 +133,34 @@ achievement.pack_essence_hoarder_100.title = Накопитель эссенци
 achievement.pack_essence_hoarder_100.desc = Подберите {0} ед. эссенции жизни.
 achievement.pack_essence_hoarder_10000.title = Накопитель эссенции II
 achievement.pack_essence_hoarder_10000.desc = Подберите {0} ед. эссенции жизни.
+
+# --- Лестница рангов учителя мастерства (achievement.<id>.title / .desc, строка шага каждого критерия) ---
+achievement.mastery_trainer_friendly.title = Ученик
+achievement.mastery_trainer_friendly.desc = Достигните ранга «Ученик» у Учителя мастерства.
+achievement.mastery_trainer_honored.title = Доверенный ученик
+achievement.mastery_trainer_honored.desc = Достигните ранга «Доверенный ученик» у Учителя мастерства.
+achievement.mastery_trainer_revered.title = Адепт
+achievement.mastery_trainer_revered.desc = Достигните ранга «Адепт» у Учителя мастерства.
+achievement.mastery_trainer_exalted.title = Мастер
+achievement.mastery_trainer_exalted.desc = Достигните ранга «Мастер» у Учителя мастерства.
+achievement.mastery_trainer_tier_1.title = Мастер II
+achievement.mastery_trainer_tier_1.desc = Достигните ранга «Мастер II» у Учителя мастерства.
+achievement.mastery_trainer_tier_2.title = Мастер III
+achievement.mastery_trainer_tier_2.desc = Достигните ранга «Мастер III» у Учителя мастерства.
+achievement.mastery_trainer_tier_3.title = Гроссмейстер
+achievement.mastery_trainer_tier_3.desc = Достигните ранга «Гроссмейстер» у Учителя мастерства.
+objective.mastery_trainer.friendly = Достигните ранга «Ученик» у Учителя мастерства
+objective.mastery_trainer.honored = Достигните ранга «Доверенный ученик» у Учителя мастерства
+objective.mastery_trainer.revered = Достигните ранга «Адепт» у Учителя мастерства
+objective.mastery_trainer.exalted = Достигните ранга «Мастер» у Учителя мастерства
+objective.mastery_trainer.tier_1 = Достигните ранга «Мастер II» у Учителя мастерства
+objective.mastery_trainer.tier_2 = Достигните ранга «Мастер III» у Учителя мастерства
+objective.mastery_trainer.tier_3 = Достигните ранга «Гроссмейстер» у Учителя мастерства
+
+# --- Титул гроссмейстера (title.<id>.name / .flavor / .display, {0} = имя игрока) ---
+title.mmo_mastery_grandmaster.name = Гроссмейстер
+title.mmo_mastery_grandmaster.flavor = Ранг гроссмейстера у Учителя мастерства достигнут.
+title.mmo_mastery_grandmaster.display = {0}, Гроссмейстер
 
 # --- The per-skill mastery point ladder ({0} = the skill's name, {1} = the rung's level) ---
 achievement.mastery_points.title = {0}: уровень {1}
@@ -196,7 +286,12 @@ mastery.poison_t3_cap.title = Цвет порчи
 dialogue.mmo_mastery_trainer.ready_generic.text = Снова здесь, и не с пустыми руками. Положи, и посмотрим.
 dialogue.mmo_mastery_trainer.menu.text = Дисциплины здесь, когда понадобятся. Что тебе нужно?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Какие задания у тебя есть для меня?
+dialogue.mmo_mastery_trainer.menu.opt.lessons = У тебя есть для меня уроки?
+dialogue.mmo_mastery_trainer.menu.opt.standing = Как мои дела?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Покажи моё мастерство.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Прощай.
+dialogue.mmo_mastery_trainer.lessons_fresh.text = Сегодня на моей доске свежие уроки. Каждый из них выполняется в мире.\nЗакончи один и возвращайся сюда за наградой.
+dialogue.mmo_mastery_trainer.tithe_credit.text = Ты долго присылал мне десятину, и я вёл счёт.\nТеперь я даю уроки и плачу по мере твоего роста. Всё, что ты отдал раньше, засчитывается.
+dialogue.mmo_mastery_trainer.tithe_credit.opt.collect = Что именно засчитывается?
 dialogue.mmo_mastery_trainer.first_words.text = Значит, проводник всё же отправил тебя сюда.\nНавык не заканчивается там, где заканчиваются его уровни. Тому, что идёт после, я и учу. Я зову это мастерством.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = Проводник говорил о тебе.

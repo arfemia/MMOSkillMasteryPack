@@ -19,6 +19,68 @@ quest.pack_path_of_mastery.title = Plusieurs métiers
 quest.pack_path_of_mastery.flavor = Une seule bonne compétence ne suffit pas pour ce que j'enseigne. Fais-en progresser plusieurs très haut, puis reviens me voir.
 quest.pack_mastery_tithe.title = Dîme de la maîtrise
 quest.pack_mastery_tithe.flavor = Le codex de la maîtrise prélève une dîme de sang et de bois. Abats quelques créatures et coupe quelques bûches.
+quest.mastery_tithe_credit.title = Ce que tu as déjà payé
+quest.mastery_tithe_credit.flavor = J'ai compté chaque dîme que tu m'as envoyée. Viens me trouver au Temple Oublié, et nous réglerons ce que tout cela vaut maintenant.
+quest.mastery_lesson_week.title = Une semaine de leçons
+quest.mastery_lesson_week.flavor = Fais mes leçons pendant la semaine et reviens me voir quand tu en auras fait une poignée. Un jour manqué ou deux ne te coûteront pas la semaine.
+
+# --- Les leçons de l'entraîneur de maîtrise (contrats du tableau ; quest.<id>.title / .flavor) ---
+quest.mmo_lesson_timber.title = Exercice d'abattage
+quest.mmo_lesson_timber.flavor = Un geste régulier, c'est la première chose que j'enseigne. Sors abattre des arbres jusqu'à ce que tes bras connaissent le travail sans qu'on le leur demande.
+quest.mmo_lesson_ore.title = Travail de filon
+quest.mmo_lesson_ore.flavor = Trouve un filon de minerai et travaille-le jusqu'à ce que la roche ne donne plus rien. Un mineur qui s'arrête à la pierre facile n'en apprend rien.
+quest.mmo_lesson_fishing.title = Canne et ligne
+quest.mmo_lesson_fishing.flavor = Va au bord de l'eau avec une canne et attends. La patience est une discipline aussi, et la plupart de ceux qui descendent ici n'en ont aucune.
+quest.mmo_lesson_hunt.title = Exercice de chasse
+quest.mmo_lesson_hunt.flavor = Sors au-delà des marches du temple et abats tout ce qui vient sur toi. N'importe quelle créature fera l'affaire, pourvu que tu rentres sur tes deux jambes.
+quest.mmo_lesson_abilities.title = Exercices de capacités
+quest.mmo_lesson_abilities.flavor = Tes capacités sont des compétences comme les autres, et les compétences rouillent. Sers-t'en dehors, dans le monde, jusqu'à ce qu'elles viennent sans réfléchir.
+quest.mmo_lesson_crafting.title = Pratique à l'établi
+quest.mmo_lesson_crafting.flavor = Fabrique des choses. N'importe lesquelles, à n'importe quel établi. Des mains qui ne font que frapper et creuser oublient comment bâtir.
+quest.mmo_lesson_workshop.title = Heures d'atelier
+quest.mmo_lesson_workshop.flavor = Passe un long moment aux établis. L'artisanat est une compétence comme les autres, et je veux la voir progresser avant que tu reviennes.
+quest.mmo_lesson_hard_timber.title = Gros abattage
+quest.mmo_lesson_hard_timber.flavor = Tu sais manier une hache, à présent. Dégage tout un bosquet cette fois, et continue quand tes épaules se mettent à se plaindre.
+quest.mmo_lesson_hard_hunt.title = La longue chasse
+quest.mmo_lesson_hard_hunt.flavor = Une chasse plus longue cette fois. Reste dehors jusqu'à ce que les créatures cessent de venir, puis reste encore un peu.
+quest.mmo_lesson_hard_study.title = Étude exigeante
+quest.mmo_lesson_hard_study.flavor = Entraîne la compétence que tu veux, mais entraîne-la dur. Je saurai à ta mine si tu l'as fait.
+quest.mmo_lesson_master_ore.title = Filons profonds
+quest.mmo_lesson_master_ore.flavor = Descends jusqu'aux filons les plus profonds que tu peux atteindre et épuise-les. Un maître ne laisse pas de bon minerai dans la roche.
+quest.mmo_lesson_master_hunt.title = Chasse de maître
+quest.mmo_lesson_master_hunt.flavor = Chasse comme chasse un maître, dès la première lueur jusqu'à la tombée du jour. Quoi que ce soit, là-dehors, abats-le et continue d'avancer.
+quest.mmo_lesson_master_study.title = Étude de maître
+quest.mmo_lesson_master_study.flavor = Choisis une compétence et pousse-la plus loin que tu ne crois possible. Une leçon de maître doit te laisser fatigué, et un peu fier.
+
+# --- Lignes d'étape des leçons (le TextKey propre à une étape ; {0} = la quantité) ---
+objective.text.mastery_lesson.chop_logs = Coupez {0} bûches
+objective.text.mastery_lesson.mine_ore = Minez {0} minerais
+objective.text.mastery_lesson.week = Terminez {0} leçons de l'entraîneur de maîtrise
+
+# --- Le tableau des leçons (board.<id>.title / .desc, et les badges de ses bandes) ---
+board.mmo_mastery_lessons.title = Les leçons de l'entraîneur
+board.mmo_mastery_lessons.desc = De nouvelles leçons chaque matin, chacune faite dehors, dans le monde. Touche ici, au tableau, ce qu'une leçon rapporte. Plus tu t'élèves avec moi, plus j'affiche de leçons pour toi.
+board.mmo_mastery_lessons.grade.gathering = Récolte
+board.mmo_mastery_lessons.grade.fighting = Combat
+board.mmo_mastery_lessons.grade.crafting = Artisanat
+board.mmo_mastery_lessons.grade.hard = Difficile
+board.mmo_mastery_lessons.grade.master = Maître
+
+# --- La réputation de l'entraîneur de maîtrise (nom, description, noms de rang, lignes « Comment gagner ») ---
+reputation.mmo_mastery_trainer.name = L'entraîneur de maîtrise
+reputation.mmo_mastery_trainer.flavor = L'entraîneur du Temple Oublié tient le compte de chaque leçon que vous terminez. Chaque rang atteint rapporte dans la section Maîtrise de votre livre de succès.
+reputation.mmo_mastery_trainer.rank.neutral = Nouveau venu
+reputation.mmo_mastery_trainer.rank.friendly = Élève
+reputation.mmo_mastery_trainer.rank.honored = Élève de confiance
+reputation.mmo_mastery_trainer.rank.revered = Adepte
+reputation.mmo_mastery_trainer.rank.exalted = Maître
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_1 = Maître II
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_2 = Maître III
+reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_3 = Grand maître
+reputation.mmo_mastery_trainer.earn.lessons = Faites les leçons du tableau de l'entraîneur de maîtrise, au Temple Oublié.
+reputation.mmo_mastery_trainer.earn.due = Payez le dû quotidien de l'entraîneur.
+reputation.mmo_mastery_trainer.earn.tasks = Terminez les autres tâches de l'entraîneur.
+reputation.mmo_mastery_trainer.earn.week = Une semaine de leçons rapporte un supplément.
 
 # --- Offres de la Boutique de tokens livrées par ce pack (titleKey/descriptionKey explicites -> ces clés) ---
 shop.convert_mastery_point.title = Infusion de maîtrise
@@ -72,6 +134,35 @@ achievement.pack_essence_hoarder_100.title = Amasseur d'essence I
 achievement.pack_essence_hoarder_100.desc = Ramassez {0} essence de vie.
 achievement.pack_essence_hoarder_10000.title = Amasseur d'essence II
 achievement.pack_essence_hoarder_10000.desc = Ramassez {0} essence de vie.
+
+# --- Échelle de rangs de l'entraîneur de maîtrise (achievement.<id>.title / .desc, et le texte d'étape de chaque critère) ---
+achievement.mastery_trainer_friendly.title = Élève
+achievement.mastery_trainer_friendly.desc = Atteignez le rang d'Élève auprès de l'entraîneur de maîtrise.
+achievement.mastery_trainer_honored.title = Élève de confiance
+achievement.mastery_trainer_honored.desc = Atteignez le rang d'Élève de confiance auprès de l'entraîneur de maîtrise.
+achievement.mastery_trainer_revered.title = Adepte
+achievement.mastery_trainer_revered.desc = Atteignez le rang d'Adepte auprès de l'entraîneur de maîtrise.
+achievement.mastery_trainer_exalted.title = Maître
+achievement.mastery_trainer_exalted.desc = Atteignez le rang de Maître auprès de l'entraîneur de maîtrise.
+achievement.mastery_trainer_tier_1.title = Maître II
+achievement.mastery_trainer_tier_1.desc = Atteignez le rang de Maître II auprès de l'entraîneur de maîtrise.
+achievement.mastery_trainer_tier_2.title = Maître III
+achievement.mastery_trainer_tier_2.desc = Atteignez le rang de Maître III auprès de l'entraîneur de maîtrise.
+achievement.mastery_trainer_tier_3.title = Grand maître
+achievement.mastery_trainer_tier_3.desc = Atteignez le rang de Grand maître auprès de l'entraîneur de maîtrise.
+objective.mastery_trainer.friendly = Atteignez le rang d'Élève auprès de l'entraîneur de maîtrise
+objective.mastery_trainer.honored = Atteignez le rang d'Élève de confiance auprès de l'entraîneur de maîtrise
+objective.mastery_trainer.revered = Atteignez le rang d'Adepte auprès de l'entraîneur de maîtrise
+objective.mastery_trainer.exalted = Atteignez le rang de Maître auprès de l'entraîneur de maîtrise
+objective.mastery_trainer.tier_1 = Atteignez le rang de Maître II auprès de l'entraîneur de maîtrise
+objective.mastery_trainer.tier_2 = Atteignez le rang de Maître III auprès de l'entraîneur de maîtrise
+objective.mastery_trainer.tier_3 = Atteignez le rang de Grand maître auprès de l'entraîneur de maîtrise
+
+# --- Le titre de Grand maître (title.<id>.name / .flavor / .display, {0} = le nom du joueur) ---
+title.mmo_mastery_grandmaster.name = Grand maître
+title.mmo_mastery_grandmaster.flavor = A atteint le rang de Grand maître auprès de l'entraîneur de maîtrise.
+title.mmo_mastery_grandmaster.display = {0}, Grand maître
+
 achievement.mastery_points.title = {0} niveau {1}
 achievement.mastery_points.desc = Atteignez le niveau {1} en {0}.
 
@@ -194,7 +285,12 @@ mastery.poison_t3_cap.title = Floraison malsaine
 dialogue.mmo_mastery_trainer.ready_generic.text = De retour, et avec quelque chose dans les mains. Pose-le, et voyons cela.
 dialogue.mmo_mastery_trainer.menu.text = Les disciplines sont là quand tu les veux. De quoi as-tu besoin ?
 dialogue.mmo_mastery_trainer.menu.opt.quests = Quelles tâches as-tu pour moi ?
+dialogue.mmo_mastery_trainer.menu.opt.lessons = As-tu des leçons pour moi ?
+dialogue.mmo_mastery_trainer.menu.opt.standing = Où en suis-je ?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Montre-moi ma maîtrise.
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Adieu.
+dialogue.mmo_mastery_trainer.lessons_fresh.text = Mon tableau porte de nouvelles leçons aujourd'hui. Chacune se fait dehors, dans le monde.\nTermines-en une et reviens ici toucher ce qu'elle rapporte.
+dialogue.mmo_mastery_trainer.tithe_credit.text = Tu m'as envoyé une dîme pendant longtemps, et j'ai tenu le compte.\nJ'enseigne des leçons à présent, et je paie à mesure que tu t'élèves. Ce que tu as déjà donné compte.
+dialogue.mmo_mastery_trainer.tithe_credit.opt.collect = Cela compte pour quoi ?
 dialogue.mmo_mastery_trainer.first_words.text = Ainsi, le guide t'a fait descendre, après tout.\nUne compétence ne s'arrête pas là où s'arrêtent ses niveaux. Ce qui vient après, c'est ce que j'enseigne. J'appelle cela la maîtrise.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = Le guide a parlé de toi.
