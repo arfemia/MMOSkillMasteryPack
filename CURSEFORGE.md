@@ -1,6 +1,6 @@
 # MMO Skill Mastery Pack
 
-**The mastery and currency content pack for the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).** Drop this `.zip` into your server's `mods/` folder alongside the plugin and the full mastery system switches on: 28 active tracks across combat skills, marquee abilities, gathering, Enchanting and the seven damage schools, plus two starter currencies, a claimable Mastery Point every 15 levels, the Mastery Trainer's daily lessons, and themed quests and achievements to earn them with.
+**The mastery and currency content pack for the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).** Drop this `.zip` into your server's `mods/` folder alongside the plugin and the full mastery system switches on: 28 active tracks across combat skills, marquee abilities, gathering, Enchanting and seven of the damage schools, plus two starter currencies, a claimable Mastery Point every 15 levels, the Mastery Trainer's daily lessons, and themed quests and achievements to earn them with.
 
 [![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/5NFdZsUxHZ) [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/ziggfreed) [![Documentation](https://img.shields.io/badge/Docs-Read%20More-0ea5e9?style=for-the-badge)](https://mmo-skill-tree-docs.ziggfreed.com)
 
@@ -56,12 +56,12 @@ Paid the old Mastery Tithe? It's retired, and What You Already Paid shows up in 
 
 ### Themed quests (8)
 
-- **A Word with the Trainer** - once you reach the Forgotten Temple, the Adventurer's Guide sends you across the landing to meet the Mastery Trainer, for 1 Mastery Point.
-- **The First Milestone** - from the trainer: reach level 15 in any skill for 2 Mastery Points.
-- **Essence Collector** - turn in 150 Essence of Life for 5 Mastery Points plus 2,000 Mining and 2,000 Woodcutting XP.
-- **Essence Devotee** (follows Essence Collector) - turn in 750 Essence of Life for 25 Mastery Points.
-- **Many Trades** - reach level 25 in Mining, Woodcutting, Harvesting, Swords, and Archery for 10 Mastery Points.
-- **The Trainer's Due** (daily, after A Word with the Trainer) - hand in 115 Essence of Life and 3 Linen Scraps and kill 10 creatures, for an essence roll that grows with your combat level and luck, a Mastery Point about two days in five, now and then an all-skill XP boost, and rarely the Adept's Staff.
+- **A Word with the Trainer**: once you reach the Forgotten Temple, the Adventurer's Guide sends you across the landing to meet the Mastery Trainer, for 1 Mastery Point.
+- **The First Milestone** (from the trainer): reach level 15 in any skill for 2 Mastery Points.
+- **Essence Collector**: turn in 150 Essence of Life for 5 Mastery Points plus 2,000 Mining and 2,000 Woodcutting XP.
+- **Essence Devotee** (follows Essence Collector): turn in 750 Essence of Life for 25 Mastery Points.
+- **Many Trades**: reach level 25 in Mining, Woodcutting, Harvesting, Swords, and Archery for 10 Mastery Points.
+- **The Trainer's Due** (daily, after A Word with the Trainer): hand in 115 Essence of Life and 3 Linen Scraps and kill 10 creatures, for an essence roll that grows with your combat level and luck, a Mastery Point about two days in five, now and then an all-skill XP boost, and rarely the Adept's Staff.
 - **A Week of Lessons** (weekly, after A Word with the Trainer or What You Already Paid): finish any 5 of the trainer's lessons in a week for 1,000 standing.
 - **What You Already Paid** (only if you paid the old Mastery Tithe): see the trainer for 3,000 standing.
 
