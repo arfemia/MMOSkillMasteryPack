@@ -76,17 +76,17 @@ These quests raise your standing with the trainer too: 250 for A Word with the T
 - **Mastery Hoarder** (50 pts, +5 MP) - earn 300 Mastery Points lifetime. Counts cumulatively across milestone rewards, quests, and admin grants; refunds don't subtract.
 - **Devotee of Mastery** (250 pts meta, +20 MP) - earn every other mastery achievement.
 
-### Shop offer (plugin 1.3.0+)
+### Shop offer
 
-Running the [MMO Skill Bounty Pack](https://www.curseforge.com/hytale/mods/mmo-skill-tree-bounty-board-pack-rich-customizable) too? This pack adds a **Mastery Infusion** offer to the bounty pack's shop: convert Bounty Tokens into a Mastery Point (capped per day). It appears only when both packs are installed on plugin 1.3.0+ (the shop engine); without the Bounty Pack it stays dormant.
+Running the [MMO Skill Bounty Pack](https://www.curseforge.com/hytale/mods/mmo-skill-tree-bounty-board-pack-rich-customizable) too? This pack adds a **Mastery Infusion** offer to the bounty pack's shop: convert Bounty Tokens into a Mastery Point (capped per day). It appears only when both packs are installed; without the Bounty Pack it stays dormant.
 
 ### Fully translated (9 languages)
 
-Every display string in the pack - track titles, node names and descriptions, quest titles and flavor, achievement names, currency names, and the shop offer - ships in English, German, Spanish, French, Hungarian, Italian, Brazilian Portuguese, Russian, and Turkish. Node tier names ("Sharpened", "Vampiric", "Eternal", ...) are translated once per tier and the plugin (1.3.0+) composes them with the localized track title, so they stay translated even on custom-skill tracks you fan out yourself. Any key a translation misses falls back to English per key.
+Every display string in the pack - track titles, node names and descriptions, quest titles and flavor, achievement names, currency names, and the shop offer - ships in English, German, Spanish, French, Hungarian, Italian, Brazilian Portuguese, Russian, and Turkish. Node tier names ("Sharpened", "Vampiric", "Eternal", ...) are translated once per tier and the plugin composes them with the localized track title, so they stay translated even on custom-skill tracks you fan out yourself. Any key a translation misses falls back to English per key.
 
 ## Installation
 
-1. Install the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree).
+1. On a Hytale Update 7 (0.7.x) server, install the [MMO Skill Tree plugin](https://www.curseforge.com/hytale/mods/mmo-skill-tree) 1.7.1 or newer and Ziggfreed's CommonLib 2.3.0 or newer.
 2. Drop `MMOSkillMasteryPack-2.2.0.zip` into the same `mods/` folder.
 3. Restart the server.
 

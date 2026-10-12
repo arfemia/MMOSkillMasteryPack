@@ -37,7 +37,7 @@ hides the Mastery and Currency UI tabs unless it's installed.
 
 ## Installation
 
-Drop `MMOSkillMasteryPack.zip` (or this whole folder) into the same `mods/`
+Drop `MMOSkillMasteryPack-2.2.0.zip` (or this whole folder) into the same `mods/`
 directory as the MMO Skill Tree plugin. Restart the server. Look for these
 log lines:
 
