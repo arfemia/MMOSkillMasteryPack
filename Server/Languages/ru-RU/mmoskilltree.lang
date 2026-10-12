@@ -20,7 +20,7 @@ quest.pack_path_of_mastery.flavor = Одного хорошего навыка �
 quest.pack_mastery_tithe.title = Десятина мастерства
 quest.pack_mastery_tithe.flavor = Кодекс мастерства берёт десятину кровью и древесиной. Уложи несколько тварей и наруби пару брёвен.
 quest.mastery_tithe_credit.title = Что уже уплачено
-quest.mastery_tithe_credit.flavor = Я считал каждую десятину, что ты мне присылал. Найди меня в Забытом Храме, и мы решим, чего всё это теперь стоит.
+quest.mastery_tithe_credit.flavor = Я считал каждую десятину, что ты мне присылал. Найди меня в Забытом храме, и мы решим, чего всё это теперь стоит.
 quest.mastery_lesson_week.title = Неделя уроков
 quest.mastery_lesson_week.flavor = Делай мои уроки всю неделю и возвращайся ко мне, когда сделаешь несколько. Пропущенный день-другой не отнимет у тебя неделю.
 
@@ -68,7 +68,7 @@ board.mmo_mastery_lessons.grade.master = Мастерские
 
 # --- Репутация учителя мастерства (название, описание, названия рангов, строки «Как заработать») ---
 reputation.mmo_mastery_trainer.name = Расположение Учителя мастерства
-reputation.mmo_mastery_trainer.flavor = Учитель в Забытом Храме ведёт счёт каждому вашему уроку. Каждый достигнутый ранг выплачивается в разделе «Мастерство» вашей книги достижений.
+reputation.mmo_mastery_trainer.flavor = Учитель в Забытом храме ведёт счёт каждому вашему уроку. Каждый достигнутый ранг выплачивается в разделе «Мастерство» вашей книги достижений.
 reputation.mmo_mastery_trainer.rank.neutral = Новичок
 reputation.mmo_mastery_trainer.rank.friendly = Ученик
 reputation.mmo_mastery_trainer.rank.honored = Доверенный ученик
@@ -77,7 +77,7 @@ reputation.mmo_mastery_trainer.rank.exalted = Мастер
 reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_1 = Мастер II
 reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_2 = Мастер III
 reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_3 = Гроссмейстер
-reputation.mmo_mastery_trainer.earn.lessons = Выполняйте уроки с доски Учителя мастерства в Забытом Храме.
+reputation.mmo_mastery_trainer.earn.lessons = Выполняйте уроки с доски Учителя мастерства в Забытом храме.
 reputation.mmo_mastery_trainer.earn.due = Платите учителю ежедневный долг.
 reputation.mmo_mastery_trainer.earn.tasks = Выполняйте остальные задания учителя.
 reputation.mmo_mastery_trainer.earn.week = Неделя уроков приносит больше.

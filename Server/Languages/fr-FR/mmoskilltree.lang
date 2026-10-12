@@ -20,7 +20,7 @@ quest.pack_path_of_mastery.flavor = Une seule bonne compétence ne suffit pas po
 quest.pack_mastery_tithe.title = Dîme de la maîtrise
 quest.pack_mastery_tithe.flavor = Le codex de la maîtrise prélève une dîme de sang et de bois. Abats quelques créatures et coupe quelques bûches.
 quest.mastery_tithe_credit.title = Ce que tu as déjà payé
-quest.mastery_tithe_credit.flavor = J'ai compté chaque dîme que tu m'as envoyée. Viens me trouver au Temple Oublié, et nous réglerons ce que tout cela vaut maintenant.
+quest.mastery_tithe_credit.flavor = J'ai compté chaque dîme que tu m'as envoyée. Viens me trouver au Temple de l'Oubli, et nous réglerons ce que tout cela vaut maintenant.
 quest.mastery_lesson_week.title = Une semaine de leçons
 quest.mastery_lesson_week.flavor = Fais mes leçons pendant la semaine et reviens me voir quand tu en auras fait une poignée. Un jour manqué ou deux ne te coûteront pas la semaine.
 
@@ -68,7 +68,7 @@ board.mmo_mastery_lessons.grade.master = Maître
 
 # --- La réputation de l'entraîneur de maîtrise (nom, description, noms de rang, lignes « Comment gagner ») ---
 reputation.mmo_mastery_trainer.name = Faveur de l'entraîneur de maîtrise
-reputation.mmo_mastery_trainer.flavor = L'entraîneur du Temple Oublié tient le compte de chaque leçon que vous terminez. Chaque rang atteint rapporte dans la section Maîtrise de votre livre de succès.
+reputation.mmo_mastery_trainer.flavor = L'entraîneur du Temple de l'Oubli tient le compte de chaque leçon que vous terminez. Chaque rang atteint rapporte dans la section Maîtrise de votre livre de succès.
 reputation.mmo_mastery_trainer.rank.neutral = Nouveau venu
 reputation.mmo_mastery_trainer.rank.friendly = Élève
 reputation.mmo_mastery_trainer.rank.honored = Élève de confiance
@@ -77,7 +77,7 @@ reputation.mmo_mastery_trainer.rank.exalted = Maître
 reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_1 = Maître II
 reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_2 = Maître III
 reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_3 = Grand maître
-reputation.mmo_mastery_trainer.earn.lessons = Faites les leçons du tableau de l'entraîneur de maîtrise, au Temple Oublié.
+reputation.mmo_mastery_trainer.earn.lessons = Faites les leçons du tableau de l'entraîneur de maîtrise, au Temple de l'Oubli.
 reputation.mmo_mastery_trainer.earn.due = Payez le dû quotidien de l'entraîneur.
 reputation.mmo_mastery_trainer.earn.tasks = Terminez les autres tâches de l'entraîneur.
 reputation.mmo_mastery_trainer.earn.week = Une semaine de leçons rapporte un supplément.
