@@ -67,7 +67,7 @@ board.mmo_mastery_lessons.grade.hard = Zor
 board.mmo_mastery_lessons.grade.master = Usta
 
 # --- Ustalık Eğitmeninin itibarı (ad, açıklama, rütbe adları, nasıl kazanılır satırları) ---
-reputation.mmo_mastery_trainer.name = Ustalık Eğitmeni
+reputation.mmo_mastery_trainer.name = Ustalık Eğitmeni'nin Teveccühü
 reputation.mmo_mastery_trainer.flavor = Unutulmuş Tapınak'taki eğitmen bitirdiğin her dersin hesabını tutar. Ulaştığın her rütbe başarım defterinin Ustalık bölümünde ödenir.
 reputation.mmo_mastery_trainer.rank.neutral = Yeni Gelen
 reputation.mmo_mastery_trainer.rank.friendly = Öğrenci

@@ -67,7 +67,7 @@ board.mmo_mastery_lessons.grade.hard = Трудные
 board.mmo_mastery_lessons.grade.master = Мастерские
 
 # --- Репутация учителя мастерства (название, описание, названия рангов, строки «Как заработать») ---
-reputation.mmo_mastery_trainer.name = Учитель мастерства
+reputation.mmo_mastery_trainer.name = Расположение Учителя мастерства
 reputation.mmo_mastery_trainer.flavor = Учитель в Забытом Храме ведёт счёт каждому вашему уроку. Каждый достигнутый ранг выплачивается в разделе «Мастерство» вашей книги достижений.
 reputation.mmo_mastery_trainer.rank.neutral = Новичок
 reputation.mmo_mastery_trainer.rank.friendly = Ученик

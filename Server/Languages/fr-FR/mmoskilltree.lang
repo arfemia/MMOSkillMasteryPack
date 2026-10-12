@@ -67,7 +67,7 @@ board.mmo_mastery_lessons.grade.hard = Difficile
 board.mmo_mastery_lessons.grade.master = Maître
 
 # --- La réputation de l'entraîneur de maîtrise (nom, description, noms de rang, lignes « Comment gagner ») ---
-reputation.mmo_mastery_trainer.name = L'entraîneur de maîtrise
+reputation.mmo_mastery_trainer.name = Faveur de l'entraîneur de maîtrise
 reputation.mmo_mastery_trainer.flavor = L'entraîneur du Temple Oublié tient le compte de chaque leçon que vous terminez. Chaque rang atteint rapporte dans la section Maîtrise de votre livre de succès.
 reputation.mmo_mastery_trainer.rank.neutral = Nouveau venu
 reputation.mmo_mastery_trainer.rank.friendly = Élève

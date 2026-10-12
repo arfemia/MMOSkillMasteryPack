@@ -67,7 +67,7 @@ board.mmo_mastery_lessons.grade.hard = Nehéz
 board.mmo_mastery_lessons.grade.master = Mester
 
 # --- A Mastery Edző hírneve (név, leírás, rangnevek, Hogyan szerezhető sorok) ---
-reputation.mmo_mastery_trainer.name = A Mastery Edző
+reputation.mmo_mastery_trainer.name = Mastery Edző Kegye
 reputation.mmo_mastery_trainer.flavor = A Feledett Templom edzője számon tartja minden leckédet, amit elvégzel. Minden elért rang jutalma a teljesítménykönyved Mastery részében fizetődik ki.
 reputation.mmo_mastery_trainer.rank.neutral = Újonc
 reputation.mmo_mastery_trainer.rank.friendly = Tanítvány

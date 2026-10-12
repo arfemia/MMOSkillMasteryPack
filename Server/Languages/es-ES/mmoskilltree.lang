@@ -67,7 +67,7 @@ board.mmo_mastery_lessons.grade.hard = Difícil
 board.mmo_mastery_lessons.grade.master = De Maestro
 
 # --- La reputación del Entrenador de Maestría (nombre, descripción, rangos, líneas de Cómo ganarla) ---
-reputation.mmo_mastery_trainer.name = El Entrenador de Maestría
+reputation.mmo_mastery_trainer.name = Favor del Entrenador de Maestría
 reputation.mmo_mastery_trainer.flavor = El entrenador del Templo Olvidado lleva la cuenta de cada lección que terminas. Cada rango que alcanzas paga en la sección de Maestría de tu libro de logros.
 reputation.mmo_mastery_trainer.rank.neutral = Recién Llegado
 reputation.mmo_mastery_trainer.rank.friendly = Alumno

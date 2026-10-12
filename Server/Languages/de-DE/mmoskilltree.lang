@@ -67,7 +67,7 @@ board.mmo_mastery_lessons.grade.hard = Schwer
 board.mmo_mastery_lessons.grade.master = Meister
 
 # --- Der Ruf beim Mastery-Trainer (Name, Beschreibung, Rangnamen, Wie du ihn verdienst) ---
-reputation.mmo_mastery_trainer.name = Der Mastery-Trainer
+reputation.mmo_mastery_trainer.name = Gunst des Mastery-Trainers
 reputation.mmo_mastery_trainer.flavor = Der Trainer im Vergessenen Tempel zählt jede Lektion mit, die du abschließt. Jeder Rang, den du erreichst, zahlt im Bereich Mastery deines Erfolgsbuchs aus.
 reputation.mmo_mastery_trainer.rank.neutral = Neuling
 reputation.mmo_mastery_trainer.rank.friendly = Schüler

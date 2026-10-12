@@ -67,7 +67,7 @@ board.mmo_mastery_lessons.grade.hard = Difficile
 board.mmo_mastery_lessons.grade.master = Da maestro
 
 # --- La reputazione dell'Allenatore di Maestria (nome, descrizione, nomi dei ranghi, righe Come guadagnarla) ---
-reputation.mmo_mastery_trainer.name = L'Allenatore di Maestria
+reputation.mmo_mastery_trainer.name = Favore dell'Allenatore di Maestria
 reputation.mmo_mastery_trainer.flavor = L'allenatore nel Tempio Dimenticato tiene il conto di ogni lezione che finisci. Ogni rango che raggiungi paga nella sezione Maestria del tuo libro degli obiettivi.
 reputation.mmo_mastery_trainer.rank.neutral = Novizio
 reputation.mmo_mastery_trainer.rank.friendly = Allievo

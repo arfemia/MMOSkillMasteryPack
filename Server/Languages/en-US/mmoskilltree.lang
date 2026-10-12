@@ -66,8 +66,8 @@ board.mmo_mastery_lessons.grade.crafting = Crafting
 board.mmo_mastery_lessons.grade.hard = Hard
 board.mmo_mastery_lessons.grade.master = Master's
 
-# --- The Mastery Trainer's reputation (name, description, rank names, How to earn lines) ---
-reputation.mmo_mastery_trainer.name = The Mastery Trainer
+# --- Mastery Trainer's Favor, the trainer's reputation (name, description, rank names, How to earn lines) ---
+reputation.mmo_mastery_trainer.name = Mastery Trainer's Favor
 reputation.mmo_mastery_trainer.flavor = The trainer in the Forgotten Temple keeps count of every lesson you finish. Each rank you reach pays out in the Mastery section of your achievement book.
 reputation.mmo_mastery_trainer.rank.neutral = Newcomer
 reputation.mmo_mastery_trainer.rank.friendly = Student

@@ -67,7 +67,7 @@ board.mmo_mastery_lessons.grade.hard = Difícil
 board.mmo_mastery_lessons.grade.master = De Mestre
 
 # --- A reputação do Treinador de Maestria (nome, descrição, nomes de nível, linhas de Como ganhar) ---
-reputation.mmo_mastery_trainer.name = O Treinador de Maestria
+reputation.mmo_mastery_trainer.name = Favor do Treinador de Maestria
 reputation.mmo_mastery_trainer.flavor = O treinador do Templo Esquecido conta cada lição que você termina. Cada nível que você alcança paga na seção de Maestria do seu livro de conquistas.
 reputation.mmo_mastery_trainer.rank.neutral = Recém-chegado
 reputation.mmo_mastery_trainer.rank.friendly = Aluno
