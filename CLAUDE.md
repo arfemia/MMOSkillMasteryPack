@@ -6,7 +6,7 @@ Mastery tracks, the Mastery Trainer and the mastery currency. The family-wide ru
 - Purchases are saved as `<trackId>:<nodeId>`, so renaming a track file or a node id orphans every buyer.
 - Never author a node `DescriptionKey`: the mastery page renders the effect line from `Modifiers` and the cost as chips.
 - A per-ability modifier `Key` works only if that ability's `Body` declares it (fireball has `damageRadius`, not `radius`); an undeclared key is silently inert.
-- `Life_Essence.json` ships identically here and in the bounty pack; keep the two files identical.
+- `Life_Essence.json` defines the same wallet here and in the bounty pack (every field but `$Comment` matches); change both together.
 - `Shop_Convert_Mastery_Point.json` keeps its odd id because players' purchase counts are filed under it. It lists in the bounty pack's General storefront, so without that pack it exists with no shelf.
 - This pack owns the Mastery Trainer end to end (the jar ships none); add every quest the trainer gives to the trainer dialogue's `Start.Quests`.
 - The trainer's reputation `Mmo_Mastery_Trainer` (native group in `NPC/Reputation/Groups/`, companion in `ZiggfreedCommon/Reputations/MMOSkillTree/`) and its own rank ids `Mastery_Trainer_Tier_1` to `_3` are saved progress: never rename them. The retired `Pack_Mastery_Tithe.json` stays (AutoAccept false, MaxCompletions 1) so a player carrying it can finish it.
