@@ -38,6 +38,7 @@
   "Listing": {
     "Icon": "Ingredient_Crystal_Purple",
     "Category": "main",
+    "MainLine": true,
     "SortOrder": 9,
     "Tags": [
       "Tutorial",

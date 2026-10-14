@@ -7,6 +7,7 @@
   "Listing": {
     "Icon": "Deco_Book_Pile_Small",
     "Category": "main",
+    "MainLine": true,
     "SortOrder": 10,
     "Tags": [
       "Mastery",
