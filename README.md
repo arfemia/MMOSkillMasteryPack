@@ -21,7 +21,7 @@ hides the Mastery and Currency UI tabs unless it's installed.
   switch: `enchanting_mastery` is on; `acrobatics_mastery` and
   `fishing_mastery` ship with `"Enabled": false` and will activate in a
   future pack release.
-- **2 currencies** (`Server/MMOSkillTree/Currencies/*.json`) - `mastery_point`
+- **2 currencies** (`Server/ZiggfreedCommon/Currencies/MMOSkillTree/*.json`) - `mastery_point`
   (counter-backed, paced by quest/milestone rewards) and `life_essence`
   (item-backed, wraps the Hytale `Ingredient_Life_Essence` item).
 - **The Mastery Point ladder** (`Server/ZiggfreedCommon/Achievements/MMOSkillTree/Mastery/PerSkill/`)
@@ -63,7 +63,10 @@ all work normally. The differences:
 
 - The **Mastery** menu tab and Mastery page are hidden
   (`MasteryConfig.isAvailable()` returns false on an empty track set).
-- The **Currency** sidebar / page is hidden (`CurrencyConfig.isAvailable()`).
+- There is no Mastery Point wallet, and Life Essence exists only if another pack, such as
+  the bounty pack, ships it. The MMO's `Currency` feature (`MmoFeatures`), and the
+  onboarding's currencies topic it gates, stays off until some pack defines a wallet
+  (ziggfreed-common's `CurrencyConfig` lists none enabled).
 - No Mastery Points wait in the achievement book for skill levels.
 - The `/mmocurrency` and `/mmomastery` admin commands report "no currencies /
   no tracks configured".
