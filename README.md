@@ -21,9 +21,10 @@ hides the Mastery and Currency UI tabs unless it's installed.
   switch: `enchanting_mastery` is on; `acrobatics_mastery` and
   `fishing_mastery` ship with `"Enabled": false` and will activate in a
   future pack release.
-- **2 currencies** (`Server/ZiggfreedCommon/Currencies/MMOSkillTree/*.json`) - `mastery_point`
-  (counter-backed, paced by quest/milestone rewards) and `life_essence`
-  (item-backed, wraps the Hytale `Ingredient_Life_Essence` item).
+- **1 currency** (`Server/ZiggfreedCommon/Currencies/MMOSkillTree/Mastery_Point.json`) - `mastery_point`
+  (counter-backed, paced by quest/milestone rewards). The `life_essence` wallet the
+  mastery prices also use (item-backed, it wraps the Hytale `Ingredient_Life_Essence` item)
+  comes with MMO Skill Tree itself.
 - **The Mastery Point ladder** (`Server/ZiggfreedCommon/Achievements/MMOSkillTree/Mastery/PerSkill/`)
   - one Mastery Point at every 15th level of every skill, 15 to 195, which the
   player collects from the Mastery section of the achievement book. `Mastery_Point_Base`
@@ -63,13 +64,12 @@ all work normally. The differences:
 
 - The **Mastery** menu tab and Mastery page are hidden
   (`MasteryConfig.isAvailable()` returns false on an empty track set).
-- There is no Mastery Point wallet, and Life Essence exists only if another pack, such as
-  the bounty pack, ships it. The MMO's `Currency` feature (`MmoFeatures`), and the
-  onboarding's currencies topic it gates, stays off until some pack defines a wallet
-  (ziggfreed-common's `CurrencyConfig` lists none enabled).
+- There is no Mastery Point wallet. Life Essence still comes with MMO Skill Tree itself,
+  so the MMO's `Currency` feature (`MmoFeatures`) and the onboarding's currencies topic
+  it gates stay on.
 - No Mastery Points wait in the achievement book for skill levels.
-- The `/mmocurrency` and `/mmomastery` admin commands report "no currencies /
-  no tracks configured".
+- The `/mmomastery` admin command reports "no tracks configured", and `/mmocurrency`
+  lists only Life Essence.
 
 ## Authoring your own pack on top
 
