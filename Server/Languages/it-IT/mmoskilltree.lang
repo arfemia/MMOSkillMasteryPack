@@ -86,10 +86,6 @@ reputation.mmo_mastery_trainer.earn.week = Una settimana di lezioni paga di più
 shop.convert_mastery_point.title = Infusione di Maestria
 shop.convert_mastery_point.desc = Converti i tuoi guadagni in una maestria piu' profonda.
 
-# --- Valute (currency.<id>.name, risolte per convenzione; id = nome del file in minuscolo) ---
-currency.mastery_point.name = Punto Maestria
-currency.mastery_point.amount = {0, number} {0, plural, one {Punto Maestria} other {Punti Maestria}}
-
 # --- Counted reward-chip label (the Currency reward kind; {0} = Amount) ---
 reward.currency.mastery_point = +{0} Punti Maestria
 
@@ -249,10 +245,6 @@ mastery.sst_eternal.desc = Ogni acquisto lima la ricarica di Passo d'Ombra; ognu
 mastery.ss_eternal.desc = Ogni acquisto indurisce i danni di Colpo di Scudo; ognuno costa piu' del precedente.
 mastery.ww_eternal.desc = Ogni acquisto affila i danni di Turbine (colpo e lancio); ognuno costa piu' del precedente.
 mastery.woo_eternal.desc = Ogni acquisto spinge un po' più in alto la probabilità di drop bonus della tua maestria di Woodcutting; ognuno costa più del precedente.
-
-# --- La scala dei punti di maestria per abilità ({0} = il nome dell'abilità, {1} = il livello del gradino) ---
-achievement.mastery_points.title = {0} Livello {1}
-achievement.mastery_points.desc = Raggiungi il livello {1} in {0}.
 
 # --- Percorsi di maestria per scuola di danno (mastery.<trackId>.title, per convenzione) ---
 mastery.fire_school_mastery.title = Maestria del Fuoco

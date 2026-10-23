@@ -86,10 +86,6 @@ reputation.mmo_mastery_trainer.earn.week = Eine Woche Unterricht zahlt extra.
 shop.convert_mastery_point.title = Mastery-Infusion
 shop.convert_mastery_point.desc = Wandle deine Einkünfte in tiefere Mastery um.
 
-# --- Währungen (currency.<id>.name, per Konvention aufgelöst; id = Dateiname in Kleinbuchstaben) ---
-currency.mastery_point.name = Mastery-Punkt
-currency.mastery_point.amount = {0, number} {0, plural, one {Mastery-Punkt} other {Mastery-Punkte}}
-
 # --- Counted reward-chip label (the Currency reward kind; {0} = Amount) ---
 reward.currency.mastery_point = +{0} Mastery-Punkte
 
@@ -133,10 +129,6 @@ achievement.pack_essence_hoarder_100.title = Essenz-Hamster I
 achievement.pack_essence_hoarder_100.desc = Sammle {0} Lebensessenz auf.
 achievement.pack_essence_hoarder_10000.title = Essenz-Hamster II
 achievement.pack_essence_hoarder_10000.desc = Sammle {0} Lebensessenz auf.
-
-# --- The per-skill mastery point ladder ({0} = the skill's name, {1} = the rung's level) ---
-achievement.mastery_points.title = {0} Stufe {1}
-achievement.mastery_points.desc = Erreiche Stufe {1} in {0}.
 
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Geschärft

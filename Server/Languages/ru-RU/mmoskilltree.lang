@@ -86,10 +86,6 @@ reputation.mmo_mastery_trainer.earn.week = Неделя уроков прино�
 shop.convert_mastery_point.title = Вливание мастерства
 shop.convert_mastery_point.desc = Обменяйте нажитое на более глубокое мастерство.
 
-# --- Валюты (currency.<id>.name, разрешается по соглашению; id = имя файла в нижнем регистре) ---
-currency.mastery_point.name = Очко мастерства
-currency.mastery_point.amount = {0, number} {0, plural, one {Очко мастерства} few {Очка мастерства} many {Очков мастерства} other {Очка мастерства}}
-
 # --- Counted reward-chip label (the Currency reward kind; {0} = Amount) ---
 reward.currency.mastery_point = +{0} Очков мастерства
 
@@ -161,10 +157,6 @@ objective.mastery_trainer.tier_3 = Достигните ранга «Гросс�
 title.mmo_mastery_grandmaster.name = Гроссмейстер
 title.mmo_mastery_grandmaster.flavor = Ранг гроссмейстера у Учителя мастерства достигнут.
 title.mmo_mastery_grandmaster.display = {0}, Гроссмейстер
-
-# --- The per-skill mastery point ladder ({0} = the skill's name, {1} = the rung's level) ---
-achievement.mastery_points.title = {0}: уровень {1}
-achievement.mastery_points.desc = Достигните уровня {1} в навыке «{0}».
 
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Острота

@@ -86,10 +86,6 @@ reputation.mmo_mastery_trainer.earn.week = Egy hét lecke többet fizet.
 shop.convert_mastery_point.title = Mastery Infúzió
 shop.convert_mastery_point.desc = Alakítsd a szerzeményeidet mélyebb masteryvé.
 
-# --- Valuták (currency.<id>.name, konvenció szerint feloldva; id = a fájlnév kisbetűsítve) ---
-currency.mastery_point.name = Mastery Pont
-currency.mastery_point.amount = {0, number} {0, plural, one {Mastery Pont} other {Mastery Pont}}
-
 # --- Counted reward-chip label (the Currency reward kind; {0} = Amount) ---
 reward.currency.mastery_point = +{0} Mastery Pont
 
@@ -161,10 +157,6 @@ objective.mastery_trainer.tier_3 = Érd el a Nagymester rangot a Mastery Edzőn�
 title.mmo_mastery_grandmaster.name = Nagymester
 title.mmo_mastery_grandmaster.flavor = Nagymester rangot ért el a Mastery Edzőnél.
 title.mmo_mastery_grandmaster.display = {0}, Nagymester
-
-# --- Képességenkénti mastery pont létra ({0} = a képesség neve, {1} = a fokozat szintje) ---
-achievement.mastery_points.title = {0} {1}. szint
-achievement.mastery_points.desc = Érj el {1}. szintet ebben: {0}.
 
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Kiélezett

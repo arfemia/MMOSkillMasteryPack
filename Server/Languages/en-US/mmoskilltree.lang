@@ -1,8 +1,10 @@
-# MMOSkillMasteryPack - quest titles + flavor, currency names, and other display text.
+# MMOSkillMasteryPack - quest titles + flavor, mastery track names, and other display text.
 # Keys are bare; Hytale's I18nModule prepends the filename, so each loads as
 # mmoskilltree.<key> and the mod resolves it by convention (quest.<id>.title / .flavor,
-# currency.<id>.name, shop.<id>.title / .desc, ...). Add a <locale>/mmoskilltree.lang with
-# the same keys to translate; missing keys fall back to English per key.
+# shop.<id>.title / .desc, ...). The Mastery Point wallet's name and the Mastery Point
+# ladder's lines ship with MMO Skill Tree, beside the wallet and the ladder themselves.
+# Add a <locale>/mmoskilltree.lang with the same keys to translate; missing keys fall back
+# to English per key.
 
 # --- Quests (quest.<id>.title / .flavor, resolved by convention; matches the bounty pattern) ---
 quest.meet_the_mastery_trainer.title = A Word with the Trainer
@@ -85,10 +87,6 @@ reputation.mmo_mastery_trainer.earn.week = A week of lessons pays extra.
 # --- Token Shop offers shipped by this pack (explicit titleKey/descriptionKey -> these keys) ---
 shop.convert_mastery_point.title = Mastery Infusion
 shop.convert_mastery_point.desc = Convert your earnings into deeper mastery.
-
-# --- Currencies (currency.<id>.name, resolved by convention; id = filename lowercased) ---
-currency.mastery_point.name = Mastery Point
-currency.mastery_point.amount = {0, number} {0, plural, one {Mastery Point} other {Mastery Points}}
 
 # --- Counted reward-chip label (the Currency reward kind; {0} = Amount) ---
 reward.currency.mastery_point = +{0} Mastery Points
@@ -258,10 +256,6 @@ objective.mastery_trainer.tier_3 = Reach Grandmaster with the Mastery Trainer
 title.mmo_mastery_grandmaster.name = Grandmaster
 title.mmo_mastery_grandmaster.flavor = Reached Grandmaster with the Mastery Trainer.
 title.mmo_mastery_grandmaster.display = {0}, Grandmaster
-
-# --- The per-skill mastery point ladder ({0} = the skill's name, {1} = the rung's level) ---
-achievement.mastery_points.title = {0} Level {1}
-achievement.mastery_points.desc = Reach {0} level {1}.
 
 # --- Damage-school mastery tracks (mastery.<trackId>.title, resolved by convention) ---
 mastery.fire_school_mastery.title = Fire Mastery

@@ -86,10 +86,6 @@ reputation.mmo_mastery_trainer.earn.week = Une semaine de leçons rapporte un su
 shop.convert_mastery_point.title = Infusion de maîtrise
 shop.convert_mastery_point.desc = Convertissez vos gains en une maîtrise plus profonde.
 
-# --- Monnaies (currency.<id>.name, résolu par convention ; id = nom de fichier en minuscules) ---
-currency.mastery_point.name = Point de maîtrise
-currency.mastery_point.amount = {0, number} {0, plural, one {Point de maîtrise} other {Points de maîtrise}}
-
 # --- Counted reward-chip label (the Currency reward kind; {0} = Amount) ---
 reward.currency.mastery_point = +{0} Points de maîtrise
 
@@ -162,9 +158,6 @@ objective.mastery_trainer.tier_3 = Atteignez le rang de Grand maître auprès de
 title.mmo_mastery_grandmaster.name = Grand maître
 title.mmo_mastery_grandmaster.flavor = A atteint le rang de Grand maître auprès de l'entraîneur de maîtrise.
 title.mmo_mastery_grandmaster.display = {0}, Grand maître
-
-achievement.mastery_points.title = {0} niveau {1}
-achievement.mastery_points.desc = Atteignez le niveau {1} en {0}.
 
 # --- Filled translations (1.3.0 exhaustive localization pass; en-US key order) ---
 mastery.node.t1_dmg.title = Affûté

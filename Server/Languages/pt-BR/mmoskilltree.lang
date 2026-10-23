@@ -86,10 +86,6 @@ reputation.mmo_mastery_trainer.earn.week = Uma semana de lições paga um extra.
 shop.convert_mastery_point.title = Infusão de Maestria
 shop.convert_mastery_point.desc = Converta seus ganhos em uma maestria mais profunda.
 
-# --- Moedas (currency.<id>.name, resolvido por convenção; id = nome do arquivo em minúsculas) ---
-currency.mastery_point.name = Ponto de Maestria
-currency.mastery_point.amount = {0, number} {0, plural, one {Ponto de Maestria} other {Pontos de Maestria}}
-
 # --- Counted reward-chip label (the Currency reward kind; {0} = Amount) ---
 reward.currency.mastery_point = +{0} Pontos de Maestria
 
@@ -133,9 +129,6 @@ achievement.pack_essence_hoarder_100.title = Acumulador de Essência I
 achievement.pack_essence_hoarder_100.desc = Pegue {0} unidades de Essência da Vida.
 achievement.pack_essence_hoarder_10000.title = Acumulador de Essência II
 achievement.pack_essence_hoarder_10000.desc = Pegue {0} unidades de Essência da Vida.
-
-achievement.mastery_points.title = {0} Nível {1}
-achievement.mastery_points.desc = Alcance o nível {1} em {0}.
 
 # --- A escada de níveis do Treinador de Maestria (achievement.<id>.title / .desc, a linha de etapa de cada critério) ---
 achievement.mastery_trainer_friendly.title = Aluno

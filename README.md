@@ -1,10 +1,11 @@
 # MMO Skill Mastery - Standalone Content Pack
 
-A Hytale asset pack that ships the **mastery system, currencies, and matching
-content** for the [MMO Skill Tree plugin](https://wintergreen-solutions.com). As
-of plugin version 1.2.0 the mastery + currency systems are no longer bundled
-inside the plugin jar - this pack is the source of that content, and the plugin
-hides the Mastery and Currency UI tabs unless it's installed.
+A Hytale asset pack that ships the **mastery system and matching content** for
+the [MMO Skill Tree plugin](https://wintergreen-solutions.com). The mastery tracks
+are not bundled inside the plugin jar - this pack is the source of that content,
+and the plugin hides the Mastery UI tab unless it's installed. The two wallets the
+tracks are priced in, Mastery Points and Life Essence, and the Mastery Point ladder
+come with MMO Skill Tree itself from 2.0.0.
 
 ## What's included
 
@@ -21,16 +22,12 @@ hides the Mastery and Currency UI tabs unless it's installed.
   switch: `enchanting_mastery` is on; `acrobatics_mastery` and
   `fishing_mastery` ship with `"Enabled": false` and will activate in a
   future pack release.
-- **1 currency** (`Server/ZiggfreedCommon/Currencies/MMOSkillTree/Mastery_Point.json`) - `mastery_point`
-  (counter-backed, paced by quest/milestone rewards). The `life_essence` wallet the
-  mastery prices also use (item-backed, it wraps the Hytale `Ingredient_Life_Essence` item)
-  comes with MMO Skill Tree itself.
-- **The Mastery Point ladder** (`Server/ZiggfreedCommon/Achievements/MMOSkillTree/Mastery/PerSkill/`)
-  - one Mastery Point at every 15th level of every skill, 15 to 195, which the
-  player collects from the Mastery section of the achievement book. `Mastery_Point_Base`
-  holds the shared body and each `Mastery_Point_<level>` file sets its own level; the
-  plugin stamps each one out for every skill the server runs, custom skills included,
-  as `<skill>_mastery_<level>`.
+- **No currency of its own.** The tracks are priced in `mastery_point` (counter-backed)
+  and `life_essence` (item-backed, it wraps the Hytale `Ingredient_Life_Essence` item),
+  and both wallets come with MMO Skill Tree itself. So does the Mastery Point ladder
+  (one Mastery Point at every 15th level of every skill, 15 to 195, collected from the
+  Mastery section of the achievement book, stamped as `<skill>_mastery_<level>`), which
+  this pack's quests and achievements sit beside.
 - **Mastery-themed quests + achievements** (`Server/ZiggfreedCommon/Quests/MMOSkillTree/Mastery/`,
   `Server/ZiggfreedCommon/Achievements/MMOSkillTree/Mastery/`) - content that uses the mastery /
   currency surface (e.g. "purchase your first mastery node", "complete a
@@ -64,12 +61,11 @@ all work normally. The differences:
 
 - The **Mastery** menu tab and Mastery page are hidden
   (`MasteryConfig.isAvailable()` returns false on an empty track set).
-- There is no Mastery Point wallet. Life Essence still comes with MMO Skill Tree itself,
+- Both wallets, Mastery Points and Life Essence, still come with MMO Skill Tree itself,
   so the MMO's `Currency` feature (`MmoFeatures`) and the onboarding's currencies topic
-  it gates stay on.
-- No Mastery Points wait in the achievement book for skill levels.
-- The `/mmomastery` admin command reports "no tracks configured", and `/mmocurrency`
-  lists only Life Essence.
+  it gates stay on, and Mastery Points still wait in the achievement book every 15 levels
+  of each skill, for the Techniques a trainer teaches.
+- The `/mmomastery` admin command reports "no tracks configured".
 
 ## Authoring your own pack on top
 
@@ -89,6 +85,8 @@ plugin repo). To extend or override what this pack ships:
 
 ## Sync rule
 
-This pack is the source-of-truth for the mastery / currency content. The plugin
-no longer ships defaults for these types; if you change a track or currency
-here, the change reaches players when the pack is reloaded.
+This pack is the source-of-truth for the mastery tracks and their quests and
+achievements. The plugin ships no defaults for these types; if you change a track
+here, the change reaches players when the pack is reloaded. The wallets and the
+Mastery Point ladder are MMO Skill Tree's own: retune them with a same-named file
+in your own pack, never by copying them into this one.
