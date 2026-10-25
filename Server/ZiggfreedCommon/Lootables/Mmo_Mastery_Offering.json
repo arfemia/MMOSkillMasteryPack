@@ -12,14 +12,14 @@
     "THE ESSENCE ROLL IS A LADDER, which is what makes the daily grow with the player instead of",
     "paying a beginner and a veteran the same handful. Its Factors are summed into one score and the",
     "Floors are read against that score; floors are NOT cumulative, so the highest one reached wins",
-    "and only its Grants fire. Two things feed the score, weighted equally: combat level, so the",
-    "tribute pays better as the player gets stronger, and luck, so investing in luck pays here as",
-    "well as in the ground.",
+    "and only its Grants fire. Two things feed the score: combat level, so the tribute pays better",
+    "as the player gets stronger, and luck, so investing in luck pays here as well as in the ground",
+    "and on a kill: the gathering yield and the kill yield at half weight each.",
     "",
-    "UNITS, the one trap worth knowing. Both channels are read as WHOLE NUMBERS: MMO_Luck stores",
+    "UNITS, the one trap worth knowing. Every channel is read as a WHOLE NUMBER: the yields store",
     "whole percent points, so a heavily invested player reads near 100 rather than near 1, and",
     "MMO_CombatLevel is a level, not a fraction. The floors below are therefore written on a scale",
-    "of roughly 0 to 200. Never compose MMO_Luck together with the mmoskilltree:station_luck",
+    "of roughly 0 to 200. Never compose a yield together with the mmoskilltree:station_luck",
     "aggregate: that one returns a fraction and counts the same investment twice.",
     "",
     "The mastery point on the second roll is the one number to think about before retuning: a point",
@@ -48,8 +48,13 @@
           },
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Luck",
-            "Weight": 1.0
+            "Param": "GatherYield",
+            "Weight": 0.5
+          },
+          {
+            "Factor": "hytale:stat",
+            "Param": "KillYield",
+            "Weight": 0.5
           }
         ],
         "Floors": [
