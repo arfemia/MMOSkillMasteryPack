@@ -14,7 +14,9 @@
     "Floors are read against that score; floors are NOT cumulative, so the highest one reached wins",
     "and only its Grants fire. Two things feed the score: combat level, so the tribute pays better",
     "as the player gets stronger, and luck, so investing in luck pays here as well as in the ground",
-    "and on a kill: the gathering yield and the kill yield at half weight each.",
+    "and on a kill: the gathering yield and the kill yield at half weight each. The gathering yield is",
+    "read through mmoskilltree:skill_stat with no skill (GatherYield@), so it counts gear and buffs",
+    "but no gathering skill's talents, whatever tool is in hand when the offering is collected.",
     "",
     "UNITS, the one trap worth knowing. Every channel is read as a WHOLE NUMBER: the yields store",
     "whole percent points, so a heavily invested player reads near 100 rather than near 1, and",
@@ -47,8 +49,8 @@
             "Weight": 1.0
           },
           {
-            "Factor": "hytale:stat",
-            "Param": "GatherYield",
+            "Factor": "mmoskilltree:skill_stat",
+            "Param": "GatherYield@",
             "Weight": 0.5
           },
           {
