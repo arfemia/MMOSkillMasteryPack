@@ -5,7 +5,7 @@
     "Factors": [
       {
         "Factor": "hytale:stat",
-        "Param": "MMO_Level_DEFENSE",
+        "Param": "Level_Defense",
         "Min": 15
       }
     ]
@@ -64,7 +64,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_DEFENSE",
+            "Param": "Level_Defense",
             "Min": 40
           }
         ]
@@ -98,7 +98,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_DEFENSE",
+            "Param": "Level_Defense",
             "Min": 70
           }
         ]
@@ -141,7 +141,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_DEFENSE",
+            "Param": "Level_Defense",
             "Min": 92
           }
         ]

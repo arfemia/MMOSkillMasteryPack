@@ -33,7 +33,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_MAGIC",
+            "Param": "Level_Magic",
             "Min": 40
           }
         ]
@@ -67,7 +67,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_MAGIC",
+            "Param": "Level_Magic",
             "Min": 55
           }
         ]
@@ -105,7 +105,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_MAGIC",
+            "Param": "Level_Magic",
             "Min": 70
           }
         ]
@@ -143,7 +143,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_MAGIC",
+            "Param": "Level_Magic",
             "Min": 92
           }
         ]

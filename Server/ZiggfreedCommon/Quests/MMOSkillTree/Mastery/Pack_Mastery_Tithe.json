@@ -43,7 +43,7 @@
   "Requires": {
     "Factors": [
       { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 },
-      { "Factor": "hytale:stat", "Param": "MMO_TotalLevel", "Min": 500 },
+      { "Factor": "hytale:stat", "Param": "TotalLevel", "Min": 500 },
       { "Factor": "ziggfreedcommon:achievement_earned", "Param": "pack_mastery_hoarder_300", "Min": 1 }
     ]
   },

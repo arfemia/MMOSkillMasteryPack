@@ -5,7 +5,7 @@
     "Factors": [
       {
         "Factor": "hytale:stat",
-        "Param": "MMO_Level_AXES",
+        "Param": "Level_Axes",
         "Min": 20
       }
     ]
@@ -64,7 +64,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_AXES",
+            "Param": "Level_Axes",
             "Min": 40
           }
         ]
@@ -98,7 +98,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_AXES",
+            "Param": "Level_Axes",
             "Min": 70
           }
         ]
@@ -141,7 +141,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_AXES",
+            "Param": "Level_Axes",
             "Min": 92
           }
         ]

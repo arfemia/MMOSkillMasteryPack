@@ -1,0 +1,9 @@
+{
+  "$Comment": "Whole percent more damage on every hit of the Whirlwind ability (10 is +10%), the line the Whirlwind mastery's damage nodes raise. It counts only on Whirlwind's own hits, whatever weapon is in hand. Any item's StatModifiers raise it like any stat (Additive on the Max). Base 0; Min is a generous negative so a subtractive modifier never clamps.",
+  "InitialValue": 0.0,
+  "Min": -1000.0,
+  "Max": 0.0,
+  "Shared": false,
+  "HideFromTooltip": false,
+  "Tags": { "ZigGrantFamily": [ "Combat" ] }
+}

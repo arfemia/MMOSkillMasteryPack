@@ -7,6 +7,7 @@
       "Values": [
         {
           "skill": "ARCHERY",
+          "skillTitled": "Archery",
           "skillLower": "archery",
           "prefix": "arc",
           "dmgIngredient": "Ingredient_Lightning_Essence",
@@ -16,6 +17,7 @@
         },
         {
           "skill": "ARTILLERY",
+          "skillTitled": "Artillery",
           "skillLower": "artillery",
           "prefix": "art",
           "dmgIngredient": "Ingredient_Fire_Essence",
@@ -25,6 +27,7 @@
         },
         {
           "skill": "AXES",
+          "skillTitled": "Axes",
           "skillLower": "axes",
           "prefix": "axe",
           "dmgIngredient": "Ingredient_Lightning_Essence",
@@ -34,6 +37,7 @@
         },
         {
           "skill": "BLUNT",
+          "skillTitled": "Blunt",
           "skillLower": "blunt",
           "prefix": "blu",
           "dmgIngredient": "Ingredient_Lightning_Essence",
@@ -43,6 +47,7 @@
         },
         {
           "skill": "DAGGERS",
+          "skillTitled": "Daggers",
           "skillLower": "daggers",
           "prefix": "dag",
           "dmgIngredient": "Ingredient_Void_Essence",
@@ -52,6 +57,7 @@
         },
         {
           "skill": "POLEARMS",
+          "skillTitled": "Polearms",
           "skillLower": "polearms",
           "prefix": "pol",
           "dmgIngredient": "Ingredient_Lightning_Essence",
@@ -61,6 +67,7 @@
         },
         {
           "skill": "STAVES",
+          "skillTitled": "Staves",
           "skillLower": "staves",
           "prefix": "sta",
           "dmgIngredient": "Ingredient_Fire_Essence",
@@ -70,6 +77,7 @@
         },
         {
           "skill": "SWORDS",
+          "skillTitled": "Swords",
           "skillLower": "swords",
           "prefix": "swo",
           "dmgIngredient": "Ingredient_Lightning_Essence",
@@ -79,6 +87,7 @@
         },
         {
           "skill": "UNARMED",
+          "skillTitled": "Unarmed",
           "skillLower": "unarmed",
           "prefix": "una",
           "dmgIngredient": "Ingredient_Lightning_Essence",
@@ -95,7 +104,7 @@
       "Factors": [
         {
           "Factor": "hytale:stat",
-          "Param": "MMO_Level_{skill}",
+          "Param": "Level_{skillTitled}",
           "Min": 16
         }
       ]
@@ -161,7 +170,7 @@
           "Factors": [
             {
               "Factor": "hytale:stat",
-              "Param": "MMO_Level_{skill}",
+              "Param": "Level_{skillTitled}",
               "Min": 40
             }
           ]
@@ -198,7 +207,7 @@
           "Factors": [
             {
               "Factor": "hytale:stat",
-              "Param": "MMO_Level_{skill}",
+              "Param": "Level_{skillTitled}",
               "Min": 40
             }
           ]
@@ -230,7 +239,7 @@
           "Factors": [
             {
               "Factor": "hytale:stat",
-              "Param": "MMO_Level_{skill}",
+              "Param": "Level_{skillTitled}",
               "Min": 70
             }
           ],
@@ -295,7 +304,7 @@
           "Factors": [
             {
               "Factor": "hytale:stat",
-              "Param": "MMO_Level_{skill}",
+              "Param": "Level_{skillTitled}",
               "Min": 92
             }
           ]

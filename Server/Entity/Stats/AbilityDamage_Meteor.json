@@ -1,0 +1,9 @@
+{
+  "$Comment": "Whole percent more damage on every hit of the Meteor ability (10 is +10%), the line the Meteor mastery's damage nodes raise. It counts only on Meteor's own hits, whatever weapon is in hand. Any item's StatModifiers raise it like any stat (Additive on the Max). Base 0; Min is a generous negative so a subtractive modifier never clamps.",
+  "InitialValue": 0.0,
+  "Min": -1000.0,
+  "Max": 0.0,
+  "Shared": false,
+  "HideFromTooltip": false,
+  "Tags": { "ZigGrantFamily": [ "Combat" ] }
+}

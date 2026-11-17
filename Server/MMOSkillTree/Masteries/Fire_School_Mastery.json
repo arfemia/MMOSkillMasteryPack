@@ -60,7 +60,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_CombatLevel",
+            "Param": "CombatLevel",
             "Min": 40
           }
         ],
@@ -116,7 +116,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_CombatLevel",
+            "Param": "CombatLevel",
             "Min": 55
           }
         ]
@@ -152,7 +152,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_CombatLevel",
+            "Param": "CombatLevel",
             "Min": 70
           }
         ]
@@ -198,7 +198,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_CombatLevel",
+            "Param": "CombatLevel",
             "Min": 80
           }
         ]
@@ -269,7 +269,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_CombatLevel",
+            "Param": "CombatLevel",
             "Min": 80
           }
         ]
@@ -309,7 +309,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_CombatLevel",
+            "Param": "CombatLevel",
             "Min": 76
           }
         ]
@@ -345,7 +345,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_CombatLevel",
+            "Param": "CombatLevel",
             "Min": 88
           }
         ]
@@ -385,7 +385,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_CombatLevel",
+            "Param": "CombatLevel",
             "Min": 92
           }
         ],

@@ -5,7 +5,7 @@
     "Factors": [
       {
         "Factor": "hytale:stat",
-        "Param": "MMO_Level_ARCHERY",
+        "Param": "Level_Archery",
         "Min": 15
       }
     ]
@@ -64,7 +64,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_ARCHERY",
+            "Param": "Level_Archery",
             "Min": 40
           }
         ]
@@ -98,7 +98,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_ARCHERY",
+            "Param": "Level_Archery",
             "Min": 70
           }
         ]
@@ -144,7 +144,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_ARCHERY",
+            "Param": "Level_Archery",
             "Min": 92
           }
         ]

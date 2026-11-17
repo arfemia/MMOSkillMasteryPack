@@ -20,7 +20,7 @@
     "",
     "UNITS, the one trap worth knowing. Every channel is read as a WHOLE NUMBER: the yields store",
     "whole percent points, so a heavily invested player reads near 100 rather than near 1, and",
-    "MMO_CombatLevel is a level, not a fraction. The floors below are therefore written on a scale",
+    "CombatLevel is a level, not a fraction. The floors below are therefore written on a scale",
     "of roughly 0 to 200. Never compose a yield together with the mmoskilltree:station_luck",
     "aggregate: that one returns a fraction and counts the same investment twice.",
     "",
@@ -45,7 +45,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_CombatLevel",
+            "Param": "CombatLevel",
             "Weight": 1.0
           },
           {

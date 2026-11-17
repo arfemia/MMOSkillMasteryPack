@@ -7,6 +7,7 @@
       "Values": [
         {
           "skill": "ACROBATICS",
+          "skillTitled": "Acrobatics",
           "skillLower": "acrobatics",
           "prefix": "acr",
           "ingredient": "Ingredient_Lightning_Essence",
@@ -16,6 +17,7 @@
         },
         {
           "skill": "ENCHANTING",
+          "skillTitled": "Enchanting",
           "skillLower": "enchanting",
           "prefix": "enc",
           "ingredient": "Ingredient_Void_Essence",
@@ -25,6 +27,7 @@
         },
         {
           "skill": "FISHING",
+          "skillTitled": "Fishing",
           "skillLower": "fishing",
           "prefix": "fis",
           "ingredient": "Ingredient_Water_Essence",
@@ -42,7 +45,7 @@
       "Factors": [
         {
           "Factor": "hytale:stat",
-          "Param": "MMO_Level_{skill}",
+          "Param": "Level_{skillTitled}",
           "Min": 5
         }
       ]

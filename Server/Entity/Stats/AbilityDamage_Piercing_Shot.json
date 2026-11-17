@@ -1,0 +1,9 @@
+{
+  "$Comment": "Whole percent more damage on every hit of the Piercing Shot ability (10 is +10%), the line the Piercing Shot mastery's damage nodes raise. It counts only on Piercing Shot's own hits, whatever weapon is in hand. The id ends in the ability's own id, piercing_shot, each word capitalized. Any item's StatModifiers raise it like any stat (Additive on the Max). Base 0; Min is a generous negative so a subtractive modifier never clamps.",
+  "InitialValue": 0.0,
+  "Min": -1000.0,
+  "Max": 0.0,
+  "Shared": false,
+  "HideFromTooltip": false,
+  "Tags": { "ZigGrantFamily": [ "Combat" ] }
+}

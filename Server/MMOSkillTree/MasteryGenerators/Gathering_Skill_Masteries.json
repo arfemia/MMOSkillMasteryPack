@@ -7,6 +7,7 @@
       "Values": [
         {
           "skill": "HARVESTING",
+          "skillTitled": "Harvesting",
           "skillLower": "harvesting",
           "prefix": "har",
           "ingredient": "Ingredient_Water_Essence",
@@ -14,6 +15,7 @@
         },
         {
           "skill": "MINING",
+          "skillTitled": "Mining",
           "skillLower": "mining",
           "prefix": "min",
           "ingredient": "Ingredient_Crystal_Blue",
@@ -21,6 +23,7 @@
         },
         {
           "skill": "WOODCUTTING",
+          "skillTitled": "Woodcutting",
           "skillLower": "woodcutting",
           "prefix": "woo",
           "ingredient": "Ingredient_Water_Essence",
@@ -35,7 +38,7 @@
       "Factors": [
         {
           "Factor": "hytale:stat",
-          "Param": "MMO_Level_{skill}",
+          "Param": "Level_{skillTitled}",
           "Min": 5
         }
       ]
@@ -73,7 +76,7 @@
           "Factors": [
             {
               "Factor": "hytale:stat",
-              "Param": "MMO_Level_{skill}",
+              "Param": "Level_{skillTitled}",
               "Min": 40
             }
           ]
@@ -108,7 +111,7 @@
           "Factors": [
             {
               "Factor": "hytale:stat",
-              "Param": "MMO_Level_{skill}",
+              "Param": "Level_{skillTitled}",
               "Min": 70
             }
           ]
@@ -149,7 +152,7 @@
           "Factors": [
             {
               "Factor": "hytale:stat",
-              "Param": "MMO_Level_{skill}",
+              "Param": "Level_{skillTitled}",
               "Min": 92
             }
           ]

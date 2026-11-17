@@ -6,7 +6,7 @@
     "Factors": [
       {
         "Factor": "hytale:stat",
-        "Param": "MMO_Level_DAGGERS",
+        "Param": "Level_Daggers",
         "Min": 18
       }
     ]
@@ -89,7 +89,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_DAGGERS",
+            "Param": "Level_Daggers",
             "Min": 40
           }
         ]
@@ -124,7 +124,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_DAGGERS",
+            "Param": "Level_Daggers",
             "Min": 70
           }
         ]
@@ -168,7 +168,7 @@
         "Factors": [
           {
             "Factor": "hytale:stat",
-            "Param": "MMO_Level_DAGGERS",
+            "Param": "Level_Daggers",
             "Min": 92
           }
         ]
