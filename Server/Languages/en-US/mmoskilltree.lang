@@ -8,7 +8,7 @@
 
 # --- Quests (quest.<id>.title / .flavor, resolved by convention; matches the bounty pattern) ---
 quest.meet_the_mastery_trainer.title = A Word with the Trainer
-quest.meet_the_mastery_trainer.flavor = There's somebody else down here you should meet. They teach mastery. Cross the landing and say hello.
+quest.meet_the_mastery_trainer.flavor = There's somebody else in this hall you should meet. They teach mastery. They're up on the dais in the court, so go and say hello.
 quest.mastery_tribute.title = The Trainer's Due
 quest.mastery_tribute.flavor = Bring me essence and a few linen scraps, and put down some beasts on the way. I will give you something worth the walk. What, I could not tell you.
 quest.pack_first_milestone.title = The First Milestone
@@ -22,7 +22,7 @@ quest.pack_path_of_mastery.flavor = One good skill is not enough for what I teac
 quest.pack_mastery_tithe.title = Mastery Tithe
 quest.pack_mastery_tithe.flavor = The mastery codex takes a tithe of blood and timber. Put down a few creatures and chop a few logs.
 quest.mastery_tithe_credit.title = What You Already Paid
-quest.mastery_tithe_credit.flavor = I kept count of every tithe you sent me. Come and find me in the Forgotten Temple, and we will settle what all of it is worth now.
+quest.mastery_tithe_credit.flavor = I kept count of every tithe you sent me. Come and find me in the Adventurers' Hall, and we will settle what all of it is worth now.
 quest.mastery_lesson_week.title = A Week of Lessons
 quest.mastery_lesson_week.flavor = Do my lessons through the week and come back to me once you have a handful done. A missed day or two will not cost you the week.
 
@@ -70,7 +70,7 @@ board.mmo_mastery_lessons.grade.master = Master's
 
 # --- Mastery Trainer's Favor, the trainer's reputation (name, description, rank names, How to earn lines) ---
 reputation.mmo_mastery_trainer.name = Mastery Trainer's Favor
-reputation.mmo_mastery_trainer.flavor = The trainer in the Forgotten Temple keeps count of every lesson you finish. Each rank you reach pays out in the Mastery section of your achievement book.
+reputation.mmo_mastery_trainer.flavor = The trainer in the Adventurers' Hall keeps count of every lesson you finish. Each rank you reach pays out in the Mastery section of your achievement book.
 reputation.mmo_mastery_trainer.rank.neutral = Newcomer
 reputation.mmo_mastery_trainer.rank.friendly = Student
 reputation.mmo_mastery_trainer.rank.honored = Trusted Student
@@ -79,7 +79,7 @@ reputation.mmo_mastery_trainer.rank.exalted = Master
 reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_1 = Master II
 reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_2 = Master III
 reputation.mmo_mastery_trainer.rank.mastery_trainer_tier_3 = Grandmaster
-reputation.mmo_mastery_trainer.earn.lessons = Do the lessons on the Mastery Trainer's board in the Forgotten Temple.
+reputation.mmo_mastery_trainer.earn.lessons = Do the lessons on the Mastery Trainer's board in the Adventurers' Hall.
 reputation.mmo_mastery_trainer.earn.due = Pay the trainer's daily due.
 reputation.mmo_mastery_trainer.earn.tasks = Finish the trainer's other tasks.
 reputation.mmo_mastery_trainer.earn.week = A week of lessons pays extra.
@@ -296,5 +296,5 @@ dialogue.mmo_mastery_trainer.menu.opt.farewell = Farewell.
 dialogue.mmo_mastery_trainer.lessons_fresh.text = My board has fresh lessons on it today. Every one of them is done out in the world.\nFinish one and come back here to collect what it pays.
 dialogue.mmo_mastery_trainer.tithe_credit.text = You sent me a tithe for a long while, and I kept count.\nI teach lessons now, and I pay as you rise. What you already gave counts.
 dialogue.mmo_mastery_trainer.tithe_credit.opt.collect = What does it count for?
-dialogue.mmo_mastery_trainer.first_words.text = So the guide sent you down after all.\nA skill does not stop where its levels do. What comes after is what I teach. I call it mastery.
+dialogue.mmo_mastery_trainer.first_words.text = So the guide sent you over after all.\nA skill does not stop where its levels do. What comes after is what I teach. I call it mastery.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = The guide spoke of you.

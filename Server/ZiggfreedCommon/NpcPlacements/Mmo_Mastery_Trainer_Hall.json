@@ -1,0 +1,59 @@
+{
+  "$Comment": [
+    "The Mastery Trainer, standing on the dais in the court of MMO Skill Tree's Adventurers' Hall, the",
+    "MMO's district in the temple hub, facing the hall's door. The trainer is this pack's character end",
+    "to end: their look, their role, this placement and the conversation pressing F opens all ship",
+    "here. Interact names a conversation rather than a screen, because the trainer has quests to hand",
+    "out and a word to say before the mastery menu. Author Open or Dialogue, never both.",
+    "",
+    "Where names the hub's gameplay config, so the trainer stands in every hub copy and nowhere else.",
+    "Anchor is the hall's Mastery spot (Custom, Provider ziggfreedcommon:hub), so the trainer follows",
+    "the hall to whatever lot an owner moves it to and is absent when the hall stands nowhere. No",
+    "Parent on the temple standing: an Anchor group a child leaves out is inherited, so a child",
+    "would also look for the temple's spawn marker.",
+    "",
+    "Requires keeps the trainer away until the mastery feature is switched on; Lifecycle keeps their",
+    "chunk loaded, puts them back if something removes them, and raises their health beyond anything",
+    "that can be dealt. This placement authors no Identity.NpcId, so the character IS its role: the",
+    "pack's mastery quests bind to Mmo_Mastery_Trainer, and their progress carries over from the",
+    "temple untouched. The trainer's temple standing, Mmo_Mastery_Trainer_Temple, ships switched off. To",
+    "take the trainer out without editing this file, set Enabled false in",
+    "mods/ziggfreedcommon/npc-placements.json."
+  ],
+  "Name": "Mmo_Mastery_Trainer_Hall",
+  "Enabled": true,
+  "Where": {
+    "GameplayConfig": [
+      "ZiggfreedCommon_Hub"
+    ]
+  },
+  "Identity": {
+    "Role": "Mmo_Mastery_Trainer"
+  },
+  "Anchor": {
+    "Custom": {
+      "Provider": "ziggfreedcommon:hub",
+      "Params": {
+        "District": "Mmo_Adventurers_Hall",
+        "Anchor": "Mastery"
+      }
+    }
+  },
+  "Requires": {
+    "Factors": [
+      {
+        "Factor": "mmoskilltree:feature",
+        "Param": "mastery",
+        "Min": 1.0
+      }
+    ]
+  },
+  "Lifecycle": {
+    "KeepAlive": true,
+    "Respawn": true,
+    "Fortify": true
+  },
+  "Interact": {
+    "Dialogue": "Mmo_Mastery_Trainer"
+  }
+}

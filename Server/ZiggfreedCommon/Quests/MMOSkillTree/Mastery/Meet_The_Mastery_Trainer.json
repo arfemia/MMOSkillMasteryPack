@@ -1,11 +1,12 @@
 {
   "$Comment": [
-    "The introduction to mastery: the Adventurer's Guide, standing in the Forgotten Temple, points",
-    "the player at the trainer a few paces away across the same landing. The quest exists to make",
+    "The introduction to mastery: the Adventurer's Guide, at their post in MMO Skill Tree's",
+    "Adventurers' Hall in the temple hub, points the player at the trainer on the dais in the same",
+    "hall's court. The quest exists to make",
     "the player look up and notice them.",
     "",
     "Npc.ViewId names the guide's temple id, so the guide is who OFFERS it: it appears on their",
-    "quest list down in the temple, right after the meeting that brought the player there. The step",
+    "quest list in the hall, right after the meeting that brought the player there. The step",
     "names the trainer's role id instead, so the errand is taken from one character and discharged",
     "at another. That placement authors no Identity.NpcId, so the character IS the role, and any",
     "other standing of Mmo_Mastery_Trainer credits the step just as well.",
@@ -29,7 +30,7 @@
     "the trainer never appears at all.",
     "",
     "Listing.Hidden keeps it off open listings until it is taken; a giver always lists its own",
-    "quests, so the guide still offers it in the temple."
+    "quests, so the guide still offers it in the hall."
   ],
   "Text": {
     "TitleKey": "quest.meet_the_mastery_trainer.title",
