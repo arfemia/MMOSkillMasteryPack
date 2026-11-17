@@ -23,7 +23,7 @@
     "THE MENU. Every steady screen pulls in the trainer_menu group: the quest list, the lessons board",
     "(shown once the meeting or What You Already Paid is collected, the same two quests that open the",
     "board; the board itself, Mmo_Mastery_Lessons, opens only in the",
-    "Forgotten Temple), How am I doing? (the trainer's Reputation page, shown once the player has any",
+    "temple hub, where the trainer stands in the Adventurers' Hall), How am I doing? (the trainer's Reputation page, shown once the player has any",
     "standing with the trainer), the mastery menu, and farewell.",
     "",
     "The Header line mirrors the player's tracked objective at the top of the conversation.",

@@ -1,6 +1,12 @@
 {
   "$Comment": [
-    "The Mastery Trainer, standing in the Forgotten Temple across from the Adventurer's Guide.",
+    "The Mastery Trainer, standing in the Forgotten Temple. Switched off (Enabled false): the trainer",
+    "now stands on the dais in MMO Skill Tree's Adventurers' Hall, in the temple hub",
+    "(Mmo_Mastery_Trainer_Hall.json), and their lessons board opens there. On a server whose owner",
+    "switched the hall or the hub off, switch this standing back on in",
+    "mods/ziggfreedcommon/npc-placements.json with { \"Mmo_Mastery_Trainer_Temple\": { \"Enabled\": true } }",
+    "and add ForgottenTemple to the lessons board's Where (Boards/MMOSkillTree/Mmo_Mastery_Lessons.json).",
+    "",
     "The trainer is this pack's character end to end: their look, their role, this placement, and",
     "the conversation pressing F opens all ship here, so a server without the pack has no trainer",
     "to stand up. Interact names a conversation rather than a screen, because the trainer has",
@@ -27,7 +33,7 @@
     "stay out of the walls."
   ],
   "Name": "Mmo_Mastery_Trainer_Temple",
-  "Enabled": true,
+  "Enabled": false,
   "Where": {
     "GameplayConfig": [
       "ForgottenTemple"

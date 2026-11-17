@@ -16,8 +16,10 @@
     "Requires: the mastery feature at the top decides whether the board exists at all, and finishing A",
     "Word with the Trainer or What You Already Paid (AnyOf, quest_completed meet_the_mastery_trainer or",
     "mastery_tithe_credit) is what lets a player take anything off it, so a player who paid the Mastery",
-    "Tithe is never left at the trainer with nothing to do. Where keeps it in the Forgotten Temple: anywhere else it is left out of every list and opens",
-    "closed. The trainer's conversation opens it. Grades names each band for the badge on its rows:",
+    "Tithe is never left at the trainer with nothing to do. Where keeps it in the temple hub (its gameplay",
+    "config, ZiggfreedCommon_Hub), where the trainer stands in MMO Skill Tree's Adventurers' Hall: anywhere",
+    "else it is left out of every list and opens closed. A server that stands the trainer back in the",
+    "Forgotten Temple adds ForgottenTemple to the list. The trainer's conversation opens it. Grades names each band for the badge on its rows:",
     "TitleKey is its words, Color the badge's colour. Currencies shows the two wallets a lesson pays into.",
     "Every lesson's pay waits here until the player collects it (Rewards.Claim).",
     "",
@@ -55,5 +57,5 @@
       { "Factors": [ { "Factor": "ziggfreedcommon:quest_completed", "Param": "mastery_tithe_credit", "Min": 1 } ] }
     ]
   },
-  "Where": { "GameplayConfig": [ "ForgottenTemple" ] }
+  "Where": { "GameplayConfig": [ "ZiggfreedCommon_Hub" ] }
 }
