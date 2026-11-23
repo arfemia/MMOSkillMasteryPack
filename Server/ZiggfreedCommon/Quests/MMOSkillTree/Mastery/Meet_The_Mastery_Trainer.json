@@ -19,7 +19,8 @@
     "",
     "A talk step is credited by a MarkTalked beat inside the conversation, never by pressing F, so",
     "the trainer's dialogue carries one on the line the player picks. Re-point the step and that beat",
-    "has to move with it.",
+    "has to move with it. Its Qualifier \"\" counts only a talk credited with no qualifier, so the",
+    "trainer's First_Oath line (The First Oath's own credit) never ticks it.",
     "",
     "One mastery point is deliberate: it is enough to spend on the screen the quest just introduced,",
     "so the first visit is not a locked door. Edit Rewards to re-tune it.",
@@ -72,6 +73,7 @@
     "meet_trainer": {
       "Kind": "TALK_TO_NPC",
       "Target": "Mmo_Mastery_Trainer",
+      "Qualifier": "",
       "Amount": 1,
       "MatchMode": "EXACT",
       "Order": 1

@@ -4,9 +4,11 @@
     "Exalted. The last rung of the mastery_trainer_ranks ladder; Mastery_Trainer_Friendly.json explains how",
     "the seven rungs credit and pay.",
     "",
-    "Its mastery points sit in Rewards.Claim and wait in the book until collected. It also pays the title",
-    "Mmo_Mastery_Grandmaster (Titles/MMOSkillTree/) through the Title reward kind in Rewards.Auto, on",
-    "unlock: a title is the one thing an achievement pays without waiting to be collected."
+    "Its essence sits in Rewards.Claim and waits in the book until collected. It also pays the title",
+    "Mmo_Mastery_Grandmaster through the Title reward kind in Rewards.Auto, on unlock: a title is the one",
+    "thing an achievement pays without waiting to be collected. That title ships in MMO Skill Tree itself",
+    "under the same id, since a server keeps it whether or not this pack is installed; this pack ships",
+    "the other six rank titles."
   ],
   "Text": {
     "TitleKey": "achievement.mastery_trainer_tier_3.title",
@@ -34,6 +36,6 @@
   },
   "Rewards": {
     "Auto": [ { "Kind": "Title", "Params": { "Title": "Mmo_Mastery_Grandmaster" } } ],
-    "Claim": [ { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": 25 } } ]
+    "Claim": [ { "Kind": "Item", "Params": { "Item": "Ingredient_Life_Essence", "Count": 1400 } } ]
   }
 }

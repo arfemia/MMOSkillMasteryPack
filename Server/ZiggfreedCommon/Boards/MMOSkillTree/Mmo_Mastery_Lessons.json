@@ -20,7 +20,8 @@
     "the temple hub (ZiggfreedCommon_Hub), where they stand in MMO Skill Tree's Adventurers' Hall, and the",
     "Forgotten Temple (ForgottenTemple), where a server that switched the hall off stands them back.",
     "Anywhere else it is left out of every list and opens closed. The trainer's conversation opens it. Grades names each band for the badge on its rows:",
-    "TitleKey is its words, Color the badge's colour. Currencies shows the two wallets a lesson pays into.",
+    "TitleKey is its words, Color the badge's colour. Currencies shows the wallet a lesson pays into: a",
+    "lesson pays Essence of Life, standing and, at the Master's band, materials, never a Mastery Point.",
     "Every lesson's pay waits here until the player collects it (Rewards.Claim).",
     "",
     "To add a lesson, ship a contract that names Mmo_Mastery_Lessons and one of these bands in its Boards."
@@ -47,7 +48,7 @@
     "Mastery_Hard": { "TitleKey": "board.mmo_mastery_lessons.grade.hard", "Color": "#64b5f6" },
     "Mastery_Master": { "TitleKey": "board.mmo_mastery_lessons.grade.master", "Color": "#c08aff" }
   },
-  "Currencies": [ "Mastery_Point", "Life_Essence" ],
+  "Currencies": [ "Life_Essence" ],
   "Requires": {
     "Factors": [
       { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 }

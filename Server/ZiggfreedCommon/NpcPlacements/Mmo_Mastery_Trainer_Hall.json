@@ -18,7 +18,12 @@
     "pack's mastery quests bind to Mmo_Mastery_Trainer, and their progress carries over from the",
     "temple untouched. The trainer's temple standing, Mmo_Mastery_Trainer_Temple, ships switched off. To",
     "take the trainer out without editing this file, set Enabled false in",
-    "mods/ziggfreedcommon/npc-placements.json."
+    "mods/ziggfreedcommon/npc-placements.json.",
+    "",
+    "The Trainer block makes the trainer a trainer: the conversation's Teach me a Focus line opens their",
+    "trainer page (the Trainer destination), whose Learn part lists every pick whose Where names this",
+    "placement, a Focus's steps among them, and whose Quests part lists their quests. It names no Tracks,",
+    "so the page offers no talent reset: a Focus's steps are kept through one."
   ],
   "Name": "Mmo_Mastery_Trainer_Hall",
   "Enabled": true,
@@ -55,5 +60,8 @@
   },
   "Interact": {
     "Dialogue": "Mmo_Mastery_Trainer"
+  },
+  "Trainer": {
+    "Sections": [ { "Learn": {} }, { "Quests": {} }, { "Services": {} } ]
   }
 }

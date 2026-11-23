@@ -1,0 +1,70 @@
+{
+  "$Comment": [
+    "The Second Oath: the one-time quest whose reward opens a player's second oath slot. The Mastery",
+    "Trainer offers it once a Focus is finished, all five of its steps owned, which the Requires reads as",
+    "any Honed II step owned (ziggfreedcommon:track_picks_taken over Mmo_Focus_*_Honed_II, so a Focus a",
+    "pack adds counts with no edit here).",
+    "",
+    "Requires also asks for a sworn Focus (ziggfreedcommon:track_stance on the oath set Mmo_Focus, Min 1),",
+    "so it is taken with an oath standing, and for the slot key not owned yet",
+    "(ziggfreedcommon:track_pick_owned on Defense/Mmo_Focus_Slot_II, Max 0), so a player who already holds",
+    "the second slot is never offered it. Listing.ShowWhen shows it to anyone with a finished Focus and no",
+    "key, so a player with no oath sworn sees it locked, with the reason, at the trainer. Requires is asked",
+    "when the quest is taken: a quest step has no condition of its own, so once it is taken each kill",
+    "counts whether an oath is still held or not, and its words ask for no more than that.",
+    "",
+    "The kill step names no target, so any creature counts. Every kill happens out in the world: nothing",
+    "in the Adventurers' Hall or the Forgotten Temple can be fought. Npc.TurnInId 'giver' adds the walk",
+    "back to the trainer one order behind it, and Flow.HideLockedSteps keeps that walk off the list until",
+    "the kills are done.",
+    "",
+    "Its reward is the slot key, collected from the trainer's quest list like every reward here, never paid",
+    "on completion: owning Mmo_Focus_Slot_II on the Defense track is what opens slot II of the oath set",
+    "(TrackStances/MMOSkillTree/Mmo_Focus.json). The Pick reward kind teaches it, as one Rewards.Claim row:",
+    "{ \"Kind\": \"Pick\", \"Params\": { \"Track\": \"Defense\", \"Pick\": \"Mmo_Focus_Slot_II\" } }; a file with no",
+    "such row pays nothing. It pays no Mastery Point."
+  ],
+  "Text": {
+    "TitleKey": "quest.mastery_second_oath.title",
+    "FlavorKey": "quest.mastery_second_oath.flavor"
+  },
+  "Listing": {
+    "Icon": "Ingredient_Voidheart",
+    "Category": "main",
+    "MainLine": true,
+    "SortOrder": 60,
+    "Tags": ["Mastery", "Advanced"],
+    "ShowWhen": {
+      "Factors": [
+        { "Factor": "ziggfreedcommon:track_picks_taken", "Param": "Mmo_Focus_*_Honed_II", "Min": 1 },
+        { "Factor": "ziggfreedcommon:track_pick_owned", "Param": "Defense/Mmo_Focus_Slot_II", "Max": 0 }
+      ]
+    }
+  },
+  "Flow": {
+    "AutoAccept": false,
+    "AutoTrack": true,
+    "HideLockedSteps": true
+  },
+  "Npc": {
+    "ViewId": "Mmo_Mastery_Trainer",
+    "TurnInId": "giver"
+  },
+  "Requires": {
+    "Factors": [
+      { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 },
+      { "Factor": "ziggfreedcommon:track_picks_taken", "Param": "Mmo_Focus_*_Honed_II", "Min": 1 },
+      { "Factor": "ziggfreedcommon:track_pick_owned", "Param": "Defense/Mmo_Focus_Slot_II", "Max": 0 },
+      { "Factor": "ziggfreedcommon:track_stance", "Param": "Mmo_Focus", "Min": 1 }
+    ]
+  },
+  "Objectives": {
+    "defeat_foes": {
+      "Kind": "KILL_ENTITY",
+      "Target": "",
+      "Amount": 30,
+      "Order": 1,
+      "TextKey": "objective.text.mastery_second_oath.foes"
+    }
+  }
+}

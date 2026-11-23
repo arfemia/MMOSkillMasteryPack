@@ -12,7 +12,8 @@
     "",
     "Its one step is a talk at the trainer, credited by the MarkTalked beat on the tithe_credit line of",
     "the trainer's conversation (Dialogues/MMOSkillTree/Mmo_Mastery_Trainer.json): pressing F alone",
-    "credits nothing, so re-point the step and that beat has to move with it. TurnInAt names the",
+    "credits nothing, so re-point the step and that beat has to move with it. Its Qualifier \"\" counts",
+    "only a talk credited with no qualifier, so the trainer's First_Oath line never ticks it. TurnInAt names the",
     "trainer, so the reward waits in the Claim bucket until the player collects it from the trainer's",
     "own quest list, which that line opens.",
     "",
@@ -46,6 +47,7 @@
     "see_the_trainer": {
       "Kind": "TALK_TO_NPC",
       "Target": "Mmo_Mastery_Trainer",
+      "Qualifier": "",
       "Amount": 1,
       "MatchMode": "EXACT",
       "Order": 1

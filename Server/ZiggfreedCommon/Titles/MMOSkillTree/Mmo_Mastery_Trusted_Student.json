@@ -1,0 +1,8 @@
+{
+  "$Comment": "Trusted Student: the title mastery_trainer_honored pays at Trusted Student (Honored) with the Mastery Trainer. Mmo_Mastery_Student.json explains the rank titles.",
+  "Order": 312,
+  "Text": {
+    "TitleKey": "title.mmo_mastery_trusted_student.name",
+    "FlavorKey": "title.mmo_mastery_trusted_student.flavor"
+  }
+}

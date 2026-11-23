@@ -30,7 +30,10 @@
     "The trainer stands beside the temple's own Rootling Merchant spawn marker rather than at the",
     "raw portal-landing point, so moving with the temple's actual layout instead of an offset that",
     "can land inside a wall. To move them, edit Anchor.Structure.Offset, keeping it small enough to",
-    "stay out of the walls."
+    "stay out of the walls.",
+    "",
+    "The Trainer block is the hall standing's (Mmo_Mastery_Trainer_Hall.json explains it), so the trainer",
+    "teaches here exactly as in the hall once this standing is switched on."
   ],
   "Name": "Mmo_Mastery_Trainer_Temple",
   "Enabled": false,
@@ -67,5 +70,8 @@
   },
   "Interact": {
     "Dialogue": "Mmo_Mastery_Trainer"
+  },
+  "Trainer": {
+    "Sections": [ { "Learn": {} }, { "Quests": {} }, { "Services": {} } ]
   }
 }

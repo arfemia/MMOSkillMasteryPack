@@ -24,9 +24,10 @@
     "of roughly 0 to 200. Never compose a yield together with the mmoskilltree:station_luck",
     "aggregate: that one returns a fraction and counts the same investment twice.",
     "",
-    "The mastery point on the second roll is the one number to think about before retuning: a point",
-    "every other day is a real second income beside the milestones, and raising that Chance changes",
-    "how fast a player fills a track far more than any of the others.",
+    "The second roll pays the trainer's materials, a Voidheart or a pair of one element's essence",
+    "(Mmo_Mastery_Focus_Materials.json), never a Mastery Point: points come only from levelling and",
+    "one-time content, so a daily never pays them. Its Chance sets how fast a daily player gathers the",
+    "materials a Focus's steps ask for.",
     "",
     "The rare roll carries a Cue, the opaque celebration id a roll may author beside its Grants. It",
     "fires only when the grants beside it genuinely paid out, and its id names the FeedbackMoment",
@@ -116,15 +117,14 @@
       }
     },
     {
-      "$Comment": "The point itself, roughly two days in five. This is the roll that decides how much the daily is worth; treat any change here as a balance change to the whole mastery system.",
+      "$Comment": "The trainer's materials, roughly two days in five: a Voidheart or a pair of one element's essence, drawn by the table it names.",
       "Chance": { "Base": 40.0 },
       "Grants": {
         "Rewards": [
           {
-            "Kind": "Currency",
+            "Kind": "Lootable",
             "Params": {
-              "Currency": "mastery_point",
-              "Amount": "1"
+              "Lootable": "Mmo_Mastery_Focus_Materials"
             }
           }
         ]

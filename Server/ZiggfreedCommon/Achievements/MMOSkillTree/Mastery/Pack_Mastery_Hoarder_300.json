@@ -1,5 +1,5 @@
 {
-  "$Comment": "Earn 300 mastery points over a lifetime (spending them does not undo progress; this counts everything ever earned, not the current balance).",
+  "$Comment": "Earn 300 mastery points over a lifetime (spending them does not undo progress; this counts everything ever earned, not the current balance). It pays a title (Titles/MMOSkillTree/Mmo_Mastery_Studious.json) through Rewards.Auto, landing the moment it is earned, and no Mastery Point of its own.",
   "Text": {
     "TitleKey": "achievement.pack_mastery_hoarder_300.title",
     "FlavorKey": "achievement.pack_mastery_hoarder_300.desc",
@@ -35,12 +35,11 @@
     }
   },
   "Rewards": {
-    "Claim": [
+    "Auto": [
       {
-        "Kind": "Currency",
+        "Kind": "Title",
         "Params": {
-          "Currency": "mastery_point",
-          "Amount": 5
+          "Title": "Mmo_Mastery_Studious"
         }
       }
     ]

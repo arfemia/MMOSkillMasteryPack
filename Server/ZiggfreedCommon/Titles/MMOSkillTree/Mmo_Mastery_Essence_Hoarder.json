@@ -1,0 +1,8 @@
+{
+  "$Comment": "Essence Hoarder: the title the achievement pack_essence_hoarder_10000 pays. Mmo_Mastery_Essence_Gatherer.json explains the hoarding titles.",
+  "Order": 331,
+  "Text": {
+    "TitleKey": "title.mmo_mastery_essence_hoarder.name",
+    "FlavorKey": "title.mmo_mastery_essence_hoarder.flavor"
+  }
+}

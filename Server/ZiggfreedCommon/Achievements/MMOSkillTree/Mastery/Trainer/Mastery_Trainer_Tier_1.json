@@ -1,5 +1,5 @@
 {
-  "$Comment": "Master II: reach Mastery_Trainer_Tier_1, the first of the Mastery Trainer's own ranks above Exalted. The fifth rung of the mastery_trainer_ranks ladder; Mastery_Trainer_Friendly.json explains how the seven rungs credit and pay. Its mastery points wait in the book until collected.",
+  "$Comment": "Master II: reach Mastery_Trainer_Tier_1, the first of the Mastery Trainer's own ranks above Exalted. The fifth rung of the mastery_trainer_ranks ladder; Mastery_Trainer_Friendly.json explains how the seven rungs credit and pay. Its essence waits in the book until collected; its title lands on reaching the rank.",
   "Text": {
     "TitleKey": "achievement.mastery_trainer_tier_1.title",
     "FlavorKey": "achievement.mastery_trainer_tier_1.desc"
@@ -25,6 +25,7 @@
     }
   },
   "Rewards": {
-    "Claim": [ { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": 15 } } ]
+    "Auto": [ { "Kind": "Title", "Params": { "Title": "Mmo_Mastery_Master_II" } } ],
+    "Claim": [ { "Kind": "Item", "Params": { "Item": "Ingredient_Life_Essence", "Count": 1000 } } ]
   }
 }

@@ -1,0 +1,8 @@
+{
+  "$Comment": "Seasoned Master: the title mastery_trainer_tier_1 pays at Master II (Mastery_Trainer_Tier_1) with the Mastery Trainer. Mmo_Mastery_Student.json explains the rank titles.",
+  "Order": 315,
+  "Text": {
+    "TitleKey": "title.mmo_mastery_master_ii.name",
+    "FlavorKey": "title.mmo_mastery_master_ii.flavor"
+  }
+}

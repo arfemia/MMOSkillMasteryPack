@@ -1,0 +1,25 @@
+{
+  "$Comment": [
+    "A pair of one element's essence, the element picked at random: the one list of element essences the",
+    "Mastery Trainer's content pays. Mmo_Mastery_Focus_Materials.json draws it as one of its two outcomes",
+    "(the Trainer's Due and the Master's lessons pay that table), and the Essence Infusion offer in the",
+    "bounty pack (ShopEntries/MMOSkillTree/Shop_Convert_Mastery_Point.json there) pays this table straight.",
+    "",
+    "The Pool draws once, every entry equally likely. Add an element with one more entry (its Weight beside",
+    "the others sets how often it comes up), change Count to pay more or less of it, or ship a file that names",
+    "this table in ContributesTo to add an entry from another pack."
+  ],
+  "Text": {
+    "TitleKey": "lootable.mmo_mastery_element_pair.title",
+    "FlavorKey": "lootable.mmo_mastery_element_pair.flavor"
+  },
+  "Pool": {
+    "Entries": [
+      { "Weight": 1, "Grants": { "Items": [ { "Item": "Ingredient_Fire_Essence", "Count": 2 } ] } },
+      { "Weight": 1, "Grants": { "Items": [ { "Item": "Ingredient_Ice_Essence", "Count": 2 } ] } },
+      { "Weight": 1, "Grants": { "Items": [ { "Item": "Ingredient_Lightning_Essence", "Count": 2 } ] } },
+      { "Weight": 1, "Grants": { "Items": [ { "Item": "Ingredient_Water_Essence", "Count": 2 } ] } },
+      { "Weight": 1, "Grants": { "Items": [ { "Item": "Ingredient_Void_Essence", "Count": 2 } ] } }
+    ]
+  }
+}

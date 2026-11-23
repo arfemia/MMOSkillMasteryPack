@@ -25,6 +25,10 @@ quest.mastery_tithe_credit.title = What You Already Paid
 quest.mastery_tithe_credit.flavor = I kept count of every tithe you sent me. Come and find me in the Adventurers' Hall, and we will settle what all of it is worth now.
 quest.mastery_lesson_week.title = A Week of Lessons
 quest.mastery_lesson_week.flavor = Do my lessons through the week and come back to me once you have a handful done. A missed day or two will not cost you the week.
+quest.mastery_first_oath.title = The First Oath
+quest.mastery_first_oath.flavor = A Focus you never swear to does you no good in a fight. Buy the Vow of a weapon, an element or the Bulwark, then come and swear it in front of me.
+quest.mastery_second_oath.title = The Second Oath
+quest.mastery_second_oath.flavor = You finished a Focus. Most people stop there. Swear an oath and go fight out in the world. Come back after, and I will make room for a second.
 
 # --- The Mastery Trainer's lessons (board contracts; quest.<id>.title / .flavor) ---
 quest.mmo_lesson_timber.title = Felling Practice
@@ -59,6 +63,16 @@ objective.text.mastery_lesson.chop_logs = Chop {0} logs
 objective.text.mastery_lesson.mine_ore = Mine {0} ore
 objective.text.mastery_lesson.week = Finish {0} of the Mastery Trainer's lessons
 
+# --- The oath quests' step lines (a step's own TextKey; {0} = the amount) ---
+objective.text.mastery_first_oath.swear = Buy a Vow and swear it at the Mastery Trainer
+objective.text.mastery_second_oath.foes = Defeat {0} foes out in the world
+
+# --- The trainer's material tables (lootable.<id>.title / .flavor, how a Lootable reward reads) ---
+lootable.mmo_mastery_focus_materials.title = Focus Materials
+lootable.mmo_mastery_focus_materials.flavor = A Voidheart, or essences of one element.
+lootable.mmo_mastery_element_pair.title = Element Essences
+lootable.mmo_mastery_element_pair.flavor = Essences of one element, picked at random.
+
 # --- The lessons board (board.<id>.title / .desc, and its bands' badges) ---
 board.mmo_mastery_lessons.title = The Trainer's Lessons
 board.mmo_mastery_lessons.desc = Fresh lessons every morning, each one done out in the world. Collect what a lesson pays here at the board. The further you rise with me, the more lessons I post for you.
@@ -83,10 +97,6 @@ reputation.mmo_mastery_trainer.earn.lessons = Do the lessons on the Mastery Trai
 reputation.mmo_mastery_trainer.earn.due = Pay the trainer's daily due.
 reputation.mmo_mastery_trainer.earn.tasks = Finish the trainer's other tasks.
 reputation.mmo_mastery_trainer.earn.week = A week of lessons pays extra.
-
-# --- Token Shop offers shipped by this pack (explicit titleKey/descriptionKey -> these keys) ---
-shop.convert_mastery_point.title = Mastery Infusion
-shop.convert_mastery_point.desc = Convert your earnings into deeper mastery.
 
 # --- Counted reward-chip label (the Currency reward kind; {0} = Amount) ---
 reward.currency.mastery_point = +{0} Mastery Points
@@ -252,10 +262,35 @@ objective.mastery_trainer.tier_1 = Reach Master II with the Mastery Trainer
 objective.mastery_trainer.tier_2 = Reach Master III with the Mastery Trainer
 objective.mastery_trainer.tier_3 = Reach Grandmaster with the Mastery Trainer
 
-# --- The Grandmaster title (title.<id>.name / .flavor / .display, {0} = the player's name) ---
-title.mmo_mastery_grandmaster.name = Grandmaster
-title.mmo_mastery_grandmaster.flavor = Reached Grandmaster with the Mastery Trainer.
-title.mmo_mastery_grandmaster.display = {0}, Grandmaster
+# --- The trainer's rank titles and the hoarding titles (title.<id>.name / .flavor / .display, {0} = the player's name).
+#     The Grandmaster title ships with MMO Skill Tree under its own id. ---
+title.mmo_mastery_student.name = Student
+title.mmo_mastery_student.flavor = Reached Student with the Mastery Trainer.
+title.mmo_mastery_student.display = {0} the Student
+title.mmo_mastery_trusted_student.name = Trusted Student
+title.mmo_mastery_trusted_student.flavor = Reached Trusted Student with the Mastery Trainer.
+title.mmo_mastery_trusted_student.display = {0}, Trusted Student
+title.mmo_mastery_adept.name = Adept
+title.mmo_mastery_adept.flavor = Reached Adept with the Mastery Trainer.
+title.mmo_mastery_adept.display = {0} the Adept
+title.mmo_mastery_master.name = Master
+title.mmo_mastery_master.flavor = Reached Master with the Mastery Trainer.
+title.mmo_mastery_master.display = {0} the Master
+title.mmo_mastery_master_ii.name = Seasoned Master
+title.mmo_mastery_master_ii.flavor = Reached Master II with the Mastery Trainer.
+title.mmo_mastery_master_ii.display = {0}, Seasoned Master
+title.mmo_mastery_master_iii.name = High Master
+title.mmo_mastery_master_iii.flavor = Reached Master III with the Mastery Trainer.
+title.mmo_mastery_master_iii.display = {0}, High Master
+title.mmo_mastery_essence_gatherer.name = Essence Gatherer
+title.mmo_mastery_essence_gatherer.flavor = Earned Essence Hoarder I.
+title.mmo_mastery_essence_gatherer.display = {0}, Essence Gatherer
+title.mmo_mastery_essence_hoarder.name = Essence Hoarder
+title.mmo_mastery_essence_hoarder.flavor = Earned Essence Hoarder II.
+title.mmo_mastery_essence_hoarder.display = {0} the Essence Hoarder
+title.mmo_mastery_studious.name = The Studious
+title.mmo_mastery_studious.flavor = Earned Mastery Hoarder.
+title.mmo_mastery_studious.display = {0} the Studious
 
 # --- Damage-school mastery tracks (mastery.<trackId>.title, resolved by convention) ---
 mastery.fire_school_mastery.title = Fire Mastery
@@ -291,10 +326,26 @@ dialogue.mmo_mastery_trainer.menu.text = The disciplines are here when you want 
 dialogue.mmo_mastery_trainer.menu.opt.quests = What tasks do you have for me?
 dialogue.mmo_mastery_trainer.menu.opt.lessons = Do you have lessons for me?
 dialogue.mmo_mastery_trainer.menu.opt.standing = How am I doing?
-dialogue.mmo_mastery_trainer.menu.opt.mastery = Show me my mastery.
+dialogue.mmo_mastery_trainer.menu.opt.mastery = Teach me a Focus.
+dialogue.mmo_mastery_trainer.menu.opt.focus = What is a Focus?
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Farewell.
+dialogue.mmo_mastery_trainer.about_focus.text = A Focus is one discipline, taken all the way. A weapon, an element, or the Bulwark, for those who stand in front.\nBuy its steps from me with the points your skills earn and some <b>Essence of Life</b>. What you buy, you keep.\nSworn, a Focus makes its weapon or its element hit harder, and its own move is yours to use.
+dialogue.mmo_mastery_trainer.about_focus.opt.oath = What does an oath cost?
+dialogue.mmo_mastery_trainer.about_focus.opt.second = Can I hold more than one?
+dialogue.mmo_mastery_trainer.about_oath.text = Swear a Focus here, with me. Swearing costs nothing.\nAn oath takes something while it stands. A weapon oath takes some of your health, an element oath some of your mana, and the Bulwark takes some of the force out of every blow you strike.\nBreak it here and all of that comes back. Breaking costs <b>Essence of Life</b>, so choose with some care.
+dialogue.mmo_mastery_trainer.about_second.text = You start with room for one oath.\nFinish one Focus, every step of it, and I will set you a task. Do it, and a second oath opens.\nOnly one of your oaths may be a weapon. A weapon with an element, an element with the Bulwark, two elements: those I allow.
+dialogue.mmo_mastery_trainer.first_oath_offer.text = You can own a Focus and never swear to it. Most people do.\nBuy the Vow of a weapon, an element or the Bulwark from me, then come back and swear it here. A Vow opens once its skill has grown far enough.
+dialogue.mmo_mastery_trainer.first_oath_offer.opt.accept = I will swear one.
+dialogue.mmo_mastery_trainer.first_oath_active.text = Buy the Vow of a Focus from me, then swear it here, in front of me.\nNot sure which? Ask me what a Focus is first.
+dialogue.mmo_mastery_trainer.first_oath_sworn.text = There. Sworn, and you felt it.\nWhile it stands, your Focus counts in every fight. You can break it here if you change your mind, but it will cost you.
+dialogue.mmo_mastery_trainer.first_oath_sworn.opt.done = It is sworn.
+dialogue.mmo_mastery_trainer.second_oath_offer.text = Every step of a Focus, bought. Not many get that far.\nI can make room for a second oath. Show me the one you hold is worth it first: take it out into the world, put down <b>foes</b>, then come back to me.
+dialogue.mmo_mastery_trainer.second_oath_offer.opt.accept = I will show you.
+dialogue.mmo_mastery_trainer.second_oath_active.text = Out you go. The fighting is done out in the world.\nNothing in this hall will fight you back, so do not bother trying.
+dialogue.mmo_mastery_trainer.second_oath_ready.text = Back on your own feet. Good.\nCollect what I owe you, and a second oath is yours to swear.
+dialogue.mmo_mastery_trainer.second_oath_ready.opt.collect = Let me collect it.
 dialogue.mmo_mastery_trainer.lessons_fresh.text = My board has fresh lessons on it today. Every one of them is done out in the world.\nFinish one and come back here to collect what it pays.
 dialogue.mmo_mastery_trainer.tithe_credit.text = You sent me a tithe for a long while, and I kept count.\nI teach lessons now, and I pay as you rise. What you already gave counts.
 dialogue.mmo_mastery_trainer.tithe_credit.opt.collect = What does it count for?
-dialogue.mmo_mastery_trainer.first_words.text = So the guide sent you over after all.\nA skill does not stop where its levels do. What comes after is what I teach. I call it mastery.
+dialogue.mmo_mastery_trainer.first_words.text = So the guide sent you over after all.\nA skill does not stop where its levels do. What comes after is what I teach: a Focus, one weapon or one element taken all the way, and sworn.
 dialogue.mmo_mastery_trainer.first_words.opt.hail = The guide spoke of you.

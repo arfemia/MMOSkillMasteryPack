@@ -1,0 +1,8 @@
+{
+  "$Comment": "The Studious: the title the achievement pack_mastery_hoarder_300 pays. Mmo_Mastery_Essence_Gatherer.json explains the hoarding titles.",
+  "Order": 332,
+  "Text": {
+    "TitleKey": "title.mmo_mastery_studious.name",
+    "FlavorKey": "title.mmo_mastery_studious.flavor"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "$Comment": "Adept: the title mastery_trainer_revered pays at Adept (Revered) with the Mastery Trainer. Mmo_Mastery_Student.json explains the rank titles.",
+  "Order": 313,
+  "Text": {
+    "TitleKey": "title.mmo_mastery_adept.name",
+    "FlavorKey": "title.mmo_mastery_adept.flavor"
+  }
+}

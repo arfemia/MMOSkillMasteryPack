@@ -5,26 +5,36 @@
     "HOW A SCREEN IS PICKED. Start is walked in a fixed order: First (top to bottom), then a quest that",
     "is READY to hand in, then one the trainer can OFFER, then one that is ACTIVE, then Fallback.",
     "",
-    "First holds three beats. The introduction comes first: while the player is carrying the quest that",
+    "First holds four beats. The introduction comes first: while the player is carrying the quest that",
     "sent them here (meet_the_mastery_trainer), pressing F opens a line written for a first meeting. Its",
     "option carries the MarkTalked beat, which is what credits a talk step (pressing F alone credits",
     "nothing), then drops into the menu. Then the tithe line, for a player carrying What You Already Paid",
     "(mastery_tithe_credit): its option carries MarkTalked too, which finishes that quest, and opens the",
-    "trainer's quest list on it so the player collects the standing there. Then the lessons line, once a",
-    "day (Once with Period Daily, turning over at midnight UTC, OnceId lessons_fresh) for a player who has",
-    "collected the meeting or What You Already Paid, skipped while they have something to hand in. It pays nothing: talking earns",
-    "no standing with the trainer.",
+    "trainer's quest list on it so the player collects the standing there. Then the sworn line, for a",
+    "player carrying The First Oath (mastery_first_oath) who holds a sworn Focus (the Factor condition on",
+    "ziggfreedcommon:track_stance, oath set Mmo_Focus, Min 1): its option carries the MarkTalked that",
+    "finishes that quest and opens the quest list on it. That MarkTalked carries the Qualifier First_Oath,",
+    "the same word on The First Oath's step, and the first two beats' MarkTalked carry none, so neither",
+    "ever credits The First Oath, and the sworn line, written after them, never shows while their quests",
+    "are open. Then the",
+    "lessons line, once a day (Once with Period Daily, turning over at midnight UTC, OnceId lessons_fresh)",
+    "for a player who has collected the meeting or What You Already Paid, skipped while they have",
+    "something to hand in. It pays nothing: talking earns no standing with the trainer.",
     "",
-    "Quests routes a finished quest ahead of the menu: a player returning with a completed mastery quest",
-    "is greeted by ready_generic, the one hand-in line every quest here shares, whose menu opens the quest",
-    "list. A quest row points at a screen rather than a bare true so pressing F always shows a line first.",
-    "Add a row here when you add a quest that is collected at the trainer.",
+    "Quests routes a quest's moments to a screen. A finished quest is greeted ahead of the menu: most",
+    "share ready_generic, the one hand-in line whose menu opens the quest list, and The Second Oath has a",
+    "line of its own. The two oath quests also name the screen that offers them and the one a player",
+    "hears while they are open, so what a Focus is, where it is sworn and what the second slot asks are",
+    "said at the moment they matter. A quest row points at a screen rather than a bare true so pressing F",
+    "always shows a line first. Add a row here when you add a quest that is collected at the trainer.",
     "",
     "THE MENU. Every steady screen pulls in the trainer_menu group: the quest list, the lessons board",
     "(shown once the meeting or What You Already Paid is collected, the same two quests that open the",
-    "board; the board itself, Mmo_Mastery_Lessons, opens only in the",
-    "temple hub, where the trainer stands in the Adventurers' Hall), How am I doing? (the trainer's Reputation page, shown once the player has any",
-    "standing with the trainer), the mastery menu, and farewell.",
+    "board; the board itself, Mmo_Mastery_Lessons, opens only in the temple hub, where the trainer stands",
+    "in the Adventurers' Hall), How am I doing? (the trainer's Reputation page, shown once the player has",
+    "any standing with the trainer), Teach me a Focus (the Trainer destination, the trainer page of the",
+    "trainer the player is talking to, where a Focus's steps are bought), What is a Focus? (the three",
+    "about_ screens, which explain the Focus, the oath and the second slot), and farewell.",
     "",
     "The Header line mirrors the player's tracked objective at the top of the conversation.",
     "To reword any line, override the dialogue.mmo_mastery_trainer.* keys in a language file."
@@ -56,6 +66,13 @@
         ]
       },
       {
+        "Node": "first_oath_sworn",
+        "When": [
+          { "Type": "QuestState", "Quest": "mastery_first_oath", "State": "ACTIVE" },
+          { "Type": "Factor", "Factor": "ziggfreedcommon:track_stance", "Param": "Mmo_Focus", "Min": 1 }
+        ]
+      },
+      {
         "Node": "lessons_fresh",
         "When": [
           {
@@ -76,6 +93,8 @@
     ],
     "Quests": {
       "mastery_tithe_credit": { "Ready": "ready_generic" },
+      "mastery_first_oath": { "Ready": "ready_generic", "Offerable": "first_oath_offer", "Active": "first_oath_active" },
+      "mastery_second_oath": { "Ready": "second_oath_ready", "Offerable": "second_oath_offer", "Active": "second_oath_active" },
       "mastery_tribute": { "Ready": "ready_generic" },
       "mastery_lesson_week": { "Ready": "ready_generic" },
       "pack_first_milestone": { "Ready": "ready_generic" },
@@ -110,6 +129,100 @@
           "Open": { "Type": "Quests", "Highlight": "mastery_tithe_credit" }
         }
       ]
+    },
+    "first_oath_offer": {
+      "TextKey": "dialogue.mmo_mastery_trainer.first_oath_offer.text",
+      "Options": [
+        {
+          "LabelKey": "dialogue.mmo_mastery_trainer.first_oath_offer.opt.accept",
+          "Style": "accept",
+          "Do": [
+            { "Accept": "mastery_first_oath" },
+            { "Goto": "first_oath_active" }
+          ]
+        }
+      ],
+      "IncludeOptions": [ "trainer_menu" ]
+    },
+    "first_oath_active": {
+      "TextKey": "dialogue.mmo_mastery_trainer.first_oath_active.text",
+      "IncludeOptions": [ "trainer_menu" ]
+    },
+    "first_oath_sworn": {
+      "TextKey": "dialogue.mmo_mastery_trainer.first_oath_sworn.text",
+      "Options": [
+        {
+          "LabelKey": "dialogue.mmo_mastery_trainer.first_oath_sworn.opt.done",
+          "Style": "turnin",
+          "Actions": [
+            { "Type": "MarkTalked", "Target": "@self", "Qualifier": "First_Oath" }
+          ],
+          "Open": { "Type": "Quests", "Highlight": "mastery_first_oath" }
+        }
+      ]
+    },
+    "second_oath_offer": {
+      "TextKey": "dialogue.mmo_mastery_trainer.second_oath_offer.text",
+      "Options": [
+        {
+          "LabelKey": "dialogue.mmo_mastery_trainer.second_oath_offer.opt.accept",
+          "Style": "accept",
+          "Do": [
+            { "Accept": "mastery_second_oath" },
+            { "Goto": "second_oath_active" }
+          ]
+        }
+      ],
+      "IncludeOptions": [ "trainer_menu" ]
+    },
+    "second_oath_active": {
+      "TextKey": "dialogue.mmo_mastery_trainer.second_oath_active.text",
+      "IncludeOptions": [ "trainer_menu" ]
+    },
+    "second_oath_ready": {
+      "TextKey": "dialogue.mmo_mastery_trainer.second_oath_ready.text",
+      "Options": [
+        {
+          "LabelKey": "dialogue.mmo_mastery_trainer.second_oath_ready.opt.collect",
+          "Style": "turnin",
+          "Open": { "Type": "Quests", "Highlight": "mastery_second_oath" }
+        }
+      ],
+      "IncludeOptions": [ "trainer_menu" ]
+    },
+    "about_focus": {
+      "TextKey": "dialogue.mmo_mastery_trainer.about_focus.text",
+      "Options": [
+        {
+          "LabelKey": "dialogue.mmo_mastery_trainer.about_focus.opt.oath",
+          "Goto": "about_oath"
+        },
+        {
+          "LabelKey": "dialogue.mmo_mastery_trainer.about_focus.opt.second",
+          "Goto": "about_second"
+        }
+      ],
+      "IncludeOptions": [ "trainer_menu" ]
+    },
+    "about_oath": {
+      "TextKey": "dialogue.mmo_mastery_trainer.about_oath.text",
+      "Options": [
+        {
+          "LabelKey": "dialogue.mmo_mastery_trainer.about_focus.opt.second",
+          "Goto": "about_second"
+        }
+      ],
+      "IncludeOptions": [ "trainer_menu" ]
+    },
+    "about_second": {
+      "TextKey": "dialogue.mmo_mastery_trainer.about_second.text",
+      "Options": [
+        {
+          "LabelKey": "dialogue.mmo_mastery_trainer.about_focus.opt.oath",
+          "Goto": "about_oath"
+        }
+      ],
+      "IncludeOptions": [ "trainer_menu" ]
     },
     "lessons_fresh": {
       "TextKey": "dialogue.mmo_mastery_trainer.lessons_fresh.text",
@@ -155,7 +268,12 @@
       },
       {
         "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.mastery",
-        "Open": "Mmo_Mastery"
+        "Open": "Trainer"
+      },
+      {
+        "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.focus",
+        "Style": "neutral",
+        "Goto": "about_focus"
       },
       {
         "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.farewell",

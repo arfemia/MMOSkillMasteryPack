@@ -1,0 +1,8 @@
+{
+  "$Comment": "High Master: the title mastery_trainer_tier_2 pays at Master III (Mastery_Trainer_Tier_2) with the Mastery Trainer. Mmo_Mastery_Student.json explains the rank titles.",
+  "Order": 316,
+  "Text": {
+    "TitleKey": "title.mmo_mastery_master_iii.name",
+    "FlavorKey": "title.mmo_mastery_master_iii.flavor"
+  }
+}

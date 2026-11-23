@@ -1,0 +1,22 @@
+{
+  "$Comment": [
+    "What the Mastery Trainer's repeating content pays in place of points: a Voidheart, or a pair of one",
+    "element's essence. Mastery Points come only from levelling and one-time content, so the daily Due",
+    "(the second roll of Mmo_Mastery_Offering.json) and every Master's lesson (Bounties/MMOSkillTree/Mastery/",
+    "Mmo_Lesson_Master_*.json) pay this table instead, the materials a Focus's steps are bought with.",
+    "",
+    "The Pool draws once and the two entries compete: a Voidheart, or the element pair, which is its own",
+    "table (Mmo_Mastery_Element_Pair.json) so the list of elements is written once. With both Weights at 1",
+    "each comes up half the time; raise one to favour it. Retune here and the Due and the lessons follow."
+  ],
+  "Text": {
+    "TitleKey": "lootable.mmo_mastery_focus_materials.title",
+    "FlavorKey": "lootable.mmo_mastery_focus_materials.flavor"
+  },
+  "Pool": {
+    "Entries": [
+      { "Weight": 1, "Grants": { "Items": [ { "Item": "Ingredient_Voidheart", "Count": 1 } ] } },
+      { "Weight": 1, "Grants": { "Rewards": [ { "Kind": "Lootable", "Params": { "Lootable": "Mmo_Mastery_Element_Pair" } } ] } }
+    ]
+  }
+}

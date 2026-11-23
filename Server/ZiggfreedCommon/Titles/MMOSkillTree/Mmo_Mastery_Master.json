@@ -1,0 +1,8 @@
+{
+  "$Comment": "Master: the title mastery_trainer_exalted pays at Master (Exalted) with the Mastery Trainer. Mmo_Mastery_Student.json explains the rank titles.",
+  "Order": 314,
+  "Text": {
+    "TitleKey": "title.mmo_mastery_master.name",
+    "FlavorKey": "title.mmo_mastery_master.flavor"
+  }
+}

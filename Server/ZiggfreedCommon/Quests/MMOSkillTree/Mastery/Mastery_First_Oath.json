@@ -1,0 +1,69 @@
+{
+  "$Comment": [
+    "The First Oath: the Mastery Trainer's quest that teaches a Focus by doing it, buy a Focus's Vow",
+    "from the trainer and swear it at the trainer. It is offered once the meeting (meet_the_mastery_trainer)",
+    "or What You Already Paid (mastery_tithe_credit) has been collected, the same two quests that open",
+    "the lessons board.",
+    "",
+    "Its one step is a talk at the trainer with the Qualifier First_Oath, so it counts only a talk credited",
+    "under that word: the MarkTalked beat on the first_oath_sworn line of the trainer's conversation",
+    "(Dialogues/MMOSkillTree/Mmo_Mastery_Trainer.json), which carries the same Qualifier. The trainer's other",
+    "MarkTalked beats credit with no qualifier, so they never tick it, and the meeting's and What You",
+    "Already Paid's talk steps write Qualifier \"\", so this line never ticks theirs. That",
+    "line shows only while the player holds at least one sworn Focus, read through",
+    "ziggfreedcommon:track_stance on the oath set Mmo_Focus, so pressing F before swearing credits nothing",
+    "and the trainer explains what to do instead (the first_oath_active line). Re-point the step or rename",
+    "its Qualifier and that beat has to move with it.",
+    "",
+    "TurnInAt names the trainer, so the reward waits in the Claim bucket until the player collects it",
+    "from the trainer's quest list, which the sworn line opens. It pays standing with the trainer and the",
+    "Essence of Life a Vow costs, never a Mastery Point: the pack's points come from its fixed list of",
+    "one-time quests and achievements. Edit Rewards to change that."
+  ],
+  "Text": {
+    "TitleKey": "quest.mastery_first_oath.title",
+    "FlavorKey": "quest.mastery_first_oath.flavor"
+  },
+  "Listing": {
+    "Icon": "Ingredient_Crystal_Purple",
+    "Category": "main",
+    "MainLine": true,
+    "SortOrder": 11,
+    "Tags": ["Mastery", "Beginner"],
+    "RequirePrerequisites": true
+  },
+  "Flow": {
+    "AutoAccept": false,
+    "AutoTrack": true
+  },
+  "Npc": {
+    "ViewId": "Mmo_Mastery_Trainer"
+  },
+  "TurnInAt": "Mmo_Mastery_Trainer",
+  "Requires": {
+    "Factors": [
+      { "Factor": "mmoskilltree:feature", "Param": "mastery", "Min": 1 }
+    ],
+    "AnyOf": [
+      { "Factors": [ { "Factor": "ziggfreedcommon:quest_completed", "Param": "meet_the_mastery_trainer", "Min": 1 } ] },
+      { "Factors": [ { "Factor": "ziggfreedcommon:quest_completed", "Param": "mastery_tithe_credit", "Min": 1 } ] }
+    ]
+  },
+  "Objectives": {
+    "swear_oath": {
+      "Kind": "TALK_TO_NPC",
+      "Target": "Mmo_Mastery_Trainer",
+      "Qualifier": "First_Oath",
+      "Amount": 1,
+      "MatchMode": "EXACT",
+      "Order": 1,
+      "TextKey": "objective.text.mastery_first_oath.swear"
+    }
+  },
+  "Rewards": {
+    "Claim": [
+      { "Kind": "Item", "Params": { "Item": "Ingredient_Life_Essence", "Count": 250 } },
+      { "Kind": "Reputation", "Params": { "Reputation": "Mmo_Mastery_Trainer", "Amount": 500 } }
+    ]
+  }
+}

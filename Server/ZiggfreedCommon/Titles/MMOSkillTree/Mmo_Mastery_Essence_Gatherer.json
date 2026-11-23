@@ -1,0 +1,8 @@
+{
+  "$Comment": "Essence Gatherer: the title the achievement pack_essence_hoarder_100 pays, the first of the three hoarding titles in this folder (with Mmo_Mastery_Essence_Hoarder and Mmo_Mastery_Studious). The hoarding achievements pay a title and nothing else. Its words are the keys title.mmo_mastery_essence_gatherer.name, .flavor and .display (whose {0} is the player's name); Order sorts the three together after the rank titles.",
+  "Order": 330,
+  "Text": {
+    "TitleKey": "title.mmo_mastery_essence_gatherer.name",
+    "FlavorKey": "title.mmo_mastery_essence_gatherer.flavor"
+  }
+}

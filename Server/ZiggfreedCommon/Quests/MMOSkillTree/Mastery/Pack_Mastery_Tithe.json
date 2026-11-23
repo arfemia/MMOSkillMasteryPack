@@ -1,10 +1,9 @@
 {
   "$Comment": [
-    "Retired: this quest is never handed to anyone. The Mastery Trainer's lessons pay mastery points in",
-    "its place: the daily board Mmo_Mastery_Lessons raises standing with the trainer (the reputation",
-    "Mmo_Mastery_Trainer), each rank pays its points through an achievement in the book, and the",
-    "Master's lessons pay a point a day at the top. A fixed tithe coming round every six hours would",
-    "undercut that ladder, which is why it stays off.",
+    "Retired: this quest is never handed to anyone. The Mastery Trainer's lessons take its place: the",
+    "daily board Mmo_Mastery_Lessons raises standing with the trainer (the reputation Mmo_Mastery_Trainer)",
+    "and each rank pays through an achievement in the book. A tithe coming round every six hours would",
+    "be a repeating source of Mastery Points, which nothing on the trainer may be, so it stays off.",
     "",
     "AutoAccept false is what stops it arming for anyone, and Listing.Hidden keeps it off open lists.",
     "Repeat.MaxCompletions 1 makes it done for good once a player has collected it, so somebody who paid",

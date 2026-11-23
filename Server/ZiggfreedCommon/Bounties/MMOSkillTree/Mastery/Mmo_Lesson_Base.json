@@ -11,7 +11,9 @@
     "(Lootables/Mmo_Mastery_Lesson_Pay.json) and standing with the trainer (the Reputation reward;",
     "Amount is how much). The pay waits at the board until the player collects it there. A Hard or",
     "Master's lesson writes its own Claim list, which replaces this one whole, with more standing and,",
-    "for a Master's lesson, a mastery point.",
+    "for a Master's lesson, the trainer's materials (Lootables/Mmo_Mastery_Focus_Materials.json: a",
+    "Voidheart or a pair of one element's essence). No lesson pays a Mastery Point: points come only",
+    "from levelling and one-time content.",
     "",
     "A lesson names its board and band in Boards, its work in Objectives (always out in the world:",
     "nothing in the Forgotten Temple can be broken or fought) and its words in Text."

@@ -1,5 +1,5 @@
 {
-  "$Comment": "The mastery capstone: earn the apprentice milestone, the journeyman milestone, the point hoard, and the deep essence hoard. No criteria of its own, only meta children.",
+  "$Comment": "The mastery capstone: earn the apprentice milestone, the journeyman milestone, the point hoard, and the deep essence hoard. No criteria of its own, only meta children. Its Mastery Points are paid once, like every point this pack pays, and wait in the book until collected.",
   "Text": {
     "TitleKey": "achievement.pack_mastery_devotee.title",
     "FlavorKey": "achievement.pack_mastery_devotee.desc"
@@ -32,7 +32,7 @@
         "Kind": "Currency",
         "Params": {
           "Currency": "mastery_point",
-          "Amount": 20
+          "Amount": 5
         }
       }
     ]

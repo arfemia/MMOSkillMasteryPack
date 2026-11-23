@@ -1,5 +1,5 @@
 {
-  "$Comment": "Adept: reach Revered with the Mastery Trainer. The third rung of the mastery_trainer_ranks ladder; Mastery_Trainer_Friendly.json explains how the seven rungs credit and pay. Its mastery points wait in the book until collected.",
+  "$Comment": "Adept: reach Revered with the Mastery Trainer. The third rung of the mastery_trainer_ranks ladder; Mastery_Trainer_Friendly.json explains how the seven rungs credit and pay. Its essence waits in the book until collected; its title lands on reaching the rank.",
   "Text": {
     "TitleKey": "achievement.mastery_trainer_revered.title",
     "FlavorKey": "achievement.mastery_trainer_revered.desc"
@@ -25,6 +25,7 @@
     }
   },
   "Rewards": {
-    "Claim": [ { "Kind": "Currency", "Params": { "Currency": "mastery_point", "Amount": 10 } } ]
+    "Auto": [ { "Kind": "Title", "Params": { "Title": "Mmo_Mastery_Adept" } } ],
+    "Claim": [ { "Kind": "Item", "Params": { "Item": "Ingredient_Life_Essence", "Count": 600 } } ]
   }
 }
