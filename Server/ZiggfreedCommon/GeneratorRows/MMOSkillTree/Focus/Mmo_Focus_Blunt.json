@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Blunt Focus, a weapon Focus bought on the Blunt track. Its line is Physical damage, counted while what you hold trains Blunt; its signature is Skullbreaker. Every value it leaves out comes from Mmo_Focus_Base_Weapon. Its steps are Mmo_Focus_Blunt_<step>, saved in every buyer's record: never change Focus or Home on a live server.",
+  "Parent": "Mmo_Focus_Base_Weapon",
+  "Set": "Focus",
+  "Order": 40,
+  "Values": { "Focus": "Blunt", "Key": "blunt", "Home": "Blunt", "Icon": "Weapon_Club_Crude" }
+}

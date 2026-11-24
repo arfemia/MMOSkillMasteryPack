@@ -1,9 +1,8 @@
 {
-  "$Comment": "Leyline, the Arcane Focus's signature: an Arcane hit (where the Arcane damage line counts) slows its foe to half speed for 2 seconds (the game's Slow, a Slow to a boss's rules, so a boss or an elite shrugs it), each foe at most once every 10 seconds. Its slow waits per foe like every slow: an Immune foe is passed over, it is shorter each time on a foe slowed again soon, and each landing ramps the foe's Immunity. Opens on the Signature step while the Arcane Focus is sworn. Retune or switch it off in mods/ziggfreedcommon/procs.json.",
+  "$Comment": "Leyline, the Arcane Focus's signature: an Arcane hit (where the Arcane damage line counts) slows its foe to half speed for 2 seconds (the game's Slow, a Slow to a boss's rules, so a boss or an elite shrugs it). It has no wait of its own: any Arcane hit may slow, and the foe's Immunity stops a lock, since each slow that lands ramps it, so a foe slowed again soon is slowed shorter each time (full, three quarters, half, a quarter) and then shrugs slows for a while; an Immune foe is passed over. Opens on the Signature step while the Arcane Focus is sworn. Retune or switch it off in mods/ziggfreedcommon/procs.json.",
   "Parent": "Mmo_Focus_Signature",
   "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Arcane/Mmo_Focus_Arcane_Signature", "Min": 1 } ] },
   "Like": "DamageBonus_Arcane",
-  "Cooldown": { "Seconds": { "Base": 10 }, "PerTarget": true },
   "Actions": [
     { "ApplyEffect": { "Effect": "Slow", "Duration": { "Base": 2 }, "Overlap": "Overwrite", "Control": {} } }
   ]

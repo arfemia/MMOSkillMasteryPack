@@ -1,0 +1,32 @@
+{
+  "$Comment": [
+    "What every Focus row shares, in no set of its own (so no generator walks it): the three kind rows",
+    "(Mmo_Focus_Base_Weapon, _Element, _Defense) name it as their Parent and every Focus row names one of them, so a",
+    "value written here is every Focus's default, merged per name, and a kind row or a Focus row writes only what is",
+    "its own.",
+    "",
+    "Vow, PathLine, PathGuard, HonedOne and HonedTwo are each step's amount on its line (a weapon's or an element's",
+    "damage, the Bulwark's Health); PathGuard is the Path's guard face, on Guard (and GuardTwo for a weapon). The",
+    "Signature adds no number: its worth is its proc or ability mod. NameKey, SignatureName and SignatureDesc name a",
+    "Focus's lang lines from its Key (its id lower-cased): mastery.focus.<key>.name, .signature and",
+    ".signature.desc in the pack's mmoskilltree.lang. Holder is the skill whose weapon a weapon Focus's line counts",
+    "with (MmoWeaponSkill), its home skill unless a row writes another.",
+    "",
+    "Retune one Focus's amounts on the Mastery Focuses screen (/zigadmin) or in",
+    "mods/ziggfreedcommon/generator-rows.json under that Focus's row id (Mmo_Focus_Swords); the steps are written",
+    "again from the rows as soon as they move."
+  ],
+  "Values": {
+    "Holder": "{Home}",
+    "Guard": "{Line}",
+    "GuardTwo": "{Guard}",
+    "NameKey": "mmoskilltree.mastery.focus.{Key}.name",
+    "SignatureName": "mmoskilltree.mastery.focus.{Key}.signature",
+    "SignatureDesc": "mmoskilltree.mastery.focus.{Key}.signature.desc",
+    "Vow": 5,
+    "PathLine": 5,
+    "PathGuard": 5,
+    "HonedOne": 5,
+    "HonedTwo": 5
+  }
+}

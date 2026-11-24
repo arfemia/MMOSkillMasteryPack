@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Polearms Focus, a weapon Focus bought on the Polearms track. Its line is Physical damage, counted while what you hold trains Polearms; its signature is Spearpoint. Every value it leaves out comes from Mmo_Focus_Base_Weapon. Its steps are Mmo_Focus_Polearms_<step>, saved in every buyer's record: never change Focus or Home on a live server.",
+  "Parent": "Mmo_Focus_Base_Weapon",
+  "Set": "Focus",
+  "Order": 60,
+  "Values": { "Focus": "Polearms", "Key": "polearms", "Home": "Polearms", "Icon": "Weapon_Spear_Crude" }
+}

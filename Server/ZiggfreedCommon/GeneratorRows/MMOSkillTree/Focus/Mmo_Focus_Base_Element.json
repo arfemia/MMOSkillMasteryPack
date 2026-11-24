@@ -1,0 +1,28 @@
+{
+  "$Comment": [
+    "What every element Focus shares, in no set of its own: an element Focus row names it as its Parent. Kind is the",
+    "oath set's kind (TrackStances/MMOSkillTree/Mmo_Focus.json: two elements may be sworn at once, 50 max Mana each",
+    "while it stands). Line is the element's own damage bonus and Guard its own resistance, both spelt from the",
+    "row's Focus word, which is the element's damage type id (Fire: DamageBonus_Fire, DamageResist_Fire), so a pack",
+    "adding an element whose type ships writes only its Focus, Key, Home and Icon. The line counts on every hit of",
+    "that element, whatever is held.",
+    "",
+    "LineBound, LinePlain, GuardPlain and GuardPair say which grant list the step generator writes for this kind",
+    "(Grants) and which it leaves out ($Comment, which the game ignores): an element's line is unbound and its",
+    "guard is one resistance. Leave them as they are; the step generator's own comment says why."
+  ],
+  "Parent": "Mmo_Focus_Base",
+  "Values": {
+    "Kind": "Element",
+    "Line": "DamageBonus_{Focus}",
+    "Guard": "DamageResist_{Focus}",
+    "VowDesc": "mmoskilltree.mastery.focus.step.vow.element.desc",
+    "PathLineDesc": "mmoskilltree.mastery.focus.step.path_line.element.desc",
+    "PathGuardDesc": "mmoskilltree.mastery.focus.step.path_guard.element.desc",
+    "HonedDesc": "mmoskilltree.mastery.focus.step.honed.element.desc",
+    "LineBound": "$Comment",
+    "LinePlain": "Grants",
+    "GuardPlain": "Grants",
+    "GuardPair": "$Comment"
+  }
+}

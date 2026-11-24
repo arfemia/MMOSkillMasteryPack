@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Bulwark, the defender's Focus, bought on the Defense track (Block). Its line is Health, 10 a step; its Path's other face makes Guardian's Call last longer; its signature is Mountainshield. While it is sworn every hit its holder deals is multiplied by 0.9 (the oath set's Defense kind). Every value it leaves out comes from Mmo_Focus_Base_Defense. Its steps are Mmo_Focus_Bulwark_<step>, saved in every buyer's record: never change Focus or Home on a live server.",
+  "Parent": "Mmo_Focus_Base_Defense",
+  "Set": "Focus",
+  "Order": 200,
+  "Values": { "Focus": "Bulwark", "Key": "bulwark", "Home": "Defense", "Icon": "Weapon_Shield_Iron" }
+}

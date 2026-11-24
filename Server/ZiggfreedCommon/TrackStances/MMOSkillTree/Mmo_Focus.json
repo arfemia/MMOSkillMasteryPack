@@ -1,0 +1,63 @@
+{
+  "$Comment": [
+    "The oath set: the one file that says how Focuses are sworn. A Focus's steps are bought once and kept for good,",
+    "but what they grant, the signature they open and every number they add count only while that Focus is sworn",
+    "here, held in one of these slots. Each Focus's Vow is its face (its Stance names no other face); its Path,",
+    "Signature and Honed steps name the Vow as their Face, so they live while it is held. The steps come from",
+    "TrackPickGenerators/MMOSkillTree/Mmo_Focus_Steps.json over one row a Focus (GeneratorRows/MMOSkillTree/Focus).",
+    "",
+    "Slots: I is open from the start; II opens while the player owns Mmo_Focus_Slot_II, the key the trainer's",
+    "Second Oath quest teaches. A third oath is one more row with its own condition (a Requires, a Pick, or both).",
+    "Kinds: Max is the most Focuses of a kind sworn at once whatever slots are open (one weapon, two elements, one",
+    "Bulwark), so a hit only ever takes one Focus's line; WhileHeld is what an oath costs the body while it stands,",
+    "once per Focus of that kind sworn, and comes back the moment it is broken: a weapon 25 max Health, an element",
+    "50 max Mana, the Bulwark a true tenth of every hit its holder deals (DamageDealt -10: each hit, of any type, is",
+    "multiplied by 0.9 after every other bonus). Never Stamina.",
+    "Hold is free (unwritten); Break, releasing a sworn Focus by choice, costs 500 Essence of Life, refused in a fight",
+    "or an encounter. A Focus released because its slot closed or its steps were cleared is released free.",
+    "Where: swearing and breaking happen at the Mastery Trainer, at whichever standing is switched on.",
+    "Budget: the most one Focus's live grants may add, read by the stance audit (STANCE_FACE_OVER_BUDGET) and the",
+    "pack's budget test: 25 on the Combat family (the damage and resistance stats; an either-or at its larger face)",
+    "and 40 Health. What swearing costs (WhileHeld) is not counted.",
+    "",
+    "An owner retunes any of it on the Track Stances screen (/zigadmin), which writes",
+    "mods/ziggfreedcommon/track-stances.json under Mmo_Focus: a kind written there merges into this one leaf by leaf."
+  ],
+  "Text": {
+    "TitleKey": "mmoskilltree.mastery.oath.title",
+    "FlavorKey": "mmoskilltree.mastery.oath.lead"
+  },
+  "Icon": "Ingredient_Crystal_Purple",
+  "Order": 10,
+  "Slots": [
+    { "Id": "I" },
+    { "Id": "II", "Pick": "Mmo_Focus_Slot_II" }
+  ],
+  "Kinds": {
+    "Weapon": {
+      "Text": { "TitleKey": "mmoskilltree.mastery.oath.kind.weapon" },
+      "Max": 1,
+      "WhileHeld": [ { "Kind": "Stat", "Stat": "Health", "Add": -25 } ]
+    },
+    "Element": {
+      "Text": { "TitleKey": "mmoskilltree.mastery.oath.kind.element" },
+      "Max": 2,
+      "WhileHeld": [ { "Kind": "Stat", "Stat": "Mana", "Add": -50 } ]
+    },
+    "Defense": {
+      "Text": { "TitleKey": "mmoskilltree.mastery.oath.kind.defense" },
+      "Max": 1,
+      "WhileHeld": [ { "Kind": "Stat", "Stat": "DamageDealt", "Add": -10 } ]
+    }
+  },
+  "Break": {
+    "Cost": { "Currencies": { "Life_Essence": 500 } }
+  },
+  "Where": {
+    "Placements": [ "Mmo_Mastery_Trainer_Hall", "Mmo_Mastery_Trainer_Temple" ]
+  },
+  "Budget": {
+    "Combat": 25,
+    "Health": 40
+  }
+}

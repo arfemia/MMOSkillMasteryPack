@@ -1,0 +1,8 @@
+{
+  "$Comment": "Price tier II, never a pick itself (Abstract): the price of every Mastery step of the second tier (both faces of a Focus's Path), 2 Mastery Points and 1000 Essence of Life, charged together when the step is bought and given back if that take is undone. It carries no talent points (Cost.Points); see Mmo_Mastery_Tier_I for the table and for how to retune a price.",
+  "Parent": "Mmo_Mastery",
+  "Abstract": true,
+  "Cost": {
+    "Price": { "Currencies": { "Mastery_Point": 2, "Life_Essence": 1000 } }
+  }
+}

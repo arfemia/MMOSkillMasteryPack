@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Water Focus, an element Focus bought on the Ice track (Ice magic teaches Water). Its line is Water damage and its guard Water resistance; its signature is High Tide. Every value it leaves out comes from Mmo_Focus_Base_Element. Its steps are Mmo_Focus_Water_<step>, saved in every buyer's record: never change Focus or Home on a live server.",
+  "Parent": "Mmo_Focus_Base_Element",
+  "Set": "Focus",
+  "Order": 130,
+  "Values": { "Focus": "Water", "Key": "water", "Home": "Ice", "Icon": "Ingredient_Water_Essence" }
+}

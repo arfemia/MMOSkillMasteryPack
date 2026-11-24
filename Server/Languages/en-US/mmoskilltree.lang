@@ -330,11 +330,11 @@ mastery.focus.artillery.signature.desc = Your shots make the foe they hit and ev
 mastery.focus.axes.signature = Tempest
 mastery.focus.axes.signature.desc = Your Tempest is ready again sooner.
 mastery.focus.blunt.signature = Skullbreaker
-mastery.focus.blunt.signature.desc = A charged mace swing staggers the foe for a moment. The same foe only every so often.
+mastery.focus.blunt.signature.desc = A charged mace swing staggers the foe for a moment, a little shorter each time you stagger the same foe.
 mastery.focus.daggers.signature = Voidwalk
 mastery.focus.daggers.signature.desc = Your Shadowstep is ready again sooner.
 mastery.focus.polearms.signature = Spearpoint
-mastery.focus.polearms.signature.desc = Catch a foe on the tip of your spear and it is rooted in place for a moment. The same foe only every so often.
+mastery.focus.polearms.signature.desc = Catch a foe on the tip of your spear and it is rooted in place for a moment, a little shorter each time you catch the same foe.
 mastery.focus.staves.signature = Quarterstaff
 mastery.focus.staves.signature.desc = A staff swing knocks back every foe close around you. It needs a few seconds before it works again.
 mastery.focus.swords.signature = Masterwork Blade
@@ -344,13 +344,13 @@ mastery.focus.unarmed.signature.desc = The last punch of a combo gets some of yo
 mastery.focus.fire.signature = Pyroclasm
 mastery.focus.fire.signature.desc = Your Fireball bursts wider and is ready again sooner.
 mastery.focus.ice.signature = Deep Freeze
-mastery.focus.ice.signature.desc = Your Ice hits sometimes freeze the foe solid for a moment. The same foe only every so often.
+mastery.focus.ice.signature.desc = Your Ice hits sometimes freeze the foe solid for a moment, a little shorter each time you freeze the same foe.
 mastery.focus.lightning.signature = Thunderhead
 mastery.focus.lightning.signature.desc = Your Lightning hit staggers the foe and everything standing near it. It needs a few seconds before it works again.
 mastery.focus.water.signature = High Tide
 mastery.focus.water.signature.desc = Your Water hit washes the foe back and slows it. The same foe only every so often.
 mastery.focus.arcane.signature = Leyline
-mastery.focus.arcane.signature.desc = Your Arcane hit slows the foe to half speed for a moment. The same foe only every so often.
+mastery.focus.arcane.signature.desc = Your Arcane hits slow the foe to half speed for a moment, a little shorter each time you slow the same foe.
 mastery.focus.void.signature = Event Horizon
 mastery.focus.void.signature.desc = Your Void hit drags the foe and everything near it toward you. It needs a few seconds before it works again.
 mastery.focus.poison.signature = Blightbloom
@@ -361,6 +361,58 @@ mastery.focus.life.signature = Transfusion
 mastery.focus.life.signature.desc = Your Life hit withers the foe so it hits softer, and mends the nearest hurt ally.
 mastery.focus.bulwark.signature = Mountainshield
 mastery.focus.bulwark.signature.desc = Your Shield Slam stuns longer and keeps you safe from hits a moment longer.
+
+# --- The Focuses' names (mastery.focus.<focus>.name, focus lower-cased), bound by the step generator ---
+mastery.focus.archery.name = Archery
+mastery.focus.artillery.name = Artillery
+mastery.focus.axes.name = Axes
+mastery.focus.blunt.name = Blunt
+mastery.focus.daggers.name = Daggers
+mastery.focus.polearms.name = Polearms
+mastery.focus.staves.name = Staves
+mastery.focus.swords.name = Swords
+mastery.focus.unarmed.name = Unarmed
+mastery.focus.fire.name = Fire
+mastery.focus.ice.name = Ice
+mastery.focus.water.name = Water
+mastery.focus.lightning.name = Lightning
+mastery.focus.arcane.name = Arcane
+mastery.focus.void.name = Void
+mastery.focus.poison.name = Poison
+mastery.focus.earth.name = Earth
+mastery.focus.life.name = Life
+mastery.focus.bulwark.name = Bulwark
+
+# --- A Focus's steps, one line a step for every Focus: in a name {0} is the Focus; in a description {0} is the
+#     Focus and {1} its signature's own line. The step's numbers show on their own beside it, so these carry none. ---
+mastery.focus.step.vow = {0} Vow
+mastery.focus.step.path_line = {0} Path of Strength
+mastery.focus.step.path_guard = {0} Path of Guarding
+mastery.focus.step.honed_i = {0} Honed I
+mastery.focus.step.honed_ii = {0} Honed II
+mastery.focus.step.vow.weapon.desc = The first step of the {0} Focus, and the one you swear. It makes your hits with this weapon stronger. Every step of a Focus you buy is yours to keep, but none of them counts unless the Focus is sworn at the Mastery Trainer. A sworn weapon Focus takes some of your max health until you break the oath.
+mastery.focus.step.vow.element.desc = The first step of the {0} Focus, and the one you swear. It makes your {0} hits stronger. Every step of a Focus you buy is yours to keep, but none of them counts unless the Focus is sworn at the Mastery Trainer. A sworn element Focus takes some of your max mana until you break the oath.
+mastery.focus.step.vow.defense.desc = The first step of the {0}, and the one you swear. It gives you more health. Every step of a Focus you buy is yours to keep, but none of them counts unless the Focus is sworn at the Mastery Trainer. While the {0} is sworn, every blow you strike lands a little softer, until you break the oath.
+mastery.focus.step.path_line.weapon.desc = One of two Paths: your hits with this weapon get stronger still. Choosing one Path closes the other.
+mastery.focus.step.path_line.element.desc = One of two Paths: your {0} hits get stronger still. Choosing one Path closes the other.
+mastery.focus.step.path_line.defense.desc = One of two Paths: you get more health still. Choosing one Path closes the other.
+mastery.focus.step.path_guard.weapon.desc = One of two Paths: it guards you against weapon blows and arrows. Choosing one Path closes the other.
+mastery.focus.step.path_guard.element.desc = One of two Paths: it guards you against {0}. Choosing one Path closes the other.
+mastery.focus.step.path_guard.defense.desc = One of two Paths: your Guardian's Call lasts longer. Choosing one Path closes the other.
+mastery.focus.step.signature.desc = {1} It opens once you have chosen a Path, and works only while {0} is sworn.
+mastery.focus.step.honed.weapon.desc = Hones the {0} Focus further: your hits with this weapon get stronger still, while it is sworn.
+mastery.focus.step.honed.element.desc = Hones the {0} Focus further: your {0} hits get stronger still, while it is sworn.
+mastery.focus.step.honed.defense.desc = Hones the {0} further: more health, while it is sworn.
+mastery.focus.step.honed_ii.desc = The last step of the {0} Focus. Own it and the Focus is finished, and the Mastery Trainer will set you the task that opens a second oath.
+
+# --- The oath set: its page's name and line, each kind's name (what a full kind reads as), and the second oath's key ---
+mastery.oath.title = Oaths
+mastery.oath.lead = Swear a Focus whose Vow you own into an open oath. Only sworn Focuses count in a fight, and each oath takes something from you while it stands, given back the moment you break it. Breaking an oath has a price. Finish a Focus and the Mastery Trainer's quest The Second Oath opens a second oath.
+mastery.oath.kind.weapon = Weapon Focuses
+mastery.oath.kind.element = Element Focuses
+mastery.oath.kind.defense = Bulwark
+mastery.focus.slot_ii.name = Second Oath
+mastery.focus.slot_ii.desc = Lets you hold a second Focus sworn at the Mastery Trainer. The trainer's quest The Second Oath teaches it once you have finished a Focus.
 
 # Mastery Trainer conversation
 dialogue.mmo_mastery_trainer.ready_generic.text = Back, and carrying something. Set it down and let us see it.

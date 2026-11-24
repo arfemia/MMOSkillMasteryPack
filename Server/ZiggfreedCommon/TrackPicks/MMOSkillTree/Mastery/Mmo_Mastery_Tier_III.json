@@ -1,0 +1,8 @@
+{
+  "$Comment": "Price tier III, never a pick itself (Abstract): the price of every Mastery step of the third tier (a Focus's Signature and its Honed I), 3 Mastery Points and 2250 Essence of Life, charged together when the step is bought and given back if that take is undone. It carries no talent points (Cost.Points); see Mmo_Mastery_Tier_I for the table and for how to retune a price.",
+  "Parent": "Mmo_Mastery",
+  "Abstract": true,
+  "Cost": {
+    "Price": { "Currencies": { "Mastery_Point": 3, "Life_Essence": 2250 } }
+  }
+}

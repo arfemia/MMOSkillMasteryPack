@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Life Focus, an element Focus bought on the Life track (the Life school). Its line is Life damage and its guard Life resistance; its signature is Transfusion. Every value it leaves out comes from Mmo_Focus_Base_Element. Its steps are Mmo_Focus_Life_<step>, saved in every buyer's record: never change Focus or Home on a live server. On a server with no Life track its steps sit nowhere and nobody can buy them.",
+  "Parent": "Mmo_Focus_Base_Element",
+  "Set": "Focus",
+  "Order": 190,
+  "Values": { "Focus": "Life", "Key": "life", "Home": "Life", "Icon": "Ingredient_Life_Essence" }
+}

@@ -1,0 +1,31 @@
+{
+  "$Comment": [
+    "What a defender's Focus shares, in no set of its own: the Bulwark's row names it as its Parent. Kind is the oath",
+    "set's kind (TrackStances/MMOSkillTree/Mmo_Focus.json: one at a time, and while it stands every hit its holder",
+    "deals is multiplied by 0.9). Its line is Health, 10 a step. Its Path's guard face grants no number: it opens",
+    "the ability mod that makes Guardian's Call last longer (AbilityMods/MMOSkillTree/Mastery/",
+    "Mmo_Focus_Bulwark_Path_Guard.json), so PathGuard is 0 and no guard grant is written.",
+    "",
+    "LineBound, LinePlain, GuardPlain and GuardPair say which grant list the step generator writes for this kind",
+    "(Grants) and which it leaves out ($Comment, which the game ignores): the line is unbound Health and the guard",
+    "face writes none. Leave them as they are; the step generator's own comment says why."
+  ],
+  "Parent": "Mmo_Focus_Base",
+  "Values": {
+    "Kind": "Defense",
+    "Line": "Health",
+    "Vow": 10,
+    "PathLine": 10,
+    "PathGuard": 0,
+    "HonedOne": 10,
+    "HonedTwo": 10,
+    "VowDesc": "mmoskilltree.mastery.focus.step.vow.defense.desc",
+    "PathLineDesc": "mmoskilltree.mastery.focus.step.path_line.defense.desc",
+    "PathGuardDesc": "mmoskilltree.mastery.focus.step.path_guard.defense.desc",
+    "HonedDesc": "mmoskilltree.mastery.focus.step.honed.defense.desc",
+    "LineBound": "$Comment",
+    "LinePlain": "Grants",
+    "GuardPlain": "$Comment",
+    "GuardPair": "$Comment"
+  }
+}

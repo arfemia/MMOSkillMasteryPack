@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Swords Focus, a weapon Focus bought on the Swords track. Its line is Physical damage, counted while what you hold trains Swords; its signature is Masterwork Blade. Every value it leaves out comes from Mmo_Focus_Base_Weapon. Its steps are Mmo_Focus_Swords_<step>, saved in every buyer's record: never change Focus or Home on a live server.",
+  "Parent": "Mmo_Focus_Base_Weapon",
+  "Set": "Focus",
+  "Order": 80,
+  "Values": { "Focus": "Swords", "Key": "swords", "Home": "Swords", "Icon": "Weapon_Sword_Crude" }
+}

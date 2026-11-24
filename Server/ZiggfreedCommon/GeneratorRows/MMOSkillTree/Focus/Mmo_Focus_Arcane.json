@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Arcane Focus, an element Focus bought on the Arcane track. Its line is Arcane damage and its guard Arcane resistance; its signature is Leyline. Every value it leaves out comes from Mmo_Focus_Base_Element. Its steps are Mmo_Focus_Arcane_<step>, saved in every buyer's record: never change Focus or Home on a live server.",
+  "Parent": "Mmo_Focus_Base_Element",
+  "Set": "Focus",
+  "Order": 150,
+  "Values": { "Focus": "Arcane", "Key": "arcane", "Home": "Arcane", "Icon": "Ingredient_Crystal_Purple" }
+}

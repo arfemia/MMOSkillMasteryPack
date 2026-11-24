@@ -1,11 +1,10 @@
 {
-  "$Comment": "Spearpoint, the Polearms Focus's signature: a polearm hit on a foe at least 2.5 blocks from you (the tip of a spear's reach; a melee hit that counts for Polearms, on the Physical damage line, so never a thrown spear, whose hit is Projectile) roots it in place for 1 second (the game's Root, a Hold to a boss's rules, so a boss or an elite shrugs it), each foe at most once every 12 seconds. Its root waits per foe like every control: an Immune foe is passed over, it is shorter each time on a foe rooted again soon, and each landing ramps the foe's Immunity. A hit counts for Polearms while what you hold trains Polearms or when the hit earns Polearms XP (the Holder's MmoWeaponSkill, read on that hit). Opens on the Signature step while the Polearms Focus is sworn. Retune or switch it off in mods/ziggfreedcommon/procs.json.",
+  "$Comment": "Spearpoint, the Polearms Focus's signature: a polearm hit on a foe at least 2.5 blocks from you (the tip of a spear's reach; a melee hit that counts for Polearms, on the Physical damage line, so never a thrown spear, whose hit is Projectile) roots it in place for 1 second (the game's Root, a Hold to a boss's rules, so a boss or an elite shrugs it). It has no wait of its own: a hit at the tip of the reach sets its pace, and the foe's Immunity stops a lock, since each root that lands ramps it, so a foe rooted again soon is held shorter each time (full, three quarters, half, a quarter) and then shrugs holds for a while; an Immune foe is passed over. A hit counts for Polearms while what you hold trains Polearms or when the hit earns Polearms XP (the Holder's MmoWeaponSkill, read on that hit). Opens on the Signature step while the Polearms Focus is sworn. Retune or switch it off in mods/ziggfreedcommon/procs.json.",
   "Parent": "Mmo_Focus_Signature",
   "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Polearms/Mmo_Focus_Polearms_Signature", "Min": 1 } ] },
   "Like": "DamageBonus_Physical",
   "Hit": { "MinDistance": 2.5 },
   "Holder": [ { "Id": "MmoWeaponSkill", "Skill": "Polearms" } ],
-  "Cooldown": { "Seconds": { "Base": 12 }, "PerTarget": true },
   "Actions": [
     { "ApplyEffect": { "Effect": "Root", "Duration": { "Base": 1 }, "Overlap": "Overwrite", "Control": {} } }
   ]

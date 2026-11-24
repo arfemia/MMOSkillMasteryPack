@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Staves Focus, a weapon Focus bought on the Staves track. Its line is Physical damage (a staff's swing), counted while what you hold trains Staves; its signature is Quarterstaff. Every value it leaves out comes from Mmo_Focus_Base_Weapon. Its steps are Mmo_Focus_Staves_<step>, saved in every buyer's record: never change Focus or Home on a live server.",
+  "Parent": "Mmo_Focus_Base_Weapon",
+  "Set": "Focus",
+  "Order": 70,
+  "Values": { "Focus": "Staves", "Key": "staves", "Home": "Staves", "Icon": "Weapon_Staff_Wizard" }
+}

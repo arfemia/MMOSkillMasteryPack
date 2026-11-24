@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Void Focus, an element Focus bought on the Void track (the Void school). Its line is Void damage and its guard Void resistance; its signature is Event Horizon. Every value it leaves out comes from Mmo_Focus_Base_Element. Its steps are Mmo_Focus_Void_<step>, saved in every buyer's record: never change Focus or Home on a live server. On a server with no Void track its steps sit nowhere and nobody can buy them.",
+  "Parent": "Mmo_Focus_Base_Element",
+  "Set": "Focus",
+  "Order": 160,
+  "Values": { "Focus": "Void", "Key": "void", "Home": "Void", "Icon": "Ingredient_Void_Essence" }
+}

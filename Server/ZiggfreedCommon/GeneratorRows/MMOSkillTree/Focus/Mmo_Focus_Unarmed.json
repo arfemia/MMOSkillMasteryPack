@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Unarmed Focus, a weapon Focus bought on the Unarmed track. Its line is Physical damage, counted while what you hold trains Unarmed (an empty hand among it); its signature is Iron Body. Every value it leaves out comes from Mmo_Focus_Base_Weapon. Its steps are Mmo_Focus_Unarmed_<step>, saved in every buyer's record: never change Focus or Home on a live server.",
+  "Parent": "Mmo_Focus_Base_Weapon",
+  "Set": "Focus",
+  "Order": 90,
+  "Values": { "Focus": "Unarmed", "Key": "unarmed", "Home": "Unarmed", "Icon": "Armor_Iron_Hands" }
+}

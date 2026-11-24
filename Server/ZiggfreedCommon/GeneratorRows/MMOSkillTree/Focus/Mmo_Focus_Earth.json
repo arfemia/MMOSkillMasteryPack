@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Earth Focus, an element Focus bought on the Earth track. Its line is Earth damage and its guard Earth resistance; its signature is Tectonic. Every value it leaves out comes from Mmo_Focus_Base_Element. Its steps are Mmo_Focus_Earth_<step>, saved in every buyer's record: never change Focus or Home on a live server.",
+  "Parent": "Mmo_Focus_Base_Element",
+  "Set": "Focus",
+  "Order": 180,
+  "Values": { "Focus": "Earth", "Key": "earth", "Home": "Earth", "Icon": "Rock_Gem_Emerald" }
+}

@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Artillery Focus, a weapon Focus bought on the Artillery track. Its line is Projectile damage, counted while what you hold trains Artillery; its signature is Demolition Expert. Every value it leaves out comes from Mmo_Focus_Base_Weapon. Its steps are Mmo_Focus_Artillery_<step>, saved in every buyer's record: never change Focus or Home on a live server.",
+  "Parent": "Mmo_Focus_Base_Weapon",
+  "Set": "Focus",
+  "Order": 20,
+  "Values": { "Focus": "Artillery", "Key": "artillery", "Home": "Artillery", "Line": "DamageBonus_Projectile", "Icon": "Weapon_Bomb" }
+}

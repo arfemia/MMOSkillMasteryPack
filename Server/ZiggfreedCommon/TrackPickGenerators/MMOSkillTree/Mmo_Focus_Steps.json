@@ -1,0 +1,96 @@
+{
+  "$Comment": [
+    "Every Focus's five steps, from one template: the Focus rows (GeneratorRows/MMOSkillTree/Focus, set Focus, one",
+    "row a Focus) times the six step rows below. Each step is Mmo_Focus_<Focus>_<Step> on the Focus's home track",
+    "(Track), priced by its tier skeleton (Base Mmo_Mastery_Tier_<Tier>, the one price table, under Mmo_Mastery,",
+    "which carries ResetsAs Mastery and the Mastery Trainer's Where), opening at its level in that skill (At).",
+    "",
+    "The steps: Vow (level 30, tier I) is the Focus's face, the pick a player swears (Stance names it as the face);",
+    "Path (level 50, tier II) is an either-or of two faces sharing the Node Mmo_Focus_<Focus>_Path, Path_Line (more",
+    "of the line) or Path_Guard (resistance, or the Bulwark's longer Guardian's Call); Signature (level 70, tier III)",
+    "grants no number, it opens the Focus's signature proc or ability mod; Honed_I (level 90, tier III) and",
+    "Honed_II (level 100, tier IV) add to the line. Every step after the Vow names the Vow as its Face, so it counts",
+    "only while that Focus is sworn (TrackStances/MMOSkillTree/Mmo_Focus.json). They run in order: each Path face",
+    "needs the Vow, the Signature needs either Path face (its Requires: ziggfreedcommon:track_picks_taken over",
+    "Mmo_Focus_<Focus>_Path_*, both faces at once, which a Prerequisites list cannot say), Honed_I needs the",
+    "Signature and Honed_II needs Honed_I. Owning Honed_II is a finished Focus: the Second Oath quest reads it.",
+    "",
+    "Why the grant lists are keyed by tokens: a row binds only plain values, so one template cannot leave a grant",
+    "out or bind it to a weapon for some rows and not others. The template writes each shape of grant list under a",
+    "key the rows fill: a weapon's line bound While its weapon counts ({Bound}), an unbound line or one resistance",
+    "({Plain}), and a weapon's two resistances ({Pair}). Each step row and the Focus's kind row (Mmo_Focus_Base_*)",
+    "turn exactly one of them into Grants and the rest into $Comment, which the game skips, so every step carries",
+    "only its real grants and the Signature and the Bulwark's guard face carry none. The same trick writes the",
+    "Signature's Requires ({Gate}) and nothing on the other steps.",
+    "",
+    "A pack adds a Focus with one row file in the set (its Focus, Key, Home, Icon and Parent kind row), its three",
+    "lang lines and its signature. An owner retunes a Focus's amounts on its row (generator-rows.json) and any one",
+    "step by its own id (track-picks.json); a tier's price for every step changes in the tier skeleton's pack file",
+    "(an owner entry on a skeleton does not reach the steps written over it). A hand-written TrackPicks file of a",
+    "generated id replaces that step. The step ids are saved in every buyer's record and named by the converter",
+    "of older saves: never change IdPattern or a step's Step."
+  ],
+  "Base": "Mmo_Mastery_Tier_{Tier}",
+  "IdPattern": "Mmo_Focus_{Focus}_{Step}",
+  "ForEach": [
+    { "Source": "ziggfreedcommon:rows", "Filter": { "Set": "Focus" } },
+    {
+      "Values": [
+        { "Step": "Vow", "Tier": "I", "At": 30, "StepOrder": 10,
+          "Title": "mmoskilltree.mastery.focus.step.vow", "Flavor": "{VowDesc}",
+          "Before": "", "Node": "", "Gate": "$Comment",
+          "Amount": "{Vow}", "Stat": "{Line}", "Bound": "{LineBound}", "Plain": "{LinePlain}", "Pair": "$Comment" },
+        { "Step": "Path_Line", "Tier": "II", "At": 50, "StepOrder": 20,
+          "Title": "mmoskilltree.mastery.focus.step.path_line", "Flavor": "{PathLineDesc}",
+          "Before": "Mmo_Focus_{Focus}_Vow", "Node": "Mmo_Focus_{Focus}_Path", "Gate": "$Comment",
+          "Amount": "{PathLine}", "Stat": "{Line}", "Bound": "{LineBound}", "Plain": "{LinePlain}", "Pair": "$Comment" },
+        { "Step": "Path_Guard", "Tier": "II", "At": 50, "StepOrder": 21,
+          "Title": "mmoskilltree.mastery.focus.step.path_guard", "Flavor": "{PathGuardDesc}",
+          "Before": "Mmo_Focus_{Focus}_Vow", "Node": "Mmo_Focus_{Focus}_Path", "Gate": "$Comment",
+          "Amount": "{PathGuard}", "Stat": "{Guard}", "Bound": "$Comment", "Plain": "{GuardPlain}", "Pair": "{GuardPair}" },
+        { "Step": "Signature", "Tier": "III", "At": 70, "StepOrder": 30,
+          "Title": "{SignatureName}", "Flavor": "mmoskilltree.mastery.focus.step.signature.desc",
+          "Before": "", "Node": "", "Gate": "Requires",
+          "Amount": 0, "Stat": "{Line}", "Bound": "$Comment", "Plain": "$Comment", "Pair": "$Comment" },
+        { "Step": "Honed_I", "Tier": "III", "At": 90, "StepOrder": 40,
+          "Title": "mmoskilltree.mastery.focus.step.honed_i", "Flavor": "{HonedDesc}",
+          "Before": "Mmo_Focus_{Focus}_Signature", "Node": "", "Gate": "$Comment",
+          "Amount": "{HonedOne}", "Stat": "{Line}", "Bound": "{LineBound}", "Plain": "{LinePlain}", "Pair": "$Comment" },
+        { "Step": "Honed_II", "Tier": "IV", "At": 100, "StepOrder": 50,
+          "Title": "mmoskilltree.mastery.focus.step.honed_ii", "Flavor": "mmoskilltree.mastery.focus.step.honed_ii.desc",
+          "Before": "Mmo_Focus_{Focus}_Honed_I", "Node": "", "Gate": "$Comment",
+          "Amount": "{HonedTwo}", "Stat": "{Line}", "Bound": "{LineBound}", "Plain": "{LinePlain}", "Pair": "$Comment" }
+      ]
+    }
+  ],
+  "Child": {
+    "Track": "{Home}",
+    "Text": {
+      "TitleKey": "{Title}",
+      "FlavorKey": "{Flavor}",
+      "TextArgs": {
+        "Title": [ "@key:{NameKey}" ],
+        "Flavor": [ "@key:{NameKey}", "@key:{SignatureDesc}" ]
+      }
+    },
+    "Icon": "{Icon}",
+    "Order": "{StepOrder}",
+    "At": "{At}",
+    "Prerequisites": [ "{Before}" ],
+    "Node": [ "{Node}" ],
+    "Stance": { "Id": "Mmo_Focus", "Face": "Mmo_Focus_{Focus}_Vow", "Kind": "{Kind}" },
+    "{Gate}": {
+      "Factors": [ { "Factor": "ziggfreedcommon:track_picks_taken", "Param": "Mmo_Focus_{Focus}_Path_*", "Min": 1 } ]
+    },
+    "{Bound}": [
+      { "Kind": "Stat", "Stat": "{Stat}", "Add": "{Amount}", "While": [ { "Id": "MmoWeaponSkill", "Skill": "{Holder}" } ] }
+    ],
+    "{Plain}": [
+      { "Kind": "Stat", "Stat": "{Stat}", "Add": "{Amount}" }
+    ],
+    "{Pair}": [
+      { "Kind": "Stat", "Stat": "{Guard}", "Add": "{Amount}" },
+      { "Kind": "Stat", "Stat": "{GuardTwo}", "Add": "{Amount}" }
+    ]
+  }
+}

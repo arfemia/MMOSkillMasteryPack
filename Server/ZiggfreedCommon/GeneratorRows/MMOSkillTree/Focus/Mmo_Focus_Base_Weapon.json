@@ -1,0 +1,29 @@
+{
+  "$Comment": [
+    "What every weapon Focus shares, in no set of its own: a weapon Focus row names it as its Parent. Kind is the",
+    "oath set's kind (TrackStances/MMOSkillTree/Mmo_Focus.json: at most one weapon sworn, 25 max Health while it",
+    "stands). Line is the weapon's own damage type, never the every-type DamageBonus (which would also count on a",
+    "spell cast with the weapon in hand); a bow or a bomb writes DamageBonus_Projectile on its own row. The line",
+    "counts only while what you hold trains the Holder skill or on a hit that earns its XP (MmoWeaponSkill). The",
+    "Path's guard face is Physical and Projectile resistance, both, at PathGuard each.",
+    "",
+    "LineBound, LinePlain, GuardPlain and GuardPair say which grant list the step generator writes for this kind",
+    "(Grants) and which it leaves out ($Comment, which the game ignores): a weapon's line is bound to its weapon, its",
+    "guard is the two resistances. Leave them as they are; the step generator's own comment says why."
+  ],
+  "Parent": "Mmo_Focus_Base",
+  "Values": {
+    "Kind": "Weapon",
+    "Line": "DamageBonus_Physical",
+    "Guard": "DamageResist_Physical",
+    "GuardTwo": "DamageResist_Projectile",
+    "VowDesc": "mmoskilltree.mastery.focus.step.vow.weapon.desc",
+    "PathLineDesc": "mmoskilltree.mastery.focus.step.path_line.weapon.desc",
+    "PathGuardDesc": "mmoskilltree.mastery.focus.step.path_guard.weapon.desc",
+    "HonedDesc": "mmoskilltree.mastery.focus.step.honed.weapon.desc",
+    "LineBound": "Grants",
+    "LinePlain": "$Comment",
+    "GuardPlain": "$Comment",
+    "GuardPair": "Grants"
+  }
+}

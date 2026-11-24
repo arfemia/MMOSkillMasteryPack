@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Lightning Focus, an element Focus bought on the Lightning track. Its line is Lightning damage and its guard Lightning resistance; its signature is Thunderhead. Every value it leaves out comes from Mmo_Focus_Base_Element. Its steps are Mmo_Focus_Lightning_<step>, saved in every buyer's record: never change Focus or Home on a live server.",
+  "Parent": "Mmo_Focus_Base_Element",
+  "Set": "Focus",
+  "Order": 140,
+  "Values": { "Focus": "Lightning", "Key": "lightning", "Home": "Lightning", "Icon": "Ingredient_Lightning_Essence" }
+}

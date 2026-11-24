@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Poison Focus, an element Focus bought on the Earth track (Earth magic teaches Poison). Its line is Poison damage and its guard Poison resistance; its signature is Blightbloom. Every value it leaves out comes from Mmo_Focus_Base_Element. Its steps are Mmo_Focus_Poison_<step>, saved in every buyer's record: never change Focus or Home on a live server.",
+  "Parent": "Mmo_Focus_Base_Element",
+  "Set": "Focus",
+  "Order": 170,
+  "Values": { "Focus": "Poison", "Key": "poison", "Home": "Earth", "Icon": "Ingredient_Sac_Venom" }
+}

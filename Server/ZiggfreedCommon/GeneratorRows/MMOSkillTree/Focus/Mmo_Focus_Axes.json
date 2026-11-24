@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Axes Focus, a weapon Focus bought on the Axes track. Its line is Physical damage, counted while what you hold trains Axes; its signature is Tempest. Every value it leaves out comes from Mmo_Focus_Base_Weapon. Its steps are Mmo_Focus_Axes_<step>, saved in every buyer's record: never change Focus or Home on a live server.",
+  "Parent": "Mmo_Focus_Base_Weapon",
+  "Set": "Focus",
+  "Order": 30,
+  "Values": { "Focus": "Axes", "Key": "axes", "Home": "Axes", "Icon": "Weapon_Axe_Crude" }
+}

@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Archery Focus, a weapon Focus bought on the Archery track. Its line is Projectile damage, counted while what you hold trains Archery; its signature is Hawkshot. Every value it leaves out comes from Mmo_Focus_Base_Weapon. Its steps are Mmo_Focus_Archery_<step>, saved in every buyer's record: never change Focus or Home on a live server.",
+  "Parent": "Mmo_Focus_Base_Weapon",
+  "Set": "Focus",
+  "Order": 10,
+  "Values": { "Focus": "Archery", "Key": "archery", "Home": "Archery", "Line": "DamageBonus_Projectile", "Icon": "Weapon_Shortbow_Crude" }
+}

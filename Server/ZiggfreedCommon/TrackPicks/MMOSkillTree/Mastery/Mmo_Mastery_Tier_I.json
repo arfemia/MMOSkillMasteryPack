@@ -1,0 +1,8 @@
+{
+  "$Comment": "Price tier I, never a pick itself (Abstract): the price of every Mastery step of the first tier (a Focus's Vow), 1 Mastery Point and 250 Essence of Life, charged together when the step is bought and given back if that take is undone. The four tiers are the one price table: the Essence of Life is 250 times the Mastery Points squared (250, 1000, 2250, 4000). It carries no talent points (Cost.Points), so a step is never bought with a tree's points and an admin's teach or a one-time update can hand it over free. To change the price for every step of this tier, change it here in a pack file of this id. To retune one step on a server, write an entry of that step's own id (Mmo_Focus_Swords_Vow) in mods/ziggfreedcommon/track-picks.json: the steps are written over this skeleton as the pack ships it, so an owner entry of this skeleton's id switches the tier off (Enabled false) but does not reprice the steps under it.",
+  "Parent": "Mmo_Mastery",
+  "Abstract": true,
+  "Cost": {
+    "Price": { "Currencies": { "Mastery_Point": 1, "Life_Essence": 250 } }
+  }
+}

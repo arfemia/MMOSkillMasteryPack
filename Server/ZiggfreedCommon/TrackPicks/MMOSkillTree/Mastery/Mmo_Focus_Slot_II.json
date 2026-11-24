@@ -1,0 +1,12 @@
+{
+  "$Comment": "The second oath's key: owning this pick opens slot II of the oath set (TrackStances/MMOSkillTree/Mmo_Focus.json, the slot row whose Pick names it), so a player may hold two Focuses sworn at once. It is TaughtOnly: no page offers it and nobody buys it; the Mastery Trainer's quest The Second Oath (Quests/MMOSkillTree/Mastery/Mastery_Second_Oath.json) teaches it through its Pick reward when the player collects it, and an admin teaches it with /zigtrack pick --pick. A respec, a saved build swap, a prestige and the Mastery respec all keep it. It grants nothing itself: its worth is the second Focus it lets a player swear. It sits on the Defense track under Mmo_Mastery, so switching every Mastery step off takes the key away too and the second slot closes, its oath released free. Its id is saved in every holder's record and named by the quest's reward: never rename it.",
+  "Parent": "Mmo_Mastery",
+  "Track": "Defense",
+  "TaughtOnly": true,
+  "Text": {
+    "TitleKey": "mmoskilltree.mastery.focus.slot_ii.name",
+    "FlavorKey": "mmoskilltree.mastery.focus.slot_ii.desc"
+  },
+  "Icon": "Ingredient_Voidheart",
+  "Order": 900
+}

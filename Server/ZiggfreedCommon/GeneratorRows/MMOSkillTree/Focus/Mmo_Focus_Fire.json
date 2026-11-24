@@ -1,0 +1,7 @@
+{
+  "$Comment": "The Fire Focus, an element Focus bought on the Fire track. Its line is Fire damage and its guard Fire resistance; its signature is Pyroclasm. Every value it leaves out comes from Mmo_Focus_Base_Element. Its steps are Mmo_Focus_Fire_<step>, saved in every buyer's record: never change Focus or Home on a live server.",
+  "Parent": "Mmo_Focus_Base_Element",
+  "Set": "Focus",
+  "Order": 110,
+  "Values": { "Focus": "Fire", "Key": "fire", "Home": "Fire", "Icon": "Ingredient_Fire_Essence" }
+}

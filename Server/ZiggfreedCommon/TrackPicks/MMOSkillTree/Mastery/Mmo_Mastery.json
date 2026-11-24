@@ -1,0 +1,8 @@
+{
+  "$Comment": "The top of every Mastery step, never a pick itself (Abstract): the four price tiers (Mmo_Mastery_Tier_I to IV) name it as their Parent, and every Focus step and the second oath's key sit under it. What it carries, every step shares: ResetsAs Mastery, so a talent respec, a saved build swap and a skill's default prestige keep every step (only the Mastery respec clears them), and Where, the Mastery Trainer's two standings, so a step is bought from the trainer at whichever standing is switched on (and on its skill's own Talents page while both are switched off). A step costs no talent points: its price is Cost.Price on its tier. Switch every Mastery step off at once with { \"Mmo_Mastery\": { \"Enabled\": false } } in mods/ziggfreedcommon/track-picks.json. The steps are written over this skeleton as the pack ships it, so an owner entry here changes nothing else under it: give one step other trainers by an entry of that step's own id.",
+  "Abstract": true,
+  "ResetsAs": "Mastery",
+  "Where": {
+    "Placements": [ "Mmo_Mastery_Trainer_Hall", "Mmo_Mastery_Trainer_Temple" ]
+  }
+}
