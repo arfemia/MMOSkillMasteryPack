@@ -1,7 +1,7 @@
 {
   "$Comment": "Deep Freeze, the Ice Focus's signature: an Ice hit (where the Ice damage line counts) has a 15% chance to freeze its foe solid for 1 second (the game's Ability_Frost_Freeze, in the Frozen family, a Stun to a boss's rules, so a boss or an elite shrugs it), each foe at most once every 10 seconds. Its freeze waits per foe like every control: an Immune foe is passed over, it is shorter each time on a foe frozen again soon, and each landing ramps the foe's Immunity. It runs after every talent's proc on the hit (the skeleton's Order), so the hit that freezes a foe never shatters that freeze too. Opens on the Signature step while the Ice Focus is sworn. Retune or switch it off in mods/ziggfreedcommon/procs.json.",
   "Parent": "Mmo_Focus_Signature",
-  "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Frostweaving/Mmo_Focus_Ice_Signature", "Min": 1 } ] },
+  "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Ice/Mmo_Focus_Ice_Signature", "Min": 1 } ] },
   "Like": "DamageBonus_Ice",
   "Chance": { "Base": 15 },
   "Cooldown": { "Seconds": { "Base": 10 }, "PerTarget": true },

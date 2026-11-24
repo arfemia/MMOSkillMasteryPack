@@ -1,7 +1,7 @@
 {
-  "$Comment": "Pyroclasm, the Fire Focus's signature: Fireball bursts 1 block wider and is ready again 0.4 seconds sooner, 7.6 in place of 8. Opens on the Signature step (Talent.Pick Pyromancy/Mmo_Focus_Fire_Signature): the FLAT 1 adds to the burst's damageRadius and the FLAT -400 to Fireball's cooldownMs, which no cut takes below half its authored length. Retune the Values, or ship a file with this id to change it.",
+  "$Comment": "Pyroclasm, the Fire Focus's signature: Fireball bursts 1 block wider and is ready again 0.4 seconds sooner, 7.6 in place of 8. Opens on the Signature step (Talent.Pick Fire/Mmo_Focus_Fire_Signature): the FLAT 1 adds to the burst's damageRadius and the FLAT -400 to Fireball's cooldownMs, which no cut takes below half its authored length. Retune the Values, or ship a file with this id to change it.",
   "TargetAbility": "fireball",
-  "Talent": { "Pick": "Pyromancy/Mmo_Focus_Fire_Signature", "PerRank": false },
+  "Talent": { "Pick": "Fire/Mmo_Focus_Fire_Signature", "PerRank": false },
   "Modifiers": [
     { "Shape": "FLAT", "ParamKey": "damageRadius", "Value": 1 },
     { "Shape": "FLAT", "ParamKey": "cooldownMs", "Value": -400 }

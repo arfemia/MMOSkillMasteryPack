@@ -1,7 +1,7 @@
 {
   "$Comment": "Blightbloom, the Poison Focus's signature: a Poison hit (where the Poison damage line counts) that kills its foe (a hit leaving it under half a percent of its health, as a killing hit does) poisons up to 3 other foes within 3 blocks of it with the game's Poison_T1 at half its damage (DamageMultiplier 0.5, times the proc's strength: about 9 Poison over 16 seconds before your bonuses), yours, so a kill it lands is yours, at most once every 8 seconds. A poison is no control, so it lands on a boss or an elite too. Opens on the Signature step while the Poison Focus is sworn. Retune or switch it off in mods/ziggfreedcommon/procs.json.",
   "Parent": "Mmo_Focus_Signature",
-  "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Earthweaving/Mmo_Focus_Poison_Signature", "Min": 1 } ] },
+  "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Earth/Mmo_Focus_Poison_Signature", "Min": 1 } ] },
   "Like": "DamageBonus_Poison",
   "Target": [ { "Id": "ZigStatPercent", "Stat": "Health", "Below": 0.5 } ],
   "Cooldown": { "Seconds": { "Base": 8 } },

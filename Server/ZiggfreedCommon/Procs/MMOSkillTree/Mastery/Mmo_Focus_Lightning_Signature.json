@@ -1,7 +1,7 @@
 {
   "$Comment": "Thunderhead, the Lightning Focus's signature: a Lightning hit (where the Lightning damage line counts) staggers its foe and every other foe within 2.5 blocks of it for half a second (CommonLib's Zig_Staggered, a Stun to a boss's rules, so a boss or an elite shrugs it), at most once every 10 seconds. Its stagger waits per foe like every control: an Immune foe is passed over, it is shorter each time on a foe staggered again soon, and each landing ramps the foe's Immunity. Opens on the Signature step while the Lightning Focus is sworn. Retune or switch it off in mods/ziggfreedcommon/procs.json.",
   "Parent": "Mmo_Focus_Signature",
-  "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Stormcalling/Mmo_Focus_Lightning_Signature", "Min": 1 } ] },
+  "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Lightning/Mmo_Focus_Lightning_Signature", "Min": 1 } ] },
   "Like": "DamageBonus_Lightning",
   "Cooldown": { "Seconds": { "Base": 10 } },
   "Actions": [
