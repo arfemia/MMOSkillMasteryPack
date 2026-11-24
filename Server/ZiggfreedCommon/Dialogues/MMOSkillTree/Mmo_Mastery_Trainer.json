@@ -33,7 +33,9 @@
     "board; the board itself, Mmo_Mastery_Lessons, opens only in the temple hub, where the trainer stands",
     "in the Adventurers' Hall), How am I doing? (the trainer's Reputation page, shown once the player has",
     "any standing with the trainer), Teach me a Focus (the Trainer destination, the trainer page of the",
-    "trainer the player is talking to, where a Focus's steps are bought), What is a Focus? (the three",
+    "trainer the player is talking to, where a Focus's steps are bought), I want to swear or break an oath",
+    "(the Track_Stance destination on the oath set Mmo_Focus, the stance page where an oath is sworn or",
+    "broken), What is a Focus? (the three",
     "about_ screens, which explain the Focus, the oath and the second slot), and farewell.",
     "",
     "The Header line mirrors the player's tracked objective at the top of the conversation.",
@@ -269,6 +271,10 @@
       {
         "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.mastery",
         "Open": "Trainer"
+      },
+      {
+        "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.oath",
+        "Open": { "Type": "Track_Stance", "Stance": "Mmo_Focus" }
       },
       {
         "LabelKey": "dialogue.mmo_mastery_trainer.menu.opt.focus",

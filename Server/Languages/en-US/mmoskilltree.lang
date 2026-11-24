@@ -327,6 +327,7 @@ dialogue.mmo_mastery_trainer.menu.opt.quests = What tasks do you have for me?
 dialogue.mmo_mastery_trainer.menu.opt.lessons = Do you have lessons for me?
 dialogue.mmo_mastery_trainer.menu.opt.standing = How am I doing?
 dialogue.mmo_mastery_trainer.menu.opt.mastery = Teach me a Focus.
+dialogue.mmo_mastery_trainer.menu.opt.oath = I want to swear or break an oath.
 dialogue.mmo_mastery_trainer.menu.opt.focus = What is a Focus?
 dialogue.mmo_mastery_trainer.menu.opt.farewell = Farewell.
 dialogue.mmo_mastery_trainer.about_focus.text = A Focus is one discipline, taken all the way. A weapon, an element, or the Bulwark, for those who stand in front.\nBuy its steps from me with the points your skills earn and some <b>Essence of Life</b>. What you buy, you keep.\nSworn, a Focus makes its weapon or its element hit harder, and its own move is yours to use.

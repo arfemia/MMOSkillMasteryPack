@@ -20,9 +20,8 @@
     "",
     "Its reward is the slot key, collected from the trainer's quest list like every reward here, never paid",
     "on completion: owning Mmo_Focus_Slot_II on the Defense track is what opens slot II of the oath set",
-    "(TrackStances/MMOSkillTree/Mmo_Focus.json). The Pick reward kind teaches it, as one Rewards.Claim row:",
-    "{ \"Kind\": \"Pick\", \"Params\": { \"Track\": \"Defense\", \"Pick\": \"Mmo_Focus_Slot_II\" } }; a file with no",
-    "such row pays nothing. It pays no Mastery Point."
+    "(TrackStances/MMOSkillTree/Mmo_Focus.json). The Pick reward kind in its one Rewards.Claim row teaches",
+    "it. It pays no Mastery Point."
   ],
   "Text": {
     "TitleKey": "quest.mastery_second_oath.title",
@@ -66,5 +65,10 @@
       "Order": 1,
       "TextKey": "objective.text.mastery_second_oath.foes"
     }
+  },
+  "Rewards": {
+    "Claim": [
+      { "Kind": "Pick", "Params": { "Track": "Defense", "Pick": "Mmo_Focus_Slot_II" } }
+    ]
   }
 }
