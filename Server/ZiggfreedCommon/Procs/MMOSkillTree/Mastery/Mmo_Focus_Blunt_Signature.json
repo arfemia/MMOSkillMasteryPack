@@ -1,0 +1,12 @@
+{
+  "$Comment": "Skullbreaker, the Blunt Focus's signature: a charged mace swing (a Charged hit that counts for Blunt, on the Physical damage line) staggers its foe for 1 second (CommonLib's Zig_Staggered, a Stun to a boss's rules, so a boss or an elite shrugs it), each foe at most once every 12 seconds. Its stagger waits per foe like every control: an Immune foe is passed over, it is shorter each time on a foe staggered again soon, and each landing ramps the foe's Immunity. A hit counts for Blunt while what you hold trains Blunt or when the hit earns Blunt XP (the Holder's MmoWeaponSkill, read on that hit). Opens on the Signature step while the Blunt Focus is sworn. Retune or switch it off in mods/ziggfreedcommon/procs.json.",
+  "Parent": "Mmo_Focus_Signature",
+  "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Blunt/Mmo_Focus_Blunt_Signature", "Min": 1 } ] },
+  "Like": "DamageBonus_Physical",
+  "Hit": { "Classes": [ "Charged" ] },
+  "Holder": [ { "Id": "MmoWeaponSkill", "Skill": "Blunt" } ],
+  "Cooldown": { "Seconds": { "Base": 12 }, "PerTarget": true },
+  "Actions": [
+    { "ApplyEffect": { "Effect": "Zig_Staggered", "Duration": { "Base": 1 }, "Overlap": "Overwrite", "Control": {} } }
+  ]
+}

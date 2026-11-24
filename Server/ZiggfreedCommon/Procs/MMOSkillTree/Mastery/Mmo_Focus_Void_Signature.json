@@ -1,0 +1,13 @@
+{
+  "$Comment": "Event Horizon, the Void Focus's signature: a Void hit (where the Void damage line counts) drags its foe and every other foe within 4 blocks of it about a block toward you (a pull through the engine's own velocity with the game's own knockback settings, Force -6 with a little lift, Up 1; a proc's pull is a talent's, and a boss or an elite shrugs every pull), at most once every 10 seconds. Opens on the Signature step while the Void Focus is sworn. Retune or switch it off in mods/ziggfreedcommon/procs.json.",
+  "Parent": "Mmo_Focus_Signature",
+  "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Void/Mmo_Focus_Void_Signature", "Min": 1 } ] },
+  "Like": "DamageBonus_Void",
+  "Cooldown": { "Seconds": { "Base": 10 } },
+  "Actions": [
+    {
+      "Area": { "Radius": 4, "Around": "Target" },
+      "Push": { "Force": { "Base": -6 }, "Up": { "Base": 1 } }
+    }
+  ]
+}

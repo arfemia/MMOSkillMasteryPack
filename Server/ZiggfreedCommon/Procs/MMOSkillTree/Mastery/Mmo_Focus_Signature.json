@@ -1,0 +1,7 @@
+{
+  "$Comment": "The shape every Focus signature that is a proc shares (Abstract: it never runs itself). A signature is one file beside this one, named Mmo_Focus_<Focus>_Signature with Parent Mmo_Focus_Signature, holding only what is its own: the Requires naming its Signature step (ziggfreedcommon:track_pick on <Home track>/Mmo_Focus_<Focus>_Signature, which reads only a Focus that is sworn, so an owned Focus that is not sworn does nothing), its Like (the Focus's own damage line, so it answers only that type's hits), a weapon's Holder, its wait and its actions. Every signature answers a direct hit (never a damage over time tick) and runs after every talent's proc on the same hit (Order 10), so a signature never undoes what a talent just did with that hit (a fresh freeze is never shattered by the hit that froze it). A pack adds a signature for its own Focus with one more child file. Retune or switch any of them off in mods/ziggfreedcommon/procs.json.",
+  "Abstract": true,
+  "Order": 10,
+  "Trigger": "Hit",
+  "Hit": { "OverTime": false }
+}

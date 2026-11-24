@@ -1,0 +1,14 @@
+{
+  "$Comment": "Transfusion, the Life Focus's signature: a Life hit (where the Life damage line counts) withers its foe for 2 seconds (the game's Wither: it deals 15% less and moves a little slower; a Wither to a boss's rules, so a boss or an elite shrugs it) and heals the nearest hurt ally within 12 blocks of you (a member of your party, or another player while the world's PvP is off; never you) for 5 health, at most once every 10 seconds. The heal goes through CommonLib's heal with you as its giver, so your healing power raises it and it counts as a heal you gave. Opens on the Signature step while the Life Focus is sworn. Retune or switch it off in mods/ziggfreedcommon/procs.json.",
+  "Parent": "Mmo_Focus_Signature",
+  "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Life/Mmo_Focus_Life_Signature", "Min": 1 } ] },
+  "Like": "DamageBonus_Life",
+  "Cooldown": { "Seconds": { "Base": 10 } },
+  "Actions": [
+    { "ApplyEffect": { "Effect": "Wither", "Duration": { "Base": 2 }, "Control": {} } },
+    {
+      "Area": { "Radius": 12, "Allies": true, "Max": 1, "Conditions": [ { "Id": "ZigStatPercent", "Stat": "Health", "Below": 100 } ] },
+      "Heal": { "Amount": { "Base": 5 } }
+    }
+  ]
+}

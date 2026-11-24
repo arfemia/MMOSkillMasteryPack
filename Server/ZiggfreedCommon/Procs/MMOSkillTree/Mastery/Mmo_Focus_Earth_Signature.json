@@ -1,0 +1,10 @@
+{
+  "$Comment": "Tectonic, the Earth Focus's signature: an Earth hit (where the Earth damage line counts) throws its foe about a block and a half into the air (a lift through the engine's own velocity with the game's own knockback settings, Up 8 with a nudge away, Force 2; a proc's push is a talent's, so a boss or an elite stays on the ground), each foe at most once every 10 seconds. Opens on the Signature step while the Earth Focus is sworn. Retune or switch it off in mods/ziggfreedcommon/procs.json.",
+  "Parent": "Mmo_Focus_Signature",
+  "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Earthweaving/Mmo_Focus_Earth_Signature", "Min": 1 } ] },
+  "Like": "DamageBonus_Earth",
+  "Cooldown": { "Seconds": { "Base": 10 }, "PerTarget": true },
+  "Actions": [
+    { "Push": { "Force": { "Base": 2 }, "Up": { "Base": 8 } } }
+  ]
+}

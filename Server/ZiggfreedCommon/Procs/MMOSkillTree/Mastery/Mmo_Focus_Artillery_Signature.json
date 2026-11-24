@@ -1,0 +1,14 @@
+{
+  "$Comment": "Demolition Expert, the Artillery Focus's signature: a shot of yours that lands (a hit that counts for Artillery, where the Projectile damage line counts, as on a gun's bullet) makes the foe it struck and every other foe within 3 blocks of it flinch (the game's Hit_Interrupt_Flinch: half a second of no walking, an Interrupt to a boss's rules, so a boss or an elite keeps walking), at most once every 6 seconds. A hit counts for Artillery while what you hold trains Artillery or when the hit earns Artillery XP (the Holder's MmoWeaponSkill, read on that hit). Opens on the Signature step while the Artillery Focus is sworn. Retune or switch it off in mods/ziggfreedcommon/procs.json.",
+  "Parent": "Mmo_Focus_Signature",
+  "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Artillery/Mmo_Focus_Artillery_Signature", "Min": 1 } ] },
+  "Like": "DamageBonus_Projectile",
+  "Holder": [ { "Id": "MmoWeaponSkill", "Skill": "Artillery" } ],
+  "Cooldown": { "Seconds": { "Base": 6 } },
+  "Actions": [
+    {
+      "Area": { "Radius": 3, "Around": "Target" },
+      "ApplyEffect": { "Effect": "Hit_Interrupt_Flinch", "Control": {} }
+    }
+  ]
+}

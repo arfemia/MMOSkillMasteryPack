@@ -320,6 +320,48 @@ mastery.arcane_t3_cap.title = Resonance
 mastery.void_t3_cap.title = Event Horizon
 mastery.poison_t3_cap.title = Blightbloom
 
+# --- Focus signatures: each Focus's Signature step, its name and what it does (mastery.focus.<focus>.signature
+#     and .desc, focus lower-cased). The step generator binds them; the numbers live in the signature's proc or
+#     ability mod file, so these lines carry none. ---
+mastery.focus.archery.signature = Hawkshot
+mastery.focus.archery.signature.desc = Your Piercing Shot hits a little harder and passes through another foe.
+mastery.focus.artillery.signature = Demolition Expert
+mastery.focus.artillery.signature.desc = Your shots make the foe they hit and every foe near it flinch. It needs a few seconds before it works again.
+mastery.focus.axes.signature = Tempest
+mastery.focus.axes.signature.desc = Your Tempest is ready again sooner.
+mastery.focus.blunt.signature = Skullbreaker
+mastery.focus.blunt.signature.desc = A charged mace swing staggers the foe for a moment. The same foe only every so often.
+mastery.focus.daggers.signature = Voidwalk
+mastery.focus.daggers.signature.desc = Your Shadowstep is ready again sooner.
+mastery.focus.polearms.signature = Spearpoint
+mastery.focus.polearms.signature.desc = Catch a foe on the tip of your spear and it is rooted in place for a moment. The same foe only every so often.
+mastery.focus.staves.signature = Quarterstaff
+mastery.focus.staves.signature.desc = A staff swing knocks back every foe close around you. It needs a few seconds before it works again.
+mastery.focus.swords.signature = Masterwork Blade
+mastery.focus.swords.signature.desc = A critical sword hit breaks the foe's guard and makes it flinch. The same foe only every so often.
+mastery.focus.unarmed.signature = Iron Body
+mastery.focus.unarmed.signature.desc = The last punch of a combo gets some of your stamina back.
+mastery.focus.fire.signature = Pyroclasm
+mastery.focus.fire.signature.desc = Your Fireball bursts wider and is ready again sooner.
+mastery.focus.ice.signature = Deep Freeze
+mastery.focus.ice.signature.desc = Your Ice hits sometimes freeze the foe solid for a moment. The same foe only every so often.
+mastery.focus.lightning.signature = Thunderhead
+mastery.focus.lightning.signature.desc = Your Lightning hit staggers the foe and everything standing near it. It needs a few seconds before it works again.
+mastery.focus.water.signature = High Tide
+mastery.focus.water.signature.desc = Your Water hit washes the foe back and slows it. The same foe only every so often.
+mastery.focus.arcane.signature = Leyline
+mastery.focus.arcane.signature.desc = Your Arcane hit slows the foe to half speed for a moment. The same foe only every so often.
+mastery.focus.void.signature = Event Horizon
+mastery.focus.void.signature.desc = Your Void hit drags the foe and everything near it toward you. It needs a few seconds before it works again.
+mastery.focus.poison.signature = Blightbloom
+mastery.focus.poison.signature.desc = When your Poison hit kills a foe, its poison spreads to the foes around it.
+mastery.focus.earth.signature = Tectonic
+mastery.focus.earth.signature.desc = Your Earth hit throws the foe into the air. The same foe only every so often.
+mastery.focus.life.signature = Transfusion
+mastery.focus.life.signature.desc = Your Life hit withers the foe so it hits softer, and mends the nearest hurt ally.
+mastery.focus.bulwark.signature = Mountainshield
+mastery.focus.bulwark.signature.desc = Your Shield Slam stuns longer and keeps you safe from hits a moment longer.
+
 # Mastery Trainer conversation
 dialogue.mmo_mastery_trainer.ready_generic.text = Back, and carrying something. Set it down and let us see it.
 dialogue.mmo_mastery_trainer.menu.text = The disciplines are here when you want them. What do you need?

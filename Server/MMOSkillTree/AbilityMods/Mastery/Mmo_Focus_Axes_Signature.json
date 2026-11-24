@@ -1,0 +1,8 @@
+{
+  "$Comment": "Tempest, the Axes Focus's signature: Tempest is ready again 2 seconds sooner, 23 in place of 25. Opens on the Signature step (Talent.Pick Axes/Mmo_Focus_Axes_Signature): the FLAT -2000 below on Tempest's cooldownMs, which no cut takes below half its authored length. Retune the Value, or ship a file with this id to change it.",
+  "TargetAbility": "tempest",
+  "Talent": { "Pick": "Axes/Mmo_Focus_Axes_Signature", "PerRank": false },
+  "Modifiers": [
+    { "Shape": "FLAT", "ParamKey": "cooldownMs", "Value": -2000 }
+  ]
+}

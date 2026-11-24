@@ -1,0 +1,12 @@
+{
+  "$Comment": "Iron Body, the Unarmed Focus's signature: the last punch of your fist combo (a Finisher that counts for Unarmed, on the Physical damage line) gives you back 2 stamina, at most once every 6 seconds. The amount takes the proc's strength (ProcStrength on your gear raises it). A hit counts for Unarmed while what you hold trains Unarmed or when the hit earns Unarmed XP (the Holder's MmoWeaponSkill, read on that hit). Opens on the Signature step while the Unarmed Focus is sworn. Retune or switch it off in mods/ziggfreedcommon/procs.json.",
+  "Parent": "Mmo_Focus_Signature",
+  "Trigger": "Finisher",
+  "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Unarmed/Mmo_Focus_Unarmed_Signature", "Min": 1 } ] },
+  "Like": "DamageBonus_Physical",
+  "Holder": [ { "Id": "MmoWeaponSkill", "Skill": "Unarmed" } ],
+  "Cooldown": { "Seconds": { "Base": 6 } },
+  "Actions": [
+    { "ChangeStat": { "Stat": "Stamina", "Amount": { "Base": 2 }, "OnSelf": true } }
+  ]
+}

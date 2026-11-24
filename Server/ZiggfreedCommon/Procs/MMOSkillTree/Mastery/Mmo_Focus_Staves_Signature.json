@@ -1,0 +1,15 @@
+{
+  "$Comment": "Quarterstaff, the Staves Focus's signature: a staff swing that lands (a melee hit that counts for Staves, on the Physical damage line, so never a spell cast from the staff) knocks back every foe within 2.5 blocks of you about 2 blocks (a push through the engine's own velocity with the game's own knockback settings, Force 9 with a little lift, Up 1; a proc's push is a talent's, so a boss or an elite is left where it stands), at most once every 10 seconds. A hit counts for Staves while what you hold trains Staves or when the hit earns Staves XP (the Holder's MmoWeaponSkill, read on that hit). Opens on the Signature step while the Staves Focus is sworn. Retune or switch it off in mods/ziggfreedcommon/procs.json.",
+  "Parent": "Mmo_Focus_Signature",
+  "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Staves/Mmo_Focus_Staves_Signature", "Min": 1 } ] },
+  "Like": "DamageBonus_Physical",
+  "Hit": { "Projectile": false },
+  "Holder": [ { "Id": "MmoWeaponSkill", "Skill": "Staves" } ],
+  "Cooldown": { "Seconds": { "Base": 10 } },
+  "Actions": [
+    {
+      "Area": { "Radius": 2.5 },
+      "Push": { "Force": { "Base": 9 }, "Up": { "Base": 1 } }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "$Comment": "Mountainshield, the Bulwark's signature: Shield Slam stuns the foe it meets half a second longer, 2 seconds in place of 1.5, and the moment it keeps you safe from hits lasts 0.2 seconds longer, 0.5 in place of 0.3. Opens on the Signature step (Talent.Pick Defense/Mmo_Focus_Bulwark_Signature): the FLAT 500 adds to the slam's stun durationMs and the FLAT 200 to its iframesDurationMs. Its stun stays the slam's own, shrinking on repeat; on a boss or an elite the slam stuns as it would without this, since a talent's lengthening never reaches one. Retune the Values, or ship a file with this id to change it.",
+  "TargetAbility": "shield_slam",
+  "Talent": { "Pick": "Defense/Mmo_Focus_Bulwark_Signature", "PerRank": false },
+  "Modifiers": [
+    { "Shape": "FLAT", "ParamKey": "durationMs", "Value": 500 },
+    { "Shape": "FLAT", "ParamKey": "iframesDurationMs", "Value": 200 }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "$Comment": "Voidwalk, the Daggers Focus's signature: Shadowstep is ready again 3 seconds sooner, 12 in place of 15. Opens on the Signature step (Talent.Pick Daggers/Mmo_Focus_Daggers_Signature): the FLAT -3000 below on Shadowstep's cooldownMs, which no cut takes below half its authored length. Retune the Value, or ship a file with this id to change it.",
+  "TargetAbility": "shadowstep",
+  "Talent": { "Pick": "Daggers/Mmo_Focus_Daggers_Signature", "PerRank": false },
+  "Modifiers": [
+    { "Shape": "FLAT", "ParamKey": "cooldownMs", "Value": -3000 }
+  ]
+}

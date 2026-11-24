@@ -1,0 +1,9 @@
+{
+  "$Comment": "Hawkshot, the Archery Focus's signature: Piercing Shot passes through one more foe and hits 5% harder. Opens on the Signature step (Talent.Pick Archery/Mmo_Focus_Archery_Signature): the FLAT 1 adds to the shot's pierceCount and the PERCENT 0.05 to its damageMultiplier. Retune the Values, or ship a file with this id to change it.",
+  "TargetAbility": "piercing_shot",
+  "Talent": { "Pick": "Archery/Mmo_Focus_Archery_Signature", "PerRank": false },
+  "Modifiers": [
+    { "Shape": "FLAT", "ParamKey": "pierceCount", "Value": 1 },
+    { "Shape": "PERCENT", "ParamKey": "damageMultiplier", "Value": 0.05 }
+  ]
+}

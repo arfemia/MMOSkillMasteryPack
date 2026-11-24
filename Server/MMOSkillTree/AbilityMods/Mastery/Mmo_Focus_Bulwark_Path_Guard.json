@@ -1,0 +1,8 @@
+{
+  "$Comment": "Guardian's Call, the Bulwark's Path when its guard face is chosen (the either-or beside 10 more Health): Guardian's Call lasts 40% longer. Opens on that Path face (Talent.Pick Defense/Mmo_Focus_Bulwark_Path_Guard): the PERCENT 0.4 below on the aura's durationMs leaves. Retune the Value, or ship a file with this id to change it.",
+  "TargetAbility": "guardians_call",
+  "Talent": { "Pick": "Defense/Mmo_Focus_Bulwark_Path_Guard", "PerRank": false },
+  "Modifiers": [
+    { "Shape": "PERCENT", "ParamKey": "durationMs", "Value": 0.4 }
+  ]
+}

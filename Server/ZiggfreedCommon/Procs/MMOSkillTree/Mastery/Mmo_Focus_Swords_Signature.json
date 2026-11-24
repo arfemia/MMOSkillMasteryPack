@@ -1,0 +1,12 @@
+{
+  "$Comment": "Masterwork Blade, the Swords Focus's signature: a critical sword hit (a Crit that counts for Swords, on the Physical damage line) breaks the guard its foe holds up (BreakGuard: its block stops and its guard chain is cancelled) and makes it flinch (the game's Hit_Interrupt_Flinch, half a second of no walking), each foe at most once every 6 seconds. Both are an Interrupt to a boss's rules, so a boss or an elite keeps its guard and keeps walking. A hit counts for Swords while what you hold trains Swords or when the hit earns Swords XP (the Holder's MmoWeaponSkill, read on that hit). Opens on the Signature step while the Swords Focus is sworn. Retune or switch it off in mods/ziggfreedcommon/procs.json.",
+  "Parent": "Mmo_Focus_Signature",
+  "Trigger": "Crit",
+  "Requires": { "Factors": [ { "Factor": "ziggfreedcommon:track_pick", "Param": "Swords/Mmo_Focus_Swords_Signature", "Min": 1 } ] },
+  "Like": "DamageBonus_Physical",
+  "Holder": [ { "Id": "MmoWeaponSkill", "Skill": "Swords" } ],
+  "Cooldown": { "Seconds": { "Base": 6 }, "PerTarget": true },
+  "Actions": [
+    { "BreakGuard": true, "ApplyEffect": { "Effect": "Hit_Interrupt_Flinch", "Control": {} } }
+  ]
+}
