@@ -28,7 +28,7 @@ quest.mastery_lesson_week.flavor = Do my lessons through the week and come back 
 quest.mastery_first_oath.title = The First Oath
 quest.mastery_first_oath.flavor = A Focus you never swear to does you no good in a fight. Buy the Vow of a weapon, an element or the Bulwark, then come and swear it in front of me.
 quest.mastery_second_oath.title = The Second Oath
-quest.mastery_second_oath.flavor = You finished a Focus. Most people stop there. Swear an oath and go fight out in the world. Come back after, and I will make room for a second.
+quest.mastery_second_oath.flavor = You finished a Focus. Most people stop there. Go and fight out in the world with an oath sworn. Come back after, and I will make room for a second.
 
 # --- The Mastery Trainer's lessons (board contracts; quest.<id>.title / .flavor) ---
 quest.mmo_lesson_timber.title = Felling Practice
@@ -65,7 +65,7 @@ objective.text.mastery_lesson.week = Finish {0} of the Mastery Trainer's lessons
 
 # --- The oath quests' step lines (a step's own TextKey; {0} = the amount) ---
 objective.text.mastery_first_oath.swear = Buy a Vow and swear it at the Mastery Trainer
-objective.text.mastery_second_oath.foes = Defeat {0} foes out in the world
+objective.text.mastery_second_oath.foes = Defeat {0} foes out in the world with an oath sworn
 
 # --- The trainer's material tables (lootable.<id>.title / .flavor, how a Lootable reward reads) ---
 lootable.mmo_mastery_focus_materials.title = Focus Materials
@@ -382,9 +382,9 @@ dialogue.mmo_mastery_trainer.first_oath_offer.opt.accept = I will swear one.
 dialogue.mmo_mastery_trainer.first_oath_active.text = Buy the Vow of a Focus from me, then swear it here, in front of me.\nNot sure which? Ask me what a Focus is first.
 dialogue.mmo_mastery_trainer.first_oath_sworn.text = There. Sworn, and you felt it.\nWhile it stands, your Focus counts in every fight. You can break it here if you change your mind, but it will cost you.
 dialogue.mmo_mastery_trainer.first_oath_sworn.opt.done = It is sworn.
-dialogue.mmo_mastery_trainer.second_oath_offer.text = Every step of a Focus, bought. Not many get that far.\nI can make room for a second oath. Show me the one you hold is worth it first: take it out into the world, put down <b>foes</b>, then come back to me.
+dialogue.mmo_mastery_trainer.second_oath_offer.text = Every step of a Focus, bought. Not many get that far.\nI can make room for a second oath. Show me the one you hold is worth it first: take it out into the world and put down <b>foes</b> with it sworn. A foe that falls while you hold no oath does not count. Then come back to me.
 dialogue.mmo_mastery_trainer.second_oath_offer.opt.accept = I will show you.
-dialogue.mmo_mastery_trainer.second_oath_active.text = Out you go. The fighting is done out in the world.\nNothing in this hall will fight you back, so do not bother trying.
+dialogue.mmo_mastery_trainer.second_oath_active.text = Out you go, and keep your oath sworn. The fighting is done out in the world.\nNothing in this hall will fight you back, so do not bother trying.
 dialogue.mmo_mastery_trainer.second_oath_ready.text = Back on your own feet. Good.\nCollect what I owe you, and a second oath is yours to swear.
 dialogue.mmo_mastery_trainer.second_oath_ready.opt.collect = Let me collect it.
 dialogue.mmo_mastery_trainer.lessons_fresh.text = My board has fresh lessons on it today. Every one of them is done out in the world.\nFinish one and come back here to collect what it pays.

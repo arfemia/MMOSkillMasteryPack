@@ -9,9 +9,11 @@
     "so it is taken with an oath standing, and for the slot key not owned yet",
     "(ziggfreedcommon:track_pick_owned on Defense/Mmo_Focus_Slot_II, Max 0), so a player who already holds",
     "the second slot is never offered it. Listing.ShowWhen shows it to anyone with a finished Focus and no",
-    "key, so a player with no oath sworn sees it locked, with the reason, at the trainer. Requires is asked",
-    "when the quest is taken: a quest step has no condition of its own, so once it is taken each kill",
-    "counts whether an oath is still held or not, and its words ask for no more than that.",
+    "key, so a player with no oath sworn sees it locked, with the reason, at the trainer.",
+    "",
+    "Requires is asked only when the quest is taken. The kill step's own While asks the same oath reading",
+    "at every kill, so a kill counts only while an oath is sworn: break the oath and the count stops where",
+    "it is, swear one again and it carries on. Its line says so, since nothing adds the condition to it.",
     "",
     "The kill step names no target, so any creature counts. Every kill happens out in the world: nothing",
     "in the Adventurers' Hall or the Forgotten Temple can be fought. Npc.TurnInId 'giver' adds the walk",
@@ -63,7 +65,12 @@
       "Target": "",
       "Amount": 30,
       "Order": 1,
-      "TextKey": "objective.text.mastery_second_oath.foes"
+      "TextKey": "objective.text.mastery_second_oath.foes",
+      "While": {
+        "Factors": [
+          { "Factor": "ziggfreedcommon:track_stance", "Param": "Mmo_Focus", "Min": 1 }
+        ]
+      }
     }
   },
   "Rewards": {
