@@ -16,8 +16,9 @@
     "chunk loaded, puts them back if something removes them, and raises their health beyond anything",
     "that can be dealt. This placement authors no Identity.NpcId, so the character IS its role: the",
     "pack's mastery quests bind to Mmo_Mastery_Trainer, and their progress carries over from the",
-    "temple untouched. The trainer's temple standing, Mmo_Mastery_Trainer_Temple, ships switched off. To",
-    "take the trainer out without editing this file, set Enabled false in",
+    "temple untouched. Requires also reads ziggfreedcommon:hub_district with Min 1, and the trainer's temple",
+    "standing, Mmo_Mastery_Trainer_Temple, the same reading with Max 0, so the trainer stands and teaches in",
+    "exactly one of the two. To take the trainer out without editing this file, set Enabled false in",
     "mods/ziggfreedcommon/npc-placements.json.",
     "",
     "The Trainer block makes the trainer a trainer: the conversation's Teach me a Focus line opens their",
@@ -50,7 +51,8 @@
         "Factor": "mmoskilltree:feature",
         "Param": "mastery",
         "Min": 1.0
-      }
+      },
+      { "Factor": "ziggfreedcommon:hub_district", "Param": "Mmo_Adventurers_Hall", "Min": 1 }
     ]
   },
   "Lifecycle": {

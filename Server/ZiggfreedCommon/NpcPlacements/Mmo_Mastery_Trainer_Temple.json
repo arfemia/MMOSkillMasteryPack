@@ -1,11 +1,10 @@
 {
   "$Comment": [
-    "The Mastery Trainer, standing in the Forgotten Temple. Switched off (Enabled false): the trainer",
-    "now stands on the dais in MMO Skill Tree's Adventurers' Hall, in the temple hub",
-    "(Mmo_Mastery_Trainer_Hall.json), and their lessons board opens there. On a server whose owner",
-    "switched the hall or the hub off, switch this standing back on in",
-    "mods/ziggfreedcommon/npc-placements.json with { \"Mmo_Mastery_Trainer_Temple\": { \"Enabled\": true } }.",
-    "Nothing else needs changing: the lessons board opens in the temple as well as the hub.",
+    "The Mastery Trainer, standing in the Forgotten Temple whenever MMO Skill Tree's Adventurers' Hall does",
+    "not. The trainer stands on the dais in the hall, in the temple hub (Mmo_Mastery_Trainer_Hall.json),",
+    "and their lessons board opens there. Requires reads ziggfreedcommon:hub_district with Max 0 (the hall",
+    "standing reads it with Min 1), so on a server whose owner switched the hall off or moved it off the",
+    "map, this standing comes back by itself and the board opens in the temple instead.",
     "",
     "The trainer is this pack's character end to end: their look, their role, this placement, and",
     "the conversation pressing F opens all ship here, so a server without the pack has no trainer",
@@ -33,10 +32,10 @@
     "stay out of the walls.",
     "",
     "The Trainer block is the hall standing's (Mmo_Mastery_Trainer_Hall.json explains it), so the trainer",
-    "teaches here exactly as in the hall once this standing is switched on."
+    "teaches here exactly as in the hall while this standing stands, and nowhere here while the hall does."
   ],
   "Name": "Mmo_Mastery_Trainer_Temple",
-  "Enabled": false,
+  "Enabled": true,
   "Where": {
     "GameplayConfig": [
       "ForgottenTemple"
@@ -60,7 +59,8 @@
         "Factor": "mmoskilltree:feature",
         "Param": "mastery",
         "Min": 1.0
-      }
+      },
+      { "Factor": "ziggfreedcommon:hub_district", "Param": "Mmo_Adventurers_Hall", "Max": 0 }
     ]
   },
   "Lifecycle": {
